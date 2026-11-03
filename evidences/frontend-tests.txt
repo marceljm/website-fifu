@@ -1,0 +1,186 @@
+### npm run test:unit
+
+> demosuite-marketing@1.0.0 test:unit
+> node --test tests/reviews.test.mjs
+
+TAP version 13
+# Subtest: ageInWeeks adds the whole weeks elapsed since the scrape
+ok 1 - ageInWeeks adds the whole weeks elapsed since the scrape
+  ---
+  duration_ms: 1.723431
+  type: 'test'
+  ...
+# Subtest: ageInWeeks never goes below the scraped value (clock skew)
+ok 2 - ageInWeeks never goes below the scraped value (clock skew)
+  ---
+  duration_ms: 0.311243
+  type: 'test'
+  ...
+# Subtest: formatWeeks produces readable relative ages
+ok 3 - formatWeeks produces readable relative ages
+  ---
+  duration_ms: 0.269703
+  type: 'test'
+  ...
+# Subtest: prepareReviews keeps the export order and adds the display age
+ok 4 - prepareReviews keeps the export order and adds the display age
+  ---
+  duration_ms: 1.720279
+  type: 'test'
+  ...
+# Subtest: newestReviews returns the first N (the export is sorted newest first)
+ok 5 - newestReviews returns the first N (the export is sorted newest first)
+  ---
+  duration_ms: 0.488408
+  type: 'test'
+  ...
+# Subtest: the source label discloses the origin and the privacy substitution
+ok 6 - the source label discloses the origin and the privacy substitution
+  ---
+  duration_ms: 0.478259
+  type: 'test'
+  ...
+# Subtest: exported reviews.json is consistent with what the pages need
+ok 7 - exported reviews.json is consistent with what the pages need
+  ---
+  duration_ms: 7.914492
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 206.108076
+exit: 0
+
+### npm run test:e2e
+
+> demosuite-marketing@1.0.0 test:e2e
+> node --test tests/site.e2e.mjs
+
+TAP version 13
+# Subtest: pre-rendered route /
+ok 1 - pre-rendered route /
+  ---
+  duration_ms: 90.408071
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /features/smart-workflows/
+ok 2 - pre-rendered route /features/smart-workflows/
+  ---
+  duration_ms: 23.452686
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /integrations/cloudnote/
+ok 3 - pre-rendered route /integrations/cloudnote/
+  ---
+  duration_ms: 14.395261
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /blog/a-calmer-way-to-plan-your-week/
+ok 4 - pre-rendered route /blog/a-calmer-way-to-plan-your-week/
+  ---
+  duration_ms: 10.659066
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /docs/getting-started/
+ok 5 - pre-rendered route /docs/getting-started/
+  ---
+  duration_ms: 7.112261
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /pricing/
+ok 6 - pre-rendered route /pricing/
+  ---
+  duration_ms: 8.036358
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /checkout/
+ok 7 - pre-rendered route /checkout/
+  ---
+  duration_ms: 22.715752
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /reviews/
+ok 8 - pre-rendered route /reviews/
+  ---
+  duration_ms: 21.531796
+  type: 'test'
+  ...
+# Subtest: homepage shows the three newest positive reviews with honest labeling
+ok 9 - homepage shows the three newest positive reviews with honest labeling
+  ---
+  duration_ms: 25.200799
+  type: 'test'
+  ...
+# Subtest: homepage separates sample stories from the plugin plan action and shows WordPress screens
+ok 10 - homepage separates sample stories from the plugin plan action and shows WordPress screens
+  ---
+  duration_ms: 13.491533
+  type: 'test'
+  ...
+# Subtest: integration catalog gives each icon and label a spaced heading group
+ok 11 - integration catalog gives each icon and label a spaced heading group
+  ---
+  duration_ms: 5.909672
+  type: 'test'
+  ...
+# Subtest: feature, docs, and blog listings share the responsive catalog card layout
+ok 12 - feature, docs, and blog listings share the responsive catalog card layout
+  ---
+  duration_ms: 12.107895
+  type: 'test'
+  ...
+# Subtest: integration preview explains that it is illustrative
+ok 13 - integration preview explains that it is illustrative
+  ---
+  duration_ms: 11.226899
+  type: 'test'
+  ...
+# Subtest: feature detail has separated plan actions and readable highlight
+ok 14 - feature detail has separated plan actions and readable highlight
+  ---
+  duration_ms: 6.999675
+  type: 'test'
+  ...
+# Subtest: reviews use the exported avatar paths and the old sample portraits are gone
+ok 15 - reviews use the exported avatar paths and the old sample portraits are gone
+  ---
+  duration_ms: 9.683909
+  type: 'test'
+  ...
+# Subtest: reviews page lists every positive review, newest first, pre-rendered
+ok 16 - reviews page lists every positive review, newest first, pre-rendered
+  ---
+  duration_ms: 20.710859
+  type: 'test'
+  ...
+# Subtest: reviews page exposes its loader data for client-side navigation
+ok 17 - reviews page exposes its loader data for client-side navigation
+  ---
+  duration_ms: 5.38724
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 479.836362
+exit: 0
+
+### npm run format:check
+
+> demosuite-marketing@1.0.0 format:check
+> prettier --check app/**/*.{ts,tsx,css} *.ts *.json
+
+Checking formatting...
+All matched files use Prettier code style!
+exit: 0

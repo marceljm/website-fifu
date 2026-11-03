@@ -1,0 +1,2208 @@
+{
+  "generated_at": "2026-11-02T01:39:25Z",
+  "scraped_at": "2026-11-01T18:34:28Z",
+  "count": 220,
+  "placeholder": "/images/reviews/placeholder.webp",
+  "reviews": [
+    {
+      "name": "Priya Malik",
+      "title": "Worked brilliantly with WP All Import; the support is excellent.",
+      "comment": "I was concerned about using a free plugin for a large project for a client; however, I need not have been, as the plugin performed excellently. I had to import over 4,000 products from a CSV using WP All Import, but I didn't want to import all the images. I wanted to point each product to an external online folder for its image. This plugin has allowed me to keep the website size down to around 150 MB, rather than the 4 GB+ it would have been with all the images. This makes it SO MUCH easier to administer the website going forward. The process worked perfectly, without any issues or any confusing options. Moreover, I had a question about the product images not displaying in the cart. I emailed Marcel, and he replied within an hour and resolved my issue. I cannot rate this plugin or its author highly enough. I always try to support authors who do excellent work, so I have confirmed that I will be purchasing the premium version in order to support his efforts. Thanks!",
+      "weeks": 364,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-02T13:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 10
+    },
+    {
+      "name": "Ethan Holloway",
+      "title": "The plugin is perfect, the support is world-class",
+      "comment": "The plugin is great (paid version). All the customizability you need, and very simple and easy to use. There are always going to be conflicts with special themes or other plugins, and these were quickly hashed out and easily fixed with the plugin's great support, thanks to Marcel. All my boring image thumbnails are now autoplay MP4 videos, and this is a game changer for my business as a VFX studio. If I could give this plugin a better rating, I would.",
+      "weeks": 104,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-08-04T14:28:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Freya Lindgren",
+      "title": "Exceptional product and support!",
+      "comment": "I recently had the pleasure of configuring the FIFU plugin for my website, and I am beyond impressed with both the product and the support provided by the FIFU team. In my extensive experience of building over 2,500 websites, I can confidently say that the commitment and professionalism demonstrated by the FIFU team are unparalleled. During a challenging debugging period, their support went above and beyond, providing solutions when no one else could. This level of dedication truly sets them apart in the industry. One standout feature is the timely and efficient response to support tickets. Unlike many other plugins, the FIFU team addresses concerns promptly, showcasing their commitment to customer satisfaction. This responsiveness is a breath of fresh air in an industry where delayed or non-existent responses are unfortunately common. The FIFU plugin's lightweight design ensures a fast-loading website, exceeding expectations even under stress tests with 500 products. As I scale up to over 12,000 products, I'm confident in its ability to consistently deliver outstanding results. FIFU's efficiency has significantly contributed to the success of my website. The FIFU team has set a new standard in a field where support is often lacking. They are a reliable, customer-centric, and highly skilled development team. My experience with their plugin has been smooth and enjoyable. I'm excited to use it with my new API to load over 200,000 product variation images, and I anticipate great success. I highly recommend the Featured Image from URL plugin!",
+      "weeks": 132,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-02-02T02:56:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Martina Moretti",
+      "title": "Amazing plugin and support!",
+      "comment": "This plugin is such a fantastic solution for websites with many images that would otherwise overload the server. I'm so happy that I found it! It works flawlessly, and the issues I had when trying to connect to files on Dropbox were fixed within hours. Marcel answers support requests almost instantly (even on weekends!) and is extremely fast and helpful, beyond what would be expected. Thank you, Marcel, your generosity is appreciated! I am also impressed with the willingness of the developers to make it easy for the user to succeed in having a fast-loading website at a low cost. They provide a CDN solution for free, and they are not trying to push you to the cloud hosting alternative they also provide, which is actually very reasonable and will be my choice at the right time. I have bought the Pro plugin and warmly recommend it to anyone, especially if you have many images.",
+      "weeks": 200,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-08-28T06:18:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Milena Kuznetsov",
+      "title": "Great plugin and outstanding support",
+      "comment": "My website has some unusual features, which initially caused some issues with FIFU. Marcel was very understanding and worked together with me for several hours to identify the cause. Then he was able to quickly adapt FIFU to resolve the issue. FIFU is now working perfectly on my website, and all external links are saved as the featured image. Great plugin and outstanding support!",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-08T19:12:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Matteo Ricci",
+      "title": "The best solution out there for external images",
+      "comment": "My site needed the ability to add external images for posts in some cases. So I started to search online for possible solutions. I found some ideas in forums on how you can theoretically do this, but I am not a very experienced programmer and have limited coding skills, so I searched for plugins that could do it. I found 'Featured Image from URL', and it was a really great solution. The only issue was that the pictures added via the FIFU plugin looked out of place dimension-wise. That is because all WP themes create all the necessary thumbnail sizes when an image is added to the WP database, whereas in this case it was just a link to an external source. I started to look for other solutions, but I stopped soon, because the few that were out there were so much weaker. Some were not supported, some did not work, and some did not have even half the features FIFU has. So I went back to FIFU and found that FIFU Premium has a cropping feature. I contacted the author, and he answered very fast that the cropping feature would solve the issue. After acquiring the FIFU Premium version, I received it very soon, installed it, and at first had problems configuring everything properly. So the author helped me once more: he looked at my case and at my theme, created a test environment for further testing, and prepared precise instructions on what I needed to do to achieve the intended result. He even added a requested feature without hesitating. I really recommend the premium version to everybody. Not only because it is the only plugin that delivers what it promises (in regard to adding featured images from URLs), but also because of the great support. The support was fast, precise and very friendly. I am grateful to the author for the fantastic plugin.",
+      "weeks": 396,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-07-16T10:48:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Ananya Adebayo",
+      "title": "Amazing plugin and customer service!",
+      "comment": "I had been looking for this functionality for a while, specifically for Flickr content. I installed the free version and upgraded after only one day, I was so pleased. The plugin performed as stated out of the box, but I had a small issue with my own theme (not guaranteed by the author), and he STILL went above and beyond to work with me and resolve the conflict. I am blown away by how wonderful this plugin and the support are! In just a few days he pinned down my issue, modified the plugin, and went to my site to review and confirm that everything had been resolved. I highly recommend this plugin, as well as anything written by this developer. The best WordPress premium purchase I have ever made!",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-18T14:16:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Inès Garnier",
+      "title": "Excellent plugin and stellar support!",
+      "comment": "99% of my site's content is submitted by front-end users. When users reference images and video from external sites, posts are often left without any featured image. This plugin is a lifesaver. It takes the first external image in the content and sets it as the featured image automatically if none is set on submit! Now I don't have an ugly default image all over the category list page. Thank you! Not only is the plugin exactly what I was looking for, but Marcel is incredible. The best support I have received in years of web development. I wish I could give 10 stars. Thank you, Marcel!",
+      "weeks": 448,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-06-26T04:26:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Charlotte Reid",
+      "title": "Perfect!",
+      "comment": "Perfect! Works beautifully! I blog about multiple topics and keep the posts on different sites, but I'm not using multisite; each site is independent. I'm using another plugin (Syndication) to syndicate blog posts between these multiple standalone WordPress sites. That requires me to use yet another plugin to automatically move all my images out to Amazon S3. Needless to say, my setup isn't very straightforward. This plugin was the final (PERFECT!) piece of the puzzle I needed to get my personal blog network set up and looking good. Now I can publish posts on my hidden blog that get syndicated out to my niche blogs, and they all have nice featured images served up by Amazon S3.",
+      "weeks": 524,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2015-11-21T15:52:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 9
+    },
+    {
+      "name": "Jonas Brandt",
+      "title": "A real game changer and lifesaver!",
+      "comment": "This plugin saves me so much time when I want to comment on an external article or news report. It's really easy to use, and my posts all have a consistent look in the archives and search results, whether the featured image is local or comes from FIFU! Thank you!",
+      "weeks": 35,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-02-08T15:33:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Santiago Ribeiro",
+      "title": "Absolutely essential plugin for any WordPress site!",
+      "comment": "FIFU has been a total game changer for my website! I've tried a lot of image management plugins, but none come close to the flexibility and performance FIFU offers. Being able to set featured images directly from URLs saves so much storage space and time — especially for content-heavy sites. The plugin is lightweight, fast, and integrates perfectly with themes and other plugins. I love how intuitive the interface is — you can bulk edit, automate image imports, and even control lazy loading with ease. It's obvious that the developer really understands what WordPress users need. The support team is also fantastic — quick to respond, friendly, and super helpful whenever I've had a question. Updates come regularly, and each one adds something genuinely useful rather than just cosmetic changes. If you manage a WordPress site and care about performance, SEO, and workflow efficiency, FIFU is an absolute must-have. It's one of those plugins you install once and wonder how you ever worked without it. Highly recommended!",
+      "weeks": 47,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-11-12T16:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Lorenzo Bianchi",
+      "title": "Great plugin, we're thinking of moving to Pro",
+      "comment": "A great plugin for those of us who also work with XML feed publishing, since it avoids overloading our server's connections. As we have many articles, we plan to purchase the Pro version in 2026. We want to take advantage of the CDN. Thanks for the developer's support: fast and attentive answers. Good support is a sign of seriousness. I wanted to write this review in Italian, because in 2025 it is very easy to translate.",
+      "weeks": 48,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-10-06T17:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Sven Schreiber",
+      "title": "Exactly what I needed!",
+      "comment": "I'm using the premium version on my book logging/review site to grab book cover images from the Amazon page URLs I was already entering to create affiliate purchase links. It was a bit bumpy at first, but the plugin author was extremely attentive and helped me over the course of several days to get things working exactly as I'd hoped! Highly recommended if you need an easy and quick way to grab an image from an external URL.",
+      "weeks": 128,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-02-27T20:43:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Raphaël Perrin",
+      "title": "Long-awaited answer",
+      "comment": "I've been waiting for years for a plugin that pulls and displays a video thumbnail as the featured image for my video-oriented posts. (My theme does not support a video post format for the blog.) FIFU grabs the thumbnail of the YouTube video and sets it automatically as the featured image. Perfect. We've worked with the developers to iron out how posts that are not video posts but contain a video are handled. They've been responsive and addressed our issues right away. Highly recommend.",
+      "weeks": 192,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-10-19T17:11:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Amira Adebayo",
+      "title": "Amazing plugin & brilliant support",
+      "comment": "This is an amazing plugin with A LOT of features that can make your website look great! It can be very useful for bloggers, businesses and any other website owner… but features wouldn't be very useful if you ran into a problem. I had a theme and plugin conflict, and the customer service was AMAZING! They solved the problem very quickly and gave me an update at each step. I HIGHLY recommend the plugin with its wonderful customer support! Thank you!",
+      "weeks": 232,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-12-26T23:07:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Margaux Rousseau",
+      "title": "Brilliant plugin",
+      "comment": "What a wonderful find! The plugin helped solve the Vimeo thumbnail issue that afflicted our augmented reality filter site overnight in September, when Vimeo deprecated their historic CDN URLs without warning and obliterated our entire site, even though we are a paying Vimeo customer. The plugin was adapted to solve this issue, and the developer tirelessly worked to isolate the unusual bugs on my production site that prevented the plugin from working as expected. You do have to be wary of the multitude of settings the plugin has, and perhaps some of the routines/combinations for tasks could be clearer, but overall I'm very pleased with the plugin and greatly appreciate the support effort.",
+      "weeks": 244,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-09-28T14:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Greta Vos",
+      "title": "Great plugin, and the support service is of paramount quality!",
+      "comment": "I have been using this plugin (Premium version) for a long time now, and it has saved me lots of hours, effort and money (hosting, storage, bandwidth and more). Don't think twice; go Premium. It is a great plugin, and the support service is of the highest quality, extremely responsive and helpful. Thank you so much!",
+      "weeks": 308,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-05-13T12:28:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Sanne Bakker",
+      "title": "Superbly unique",
+      "comment": "A great plugin that is unique in what it offers! It works like a charm and connects the images you are hosting on YOUR CDN or cloud account with your WP website. Unlike other plugins that require you to sign up for new CDN accounts, this one works with your existing storage. Great job, Marcel! And superior support too!",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-03-04T20:31:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Elena Ricci",
+      "title": "Great plugin, with amazing support",
+      "comment": "FIFU conflicted with another plugin I was using. I sent an email to the author, and he responded within 12 hours and resolved the issue within the next 24! The plugin does exactly what I need it to, without any unnecessary code to slow down page loads, and the author helped customize it for my needs. Definitely 5 out of 5 stars!",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-02-07T11:24:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Sami Sharma",
+      "title": "EXCELLENT plugin and SUPPORT",
+      "comment": "I recently had a problem with my FIFU. I messed with it for several days with no luck. I just assumed customer service would not be helpful, because so many are not these days. I was dead wrong. I emailed support, and I got an email back within 20–30 minutes. They were very friendly and helpful. They gave me detailed instructions; I followed them, and my issue was resolved. Customer service here is 5 stars for sure. I cannot say enough good things about them! I am not very techy, so I have much appreciation for them and their help today. My biggest surprise is that someone actually replied and took care of my problem. Highly recommend! I also love the plugin itself, but the support is amazing and outstanding.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-01-07T18:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Yusuf Abebe",
+      "title": "Very useful tool",
+      "comment": "If your website is going to have lots of blog posts, pages and products, then storing FEATURED IMAGES in the Media Library can consume lots of space and slow down the website. (Remember, each image is converted to many sizes for thumbnails, etc.) That is THE problem this plugin solves. It works very well. I save images in my Google Photos account and pull them from there as featured images for blog posts. (Storing images elsewhere may be tricky, as that server may have its own clean-up schedule.) Three cheers for Marcel!",
+      "weeks": 340,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-09-24T14:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Sophie Bennett",
+      "title": "Amazing plugin",
+      "comment": "It helped me complete a custom WooCommerce project. I get the images from a custom backend and set the external image URL using a cron job.",
+      "weeks": 364,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-03-09T15:20:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Andrés Molina",
+      "title": "Amazing plugin and support",
+      "comment": "It's amazing how much space on your host, and how much time downloading and uploading images, you can save with this plugin. It works fine, and the support is amazing. The developer is also fantastic and answers any support question within a few hours. A great choice.",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-28T00:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Hana Kim",
+      "title": "Excellent plugin, fantastic support",
+      "comment": "The plugin was exactly what I was looking for when I wanted to host my images externally. It worked flawlessly in wp-admin, but I couldn't figure out the WooCommerce API (user error) to create the links. The developer worked with me to figure out how to use the WooCommerce API in order to sync the FIFU links. He provided so much support for me. I highly recommend this plugin for its awesome functionality and exceptional support.",
+      "weeks": 376,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-02T19:02:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Riccardo Marino",
+      "title": "Works perfectly, and great support",
+      "comment": "I was looking for a long time for a plugin that could automatically create a featured image based on the first image in my post. This is the only plugin that worked. It can also create featured images from image URLs. It works easily and effortlessly. I initially had a plugin conflict, and the author was very helpful and helped me solve my problem. Very good plugin and support.",
+      "weeks": 376,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-12-27T00:25:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Jin Sato",
+      "title": "The easiest-to-use URL image plugin, and it keeps improving",
+      "comment": "My favorite part of this plugin is that I don't need to do anything redundant when writing a post. It can automatically pick the first URL image as the featured image. Just look at its settings page; it's not a simple and naive one like the others. At first it was problematic with my Newspaper theme, but after I contacted the author, he quickly fixed the issue. A very nice and active developer!",
+      "weeks": 392,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-08-29T04:54:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Chloé Lambert",
+      "title": "Really great plugin",
+      "comment": "A really good plugin. It does what it should and fills a gap in our theme that the theme developers did not want to address. I decided to go for the Pro version and asked the developer for a special feature for my needs. He was ready to integrate it into the Pro version for me. He worked on the plugin until it did what it should with our theme. This is a level of service you get from only a few developers, and Marcel is one of them. We recommend it. It's a pleasure to donate. Thanks a million!",
+      "weeks": 392,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-08-15T06:42:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Ella Parker",
+      "title": "Superb support, with WP All Import/Export integration",
+      "comment": "I purchased the Pro version to utilize some of the import/export functionality. The developer was quick to add an additional feature that allows for directly exporting the featured images in WP All Export (Image URL column) and importing them into the fifu_list_url custom field. Super functionality!",
+      "weeks": 432,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-10-26T04:06:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Anton Petrova",
+      "title": "Perfect for Open Live Writer!",
+      "comment": "There was no way to add a featured image using Open Live Writer (formerly Windows Live Writer) until this brilliant plugin came along! It works perfectly! It grabs the first image in the post (or page) and sets it as the featured image. Another fantastic benefit is the featured image thumbnail in the all posts/pages list; it's so handy to see whether there is one and what it is. Cheers!",
+      "weeks": 444,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-07-24T14:07:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Isabela Ribeiro",
+      "title": "Great plugin – no more right-sizing and optimizing photos",
+      "comment": "I was able to delete about 40 photos from my media library — I just did my posts. I'm speed-conscious, so I always right-size and optimize photos. I now have higher-quality photos on my posts with no impact on my page speed. Don't link to photos on slow sites; they are slow to load.",
+      "weeks": 444,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-07-10T01:05:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 8
+    },
+    {
+      "name": "Diego Salazar",
+      "title": "Excellent tool",
+      "comment": "It solves one of the biggest difficulties when publishing a post: the associated image. Generating an image for each post can consume more resources than the time it takes to create the content itself. This incredible plugin solves that.",
+      "weeks": 47,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-11-11T23:17:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Charlotte Bennett",
+      "title": "Amazing, works well and is useful",
+      "comment": "The FIFU plugin is a powerful tool designed to optimize image SEO for WordPress websites. It helps speed up page loading time by enabling lazy loading for images, improving website performance. FIFU also allows you to easily add image optimization settings, including WebP support, alt text, and more, which can boost search engine rankings. This plugin is perfect for enhancing the user experience and improving overall site SEO without requiring advanced technical knowledge.",
+      "weeks": 48,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-10-18T10:08:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Niklas Bakker",
+      "title": "Great plugin for what I needed it for",
+      "comment": "I decided to go ahead and rate it. A long time ago I needed to be able to use images saved on my main website as the featured image in some of my blog posts that referenced the content over there. This allows me to do exactly that. Since that's the only feature I really use, that's all I can comment on. Thanks for keeping it updated.",
+      "weeks": 52,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-09-19T16:15:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Giulia Conti",
+      "title": "Great functionality, great support",
+      "comment": "I switched to the premium version of this plugin for the YouTube functionality, and it does exactly what I need it to. The company has also provided amazing support, with almost immediate response times whenever I have a need. Highly recommend.",
+      "weeks": 112,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-06-12T23:36:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Dev Mensah",
+      "title": "Works well. Great support",
+      "comment": "Using the Premium version. No problem getting it to work; easy to use. I had a minor issue with the FIFU alt tags not working correctly, but the response from Marcel was first-rate and the issue was quickly resolved.",
+      "weeks": 116,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-05-11T12:49:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Margaux Lefèvre",
+      "title": "Solid plugin, constantly updated",
+      "comment": "We've been using FIFU on several sites for a few years to save on space. It has worked flawlessly and is updated quickly when the external link rules change. The support alone is worth its weight in gold.",
+      "weeks": 132,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-01-16T14:01:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Grace Palmer",
+      "title": "Great plugin with first-class support",
+      "comment": "I purchased the plugin for the ability to play locally hosted MP4 videos as the featured product image. There was a slight issue with the autoplay, which was solved quickly by the first-class support on hand to help. The support for this plugin really is exceptional and worthy of 5 stars. Thank you, FIFU!",
+      "weeks": 152,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2023-08-17T07:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Lena Jensen",
+      "title": "Absolutely amazing",
+      "comment": "FIFU is a real lifesaver, especially if you work with a ton of products and can't host every image locally. It works flawlessly out of the box (with documentation and compatibility with other plugins such as WP All Import), and it's crafted to pure perfection. Also, mad respect for its developer, Marcel: not only did he create a truly unique plugin, but he is also super kind and helpful whenever you need any help!",
+      "weeks": 180,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2023-02-02T20:51:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Francesca Moretti",
+      "title": "Amazing support",
+      "comment": "I just wanted to drop a few good words about this plugin's support. A month ago I got a new client asking me to fix her website. I found that the original developer who built her site used the plugin 'Featured Image from URL (FIFU)' to pull images from her Google Drive. As you can imagine, this is not a normal way to handle WordPress photos. But I must say that the development team behind this plugin is just amazing. They always responded to my questions in a matter of minutes. After they checked my issue, they found that the original developer hadn't used the plugin as it should be used. They responded quickly to my questions and issued a few updates to the plugin that solved my issues. I'm not a registered user of the plugin, but even so, I got excellent support from the developer.",
+      "weeks": 244,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-09-22T16:40:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Oliver Brooks",
+      "title": "The BEST of the BEST! Don't settle for less! I am so happy I found FIFU!",
+      "comment": "I am SO impressed with FIFU. It doesn't stop at just giving you what you need; it provides you with things you didn't even know you needed at first! There is so much thought and detail put into this awesome app. It's a labor of love, and it shows! And for those who manage bbPress, BuddyPress or BuddyBoss forums, you are in for a treat! YES! I found an app that works perfectly for all three! I am so HAPPY! You can even make a forum look like Reddit! No, I was not asked to write this review, nor was I compensated for it. I am a paying customer and someone who is SO impressed by the amazing support and talent behind this app. Hands down the most decent, knowledgeable and coolest developer EVER! Have you ever come across someone or something that just keeps bettering itself continuously? If yes, then you have found gold right here. If not, then you'll find out what premium really means! With every release, these guys keep raising the bar! No wonder there are over 61,000 installs as I write this. Do the math. Premium is SO worth it! This app is worth every single penny and then some! Thank you, FIFU. You really are a shining star, not just as an app but as a model developer! Cheers!",
+      "weeks": 252,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-07-13T00:48:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Aaron Morgan",
+      "title": "Works very well + great support",
+      "comment": "The plugin works really well and helps offload your server, saving tons of space if you have an image-heavy blog. Also, the author is great at providing support and advice, or even adding a feature if it's something more users can benefit from. Thanks!",
+      "weeks": 256,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-06-06T10:10:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Isabela Mendoza",
+      "title": "Easy to use and fast support",
+      "comment": "I reported a bug, and the plugin owner reacted in a timely manner. This plugin is the way to go for our site, which needs frequent thumbnail changes from a remote server. Great job!",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-21T14:05:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Riccardo Gallo",
+      "title": "Excellent plugin and technical support",
+      "comment": "This is a wonderful solution for getting my ever-growing media library back under control. Works perfectly. I had a question, and tech support resolved it in a matter of hours. Five stars!",
+      "weeks": 308,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-06-03T21:57:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Oliver Hayes",
+      "title": "Very useful plugin, superb support!",
+      "comment": "Really handy to be able to serve featured images (as well as images in general) from a URL. The plugin works really well; the only minor issue I had was solved by the plugin author in under an hour. Impressed!",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-02-20T20:01:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Amira Khalil",
+      "title": "Best support ever",
+      "comment": "The plugin is light, very complete and easy to use. It doesn't slow down the system, and it doesn't offer unwanted functions. Its focus is featured image management, and it solves this with mastery. I have never experienced such fast support and commitment. They are absolutely respectful and professional, and they will go further than they have to with their help and support.",
+      "weeks": 340,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-09-27T07:12:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Lily Reid",
+      "title": "Useful plugin by a dedicated developer",
+      "comment": "I'm using the premium version of this plugin to display a video as my featured image, and I have been very impressed with the responsiveness from Marcel. He released a fix for an issue I ran into within 24 hours of my initial inquiry. I'm happy to support developers with this kind of dedication and professionalism.",
+      "weeks": 360,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-11T17:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Maren Koenig",
+      "title": "Featured Image from URL is so handy",
+      "comment": "I use this to override the default featured images in my posts without browsing my media gallery. It's a quick one-two for developers who move fast. Support is fast too, and this is important! All is well.",
+      "weeks": 360,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-10T17:20:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Milena Horák",
+      "title": "Great and fast service",
+      "comment": "I tried using the basic version of the plugin, and it worked well. But I needed the full functionality of the premium version to be able to customize the images I was bringing in. It did not initially do what I needed it to. The author of the plugin helped me get things working VERY fast. I was very impressed with the service.",
+      "weeks": 364,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-05T22:18:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Rafael Carvalho",
+      "title": "Perfect!",
+      "comment": "We have been using it for more than 3 years, just to use an external image as the featured image. Today it has more features, some paid and some free, but that doesn't interfere with your posts. And always, always, whenever I have problems, Marcel very politely helps us and solves them. I HIGHLY RECOMMEND IT!",
+      "weeks": 364,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-04T00:54:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Chloé Renard",
+      "title": "Great plugin for external images",
+      "comment": "I'm using it to link external images to my site, and it is the only one that works, and it works great. Also, the WP All Import integration is perfect for my WooCommerce site. Many thanks to Marcel for the plugin and the great support.",
+      "weeks": 420,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-01-14T12:44:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Hugo Marchand",
+      "title": "Great plugin and great support",
+      "comment": "This plugin works very well, is easy to use, and solved a very specific problem for me. The author even added a feature that I requested… in just a few days. So, great support as well.",
+      "weeks": 448,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-06-18T19:51:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Catalina Duarte",
+      "title": "Great product & support",
+      "comment": "Marcel put up with my grumbling for a few hours while customizing his plugin to turn off an unneeded feature. This plugin works great for using remote images as WooCommerce product images and galleries. Just make sure your theme is not using custom WooCommerce pages. Thanks again, Marcel.",
+      "weeks": 460,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-04-02T10:42:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Dmitri Volkov",
+      "title": "Now all in one!",
+      "comment": "No need for two separate types of plugin anymore: 1. One that sets any URL image (not only from the media library) as the featured image. 2. One that lets the featured image be viewed in the posts/pages lists on the admin side. Today this one provides both functionalities. Nice work!",
+      "weeks": 520,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2015-12-23T05:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 7
+    },
+    {
+      "name": "Mathias Bakker",
+      "title": "Works great!",
+      "comment": "I use a lot of free images, and I like to repay the photographers with the credits they deserve. This plugin lets me do that.",
+      "weeks": 28,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-04-01T14:43:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Martina Herrera",
+      "title": "Fantastic plugin! Great support! Best plugin I've ever installed!",
+      "comment": "By far, FIFU is the best plugin I have ever downloaded and installed for my site. It saves me so much time; I've been able to move forward so quickly with a large number of new product additions that used to take forever to add to my store. I will never go back to the 'old way' after using FIFU.",
+      "weeks": 64,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-06-25T00:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Jin Tanaka",
+      "title": "Great plugin and support",
+      "comment": "I had a small issue that turned out to be a problem with another plugin. Marcel provided outstanding support and pointed me in the right direction.",
+      "weeks": 116,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-05-24T08:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Leila Mehta",
+      "title": "Very good support and easy to get up and running",
+      "comment": "Very good support and easy to get up and running. The plugin works perfectly, the support is super attentive, and they help you with everything. It's worth paying for the license; I have done so, and I am very happy with it!",
+      "weeks": 148,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2023-09-06T08:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Théo Renard",
+      "title": "I recommend it to everyone",
+      "comment": "Marcel responded to my email in less than 30 minutes; I didn't even expect that. The support is really great and the communication is superb. As for the plugin itself, it's just amazing and really worth having (I got the Pro version and am completely happy with the purchase).",
+      "weeks": 200,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-08-19T20:17:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Ivana Novák",
+      "title": "Best plugin for featured images!",
+      "comment": "The best plugin! I've been using it for a long time! It might sound silly, but putting all article images on a CDN, including featured images, saves a lot of hosting disk space. Thank you so much!",
+      "weeks": 204,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-07-27T14:25:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Zara Haddad",
+      "title": "Very helpful and quick support",
+      "comment": "Marcel answered my question within 15 minutes and helped me diagnose the issue. I am very grateful for his quick response and thorough answers. FIFU is an incredibly useful plugin, made even better by its helpful developer.",
+      "weeks": 204,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-07-05T20:48:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Mason Barnes",
+      "title": "The plugin is very useful and support is very fast",
+      "comment": "I had some trouble with the plugin, and the plugin owner answered and supported me right away, helping me solve it in a short time. Great job. Highly recommended for any website owner who wants good thumbnails on their site.",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-27T23:06:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Simone Moretti",
+      "title": "Thanks to the developers",
+      "comment": "I have used this plugin for a long time. When I ran into trouble, I contacted the developers. The response came faster than I imagined. The problem was resolved, and a newer version was released in a very short time. So, thanks to the developers.",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-03-03T11:21:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Mei-Ling Chen",
+      "title": "Excellent and fast support",
+      "comment": "I have always used Featured Image from URL to replace WordPress's built-in featured images. Recently I ran into some small problems and sent a support request by email. Unexpectedly, even though I use the free version, the author still helped solve the problem very quickly and enthusiastically. A great user experience.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-23T02:56:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Chloe Brooks",
+      "title": "Excellent plugin",
+      "comment": "This is an excellent plugin. What's more, you get instant help if there is an issue. I had one this morning, for the first time since I started using this plugin. I sent an email to the address provided and got instant help. Problem solved in under 10 minutes. Great!",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-18T13:32:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Emma Fletcher",
+      "title": "Very fast support for a great plugin",
+      "comment": "It's working very well and saves me a lot of hosting storage. Support is fast too, and this is important! All is well.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-11T13:32:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Manon Girard",
+      "title": "Useful plugin with great support",
+      "comment": "I've been using this plugin to load external images for an e-commerce site, and it's so useful. Also, the support from Marcel is great, super fast and precise!",
+      "weeks": 348,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-07-30T10:15:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Elena Gallo",
+      "title": "Great support and plugin",
+      "comment": "I was able to use my Azure CDN for the product images, and the issue I had with setting the product images (which was just related to not knowing which feature to use) was resolved by support in less than 2 hours! Thanks!",
+      "weeks": 360,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-29T19:41:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Omar Chowdhury",
+      "title": "Amazing support!",
+      "comment": "I cannot express how amazing the support I receive from the developer is. Very quick and eager to fix all issues. I have the premium plugin, and I just want to say it was definitely worth the purchase. I just wish all developers would answer and fix issues this quickly! Thank you so much, and keep up the amazing work!",
+      "weeks": 360,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-29T16:02:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Inès Perrin",
+      "title": "Does what it says, and does it well.",
+      "comment": "This plugin does what it says it will do, and does it well. I had a minor 'edge case' issue, and the author corrected it immediately; I couldn't ask for anything more. Great plugin – five stars.",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-10T15:38:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Lena Brandt",
+      "title": "This is good",
+      "comment": "This plugin is very useful for uploading images via URL, and all my problems were resolved well by the responsive support team. Yeah, this is cool.",
+      "weeks": 376,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-04T01:37:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Sanne Eriksen",
+      "title": "Just works.",
+      "comment": "This plugin is perfect if you host your images off-site, like on Amazon, etc. It saves space on the server and works flawlessly. Excellent plugin.",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-24T17:53:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Felix Nygaard",
+      "title": "The fact is, it works, and it is awesome.",
+      "comment": "I saw the previous comments, and it concerns me when I see that type of statement. So, like a logical person, I tried it out. 1. I copied an image link from Yahoo and posted that URL on my site. It worked fine. 2. I removed the image link and replaced it with another one. It worked fine. Sometimes I wonder about people who maybe don't understand how to use the plugin properly. This is a solution that I needed, and it frustrates me that I could have missed out on it because of some people who make bad statements. Good job to the programmer.",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-10T03:26:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Giulia Rinaldi",
+      "title": "Working perfectly",
+      "comment": "I purchased the Pro version of the plugin, and it's working perfectly, displaying images from another site on my WooCommerce category pages. The developer was quick to respond and very helpful when I had a small issue.",
+      "weeks": 424,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-12-14T14:57:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Ananya Okafor",
+      "title": "Great plugin! Especially for WooCommerce",
+      "comment": "This plugin is indispensable for me! I'm using it for WooCommerce. The highest level of technical support! The author responded quickly and fully to all my questions. Many thanks to Marcel again!",
+      "weeks": 504,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-05-06T13:50:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Mateo Almeida",
+      "title": "Amazing plugin, especially for WooCommerce!",
+      "comment": "This plugin is a lifesaver! I'm using it for WooCommerce. I had an issue figuring out some settings – the author quickly responded and answered all of my questions. Thank you so much again!",
+      "weeks": 520,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2015-12-28T23:55:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Santiago Quintana",
+      "title": "Excellent!",
+      "comment": "I don't need to store any images internally anymore. By providing just the URLs, I can use my images from Flickr or anywhere else.",
+      "weeks": 532,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2015-10-04T03:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 6
+    },
+    {
+      "name": "Haruki Sato",
+      "title": "Improved my work efficiency",
+      "comment": "I no longer need to download images, and my work efficiency has improved.",
+      "weeks": 22,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-05-21T02:38:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Nikolai Sokolov",
+      "title": "Excellent plugin!",
+      "comment": "This is exactly what I was missing, so I don't have to copy a pile of images from the main site to the store.",
+      "weeks": 52,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-09-28T17:29:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Bence Kovács",
+      "title": "A perfect little tool",
+      "comment": "I have been using the plugin for years without any errors. I post a lot, so I don't have to upload the images for my posts and take up storage space. I recommend it.",
+      "weeks": 52,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-09-19T19:36:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Charlotte Foster",
+      "title": "Very good plugin with amazing support",
+      "comment": "I recommend this plugin. I had a problem caused by another plugin, but the support was amazing and we solved the issue.",
+      "weeks": 172,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2023-03-07T19:48:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Nadia Iyer",
+      "title": "Best external image URL plugin",
+      "comment": "FIFU is an awesome plugin; it makes using images from external URLs work like magic. Thank you.",
+      "weeks": 280,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-12-22T16:21:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Ivana Dvořák",
+      "title": "Great plugin and great support!",
+      "comment": "Featured Image from URL is a great plugin. I have been using the free edition for a while now, but I will undoubtedly buy the premium version soon. Support is excellent.",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-31T23:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Hana Wong",
+      "title": "Great plugin, great support!",
+      "comment": "This plugin is really amazing; it really helped me a lot to add a featured image from another URL. The creator (Marcel) really helped me when I had a problem with the plugin.",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-15T01:43:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Chiara Greco",
+      "title": "Great plugin, helpful developer!",
+      "comment": "The plugin works, and when I needed certain customization, the developer immediately worked on updating the plugin. Thank you.",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-03-03T15:29:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Margaux Renard",
+      "title": "The best plugin to save site space",
+      "comment": "This plugin provides great functionality for using off-site images with both WooCommerce and WordPress.",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-03-02T19:09:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Milena Zielinski",
+      "title": "Great plugin with regular updates",
+      "comment": "Thanks for the hard work, Marcel, with all those regular updates. Though they might be annoying for some, it's worth taking into consideration that application development is always, and for the time being, a mix of known and unknown things, hence the constant upgrades/improvements. Even big corporations like Microsoft struggle at times with their releases, despite the countless top engineers working on them. When one knows how severe some bugs can be, coupled with the relentless threats from all over the world, only then can one fully appreciate having an up-to-date plugin/application. Thanks.",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-03-02T13:45:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Inès Fontaine",
+      "title": "Easy to use & best support!",
+      "comment": "Thanks for your quick support. I really enjoy using Featured Image from URL together with WP All Import!",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-02-24T14:14:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Charlotte Griffin",
+      "title": "Great support",
+      "comment": "I needed to use FIFU to fix a very specific problem on my website. The support helped me find the solution together, step by step. Good plugin!",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-20T15:28:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Margaux Lambert",
+      "title": "Great plugin for Amazon images",
+      "comment": "This plugin is awesome, and so is their support! I had some issues on my website where images were not showing correctly, and they fixed it instantly. Thanks a lot!",
+      "weeks": 336,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-11-02T13:45:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Tomás Almeida",
+      "title": "Great support. The plugin works perfectly with Newspaper v9",
+      "comment": "I had a little problem. Support answered my email fast. Afterwards, my site worked perfectly with thumbnails (from external image links). Good job, Marcel! Thank you!",
+      "weeks": 336,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-10-26T10:11:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Jonas Hoffmann",
+      "title": "Great plugin, awesome support.",
+      "comment": "The plugin is wonderful and solved a big problem for me. Marcel is a great developer and a really nice person. He helped me not only with the plugin; in general, when he saw my site, he gave me some important feedback.",
+      "weeks": 376,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-12-24T16:48:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Vicente Castillo",
+      "title": "GREAT plugin with TOP support!!",
+      "comment": "This plugin works great, and the support is just amazing! The free version offers many features and works really well, and with the premium features you can enjoy even more configuration options to improve your website. Congratulations! It is not easy to find such good plugins around! Thank you very much!",
+      "weeks": 380,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-11-30T13:08:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Oliver Harper",
+      "title": "Very good plugin",
+      "comment": "Very good plugin.",
+      "weeks": 380,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-11-09T23:16:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Elias Weber",
+      "title": "Perfect for my needs",
+      "comment": "Easy to use and perfect for my needs. I've been looking for something like this for ages, since most plugins here only feature links that are in the Media Library. So far I don't have image size issues, but if I ever do, I might spring for the Pro version.",
+      "weeks": 392,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-08-31T15:13:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Isabela Cordeiro",
+      "title": "Works great on standard WordPress posts",
+      "comment": "Another theme I use does this automatically without a plugin, but I couldn't figure out how the developer incorporated it into their theme. I believe it pulls in the images automatically without having to add additional data to the database. Either way, this plugin does what I need it to, albeit I now have to rely on it – one more plugin that I'd prefer not to use. However, I'm super happy to have found a solution. Great job, plugin author!",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-14T07:45:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Carolina Navarro",
+      "title": "No more cluttered media library",
+      "comment": "Great for keeping track of sources as well. It should allow links to be entered in Quick Edit.",
+      "weeks": 468,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-01-19T18:26:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Haruto Kim",
+      "title": "Does exactly what it says",
+      "comment": "Great plugin. I needed this for custom post types, and it did exactly what I wanted.",
+      "weeks": 480,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-11-03T20:32:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Joaquín Quintana",
+      "title": "Works great",
+      "comment": "I use it with a WooCommerce store to save space on the server. Works like a charm!",
+      "weeks": 504,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-05-02T03:27:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Elena Rinaldi",
+      "title": "It's great, thanks!!",
+      "comment": "Great job, thanks! One question: when I use sliders or display posts using widgets from the original theme, I don't have any problem with the featured image. But when I try to use a plugin to add a carousel, if I set the featured image in the default way, it displays the picture, but if I use an external link (with this plugin), the image is not loaded. It looks like it doesn't find the featured image… Do you have any idea or possible solution for that? Thank you!",
+      "weeks": 528,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2015-10-30T15:52:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 5
+    },
+    {
+      "name": "Minh Wong",
+      "title": "Amazing! Working great on my radio station's site",
+      "comment": "Amazing! It is working great on my radio station's site.",
+      "weeks": 39,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-01-09T08:06:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Charlotte Hudson",
+      "title": "Very useful",
+      "comment": "The preview image in posts and pages is really awesome!",
+      "weeks": 41,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-12-29T03:29:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Alejandro Duarte",
+      "title": "Very useful",
+      "comment": "The preview image in posts and pages is very useful for me!",
+      "weeks": 41,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-12-29T02:40:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Elias Bergström",
+      "title": "Super easy, super helpful",
+      "comment": "Essential for adding control over the location of all media on our site.",
+      "weeks": 52,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-09-20T19:20:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Nadia Abebe",
+      "title": "Amazing support",
+      "comment": "I inherited a site with FIFU installed. Honestly, I didn't use the plugin much. BUT! I can say that the support was absolutely stellar and fast, and truly worthy enough for me to leave a 5-star review. Thank you!",
+      "weeks": 180,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2023-01-26T22:36:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Louis Garnier",
+      "title": "One of the best",
+      "comment": "This piece of work is one of the best plugins available for WordPress. Add a link and you have an image for your post. What more do you need?",
+      "weeks": 196,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-09-22T20:22:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Tariq Haddad",
+      "title": "Best plugin support in WordPress",
+      "comment": "Best plugin support ever. Very helpful advice and fast responses for this plugin. Recommended.",
+      "weeks": 204,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-07-08T14:43:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Margaux Marchand",
+      "title": "Very useful!",
+      "comment": "Such a function should be native in WP. I'm so glad you thought about it! Thank you very much!",
+      "weeks": 264,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-04-27T09:16:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Dev Mehta",
+      "title": "Perfect, with great support",
+      "comment": "This is a really good plugin, and even if there is an issue, Marcel will help you perfectly – and he answers quickly! I love the plugin and the support!",
+      "weeks": 316,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-03-31T06:53:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Greta Schreiber",
+      "title": "Great job – support",
+      "comment": "Number one plugin for external images. Have a problem? Contact support. It gets fixed in the next version. You're doing a really great job.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-25T19:44:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Wei Kobayashi",
+      "title": "Excellent",
+      "comment": "Worked with WP All Import; the support is excellent.",
+      "weeks": 332,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-11-23T16:25:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Jakub Nowak",
+      "title": "Excellent, very useful plugin!",
+      "comment": "I have been using this plugin for over a year now, and it does exactly what it is supposed to. Credit to the author: excellent work. Thank you for this very useful plugin.",
+      "weeks": 332,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-11-11T18:40:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Ingrid Bergström",
+      "title": "Outstanding service!",
+      "comment": "I must commend Marcel for his prompt response to questions and issues. The regular and premium plugins work flawlessly. Long-time fan!",
+      "weeks": 344,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-09-01T20:24:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Nicolás Pereira",
+      "title": "Great plugin!",
+      "comment": "This plugin saves a lot of my hosting storage!",
+      "weeks": 348,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-08-01T02:46:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Kofi Haddad",
+      "title": "Works very well",
+      "comment": "It's working very well and saves me a lot of hosting storage.",
+      "weeks": 348,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-07-11T16:06:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Chiara Marino",
+      "title": "Fast support",
+      "comment": "I contacted the developer about an issue with the email setting, and he answered and made a prompt response. Very helpful.",
+      "weeks": 352,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-06-16T19:33:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Zoe Morgan",
+      "title": "The developer and his plugin are AMAZING",
+      "comment": "The developer answers very, very fast about plugin problems, although I'm not a premium member. This plugin also has many features that other plugins do not have. I wish you continued success, developer!",
+      "weeks": 352,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-06-07T16:57:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Arthur Chevalier",
+      "title": "Great plugin",
+      "comment": "The plugin meets many requirements for your WordPress website. Please give this plugin a chance in your project.",
+      "weeks": 360,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-25T03:21:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Caleb Carter",
+      "title": "Great plugin",
+      "comment": "Instant help from the author, and it is one of those great plugins that does its job.",
+      "weeks": 376,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-04T10:10:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Mei Sato",
+      "title": "Wonderful plugin",
+      "comment": "One of the best and most useful plugins I have used so far. The support is absolutely great! Thank you, Marcel, for solving my problem!",
+      "weeks": 396,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-07-23T21:46:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Jin Kobayashi",
+      "title": "Excellent plugin and above-and-beyond support",
+      "comment": "This plugin is fantastic, and I can't say enough good things about the post-sale support that I've received.",
+      "weeks": 396,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-07-10T01:30:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Jonas Fischer",
+      "title": "Gives me great options",
+      "comment": "Great plugin; it allows me not to fill up my media library.",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-18T04:16:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Rohan Sharma",
+      "title": "Excellent",
+      "comment": "Worked like a charm, especially using the WP bulk edit actions.",
+      "weeks": 440,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-08-28T21:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Lily Foster",
+      "title": "Brilliant plugin, does what it says on the tin",
+      "comment": "Great plugin, simple, and it does the job. Support is also quick and effective!",
+      "weeks": 444,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-07-10T14:45:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Harriet Sutton",
+      "title": "Great plugin and support",
+      "comment": "Thanks to Marcel. I had a configuration problem with WP All Import, and within 2 hours Marcel helped me, and now it is running correctly. Thanks!",
+      "weeks": 464,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-02-23T14:36:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Martina Ribeiro",
+      "title": "Cool!",
+      "comment": "Now that you can upload from any URL, this plugin works a treat.",
+      "weeks": 464,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-02-10T15:16:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Louis Rousseau",
+      "title": "Great plugin!",
+      "comment": "Really useful plugin and great support! The developer answers as quickly as possible and solves all your problems.",
+      "weeks": 476,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-12-03T20:59:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Sofía Guerrero",
+      "title": "Very good",
+      "comment": "It is good software; I recommend it. It helps you a lot and works very well. We're going all in!",
+      "weeks": 492,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-07-22T06:18:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Agnieszka Zielinski",
+      "title": "Very easy setup",
+      "comment": "Perfect for my needs, and it saves room on my server for duplicate products.",
+      "weeks": 492,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-07-22T01:32:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 4
+    },
+    {
+      "name": "Omar Mensah",
+      "title": "Solid support, always updated",
+      "comment": "A very well-supported plugin.",
+      "weeks": 46,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-11-22T17:41:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Camila Reyes",
+      "title": "I love it",
+      "comment": "Excellent plugin. I use it in all my WordPress designs!",
+      "weeks": 48,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-10-12T17:28:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Julien Dubois",
+      "title": "Excellent plugin",
+      "comment": "It really makes publishing easier.",
+      "weeks": 48,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-10-08T21:52:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Elena Barbieri",
+      "title": "An efficient plugin",
+      "comment": "This plugin helped me a lot, and I thank its creator.",
+      "weeks": 52,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-09-19T06:49:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Léa Renard",
+      "title": "Excellent plugin and support",
+      "comment": "Fast support and an awesome plugin.",
+      "weeks": 92,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-11-17T19:09:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Martina Sandoval",
+      "title": "Great plugin – super support!",
+      "comment": "A very handy and powerful plugin. Highly competent support.",
+      "weeks": 212,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-05-18T08:29:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Katarzyna Nowak",
+      "title": "Works very well",
+      "comment": "This is an amazing plugin with A LOT of features that can make your website look great!",
+      "weeks": 224,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-02-21T16:52:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Jakub Kuznetsov",
+      "title": "Excellent support",
+      "comment": "Very responsive, and follows through.",
+      "weeks": 276,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-02-01T18:20:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Kenji Nakamura",
+      "title": "Best plugin with the best support team",
+      "comment": "Well, the plugin is good and works perfectly. The support team is also good.",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-05T18:33:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Matteo Colombo",
+      "title": "Excellent support",
+      "comment": "The plugin works as expected. Very good support.",
+      "weeks": 304,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-06-12T21:14:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Astrid Holm",
+      "title": "Useful plugin!",
+      "comment": "Great plugin. Support was very fast. It makes life easier. Thank you.",
+      "weeks": 312,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-05-02T07:30:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Astrid de Vries",
+      "title": "Excellent",
+      "comment": "Really great work! And quick support. I love this plugin.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-01-06T15:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Inès Marchand",
+      "title": "Excellent support",
+      "comment": "Good app – even better support!",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-01-05T03:51:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Arthur Fontaine",
+      "title": "Great plugin and great support",
+      "comment": "Great plugin, and I had a problem solved quickly.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-21T01:44:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Hana Nakamura",
+      "title": "Great plugin and great support",
+      "comment": "If you have a problem the first time you use this plugin, contact support. The author will help you solve it. Thank you for a great plugin.",
+      "weeks": 336,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-10-11T14:41:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Riccardo Conti",
+      "title": "Excellent and quick support",
+      "comment": "Works well, and the developer is extremely helpful with fixing problems! Thanks a lot.",
+      "weeks": 340,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-09-17T01:17:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Matteo Gallo",
+      "title": "Great plugin & support",
+      "comment": "The plugin does what it says, and the author provides great support.",
+      "weeks": 344,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-08-28T19:13:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Vicente Delgado",
+      "title": "Great plugin",
+      "comment": "Very helpful and perfect in operation. Thanks for the plugin.",
+      "weeks": 356,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-05-10T11:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Amelia Dawson",
+      "title": "Fast support",
+      "comment": "Works nicely with my WP blog. Thanks, Marcel.",
+      "weeks": 360,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-04-18T13:21:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Ella Hudson",
+      "title": "Great plugin and support!",
+      "comment": "It's a really great plugin with great support! Very quick support replies, and the problem was resolved.",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-02-02T00:48:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Sven Nygaard",
+      "title": "Does exactly what I need, with super fast support",
+      "comment": "Does exactly what I need, with super fast support.",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-25T23:33:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Juliana Ramos",
+      "title": "Great plugin",
+      "comment": "Just what I needed, and the support is awesome!",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-16T15:56:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Layla Malik",
+      "title": "Very nice plugin",
+      "comment": "The plugin developer is very helpful. If you run into any problem with this plugin, just contact him.",
+      "weeks": 376,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-07T17:54:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Felix Koenig",
+      "title": "Absolutely great plugin and support",
+      "comment": "It does what it says and more. Support is fantastic.",
+      "weeks": 376,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-12-30T08:05:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Paula Navarro",
+      "title": "Works, and the maintainer is responsive",
+      "comment": "No complaints: actively maintained, and it just works.",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-26T18:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Leila Rahman",
+      "title": "Easy to use and excellent support",
+      "comment": "I wrote to the developer for help; he answered and solved my question.",
+      "weeks": 428,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-11-16T13:32:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Margaux Garnier",
+      "title": "Great plugin",
+      "comment": "This is a great plugin that does all it promises in an easy way. Thanks.",
+      "weeks": 432,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-10-11T11:45:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Tomás Duarte",
+      "title": "Excellent plugin",
+      "comment": "This plugin works very well and is easy to use.",
+      "weeks": 432,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-10-11T03:24:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Bruno Mendoza",
+      "title": "Works like a charm",
+      "comment": "This is a great plugin if you want to outsource your pictures. Works like a charm.",
+      "weeks": 448,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-07-06T07:29:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Anton Sokolova",
+      "title": "Works great",
+      "comment": "A handy plugin that is easy to use.",
+      "weeks": 460,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-04-06T14:13:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Nadia Malik",
+      "title": "Awesome support!",
+      "comment": "The plugin does what it says it does, and the plugin author gives amazing support!",
+      "weeks": 476,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-11-09T16:37:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Alejandro Cordeiro",
+      "title": "Quick to install, easy to use",
+      "comment": "Awesome plugin. Very easy to use.",
+      "weeks": 484,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-09-21T20:09:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Mathias Bergström",
+      "title": "Great plugin…",
+      "comment": "…because it actually solves WordPress's uncomfortable image system. Thank you, great job.",
+      "weeks": 528,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2015-10-25T13:52:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 3
+    },
+    {
+      "name": "Aiko Nakamura",
+      "title": "Good plugin, very useful",
+      "comment": "Good plugin, very useful.",
+      "weeks": 14,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-07-20T09:02:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Owen Morgan",
+      "title": "Great plugin",
+      "comment": "Works very well.",
+      "weeks": 27,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-04-10T19:36:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Rin Lin",
+      "title": "It is a very good plugin",
+      "comment": "I use it on several websites.",
+      "weeks": 32,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-03-01T06:47:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Agnieszka Bartos",
+      "title": "A must-have that just works",
+      "comment": "A must-have that just works.",
+      "weeks": 34,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-02-14T15:10:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Chloé Marchand",
+      "title": "Super",
+      "comment": "Super plugin, very helpful.",
+      "weeks": 36,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2026-02-03T14:44:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Matteo Moretti",
+      "title": "Best plugin. Highly recommended.",
+      "comment": "Best plugin. Highly recommended.",
+      "weeks": 52,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-09-19T07:01:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Hugo Garnier",
+      "title": "Great customer support and great plugin",
+      "comment": "Great customer support and a great plugin!",
+      "weeks": 184,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-12-12T23:17:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Davide Barbieri",
+      "title": "Perfect, with the best support",
+      "comment": "The plugin works well, with the best support.",
+      "weeks": 256,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-06-28T02:01:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Riccardo Ferrara",
+      "title": "Great plugin, helpful developer!",
+      "comment": "Great plugin, helpful developer!",
+      "weeks": 256,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-06-26T12:28:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Petr Sokolova",
+      "title": "Thank you",
+      "comment": "Excellent support.",
+      "weeks": 268,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2021-03-31T18:26:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Nathan Sutton",
+      "title": "Fast, and quick responses",
+      "comment": "Let's make this plugin amazing, guys. The best plugin and support!",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-29T16:15:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Louis Chevalier",
+      "title": "Great plugin, quick help, great support – top",
+      "comment": "Great plugin, quick help, great support – top. Thanks a lot.",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-28T16:49:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Mateo Herrera",
+      "title": "Totally happy with it! Works like a charm!",
+      "comment": "It works! And nice support!",
+      "weeks": 308,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-05-24T14:58:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Lena de Vries",
+      "title": "Nice plugin, helpful developer",
+      "comment": "Nice plugin. Helpful developer.",
+      "weeks": 312,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-05-04T13:59:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Riccardo Ricci",
+      "title": "The plugin is awesome",
+      "comment": "The plugin is awesome, and the support is VERY awesome. You really deserve the 5 stars. Thank you so much, Marcel.",
+      "weeks": 312,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-04-12T08:52:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Daria Dvořák",
+      "title": "Great support",
+      "comment": "I didn't have any issues, and the author is helpful.",
+      "weeks": 316,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-03-25T18:51:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Léa Dubois",
+      "title": "Very quick support",
+      "comment": "Very good support and quick answers.",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-02-27T10:28:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Alessandro Marino",
+      "title": "Great plugin",
+      "comment": "Fantastic plugin and support!",
+      "weeks": 320,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-02-26T23:28:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Minh Kobayashi",
+      "title": "Great support!",
+      "comment": "Great support and very fast responses.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-21T19:20:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Daria Sokolova",
+      "title": "It is handy",
+      "comment": "It's the best choice, with good support.",
+      "weeks": 328,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-12-20T15:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Riccardo Greco",
+      "title": "Amazing plugin",
+      "comment": "Thank you so much, Marcel, for designing this awesome plugin and for the best support. You did a miracle. You are one of the geniuses of the century, and your FIFU plugin is the best of plugins. You are a good man, and your work is a blessing. I hope God gives you whatever good things you want. I hope you receive a good reward from God for serving people around the world. Best regards and best wishes.",
+      "weeks": 332,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-11-11T15:06:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Emilio Castillo",
+      "title": "Great plugin",
+      "comment": "Great plugin and great support.",
+      "weeks": 352,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-06-21T18:10:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Alessandro Greco",
+      "title": "Quick response to any problem",
+      "comment": "Great plugin. Thank you for the support.",
+      "weeks": 368,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-02-22T07:37:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Maren Hoffmann",
+      "title": "Best plugin and author",
+      "comment": "Amazing support from the plugin author.",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-02-02T15:15:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Alessandro Rinaldi",
+      "title": "Great help",
+      "comment": "Good support, and the plugin is working as expected.",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-28T13:26:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Mathias Hoffmann",
+      "title": "Great, and the support is fast!",
+      "comment": "I love it!",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-19T14:42:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Bruno Navarro",
+      "title": "Excellent",
+      "comment": "A really very helpful plugin.",
+      "weeks": 372,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-01-08T06:53:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Inês Moreira",
+      "title": "Perfect",
+      "comment": "Perfect. Very good. Great work.",
+      "weeks": 380,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-12-06T13:07:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Valentina Delgado",
+      "title": "Highly recommended, easy-to-use plugin",
+      "comment": "Simple and easy to use, with enthusiastic service!",
+      "weeks": 384,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-11-02T23:34:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Hyun Lin",
+      "title": "Keeps my site lightweight!",
+      "comment": "Works perfectly.",
+      "weeks": 384,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-10-20T10:18:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Léa Fontaine",
+      "title": "Perfect",
+      "comment": "I use it on my site, and it works flawlessly.",
+      "weeks": 420,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-01-27T07:41:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Mason Whitaker",
+      "title": "I value your work! Finally.",
+      "comment": "Finally, a plugin that works with featured images!",
+      "weeks": 428,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-12-04T10:19:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Lena Holm",
+      "title": "Top notch",
+      "comment": "Small but very handy.",
+      "weeks": 432,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-11-01T16:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Wei Tanaka",
+      "title": "Very good plugin and support",
+      "comment": "Very good plugin and support.",
+      "weeks": 432,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-10-18T10:55:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Valentina Esteves",
+      "title": "Excellent plugin and stellar support!",
+      "comment": "Excellent plugin and stellar support!",
+      "weeks": 436,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-10-04T07:30:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Gabriel Ribeiro",
+      "title": "Best featured image plugin",
+      "comment": "The best featured image plugin.",
+      "weeks": 440,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-09-04T13:54:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Hyun Wong",
+      "title": "Simple and effective",
+      "comment": "This is a great little plugin that works so easily: all you need to do is install and activate it, and you're good to go!",
+      "weeks": 456,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-04-12T22:00:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Greta Weber",
+      "title": "Does what it says",
+      "comment": "Simple to grasp, too.",
+      "weeks": 456,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-04-12T07:46:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Sanne Jensen",
+      "title": "Awesome",
+      "comment": "It worked very well.",
+      "weeks": 464,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-02-16T02:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 2
+    },
+    {
+      "name": "Louis Renard",
+      "title": "Good plugin",
+      "comment": "Good for everything.",
+      "weeks": 48,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2025-10-05T04:01:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Aaron Sutton",
+      "title": "Great plugin and even better service",
+      "comment": "I really recommend it.",
+      "weeks": 112,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2024-06-19T11:32:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Owen Barnes",
+      "title": "Excellent plugin!",
+      "comment": "Thanks to the developer for your hard work! 5 stars.",
+      "weeks": 220,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2022-03-08T23:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Hyun Takahashi",
+      "title": "Here, it works",
+      "comment": "It works here like a charm.",
+      "weeks": 296,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-08-19T18:20:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Lukas Bakker",
+      "title": "Excellent work",
+      "comment": "Very nice job. Thank you.",
+      "weeks": 308,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2020-05-07T07:14:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Gabriel Castillo",
+      "title": "Good one",
+      "comment": "Good one.",
+      "weeks": 352,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-06-22T22:45:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Martina Colombo",
+      "title": "Great support",
+      "comment": "Great support.",
+      "weeks": 360,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2019-05-06T07:17:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Vicente Duarte",
+      "title": "Nice plugin",
+      "comment": "Nice plugin.",
+      "weeks": 396,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-07-09T06:03:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Théo Dubois",
+      "title": "Awesome plugin, does what it claims!",
+      "comment": "I can't thank you enough for this beautiful plugin.",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-28T07:44:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Manon Lambert",
+      "title": "Good",
+      "comment": "Perfect.",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-14T05:09:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Ivana Marek",
+      "title": "Awesome",
+      "comment": "Great plugin.",
+      "weeks": 412,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-03-13T00:55:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Ruby Walsh",
+      "title": "Cool",
+      "comment": "Cool.",
+      "weeks": 420,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2018-02-03T12:49:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Milena Novák",
+      "title": "It's a very helpful plugin.",
+      "comment": "It's a very helpful plugin.",
+      "weeks": 432,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-10-21T12:21:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Théo Lambert",
+      "title": "We really need this plugin",
+      "comment": "Thanks to the developer.",
+      "weeks": 440,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-08-22T13:48:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Minh Kim",
+      "title": "THANKS",
+      "comment": "I just want to say that this plugin is very good, and thank you very much for making it.",
+      "weeks": 448,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-07-03T13:05:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Elena Greco",
+      "title": "Perfect",
+      "comment": "Perfect.",
+      "weeks": 460,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-03-13T15:43:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Jin Nakamura",
+      "title": "Good job",
+      "comment": "Good compared to others.",
+      "weeks": 464,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-02-14T06:39:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Soo-Min Kim",
+      "title": "It works with the additional setting",
+      "comment": "It works with the additional setting.",
+      "weeks": 468,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2017-01-27T16:45:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Nadia Nasser",
+      "title": "Good",
+      "comment": "It is working fine!",
+      "weeks": 492,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2016-07-19T13:26:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    },
+    {
+      "name": "Arthur Marchand",
+      "title": "Excellent plugin",
+      "comment": "Thank you!",
+      "weeks": 528,
+      "timestamp": "2026-11-01T18:34:28Z",
+      "posted_at": "2015-11-02T22:25:00Z",
+      "avatar": "/images/reviews/placeholder.webp",
+      "quality_score": 1
+    }
+  ]
+}

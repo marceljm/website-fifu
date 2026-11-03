@@ -1,0 +1,117 @@
+### npm run build
+
+> demosuite-marketing@1.0.0 build
+> react-router build
+
+vite v6.4.4 building for production...
+transforming...
+✓ 1633 modules transformed.
+rendering chunks...
+computing gzip size...
+build/client/.vite/manifest.json                      7.60 kB │ gzip:  0.91 kB
+build/client/assets/root-BB48toFQ.css                37.46 kB │ gzip:  8.96 kB
+build/client/assets/refund-policy-CGBfQCQA.js         0.16 kB │ gzip:  0.14 kB
+build/client/assets/terms-CGBfQCQA.js                 0.16 kB │ gzip:  0.14 kB
+build/client/assets/root-D7XDp0Yy.js                  0.52 kB │ gzip:  0.32 kB
+build/client/assets/confirmation-3XlzJXTQ.js          0.56 kB │ gzip:  0.37 kB
+build/client/assets/ReviewCard-iansp_Th.js            0.71 kB │ gzip:  0.42 kB
+build/client/assets/contact-DwXgqSrB.js               0.96 kB │ gzip:  0.54 kB
+build/client/assets/compare-Ccnlm3GA.js               0.99 kB │ gzip:  0.52 kB
+build/client/assets/blog-8oyIeLVW.js                  1.07 kB │ gzip:  0.63 kB
+build/client/assets/features-a1WFSV5N.js              1.09 kB │ gzip:  0.62 kB
+build/client/assets/privacy-DkGVRIMD.js               1.13 kB │ gzip:  0.65 kB
+build/client/assets/reviews-iAaZtHOI.js               1.15 kB │ gzip:  0.67 kB
+build/client/assets/blog-detail-Cbkf1dJu.js           1.18 kB │ gzip:  0.65 kB
+build/client/assets/integrations-D8ysYwn-.js          1.34 kB │ gzip:  0.68 kB
+build/client/assets/users-DNdS6wSM.js                 1.35 kB │ gzip:  0.54 kB
+build/client/assets/checkout-BYuIpseZ.js              1.94 kB │ gzip:  0.98 kB
+build/client/assets/faq-BE1p0M-T.js                   1.94 kB │ gzip:  0.84 kB
+build/client/assets/docs-CoQZdIP5.js                  2.19 kB │ gzip:  1.05 kB
+build/client/assets/SiteLayout-DStDef8r.js            3.26 kB │ gzip:  1.19 kB
+build/client/assets/feature-detail-DZ3JN_H1.js        3.39 kB │ gzip:  1.35 kB
+build/client/assets/pricing-CeR5cIvG.js               3.47 kB │ gzip:  1.40 kB
+build/client/assets/integration-detail-D9dmyefW.js    4.17 kB │ gzip:  1.47 kB
+build/client/assets/catalog-Dhepd-_J.js               6.86 kB │ gzip:  2.86 kB
+build/client/assets/home-0rFwWG5a.js                 17.72 kB │ gzip:  4.67 kB
+build/client/assets/jsx-runtime-CzlelRze.js         132.58 kB │ gzip: 44.83 kB
+build/client/assets/entry.client-DX_3-Mi0.js        220.00 kB │ gzip: 68.67 kB
+✓ built in 12.63s
+  ⚠️  Future Flag Warning: Route middleware support is changing in React Router v8.
+     You can use the `future.v8_middleware` flag to opt in early.
+     -> https://reactrouter.com/v7/upgrading/future#futurev8_middleware
+  ⚠️  Future Flag Warning: Route module splitting behavior is changing in React Router v8.
+     You can use the `future.v8_splitRouteModules` flag to opt in early.
+     -> https://reactrouter.com/v7/upgrading/future#futurev8_splitroutemodules
+  ⚠️  Future Flag Warning: Vite Environment API usage is changing in React Router v8.
+     You can use the `future.v8_viteEnvironmentApi` flag to opt in early.
+     -> https://reactrouter.com/v7/upgrading/future#futurev8_viteenvironmentapi
+  ⚠️  Future Flag Warning: Request handling behavior is changing in React Router v8.
+     You can use the `future.v8_passThroughRequests` flag to opt in early.
+     -> https://reactrouter.com/v7/upgrading/future#futurev8_passthroughrequests
+  ⚠️  Future Flag Warning: Data request URL formats are changing in React Router v8.
+     You can use the `future.v8_trailingSlashAwareDataRequests` flag to opt in early.
+     -> https://reactrouter.com/v7/upgrading/future#futurev8_trailingslashawaredatarequests
+vite v6.4.4 building SSR bundle for production...
+transforming...
+✓ 31 modules transformed.
+rendering chunks...
+build/server/.vite/manifest.json                 0.23 kB
+build/server/assets/server-build-BB48toFQ.css   37.46 kB
+build/server/index.js                          188.25 kB
+
+✓ 1 asset cleaned from React Router server build.
+build/server/assets/server-build-BB48toFQ.css
+
+Prerender (data): / -> build/client/_root.data
+Prerender (html): / -> build/client/index.html
+Prerender (html): /features/ -> build/client/features/index.html
+Prerender (html): /features/smart-workflows/ -> build/client/features/smart-workflows/index.html
+Prerender (html): /features/live-analytics/ -> build/client/features/live-analytics/index.html
+Prerender (html): /features/team-workspaces/ -> build/client/features/team-workspaces/index.html
+Prerender (html): /features/automations/ -> build/client/features/automations/index.html
+Prerender (html): /features/custom-reports/ -> build/client/features/custom-reports/index.html
+Prerender (html): /features/secure-sharing/ -> build/client/features/secure-sharing/index.html
+Prerender (html): /features/version-history/ -> build/client/features/version-history/index.html
+Prerender (html): /features/priority-support/ -> build/client/features/priority-support/index.html
+Prerender (html): /pricing/ -> build/client/pricing/index.html
+Prerender (html): /compare/ -> build/client/compare/index.html
+Prerender (html): /checkout/ -> build/client/checkout/index.html
+Prerender (html): /checkout/demo-confirmation/ -> build/client/checkout/demo-confirmation/index.html
+Prerender (data): /reviews/ -> build/client/reviews.data
+Prerender (html): /reviews/ -> build/client/reviews/index.html
+Prerender (html): /integrations/ -> build/client/integrations/index.html
+Prerender (html): /integrations/cloudnote/ -> build/client/integrations/cloudnote/index.html
+Prerender (html): /integrations/pixelboard/ -> build/client/integrations/pixelboard/index.html
+Prerender (html): /integrations/orbit-mail/ -> build/client/integrations/orbit-mail/index.html
+Prerender (html): /integrations/ledgerleaf/ -> build/client/integrations/ledgerleaf/index.html
+Prerender (html): /integrations/meetly/ -> build/client/integrations/meetly/index.html
+Prerender (html): /integrations/codenest/ -> build/client/integrations/codenest/index.html
+Prerender (html): /docs/ -> build/client/docs/index.html
+Prerender (html): /docs/getting-started/ -> build/client/docs/getting-started/index.html
+Prerender (html): /docs/install-demosuite/ -> build/client/docs/install-demosuite/index.html
+Prerender (html): /docs/create-your-first-workspace/ -> build/client/docs/create-your-first-workspace/index.html
+Prerender (html): /docs/invite-your-team/ -> build/client/docs/invite-your-team/index.html
+Prerender (html): /docs/plan-your-first-project/ -> build/client/docs/plan-your-first-project/index.html
+Prerender (html): /docs/set-up-workflows/ -> build/client/docs/set-up-workflows/index.html
+Prerender (html): /docs/build-a-custom-report/ -> build/client/docs/build-a-custom-report/index.html
+Prerender (html): /docs/connect-integrations/ -> build/client/docs/connect-integrations/index.html
+Prerender (html): /docs/manage-permissions/ -> build/client/docs/manage-permissions/index.html
+Prerender (html): /docs/use-automations/ -> build/client/docs/use-automations/index.html
+Prerender (html): /docs/export-your-data/ -> build/client/docs/export-your-data/index.html
+Prerender (html): /docs/billing-and-licenses/ -> build/client/docs/billing-and-licenses/index.html
+Prerender (html): /blog/ -> build/client/blog/index.html
+Prerender (html): /blog/a-calmer-way-to-plan-your-week/ -> build/client/blog/a-calmer-way-to-plan-your-week/index.html
+Prerender (html): /blog/make-project-updates-useful-again/ -> build/client/blog/make-project-updates-useful-again/index.html
+Prerender (html): /blog/the-small-rituals-behind-great-teams/ -> build/client/blog/the-small-rituals-behind-great-teams/index.html
+Prerender (html): /blog/how-to-find-focus-in-a-busy-workspace/ -> build/client/blog/how-to-find-focus-in-a-busy-workspace/index.html
+Prerender (html): /blog/a-practical-guide-to-better-handoffs/ -> build/client/blog/a-practical-guide-to-better-handoffs/index.html
+Prerender (html): /blog/make-space-for-meaningful-work/ -> build/client/blog/make-space-for-meaningful-work/index.html
+Prerender (html): /blog/building-a-team-rhythm-that-lasts/ -> build/client/blog/building-a-team-rhythm-that-lasts/index.html
+Prerender (html): /blog/the-case-for-visible-progress/ -> build/client/blog/the-case-for-visible-progress/index.html
+Prerender (html): /faq/ -> build/client/faq/index.html
+Prerender (html): /contact/ -> build/client/contact/index.html
+Prerender (html): /privacy/ -> build/client/privacy/index.html
+Prerender (html): /terms/ -> build/client/terms/index.html
+Prerender (html): /refund-policy/ -> build/client/refund-policy/index.html
+✓ built in 1.34s
+build exit: 0
