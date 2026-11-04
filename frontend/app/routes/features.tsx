@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Page } from '../components/layout/SiteLayout';
-import { features } from '../data/catalog';
+import { featureCards } from '../data/fifu-features';
 export function meta() {
   return [
     { title: 'WordPress Plugin Features | DemoSuite' },
@@ -16,20 +16,20 @@ export default function Features() {
     <Page eyebrow="THE WORDPRESS PLUGIN TOOLKIT" title="Features for a clearer workflow.">
       <p>Explore the plugin tools and choose what fits the way you work in WordPress.</p>
       <div className="cards">
-        {features.map((feature, i) => (
+        {featureCards.map(({ title, description, Icon }) => (
           <Link
             className="simplecard catalog-card feature-catalog-card"
-            to={'/features/' + feature.slug + '/'}
-            key={feature.slug}
+            to="/features/smart-workflows/"
+            key={title}
           >
             <span className="catalog-card-heading">
               <span className="catalog-icon" aria-hidden="true">
-                {['✳', '◫', '◎', '↗', '▤', '⌁', '◷', '♧'][i]}
+                <Icon size={23} strokeWidth={1.8} />
               </span>
             </span>
-            <h2>{feature.title}</h2>
-            <p>{feature.summary}</p>
-            <b>{i < 3 ? 'Free + Pro' : 'Pro'} · Learn more →</b>
+            <h2>{title}</h2>
+            <p>{description}</p>
+            <b>Learn More</b>
           </Link>
         ))}
       </div>

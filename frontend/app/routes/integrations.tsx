@@ -158,9 +158,11 @@ const integrations: Integration[] = [
     iconUrl: 'https://ps.w.org/web-stories/assets/icon.svg?rev=2386543',
   },
   {
-    name: 'VG Sheet Editor',
+    name: 'WP Sheet Editor',
     category: 'Bulk Editing',
     description: 'Manage FIFU image URLs from spreadsheet-style product editing.',
+    iconUrl:
+      'https://ps.w.org/wp-sheet-editor-bulk-spreadsheet-editor-for-posts-and-pages/assets/icon-128x128.png',
   },
   {
     name: 'Yoast Duplicate Post',
@@ -177,6 +179,7 @@ const integrations: Integration[] = [
     name: 'Force Login',
     category: 'Access & REST API',
     description: 'Allow FIFU REST API routes through Force Login’s access check.',
+    iconUrl: 'https://ps.w.org/wp-force-login/assets/icon-128x128.png',
   },
   {
     name: 'Woo Variation Swatches',
