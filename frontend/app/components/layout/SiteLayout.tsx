@@ -40,14 +40,16 @@ export function Page({
   eyebrow,
   title,
   children,
+  className,
 }: {
   eyebrow: string;
   title: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <Shell>
-      <main className="page">
+      <main className={className ? `page ${className}` : 'page'}>
         <div className="eyebrow">{eyebrow}</div>
         <h1>{title}</h1>
         {children}

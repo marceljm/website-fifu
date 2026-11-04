@@ -10,7 +10,7 @@ The project is designed to show practical experience building a responsive web p
 
 - **WordPress plugin marketing site:** homepage, feature catalog and detail pages, integrations, pricing comparison, customer-story examples, FAQ, documentation, blog, and policy pages.
 - **SEO-oriented frontend:** React Router server rendering and pre-rendering for marketing routes, page-specific titles and descriptions, plus `robots.txt` and `sitemap.xml` files to configure for a real domain.
-- **Searchable documentation:** filter guides by title and summary, with URL query state for shareable searches.
+- **FIFU documentation:** a guide for every free feature of the latest FIFU version, grouped by topic, with Lucide icons and a search that filters by title, summary, and topic (shareable through `?q=`). The content lives in `frontend/app/data/docs.json`, not in the database (see [Documentation](#documentation)).
 - **Django REST API:** public content endpoint and a pricing-preview endpoint built with Django REST Framework.
 - **Pricing rules:** Python `Decimal` arithmetic, input validation, quantity limits, and multi-site discount tiers.
 - **Content management:** Django Admin models and a seed command for fictional public content.
@@ -37,6 +37,7 @@ flowchart LR
     Frontend --> Routes[React Router routes]
     Routes --> Prerender[Pre-rendered marketing pages]
     Frontend -. local content .-> Catalog[frontend/app/data/catalog.ts]
+    Frontend -. guides .-> DocsJSON[frontend/app/data/docs.json]
     Frontend -. reviews .-> ReviewsJSON[frontend/app/data/reviews.json]
     WPorg[WordPress.org reviews] --> Scraper[scraper/fifu_reviews.py] --> Polished[backend/data/reviews_polished.json] --> Import[manage.py import_reviews] --> DB
     Import --> ReviewsJSON
@@ -134,7 +135,7 @@ npm run test:unit
 npm run test:e2e
 ```
 
-Run the Django tests from `backend/` (they also validate the committed reviews data file and this README):
+Run the Django tests from `backend/` (they also validate the committed reviews data file, the documentation file `docs.json` and its wiring, and this README):
 
 ```bash
 python3 manage.py test
@@ -182,6 +183,41 @@ WordPress.org ──scrape──▶ reviews_raw.json ──polish (by hand/AI)�
 
 `backend/data/reviews_raw.json` and `backend/data/html_cache/` are git-ignored.
 
+## Documentation
+
+The `/docs/` page and every `/docs/<slug>/` guide are generated from `frontend/app/data/docs.json`, the single source of truth for the documentation (docs are not stored in the database or seeded by `seed_demo`). The file covers the **free** features of the latest version of Featured Image from URL (FIFU); PRO-only features are intentionally left out. Labels in the guides match the plugin's settings screens.
+
+- `categories` lists the topics shown as sections on `/docs/`, in display order (`id`, `title`, `description`).
+- `docs` lists the guides, in reading order. Each guide has card fields (`slug`, `title`, one-sentence `summary`, `icon`, `category`) and full-guide fields:
+  - `locations`: “Where to find it” paths, such as `FIFU › Settings › Image › Default Featured Image`;
+  - `facts`: 2–4 “at a glance” facts, such as the default value;
+  - `sections`: the guide itself, each with an anchor `id`, a `title`, and content `blocks`;
+  - `related`: 1–3 slugs of guides to read next.
+- Block types: `paragraph`, `list`, `steps`, `settings` (a setting label and what it does), `callout` (`tip`, `note`, or `warning`), `code` (`bash` or `php`, with a copy button), and `table`.
+- Text uses a small inline markup instead of HTML: `**bold**`, `` `code` ``, `[[UI label]]` for exact labels from the plugin, and `[text](/docs/slug/)` for links.
+- `icon` is a key of `frontend/app/components/docs/doc-icons.ts`. To use a new Lucide icon, import it there and add a key.
+
+- `illustration`: the guide's featured illustration: a scene `key`, a visible `caption`, and an `alt` description for screen readers.
+
+**Illustrations** are drawn with HTML and CSS only, no image files. Each guide has one scene in `frontend/app/components/docs/illustrations/`:
+
+- `registry.ts` lists every scene key and its layout: `workflow` (numbered steps with arrows, shown as “Step by step”), `comparison` (two panels, “Side by side”), or `overview` (one annotated scene, “At a glance”).
+- `primitives.tsx` holds the shared building blocks (image, browser window, WordPress panel, field, button, switch, terminal, email, spreadsheet, and the three layouts). `scenes.tsx` composes one scene per key from them, using FIFU's exact labels. TypeScript checks that every registry key has a scene.
+- The styles live in the “Guide illustrations” part of `frontend/app/styles.css`. Workflows and comparisons stack vertically on small screens. The drawing is hidden from screen readers, which read the `alt` description instead.
+
+To add an illustration, add a key to `registry.ts`, a scene to `scenes.tsx`, and the `illustration` entry to the guide in `docs.json`.
+
+**Reading time** is calculated from the full text of each guide, including the illustration caption, at 200 words per minute (rounded up, at least one minute) by `readingMinutes()` in `docs-utils.ts`, and shown on every card and guide.
+
+Every guide uses the same layout, `GuideLayout` in `frontend/app/components/docs/`: breadcrumb, header with reading time, “Where to find it” and facts panel, the featured illustration, a sticky “On this page” list (collapsible on phones), the content blocks (`GuideBlocks.tsx`), related guides, and previous/next links. Its styles live in the “Documentation guides” part of `frontend/app/styles.css`.
+
+Two reviewed fixtures guard the content in `npm run test:unit`:
+
+- `frontend/tests/fixtures/feature-map.json` maps every free FIFU feature (from the plugin readme, its settings screens, and integrations found in its code) to the guide that documents it. The test fails if a feature disappears from its guide, or if a guide documents nothing from the map.
+- `frontend/tests/fixtures/interface-labels.json` lists every `[[UI label]]` the guides may use, grouped by where it appears (FIFU, WordPress, WooCommerce, Elementor, Gravity Forms, WOOBE). Check a new label against the real screen before adding it.
+
+The route loader reads the JSON on the server: the listing only receives card fields and reading times, and each guide page only receives its own content. `react-router.config.ts` pre-renders one page per slug. `npm run test:unit` validates the file and the helpers (`tests/docs.test.mjs`), `npm run test:e2e` checks the rendered pages, and `python3 manage.py test` validates the same rules from Django. Update `frontend/public/sitemap.xml` when you add or rename a guide.
+
 ## Search engine and launch checklist
 
 Before deploying a rebranded site:
@@ -198,7 +234,7 @@ Before deploying a rebranded site:
 
 ```text
 backend/
-  apps/content/                 Django content models, admin, API, and seed command
+  apps/content/                 Django content models, admin, API, seed command, and docs.json tests
   apps/commerce/pricing.py      Server-side quote rules and discount tiers
   apps/reviews/                 Review model, polished-file validator, export, import/scrape commands, tests
   scraper/fifu_reviews.py       Standalone WordPress.org reviews scraper (no Django needed)
@@ -207,6 +243,12 @@ backend/
 frontend/
   app/routes/                   React Router page components
   app/data/catalog.ts           Current frontend demo content
+  app/data/docs.json            FIFU documentation: topics and guides for /docs/
+  app/data/docs-utils.ts        Docs types, inline markup, reading time, search, and lookup (unit-tested)
+  app/components/docs/          DocCard, GuideLayout, GuideBlocks, InlineText, and the icon registry
+  app/components/docs/illustrations/  Guide illustrations: registry, shared primitives, and scenes
+  tests/docs.test.mjs           docs.json validation and helper tests
+  tests/fixtures/               Feature map and approved interface labels used by the docs tests
   app/data/reviews.json         Positive reviews exported by import_reviews (pre-rendered)
   app/data/reviews-utils.ts     Review age helpers (unit-tested)
   app/components/reviews/       ReviewCard used on the home page and /reviews/

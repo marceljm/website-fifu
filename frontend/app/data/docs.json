@@ -1,0 +1,3947 @@
+{
+  "plugin": "Featured Image from URL (FIFU)",
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Getting started",
+      "description": "Set your first remote featured image and manage images without leaving your content lists."
+    },
+    {
+      "id": "image",
+      "title": "Image settings",
+      "description": "Control how remote featured images are delivered, displayed, and protected on your site."
+    },
+    {
+      "id": "automatic",
+      "title": "Automatic",
+      "description": "Let FIFU choose featured images for you when you save a post."
+    },
+    {
+      "id": "woocommerce",
+      "title": "WooCommerce",
+      "description": "Use remote images for products, product categories, and order emails."
+    },
+    {
+      "id": "metadata",
+      "title": "Metadata and maintenance",
+      "description": "Generate, clean up, or reset the data FIFU stores on your site."
+    },
+    {
+      "id": "developers",
+      "title": "Developers",
+      "description": "Automate FIFU with PHP and the command line, and collect data for support."
+    },
+    {
+      "id": "blocks-widgets",
+      "title": "Blocks and widgets",
+      "description": "Add remote images from the block editor, widget areas, and Elementor."
+    },
+    {
+      "id": "integrations",
+      "title": "Integrations",
+      "description": "How FIFU works with SEO, form, translation, editing, and import plugins."
+    },
+    {
+      "id": "services",
+      "title": "Optional services",
+      "description": "Extra services that work with FIFU. You don't need them to use the plugin."
+    }
+  ],
+  "docs": [
+    {
+      "slug": "getting-started",
+      "title": "Getting started",
+      "summary": "Install FIFU, paste an image URL into a post, and publish your first remote featured image in a few minutes.",
+      "icon": "rocket",
+      "category": "getting-started",
+      "illustration": {
+        "key": "getting-started",
+        "caption": "Four steps to your first remote featured image: install FIFU, paste the image URL, check the preview, and publish.",
+        "alt": "Four steps: the FIFU plugin with an Activate button, the FIFU box with an image URL and a Preview button, the FIFU box showing the image preview, and the published post showing the image."
+      },
+      "locations": [
+        {
+          "label": "Plugin menu",
+          "path": ["WordPress admin", "FIFU"]
+        },
+        {
+          "label": "Built-in help",
+          "path": ["FIFU", "Settings", "Help"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Requires",
+          "value": "WordPress 5.6+ and PHP 8.1+"
+        },
+        {
+          "label": "Works with",
+          "value": "Posts, pages, custom post types, and WooCommerce"
+        },
+        {
+          "label": "Price",
+          "value": "Free"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-fifu-does",
+          "title": "What FIFU does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "**Featured Image from URL (FIFU)** lets you use an image that lives on another website as the featured image of your posts, pages, custom post types, and WooCommerce products. You paste the image address, and WordPress shows the image straight from where it's stored."
+            },
+            {
+              "type": "paragraph",
+              "text": "The image is **not downloaded** to your Media Library. That brings a few nice benefits:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Less storage.** Your site doesn't keep a copy of every image.",
+                "**Faster setup and imports.** There's nothing to upload or process.",
+                "**Works with your theme.** Themes and plugins that show featured images can show FIFU images too."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "install",
+          "title": "Install the plugin",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "In WordPress, go to [[Plugins]] › [[Add New Plugin]]."
+                },
+                {
+                  "title": "Search for **Featured Image from URL** (or **FIFU**)."
+                },
+                {
+                  "title": "Click [[Install Now]], then [[Activate]]."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Prefer to install by hand? Upload the `featured-image-from-url` folder to `/wp-content/plugins/` and activate FIFU from the [[Plugins]] screen."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "A new menu appears",
+              "text": "After activation you'll see **FIFU** (with a camera icon) in the left admin menu. It contains [[Settings]], [[Cloud]], and [[Status]]."
+            }
+          ]
+        },
+        {
+          "id": "first-image",
+          "title": "Set your first featured image",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Open a post, page, or product for editing."
+                },
+                {
+                  "title": "Find the **FIFU** box in the editor sidebar.",
+                  "text": "In the block editor it's on the [[Post]] (or [[Page]]) tab of the right sidebar."
+                },
+                {
+                  "title": "Paste the image address into the [[Image URL or Keywords]] field.",
+                  "text": "For example: `https://example.com/photos/beach.jpg`."
+                },
+                {
+                  "title": "Click [[Preview]].",
+                  "text": "If the image appears, the address works."
+                },
+                {
+                  "title": "Optionally fill in [[Alternative text]].",
+                  "text": "It describes the image for screen readers and search engines."
+                },
+                {
+                  "title": "Click [[Save]], [[Update]], or [[Publish]], then view your post."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "good-image-address",
+          "title": "Choose a good image address",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Most problems come from the address itself. A good image address:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "starts with `https://` (or `http://`) and includes the full domain;",
+                "points **directly to the image file**, often ending in `.jpg`, `.png`, or `.webp`, not to a web page that contains the image;",
+                "is **public**, so it opens without logging in;",
+                "comes from a site that allows its images to be shown on other websites."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Quick test",
+              "text": "Open the address in a private browser window. If you see only the image, it will work with FIFU."
+            },
+            {
+              "type": "paragraph",
+              "text": "Share links from Google Drive and OneDrive are converted for you. See [Featured image from URL](/docs/featured-image-from-url/) for details."
+            }
+          ]
+        },
+        {
+          "id": "next-steps",
+          "title": "Where to go next",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Show an image on posts that don't have one: [Default Featured Image](/docs/default-featured-image/).",
+                "Let FIFU pick the first image of each post: [Auto set featured media from post content](/docs/auto-set-featured-media-from-post-content/).",
+                "Edit many images quickly from the post list: [Quick Editor and content lists](/docs/quick-editor/).",
+                "Use remote images in your store: [Product and category images](/docs/product-and-category-images/)."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Options with a lock icon",
+              "text": "In [[FIFU]] › [[Settings]], options marked with a lock icon belong to the paid version and aren't covered in these guides."
+            }
+          ]
+        },
+        {
+          "id": "get-help",
+          "title": "Get help",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The [[Help]] tab of FIFU's settings has a [[Technical support]] section with the support email, `support@fifu.app`. When you write, include your site's status summary so the team can understand your setup. The [Status page](/docs/status-page/) guide shows how to copy it."
+            }
+          ]
+        }
+      ],
+      "related": ["featured-image-from-url", "default-featured-image", "quick-editor"]
+    },
+    {
+      "slug": "featured-image-from-url",
+      "title": "Featured image from URL",
+      "summary": "Use the FIFU box in the post editor to set a featured image and its alternative text from any public image URL.",
+      "icon": "link",
+      "category": "getting-started",
+      "illustration": {
+        "key": "featured-image-from-url",
+        "caption": "You fill in the FIFU box in the editor; your site shows the image straight from its original address.",
+        "alt": "On the left, the FIFU box with Featured image selected, an image preview with a remove button, alternative text, and the image URL. On the right, the published post showing the same image."
+      },
+      "locations": [
+        {
+          "label": "Post editor",
+          "path": ["Posts", "Edit post", "Sidebar", "FIFU"]
+        },
+        {
+          "label": "Also in",
+          "path": ["Pages, products, and custom post types"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Available for",
+          "value": "Every content type that supports featured images"
+        },
+        {
+          "label": "Box name",
+          "value": "FIFU"
+        },
+        {
+          "label": "Empty alt text",
+          "value": "FIFU uses the post title"
+        }
+      ],
+      "sections": [
+        {
+          "id": "find-the-box",
+          "title": "Find the FIFU box",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FIFU adds a box called **FIFU** (with a camera icon) to the editor of every content type that supports featured images: posts, pages, WooCommerce products, and custom post types."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Block editor:** open the right sidebar and look on the [[Post]] or [[Page]] tab.",
+                "**Classic editor:** the box sits in the right column, near WordPress's own featured image box."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "At the top of the box, a menu shows [[Featured image]]. That's the type you'll use. The other types in the menu show a lock icon."
+            }
+          ]
+        },
+        {
+          "id": "add-image",
+          "title": "Add an image from a URL",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Paste the image address into [[Image URL or Keywords]]."
+                },
+                {
+                  "title": "Click [[Preview]].",
+                  "text": "FIFU loads the image to make sure it works and shows it in the box."
+                },
+                {
+                  "title": "Type a description in [[Alternative text]]."
+                },
+                {
+                  "title": "Save or update the post."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "After you click [[Preview]] you'll see one of these:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**The image.** Everything is fine.",
+                "**An “image not found” picture.** The address can't be loaded. Check that it's complete, public, and points to the image file.",
+                "**A photo search window.** You typed words instead of an address, so FIFU searched Unsplash. See [Unsplash image search](/docs/unsplash-image-search/)."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Need examples?",
+              "text": "Click the small image icon at the left of the field ([[Image URL help]]) to see example addresses and keywords."
+            }
+          ]
+        },
+        {
+          "id": "alt-text",
+          "title": "Alternative text",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Alternative text describes the image for people who use screen readers and helps search engines understand it. Write a short, plain description, such as “Sunset over a calm beach”."
+            },
+            {
+              "type": "paragraph",
+              "text": "If you leave [[Alternative text]] empty, **FIFU uses the post title automatically**, so your image always has a description."
+            }
+          ]
+        },
+        {
+          "id": "change-remove",
+          "title": "Change or remove the image",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**To remove** the image, click the **×** button on the preview ([[Remove featured image]]), then save the post.",
+                "**To change** it, remove the current image, paste the new address, click [[Preview]], and save."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "WordPress's own featured image panel",
+              "text": "While a post has a FIFU image, the block editor hides the regular [[Featured image]] panel to avoid confusion. Remove the FIFU image and it comes back, so you can choose an image from the Media Library again. When Rank Math is active, both panels stay visible."
+            }
+          ]
+        },
+        {
+          "id": "converted-links",
+          "title": "Links FIFU converts for you",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Some services give you a link to a page, not to the image itself. FIFU fixes these automatically:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Google Drive** share links (`drive.google.com`) become direct image links.",
+                "**OneDrive** short links (`1drv.ms`) become direct image links."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warning",
+              "title": "Share the file publicly",
+              "text": "On Google Drive and OneDrive, set the file to “Anyone with the link”. Private files can't be shown to your visitors."
+            }
+          ]
+        },
+        {
+          "id": "good-to-know",
+          "title": "Good to know",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The image stays on its original server. If that server removes or moves it, it disappears from your site. [Replace Not Found Image](/docs/replace-not-found-image/) can show a backup image when that happens.",
+                "The box works the same way for pages, WooCommerce products, and custom post types.",
+                "If the **Sirv** plugin is active, a [[Choose Sirv image]] button appears next to [[Preview]] so you can pick an image from your Sirv account."
+              ]
+            }
+          ]
+        }
+      ],
+      "related": ["unsplash-image-search", "quick-editor", "replace-not-found-image"]
+    },
+    {
+      "slug": "unsplash-image-search",
+      "title": "Unsplash image search",
+      "summary": "Type keywords instead of a URL to search Unsplash and pick a free photo as your featured image.",
+      "icon": "scan-search",
+      "category": "getting-started",
+      "illustration": {
+        "key": "unsplash-image-search",
+        "caption": "Type keywords instead of a URL, pick a photo from the results, and it becomes the featured image.",
+        "alt": "Three steps: the FIFU box with the keywords sun,sea and the Preview button, a grid of photo results with one selected, and the FIFU box showing the chosen photo and its Unsplash address."
+      },
+      "locations": [
+        {
+          "label": "Post editor",
+          "path": ["Edit post", "FIFU", "Image URL or Keywords"]
+        },
+        {
+          "label": "Content lists",
+          "path": ["All Posts", "FIFU column", "Quick Editor"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Photo source",
+          "value": "Unsplash"
+        },
+        {
+          "label": "Who can search",
+          "value": "Users who can upload files"
+        },
+        {
+          "label": "Setup",
+          "value": "None"
+        }
+      ],
+      "sections": [
+        {
+          "id": "how-it-works",
+          "title": "How it works",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The field where you paste an image address also accepts **keywords**. When you type words instead of an address, FIFU searches **Unsplash**, a large library of free, high-quality photos, and shows the results in a window. Click a photo and its address is placed in the field for you."
+            },
+            {
+              "type": "paragraph",
+              "text": "The photo isn't downloaded. Like any FIFU image, it's shown from its original address."
+            }
+          ]
+        },
+        {
+          "id": "search-in-editor",
+          "title": "Search from the post editor",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "In the **FIFU** box, type one or more keywords into [[Image URL or Keywords]].",
+                  "text": "Separate keywords with commas, for example `sun,sea`."
+                },
+                {
+                  "title": "Click [[Preview]].",
+                  "text": "A window opens with matching photos."
+                },
+                {
+                  "title": "Scroll to see more.",
+                  "text": "New photos load as you reach the bottom."
+                },
+                {
+                  "title": "Click the photo you like.",
+                  "text": "Its address goes into the field and the preview appears."
+                },
+                {
+                  "title": "Add [[Alternative text]] and save the post."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "search-in-quick-editor",
+          "title": "Search from the Quick Editor",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The same search works in the [Quick Editor](/docs/quick-editor/). Click a post's image in the list, type keywords into [[Image URL or Keywords]], and click [[Preview]]. Pick a photo, then click [[Save]]."
+            }
+          ]
+        },
+        {
+          "id": "better-results",
+          "title": "Tips for better results",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Use one to three specific words, like `coffee,cup` instead of `drink`.",
+                "If a search in your language returns few photos, try English words.",
+                "If nothing appears, try broader or different words.",
+                "The search needs at least one keyword. An empty field doesn't start a search."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "permissions",
+          "title": "Who can use it",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Searching requires permission to upload files. By default that includes **Administrators**, **Editors**, and **Authors**. **Contributors** can't run searches."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "About the photos",
+              "text": "Photos on Unsplash are free to use under the Unsplash License. Crediting the photographer isn't required, but it's appreciated."
+            }
+          ]
+        }
+      ],
+      "related": ["featured-image-from-url", "quick-editor", "getting-started"]
+    },
+    {
+      "slug": "quick-editor",
+      "title": "Quick Editor and content lists",
+      "summary": "Preview, replace, or remove featured images right from your list of posts, and filter the list by image status.",
+      "icon": "square-pen",
+      "category": "getting-started",
+      "illustration": {
+        "key": "quick-editor",
+        "caption": "Change images right from the list: click a thumbnail, paste a URL or keywords, and save. The status menu finds posts without images.",
+        "alt": "The All Posts list with the All featured media statuses menu and a FIFU column of thumbnails, one of them clicked. Next to it, the Quick edit window with an image preview, the image URL, alternative text, and the Clear and Save buttons."
+      },
+      "locations": [
+        {
+          "label": "Image column",
+          "path": ["Posts", "All Posts", "FIFU column"]
+        },
+        {
+          "label": "Status filter",
+          "path": ["Posts", "All Posts", "All featured media statuses"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Lists",
+          "value": "Posts, pages, products, product categories, and custom post types"
+        },
+        {
+          "label": "Who sees it",
+          "value": "Users who can publish posts"
+        },
+        {
+          "label": "Setup",
+          "value": "None"
+        }
+      ],
+      "sections": [
+        {
+          "id": "image-column",
+          "title": "The image column",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FIFU adds a column with a camera icon to your content lists, such as [[All Posts]], [[Pages]], and [[Products]]. Hover over the icon and its tooltip reads [[Quick edit]]. Each row shows a thumbnail of the featured image, whether it comes from a URL or from the Media Library. The same column appears in [[Products]] › [[Categories]]."
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Hide the column",
+              "text": "Open [[Screen Options]] at the top of the list and uncheck **FIFU** if you don't need the column on a screen."
+            }
+          ]
+        },
+        {
+          "id": "edit-from-list",
+          "title": "Change an image without opening the post",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Click the thumbnail (or the empty square) in the FIFU column.",
+                  "text": "The Quick Editor opens for that item."
+                },
+                {
+                  "title": "Type an image address, or keywords, into [[Image URL or Keywords]] and click [[Preview]].",
+                  "text": "Keywords open the [Unsplash image search](/docs/unsplash-image-search/)."
+                },
+                {
+                  "title": "Fill in [[Alternative text]] if you like."
+                },
+                {
+                  "title": "Click [[Save]].",
+                  "text": "The thumbnail in the list updates."
+                }
+              ]
+            },
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Clear",
+                  "text": "Empties the fields so you can start again."
+                },
+                {
+                  "label": "Remove remote image",
+                  "text": "The **×** button on the preview removes the featured image. Click [[Save]] to confirm."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "filter-by-status",
+          "title": "Find posts by image status",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Above the list of posts, pages, products, or custom post types, FIFU adds a menu called [[All featured media statuses]]. Choose an option and click [[Filter]]:"
+            },
+            {
+              "type": "table",
+              "columns": ["Option", "Shows"],
+              "rows": [
+                [
+                  "[[Any featured media]]",
+                  "Items that have a featured image of any kind."
+                ],
+                [
+                  "[[No assigned featured media]]",
+                  "Items without a featured image. Great for finding what's missing."
+                ],
+                ["[[Featured image]]", "Items with a featured image."],
+                [
+                  "[[Remote featured image]]",
+                  "Items whose image comes from a URL through FIFU."
+                ],
+                [
+                  "[[Local featured image]]",
+                  "Items whose image comes from your Media Library."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "good-to-know",
+          "title": "Good to know",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The column and the filter are available to users who can publish posts. Category lists have the column, but not the filter.",
+                "In the Quick Editor, [[Featured image]] is the only media type you can use. Other types, and the gallery area shown for products, have a lock icon.",
+                "The Quick Editor saves right away. You don't need to update the post afterwards."
+              ]
+            }
+          ]
+        }
+      ],
+      "related": [
+        "featured-image-from-url",
+        "unsplash-image-search",
+        "default-featured-image"
+      ]
+    },
+    {
+      "slug": "optimized-images",
+      "title": "Optimized Images",
+      "summary": "Serve remote images through a public CDN in the sizes your theme needs, and lazy load images inside your posts.",
+      "icon": "gauge",
+      "category": "image",
+      "illustration": {
+        "key": "optimized-images",
+        "caption": "Without optimization, every visitor downloads the full image. With Optimized Images, a public CDN delivers a resized, lazy loaded copy.",
+        "alt": "Side by side: on the left, a large 2.4 MB image loaded from example.com; on the right, a 120 KB resized copy with a smaller version, delivered from i0.wp.com and lazy loaded."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Image", "Optimized Images", "Optimize"]
+        },
+        {
+          "label": "Square images and sizes",
+          "path": ["FIFU", "Settings", "Image", "Optimized Images", "Sizes"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Image CDN",
+          "value": "WordPress.com public image CDN"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Remote images are often bigger than they need to be, and some hosts are slow. With **Optimized Images**, FIFU sends your images through a free public image CDN (the WordPress.com image service that Jetpack also uses). The CDN creates a copy in the size your page needs and delivers it from fast servers around the world."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Where your images go",
+              "text": "With these options on, your image addresses are sent to the WordPress.com image service, which fetches the images, keeps copies, and delivers them to your visitors."
+            }
+          ]
+        },
+        {
+          "id": "optimize",
+          "title": "The Optimize tab",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "optimize featured images",
+                  "text": "Featured images set with FIFU are delivered through the CDN, resized to what your theme asks for. FIFU also offers the browser several sizes, so phones download smaller files."
+                },
+                {
+                  "label": "optimize secondary images",
+                  "text": "Images **inside your post content** are delivered through the CDN too, with several sizes and **lazy loading**: each image loads only when the visitor scrolls near it. This applies to every image in the content, not only FIFU images."
+                }
+              ]
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Image]] › [[Optimized Images]]."
+                },
+                {
+                  "title": "On the [[Optimize]] tab, switch on the options you want."
+                },
+                {
+                  "title": "Visit a post and check that the images look right."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "How to check it works",
+              "text": "Right-click an image and open it in a new tab. An optimized image has an address that starts with `i0.wp.com`, `i1.wp.com`, `i2.wp.com`, or `i3.wp.com`."
+            }
+          ]
+        },
+        {
+          "id": "registered-sizes",
+          "title": "Registered sizes",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Themes and plugins ask for images in predefined sizes, called **registered sizes**. On the [[Sizes]] tab, [[Registered sizes]] lists the sizes FIFU has detected while your pages were visited: [[Name]], [[Width]], [[Height]], [[Crop]], and the [[Pages]] where each one was used. FIFU uses them to request the exact size from the CDN. Most sites never need to change them."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Change a width, height, or crop value and click [[Save]] to fine-tune a size.",
+                "Click [[Reset]] to clear the list. FIFU detects the sizes again as you or your visitors browse the site."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "square-images",
+          "title": "Make all images square",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The [[Make all images square]] tab lets you pick a square format separately for [[Desktop computer]] and [[Mobile phone]]:"
+            },
+            {
+              "type": "table",
+              "columns": ["Option", "What happens"],
+              "rows": [
+                ["(empty)", "Images aren't made square. Registered sizes are used."],
+                [
+                  "[[Make square by cropping]]",
+                  "Cuts off parts of the image to make it square."
+                ],
+                [
+                  "[[Make square by extending]]",
+                  "Adds empty space around the image to make it square."
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warning",
+              "title": "Only for FIFU Cloud images",
+              "text": "In the free version, these options only change images delivered by [FIFU Cloud](/docs/fifu-cloud/). Images optimized through the public CDN above aren't made square."
+            }
+          ]
+        },
+        {
+          "id": "skipped-images",
+          "title": "Images that aren't optimized",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A few images keep their original address because the CDN can't handle them well:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "SVG and AVIF images;",
+                "images from a small number of websites that don't work with the CDN."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Replacing an image at the same address",
+              "text": "The CDN keeps copies of images. If you replace a file but keep its address, visitors may see the old copy for a while. Giving the new file a new address avoids this."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "The FIFU CDN tab",
+              "text": "The [[FIFU CDN]] tab shows a lock icon. It isn't part of the free version, so this guide doesn't cover it."
+            }
+          ]
+        }
+      ],
+      "related": ["fifu-cloud", "seo-and-social-sharing", "featured-image-from-url"]
+    },
+    {
+      "slug": "hide-featured-media",
+      "title": "Hide Featured Media",
+      "summary": "Hide the featured image on single post pages while keeping it on your homepage and post lists.",
+      "icon": "eye-off",
+      "category": "image",
+      "illustration": {
+        "key": "hide-featured-media",
+        "caption": "Featured images stay on the homepage and in lists, but are hidden on the post's own page.",
+        "alt": "Side by side: the homepage with two posts that show their featured images, and the single post page where the featured image space is marked as hidden."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Image", "Hide Featured Media"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Hides on",
+          "value": "The post's own page"
+        },
+        {
+          "label": "Never affects",
+          "value": "Homepage, lists, WooCommerce product pages"
+        }
+      ],
+      "sections": [
+        {
+          "id": "when-to-use",
+          "title": "When to use it",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Many themes show the featured image at the top of every post. Sometimes you want the image only in lists, on the homepage, and when the post is shared, but not repeated on the post itself. **Hide Featured Media** does exactly that: it hides the featured image on the post's own page and keeps it everywhere else."
+            }
+          ]
+        },
+        {
+          "id": "turn-on",
+          "title": "Turn it on",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Image]] › [[Hide Featured Media]]."
+                },
+                {
+                  "title": "On the [[Hide]] tab, switch the option on."
+                },
+                {
+                  "title": "Open a post to check that the image is hidden."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "filters",
+          "title": "Choose where it applies",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "By default it applies to every post type and post format. You can narrow it down:"
+            },
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Filter by post type",
+                  "text": "Type the post types, separated by commas, for example `post,page`. The post types found on your site are listed below the field."
+                },
+                {
+                  "label": "Filter by post format",
+                  "text": "Type the post formats, for example `video,audio`. Posts without a format count as `standard`. The formats found on your site are listed below the field."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Leave a field empty to include everything. If you fill in both, a post must match both."
+            }
+          ]
+        },
+        {
+          "id": "what-stays",
+          "title": "What stays visible",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The homepage and any list of posts, such as category and archive pages.",
+                "Other posts shown on the same page, for example in a “related posts” area. Only the main post's image is hidden.",
+                "The image used when the post is shared on social media.",
+                "WooCommerce product pages. They're never affected."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Image missing from your posts?",
+              "text": "If featured images suddenly stop showing on single posts, check whether this option is switched on."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Depends on your theme",
+              "text": "FIFU hides the image where the theme shows it through WordPress's standard featured image functions. A theme that prints images in its own way may still show it."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "modify-post-content",
+        "default-featured-image",
+        "featured-image-from-url"
+      ]
+    },
+    {
+      "slug": "default-featured-image",
+      "title": "Default Featured Image",
+      "summary": "Show a chosen image on every post that doesn't have a featured image of its own.",
+      "icon": "image-plus",
+      "category": "image",
+      "illustration": {
+        "key": "default-featured-image",
+        "caption": "A post without a featured image leaves a gap. With a default image, every post shows one.",
+        "alt": "Side by side: three post cards where the middle one has no image, and the same cards where the middle one shows the default image."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Image", "Default Featured Image"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Post types",
+          "value": "`post,page,product`"
+        },
+        {
+          "label": "Requires",
+          "value": "Image Metadata switched on"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Posts without a featured image can leave empty gaps in your theme. With **Default Featured Image**, you choose one image address, and FIFU shows it on every post, page, or product that doesn't have a featured image of its own."
+            }
+          ]
+        },
+        {
+          "id": "set-up",
+          "title": "Set it up",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Image]] › [[Default Featured Image]]."
+                },
+                {
+                  "title": "On the [[Default featured image]] tab, paste the address into [[Image URL]].",
+                  "text": "Use a full address that starts with `https://`."
+                },
+                {
+                  "title": "Switch the option on.",
+                  "text": "FIFU applies the image right away. Wait a moment while it works."
+                },
+                {
+                  "title": "Open a post without a featured image to see the result."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warning",
+              "title": "Keep Image Metadata switched on",
+              "text": "The default image only works while [[Image Metadata]] is on in [[FIFU]] › [[Settings]] › [[Metadata]]. It's on by default. See [Image Metadata](/docs/image-metadata/)."
+            }
+          ]
+        },
+        {
+          "id": "post-types",
+          "title": "Choose which content gets it",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Filter by post type",
+                  "text": "The post types that receive the default image, separated by commas. It starts as `post,page,product`. The post types found on your site are listed below the field."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how-applied",
+          "title": "How the default image is applied",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Existing content:** every post of the chosen types without a featured image gets the default image as soon as you switch it on.",
+                "**New content:** a post saved without a featured image gets it automatically.",
+                "**Real images win:** when you add a featured image to a post, it replaces the default one.",
+                "**One change updates all:** change the address and every post using the default image shows the new one.",
+                "**Switching off removes it** from all posts at once."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "homepage",
+          "title": "Bonus: a sharing image for your homepage",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When nothing else provides one, FIFU also uses the default image as the image social networks show when someone shares your homepage. See [SEO and social sharing](/docs/seo-and-social-sharing/)."
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Pick a neutral image",
+              "text": "A simple image with your logo or brand colors works well. A landscape image around 1200×630 pixels also looks good when shared."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "image-metadata",
+        "replace-not-found-image",
+        "auto-set-featured-media-from-post-content"
+      ]
+    },
+    {
+      "slug": "modify-post-content",
+      "title": "Modify Post Content",
+      "summary": "Add the featured image to the top of the post content, or remove a duplicate copy of it, without changing your posts.",
+      "icon": "file-image",
+      "category": "image",
+      "illustration": {
+        "key": "modify-post-content",
+        "caption": "The two options: add missing media puts the featured image at the top of the content; remove duplicated media removes its extra copy.",
+        "alt": "Side by side: a post where the featured image was added above the text, and a post where a second copy of the featured image inside the text is marked as removed."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Image", "Modify Post Content"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Changes your posts",
+          "value": "No, only what visitors see"
+        },
+        {
+          "label": "Undo",
+          "value": "Switch the option off"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The post content is the main text of a post. It comes after the title and doesn't include the featured image. **Modify Post Content** can add the featured image to the top of the content, or remove a copy of it from the content."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Nothing is changed in your database",
+              "text": "These changes happen only when a page loads. Your saved posts stay exactly as they are, so you can switch the options off at any time to undo them."
+            }
+          ]
+        },
+        {
+          "id": "options",
+          "title": "The options",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "add missing media",
+                  "text": "Places the featured image, centered, at the top of the post content. Useful when your theme doesn't show the featured image on single posts."
+                },
+                {
+                  "label": "remove duplicated media",
+                  "text": "Removes the first image in the content that has **exactly the same address** as the featured image. Useful when the featured image also appears inside the text."
+                }
+              ]
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Image]] › [[Modify Post Content]]."
+                },
+                {
+                  "title": "On the [[Modify post content]] tab, switch on the option you need."
+                },
+                {
+                  "title": "Open a post to check the result."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "post-types",
+          "title": "Limit it to certain post types",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Filter by post type",
+                  "text": "Type the post types, separated by commas, for example `post,page`. When the field has values, the options only work on single pages of those types. When it's empty, they work wherever post content is shown."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "troubleshooting",
+          "title": "Seeing the image twice?",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "[[add missing media]] adds the image whenever a post has a featured image. If your theme already shows the featured image at the top of posts, you'll see it twice. Switch [[add missing media]] off, or use [Hide Featured Media](/docs/hide-featured-media/) instead."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "hide-featured-media",
+        "auto-set-featured-media-from-post-content",
+        "featured-image-from-url"
+      ]
+    },
+    {
+      "slug": "replace-not-found-image",
+      "title": "Replace Not Found Image",
+      "summary": "Show a backup image when a remote image fails to load, while keeping the original URL saved.",
+      "icon": "image-off",
+      "category": "image",
+      "illustration": {
+        "key": "replace-not-found-image",
+        "caption": "When a remote image fails to load, visitors see your backup image instead of a broken one. The saved URL stays the same.",
+        "alt": "Side by side: a post showing a broken image with the text Image not found, and the same post showing a backup image."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Image", "Replace Not Found Image"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Empty (off)"
+        },
+        {
+          "label": "Applies to",
+          "value": "Featured images shown by FIFU"
+        },
+        {
+          "label": "Saved image address",
+          "value": "Never changed"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Remote images can stop loading: the source removes the file, moves it, blocks other websites, or is simply offline. Instead of a broken image, **Replace Not Found Image** shows a backup image that you choose."
+            },
+            {
+              "type": "paragraph",
+              "text": "The original address stays saved. If the source comes back, the real image shows again without you doing anything."
+            }
+          ]
+        },
+        {
+          "id": "set-up",
+          "title": "Set it up",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Image]] › [[Replace Not Found Image]]."
+                },
+                {
+                  "title": "Paste the address of your backup image into [[Image URL]].",
+                  "text": "It must be a complete address that starts with `http://` or `https://`. Anything else is ignored."
+                },
+                {
+                  "title": "Open a page with a broken image to see the backup image in its place."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "To switch the feature off, empty the field."
+            }
+          ]
+        },
+        {
+          "id": "choose-backup",
+          "title": "Choose a reliable backup image",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Host it somewhere you control, such as your own Media Library, so it never breaks itself.",
+                "Use a neutral image, for example your logo on a plain background.",
+                "Match the shape of your usual featured images so your layout doesn't jump."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "good-to-know",
+          "title": "Good to know",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The swap happens in the visitor's browser, right after the image fails to load.",
+                "It covers featured images that FIFU displays. Images you placed inside the post content aren't affected.",
+                "To find broken images, open a post: in the FIFU box, a broken address shows an “image not found” picture instead of the preview."
+              ]
+            }
+          ]
+        }
+      ],
+      "related": ["default-featured-image", "featured-image-from-url", "fifu-cloud"]
+    },
+    {
+      "slug": "disable-right-click",
+      "title": "Disable right-click",
+      "summary": "Turn off the right-click menu on images so visitors can't easily save them.",
+      "icon": "mouse-pointer-ban",
+      "category": "image",
+      "illustration": {
+        "key": "disable-right-click",
+        "caption": "Switched off, right-clicking an image opens the browser's menu with “Save image as…”. Switched on, nothing happens.",
+        "alt": "Side by side: an image with the browser's right-click menu open and Save image as highlighted, and the same image with a blocked mouse pointer."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Image", "Disable right-click"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Applies to",
+          "value": "All images on your site's pages"
+        },
+        {
+          "label": "Protection",
+          "value": "Basic deterrent"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When switched on, FIFU disables the right-click menu on **all images** of your site's pages, not only FIFU images. Visitors can't simply right-click an image and choose “Save image as…”."
+            },
+            {
+              "type": "paragraph",
+              "text": "Your admin area isn't affected."
+            }
+          ]
+        },
+        {
+          "id": "turn-on",
+          "title": "Turn it on",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Image]] › [[Disable right-click]]."
+                },
+                {
+                  "title": "Switch the option on. Its description reads “Disable right-click on all images.”"
+                },
+                {
+                  "title": "Open your site and right-click an image to check."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limits",
+          "title": "What it can't do",
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "warning",
+              "title": "Not a complete protection",
+              "text": "This setting discourages casual copying, but it can't prevent every way of getting an image. Visitors can still take screenshots, look at the page source, or use browser tools."
+            },
+            {
+              "type": "paragraph",
+              "text": "If protecting images matters to your business, also consider watermarks and the hotlink protection of [FIFU Cloud](/docs/fifu-cloud/)."
+            }
+          ]
+        }
+      ],
+      "related": ["replace-not-found-image", "fifu-cloud", "optimized-images"]
+    },
+    {
+      "slug": "auto-set-featured-media-from-post-content",
+      "title": "Auto set featured media from post content",
+      "summary": "Use the first image found in a post's content as its featured image every time the post is saved.",
+      "icon": "wand-sparkles",
+      "category": "automatic",
+      "illustration": {
+        "key": "auto-set-featured-media",
+        "caption": "When you save a post with this option on, FIFU uses the first image in the content as the featured image.",
+        "alt": "Three steps: post content with two images where the first is highlighted, the auto set featured media from post content switch turned on with a Save button, and the FIFU box showing the first image as the featured image."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": [
+            "FIFU",
+            "Settings",
+            "Automatic",
+            "Auto set featured media from post content"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Runs",
+          "value": "Each time a post is saved"
+        },
+        {
+          "label": "Media type",
+          "value": "Image"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "If your posts already contain images, you don't have to set featured images one by one. When this feature is on, FIFU looks at the post content and uses **the first image it finds** as the featured image, every time a post is created or updated."
+            }
+          ]
+        },
+        {
+          "id": "turn-on",
+          "title": "Turn it on",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Automatic]]."
+                },
+                {
+                  "title": "In [[Auto set featured media from post content]], open the [[Auto set]] tab."
+                },
+                {
+                  "title": "Switch on [[auto set featured media from post content]]."
+                },
+                {
+                  "title": "Save a post that contains an image.",
+                  "text": "Its first image becomes the featured image."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Existing posts",
+              "text": "FIFU only looks at a post when it's saved. Older posts get a featured image the next time you update them."
+            }
+          ]
+        },
+        {
+          "id": "overwrite",
+          "title": "Replace featured images that already exist",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "overwrite the existing featured media",
+                  "text": "**Off (default):** a post that already has a FIFU image keeps it. **On:** the first image of the content always becomes the featured image, replacing the current one."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "skip-images",
+          "title": "Skip ads, icons, and other unwanted images",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The first image isn't always the right one. It could be an ad, an avatar, or an emoji. Use the [[Filter by source]] tab to skip them:"
+            },
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Skip media tags containing these keywords:",
+                  "text": "Type words separated by commas, for example `ads.google.com,adsense.google.com,emoji`. FIFU skips any image that contains one of them, and uses the next image instead."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "What the keywords match",
+              "text": "A keyword can match the image address or other details of the image, such as its alternative text. Capital letters matter, so `Logo` and `logo` are different."
+            }
+          ]
+        },
+        {
+          "id": "post-types",
+          "title": "Choose post types",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Filter by post type",
+                  "text": "On this tab, type the post types to include, separated by commas, for example `post,page,product`. Leave it empty to include all post types. The post types found on your site are listed below the field."
+                },
+                {
+                  "label": "Filter by media type",
+                  "text": "In the free version, [[Image]] is the available choice."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rules",
+          "title": "Rules FIFU follows",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "It works no matter how the post is saved: in the editor, with Quick Edit, or by an import tool.",
+                "Posts whose featured image comes from the Media Library are left alone.",
+                "The first image can be a remote image or one hosted on your own site.",
+                "Posts saved from the Elementor editor are skipped. Use the [(FIFU) Featured Image Elementor widget](/docs/elementor-widget/) there."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Combine it with a default image",
+              "text": "When a post has no image at all, FIFU falls back to the [Default Featured Image](/docs/default-featured-image/) if you've set one."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Options with a lock icon",
+              "text": "Some options in this screen show a lock icon. They aren't part of the free version, so this guide doesn't cover them."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "default-featured-image",
+        "modify-post-content",
+        "featured-image-from-url"
+      ]
+    },
+    {
+      "slug": "product-and-category-images",
+      "title": "Product and category images",
+      "summary": "Set the main image of a WooCommerce product and the images of product categories from URLs.",
+      "icon": "shopping-bag",
+      "category": "woocommerce",
+      "illustration": {
+        "key": "product-and-category-images",
+        "caption": "In your shop, remote images can be used for product categories (1) and for each product's main image (2).",
+        "alt": "A shop page with three category tiles, Shoes, Bags, and Shirts, each with an image, and two product cards, a tote bag and a linen shirt, each with an image and an Add to cart button."
+      },
+      "locations": [
+        {
+          "label": "Product image",
+          "path": ["Products", "Edit product", "Sidebar", "FIFU"]
+        },
+        {
+          "label": "Category image",
+          "path": ["Products", "Categories", "FIFU"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Requires",
+          "value": "WooCommerce"
+        },
+        {
+          "label": "Alt text",
+          "value": "Supported for products and categories"
+        },
+        {
+          "label": "Setup",
+          "value": "None"
+        }
+      ],
+      "sections": [
+        {
+          "id": "product-image",
+          "title": "Set a product's main image",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The product's main image is its featured image, so it works just like a post: the **FIFU** box appears in the product editor sidebar."
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[Products]] and open a product for editing."
+                },
+                {
+                  "title": "In the **FIFU** box, paste the image address into [[Image URL or Keywords]]."
+                },
+                {
+                  "title": "Click [[Preview]] to check the image."
+                },
+                {
+                  "title": "Add [[Alternative text]] that describes the product."
+                },
+                {
+                  "title": "Click [[Update]]."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The image appears wherever WooCommerce shows the product's main image: the shop page, the product page, the cart, and more."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "The gallery area",
+              "text": "Below the image field, the product box shows a gallery area with a lock icon. It isn't part of the free version."
+            }
+          ]
+        },
+        {
+          "id": "category-image",
+          "title": "Set a product category image",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[Products]] › [[Categories]]."
+                },
+                {
+                  "title": "Add a new category, or click [[Edit]] on an existing one.",
+                  "text": "You'll find a **FIFU** section with the same fields as the product box."
+                },
+                {
+                  "title": "Paste the image address into [[Image URL or Keywords]] and click [[Preview]]."
+                },
+                {
+                  "title": "Add [[Alternative text]]."
+                },
+                {
+                  "title": "Click [[Add new category]] or [[Update]]."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The image shows wherever your theme displays category images, for example in category grids on the shop page."
+            }
+          ]
+        },
+        {
+          "id": "faster",
+          "title": "Work faster",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The [Quick Editor](/docs/quick-editor/) works in both [[Products]] and [[Products]] › [[Categories]], so you can change images right from the list.",
+                "When you duplicate a product, its remote image is kept on the copy.",
+                "Developers can set category images with code. See [FIFU API (PHP functions)](/docs/fifu-api/)."
+              ]
+            }
+          ]
+        }
+      ],
+      "related": ["lightbox-and-zoom", "add-image-to-order-email", "quick-editor"]
+    },
+    {
+      "slug": "lightbox-and-zoom",
+      "title": "Lightbox and Zoom",
+      "summary": "Choose whether shoppers can open product images in a lightbox and zoom in on them.",
+      "icon": "zoom-in",
+      "category": "woocommerce",
+      "illustration": {
+        "key": "lightbox-and-zoom",
+        "caption": "The two effects on product pages: the lightbox opens the image full screen, and the zoom shows details on hover.",
+        "alt": "Side by side: a product image open in a dark full-screen viewer with a close button, and a product image with a round magnifying lens over it."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "WooCommerce", "Lightbox and Zoom"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Both on"
+        },
+        {
+          "label": "Where",
+          "value": "WooCommerce product pages"
+        },
+        {
+          "label": "Requires",
+          "value": "WooCommerce"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "On a WooCommerce product page, shoppers can usually click the product image to see it full screen (the **lightbox**) and move the mouse over it to see details up close (the **zoom**). These two switches decide whether those effects are available."
+            }
+          ]
+        },
+        {
+          "id": "options",
+          "title": "The options",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "lightbox",
+                  "text": "**On:** clicking a product image opens it in a full-screen viewer. **Off:** the magnifier icon is hidden and clicking the image does nothing."
+                },
+                {
+                  "label": "zoom",
+                  "text": "**On:** hovering over the main product image shows a magnified view. **Off:** the zoom effect is hidden."
+                }
+              ]
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[WooCommerce]] › [[Lightbox and Zoom]]."
+                },
+                {
+                  "title": "Switch [[lightbox]] and [[zoom]] on or off."
+                },
+                {
+                  "title": "Open a product page to check the result."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "when-to-turn-off",
+          "title": "When to switch them off",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Your remote images are small, so the zoom looks blurry.",
+                "Your theme has its own image viewer and you don't want two.",
+                "You want shoppers to stay focused on the product details."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Don't see the change?",
+              "text": "Clear your site or CDN cache and reload the product page."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Depends on your theme",
+              "text": "These options work with WooCommerce's standard product page. Themes that replace it with their own gallery may ignore them."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "product-and-category-images",
+        "add-image-to-order-email",
+        "optimized-images"
+      ]
+    },
+    {
+      "slug": "add-image-to-order-email",
+      "title": "Add image to order email",
+      "summary": "Show a small product image next to each item in WooCommerce order emails.",
+      "icon": "mail",
+      "category": "woocommerce",
+      "illustration": {
+        "key": "add-image-to-order-email",
+        "caption": "With this option on, each item in WooCommerce order emails shows a small product image next to its name.",
+        "alt": "Side by side: an order confirmation email listing a tote bag and a linen shirt as text only, and the same email with a small image next to each item."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "WooCommerce", "Add image to order email"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Image size",
+          "value": "100 × 100 pixels"
+        },
+        {
+          "label": "Emails",
+          "value": "Those that list the ordered items"
+        },
+        {
+          "label": "Requires",
+          "value": "WooCommerce"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "By default, WooCommerce order emails list the items as text only. Switch this on and each product in the list gets a small picture (100 × 100 pixels) next to its name. Customers recognize what they bought at a glance."
+            },
+            {
+              "type": "paragraph",
+              "text": "It works for every product, whether its image comes from a URL or from your Media Library."
+            }
+          ]
+        },
+        {
+          "id": "turn-on",
+          "title": "Turn it on",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[WooCommerce]] › [[Add image to order email]]."
+                },
+                {
+                  "title": "Switch the option on. Its description reads “Add product images to order emails.”"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "which-emails",
+          "title": "Which emails include images",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Every WooCommerce email that contains the table of ordered items, such as the new order email your store receives and the order confirmation emails your customers receive."
+            }
+          ]
+        },
+        {
+          "id": "test",
+          "title": "Test it",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Open an order in WooCommerce."
+                },
+                {
+                  "title": "In [[Order actions]], choose to resend an order email.",
+                  "text": "For example, send the order details to the customer using your own email address on a test order."
+                },
+                {
+                  "title": "Open the email and check the product images."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Images in email apps",
+              "text": "Some email apps hide images until the reader allows them. That's a setting of the email app, not of your store."
+            }
+          ]
+        }
+      ],
+      "related": ["product-and-category-images", "lightbox-and-zoom", "getting-started"]
+    },
+    {
+      "slug": "image-metadata",
+      "title": "Image Metadata",
+      "summary": "Create the database records that let your theme and other plugins find and display remote images.",
+      "icon": "database",
+      "category": "metadata",
+      "illustration": {
+        "key": "image-metadata",
+        "caption": "FIFU turns a remote image URL into a small record, without downloading the file, so themes and plugins can show the image.",
+        "alt": "Three steps: a remote image URL, a database icon labeled Image Metadata with a note saying no file downloaded, and a web page showing the image."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Metadata", "Image Metadata"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "On"
+        },
+        {
+          "label": "Progress",
+          "value": "Shown as a percentage"
+        },
+        {
+          "label": "Files downloaded",
+          "value": "None"
+        }
+      ],
+      "sections": [
+        {
+          "id": "why",
+          "title": "Why remote images need metadata",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "WordPress, themes, and plugins expect every featured image to be an item of the Media Library, with details like its address and size. Remote images aren't in your Media Library, so FIFU creates small **records** that point to the remote address. No image file is downloaded."
+            },
+            {
+              "type": "paragraph",
+              "text": "These records are the **Image Metadata**. FIFU keeps them out of your Media Library, so they don't clutter it."
+            }
+          ]
+        },
+        {
+          "id": "automatic",
+          "title": "When FIFU creates it for you",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "You usually don't need to do anything. FIFU creates the records when you set an image in the FIFU box, the Quick Editor, a FIFU block or widget, or through FIFU's functions. It also runs automatically after an import with the WordPress Importer."
+            }
+          ]
+        },
+        {
+          "id": "generate",
+          "title": "Generate missing metadata",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Run it yourself when:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "you imported posts whose image addresses were saved directly in the `fifu_image_url` custom field, for example with a spreadsheet import;",
+                "you cleared the metadata earlier and want it back;",
+                "an image shows in the FIFU box but not on your site."
+              ]
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Metadata]]."
+                },
+                {
+                  "title": "In [[Image Metadata]], switch on [[generate the missing metadata now]]."
+                },
+                {
+                  "title": "Watch the percentage next to the title.",
+                  "text": "Keep the page open until it reaches 100%."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Keep it on",
+              "text": "Leave [[Image Metadata]] switched on. The [Default Featured Image](/docs/default-featured-image/) needs it, and it's on by default."
+            }
+          ]
+        },
+        {
+          "id": "switch-off",
+          "title": "Switching it off",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Switching [[Image Metadata]] off stops the generation. It **doesn't delete** the records that already exist. To remove them, use [Clear Metadata](/docs/clear-metadata/)."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Options with a lock icon",
+              "text": "Some options in this screen show a lock icon. They aren't part of the free version, so this guide doesn't cover them."
+            }
+          ]
+        }
+      ],
+      "related": ["clear-metadata", "default-featured-image", "wp-cli"]
+    },
+    {
+      "slug": "clear-metadata",
+      "title": "Clear Metadata",
+      "summary": "Remove the records FIFU created without deleting your image URLs, for example before you stop using the plugin.",
+      "icon": "eraser",
+      "category": "metadata",
+      "illustration": {
+        "key": "clear-metadata",
+        "caption": "Clear Metadata removes the records FIFU created, but keeps your image URLs so the records can be generated again.",
+        "alt": "Side by side: three image records crossed out under Removed, and three image URLs under Kept."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Metadata", "Clear Metadata"]
+        },
+        {
+          "label": "When deactivating",
+          "path": ["Plugins", "Featured Image from URL (FIFU)", "Deactivate"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Keeps",
+          "value": "Your image addresses"
+        },
+        {
+          "label": "Removes",
+          "value": "The records FIFU created"
+        },
+        {
+          "label": "Switches off",
+          "value": "By itself when finished"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "**Clear Metadata** removes the records FIFU created so WordPress could work with remote images (see [Image Metadata](/docs/image-metadata/)). Your image addresses stay saved, so you can generate the records again later."
+            }
+          ]
+        },
+        {
+          "id": "when",
+          "title": "When to use it",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Before you deactivate FIFU for good and go back to using only Media Library images. The plugin recommends this step.",
+                "When troubleshooting: clearing and then generating the metadata again can fix records that got out of sync."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "run",
+          "title": "Run it",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Metadata]]."
+                },
+                {
+                  "title": "In [[Clear Metadata]], switch the option on.",
+                  "text": "Its label reads [[the toggle will be automatically disabled when finished]]."
+                },
+                {
+                  "title": "Watch the percentage next to the title and keep the page open.",
+                  "text": "When it's done, both [[Clear Metadata]] and [[Image Metadata]] switch off."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warning",
+              "title": "Remote images may disappear",
+              "text": "Themes and plugins that rely on these records may stop showing remote featured images until you switch [[Image Metadata]] on again."
+            }
+          ]
+        },
+        {
+          "id": "deactivate",
+          "title": "Clear and deactivate in one step",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When you click [[Deactivate]] for FIFU on the [[Plugins]] screen, a window offers two buttons:"
+            },
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Clear metadata and deactivate",
+                  "text": "For when you don't intend to use FIFU again."
+                },
+                {
+                  "label": "Deactivate",
+                  "text": "For a temporary deactivation. The records stay in place."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "related": ["image-metadata", "delete-all-urls", "reset-settings"]
+    },
+    {
+      "slug": "reset-settings",
+      "title": "Reset Settings",
+      "summary": "Put FIFU's settings back to their defaults while keeping your image URLs and default featured image.",
+      "icon": "rotate-ccw",
+      "category": "metadata",
+      "illustration": {
+        "key": "reset-settings",
+        "caption": "Reset Settings puts every option back to its default. Your image URLs and the Default Featured Image are kept.",
+        "alt": "Side by side: settings switches with custom values, and the same switches after the reset, with lightbox and zoom on and the other options off."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Metadata", "Reset Settings"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Resets",
+          "value": "All FIFU settings"
+        },
+        {
+          "label": "Keeps",
+          "value": "Image addresses and the default featured image"
+        },
+        {
+          "label": "Page",
+          "value": "Reloads after a few seconds"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "**Reset Settings** puts FIFU's settings back to their default values. It's a quick way to start over when you've changed many options and something no longer works as expected."
+            }
+          ]
+        },
+        {
+          "id": "what-is-kept",
+          "title": "What's kept and what's reset",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Kept:** every image address and alternative text on your posts, pages, products, and categories.",
+                "**Kept:** the [Default Featured Image](/docs/default-featured-image/) address and its on/off switch.",
+                "**Reset:** everything else. Afterwards [[lightbox]], [[zoom]], and [[Image Metadata]] are on, and the other options are off or empty."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Write down your custom values first",
+              "text": "Keywords to skip, post type filters, and the [[Replace Not Found Image]] address are cleared. Note them down if you want to set them again."
+            }
+          ]
+        },
+        {
+          "id": "run",
+          "title": "Run it",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Metadata]]."
+                },
+                {
+                  "title": "In [[Reset Settings]], switch on [[reset settings]]."
+                },
+                {
+                  "title": "Wait a few seconds. The page reloads with the default settings."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Prefer the command line? Run `wp fifu reset`. See [WP-CLI](/docs/wp-cli/)."
+            }
+          ]
+        }
+      ],
+      "related": ["delete-all-urls", "clear-metadata", "wp-cli"]
+    },
+    {
+      "slug": "delete-all-urls",
+      "title": "Delete All URLs",
+      "summary": "Remove every remote featured image URL from your site in one step, with no way to undo it.",
+      "icon": "trash",
+      "category": "metadata",
+      "illustration": {
+        "key": "delete-all-urls",
+        "caption": "Deleting all URLs takes a safety switch and a toggle, and it can't be undone: posts lose their remote featured images.",
+        "alt": "Three steps: the line that turns on the FIFU_DELETE_ALL_URLS safety switch, the delete all your URLs now switch turned on with a warning that it can't be undone, and posts without images."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Metadata", "Delete All URLs"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Can be undone",
+          "value": "No"
+        },
+        {
+          "label": "Safety switch",
+          "value": "`FIFU_DELETE_ALL_URLS`"
+        },
+        {
+          "label": "Back up first",
+          "value": "Yes"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "callout",
+              "tone": "warning",
+              "title": "This can't be undone",
+              "text": "FIFU doesn't save images in your Media Library. Deleting the addresses removes the featured images of all content that uses remote images. Back up your database before you continue."
+            },
+            {
+              "type": "paragraph",
+              "text": "**Delete All URLs** removes every image address and alternative text that FIFU saved for your posts, pages, products, and product categories. It first runs [Clear Metadata](/docs/clear-metadata/), then deletes the addresses."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Images in your Media Library aren't touched.",
+                "The image files on their original servers aren't touched either; only your site stops using them."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "safety-switch",
+          "title": "Unlock the safety switch",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "To prevent accidents, the option only works after you turn on a safety switch called `FIFU_DELETE_ALL_URLS`. It's off (`false`) by default. FIFU's own instructions:"
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[Plugins]] › [[Plugin File Editor]]."
+                },
+                {
+                  "title": "Under [[Select plugin to edit]], choose **Featured Image from URL (FIFU)** and click [[Select]]."
+                },
+                {
+                  "title": "Find `define('FIFU_DELETE_ALL_URLS', false);` and change `false` to `true`."
+                },
+                {
+                  "title": "Click [[Update File]]."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "If you or your developer prefer not to edit plugin files, add this line to `wp-config.php`, above the line that says “That's all, stop editing!”:"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "define( 'FIFU_DELETE_ALL_URLS', true );",
+              "caption": "wp-config.php"
+            }
+          ]
+        },
+        {
+          "id": "run",
+          "title": "Delete the addresses",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Back up your database."
+                },
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Metadata]] › [[Delete All URLs]]."
+                },
+                {
+                  "title": "Switch on [[delete all your URLs now]] and wait until it finishes."
+                },
+                {
+                  "title": "Turn the safety switch off again.",
+                  "text": "Set it back to `false`, or remove the line from `wp-config.php`."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "when",
+          "title": "When it makes sense",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "You're moving away from remote images for good.",
+                "You want to import everything again from a clean start."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "If you only want to stop FIFU's effect for a while, [Clear Metadata](/docs/clear-metadata/) or simply deactivating the plugin is safer."
+            }
+          ]
+        }
+      ],
+      "related": ["clear-metadata", "reset-settings", "image-metadata"]
+    },
+    {
+      "slug": "fifu-api",
+      "title": "FIFU API (PHP functions)",
+      "summary": "Set featured images and product category images from your own PHP code with a single function call.",
+      "icon": "code-xml",
+      "category": "developers",
+      "illustration": {
+        "key": "fifu-api",
+        "caption": "One PHP function call sets a featured image: FIFU saves the URL and the metadata, and returns true.",
+        "alt": "Three steps: code calling fifu_dev_set_image for post 42 with an image URL, the FIFU icon with the note returns true, and post 42 showing its featured image."
+      },
+      "locations": [
+        {
+          "label": "Reference",
+          "path": ["FIFU", "Settings", "Developers", "FIFU API"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Language",
+          "value": "PHP"
+        },
+        {
+          "label": "Functions",
+          "value": "`fifu_dev_set_image`, `fifu_dev_set_category_image`"
+        },
+        {
+          "label": "Returns",
+          "value": "`true` on success, `false` on failure"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Are you a WordPress developer? FIFU offers simple PHP functions to set images from your own code. You provide the ID and the image address, and FIFU takes care of the rest: it saves the custom fields and creates the metadata WordPress needs."
+            },
+            {
+              "type": "table",
+              "columns": ["Function", "What it sets"],
+              "rows": [
+                [
+                  "`fifu_dev_set_image( $post_id, $image_url )`",
+                  "The featured image of a post, page, product, or custom post type."
+                ],
+                [
+                  "`fifu_dev_set_category_image( $term_id, $image_url )`",
+                  "The image of a WooCommerce product category."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-post-image",
+          "title": "Set a post's featured image",
+          "blocks": [
+            {
+              "type": "code",
+              "language": "php",
+              "code": "$post_id = wp_insert_post( array(\n    'post_title'  => 'Hello from the API',\n    'post_status' => 'publish',\n) );\n\nif ( function_exists( 'fifu_dev_set_image' ) ) {\n    fifu_dev_set_image( $post_id, 'https://example.com/photos/hello.jpg' );\n}",
+              "caption": "Create a post and give it a remote featured image"
+            },
+            {
+              "type": "paragraph",
+              "text": "To remove a post's remote featured image, pass an empty address:"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "fifu_dev_set_image( $post_id, '' );"
+            }
+          ]
+        },
+        {
+          "id": "set-category-image",
+          "title": "Set a product category image",
+          "blocks": [
+            {
+              "type": "code",
+              "language": "php",
+              "code": "$term = get_term_by( 'slug', 'shoes', 'product_cat' );\n\nif ( $term && function_exists( 'fifu_dev_set_category_image' ) ) {\n    fifu_dev_set_category_image( $term->term_id, 'https://example.com/photos/shoes.jpg' );\n}",
+              "caption": "Give the “shoes” category a remote image"
+            }
+          ]
+        },
+        {
+          "id": "tips",
+          "title": "Tips",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Wrap calls in `function_exists()` so your code keeps working if FIFU is deactivated.",
+                "Use the full image address, starting with `https://`.",
+                "Check the return value: `true` means the image was saved.",
+                "Put your code in a child theme's `functions.php` or a small custom plugin, so theme updates don't remove it.",
+                "Prefer the command line? See [WP-CLI](/docs/wp-cli/). It can also create posts with a FIFU image."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Options with a lock icon",
+              "text": "Some options in this screen show a lock icon. They aren't part of the free version, so this guide doesn't cover them."
+            }
+          ]
+        }
+      ],
+      "related": ["wp-cli", "image-metadata", "product-and-category-images"]
+    },
+    {
+      "slug": "wp-cli",
+      "title": "WP-CLI",
+      "summary": "Change FIFU settings and run metadata tasks from the command line.",
+      "icon": "terminal",
+      "category": "developers",
+      "illustration": {
+        "key": "wp-cli",
+        "caption": "Each wp fifu command changes one of FIFU's settings, just as if you switched it in the admin.",
+        "alt": "Side by side: a terminal running wp fifu content on, wp fifu woo --zoom=off, and wp fifu metadata on, and the matching settings switches after the commands."
+      },
+      "locations": [
+        {
+          "label": "Reference",
+          "path": ["FIFU", "Settings", "Developers", "WP-CLI"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Command",
+          "value": "`wp fifu`"
+        },
+        {
+          "label": "Requires",
+          "value": "WP-CLI on your server"
+        },
+        {
+          "label": "Options per command",
+          "value": "One"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "**WP-CLI** is the command-line tool for WordPress. FIFU adds a `wp fifu` command so you can change its settings and run metadata tasks without opening the admin, which is handy for scripts and for managing many sites."
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "One option per command",
+              "text": "Each command applies one option. To change several settings, run one command for each."
+            }
+          ]
+        },
+        {
+          "id": "automatic",
+          "title": "Automatic",
+          "blocks": [
+            {
+              "type": "table",
+              "columns": ["Command", "What it does"],
+              "rows": [
+                [
+                  "`wp fifu content on`",
+                  "Switches [[auto set featured media from post content]] on (`off` to switch it off)."
+                ],
+                [
+                  "`wp fifu content --overwrite=on`",
+                  "Switches [[overwrite the existing featured media]] on or off."
+                ],
+                [
+                  "`wp fifu content --skip=ads.google.com,emoji`",
+                  "Sets the keywords to skip."
+                ],
+                ["`wp fifu content --cpt=post,page`", "Sets the post types."]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "image",
+          "title": "Image",
+          "blocks": [
+            {
+              "type": "table",
+              "columns": ["Command", "What it does"],
+              "rows": [
+                ["`wp fifu cdn on`", "[[optimize featured images]] on or off."],
+                [
+                  "`wp fifu cdn --content=on`",
+                  "[[optimize secondary images]] on or off."
+                ],
+                [
+                  "`wp fifu square --desktop=crop`",
+                  "Square images on desktop: `crop` or `extend`. Use `--mobile=` for phones."
+                ],
+                [
+                  "`wp fifu sizes --save=medium=400x300x1`",
+                  "Saves a registered size as name=width×height×crop (1 = crop, 0 = no crop)."
+                ],
+                ["`wp fifu image --hide=on`", "[[Hide Featured Media]] on or off."],
+                ["`wp fifu image --hide-types=post,page`", "Hide: filter by post type."],
+                [
+                  "`wp fifu image --hide-formats=video,audio`",
+                  "Hide: filter by post format."
+                ],
+                [
+                  "`wp fifu image --default-url=https://…`",
+                  "Sets the [[Default Featured Image]] address."
+                ],
+                ["`wp fifu image --default=on`", "Default Featured Image on or off."],
+                [
+                  "`wp fifu image --default-types=post,page`",
+                  "Default Featured Image: filter by post type."
+                ],
+                ["`wp fifu image --pcontent-add=on`", "[[add missing media]] on or off."],
+                [
+                  "`wp fifu image --pcontent-remove=on`",
+                  "[[remove duplicated media]] on or off."
+                ],
+                [
+                  "`wp fifu image --pcontent-types=post`",
+                  "Modify Post Content: filter by post type."
+                ],
+                [
+                  "`wp fifu image --replace=https://…`",
+                  "Sets the [[Replace Not Found Image]] address."
+                ],
+                ["`wp fifu image --block=on`", "[[Disable right-click]] on or off."]
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Setting the default image",
+              "text": "Set the address first (`--default-url=`), then switch it on (`--default=on`). FIFU applies the image to your posts when it's switched on."
+            }
+          ]
+        },
+        {
+          "id": "woocommerce",
+          "title": "WooCommerce",
+          "blocks": [
+            {
+              "type": "table",
+              "columns": ["Command", "What it does"],
+              "rows": [
+                ["`wp fifu woo --lightbox=on`", "[[lightbox]] on or off."],
+                ["`wp fifu woo --zoom=on`", "[[zoom]] on or off."],
+                [
+                  "`wp fifu woo --order-email=on`",
+                  "[[Add image to order email]] on or off."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "metadata",
+          "title": "Metadata and developers",
+          "blocks": [
+            {
+              "type": "table",
+              "columns": ["Command", "What it does"],
+              "rows": [
+                [
+                  "`wp fifu metadata on`",
+                  "Switches [[Image Metadata]] on and generates missing metadata (`off` stops it)."
+                ],
+                ["`wp fifu clean`", "Runs [[Clear Metadata]]."],
+                ["`wp fifu reset`", "Runs [[Reset Settings]]."],
+                ["`wp fifu debug on`", "[[Debug Mode]] on or off."]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "create-post",
+          "title": "Create a post with a remote image",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "WordPress's own `wp post create` command can save FIFU's custom field at the same time:"
+            },
+            {
+              "type": "code",
+              "language": "bash",
+              "code": "wp post create --post_type=post --post_title='Hello' --post_status=publish --meta_input='{\"fifu_image_url\":\"https://example.com/image.jpg\"}'"
+            },
+            {
+              "type": "paragraph",
+              "text": "To add alternative text too, include `fifu_image_alt` in `--meta_input`. If an image created this way doesn't show on your site, run `wp fifu metadata on`."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Commands for locked options",
+              "text": "Commands for options that show a lock icon in the settings only print a message and change nothing."
+            }
+          ]
+        }
+      ],
+      "related": ["fifu-api", "reset-settings", "image-metadata"]
+    },
+    {
+      "slug": "debug-mode",
+      "title": "Debug Mode",
+      "summary": "Turn on troubleshooting tools and stop browsers from caching FIFU's scripts while you investigate a problem.",
+      "icon": "bug",
+      "category": "developers",
+      "illustration": {
+        "key": "debug-mode",
+        "caption": "Switching on Debug Mode adds troubleshooting tools. Switch it off again when you're done.",
+        "alt": "Side by side: the Debug Mode switch turned on, and the tools it adds: Copy debug data, Download debug logs, DB Migration, and no cached files."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["FIFU", "Settings", "Developers", "Debug Mode"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Default",
+          "value": "Off"
+        },
+        {
+          "label": "Use it for",
+          "value": "Troubleshooting"
+        },
+        {
+          "label": "Command",
+          "value": "`wp fifu debug on`"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "**Debug Mode** helps you and the FIFU team investigate problems. While it's on, FIFU's own files are never cached, and extra tools appear that collect details about posts, products, categories, and images for support."
+            }
+          ]
+        },
+        {
+          "id": "turn-on",
+          "title": "Turn it on",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Developers]] › [[Debug Mode]]."
+                },
+                {
+                  "title": "Switch the option on."
+                },
+                {
+                  "title": "Reproduce the problem and collect the information you need."
+                },
+                {
+                  "title": "Switch it off when you're done."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "what-changes",
+          "title": "What changes while it's on",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**No cached files.** Your browser always loads FIFU's latest scripts and styles, so an old copy can't hide a fix.",
+                "[[Copy debug data]]: a new button in the FIFU box of the editor and in the Quick Editor. It copies details about that item, ready to paste into a support email.",
+                "[[Download debug logs]]: a new button on the [Status page](/docs/status-page/), for administrators. It downloads FIFU's log files as a ZIP file.",
+                "[[DB Migration]]: a new page under the **FIFU** menu, for database maintenance. Only use it if FIFU support asks you to."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Switch it off afterwards",
+              "text": "Without caching, FIFU's files load on every visit. Debug Mode is meant for troubleshooting sessions, not for everyday use."
+            }
+          ]
+        }
+      ],
+      "related": ["status-page", "wp-cli", "image-metadata"]
+    },
+    {
+      "slug": "status-page",
+      "title": "Status page",
+      "summary": "Copy a summary of your site, plugins, and FIFU settings to send to FIFU support when you need help.",
+      "icon": "activity",
+      "category": "developers",
+      "illustration": {
+        "key": "status-page",
+        "caption": "Open the Status page, copy the summary, and paste it into your email to FIFU support.",
+        "alt": "Three steps: the Status page with a summary of versions and plugins, the Copy to clipboard button being clicked, and an email to support@fifu.app with the summary pasted in."
+      },
+      "locations": [
+        {
+          "label": "Admin menu",
+          "path": ["FIFU", "Status"]
+        },
+        {
+          "label": "Also from",
+          "path": ["FIFU", "Settings", "Help", "Technical support"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Button",
+          "value": "Copy to clipboard"
+        },
+        {
+          "label": "Support email",
+          "value": "`support@fifu.app`"
+        },
+        {
+          "label": "Contains",
+          "value": "Setup details, no passwords"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-is",
+          "title": "What it is",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The **Status** page shows a plain-text summary of your setup. It's what the FIFU team needs to understand your site quickly, so sending it with your question saves a lot of back and forth."
+            },
+            {
+              "type": "paragraph",
+              "text": "The summary includes:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "the versions of FIFU, WordPress, PHP, and WooCommerce;",
+                "your site address and active theme;",
+                "how many pages, posts, and products you have, and how many image addresses FIFU stores;",
+                "the list of installed and active plugins;",
+                "the current value of each FIFU setting."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "send-to-support",
+          "title": "Send it to support",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Status]]."
+                },
+                {
+                  "title": "Click [[Copy to clipboard]].",
+                  "text": "The whole summary is copied."
+                },
+                {
+                  "title": "Write to `support@fifu.app` and paste the summary.",
+                  "text": "Describe the problem and include the address of an affected page and the image address you used."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "You can also reach the Status page from [[FIFU]] › [[Settings]] › [[Help]] › [[Technical support]]: click the [[status]] button."
+            }
+          ]
+        },
+        {
+          "id": "debug-logs",
+          "title": "Debug logs",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "While [Debug Mode](/docs/debug-mode/) is on, administrators see a [[Download debug logs]] button on the Status page. It downloads FIFU's log files as a ZIP file that you can attach to your email."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Review before sharing",
+              "text": "The summary contains your site address and plugin list, but no passwords or personal data of your visitors."
+            }
+          ]
+        }
+      ],
+      "related": ["debug-mode", "getting-started", "image-metadata"]
+    },
+    {
+      "slug": "featured-image-block",
+      "title": "Featured Image (URL) block",
+      "summary": "Set the post's featured image URL and alternative text from a block inside the block editor.",
+      "icon": "blocks",
+      "category": "blocks-widgets",
+      "illustration": {
+        "key": "featured-image-block",
+        "caption": "The Featured Image (URL) block sits in your content (1); its settings panel holds the image URL and alternative text (2).",
+        "alt": "The block editor: the content area with the Featured Image (URL) block showing an image, and the Settings panel on the right with the image URL and alternative text."
+      },
+      "locations": [
+        {
+          "label": "Block editor",
+          "path": ["Edit post", "Add block", "Featured Image (URL)"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Block category",
+          "value": "Media"
+        },
+        {
+          "label": "Designed for",
+          "value": "Posts in the block editor"
+        },
+        {
+          "label": "On the page",
+          "value": "Your theme shows it as the featured image"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The **Featured Image (URL)** block lets you set the post's featured image from inside the content area of the block editor. It shows a preview of the image while you write."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "The block itself prints nothing",
+              "text": "On the published page, the image appears wherever your theme shows featured images, not at the block's position. The block is simply a convenient place to set it."
+            }
+          ]
+        },
+        {
+          "id": "add-block",
+          "title": "Add the block",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "In the block editor, click the **+** button.",
+                  "text": "Search for **Featured Image (URL)** or **fifu**. It's in the [[Media]] category."
+                },
+                {
+                  "title": "Insert the block."
+                },
+                {
+                  "title": "In the block's [[Settings]] panel on the right, paste the address into [[Image URL]].",
+                  "text": "The field says “Paste image URL here…”."
+                },
+                {
+                  "title": "Fill in [[Alternative text]]."
+                },
+                {
+                  "title": "Save or update the post."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Until an address is set, the block shows “No featured image set.”. To remove the image, use the [[Remove remote image]] button."
+            }
+          ]
+        },
+        {
+          "id": "sync",
+          "title": "Stays in sync with the FIFU box",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The block and the **FIFU** box in the sidebar edit the same image. Change one and the other updates, so you can use whichever is handier."
+            }
+          ]
+        },
+        {
+          "id": "limits",
+          "title": "Good to know",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The block is built for regular posts. For pages, products, and custom post types, use the [FIFU box](/docs/featured-image-from-url/) in the sidebar.",
+                "It isn't offered in the Widgets screen or the Customizer.",
+                "If [[Alternative text]] is empty, FIFU uses the post title."
+              ]
+            }
+          ]
+        }
+      ],
+      "related": ["featured-image-from-url", "featured-media-widget", "elementor-widget"]
+    },
+    {
+      "slug": "featured-media-widget",
+      "title": "(FIFU) Featured media widget",
+      "summary": "Show the current post's featured image in a sidebar, footer, or any other widget area.",
+      "icon": "panel-right",
+      "category": "blocks-widgets",
+      "illustration": {
+        "key": "featured-media-widget",
+        "caption": "The (FIFU) Featured media widget shows the featured image of the post being viewed in your sidebar.",
+        "alt": "A post page with the text on the left and a sidebar on the right, where the (FIFU) Featured media widget shows the post's image."
+      },
+      "locations": [
+        {
+          "label": "Widgets",
+          "path": ["Appearance", "Widgets", "(FIFU) Featured media"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Widget name",
+          "value": "(FIFU) Featured media"
+        },
+        {
+          "label": "Settings",
+          "value": "None"
+        },
+        {
+          "label": "Shows",
+          "value": "The current post's FIFU image"
+        },
+        {
+          "label": "Requires",
+          "value": "A theme with widget areas"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The **(FIFU) Featured media** widget shows the featured image of the post, page, or custom post type being viewed inside a widget area, such as a sidebar or footer."
+            }
+          ]
+        },
+        {
+          "id": "add-widget",
+          "title": "Add the widget",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[Appearance]] › [[Widgets]]."
+                },
+                {
+                  "title": "Add **(FIFU) Featured media** to a widget area.",
+                  "text": "In the block-based widget screen, search for its name in the block inserter. It's added as a legacy widget."
+                },
+                {
+                  "title": "Click [[Update]] and open a post to see it."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "You can also add it from [[Appearance]] › [[Customize]] › [[Widgets]] if your theme supports it."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Block themes",
+              "text": "Block themes, such as Twenty Twenty-Four, don't have widget areas. With those themes, the [Featured Image (URL) block](/docs/featured-image-block/) and your theme's own featured image block are the way to go."
+            }
+          ]
+        },
+        {
+          "id": "what-it-shows",
+          "title": "What it shows",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The remote featured image set with FIFU, or the [Default Featured Image](/docs/default-featured-image/) when that applies.",
+                "Nothing when the post has no FIFU image, so the widget never shows an empty box.",
+                "It works best on single post pages, where there's one clear “current post”."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Styling",
+              "text": "The widget has no options. It outputs a simple image, so your theme's styles or a little custom CSS control its look."
+            }
+          ]
+        }
+      ],
+      "related": ["featured-image-block", "elementor-widget", "default-featured-image"]
+    },
+    {
+      "slug": "elementor-widget",
+      "title": "(FIFU) Featured Image Elementor widget",
+      "summary": "Add a remote image to your Elementor designs and use it as the post's featured image.",
+      "icon": "layout-template",
+      "category": "blocks-widgets",
+      "illustration": {
+        "key": "elementor-widget",
+        "caption": "Add the (FIFU) Featured Image widget, paste the image URL, and publish: the image also becomes the post's featured image.",
+        "alt": "Three steps: the Elementor widget panel with (FIFU) Featured Image selected, the widget's Content tab with an image URL and a preview, and a post card whose image is marked as the featured image."
+      },
+      "locations": [
+        {
+          "label": "Elementor",
+          "path": ["Edit with Elementor", "Basic", "(FIFU) Featured Image"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Widget name",
+          "value": "(FIFU) Featured Image"
+        },
+        {
+          "label": "Elementor category",
+          "value": "Basic"
+        },
+        {
+          "label": "Also sets",
+          "value": "The post's featured image"
+        },
+        {
+          "label": "Requires",
+          "value": "Elementor"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-does",
+          "title": "What it does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The **(FIFU) Featured Image** widget shows a remote image inside your Elementor design and, when you save, makes it the post's featured image. Your theme, lists, and social sharing all use the same image."
+            }
+          ]
+        },
+        {
+          "id": "add-widget",
+          "title": "Add the widget",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Open the page or post with [[Edit with Elementor]]."
+                },
+                {
+                  "title": "In the widget panel, search for **FIFU** or look in the [[Basic]] category.",
+                  "text": "Drag **(FIFU) Featured Image** into your layout."
+                },
+                {
+                  "title": "On the [[Content]] tab, paste the address into [[Image URL]].",
+                  "text": "Fill in [[Alternative text]] too."
+                },
+                {
+                  "title": "Click [[Publish]] or [[Update]].",
+                  "text": "FIFU saves the address as the featured image."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "behaviour",
+          "title": "How it behaves",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "The image is shown centered in its column.",
+                "Google Drive and OneDrive share links are converted automatically.",
+                "If a page has more than one FIFU widget, the **last** one in the layout sets the featured image.",
+                "Clearing the address in the widget and saving removes the featured image.",
+                "If [[Alternative text]] is empty, the featured image uses the post title as its description."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Why use it with Elementor",
+              "text": "[Auto set featured media from post content](/docs/auto-set-featured-media-from-post-content/) skips posts saved from the Elementor editor. This widget is the way to set FIFU images there."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "featured-image-block",
+        "featured-media-widget",
+        "featured-image-from-url"
+      ]
+    },
+    {
+      "slug": "seo-and-social-sharing",
+      "title": "SEO and social sharing",
+      "summary": "Share remote featured images with search engines and social networks through meta tags, structured data, and RSS.",
+      "icon": "share",
+      "category": "integrations",
+      "illustration": {
+        "key": "seo-and-social-sharing",
+        "caption": "FIFU makes your post's remote image available to link previews, search results, and RSS feed readers.",
+        "alt": "Side by side: a post with its featured image, and three places where the same image appears: a social link preview, a search result, and an RSS feed item."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["None. It works automatically"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Works on",
+          "value": "Posts, pages, products, and the homepage"
+        },
+        {
+          "label": "Works with",
+          "value": "Yoast SEO, Rank Math, AIOSEO"
+        },
+        {
+          "label": "Also covers",
+          "value": "Search results data and RSS feeds"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Search engines and social networks need to know which image represents a page. FIFU makes sure they find your remote featured images, with or without an SEO plugin. There's nothing to configure."
+            }
+          ]
+        },
+        {
+          "id": "social-tags",
+          "title": "Social sharing tags",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When no SEO plugin is active, FIFU adds the tags that Facebook, LinkedIn, X, and other networks read when someone shares a post, page, or product that has a FIFU image:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "the **sharing image**, so the featured image appears in the link preview;",
+                "a **large-image card for X**, with the title, the excerpt as description, and the image."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "If [Optimized Images](/docs/optimized-images/) is on, the shared image is delivered through the image CDN too."
+            },
+            {
+              "type": "paragraph",
+              "text": "For the **homepage**, FIFU uses your [Default Featured Image](/docs/default-featured-image/) when no other sharing image is set."
+            }
+          ]
+        },
+        {
+          "id": "seo-plugins",
+          "title": "With an SEO plugin",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When an SEO plugin is active, FIFU works with it instead of adding its own sharing tags:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Yoast SEO:** FIFU gives Yoast the remote featured image, so Yoast's sharing tags and search data use the right image.",
+                "**Rank Math:** FIFU keeps image addresses complete in Rank Math's Facebook and X tags, and shares the image's alternative text. WordPress's own featured image panel also stays visible in the editor.",
+                "**All in One SEO (AIOSEO):** FIFU lets AIOSEO describe the page for search engines and only adds the image information."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "structured-data",
+          "title": "Data for search results",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Search engines also read a hidden description of each page, called structured data. On single posts, pages, and products that have a FIFU image:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Without an SEO plugin**, FIFU describes the post (or the WooCommerce product) and includes its image.",
+                "**With Yoast SEO, Rank Math, or AIOSEO active**, FIFU only adds the image information, so it complements your SEO plugin instead of competing with it."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rss",
+          "title": "Images in your RSS feed",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FIFU adds the featured image to each item of your RSS feed. Feed readers and news apps can then show a picture next to each post."
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check the result",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Paste a post address into a social network's sharing preview tool, such as Facebook's Sharing Debugger, to see the image it picks.",
+                "Use Google's Rich Results Test to see your structured data.",
+                "Clear your site or CDN cache first if you've just changed the image."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "About Google Images",
+              "text": "Publicly accessible remote images can appear in Google Images when they're eligible. Search engines always decide what they index and how it ranks."
+            }
+          ]
+        }
+      ],
+      "related": ["default-featured-image", "featured-image-from-url", "optimized-images"]
+    },
+    {
+      "slug": "forms-and-marketplaces",
+      "title": "Forms and marketplaces",
+      "summary": "Let visitors and vendors add image URLs through Gravity Forms, Dokan, MVX, and other front-end forms.",
+      "icon": "clipboard-list",
+      "category": "integrations",
+      "illustration": {
+        "key": "forms-and-marketplaces",
+        "caption": "A visitor types an image URL in a form; the new post is created with that image as its featured image.",
+        "alt": "Three steps: a front-end form with a title and an image URL field and a Submit button, a check icon for the new post, and the new post showing the image."
+      },
+      "locations": [
+        {
+          "label": "Gravity Forms",
+          "path": ["Forms", "Edit form", "Post Fields", "Featured Image (FIFU)"]
+        },
+        {
+          "label": "Dokan",
+          "path": ["Vendor dashboard", "Products", "Product image"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Setup",
+          "value": "Automatic when the other plugin is active"
+        },
+        {
+          "label": "Supports",
+          "value": "Gravity Forms, Dokan, MVX, WCFM, Toolset Forms"
+        },
+        {
+          "label": "What's saved",
+          "value": "The featured image address"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Some sites let visitors, authors, or vendors create content from the front end. FIFU connects to popular form and marketplace plugins so they can submit an image address instead of uploading a file."
+            }
+          ]
+        },
+        {
+          "id": "gravity-forms",
+          "title": "Gravity Forms",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FIFU adds a **Featured Image (FIFU)** field to the [[Post Fields]] group of the form editor. Use it in a form that creates posts."
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Edit a form that creates a post, for example one with a [[Title]] field from [[Post Fields]]."
+                },
+                {
+                  "title": "From [[Post Fields]], add **Featured Image (FIFU)**."
+                },
+                {
+                  "title": "Adjust the label, description, and other settings as usual.",
+                  "text": "The field also offers [[Input CSS Classes]] for styling."
+                },
+                {
+                  "title": "When someone submits the form, the address they typed becomes the new post's featured image."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dokan",
+          "title": "Dokan",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "In the vendor dashboard, the add and edit product screens get a [[Product image]] field where vendors paste the address of the product's main image."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Gallery field",
+              "text": "Dokan's [[Image gallery]] field for image addresses isn't part of the free version."
+            }
+          ]
+        },
+        {
+          "id": "mvx-wcfm",
+          "title": "MVX and WCFM",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**MVX (MultiVendorX):** the vendor product manager shows a [[Product image]] field for the image address.",
+                "**WCFM:** when the WCFM product form includes a field named `fifu_image_url`, the address typed there becomes the product's main image."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "toolset",
+          "title": "Toolset Forms",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Create a custom field with the slug `fifu_image_url` in Toolset Types and add it to your Toolset form. When the form is saved, the address in that field becomes the featured image."
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Test with a real submission",
+              "text": "Submit a test entry with a public image address, then open the new post or product to check the FIFU box."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "featured-image-from-url",
+        "product-and-category-images",
+        "import-and-automation-plugins"
+      ]
+    },
+    {
+      "slug": "multilingual-and-duplicated-content",
+      "title": "Multilingual and duplicated content",
+      "summary": "Keep featured image URLs when you translate content with WPML or Polylang, or duplicate posts.",
+      "icon": "languages",
+      "category": "integrations",
+      "illustration": {
+        "key": "multilingual-and-duplicated-content",
+        "caption": "When you translate or duplicate a post, every version keeps its featured image.",
+        "alt": "Three steps: an English post with its image, the translation and duplicate actions, and a Spanish translation and a copy that both show the same image."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["None. It works automatically"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Translation plugins",
+          "value": "WPML, WooCommerce Multilingual, Polylang"
+        },
+        {
+          "label": "Duplication",
+          "value": "Yoast Duplicate Post, WooCommerce"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When you translate or copy content, the new version should keep its featured image but still be independent, so changing one doesn't break the other. FIFU takes care of this with the plugins below."
+            }
+          ]
+        },
+        {
+          "id": "wpml",
+          "title": "WPML and WooCommerce Multilingual",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When WPML duplicates a post or copies its details to a translation, FIFU makes sure the featured image comes along, and each language can change its image independently. With **WooCommerce Multilingual**, the same happens for products."
+            }
+          ]
+        },
+        {
+          "id": "polylang",
+          "title": "Polylang",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Polylang can copy the featured image to new translations. FIFU keeps each translation's image independent, so changing it in one language doesn't affect the others."
+            }
+          ]
+        },
+        {
+          "id": "duplicates",
+          "title": "Duplicating posts and products",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Yoast Duplicate Post:** copies keep the featured image, and changing a copy's image doesn't affect the original.",
+                "**WooCommerce:** when you use [[Duplicate]] on a product, the copy keeps its remote main image."
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Changing the image of a copy",
+              "text": "Because every copy is independent, you can change the image of a translation or duplicate without affecting the original."
+            }
+          ]
+        }
+      ],
+      "related": [
+        "featured-image-from-url",
+        "product-and-category-images",
+        "bulk-editors"
+      ]
+    },
+    {
+      "slug": "bulk-editors",
+      "title": "Bulk editors",
+      "summary": "Edit featured image URLs of many posts or products at once in spreadsheet-style editors.",
+      "icon": "sheet",
+      "category": "integrations",
+      "illustration": {
+        "key": "bulk-editors",
+        "caption": "In a spreadsheet-style editor, fill in fifu_image_url and fifu_image_alt for many items at once.",
+        "alt": "Two steps: a spreadsheet with the columns Title, fifu_image_url, and fifu_image_alt for three products, and the three products with their images."
+      },
+      "locations": [
+        {
+          "label": "WP Sheet Editor",
+          "path": ["Your spreadsheet", "fifu_image_url column"]
+        },
+        {
+          "label": "WOOBE",
+          "path": ["WOOBE", "Meta Fields", "fifu_image_url"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Supports",
+          "value": "WP Sheet Editor, WooCommerce Bulk Editor (WOOBE)"
+        },
+        {
+          "label": "Fields",
+          "value": "`fifu_image_url`, `fifu_image_alt`"
+        },
+        {
+          "label": "Setup",
+          "value": "Show the column in the editor"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Spreadsheet-style editors let you change many posts or products at once. FIFU works with two of them, so you can paste image addresses row by row instead of opening each item."
+            }
+          ]
+        },
+        {
+          "id": "wp-sheet-editor",
+          "title": "WP Sheet Editor",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FIFU adds two columns to the sheet for every post type that supports featured images:"
+            },
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "fifu_image_url",
+                  "text": "The featured image address."
+                },
+                {
+                  "label": "fifu_image_alt",
+                  "text": "The image's alternative text."
+                }
+              ]
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Open the sheet for posts, pages, products, or another post type."
+                },
+                {
+                  "title": "Show the `fifu_image_url` and `fifu_image_alt` columns if they're hidden."
+                },
+                {
+                  "title": "Paste addresses and descriptions into the cells and save."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "woobe",
+          "title": "WooCommerce Bulk Editor (WOOBE)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When you edit the `fifu_image_url` field of a product in WOOBE, FIFU saves the new address as the product's main image and creates the records it needs."
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Add the field first",
+              "text": "If you don't see `fifu_image_url` in WOOBE, add it on WOOBE's [[Meta Fields]] tab, then show its column."
+            }
+          ]
+        },
+        {
+          "id": "good-to-know",
+          "title": "Good to know",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Use full addresses that start with `https://`.",
+                "Leave the alternative text empty to use the post title automatically.",
+                "If images edited this way don't show on your site, run [Image Metadata](/docs/image-metadata/)."
+              ]
+            }
+          ]
+        }
+      ],
+      "related": ["quick-editor", "image-metadata", "import-and-automation-plugins"]
+    },
+    {
+      "slug": "import-and-automation-plugins",
+      "title": "Import and automation plugins",
+      "summary": "Use remote images brought in by importers, product feeds, affiliate tools, and content automation plugins.",
+      "icon": "import",
+      "category": "integrations",
+      "illustration": {
+        "key": "import-and-automation-plugins",
+        "caption": "Import content with image URLs and FIFU keeps the images remote: nothing is downloaded, and every item shows its image.",
+        "alt": "Three steps: an import file with product names and image URLs, the FIFU icon with the note 0 files downloaded, and two products showing their images."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["None. It works automatically"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Supports",
+          "value": "WordPress Importer, Datafeedr, Content Egg, WPAuto Pro, and more"
+        },
+        {
+          "label": "Images downloaded",
+          "value": "None"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Importers, product feeds, and content automation tools often bring images along with the content. With these plugins, FIFU keeps the images remote: it saves their addresses as featured images instead of downloading the files."
+            }
+          ]
+        },
+        {
+          "id": "plugins",
+          "title": "Supported plugins",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**WordPress Importer:** when an import finishes, FIFU prepares the imported images automatically (see [Image Metadata](/docs/image-metadata/)), so posts that came with FIFU image addresses show them right away.",
+                "**Datafeedr:** imported products use the feed's main image as their remote main image.",
+                "**Content Egg:** when Content Egg saves product data, FIFU uses its image as the featured image. If you later change or remove the featured image yourself, Content Egg won't overwrite your choice.",
+                "**WPAuto Pro:** images found in automatically created posts become remote featured images instead of being downloaded.",
+                "**OL Scrapes:** posts created by OL Scrapes keep their featured image as a remote image.",
+                "**AliPlugin and SlotsLaunch:** the product or game image these plugins provide becomes the remote featured image."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "custom-field",
+          "title": "Importing with any other tool",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Most import tools can fill custom fields. Put the image address in the `fifu_image_url` field, and the alternative text in `fifu_image_alt` if you like."
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Map your image address column to the `fifu_image_url` custom field."
+                },
+                {
+                  "title": "Run the import."
+                },
+                {
+                  "title": "Go to [[FIFU]] › [[Settings]] › [[Metadata]] and run [[Image Metadata]].",
+                  "text": "This creates the records themes need to show the images. See [Image Metadata](/docs/image-metadata/)."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Prefer code?",
+              "text": "Developers can call `fifu_dev_set_image()` after creating each post. See [FIFU API (PHP functions)](/docs/fifu-api/)."
+            }
+          ]
+        }
+      ],
+      "related": ["image-metadata", "fifu-api", "bulk-editors"]
+    },
+    {
+      "slug": "theme-and-plugin-compatibility",
+      "title": "Theme and plugin compatibility",
+      "summary": "Themes and plugins that FIFU adapts to automatically, with nothing to set up.",
+      "icon": "puzzle",
+      "category": "integrations",
+      "illustration": {
+        "key": "theme-and-plugin-compatibility",
+        "caption": "FIFU detects these themes and plugins and adjusts itself. There's nothing to set up.",
+        "alt": "Side by side: the FIFU icon, and lists of compatible themes (WoodMart, Flatsome, Houzez, WPResidence) and plugins (AMP, Web Stories, Search & Filter Pro, Force Login, YITH Wishlist, Sirv), each with a check mark."
+      },
+      "locations": [
+        {
+          "label": "Settings",
+          "path": ["None. It works automatically"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Themes",
+          "value": "WoodMart, Flatsome, Houzez, WPResidence"
+        },
+        {
+          "label": "Plugins",
+          "value": "AMP, Web Stories, Force Login, and more"
+        }
+      ],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Some themes and plugins handle images in their own way. FIFU detects them and adjusts itself automatically, so remote images keep working. You don't need to change any setting."
+            }
+          ]
+        },
+        {
+          "id": "themes",
+          "title": "Themes",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**WoodMart:** FIFU stops WoodMart from trying to create local copies of remote images.",
+                "**Flatsome:** FIFU adjusts the height of Flatsome's product image slider so remote images fit.",
+                "**Houzez and WPResidence:** FIFU leaves image sizing to these themes, which handle it themselves."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "plugins",
+          "title": "Plugins",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**AMP:** on AMP pages, FIFU doesn't add its scripts, because AMP doesn't allow them.",
+                "**Google Web Stories:** FIFU stays out of the Web Stories editor and its media picker.",
+                "**Search & Filter Pro:** the FIFU box isn't added to Search & Filter Pro's screens.",
+                "**Force Login:** FIFU's admin tools keep working when Force Login protects your site.",
+                "**YITH WooCommerce Wishlist:** when the wishlist loads in the background, FIFU waits for it before running its scripts.",
+                "**Multisite Global Media:** images shared through it are protected when FIFU cleans up unused images.",
+                "**Sirv:** a [[Choose Sirv image]] button appears in the FIFU box so you can pick images from your Sirv account."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "found-a-conflict",
+          "title": "Found a conflict?",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "If a theme or plugin doesn't show your remote images correctly, let the FIFU team know through the support forum on WordPress.org or by email at `support@fifu.app`. Include your [Status page](/docs/status-page/) summary."
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Try this first",
+              "text": "Clear your site and CDN caches, and check [Image Metadata](/docs/image-metadata/). Many display problems are solved by generating the missing metadata."
+            }
+          ]
+        }
+      ],
+      "related": ["seo-and-social-sharing", "image-metadata", "status-page"]
+    },
+    {
+      "slug": "fifu-cloud",
+      "title": "FIFU Cloud",
+      "summary": "An optional paid service that stores your remote images in the cloud and delivers fast, optimized copies.",
+      "icon": "cloud",
+      "category": "services",
+      "illustration": {
+        "key": "fifu-cloud",
+        "caption": "FIFU Cloud stores copies of your remote images, optimizes them, and serves fast thumbnails, with optional hotlink protection.",
+        "alt": "Three steps: a remote image whose source may change, the FIFU Cloud icon with WebP and smart crop, and resized thumbnails with hotlink protection."
+      },
+      "locations": [
+        {
+          "label": "Admin menu",
+          "path": ["FIFU", "Cloud"]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Type",
+          "value": "Optional paid service"
+        },
+        {
+          "label": "Billing",
+          "value": "Average number of stored images per 30 days"
+        },
+        {
+          "label": "Required for FIFU",
+          "value": "No"
+        }
+      ],
+      "sections": [
+        {
+          "id": "what-it-is",
+          "title": "What it is",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "**FIFU Cloud** is a separate, paid service. It stores copies of your images on Google Cloud, creates optimized thumbnails in the WebP format, and delivers them through Google's global network. **You don't need it** to use FIFU or remote featured images."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Never lose an image again.** If the original source removes or changes an image address, your site keeps using the stable FIFU Cloud copy.",
+                "**Faster pages.** Visitors get thumbnails in the right size instead of one large file.",
+                "**Smart cropping.** Face and object detection keeps the important part of the image in view when themes and social networks crop it.",
+                "**No work for your server.** Images are processed in the cloud, not on your site."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "account",
+          "title": "Create an account",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Go to [[FIFU]] › [[Cloud]] and open the [[Account]] tab."
+                },
+                {
+                  "title": "Enter your [[Email]] and click [[Sign up]].",
+                  "text": "Then follow the instructions that appear."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The same tab shows your [[Billing]] information and has buttons to [[Update payment method]], [[Reset credentials]], and [[Close account]]."
+            }
+          ]
+        },
+        {
+          "id": "tabs",
+          "title": "The Cloud tabs",
+          "blocks": [
+            {
+              "type": "settings",
+              "items": [
+                {
+                  "label": "Welcome",
+                  "text": "An overview of the service and its pricing."
+                },
+                {
+                  "label": "Upload",
+                  "text": "Search your images by [[Post title]] or [[Image URL]], select them, and upload them. Use CTRL to select several images, or SHIFT to select a range. Switch on [[Automatic upload]] to upload new remote images by itself."
+                },
+                {
+                  "label": "Delete",
+                  "text": "Remove images from the cloud. Switch on [[Automatic delete]] to remove images that are no longer used, for example because a post was deleted."
+                },
+                {
+                  "label": "Local images",
+                  "text": "Link Media Library images to FIFU first, so they appear on the [[Upload]] tab and can be uploaded too. Don't delete anything from the Media Library before doing this."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hotlink",
+          "title": "Hotlink protection",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "In the [[Account]] tab, [[Hotlink protection]] stops other websites from displaying your cloud images, while social networks can still show them when your posts are shared."
+            }
+          ]
+        },
+        {
+          "id": "billing",
+          "title": "How billing works",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FIFU Cloud charges for the **daily average of stored images** over each 30-day period. The extra thumbnails created for each image aren't counted. Costs start from the upload date, and when you delete an image you stop paying for it from the next day. The [[Welcome]] tab shows the current price and a worked example."
+            },
+            {
+              "type": "callout",
+              "tone": "note",
+              "title": "Separate terms",
+              "text": "FIFU Cloud has its own service terms. Read them before signing up."
+            },
+            {
+              "type": "callout",
+              "tone": "tip",
+              "title": "Square images",
+              "text": "The [[Make all images square]] options in [Optimized Images](/docs/optimized-images/) apply to images served by FIFU Cloud."
+            }
+          ]
+        }
+      ],
+      "related": ["optimized-images", "replace-not-found-image", "disable-right-click"]
+    }
+  ]
+}

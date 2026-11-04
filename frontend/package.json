@@ -9,7 +9,7 @@
     "preview": "react-router-serve ./build/server/index.js",
     "format": "prettier --write app/**/*.{ts,tsx,css} *.ts *.json",
     "format:check": "prettier --check app/**/*.{ts,tsx,css} *.ts *.json",
-    "test:unit": "node --test tests/reviews.test.mjs",
+    "test:unit": "node --test tests/reviews.test.mjs tests/docs.test.mjs",
     "test:e2e": "node --test tests/site.e2e.mjs"
   },
   "dependencies": {

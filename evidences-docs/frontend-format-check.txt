@@ -1,0 +1,12 @@
+# Command: npm run format:check
+# Directory: frontend
+# Date (UTC): 2026-11-04 13:20:18
+
+
+> demosuite-marketing@1.0.0 format:check
+> prettier --check app/**/*.{ts,tsx,css} *.ts *.json
+
+Checking formatting...
+All matched files use Prettier code style!
+
+# Exit code: 0

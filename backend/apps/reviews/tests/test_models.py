@@ -104,10 +104,12 @@ class ReviewModelTests(TestCase):
             make_review(sentiment=None)
 
     def test_positive_manager_filters_displayable_reviews(self):
-        make_review(username_hash=hash_username("a"), sentiment=Review.POSITIVE, weeks=9)
-        make_review(username_hash=hash_username("b"), sentiment=Review.NEGATIVE, weeks=1)
-        make_review(username_hash=hash_username("c"), sentiment=Review.NEUTRAL, weeks=2)
-        make_review(username_hash=hash_username("d"), sentiment=Review.POSITIVE, weeks=3)
+        # Only positive reviews are displayable; they keep the default ordering
+        # (highest quality score first, then WordPress.org order).
+        make_review(username_hash=hash_username("a"), sentiment=Review.POSITIVE, quality_score=6, source_order=0)
+        make_review(username_hash=hash_username("b"), sentiment=Review.NEGATIVE, quality_score=10, source_order=1)
+        make_review(username_hash=hash_username("c"), sentiment=Review.NEUTRAL, quality_score=9, source_order=2)
+        make_review(username_hash=hash_username("d"), sentiment=Review.POSITIVE, quality_score=8, source_order=3)
         self.assertEqual(
             [r.username_hash for r in Review.objects.positive()],
             [hash_username("d"), hash_username("a")],

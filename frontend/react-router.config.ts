@@ -1,4 +1,5 @@
 import type { Config } from '@react-router/dev/config';
+import docsData from './app/data/docs.json';
 const featureSlugs = [
   'smart-workflows',
   'live-analytics',
@@ -27,20 +28,8 @@ const blogSlugs = [
   'building-a-team-rhythm-that-lasts',
   'the-case-for-visible-progress',
 ];
-const docSlugs = [
-  'getting-started',
-  'install-demosuite',
-  'create-your-first-workspace',
-  'invite-your-team',
-  'plan-your-first-project',
-  'set-up-workflows',
-  'build-a-custom-report',
-  'connect-integrations',
-  'manage-permissions',
-  'use-automations',
-  'export-your-data',
-  'billing-and-licenses',
-];
+// Guides come from docs.json, the single source of truth for the documentation.
+const docSlugs = docsData.docs.map((doc) => doc.slug);
 export default {
   ssr: true,
   prerender: async () => [

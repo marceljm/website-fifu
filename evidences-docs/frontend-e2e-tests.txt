@@ -1,0 +1,212 @@
+# Command: npm run test:e2e
+# Directory: frontend
+# Date (UTC): 2026-11-04 13:20:50
+
+
+> demosuite-marketing@1.0.0 test:e2e
+> node --test tests/site.e2e.mjs
+
+TAP version 13
+# Subtest: pre-rendered route /
+ok 1 - pre-rendered route /
+  ---
+  duration_ms: 137.867951
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /features/smart-workflows/
+ok 2 - pre-rendered route /features/smart-workflows/
+  ---
+  duration_ms: 29.545463
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /integrations/cloudnote/
+ok 3 - pre-rendered route /integrations/cloudnote/
+  ---
+  duration_ms: 24.626144
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /blog/a-calmer-way-to-plan-your-week/
+ok 4 - pre-rendered route /blog/a-calmer-way-to-plan-your-week/
+  ---
+  duration_ms: 36.127835
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /docs/getting-started/
+ok 5 - pre-rendered route /docs/getting-started/
+  ---
+  duration_ms: 24.801293
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /pricing/
+ok 6 - pre-rendered route /pricing/
+  ---
+  duration_ms: 17.480235
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /checkout/
+ok 7 - pre-rendered route /checkout/
+  ---
+  duration_ms: 14.967395
+  type: 'test'
+  ...
+# Subtest: pre-rendered route /reviews/
+ok 8 - pre-rendered route /reviews/
+  ---
+  duration_ms: 15.249816
+  type: 'test'
+  ...
+# Subtest: homepage shows the three highest-quality positive reviews with clear attribution
+ok 9 - homepage shows the three highest-quality positive reviews with clear attribution
+  ---
+  duration_ms: 16.394526
+  type: 'test'
+  ...
+# Subtest: homepage separates sample stories from the plugin plan action and shows WordPress screens
+ok 10 - homepage separates sample stories from the plugin plan action and shows WordPress screens
+  ---
+  duration_ms: 15.665862
+  type: 'test'
+  ...
+# Subtest: integration catalog gives each icon and label a spaced heading group
+ok 11 - integration catalog gives each icon and label a spaced heading group
+  ---
+  duration_ms: 45.765199
+  type: 'test'
+  ...
+# Subtest: feature, docs, and blog listings share the responsive catalog card layout
+ok 12 - feature, docs, and blog listings share the responsive catalog card layout
+  ---
+  duration_ms: 23.633716
+  type: 'test'
+  ...
+# Subtest: integration preview explains that it is illustrative
+ok 13 - integration preview explains that it is illustrative
+  ---
+  duration_ms: 9.034768
+  type: 'test'
+  ...
+# Subtest: feature detail has separated plan actions and readable highlight
+ok 14 - feature detail has separated plan actions and readable highlight
+  ---
+  duration_ms: 15.648956
+  type: 'test'
+  ...
+# Subtest: reviews use the exported avatar paths and the old sample portraits are gone
+ok 15 - reviews use the exported avatar paths and the old sample portraits are gone
+  ---
+  duration_ms: 18.067732
+  type: 'test'
+  ...
+# Subtest: reviews page lists every positive review, highest quality first, pre-rendered
+ok 16 - reviews page lists every positive review, highest quality first, pre-rendered
+  ---
+  duration_ms: 25.474115
+  type: 'test'
+  ...
+# Subtest: reviews page exposes its loader data for client-side navigation
+ok 17 - reviews page exposes its loader data for client-side navigation
+  ---
+  duration_ms: 7.045426
+  type: 'test'
+  ...
+# Subtest: docs page renders one card per guide, grouped by category, in JSON order
+ok 18 - docs page renders one card per guide, grouped by category, in JSON order
+  ---
+  duration_ms: 20.89729
+  type: 'test'
+  ...
+# Subtest: every guide is pre-rendered with its own title and description
+ok 19 - every guide is pre-rendered with its own title and description
+  ---
+  duration_ms: 294.678849
+  type: 'test'
+  ...
+# Subtest: docs listing data only carries card fields for client-side navigation
+ok 20 - docs listing data only carries card fields for client-side navigation
+  ---
+  duration_ms: 9.92242
+  type: 'test'
+  ...
+# Subtest: home page setup link points to an existing guide
+ok 21 - home page setup link points to an existing guide
+  ---
+  duration_ms: 6.673273
+  type: 'test'
+  ...
+# Subtest: every guide page uses the shared guide layout
+ok 22 - every guide page uses the shared guide layout
+  ---
+  duration_ms: 331.64802
+  type: 'test'
+  ...
+# Subtest: guides render every content block with its own styling hooks
+ok 23 - guides render every content block with its own styling hooks
+  ---
+  duration_ms: 258.845764
+  type: 'test'
+  ...
+# Subtest: the WP-CLI guide renders its commands as tables and copyable code
+ok 24 - the WP-CLI guide renders its commands as tables and copyable code
+  ---
+  duration_ms: 11.532256
+  type: 'test'
+  ...
+# Subtest: guide links inside the text point to other pre-rendered guides
+ok 25 - guide links inside the text point to other pre-rendered guides
+  ---
+  duration_ms: 13.036264
+  type: 'test'
+  ...
+# Subtest: docs cards show the reading time computed from each guide
+ok 26 - docs cards show the reading time computed from each guide
+  ---
+  duration_ms: 22.316527
+  type: 'test'
+  ...
+# Subtest: each guide ships only its own content for client-side navigation
+ok 27 - each guide ships only its own content for client-side navigation
+  ---
+  duration_ms: 35.696233
+  type: 'test'
+  ...
+# Subtest: every guide shows its featured illustration before the guide text
+ok 28 - every guide shows its featured illustration before the guide text
+  ---
+  duration_ms: 255.534116
+  type: 'test'
+  ...
+# Subtest: illustrations are built from the shared primitives
+ok 29 - illustrations are built from the shared primitives
+  ---
+  duration_ms: 79.231285
+  type: 'test'
+  ...
+# Subtest: every class used by the docs pages is styled by the stylesheet
+ok 30 - every class used by the docs pages is styled by the stylesheet
+  ---
+  duration_ms: 435.420483
+  type: 'test'
+  ...
+# Subtest: the docs page offers a search box wired to the URL query
+ok 31 - the docs page offers a search box wired to the URL query
+  ---
+  duration_ms: 13.553
+  type: 'test'
+  ...
+# Subtest: an unknown guide renders a “Guide not found” page
+ok 32 - an unknown guide renders a “Guide not found” page
+  ---
+  duration_ms: 383.502411
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3100.441417
+
+# Exit code: 0

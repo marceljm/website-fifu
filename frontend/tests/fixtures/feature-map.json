@@ -1,0 +1,378 @@
+{
+  "_about": "Every free feature of FIFU and the guide that documents it. Sources: the plugin readme (free features, free parts of the integrations, compatibility list, changelog), the free sections of FIFU › Settings, and integrations found only in the plugin code. `mentions` must appear in the guide's text (case-insensitive).",
+  "features": [
+    {
+      "source": "readme",
+      "feature": "Featured image from URL",
+      "guide": "featured-image-from-url",
+      "mentions": "image url or keywords"
+    },
+    {
+      "source": "readme",
+      "feature": "Quick Editor",
+      "guide": "quick-editor",
+      "mentions": "quick editor"
+    },
+    {
+      "source": "readme",
+      "feature": "Replace Not Found Image",
+      "guide": "replace-not-found-image",
+      "mentions": "replace not found image"
+    },
+    {
+      "source": "readme",
+      "feature": "Image alt text",
+      "guide": "featured-image-from-url",
+      "mentions": "alternative text"
+    },
+    {
+      "source": "readme",
+      "feature": "Unsplash image search",
+      "guide": "unsplash-image-search",
+      "mentions": "unsplash"
+    },
+    {
+      "source": "readme",
+      "feature": "Default featured image",
+      "guide": "default-featured-image",
+      "mentions": "default featured image"
+    },
+    {
+      "source": "readme",
+      "feature": "Featured image admin column",
+      "guide": "quick-editor",
+      "mentions": "fifu column"
+    },
+    {
+      "source": "readme",
+      "feature": "Featured image list filter",
+      "guide": "quick-editor",
+      "mentions": "all featured media statuses"
+    },
+    {
+      "source": "readme",
+      "feature": "Image metadata tools: generate",
+      "guide": "image-metadata",
+      "mentions": "generate the missing metadata now"
+    },
+    {
+      "source": "readme",
+      "feature": "Image metadata tools: clean up",
+      "guide": "clear-metadata",
+      "mentions": "clear metadata"
+    },
+    {
+      "source": "readme",
+      "feature": "Square image options",
+      "guide": "optimized-images",
+      "mentions": "make all images square"
+    },
+    {
+      "source": "readme",
+      "feature": "Hide Featured Media",
+      "guide": "hide-featured-media",
+      "mentions": "filter by post format"
+    },
+    {
+      "source": "readme",
+      "feature": "Post content options",
+      "guide": "modify-post-content",
+      "mentions": "remove duplicated media"
+    },
+    {
+      "source": "readme",
+      "feature": "Disable right-click",
+      "guide": "disable-right-click",
+      "mentions": "disable right-click"
+    },
+    {
+      "source": "readme",
+      "feature": "Product image from URL",
+      "guide": "product-and-category-images",
+      "mentions": "product's main image"
+    },
+    {
+      "source": "readme",
+      "feature": "Product category images",
+      "guide": "product-and-category-images",
+      "mentions": "category image"
+    },
+    {
+      "source": "readme",
+      "feature": "Product image lightbox",
+      "guide": "lightbox-and-zoom",
+      "mentions": "lightbox"
+    },
+    {
+      "source": "readme",
+      "feature": "Product image zoom",
+      "guide": "lightbox-and-zoom",
+      "mentions": "zoom"
+    },
+    {
+      "source": "changelog",
+      "feature": "Add image to order email",
+      "guide": "add-image-to-order-email",
+      "mentions": "order email"
+    },
+    {
+      "source": "readme",
+      "feature": "Featured image from post content",
+      "guide": "auto-set-featured-media-from-post-content",
+      "mentions": "overwrite the existing featured media"
+    },
+    { "source": "readme", "feature": "WP-CLI", "guide": "wp-cli", "mentions": "wp fifu" },
+    {
+      "source": "readme",
+      "feature": "FIFU Image block",
+      "guide": "featured-image-block",
+      "mentions": "featured image (url)"
+    },
+    {
+      "source": "readme",
+      "feature": "FIFU Featured Media widget",
+      "guide": "featured-media-widget",
+      "mentions": "(fifu) featured media"
+    },
+    {
+      "source": "readme",
+      "feature": "Open Graph and Twitter image tags",
+      "guide": "seo-and-social-sharing",
+      "mentions": "sharing image"
+    },
+    {
+      "source": "readme",
+      "feature": "Rank Math SEO",
+      "guide": "seo-and-social-sharing",
+      "mentions": "rank math"
+    },
+    {
+      "source": "readme",
+      "feature": "Yoast SEO",
+      "guide": "seo-and-social-sharing",
+      "mentions": "yoast seo"
+    },
+    {
+      "source": "readme",
+      "feature": "Structured data (JSON-LD)",
+      "guide": "seo-and-social-sharing",
+      "mentions": "structured data"
+    },
+    {
+      "source": "readme",
+      "feature": "Media RSS",
+      "guide": "seo-and-social-sharing",
+      "mentions": "rss feed"
+    },
+    {
+      "source": "readme",
+      "feature": "AIOSEO",
+      "guide": "seo-and-social-sharing",
+      "mentions": "aioseo"
+    },
+    {
+      "source": "readme",
+      "feature": "Optional image CDN integration",
+      "guide": "optimized-images",
+      "mentions": "optimize featured images"
+    },
+    {
+      "source": "readme",
+      "feature": "Optional post-content image optimization",
+      "guide": "optimized-images",
+      "mentions": "optimize secondary images"
+    },
+    {
+      "source": "readme",
+      "feature": "Yoast Duplicate Post",
+      "guide": "multilingual-and-duplicated-content",
+      "mentions": "yoast duplicate post"
+    },
+    {
+      "source": "readme",
+      "feature": "WPML, Polylang, and WooCommerce Multilingual",
+      "guide": "multilingual-and-duplicated-content",
+      "mentions": "polylang"
+    },
+    {
+      "source": "readme",
+      "feature": "Content Egg",
+      "guide": "import-and-automation-plugins",
+      "mentions": "content egg"
+    },
+    {
+      "source": "readme",
+      "feature": "Datafeedr",
+      "guide": "import-and-automation-plugins",
+      "mentions": "datafeedr"
+    },
+    {
+      "source": "readme",
+      "feature": "WPAuto Pro",
+      "guide": "import-and-automation-plugins",
+      "mentions": "wpauto pro"
+    },
+    {
+      "source": "readme",
+      "feature": "OL Scrapes",
+      "guide": "import-and-automation-plugins",
+      "mentions": "ol scrapes"
+    },
+    {
+      "source": "readme",
+      "feature": "WordPress Importer",
+      "guide": "import-and-automation-plugins",
+      "mentions": "wordpress importer"
+    },
+    {
+      "source": "code",
+      "feature": "AliPlugin and SlotsLaunch",
+      "guide": "import-and-automation-plugins",
+      "mentions": "slotslaunch"
+    },
+    {
+      "source": "readme",
+      "feature": "MultiVendorX (MVX)",
+      "guide": "forms-and-marketplaces",
+      "mentions": "mvx"
+    },
+    {
+      "source": "readme",
+      "feature": "Gravity Forms featured image field",
+      "guide": "forms-and-marketplaces",
+      "mentions": "featured image (fifu)"
+    },
+    {
+      "source": "readme",
+      "feature": "Dokan product featured image URL field",
+      "guide": "forms-and-marketplaces",
+      "mentions": "dokan"
+    },
+    {
+      "source": "code",
+      "feature": "WCFM and Toolset Forms",
+      "guide": "forms-and-marketplaces",
+      "mentions": "toolset"
+    },
+    {
+      "source": "readme",
+      "feature": "Elementor featured image widget",
+      "guide": "elementor-widget",
+      "mentions": "(fifu) featured image"
+    },
+    {
+      "source": "readme",
+      "feature": "WP Sheet Editor",
+      "guide": "bulk-editors",
+      "mentions": "wp sheet editor"
+    },
+    {
+      "source": "readme",
+      "feature": "WooCommerce Bulk Editor (WOOBE)",
+      "guide": "bulk-editors",
+      "mentions": "woobe"
+    },
+    {
+      "source": "readme",
+      "feature": "WoodMart theme",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "woodmart"
+    },
+    {
+      "source": "readme",
+      "feature": "Flatsome and WPResidence themes",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "wpresidence"
+    },
+    {
+      "source": "readme",
+      "feature": "Houzez",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "houzez"
+    },
+    {
+      "source": "readme",
+      "feature": "AMP",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "amp"
+    },
+    {
+      "source": "readme",
+      "feature": "Force Login",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "force login"
+    },
+    {
+      "source": "readme",
+      "feature": "Google Web Stories",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "web stories"
+    },
+    {
+      "source": "readme",
+      "feature": "Search & Filter Pro",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "search & filter pro"
+    },
+    {
+      "source": "code",
+      "feature": "YITH WooCommerce Wishlist, Multisite Global Media, and Sirv",
+      "guide": "theme-and-plugin-compatibility",
+      "mentions": "yith woocommerce wishlist"
+    },
+    {
+      "source": "code",
+      "feature": "Google Drive and OneDrive links",
+      "guide": "featured-image-from-url",
+      "mentions": "onedrive"
+    },
+    {
+      "source": "readme",
+      "feature": "Developer functions",
+      "guide": "fifu-api",
+      "mentions": "fifu_dev_set_category_image"
+    },
+    {
+      "source": "readme",
+      "feature": "FIFU Cloud image service",
+      "guide": "fifu-cloud",
+      "mentions": "hotlink protection"
+    },
+    {
+      "source": "settings",
+      "feature": "Settings › Metadata › Reset Settings",
+      "guide": "reset-settings",
+      "mentions": "reset settings"
+    },
+    {
+      "source": "settings",
+      "feature": "Settings › Metadata › Delete All URLs",
+      "guide": "delete-all-urls",
+      "mentions": "delete all your urls now"
+    },
+    {
+      "source": "settings",
+      "feature": "Settings › Developers › Debug Mode",
+      "guide": "debug-mode",
+      "mentions": "copy debug data"
+    },
+    {
+      "source": "settings",
+      "feature": "FIFU › Status",
+      "guide": "status-page",
+      "mentions": "copy to clipboard"
+    },
+    {
+      "source": "settings",
+      "feature": "Settings › Help › Getting started and Technical support",
+      "guide": "getting-started",
+      "mentions": "technical support"
+    },
+    {
+      "source": "code",
+      "feature": "Deactivation dialog: Clear metadata and deactivate",
+      "guide": "clear-metadata",
+      "mentions": "clear metadata and deactivate"
+    }
+  ]
+}

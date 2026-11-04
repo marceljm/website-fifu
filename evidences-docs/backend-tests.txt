@@ -1,0 +1,231 @@
+# Command: ../.venv/bin/python manage.py test -v 2
+# Directory: backend
+# Date (UTC): 2026-11-04 13:19:23
+
+Found 183 test(s).
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Operations to perform:
+  Synchronize unmigrated apps: messages, rest_framework, staticfiles
+  Apply all migrations: admin, auth, content, contenttypes, reviews, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying content.0001_initial... OK
+  Applying reviews.0001_initial... OK
+  Applying reviews.0002_review_sentiment... OK
+  Applying reviews.0003_review_scraped_at_default... OK
+  Applying reviews.0004_review_quality_score... OK
+  Applying reviews.0005_review_quality_ordering... OK
+  Applying sessions.0001_initial... OK
+System check identified no issues (0 silenced).
+test_other_demo_content_is_still_seeded (apps.content.tests.test_seed_demo.SeedDemoTests.test_other_demo_content_is_still_seeded) ... ok
+test_public_api_serves_no_docs_after_seeding (apps.content.tests.test_seed_demo.SeedDemoTests.test_public_api_serves_no_docs_after_seeding) ... ok
+test_seed_data_has_no_docs_kind (apps.content.tests.test_seed_demo.SeedDemoTests.test_seed_data_has_no_docs_kind) ... ok
+test_seeding_creates_no_docs_items (apps.content.tests.test_seed_demo.SeedDemoTests.test_seeding_creates_no_docs_items) ... ok
+test_seeding_twice_is_idempotent (apps.content.tests.test_seed_demo.SeedDemoTests.test_seeding_twice_is_idempotent) ... ok
+test_avatar_for_checks_the_images_dir (apps.reviews.tests.test_import_command.ExportHelpersTests.test_avatar_for_checks_the_images_dir) ... ok
+test_build_export_uses_quality_then_site_order_for_positive_reviews (apps.reviews.tests.test_import_command.ExportHelpersTests.test_build_export_uses_quality_then_site_order_for_positive_reviews) ... ok
+test_default_paths_point_into_the_frontend (apps.reviews.tests.test_import_command.ExportHelpersTests.test_default_paths_point_into_the_frontend) ... ok
+test_avatar_is_placeholder_unless_a_hash_named_image_exists (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_avatar_is_placeholder_unless_a_hash_named_image_exists) ... ok
+test_export_contains_only_positive_reviews_sorted_by_quality_then_site_order (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_export_contains_only_positive_reviews_sorted_by_quality_then_site_order) ... ok
+test_export_is_rebuilt_from_the_database_not_the_file (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_export_is_rebuilt_from_the_database_not_the_file) ... ok
+test_export_only_skips_the_import (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_export_only_skips_the_import) ... ok
+test_exported_review_shape_has_no_hash_or_sentiment (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_exported_review_shape_has_no_hash_or_sentiment) ... ok
+test_import_is_atomic (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_import_is_atomic) ... ok
+test_imports_every_review_with_all_fields (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_imports_every_review_with_all_fields) ... ok
+test_invalid_file_aborts_before_touching_db_or_export (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_invalid_file_aborts_before_touching_db_or_export) ... ok
+test_missing_file_is_a_clear_error (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_missing_file_is_a_clear_error) ... ok
+test_rerun_is_idempotent (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_rerun_is_idempotent) ... ok
+test_rerun_updates_changed_text_and_sentiment_in_place (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_rerun_updates_changed_text_and_sentiment_in_place) ... ok
+test_scraped_at_comes_from_the_file_header_not_import_time (apps.reviews.tests.test_import_command.ImportReviewsCommandTests.test_scraped_at_comes_from_the_file_header_not_import_time) ... ok
+test_placeholder_is_a_small_320px_webp_like_the_original_avatars (apps.reviews.tests.test_import_command.PlaceholderAssetTests.test_placeholder_is_a_small_320px_webp_like_the_original_avatars) ... ok
+test_template_sample_portraits_were_removed (apps.reviews.tests.test_import_command.PlaceholderAssetTests.test_template_sample_portraits_were_removed) ... ok
+test_imports_228_and_exports_220_positive_reviews (apps.reviews.tests.test_import_command.RealDataImportTests.test_imports_228_and_exports_220_positive_reviews) ... ok
+test_creates_review_with_all_fields (apps.reviews.tests.test_models.ReviewModelTests.test_creates_review_with_all_fields) ... ok
+test_default_ordering_is_quality_then_site_order (apps.reviews.tests.test_models.ReviewModelTests.test_default_ordering_is_quality_then_site_order) ... ok
+test_field_capacities (apps.reviews.tests.test_models.ReviewModelTests.test_field_capacities) ... ok
+test_positive_manager_filters_displayable_reviews (apps.reviews.tests.test_models.ReviewModelTests.test_positive_manager_filters_displayable_reviews) ... ok
+test_posted_at_is_optional (apps.reviews.tests.test_models.ReviewModelTests.test_posted_at_is_optional) ... ok
+test_quality_score_must_be_between_zero_and_ten (apps.reviews.tests.test_models.ReviewModelTests.test_quality_score_must_be_between_zero_and_ten) ... ok
+test_scraped_at_can_be_set_explicitly_to_the_scrape_time (apps.reviews.tests.test_models.ReviewModelTests.test_scraped_at_can_be_set_explicitly_to_the_scrape_time) ... ok
+test_scraped_at_timestamp_is_set_automatically (apps.reviews.tests.test_models.ReviewModelTests.test_scraped_at_timestamp_is_set_automatically) ... ok
+test_sentiment_choices_and_constraint (apps.reviews.tests.test_models.ReviewModelTests.test_sentiment_choices_and_constraint) ... ok
+test_sentiment_is_required (apps.reviews.tests.test_models.ReviewModelTests.test_sentiment_is_required) ... ok
+test_str_uses_fictional_name_and_title (apps.reviews.tests.test_models.ReviewModelTests.test_str_uses_fictional_name_and_title) ... ok
+test_username_hash_is_required (apps.reviews.tests.test_models.ReviewModelTests.test_username_hash_is_required) ... ok
+test_username_hash_is_unique (apps.reviews.tests.test_models.ReviewModelTests.test_username_hash_is_unique) ... ok
+test_weeks_cannot_be_negative (apps.reviews.tests.test_models.ReviewModelTests.test_weeks_cannot_be_negative) ... ok
+test_migrations_are_up_to_date (apps.reviews.tests.test_models.ScaffoldingTests.test_migrations_are_up_to_date) ... ok
+test_review_is_registered_in_admin (apps.reviews.tests.test_models.ScaffoldingTests.test_review_is_registered_in_admin) ... ok
+test_reviews_app_is_installed (apps.reviews.tests.test_models.ScaffoldingTests.test_reviews_app_is_installed) ... ok
+test_scraper_dependencies_are_declared_in_requirements (apps.reviews.tests.test_models.ScaffoldingTests.test_scraper_dependencies_are_declared_in_requirements) ... ok
+test_scraper_dependencies_are_installed (apps.reviews.tests.test_models.ScaffoldingTests.test_scraper_dependencies_are_installed) ... ok
+test_aborts_when_table_count_equals_site_count (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_aborts_when_table_count_equals_site_count) ... ok
+test_default_delay_is_ten_seconds (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_default_delay_is_ten_seconds) ... ok
+test_default_output_path_is_backend_data_dir (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_default_output_path_is_backend_data_dir) ... ok
+test_failed_topics_raise_after_writing_partial_output (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_failed_topics_raise_after_writing_partial_output) ... ok
+test_limit_and_delay_are_forwarded (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_limit_and_delay_are_forwarded) ... ok
+test_offline_reads_from_cache_without_http (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_offline_reads_from_cache_without_http) ... ok
+test_skips_reviews_already_in_the_database (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_skips_reviews_already_in_the_database) ... ok
+test_writes_all_reviews_when_table_is_empty (apps.reviews.tests.test_scrape_command.ScrapeReviewsCommandTests.test_writes_all_reviews_when_table_is_empty) ... ok
+test_invalid_provider_is_rejected (apps.commerce.tests.CheckoutPreviewTests.test_invalid_provider_is_rejected) ... ok
+test_preview_returns_server_calculated_demo_total (apps.commerce.tests.CheckoutPreviewTests.test_preview_returns_server_calculated_demo_total) ... ok
+test_invalid_plan_and_quantity_are_rejected (apps.commerce.tests.PricingQuoteTests.test_invalid_plan_and_quantity_are_rejected) ... ok
+test_volume_tiers_apply_to_entire_order (apps.commerce.tests.PricingQuoteTests.test_volume_tiers_apply_to_entire_order) ... ok
+test_describes_fifu_free_version (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_describes_fifu_free_version) ... ok
+test_every_guide_has_full_content_and_a_sensible_reading_time (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_every_guide_has_full_content_and_a_sensible_reading_time) ... ok
+test_every_scene_is_used_once_and_has_a_component (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_every_scene_is_used_once_and_has_a_component) ... ok
+test_file_is_utf8_json_with_readable_unicode (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_file_is_utf8_json_with_readable_unicode) ... ok
+test_file_is_valid (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_file_is_valid) ... ok
+test_icon_registry_is_parsed (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_icon_registry_is_parsed) ... ok
+test_key_features_have_a_guide (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_key_features_have_a_guide) ... ok
+test_maintenance_and_support_tools_have_separate_guides (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_maintenance_and_support_tools_have_separate_guides)
+Each tool has its own settings section, so each gets its own card. ... ok
+test_no_plugin_version_number_in_any_guide (apps.content.tests.test_docs_json.CommittedDocsFileTests.test_no_plugin_version_number_in_any_guide)
+The docs describe the latest FIFU version, so no release number is shown. ... ok
+test_documents_the_docs_files_and_rules (apps.content.tests.test_docs_json.DocsReadmeTests.test_documents_the_docs_files_and_rules) ... ok
+test_has_a_documentation_section (apps.content.tests.test_docs_json.DocsReadmeTests.test_has_a_documentation_section) ... ok
+test_plain_text_and_reading_time_mirror_the_frontend (apps.content.tests.test_docs_json.DocsValidatorTests.test_plain_text_and_reading_time_mirror_the_frontend) ... ok
+test_rejects_bad_or_duplicate_section_ids (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_bad_or_duplicate_section_ids) ... ok
+test_rejects_broken_links_and_bad_related_guides (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_broken_links_and_bad_related_guides) ... ok
+test_rejects_duplicate_or_unsafe_slugs (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_duplicate_or_unsafe_slugs) ... ok
+test_rejects_duplicate_titles_case_insensitively (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_duplicate_titles_case_insensitively) ... ok
+test_rejects_missing_or_invalid_illustrations (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_missing_or_invalid_illustrations) ... ok
+test_rejects_pro_features (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_pro_features) ... ok
+test_rejects_pro_features_anywhere_in_the_guide (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_pro_features_anywhere_in_the_guide) ... ok
+test_rejects_raw_html_and_unbalanced_markup (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_raw_html_and_unbalanced_markup) ... ok
+test_rejects_unknown_and_empty_categories (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_unknown_and_empty_categories) ... ok
+test_rejects_unknown_or_incomplete_blocks (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_unknown_or_incomplete_blocks) ... ok
+test_rejects_unknown_or_reused_icons (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_unknown_or_reused_icons) ... ok
+test_rejects_wrong_top_level_shapes (apps.content.tests.test_docs_json.DocsValidatorTests.test_rejects_wrong_top_level_shapes) ... ok
+test_requires_category_fields_and_unique_ids (apps.content.tests.test_docs_json.DocsValidatorTests.test_requires_category_fields_and_unique_ids) ... ok
+test_requires_every_card_field (apps.content.tests.test_docs_json.DocsValidatorTests.test_requires_every_card_field) ... ok
+test_requires_locations_facts_sections_and_related (apps.content.tests.test_docs_json.DocsValidatorTests.test_requires_locations_facts_sections_and_related) ... ok
+test_summary_must_be_one_short_plain_sentence (apps.content.tests.test_docs_json.DocsValidatorTests.test_summary_must_be_one_short_plain_sentence) ... ok
+test_valid_payload_has_no_errors (apps.content.tests.test_docs_json.DocsValidatorTests.test_valid_payload_has_no_errors) ... ok
+test_frontend_catalog_no_longer_holds_docs (apps.content.tests.test_docs_json.DocsWiringTests.test_frontend_catalog_no_longer_holds_docs) ... ok
+test_router_prerenders_guides_from_docs_json (apps.content.tests.test_docs_json.DocsWiringTests.test_router_prerenders_guides_from_docs_json) ... ok
+test_sitemap_lists_exactly_the_guides (apps.content.tests.test_docs_json.DocsWiringTests.test_sitemap_lists_exactly_the_guides) ... ok
+test_unit_test_script_runs_the_docs_tests (apps.content.tests.test_docs_json.DocsWiringTests.test_unit_test_script_runs_the_docs_tests) ... ok
+test_documents_every_step_of_the_workflow (apps.reviews.tests.test_docs.ReadmeTests.test_documents_every_step_of_the_workflow) ... ok
+test_documents_the_data_rules (apps.reviews.tests.test_docs.ReadmeTests.test_documents_the_data_rules) ... ok
+test_documents_the_scraper_options_and_the_abort_rule (apps.reviews.tests.test_docs.ReadmeTests.test_documents_the_scraper_options_and_the_abort_rule) ... ok
+test_documents_the_test_commands (apps.reviews.tests.test_docs.ReadmeTests.test_documents_the_test_commands) ... ok
+test_has_a_reviews_section (apps.reviews.tests.test_docs.ReadmeTests.test_has_a_reviews_section) ... ok
+test_no_longer_claims_reviews_are_fictional (apps.reviews.tests.test_docs.ReadmeTests.test_no_longer_claims_reviews_are_fictional) ... ok
+test_useful_files_list_the_new_modules (apps.reviews.tests.test_docs.ReadmeTests.test_useful_files_list_the_new_modules) ... ok
+test_frontend_scripts_include_the_unit_tests (apps.reviews.tests.test_docs.RepoHygieneTests.test_frontend_scripts_include_the_unit_tests) ... ok
+test_no_html_fixtures_or_raw_data_outside_their_folders (apps.reviews.tests.test_docs.RepoHygieneTests.test_no_html_fixtures_or_raw_data_outside_their_folders) ... ok
+test_raw_scrape_and_cache_are_git_ignored_but_polished_file_is_not (apps.reviews.tests.test_docs.RepoHygieneTests.test_raw_scrape_and_cache_are_git_ignored_but_polished_file_is_not) ... ok
+test_version_control_tracks_the_committed_data_file (apps.reviews.tests.test_docs.RepoHygieneTests.test_version_control_tracks_the_committed_data_file) ... ok
+test_is_plain_sha256_hex_of_username (apps.reviews.tests.test_models.HashUsernameTests.test_is_plain_sha256_hex_of_username) ... ok
+test_normalises_at_sign_whitespace_and_case (apps.reviews.tests.test_models.HashUsernameTests.test_normalises_at_sign_whitespace_and_case) ... ok
+test_rejects_empty_username (apps.reviews.tests.test_models.HashUsernameTests.test_rejects_empty_username) ... ok
+test_comments_are_plain_single_paragraphs (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_comments_are_plain_single_paragraphs) ... ok
+test_file_exists_and_is_valid (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_file_exists_and_is_valid) ... ok
+test_file_is_utf8_with_readable_unicode (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_file_is_utf8_with_readable_unicode) ... ok
+test_known_mentions_are_neutralised (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_known_mentions_are_neutralised) ... ok
+test_matches_raw_scrape_when_available (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_matches_raw_scrape_when_available) ... skipped 'raw scrape not present (git-ignored)'
+test_newest_three_are_translated_english (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_newest_three_are_translated_english) ... ok
+test_no_revision_logs_or_sign_off_names_remain (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_no_revision_logs_or_sign_off_names_remain) ... ok
+test_paths (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_paths) ... ok
+test_sentiment_classification (apps.reviews.tests.test_polished.CommittedPolishedFileTests.test_sentiment_classification) ... ok
+test_count_matches_total (apps.reviews.tests.test_polished.ValidatePolishedTests.test_count_matches_total) ... ok
+test_cross_check_against_raw_file (apps.reviews.tests.test_polished.ValidatePolishedTests.test_cross_check_against_raw_file) ... ok
+test_cross_check_requires_polished_text_to_be_different_when_raw_is_foreign (apps.reviews.tests.test_polished.ValidatePolishedTests.test_cross_check_requires_polished_text_to_be_different_when_raw_is_foreign) ... ok
+test_exact_field_set_per_review (apps.reviews.tests.test_polished.ValidatePolishedTests.test_exact_field_set_per_review) ... ok
+test_fictional_name_rules (apps.reviews.tests.test_polished.ValidatePolishedTests.test_fictional_name_rules) ... ok
+test_hash_must_be_sha256_and_unique (apps.reviews.tests.test_polished.ValidatePolishedTests.test_hash_must_be_sha256_and_unique) ... ok
+test_header_fields_are_required (apps.reviews.tests.test_polished.ValidatePolishedTests.test_header_fields_are_required) ... ok
+test_no_emoji_or_emoticons (apps.reviews.tests.test_polished.ValidatePolishedTests.test_no_emoji_or_emoticons) ... ok
+test_no_handles_emails_or_revision_logs (apps.reviews.tests.test_polished.ValidatePolishedTests.test_no_handles_emails_or_revision_logs) ... ok
+test_quality_score_must_be_an_integer_from_zero_to_ten (apps.reviews.tests.test_polished.ValidatePolishedTests.test_quality_score_must_be_an_integer_from_zero_to_ten) ... ok
+test_sentiment_is_required_and_restricted (apps.reviews.tests.test_polished.ValidatePolishedTests.test_sentiment_is_required_and_restricted) ... ok
+test_text_is_a_single_plain_paragraph (apps.reviews.tests.test_polished.ValidatePolishedTests.test_text_is_a_single_plain_paragraph) ... ok
+test_text_must_be_translated_to_latin_script (apps.reviews.tests.test_polished.ValidatePolishedTests.test_text_must_be_translated_to_latin_script) ... ok
+test_text_rules (apps.reviews.tests.test_polished.ValidatePolishedTests.test_text_rules) ... ok
+test_valid_file_has_no_problems (apps.reviews.tests.test_polished.ValidatePolishedTests.test_valid_file_has_no_problems) ... ok
+test_weeks_dates_and_order (apps.reviews.tests.test_polished.ValidatePolishedTests.test_weeks_dates_and_order) ... ok
+test_does_not_depend_on_system_locale (apps.reviews.tests.test_scraper.AbsoluteDateTests.test_does_not_depend_on_system_locale) ... ok
+test_parses_wordpress_org_title_format_to_iso (apps.reviews.tests.test_scraper.AbsoluteDateTests.test_parses_wordpress_org_title_format_to_iso) ... ok
+test_returns_none_for_unknown_format (apps.reviews.tests.test_scraper.AbsoluteDateTests.test_returns_none_for_unknown_format) ... ok
+test_cache_file_names_are_readable_and_distinct (apps.reviews.tests.test_scraper.CachingFetcherTests.test_cache_file_names_are_readable_and_distinct) ... ok
+test_offline_mode_reads_cache_and_never_fetches (apps.reviews.tests.test_scraper.CachingFetcherTests.test_offline_mode_reads_cache_and_never_fetches) ... ok
+test_online_mode_fetches_and_writes_cache (apps.reviews.tests.test_scraper.CachingFetcherTests.test_online_mode_fetches_and_writes_cache) ... ok
+test_failed_topics_give_nonzero_exit_but_still_write_output (apps.reviews.tests.test_scraper.CommandLineTests.test_failed_topics_give_nonzero_exit_but_still_write_output) ... ok
+test_offline_run_writes_utf8_json_from_cache (apps.reviews.tests.test_scraper.CommandLineTests.test_offline_run_writes_utf8_json_from_cache) ... ok
+test_online_mode_uses_http_fetcher_with_requested_delay (apps.reviews.tests.test_scraper.CommandLineTests.test_online_mode_uses_http_fetcher_with_requested_delay) ... ok
+test_unchanged_count_aborts_with_distinct_exit_code (apps.reviews.tests.test_scraper.CommandLineTests.test_unchanged_count_aborts_with_distinct_exit_code) ... ok
+test_validate_mode (apps.reviews.tests.test_scraper.CommandLineTests.test_validate_mode) ... ok
+test_404_is_not_retried (apps.reviews.tests.test_scraper.HttpFetcherTests.test_404_is_not_retried) ... ok
+test_default_delay_is_ten_seconds (apps.reviews.tests.test_scraper.HttpFetcherTests.test_default_delay_is_ten_seconds) ... ok
+test_gives_up_after_max_attempts (apps.reviews.tests.test_scraper.HttpFetcherTests.test_gives_up_after_max_attempts) ... ok
+test_retries_on_429_and_5xx_then_succeeds (apps.reviews.tests.test_scraper.HttpFetcherTests.test_retries_on_429_and_5xx_then_succeeds) ... ok
+test_sets_user_agent_and_returns_text (apps.reviews.tests.test_scraper.HttpFetcherTests.test_sets_user_agent_and_returns_text) ... ok
+test_waits_between_successive_requests (apps.reviews.tests.test_scraper.HttpFetcherTests.test_waits_between_successive_requests) ... ok
+test_missing_pagination_means_single_page (apps.reviews.tests.test_scraper.ParseListingTests.test_missing_pagination_means_single_page) ... ok
+test_real_first_page (apps.reviews.tests.test_scraper.ParseListingTests.test_real_first_page) ... ok
+test_real_second_page (apps.reviews.tests.test_scraper.ParseListingTests.test_real_second_page) ... ok
+test_synthetic_listing_controls (apps.reviews.tests.test_scraper.ParseListingTests.test_synthetic_listing_controls) ... ok
+test_content_without_paragraph_tags (apps.reviews.tests.test_scraper.ParseTopicTests.test_content_without_paragraph_tags) ... ok
+test_line_breaks_inside_a_paragraph_are_kept (apps.reviews.tests.test_scraper.ParseTopicTests.test_line_breaks_inside_a_paragraph_are_kept) ... ok
+test_missing_lead_post_raises (apps.reviews.tests.test_scraper.ParseTopicTests.test_missing_lead_post_raises) ... ok
+test_real_topic_page (apps.reviews.tests.test_scraper.ParseTopicTests.test_real_topic_page) ... ok
+test_revision_log_with_editor_username_is_stripped (apps.reviews.tests.test_scraper.ParseTopicTests.test_revision_log_with_editor_username_is_stripped) ... ok
+test_revision_text_without_markup_is_dropped_too (apps.reviews.tests.test_scraper.ParseTopicTests.test_revision_text_without_markup_is_dropped_too) ... ok
+test_topic_without_replies (apps.reviews.tests.test_scraper.ParseTopicTests.test_topic_without_replies) ... ok
+test_uses_nicename_not_display_name (apps.reviews.tests.test_scraper.ParseTopicTests.test_uses_nicename_not_display_name) ... ok
+test_days_hours_and_minutes_floor_to_zero_weeks (apps.reviews.tests.test_scraper.RelativeDateTests.test_days_hours_and_minutes_floor_to_zero_weeks) ... ok
+test_one_month_is_four_weeks_and_one_year_is_forty_eight (apps.reviews.tests.test_scraper.RelativeDateTests.test_one_month_is_four_weeks_and_one_year_is_forty_eight) ... ok
+test_rejects_unparseable_text (apps.reviews.tests.test_scraper.RelativeDateTests.test_rejects_unparseable_text) ... ok
+test_tolerates_spacing_case_and_missing_ago (apps.reviews.tests.test_scraper.RelativeDateTests.test_tolerates_spacing_case_and_missing_ago) ... ok
+test_aborts_before_fetching_topics_when_count_is_unchanged (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_aborts_before_fetching_topics_when_count_is_unchanged) ... ok
+test_duplicate_topics_across_pages_are_fetched_once (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_duplicate_topics_across_pages_are_fetched_once) ... ok
+test_failed_topic_is_recorded_and_run_continues (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_failed_topic_is_recorded_and_run_continues) ... ok
+test_fails_loudly_when_total_cannot_be_read (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_fails_loudly_when_total_cannot_be_read) ... ok
+test_full_scrape_walks_every_page_and_topic_in_site_order (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_full_scrape_walks_every_page_and_topic_in_site_order) ... ok
+test_known_hashes_are_skipped (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_known_hashes_are_skipped) ... ok
+test_limit_bypasses_the_unchanged_count_abort (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_limit_bypasses_the_unchanged_count_abort) ... ok
+test_limit_stops_early_and_is_recorded (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_limit_stops_early_and_is_recorded) ... ok
+test_non_five_star_rows_are_skipped (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_non_five_star_rows_are_skipped) ... ok
+test_review_records_have_hash_and_no_username (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_review_records_have_hash_and_no_username) ... ok
+test_same_user_twice_keeps_only_the_first (apps.reviews.tests.test_scraper.ScrapeFlowTests.test_same_user_twice_keeps_only_the_first) ... ok
+test_missing_file_raises (apps.reviews.tests.test_scraper.SqliteKnownTests.test_missing_file_raises) ... ok
+test_missing_table_means_nothing_known (apps.reviews.tests.test_scraper.SqliteKnownTests.test_missing_table_means_nothing_known) ... ok
+test_reads_count_and_hashes_from_reviews_table (apps.reviews.tests.test_scraper.SqliteKnownTests.test_reads_count_and_hashes_from_reviews_table) ... ok
+test_hash_matches_the_django_model_helper (apps.reviews.tests.test_scraper.StandaloneTests.test_hash_matches_the_django_model_helper) ... ok
+test_listing_urls (apps.reviews.tests.test_scraper.StandaloneTests.test_listing_urls) ... ok
+test_script_does_not_import_django_or_project_modules (apps.reviews.tests.test_scraper.StandaloneTests.test_script_does_not_import_django_or_project_modules) ... ok
+test_detects_bad_hashes_and_duplicates (apps.reviews.tests.test_scraper.ValidateTests.test_detects_bad_hashes_and_duplicates) ... ok
+test_detects_count_mismatch_unless_limited (apps.reviews.tests.test_scraper.ValidateTests.test_detects_count_mismatch_unless_limited) ... ok
+test_detects_empty_text_bad_dates_and_order (apps.reviews.tests.test_scraper.ValidateTests.test_detects_empty_text_bad_dates_and_order) ... ok
+test_detects_failed_topics_and_missing_header (apps.reviews.tests.test_scraper.ValidateTests.test_detects_failed_topics_and_missing_header) ... ok
+test_detects_weeks_inconsistent_with_relative_date (apps.reviews.tests.test_scraper.ValidateTests.test_detects_weeks_inconsistent_with_relative_date) ... ok
+test_rejects_username_leak (apps.reviews.tests.test_scraper.ValidateTests.test_rejects_username_leak) ... ok
+test_scrape_output_is_valid (apps.reviews.tests.test_scraper.ValidateTests.test_scrape_output_is_valid) ... ok
+
+----------------------------------------------------------------------
+Ran 183 tests in 34.953s
+
+OK (skipped=1)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+# Exit code: 0

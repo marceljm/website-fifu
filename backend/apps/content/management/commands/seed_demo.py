@@ -21,20 +21,6 @@ DATA = {
         "Meetly",
         "CodeNest",
     ],
-    "docs": [
-        "Installation",
-        "Create your first workspace",
-        "Invite your team",
-        "Plan a project",
-        "Build a report",
-        "Connect integrations",
-        "Manage permissions",
-        "Use automations",
-        "Export your data",
-        "Billing and licenses",
-        "Troubleshooting",
-        "Keyboard shortcuts",
-    ],
     "blog": [
         "A calmer way to plan your week",
         "Make project updates useful again",
@@ -51,6 +37,9 @@ DATA = {
         "Does checkout take a real payment?",
     ],
 }
+
+
+# Documentation is not seeded: it lives in frontend/app/data/docs.json.
 
 
 class Command(BaseCommand):

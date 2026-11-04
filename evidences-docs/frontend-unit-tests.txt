@@ -1,0 +1,284 @@
+# Command: npm run test:unit
+# Directory: frontend
+# Date (UTC): 2026-11-04 13:20:23
+
+
+> demosuite-marketing@1.0.0 test:unit
+> node --test tests/reviews.test.mjs tests/docs.test.mjs
+
+TAP version 13
+# Subtest: docs.json describes FIFU with categories and guides
+ok 1 - docs.json describes FIFU with categories and guides
+  ---
+  duration_ms: 2.051606
+  type: 'test'
+  ...
+# Subtest: every guide has a title, slug, short description, icon, and category
+ok 2 - every guide has a title, slug, short description, icon, and category
+  ---
+  duration_ms: 0.471781
+  type: 'test'
+  ...
+# Subtest: slugs are unique, URL-safe, and categories are unique
+ok 3 - slugs are unique, URL-safe, and categories are unique
+  ---
+  duration_ms: 0.572848
+  type: 'test'
+  ...
+# Subtest: titles are unique so no two cards look the same
+ok 4 - titles are unique so no two cards look the same
+  ---
+  duration_ms: 0.244783
+  type: 'test'
+  ...
+# Subtest: every guide points to an existing category, and no category is empty
+ok 5 - every guide points to an existing category, and no category is empty
+  ---
+  duration_ms: 0.279072
+  type: 'test'
+  ...
+# Subtest: every icon exists in the icon registry and icons are not reused
+ok 6 - every icon exists in the icon registry and icons are not reused
+  ---
+  duration_ms: 0.299
+  type: 'test'
+  ...
+# Subtest: short descriptions are short, single sentences of plain text
+ok 7 - short descriptions are short, single sentences of plain text
+  ---
+  duration_ms: 0.613291
+  type: 'test'
+  ...
+# Subtest: PRO-only features are not documented as cards
+ok 8 - PRO-only features are not documented as cards
+  ---
+  duration_ms: 0.386415
+  type: 'test'
+  ...
+# Subtest: maintenance and support tools each have their own guide
+ok 9 - maintenance and support tools each have their own guide
+  ---
+  duration_ms: 0.789931
+  type: 'test'
+  ...
+# Subtest: guides never mention a plugin release number
+ok 10 - guides never mention a plugin release number
+  ---
+  duration_ms: 5.970216
+  type: 'test'
+  ...
+# Subtest: getDocIcon falls back instead of failing on an unknown key
+ok 11 - getDocIcon falls back instead of failing on an unknown key
+  ---
+  duration_ms: 0.493847
+  type: 'test'
+  ...
+# Subtest: findDoc accepts slugs with or without slashes
+ok 12 - findDoc accepts slugs with or without slashes
+  ---
+  duration_ms: 0.718796
+  type: 'test'
+  ...
+# Subtest: filterDocs matches every word, ignores case and accents
+ok 13 - filterDocs matches every word, ignores case and accents
+  ---
+  duration_ms: 3.272704
+  type: 'test'
+  ...
+# Subtest: groupDocs keeps category order and drops empty groups
+ok 14 - groupDocs keeps category order and drops empty groups
+  ---
+  duration_ms: 1.248021
+  type: 'test'
+  ...
+# Subtest: sitemap lists exactly the documented guides
+ok 15 - sitemap lists exactly the documented guides
+  ---
+  duration_ms: 1.008357
+  type: 'test'
+  ...
+# Subtest: every guide has locations, facts, sections, and related guides
+ok 16 - every guide has locations, facts, sections, and related guides
+  ---
+  duration_ms: 0.832417
+  type: 'test'
+  ...
+# Subtest: section ids are URL-safe and unique within each guide
+ok 17 - section ids are URL-safe and unique within each guide
+  ---
+  duration_ms: 0.642296
+  type: 'test'
+  ...
+# Subtest: every block has a known type and the fields that type needs
+ok 18 - every block has a known type and the fields that type needs
+  ---
+  duration_ms: 1.267701
+  type: 'test'
+  ...
+# Subtest: guide text uses inline markup correctly and never raw HTML
+ok 19 - guide text uses inline markup correctly and never raw HTML
+  ---
+  duration_ms: 15.358612
+  type: 'test'
+  ...
+# Subtest: links point to existing guides (with a trailing slash) or to https pages
+ok 20 - links point to existing guides (with a trailing slash) or to https pages
+  ---
+  duration_ms: 2.63372
+  type: 'test'
+  ...
+# Subtest: related guides exist, are unique, and never point to the guide itself
+ok 21 - related guides exist, are unique, and never point to the guide itself
+  ---
+  duration_ms: 0.615154
+  type: 'test'
+  ...
+# Subtest: the full text of every guide stays free of PRO-only features
+ok 22 - the full text of every guide stays free of PRO-only features
+  ---
+  duration_ms: 10.472695
+  type: 'test'
+  ...
+# Subtest: every guide is written in plain, readable chunks
+ok 23 - every guide is written in plain, readable chunks
+  ---
+  duration_ms: 1.467012
+  type: 'test'
+  ...
+# Subtest: parseInline recognizes bold, code, UI labels, and links
+ok 24 - parseInline recognizes bold, code, UI labels, and links
+  ---
+  duration_ms: 0.595044
+  type: 'test'
+  ...
+# Subtest: parseInline leaves plain text and unmatched markers untouched
+ok 25 - parseInline leaves plain text and unmatched markers untouched
+  ---
+  duration_ms: 0.274185
+  type: 'test'
+  ...
+# Subtest: reading time uses 200 words per minute, rounds up, and is at least 1
+ok 26 - reading time uses 200 words per minute, rounds up, and is at least 1
+  ---
+  duration_ms: 0.685297
+  type: 'test'
+  ...
+# Subtest: reading time counts every block type and ignores markup symbols
+ok 27 - reading time counts every block type and ignores markup symbols
+  ---
+  duration_ms: 0.375517
+  type: 'test'
+  ...
+# Subtest: each real guide takes between 1 and 10 minutes to read
+ok 28 - each real guide takes between 1 and 10 minutes to read
+  ---
+  duration_ms: 5.810183
+  type: 'test'
+  ...
+# Subtest: toCatalog keeps only card fields plus the reading time
+ok 29 - toCatalog keeps only card fields plus the reading time
+  ---
+  duration_ms: 12.367387
+  type: 'test'
+  ...
+# Subtest: neighbours follows the docs.json order
+ok 30 - neighbours follows the docs.json order
+  ---
+  duration_ms: 1.112971
+  type: 'test'
+  ...
+# Subtest: every guide has a featured illustration with a caption and a description
+ok 31 - every guide has a featured illustration with a caption and a description
+  ---
+  duration_ms: 1.180115
+  type: 'test'
+  ...
+# Subtest: each scene is used by exactly one guide, and every scene is used
+ok 32 - each scene is used by exactly one guide, and every scene is used
+  ---
+  duration_ms: 0.543739
+  type: 'test'
+  ...
+# Subtest: every scene uses one of the three shared layouts, each with a label
+ok 33 - every scene uses one of the three shared layouts, each with a label
+  ---
+  duration_ms: 0.887896
+  type: 'test'
+  ...
+# Subtest: illustration captions and descriptions stay free of PRO features
+ok 34 - illustration captions and descriptions stay free of PRO features
+  ---
+  duration_ms: 0.546443
+  type: 'test'
+  ...
+# Subtest: the illustration caption counts toward the reading time; the description does not
+ok 35 - the illustration caption counts toward the reading time; the description does not
+  ---
+  duration_ms: 0.643517
+  type: 'test'
+  ...
+# Subtest: every free FIFU feature (readme, settings, and code) is documented in its guide
+ok 36 - every free FIFU feature (readme, settings, and code) is documented in its guide
+  ---
+  duration_ms: 8.666672
+  type: 'test'
+  ...
+# Subtest: every guide documents at least one feature from the feature map
+ok 37 - every guide documents at least one feature from the feature map
+  ---
+  duration_ms: 0.486243
+  type: 'test'
+  ...
+# Subtest: interface labels are exact labels from FIFU, WordPress, or the named plugins
+ok 38 - interface labels are exact labels from FIFU, WordPress, or the named plugins
+  ---
+  duration_ms: 3.286747
+  type: 'test'
+  ...
+# Subtest: technical jargon only appears in the developer guides
+ok 39 - technical jargon only appears in the developer guides
+  ---
+  duration_ms: 6.790483
+  type: 'test'
+  ...
+# Subtest: guides address the reader directly and keep sentences short
+ok 40 - guides address the reader directly and keep sentences short
+  ---
+  duration_ms: 12.250986
+  type: 'test'
+  ...
+# Subtest: the stylesheet stacks the docs layouts on small screens
+ok 41 - the stylesheet stacks the docs layouts on small screens
+  ---
+  duration_ms: 1.947419
+  type: 'test'
+  ...
+# Subtest: prepareReviews sorts by quality and preserves input order for ties
+ok 42 - prepareReviews sorts by quality and preserves input order for ties
+  ---
+  duration_ms: 2.808526
+  type: 'test'
+  ...
+# Subtest: topReviews returns the highest scores first
+ok 43 - topReviews returns the highest scores first
+  ---
+  duration_ms: 0.517002
+  type: 'test'
+  ...
+# Subtest: exported reviews.json is consistent with what the pages need
+ok 44 - exported reviews.json is consistent with what the pages need
+  ---
+  duration_ms: 11.346008
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 822.512893
+
+# Exit code: 0

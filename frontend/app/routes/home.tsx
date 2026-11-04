@@ -269,7 +269,7 @@ export default function Home() {
                 </span>
               </li>
             </ol>
-            <Link to="/docs/install-demosuite/" className="text-link">
+            <Link to="/docs/getting-started/" className="text-link">
               Read the plugin setup guide →
             </Link>
           </div>
@@ -447,8 +447,8 @@ export default function Home() {
             <div className="eyebrow">CUSTOMER REVIEWS</div>
             <h2>Made for the people behind every site.</h2>
             <p className="review-attribution">
-              Five-star reviews from FIFU users on WordPress.org, ranked by comment quality.
-              Names and portraits are changed for privacy.
+              Five-star reviews from FIFU users on WordPress.org, ranked by comment
+              quality. Names and portraits are changed for privacy.
             </p>
             <Link className="text-link testimonial-more" to="/reviews/">
               Read all reviews →

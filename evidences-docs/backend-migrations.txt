@@ -1,0 +1,7 @@
+# Command: ../.venv/bin/python manage.py makemigrations --check --dry-run
+# Directory: backend
+# Date (UTC): 2026-11-04 13:20:00
+
+No changes detected
+
+# Exit code: 0

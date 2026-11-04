@@ -23,11 +23,10 @@ test('prepareReviews sorts by quality and preserves input order for ties', () =>
     ],
   };
   const prepared = prepareReviews(data);
-  assert.deepEqual(prepared.map((review) => review.name), [
-    'Owen Morgan',
-    'Léa Moreau',
-    'Aiko Nakamura',
-  ]);
+  assert.deepEqual(
+    prepared.map((review) => review.name),
+    ['Owen Morgan', 'Léa Moreau', 'Aiko Nakamura'],
+  );
 });
 
 test('topReviews returns the highest scores first', () => {
@@ -50,7 +49,11 @@ test('exported reviews.json is consistent with what the pages need', () => {
   assert.equal(reviewsJson.count, reviews.length);
   assert.ok(reviews.length >= 200, 'expected the full set of positive reviews');
   const scores = reviews.map((r) => r.quality_score);
-  assert.deepEqual(scores, [...scores].sort((a, b) => b - a), 'sorted by quality descending');
+  assert.deepEqual(
+    scores,
+    [...scores].sort((a, b) => b - a),
+    'sorted by quality descending',
+  );
   for (const review of reviews) {
     assert.deepEqual(Object.keys(review).sort(), [
       'avatar',

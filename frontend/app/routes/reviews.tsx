@@ -19,26 +19,20 @@ export async function loader() {
 
 export default function Reviews() {
   const { reviews } = useLoaderData<typeof loader>();
-  const columns = [reviews];
-
   return (
     <Page eyebrow="CUSTOMER REVIEWS" title="What WordPress users say about FIFU.">
       <p className="review-attribution">
-        Genuine five-star reviews from WordPress.org, ranked by comment quality.
-        Reviewer names and portraits are changed for privacy; the words are theirs.
+        Genuine five-star reviews from WordPress.org, ranked by comment quality. Reviewer
+        names and portraits are changed for privacy; the words are theirs.
       </p>
-      <div className="testimonial-columns">
-        {columns.map((column, columnIndex) => (
-          <div className="testimonial-column" key={columnIndex}>
-            {column.map((review) => (
-              <ReviewCard
-                key={review.name}
-                review={review}
-                headingLevel="h2"
-                className="simplecard "
-              />
-            ))}
-          </div>
+      <div className="cards testimonial-grid">
+        {reviews.map((review, index) => (
+          <ReviewCard
+            key={`${review.name}-${index}`}
+            review={review}
+            headingLevel="h2"
+            className="simplecard "
+          />
         ))}
       </div>
       <div className="reviews-cta">
