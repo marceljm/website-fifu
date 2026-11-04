@@ -693,14 +693,39 @@ footer small {
 .integration-card-heading {
   margin-bottom: 18px;
 }
+.integration-catalog-card .integration-card-heading {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  text-align: left;
+}
 .integration-icon {
   font-size: 23px;
+}
+.integration-icon-image {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  padding: 7px;
+  border: 1px solid #e5eaf0;
+  background: #fff;
+  object-fit: contain;
+}
+.integration-icon-placeholder {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #e5eaf0;
+  border-radius: 15px;
+  background: #f3f5f8;
+  color: #8a94a3;
 }
 .integration-card-title {
   display: grid;
   gap: 4px;
   min-width: 0;
-  justify-items: center;
+  justify-items: start;
 }
 .integration-card-title small {
   color: #778396;
@@ -725,6 +750,9 @@ footer small {
   align-items: center;
   gap: 6px;
   color: var(--blue);
+}
+.integration-catalog-card p {
+  margin-bottom: 0;
 }
 .plan h2 {
   margin: 10px 0;
