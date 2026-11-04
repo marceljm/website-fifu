@@ -2167,6 +2167,12 @@ body {
 .testimonial-grid {
   margin-top: 32px;
 }
+.page .testimonial-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+.page .testimonial-card {
+  min-height: 0;
+}
 .testimonial-card {
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
