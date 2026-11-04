@@ -12,15 +12,7 @@ export function ReviewCard({
   const Heading = headingLevel;
   return (
     <article className={`${className}testimonial-card`}>
-      <img
-        className="testimonial-avatar"
-        src={review.avatar}
-        alt=""
-        width="72"
-        height="72"
-        loading="lazy"
-        decoding="async"
-      />
+      <img className="testimonial-avatar" src={review.avatar} alt="" width="100" height="100" loading="lazy" />
       <div className="testimonial-copy">
         <Heading>{review.title}</Heading>
         <blockquote>“{review.comment}”</blockquote>

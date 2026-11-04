@@ -150,7 +150,7 @@ The production build writes deployable frontend assets under `frontend/build/`. 
 
 ## Reviews from WordPress.org
 
-The home page and `/reviews/` show genuine 5-star reviews of the plugin, imported from its WordPress.org support forum. Reviewer identities are protected: the `@username` is stored only as a plain SHA-256 hash, each reviewer gets a fictional name, and portraits are replaced by a placeholder (or by an image you provide). Only the polished English text is stored; the raw scrape is never committed.
+The home page and `/reviews/` show genuine 5-star reviews of the plugin, imported from its WordPress.org support forum. Reviewer identities are protected: the `@username` is stored only as a plain SHA-256 hash and each reviewer gets a fictional name. Portraits are lightweight fictional illustrations whose traits are generated consistently from that hash; they do not depict the reviewers. The raw scrape is never committed.
 
 Each review has an editorial quality score from 0 to 10. Scores reward clear, specific comments that explain a useful feature or concrete impact; short generic praise and overly broad comments score lower. The public pages rank by score, with the original WordPress.org order breaking ties. Scores are subjective editorial judgments, not WordPress ratings.
 
@@ -174,9 +174,9 @@ WordPress.org ──scrape──▶ reviews_raw.json ──polish (by hand/AI)�
 
 2. **Polish.** Translate and correct `reviews_raw.json` by hand into `backend/data/reviews_polished.json`: English only, one plain paragraph per comment (no line breaks, HTML, emojis or emoticons), no `@handles`, e-mail addresses or forum revision lines, a unique fictional name, and a `sentiment` of `positive`, `negative` or `neutral`. Assign each review a `quality_score` from 0 to 10: prioritize clear, specific feature use and concrete benefits; give short generic praise lower scores, and reserve 9–10 for unusually informative comments. The polished file is committed; the rules live in `backend/apps/reviews/polished.py`, and `python3 manage.py test` validates every one of them (cross-checking against the raw file when that is present).
 
-3. **Import and export.** `python3 manage.py import_reviews` validates the polished file, upserts the reviews by hash into SQLite (stamping `scraped_at` from the file), and writes `frontend/app/data/reviews.json` with **only the positive reviews**, sorted by quality score from highest to lowest (then site order). Each entry carries the fictional name, title, comment, quality score, weeks, scrape timestamp and an avatar path. Re-running is safe and idempotent.
+3. **Import and export.** `python3 manage.py import_reviews` validates the polished file, upserts the reviews by hash into SQLite (stamping `scraped_at` from the file), and writes `frontend/app/data/reviews.json` with **only the positive reviews**, sorted by quality score from highest to lowest (then site order). Each entry carries the fictional name, title, comment, quality score, weeks, scrape timestamp, and structured portrait traits with a human-readable description. Traits use broad cultural cues from the fictional name and are deterministically varied from the username hash; the hash itself is not included in the public JSON. Re-running is safe and idempotent.
 
-4. **Avatars.** Drop a 320×320 image named `<hash>.webp` into `frontend/public/images/reviews/` and re-run `python3 manage.py import_reviews --export-only`; reviews without an image use `placeholder.webp`. Use the same command after editing a review in Django Admin.
+4. **Avatars.** The frontend draws each fictional portrait as a compact SVG from the exported traits, so no per-review image files or database column are needed. Re-run `python3 manage.py import_reviews --export-only` after editing a review in Django Admin.
 
 5. **Build.** `npm run build` bundles the JSON and pre-renders the pages. Review cards do not show review age.
 
@@ -210,7 +210,7 @@ frontend/
   app/data/reviews.json         Positive reviews exported by import_reviews (pre-rendered)
   app/data/reviews-utils.ts     Review age helpers (unit-tested)
   app/components/reviews/       ReviewCard used on the home page and /reviews/
-  public/images/reviews/        Reviewer avatars (<hash>.webp) and placeholder.webp
+  public/images/reviews/        Legacy placeholder image
   app/styles.css                Shared responsive design system
   public/                       Favicon, sample images, robots.txt, and sitemap.xml
   tests/site.e2e.mjs            Pre-rendered route regression checks

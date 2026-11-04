@@ -2,8 +2,8 @@
 
 Only positive reviews are exported, highest quality score first (then site
 order). Each entry carries the fictional name, polished text, quality score,
-weeks, the scrape timestamp and an avatar path. The avatar points to
-``/images/reviews/<hash>.webp`` when available, otherwise to the shared placeholder.
+weeks, the scrape timestamp, a legacy image path, and deterministic fictional
+avatar traits derived from the username hash. The hash itself is never exported.
 """
 
 from __future__ import annotations
@@ -15,6 +15,7 @@ from pathlib import Path
 from django.conf import settings
 from django.utils import timezone as dj_timezone
 
+from .avatar_traits import avatar_traits_for
 from .models import Review
 
 FRONTEND_DIR = Path(settings.BASE_DIR).parent / "frontend"
@@ -31,7 +32,7 @@ def _iso_utc(value) -> str | None:
 
 
 def avatar_for(username_hash: str, images_dir: Path) -> str:
-    """Public URL of the reviewer's avatar, or of the placeholder when none exists."""
+    """Public URL of the reviewer's generated portrait or a legacy image."""
     if (Path(images_dir) / f"{username_hash}.webp").is_file():
         return f"{PUBLIC_IMAGES_URL}/{username_hash}.webp"
     return f"{PUBLIC_IMAGES_URL}/{PLACEHOLDER_NAME}"
@@ -55,6 +56,7 @@ def build_export(images_dir: Path = DEFAULT_IMAGES_DIR) -> dict:
                 "timestamp": _iso_utc(r.scraped_at),
                 "posted_at": _iso_utc(r.posted_at),
                 "avatar": avatar_for(r.username_hash, images_dir),
+                "avatar_traits": avatar_traits_for(r.username_hash, r.fictional_name),
             }
             for r in reviews
         ],

@@ -44,7 +44,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument("--polished", default=str(POLISHED_PATH), help="polished JSON to import")
         parser.add_argument("--out", default=str(DEFAULT_EXPORT_PATH), help="frontend JSON to write")
-        parser.add_argument("--images-dir", default=str(DEFAULT_IMAGES_DIR), help="avatar folder")
+        parser.add_argument("--images-dir", default=str(DEFAULT_IMAGES_DIR), help="legacy avatar image folder")
         parser.add_argument("--export-only", action="store_true", help="skip the import step")
 
     def handle(self, *args, **options):
@@ -56,7 +56,7 @@ class Command(BaseCommand):
         own = sum(1 for r in data["reviews"] if not r["avatar"].endswith(PLACEHOLDER_NAME))
         self.stdout.write(
             f"Export: {data['count']} positive review(s) written to {options['out']} "
-            f"({own} with own avatar, {data['count'] - own} using the placeholder)."
+            f"({data['count']} with generated avatar traits; {own} with a legacy image path)."
         )
 
     def import_file(self, path: Path):

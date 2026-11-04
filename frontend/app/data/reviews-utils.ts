@@ -15,7 +15,25 @@ export interface ExportedReview {
   /** When the review was scraped (ISO-8601, UTC). */
   timestamp: string;
   posted_at: string | null;
+  /** Public path to the small portrait generated from avatar_traits. */
   avatar: string;
+  avatar_traits: AvatarTraits;
+}
+
+export interface AvatarTraits {
+  presentation: 'woman' | 'man';
+  cultural_background: string;
+  age_range: string;
+  skin_tone: string;
+  hair_style: string;
+  hair_color: string;
+  beard_style: string;
+  eye_color: string;
+  nose_shape: string;
+  background: string;
+  background_type: string;
+  clothing: string;
+  description: string;
 }
 
 export interface ReviewsExport {

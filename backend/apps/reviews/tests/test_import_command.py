@@ -219,7 +219,18 @@ class ImportReviewsCommandTests(TestCase):
         self.run_command()
         review = self.exported()["reviews"][0]
         self.assertEqual(
-            set(review), {"name", "title", "comment", "quality_score", "weeks", "timestamp", "posted_at", "avatar"}
+            set(review),
+            {
+                "name",
+                "title",
+                "comment",
+                "quality_score",
+                "weeks",
+                "timestamp",
+                "posted_at",
+                "avatar",
+                "avatar_traits",
+            },
         )
         self.assertEqual(review["title"], "Good plugin, very useful")
         self.assertEqual(review["quality_score"], 8)
@@ -239,7 +250,9 @@ class ImportReviewsCommandTests(TestCase):
         by_name = {r["name"]: r for r in self.exported()["reviews"]}
         self.assertEqual(by_name["Aiko Nakamura"]["avatar"], f"/images/reviews/{digest}.webp")
         self.assertEqual(by_name["Owen Morgan"]["avatar"], f"/images/reviews/{PLACEHOLDER_NAME}")
-        self.assertIn("1 with own avatar", self.run_command())
+        output = self.run_command()
+        self.assertIn("3 with generated avatar traits", output)
+        self.assertIn("1 with a legacy image path", output)
 
     def test_export_is_rebuilt_from_the_database_not_the_file(self):
         self.run_command()
