@@ -87,6 +87,28 @@ REGION_RULES = {
     "Central or Eastern European": {"family": {"novak", "novák", "dvorak", "dvořák", "nowak", "zielinski", "zieliński", "kovács", "kovacs", "sokolov", "sokolova", "volkov", "bartos", "bartoš", "marek", "horák", "horak", "petrova"}, "given": {"agnieszka", "katarzyna", "ivana", "jakub", "petr", "milena", "daria", "dmitri", "bence", "anton"}},
 }
 
+# Additional surname cues used by the fictional review names. Keeping these in
+# the same regional lookup preserves avatar traits when a duplicate surname is
+# replaced with another name from the same naming tradition.
+ADDITIONAL_FAMILY_NAMES = {
+    "Korean": {"moon", "yoon", "song", "jang", "shin", "ahn", "kwon"},
+    "Japanese": {"suzuki", "ito", "watanabe", "yamamoto", "yoshida", "hayashi", "matsumoto", "inoue", "kato", "saito", "takahashi", "shimizu"},
+    "Chinese or Chinese diaspora": {"huang", "zhao", "wu", "sun", "guo", "xu", "yang", "zhou", "feng"},
+    "South Asian": {"patel", "gupta", "nair", "kapoor", "desai", "rao", "shah", "reddy", "banerjee"},
+    "West African": {"sow", "diallo", "nkrumah", "toure", "okonkwo", "adebisi", "owusu"},
+    "East African": {"mwangi", "abdi", "tesfaye"},
+    "Middle Eastern or North African": {"mansour", "farah", "youssef", "saleh", "hamdan", "darwish"},
+    "Latin American": {"silva", "costa", "flores", "cruz", "torres", "gomez", "vargas", "rojas", "ortiz", "dominguez", "romero", "paredes", "acosta", "vega", "cabrera", "fuentes", "morales", "ramos", "ferreira", "oliveira", "garcia", "leon", "herrera", "delgado", "salazar", "mendoza", "navarro", "castillo", "duarte", "quintana", "ribeiro"},
+    "Italian": {"pellegrini", "romano", "fontana", "gatti", "leone", "giordano", "esposito", "lombardi", "villa", "mancini", "rizzi", "grassi", "parisi", "testa", "rizzo", "ferraro", "deluca", "marchetti", "riva", "santoro", "fabbri"},
+    "French": {"boucher", "giraud", "faure", "mercier", "vincent", "laurent", "bernard", "leclerc", "brun", "henry", "lemoine", "denis", "roux", "arnaud", "gauthier", "picard", "clement", "moreau", "simon", "rey", "moulin", "aubert", "colin", "dumont", "masson", "perron", "giroux", "barbier", "rolland", "meyer", "nicolas"},
+    "German-speaking European": {"muller", "wagner", "schmidt", "schneider", "schulz", "becker", "braun", "koch", "richter", "neumann", "kruger"},
+    "Nordic": {"larsen", "andersson", "nilsen", "johansen", "kristensen", "pedersen", "eriksen", "dahl", "olsen", "lund"},
+    "Central or Eastern European": {"kowalski", "kowalczyk", "mazur", "sikora", "kaczmarek", "svoboda", "prochazka", "horvath", "vesely", "kral", "urban", "bartos", "cerny", "novak"},
+    "English-speaking or North American": {"carter", "walker", "mitchell", "phillips", "turner", "bailey", "cooper", "collins", "evans", "gray", "baker", "hughes", "stewart", "reed", "perry", "watson", "richardson", "morris", "wood", "price", "bell", "ward", "cox", "cook", "ross", "taylor", "murphy"},
+}
+for _region, _family_names in ADDITIONAL_FAMILY_NAMES.items():
+    REGION_RULES.setdefault(_region, {"family": set(), "given": set()})["family"].update(_family_names)
+
 
 def _fold(value: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFKD", value.casefold()) if not unicodedata.combining(c))

@@ -80,7 +80,7 @@
       }
     },
     {
-      "name": "Martina Moretti",
+      "name": "Martina Pellegrini",
       "title": "Amazing plugin and support!",
       "comment": "This plugin is such a fantastic solution for websites with many images that would otherwise overload the server. I'm so happy that I found it! It works flawlessly, and the issues I had when trying to connect to files on Dropbox were fixed within hours. Marcel answers support requests almost instantly (even on weekends!) and is extremely fast and helpful, beyond what would be expected. Thank you, Marcel, your generosity is appreciated! I am also impressed with the willingness of the developers to make it easy for the user to succeed in having a fast-loading website at a low cost. They provide a CDN solution for free, and they are not trying to push you to the cloud hosting alternative they also provide, which is actually very reasonable and will be my choice at the right time. I have bought the Pro plugin and warmly recommend it to anyone, especially if you have many images.",
       "weeks": 200,
@@ -105,7 +105,7 @@
       }
     },
     {
-      "name": "Milena Kuznetsov",
+      "name": "Milena Kaczmarek",
       "title": "Great plugin and outstanding support",
       "comment": "My website has some unusual features, which initially caused some issues with FIFU. Marcel was very understanding and worked together with me for several hours to identify the cause. Then he was able to quickly adapt FIFU to resolve the issue. FIFU is now working perfectly on my website, and all external links are saved as the featured image. Great plugin and outstanding support!",
       "weeks": 328,
@@ -130,7 +130,7 @@
       }
     },
     {
-      "name": "Matteo Ricci",
+      "name": "Matteo Mancini",
       "title": "The best solution out there for external images",
       "comment": "My site needed the ability to add external images for posts in some cases. So I started to search online for possible solutions. I found some ideas in forums on how you can theoretically do this, but I am not a very experienced programmer and have limited coding skills, so I searched for plugins that could do it. I found 'Featured Image from URL', and it was a really great solution. The only issue was that the pictures added via the FIFU plugin looked out of place dimension-wise. That is because all WP themes create all the necessary thumbnail sizes when an image is added to the WP database, whereas in this case it was just a link to an external source. I started to look for other solutions, but I stopped soon, because the few that were out there were so much weaker. Some were not supported, some did not work, and some did not have even half the features FIFU has. So I went back to FIFU and found that FIFU Premium has a cropping feature. I contacted the author, and he answered very fast that the cropping feature would solve the issue. After acquiring the FIFU Premium version, I received it very soon, installed it, and at first had problems configuring everything properly. So the author helped me once more: he looked at my case and at my theme, created a test environment for further testing, and prepared precise instructions on what I needed to do to achieve the intended result. He even added a requested feature without hesitating. I really recommend the premium version to everybody. Not only because it is the only plugin that delivers what it promises (in regard to adding featured images from URLs), but also because of the great support. The support was fast, precise and very friendly. I am grateful to the author for the fantastic plugin.",
       "weeks": 396,
@@ -155,7 +155,7 @@
       }
     },
     {
-      "name": "Ananya Adebayo",
+      "name": "Ananya Nkrumah",
       "title": "Amazing plugin and customer service!",
       "comment": "I had been looking for this functionality for a while, specifically for Flickr content. I installed the free version and upgraded after only one day, I was so pleased. The plugin performed as stated out of the box, but I had a small issue with my own theme (not guaranteed by the author), and he STILL went above and beyond to work with me and resolve the conflict. I am blown away by how wonderful this plugin and the support are! In just a few days he pinned down my issue, modified the plugin, and went to my site to review and confirm that everything had been resolved. I highly recommend this plugin, as well as anything written by this developer. The best WordPress premium purchase I have ever made!",
       "weeks": 412,
@@ -180,7 +180,7 @@
       }
     },
     {
-      "name": "Inès Garnier",
+      "name": "Inès Arnaud",
       "title": "Excellent plugin and stellar support!",
       "comment": "99% of my site's content is submitted by front-end users. When users reference images and video from external sites, posts are often left without any featured image. This plugin is a lifesaver. It takes the first external image in the content and sets it as the featured image automatically if none is set on submit! Now I don't have an ugly default image all over the category list page. Thank you! Not only is the plugin exactly what I was looking for, but Marcel is incredible. The best support I have received in years of web development. I wish I could give 10 stars. Thank you, Marcel!",
       "weeks": 448,
@@ -205,7 +205,7 @@
       }
     },
     {
-      "name": "Charlotte Reid",
+      "name": "Charlotte Reed",
       "title": "Perfect!",
       "comment": "Perfect! Works beautifully! I blog about multiple topics and keep the posts on different sites, but I'm not using multisite; each site is independent. I'm using another plugin (Syndication) to syndicate blog posts between these multiple standalone WordPress sites. That requires me to use yet another plugin to automatically move all my images out to Amazon S3. Needless to say, my setup isn't very straightforward. This plugin was the final (PERFECT!) piece of the puzzle I needed to get my personal blog network set up and looking good. Now I can publish posts on my hidden blog that get syndicated out to my niche blogs, and they all have nice featured images served up by Amazon S3.",
       "weeks": 524,
@@ -430,7 +430,7 @@
       }
     },
     {
-      "name": "Sanne Bakker",
+      "name": "Sanne Turner",
       "title": "Superbly unique",
       "comment": "A great plugin that is unique in what it offers! It works like a charm and connects the images you are hosting on YOUR CDN or cloud account with your WP website. Unlike other plugins that require you to sign up for new CDN accounts, this one works with your existing storage. Great job, Marcel! And superior support too!",
       "weeks": 320,
@@ -455,7 +455,7 @@
       }
     },
     {
-      "name": "Elena Ricci",
+      "name": "Elena Villa",
       "title": "Great plugin, with amazing support",
       "comment": "FIFU conflicted with another plugin I was using. I sent an email to the author, and he responded within 12 hours and resolved the issue within the next 24! The plugin does exactly what I need it to, without any unnecessary code to slow down page loads, and the author helped customize it for my needs. Definitely 5 out of 5 stars!",
       "weeks": 320,
@@ -505,7 +505,7 @@
       }
     },
     {
-      "name": "Yusuf Abebe",
+      "name": "Yusuf Mwangi",
       "title": "Very useful tool",
       "comment": "If your website is going to have lots of blog posts, pages and products, then storing FEATURED IMAGES in the Media Library can consume lots of space and slow down the website. (Remember, each image is converted to many sizes for thumbnails, etc.) That is THE problem this plugin solves. It works very well. I save images in my Google Photos account and pull them from there as featured images for blog posts. (Storing images elsewhere may be tricky, as that server may have its own clean-up schedule.) Three cheers for Marcel!",
       "weeks": 340,
@@ -530,7 +530,7 @@
       }
     },
     {
-      "name": "Sophie Bennett",
+      "name": "Sophie Collins",
       "title": "Amazing plugin",
       "comment": "It helped me complete a custom WooCommerce project. I get the images from a custom backend and set the external image URL using a cron job.",
       "weeks": 364,
@@ -605,7 +605,7 @@
       }
     },
     {
-      "name": "Riccardo Marino",
+      "name": "Riccardo Rizzo",
       "title": "Works perfectly, and great support",
       "comment": "I was looking for a long time for a plugin that could automatically create a featured image based on the first image in my post. This is the only plugin that worked. It can also create featured images from image URLs. It works easily and effortlessly. I initially had a plugin conflict, and the author was very helpful and helped me solve my problem. Very good plugin and support.",
       "weeks": 376,
@@ -630,7 +630,7 @@
       }
     },
     {
-      "name": "Jin Sato",
+      "name": "Jin Yamamoto",
       "title": "The easiest-to-use URL image plugin, and it keeps improving",
       "comment": "My favorite part of this plugin is that I don't need to do anything redundant when writing a post. It can automatically pick the first URL image as the featured image. Just look at its settings page; it's not a simple and naive one like the others. At first it was problematic with my Newspaper theme, but after I contacted the author, he quickly fixed the issue. A very nice and active developer!",
       "weeks": 392,
@@ -655,7 +655,7 @@
       }
     },
     {
-      "name": "Chloé Lambert",
+      "name": "Chloé Rey",
       "title": "Really great plugin",
       "comment": "A really good plugin. It does what it should and fills a gap in our theme that the theme developers did not want to address. I decided to go for the Pro version and asked the developer for a special feature for my needs. He was ready to integrate it into the Pro version for me. He worked on the plugin until it did what it should with our theme. This is a level of service you get from only a few developers, and Marcel is one of them. We recommend it. It's a pleasure to donate. Thanks a million!",
       "weeks": 392,
@@ -730,7 +730,7 @@
       }
     },
     {
-      "name": "Isabela Ribeiro",
+      "name": "Isabela Torres",
       "title": "Great plugin – no more right-sizing and optimizing photos",
       "comment": "I was able to delete about 40 photos from my media library — I just did my posts. I'm speed-conscious, so I always right-size and optimize photos. I now have higher-quality photos on my posts with no impact on my page speed. Don't link to photos on slow sites; they are slow to load.",
       "weeks": 444,
@@ -805,7 +805,7 @@
       }
     },
     {
-      "name": "Niklas Bakker",
+      "name": "Niklas Müller",
       "title": "Great plugin for what I needed it for",
       "comment": "I decided to go ahead and rate it. A long time ago I needed to be able to use images saved on my main website as the featured image in some of my blog posts that referenced the content over there. This allows me to do exactly that. Since that's the only feature I really use, that's all I can comment on. Thanks for keeping it updated.",
       "weeks": 52,
@@ -855,7 +855,7 @@
       }
     },
     {
-      "name": "Dev Mensah",
+      "name": "Dev Sow",
       "title": "Works well. Great support",
       "comment": "Using the Premium version. No problem getting it to work; easy to use. I had a minor issue with the FIFU alt tags not working correctly, but the response from Marcel was first-rate and the issue was quickly resolved.",
       "weeks": 116,
@@ -955,7 +955,7 @@
       }
     },
     {
-      "name": "Francesca Moretti",
+      "name": "Francesca Romano",
       "title": "Amazing support",
       "comment": "I just wanted to drop a few good words about this plugin's support. A month ago I got a new client asking me to fix her website. I found that the original developer who built her site used the plugin 'Featured Image from URL (FIFU)' to pull images from her Google Drive. As you can imagine, this is not a normal way to handle WordPress photos. But I must say that the development team behind this plugin is just amazing. They always responded to my questions in a matter of minutes. After they checked my issue, they found that the original developer hadn't used the plugin as it should be used. They responded quickly to my questions and issued a few updates to the plugin that solved my issues. I'm not a registered user of the plugin, but even so, I got excellent support from the developer.",
       "weeks": 244,
@@ -1005,7 +1005,7 @@
       }
     },
     {
-      "name": "Aaron Morgan",
+      "name": "Aaron Walker",
       "title": "Works very well + great support",
       "comment": "The plugin works really well and helps offload your server, saving tons of space if you have an image-heavy blog. Also, the author is great at providing support and advice, or even adding a feature if it's something more users can benefit from. Thanks!",
       "weeks": 256,
@@ -1230,7 +1230,7 @@
       }
     },
     {
-      "name": "Chloé Renard",
+      "name": "Chloé Henry",
       "title": "Great plugin for external images",
       "comment": "I'm using it to link external images to my site, and it is the only one that works, and it works great. Also, the WP All Import integration is perfect for my WooCommerce site. Many thanks to Marcel for the plugin and the great support.",
       "weeks": 420,
@@ -1255,7 +1255,7 @@
       }
     },
     {
-      "name": "Hugo Marchand",
+      "name": "Hugo Faure",
       "title": "Great plugin and great support",
       "comment": "This plugin works very well, is easy to use, and solved a very specific problem for me. The author even added a feature that I requested… in just a few days. So, great support as well.",
       "weeks": 448,
@@ -1280,7 +1280,7 @@
       }
     },
     {
-      "name": "Catalina Duarte",
+      "name": "Catalina Flores",
       "title": "Great product & support",
       "comment": "Marcel put up with my grumbling for a few hours while customizing his plugin to turn off an unneeded feature. This plugin works great for using remote images as WooCommerce product images and galleries. Just make sure your theme is not using custom WooCommerce pages. Thanks again, Marcel.",
       "weeks": 460,
@@ -1430,7 +1430,7 @@
       }
     },
     {
-      "name": "Théo Renard",
+      "name": "Théo Leclerc",
       "title": "I recommend it to everyone",
       "comment": "Marcel responded to my email in less than 30 minutes; I didn't even expect that. The support is really great and the communication is superb. As for the plugin itself, it's just amazing and really worth having (I got the Pro version and am completely happy with the purchase).",
       "weeks": 200,
@@ -1480,7 +1480,7 @@
       }
     },
     {
-      "name": "Zara Haddad",
+      "name": "Zara Mansour",
       "title": "Very helpful and quick support",
       "comment": "Marcel answered my question within 15 minutes and helped me diagnose the issue. I am very grateful for his quick response and thorough answers. FIFU is an incredibly useful plugin, made even better by its helpful developer.",
       "weeks": 204,
@@ -1505,7 +1505,7 @@
       }
     },
     {
-      "name": "Mason Barnes",
+      "name": "Mason Hughes",
       "title": "The plugin is very useful and support is very fast",
       "comment": "I had some trouble with the plugin, and the plugin owner answered and supported me right away, helping me solve it in a short time. Great job. Highly recommended for any website owner who wants good thumbnails on their site.",
       "weeks": 296,
@@ -1530,7 +1530,7 @@
       }
     },
     {
-      "name": "Simone Moretti",
+      "name": "Simone Fontana",
       "title": "Thanks to the developers",
       "comment": "I have used this plugin for a long time. When I ran into trouble, I contacted the developers. The response came faster than I imagined. The problem was resolved, and a newer version was released in a very short time. So, thanks to the developers.",
       "weeks": 320,
@@ -1580,7 +1580,7 @@
       }
     },
     {
-      "name": "Chloe Brooks",
+      "name": "Chloe Stewart",
       "title": "Excellent plugin",
       "comment": "This is an excellent plugin. What's more, you get instant help if there is an issue. I had one this morning, for the first time since I started using this plugin. I sent an email to the address provided and got instant help. Problem solved in under 10 minutes. Great!",
       "weeks": 328,
@@ -1655,7 +1655,7 @@
       }
     },
     {
-      "name": "Elena Gallo",
+      "name": "Elena Lombardi",
       "title": "Great support and plugin",
       "comment": "I was able to use my Azure CDN for the product images, and the issue I had with setting the product images (which was just related to not knowing which feature to use) was resolved by support in less than 2 hours! Thanks!",
       "weeks": 360,
@@ -1705,7 +1705,7 @@
       }
     },
     {
-      "name": "Inès Perrin",
+      "name": "Inès Gauthier",
       "title": "Does what it says, and does it well.",
       "comment": "This plugin does what it says it will do, and does it well. I had a minor 'edge case' issue, and the author corrected it immediately; I couldn't ask for anything more. Great plugin – five stars.",
       "weeks": 372,
@@ -1730,7 +1730,7 @@
       }
     },
     {
-      "name": "Lena Brandt",
+      "name": "Lena Bailey",
       "title": "This is good",
       "comment": "This plugin is very useful for uploading images via URL, and all my problems were resolved well by the responsive support team. Yeah, this is cool.",
       "weeks": 376,
@@ -1780,7 +1780,7 @@
       }
     },
     {
-      "name": "Felix Nygaard",
+      "name": "Felix Pedersen",
       "title": "The fact is, it works, and it is awesome.",
       "comment": "I saw the previous comments, and it concerns me when I see that type of statement. So, like a logical person, I tried it out. 1. I copied an image link from Yahoo and posted that URL on my site. It worked fine. 2. I removed the image link and replaced it with another one. It worked fine. Sometimes I wonder about people who maybe don't understand how to use the plugin properly. This is a solution that I needed, and it frustrates me that I could have missed out on it because of some people who make bad statements. Good job to the programmer.",
       "weeks": 412,
@@ -1805,7 +1805,7 @@
       }
     },
     {
-      "name": "Giulia Rinaldi",
+      "name": "Giulia Ferraro",
       "title": "Working perfectly",
       "comment": "I purchased the Pro version of the plugin, and it's working perfectly, displaying images from another site on my WooCommerce category pages. The developer was quick to respond and very helpful when I had a small issue.",
       "weeks": 424,
@@ -1855,7 +1855,7 @@
       }
     },
     {
-      "name": "Mateo Almeida",
+      "name": "Mateo Cabrera",
       "title": "Amazing plugin, especially for WooCommerce!",
       "comment": "This plugin is a lifesaver! I'm using it for WooCommerce. I had an issue figuring out some settings – the author quickly responded and answered all of my questions. Thank you so much again!",
       "weeks": 520,
@@ -1880,7 +1880,7 @@
       }
     },
     {
-      "name": "Santiago Quintana",
+      "name": "Santiago García",
       "title": "Excellent!",
       "comment": "I don't need to store any images internally anymore. By providing just the URLs, I can use my images from Flickr or anywhere else.",
       "weeks": 532,
@@ -2055,7 +2055,7 @@
       }
     },
     {
-      "name": "Hana Wong",
+      "name": "Hana Wu",
       "title": "Great plugin, great support!",
       "comment": "This plugin is really amazing; it really helped me a lot to add a featured image from another URL. The creator (Marcel) really helped me when I had a problem with the plugin.",
       "weeks": 296,
@@ -2105,7 +2105,7 @@
       }
     },
     {
-      "name": "Margaux Renard",
+      "name": "Margaux Brun",
       "title": "The best plugin to save site space",
       "comment": "This plugin provides great functionality for using off-site images with both WooCommerce and WordPress.",
       "weeks": 320,
@@ -2255,7 +2255,7 @@
       }
     },
     {
-      "name": "Jonas Hoffmann",
+      "name": "Jonas Schulz",
       "title": "Great plugin, awesome support.",
       "comment": "The plugin is wonderful and solved a big problem for me. Marcel is a great developer and a really nice person. He helped me not only with the plugin; in general, when he saw my site, he gave me some important feedback.",
       "weeks": 376,
@@ -2280,7 +2280,7 @@
       }
     },
     {
-      "name": "Vicente Castillo",
+      "name": "Vicente Morales",
       "title": "GREAT plugin with TOP support!!",
       "comment": "This plugin works great, and the support is just amazing! The free version offers many features and works really well, and with the premium features you can enjoy even more configuration options to improve your website. Congratulations! It is not easy to find such good plugins around! Thank you very much!",
       "weeks": 380,
@@ -2380,7 +2380,7 @@
       }
     },
     {
-      "name": "Carolina Navarro",
+      "name": "Carolina Romero",
       "title": "No more cluttered media library",
       "comment": "Great for keeping track of sources as well. It should allow links to be entered in Quick Edit.",
       "weeks": 468,
@@ -2405,7 +2405,7 @@
       }
     },
     {
-      "name": "Haruto Kim",
+      "name": "Haruto Song",
       "title": "Does exactly what it says",
       "comment": "Great plugin. I needed this for custom post types, and it did exactly what I wanted.",
       "weeks": 480,
@@ -2455,7 +2455,7 @@
       }
     },
     {
-      "name": "Elena Rinaldi",
+      "name": "Elena DeLuca",
       "title": "It's great, thanks!!",
       "comment": "Great job, thanks! One question: when I use sliders or display posts using widgets from the original theme, I don't have any problem with the featured image. But when I try to use a plugin to add a carousel, if I set the featured image in the default way, it displays the picture, but if I use an external link (with this plugin), the image is not loaded. It looks like it doesn't find the featured image… Do you have any idea or possible solution for that? Thank you!",
       "weeks": 528,
@@ -2605,7 +2605,7 @@
       }
     },
     {
-      "name": "Louis Garnier",
+      "name": "Louis Denis",
       "title": "One of the best",
       "comment": "This piece of work is one of the best plugins available for WordPress. Add a link and you have an image for your post. What more do you need?",
       "weeks": 196,
@@ -2655,7 +2655,7 @@
       }
     },
     {
-      "name": "Margaux Marchand",
+      "name": "Margaux Boucher",
       "title": "Very useful!",
       "comment": "Such a function should be native in WP. I'm so glad you thought about it! Thank you very much!",
       "weeks": 264,
@@ -2680,7 +2680,7 @@
       }
     },
     {
-      "name": "Dev Mehta",
+      "name": "Dev Patel",
       "title": "Perfect, with great support",
       "comment": "This is a really good plugin, and even if there is an issue, Marcel will help you perfectly – and he answers quickly! I love the plugin and the support!",
       "weeks": 316,
@@ -2705,7 +2705,7 @@
       }
     },
     {
-      "name": "Greta Schreiber",
+      "name": "Greta Wagner",
       "title": "Great job – support",
       "comment": "Number one plugin for external images. Have a problem? Contact support. It gets fixed in the next version. You're doing a really great job.",
       "weeks": 328,
@@ -2730,7 +2730,7 @@
       }
     },
     {
-      "name": "Wei Kobayashi",
+      "name": "Wei Matsumoto",
       "title": "Excellent",
       "comment": "Worked with WP All Import; the support is excellent.",
       "weeks": 332,
@@ -2755,7 +2755,7 @@
       }
     },
     {
-      "name": "Jakub Nowak",
+      "name": "Jakub Kowalczyk",
       "title": "Excellent, very useful plugin!",
       "comment": "I have been using this plugin for over a year now, and it does exactly what it is supposed to. Credit to the author: excellent work. Thank you for this very useful plugin.",
       "weeks": 332,
@@ -2780,7 +2780,7 @@
       }
     },
     {
-      "name": "Ingrid Bergström",
+      "name": "Ingrid Larsen",
       "title": "Outstanding service!",
       "comment": "I must commend Marcel for his prompt response to questions and issues. The regular and premium plugins work flawlessly. Long-time fan!",
       "weeks": 344,
@@ -2830,7 +2830,7 @@
       }
     },
     {
-      "name": "Kofi Haddad",
+      "name": "Kofi Farah",
       "title": "Works very well",
       "comment": "It's working very well and saves me a lot of hosting storage.",
       "weeks": 348,
@@ -2855,7 +2855,7 @@
       }
     },
     {
-      "name": "Chiara Marino",
+      "name": "Chiara Testa",
       "title": "Fast support",
       "comment": "I contacted the developer about an issue with the email setting, and he answered and made a prompt response. Very helpful.",
       "weeks": 352,
@@ -2880,7 +2880,7 @@
       }
     },
     {
-      "name": "Zoe Morgan",
+      "name": "Zoe Mitchell",
       "title": "The developer and his plugin are AMAZING",
       "comment": "The developer answers very, very fast about plugin problems, although I'm not a premium member. This plugin also has many features that other plugins do not have. I wish you continued success, developer!",
       "weeks": 352,
@@ -2905,7 +2905,7 @@
       }
     },
     {
-      "name": "Arthur Chevalier",
+      "name": "Arthur Clément",
       "title": "Great plugin",
       "comment": "The plugin meets many requirements for your WordPress website. Please give this plugin a chance in your project.",
       "weeks": 360,
@@ -2955,7 +2955,7 @@
       }
     },
     {
-      "name": "Mei Sato",
+      "name": "Mei Yoshida",
       "title": "Wonderful plugin",
       "comment": "One of the best and most useful plugins I have used so far. The support is absolutely great! Thank you, Marcel, for solving my problem!",
       "weeks": 396,
@@ -2980,7 +2980,7 @@
       }
     },
     {
-      "name": "Jin Kobayashi",
+      "name": "Jin Inoue",
       "title": "Excellent plugin and above-and-beyond support",
       "comment": "This plugin is fantastic, and I can't say enough good things about the post-sale support that I've received.",
       "weeks": 396,
@@ -3030,7 +3030,7 @@
       }
     },
     {
-      "name": "Rohan Sharma",
+      "name": "Rohan Gupta",
       "title": "Excellent",
       "comment": "Worked like a charm, especially using the WP bulk edit actions.",
       "weeks": 440,
@@ -3055,7 +3055,7 @@
       }
     },
     {
-      "name": "Lily Foster",
+      "name": "Lily Baker",
       "title": "Brilliant plugin, does what it says on the tin",
       "comment": "Great plugin, simple, and it does the job. Support is also quick and effective!",
       "weeks": 444,
@@ -3080,7 +3080,7 @@
       }
     },
     {
-      "name": "Harriet Sutton",
+      "name": "Harriet Gray",
       "title": "Great plugin and support",
       "comment": "Thanks to Marcel. I had a configuration problem with WP All Import, and within 2 hours Marcel helped me, and now it is running correctly. Thanks!",
       "weeks": 464,
@@ -3105,7 +3105,7 @@
       }
     },
     {
-      "name": "Martina Ribeiro",
+      "name": "Martina Gómez",
       "title": "Cool!",
       "comment": "Now that you can upload from any URL, this plugin works a treat.",
       "weeks": 464,
@@ -3130,7 +3130,7 @@
       }
     },
     {
-      "name": "Louis Rousseau",
+      "name": "Louis Picard",
       "title": "Great plugin!",
       "comment": "Really useful plugin and great support! The developer answers as quickly as possible and solves all your problems.",
       "weeks": 476,
@@ -3180,7 +3180,7 @@
       }
     },
     {
-      "name": "Agnieszka Zielinski",
+      "name": "Agnieszka Horváth",
       "title": "Very easy setup",
       "comment": "Perfect for my needs, and it saves room on my server for duplicate products.",
       "weeks": 492,
@@ -3305,7 +3305,7 @@
       }
     },
     {
-      "name": "Léa Renard",
+      "name": "Léa Bernard",
       "title": "Excellent plugin and support",
       "comment": "Fast support and an awesome plugin.",
       "weeks": 92,
@@ -3405,7 +3405,7 @@
       }
     },
     {
-      "name": "Kenji Nakamura",
+      "name": "Kenji Suzuki",
       "title": "Best plugin with the best support team",
       "comment": "Well, the plugin is good and works perfectly. The support team is also good.",
       "weeks": 296,
@@ -3480,7 +3480,7 @@
       }
     },
     {
-      "name": "Astrid de Vries",
+      "name": "Astrid Johansen",
       "title": "Excellent",
       "comment": "Really great work! And quick support. I love this plugin.",
       "weeks": 328,
@@ -3505,7 +3505,7 @@
       }
     },
     {
-      "name": "Inès Marchand",
+      "name": "Inès Giraud",
       "title": "Excellent support",
       "comment": "Good app – even better support!",
       "weeks": 328,
@@ -3530,7 +3530,7 @@
       }
     },
     {
-      "name": "Arthur Fontaine",
+      "name": "Arthur Moreau",
       "title": "Great plugin and great support",
       "comment": "Great plugin, and I had a problem solved quickly.",
       "weeks": 328,
@@ -3555,7 +3555,7 @@
       }
     },
     {
-      "name": "Hana Nakamura",
+      "name": "Hana Ito",
       "title": "Great plugin and great support",
       "comment": "If you have a problem the first time you use this plugin, contact support. The author will help you solve it. Thank you for a great plugin.",
       "weeks": 336,
@@ -3580,7 +3580,7 @@
       }
     },
     {
-      "name": "Riccardo Conti",
+      "name": "Riccardo Leone",
       "title": "Excellent and quick support",
       "comment": "Works well, and the developer is extremely helpful with fixing problems! Thanks a lot.",
       "weeks": 340,
@@ -3605,7 +3605,7 @@
       }
     },
     {
-      "name": "Matteo Gallo",
+      "name": "Matteo Esposito",
       "title": "Great plugin & support",
       "comment": "The plugin does what it says, and the author provides great support.",
       "weeks": 344,
@@ -3680,7 +3680,7 @@
       }
     },
     {
-      "name": "Ella Hudson",
+      "name": "Ella Cooper",
       "title": "Great plugin and support!",
       "comment": "It's a really great plugin with great support! Very quick support replies, and the problem was resolved.",
       "weeks": 372,
@@ -3755,7 +3755,7 @@
       }
     },
     {
-      "name": "Layla Malik",
+      "name": "Layla Nair",
       "title": "Very nice plugin",
       "comment": "The plugin developer is very helpful. If you run into any problem with this plugin, just contact him.",
       "weeks": 376,
@@ -3780,7 +3780,7 @@
       }
     },
     {
-      "name": "Felix Koenig",
+      "name": "Felix Schmidt",
       "title": "Absolutely great plugin and support",
       "comment": "It does what it says and more. Support is fantastic.",
       "weeks": 376,
@@ -3805,7 +3805,7 @@
       }
     },
     {
-      "name": "Paula Navarro",
+      "name": "Paula Domínguez",
       "title": "Works, and the maintainer is responsive",
       "comment": "No complaints: actively maintained, and it just works.",
       "weeks": 412,
@@ -3855,7 +3855,7 @@
       }
     },
     {
-      "name": "Margaux Garnier",
+      "name": "Margaux Roux",
       "title": "Great plugin",
       "comment": "This is a great plugin that does all it promises in an easy way. Thanks.",
       "weeks": 432,
@@ -3880,7 +3880,7 @@
       }
     },
     {
-      "name": "Tomás Duarte",
+      "name": "Tomás Costa",
       "title": "Excellent plugin",
       "comment": "This plugin works very well and is easy to use.",
       "weeks": 432,
@@ -3905,7 +3905,7 @@
       }
     },
     {
-      "name": "Bruno Mendoza",
+      "name": "Bruno Paredes",
       "title": "Works like a charm",
       "comment": "This is a great plugin if you want to outsource your pictures. Works like a charm.",
       "weeks": 448,
@@ -3930,7 +3930,7 @@
       }
     },
     {
-      "name": "Anton Sokolova",
+      "name": "Anton Sikora",
       "title": "Works great",
       "comment": "A handy plugin that is easy to use.",
       "weeks": 460,
@@ -3955,7 +3955,7 @@
       }
     },
     {
-      "name": "Nadia Malik",
+      "name": "Nadia Kapoor",
       "title": "Awesome support!",
       "comment": "The plugin does what it says it does, and the plugin author gives amazing support!",
       "weeks": 476,
@@ -3980,7 +3980,7 @@
       }
     },
     {
-      "name": "Alejandro Cordeiro",
+      "name": "Alejandro Oliveira",
       "title": "Quick to install, easy to use",
       "comment": "Awesome plugin. Very easy to use.",
       "weeks": 484,
@@ -4005,7 +4005,7 @@
       }
     },
     {
-      "name": "Mathias Bergström",
+      "name": "Mathias Andersson",
       "title": "Great plugin…",
       "comment": "…because it actually solves WordPress's uncomfortable image system. Thank you, great job.",
       "weeks": 528,
@@ -4205,7 +4205,7 @@
       }
     },
     {
-      "name": "Davide Barbieri",
+      "name": "Davide Gatti",
       "title": "Perfect, with the best support",
       "comment": "The plugin works well, with the best support.",
       "weeks": 256,
@@ -4280,7 +4280,7 @@
       }
     },
     {
-      "name": "Nathan Sutton",
+      "name": "Nathan Evans",
       "title": "Fast, and quick responses",
       "comment": "Let's make this plugin amazing, guys. The best plugin and support!",
       "weeks": 296,
@@ -4330,7 +4330,7 @@
       }
     },
     {
-      "name": "Mateo Herrera",
+      "name": "Mateo Vargas",
       "title": "Totally happy with it! Works like a charm!",
       "comment": "It works! And nice support!",
       "weeks": 308,
@@ -4405,7 +4405,7 @@
       }
     },
     {
-      "name": "Daria Dvořák",
+      "name": "Daria Svoboda",
       "title": "Great support",
       "comment": "I didn't have any issues, and the author is helpful.",
       "weeks": 316,
@@ -4430,7 +4430,7 @@
       }
     },
     {
-      "name": "Léa Dubois",
+      "name": "Léa Vincent",
       "title": "Very quick support",
       "comment": "Very good support and quick answers.",
       "weeks": 320,
@@ -4505,7 +4505,7 @@
       }
     },
     {
-      "name": "Daria Sokolova",
+      "name": "Daria Mazur",
       "title": "It is handy",
       "comment": "It's the best choice, with good support.",
       "weeks": 328,
@@ -4530,7 +4530,7 @@
       }
     },
     {
-      "name": "Riccardo Greco",
+      "name": "Riccardo Rizzi",
       "title": "Amazing plugin",
       "comment": "Thank you so much, Marcel, for designing this awesome plugin and for the best support. You did a miracle. You are one of the geniuses of the century, and your FIFU plugin is the best of plugins. You are a good man, and your work is a blessing. I hope God gives you whatever good things you want. I hope you receive a good reward from God for serving people around the world. Best regards and best wishes.",
       "weeks": 332,
@@ -4555,7 +4555,7 @@
       }
     },
     {
-      "name": "Emilio Castillo",
+      "name": "Emilio Fuentes",
       "title": "Great plugin",
       "comment": "Great plugin and great support.",
       "weeks": 352,
@@ -4580,7 +4580,7 @@
       }
     },
     {
-      "name": "Alessandro Greco",
+      "name": "Alessandro Grassi",
       "title": "Quick response to any problem",
       "comment": "Great plugin. Thank you for the support.",
       "weeks": 368,
@@ -4655,7 +4655,7 @@
       }
     },
     {
-      "name": "Mathias Hoffmann",
+      "name": "Mathias Schneider",
       "title": "Great, and the support is fast!",
       "comment": "I love it!",
       "weeks": 372,
@@ -4680,7 +4680,7 @@
       }
     },
     {
-      "name": "Bruno Navarro",
+      "name": "Bruno Rojas",
       "title": "Excellent",
       "comment": "A really very helpful plugin.",
       "weeks": 372,
@@ -4730,7 +4730,7 @@
       }
     },
     {
-      "name": "Valentina Delgado",
+      "name": "Valentina Ferreira",
       "title": "Highly recommended, easy-to-use plugin",
       "comment": "Simple and easy to use, with enthusiastic service!",
       "weeks": 384,
@@ -4755,7 +4755,7 @@
       }
     },
     {
-      "name": "Hyun Lin",
+      "name": "Hyun Zhao",
       "title": "Keeps my site lightweight!",
       "comment": "Works perfectly.",
       "weeks": 384,
@@ -4780,7 +4780,7 @@
       }
     },
     {
-      "name": "Léa Fontaine",
+      "name": "Léa Simon",
       "title": "Perfect",
       "comment": "I use it on my site, and it works flawlessly.",
       "weeks": 420,
@@ -4830,7 +4830,7 @@
       }
     },
     {
-      "name": "Lena Holm",
+      "name": "Lena Kristensen",
       "title": "Top notch",
       "comment": "Small but very handy.",
       "weeks": 432,
@@ -4855,7 +4855,7 @@
       }
     },
     {
-      "name": "Wei Tanaka",
+      "name": "Wei Hayashi",
       "title": "Very good plugin and support",
       "comment": "Very good plugin and support.",
       "weeks": 432,
@@ -4880,7 +4880,7 @@
       }
     },
     {
-      "name": "Valentina Esteves",
+      "name": "Valentina Acosta",
       "title": "Excellent plugin and stellar support!",
       "comment": "Excellent plugin and stellar support!",
       "weeks": 436,
@@ -4905,7 +4905,7 @@
       }
     },
     {
-      "name": "Gabriel Ribeiro",
+      "name": "Gabriel Cruz",
       "title": "Best featured image plugin",
       "comment": "The best featured image plugin.",
       "weeks": 440,
@@ -4930,7 +4930,7 @@
       }
     },
     {
-      "name": "Hyun Wong",
+      "name": "Hyun Sun",
       "title": "Simple and effective",
       "comment": "This is a great little plugin that works so easily: all you need to do is install and activate it, and you're good to go!",
       "weeks": 456,
@@ -4955,7 +4955,7 @@
       }
     },
     {
-      "name": "Greta Weber",
+      "name": "Greta Becker",
       "title": "Does what it says",
       "comment": "Simple to grasp, too.",
       "weeks": 456,
@@ -4980,7 +4980,7 @@
       }
     },
     {
-      "name": "Sanne Jensen",
+      "name": "Sanne Nilsen",
       "title": "Awesome",
       "comment": "It worked very well.",
       "weeks": 464,
@@ -5105,7 +5105,7 @@
       }
     },
     {
-      "name": "Lukas Bakker",
+      "name": "Lukas Phillips",
       "title": "Excellent work",
       "comment": "Very nice job. Thank you.",
       "weeks": 308,
@@ -5155,7 +5155,7 @@
       }
     },
     {
-      "name": "Martina Colombo",
+      "name": "Martina Giordano",
       "title": "Great support",
       "comment": "Great support.",
       "weeks": 360,
@@ -5180,7 +5180,7 @@
       }
     },
     {
-      "name": "Vicente Duarte",
+      "name": "Vicente Silva",
       "title": "Nice plugin",
       "comment": "Nice plugin.",
       "weeks": 396,
@@ -5205,7 +5205,7 @@
       }
     },
     {
-      "name": "Théo Dubois",
+      "name": "Théo Laurent",
       "title": "Awesome plugin, does what it claims!",
       "comment": "I can't thank you enough for this beautiful plugin.",
       "weeks": 412,
@@ -5230,7 +5230,7 @@
       }
     },
     {
-      "name": "Manon Lambert",
+      "name": "Manon Moulin",
       "title": "Good",
       "comment": "Perfect.",
       "weeks": 412,
@@ -5305,7 +5305,7 @@
       }
     },
     {
-      "name": "Milena Novák",
+      "name": "Milena Kowalski",
       "title": "It's a very helpful plugin.",
       "comment": "It's a very helpful plugin.",
       "weeks": 432,
@@ -5330,7 +5330,7 @@
       }
     },
     {
-      "name": "Théo Lambert",
+      "name": "Théo Aubert",
       "title": "We really need this plugin",
       "comment": "Thanks to the developer.",
       "weeks": 440,
@@ -5355,7 +5355,7 @@
       }
     },
     {
-      "name": "Minh Kim",
+      "name": "Minh Moon",
       "title": "THANKS",
       "comment": "I just want to say that this plugin is very good, and thank you very much for making it.",
       "weeks": 448,
@@ -5380,7 +5380,7 @@
       }
     },
     {
-      "name": "Elena Greco",
+      "name": "Elena Parisi",
       "title": "Perfect",
       "comment": "Perfect.",
       "weeks": 460,
@@ -5405,7 +5405,7 @@
       }
     },
     {
-      "name": "Jin Nakamura",
+      "name": "Jin Watanabe",
       "title": "Good job",
       "comment": "Good compared to others.",
       "weeks": 464,
@@ -5430,7 +5430,7 @@
       }
     },
     {
-      "name": "Soo-Min Kim",
+      "name": "Soo-Min Yoon",
       "title": "It works with the additional setting",
       "comment": "It works with the additional setting.",
       "weeks": 468,
@@ -5480,7 +5480,7 @@
       }
     },
     {
-      "name": "Arthur Marchand",
+      "name": "Arthur Mercier",
       "title": "Excellent plugin",
       "comment": "Thank you!",
       "weeks": 528,
