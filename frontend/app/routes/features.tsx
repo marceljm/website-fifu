@@ -5,6 +5,7 @@ import {
   featureCards,
   featureCategories,
   featureRelevanceOrder,
+  fifuFeatureSlug,
 } from '../data/fifu-features';
 
 const featureRelevanceRank = new Map<string, number>(
@@ -46,39 +47,38 @@ export default function Features() {
   const renderCard = (
     { title, category, description, Icon }: (typeof featureCards)[number],
     showCategoryBadge = false,
-  ) => (
-    <article
-      className={`simplecard catalog-card feature-catalog-card${showCategoryBadge ? ' has-category-badge' : ''}`}
-      key={title}
-    >
-      <Link
-        className="feature-card-icon-link"
-        to="/features/smart-workflows/"
-        aria-label={`Learn more about ${title}`}
+  ) => {
+    const to = `/features/${fifuFeatureSlug(title)}/`;
+    return (
+      <article
+        className={`simplecard catalog-card feature-catalog-card${showCategoryBadge ? ' has-category-badge' : ''}`}
+        key={title}
       >
-        <span className="catalog-card-heading">
-          <span className="catalog-icon" aria-hidden="true">
-            <Icon size={23} strokeWidth={1.8} />
+        <div className="feature-card-icon-link" aria-hidden="true">
+          <span className="catalog-card-heading">
+            <span className="catalog-icon" aria-hidden="true">
+              <Icon size={23} strokeWidth={1.8} />
+            </span>
           </span>
-        </span>
-      </Link>
-      {showCategoryBadge && (
-        <button
-          className="feature-category-badge"
-          type="button"
-          aria-label={`Show ${category} features`}
-          onClick={() => setActiveCategory(category)}
-        >
-          {category}
-        </button>
-      )}
-      <Link className="feature-card-body" to="/features/smart-workflows/">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <b>Learn More</b>
-      </Link>
-    </article>
-  );
+        </div>
+        {showCategoryBadge && (
+          <button
+            className="feature-category-badge"
+            type="button"
+            aria-label={`Show ${category} features`}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </button>
+        )}
+        <Link className="feature-card-body" to={to}>
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <b>Learn More</b>
+        </Link>
+      </article>
+    );
+  };
 
   return (
     <Page eyebrow="THE WORDPRESS PLUGIN TOOLKIT" title="Features for a clearer workflow.">

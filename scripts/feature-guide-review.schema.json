@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature",
+    "status",
+    "route",
+    "image_files",
+    "checks",
+    "summary",
+    "evidence",
+    "related_guides"
+  ],
+  "properties": {
+    "feature": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "incomplete"
+      ]
+    },
+    "route": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_review",
+        "documentation",
+        "styling",
+        "image",
+        "route_and_build",
+        "technical_formatting",
+        "related_links"
+      ],
+      "properties": {
+        "source_review": {
+          "type": "boolean"
+        },
+        "documentation": {
+          "type": "boolean",
+          "description": "The self-contained guide explains the problem, purpose, practical advantages, and applicability before setup, plus the complete verified workflow and limitations. Advantages may use sound technical knowledge and reasonable inference from verified mechanisms; explicit benefit statements in source are not required."
+        },
+        "styling": {
+          "type": "boolean",
+          "description": "Shared markup/CSS were reviewed and the requested layout implemented. Rendered visual review is left to the user and does not block completion."
+        },
+        "image": {
+          "type": "boolean",
+          "description": "Generation, saving, and embedding succeeded. Image quality is pending manual review by the user; no visual inspection or quality retries are required."
+        },
+        "route_and_build": {
+          "type": "boolean"
+        },
+        "technical_formatting": {
+          "type": "boolean"
+        },
+        "related_links": {
+          "type": "boolean"
+        }
+      }
+    },
+    "related_guides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "feature",
+          "route",
+          "reason"
+        ],
+        "properties": {
+          "feature": {
+            "type": "string"
+          },
+          "route": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "image_files": {
+      "description": "Repository-relative path to exactly one generated static PNG, JPEG, or WebP workflow image; use an empty array if incomplete.",
+      "type": "array",
+      "maxItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

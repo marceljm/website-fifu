@@ -10,7 +10,6 @@ export default [
   route('reviews/', 'routes/reviews.tsx'),
   route('integrations/', 'routes/integrations.tsx'),
   route('integrations/:slug/', 'routes/integration-detail.tsx'),
-  route('docs/*', 'routes/docs.tsx'),
   route('blog/', 'routes/blog.tsx'),
   route('blog/:slug/', 'routes/blog-detail.tsx'),
   route('faq/', 'routes/faq.tsx'),

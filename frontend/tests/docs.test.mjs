@@ -170,14 +170,9 @@ test('groupDocs keeps category order and drops empty groups', () => {
   );
 });
 
-test('sitemap lists exactly the documented guides', () => {
+test('sitemap no longer publishes the retired docs pages', () => {
   const sitemap = readFileSync(new URL('../public/sitemap.xml', import.meta.url), 'utf8');
-  const listed = [...sitemap.matchAll(/\/docs\/([^<\/]+)\/<\/loc>/g)].map((m) => m[1]);
-  assert.deepEqual(
-    listed,
-    docs.map((doc) => doc.slug),
-  );
-  assert.ok(sitemap.includes('/docs/</loc>'));
+  assert.doesNotMatch(sitemap, /\/docs\//);
 });
 
 /* ------------------------------------------------------------------ */
@@ -332,7 +327,7 @@ test('every guide is written in plain, readable chunks', () => {
 test('parseInline recognizes bold, code, UI labels, and links', () => {
   assert.deepEqual(
     parseInline(
-      'Click [[Preview]] then **save** with `wp fifu` or see [Docs](/docs/wp-cli/).',
+      'Click [[Preview]] then **save** with `wp fifu` or see [WP-CLI](/features/wp-cli/).',
     ),
     [
       { kind: 'text', text: 'Click ' },
@@ -342,7 +337,7 @@ test('parseInline recognizes bold, code, UI labels, and links', () => {
       { kind: 'text', text: ' with ' },
       { kind: 'code', text: 'wp fifu' },
       { kind: 'text', text: ' or see ' },
-      { kind: 'link', text: 'Docs', href: '/docs/wp-cli/' },
+      { kind: 'link', text: 'WP-CLI', href: '/features/wp-cli/' },
       { kind: 'text', text: '.' },
     ],
   );

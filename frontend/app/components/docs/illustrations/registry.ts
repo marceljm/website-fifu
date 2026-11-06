@@ -9,6 +9,7 @@
  */
 export const ILLUSTRATION_KINDS = {
   'getting-started': 'workflow',
+  'save-in-media-library': 'workflow',
   'featured-image-from-url': 'comparison',
   'unsplash-image-search': 'workflow',
   'quick-editor': 'overview',

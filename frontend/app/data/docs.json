@@ -3942,6 +3942,126 @@
         }
       ],
       "related": ["optimized-images", "replace-not-found-image", "disable-right-click"]
-    }
+    },
+    {
+      "slug": "save-in-the-media-library",
+      "title": "Save in the Media Library",
+      "summary": "Download a FIFU remote image into the WordPress Media Library and use it as a local featured image or gallery image.",
+      "icon": "image-plus",
+      "category": "image",
+      "illustration": {
+          "key": "save-in-media-library",
+          "caption": "Enable the editor save button, then convert a remote image into a Media Library attachment.",
+          "alt": "Three-step diagram: turn on “show save button on post editor” in FIFU settings, click “Upload to media library” in the editor, and see the image as a local Media Library item."
+      },
+      "locations": [
+          {
+              "label": "Editor button setting",
+              "path": [
+                  "WordPress admin",
+                  "FIFU",
+                  "Settings",
+                  "Image",
+                  "Save in the Media Library",
+                  "Main",
+                  "show save button on post editor"
+              ]
+          }
+      ],
+      "facts": [],
+      "sections": [
+          {
+              "id": "what-it-does",
+              "title": "What this feature does",
+              "blocks": [
+                  {
+                      "type": "paragraph",
+                      "text": "FIFU can download a remote image and add it to the WordPress Media Library. For a post, the converted image becomes its featured image. For a product, FIFU can also convert remote gallery images into local gallery attachments."
+                  }
+              ]
+          },
+          {
+              "id": "show-editor-button",
+              "title": "Show the save button in the editor",
+              "blocks": [
+                  {
+                      "type": "steps",
+                      "items": [
+                          {
+                              "title": "In WordPress, open [[FIFU]] › [[Settings]] and select the [[Image]] tab."
+                          },
+                          {
+                              "title": "Find [[Save in the Media Library]] and its [[Main]] tab."
+                          },
+                          {
+                              "title": "Turn on [[show save button on post editor]]."
+                          }
+                      ]
+                  },
+                  {
+                      "type": "paragraph",
+                      "text": "The setting controls whether the save button is shown in the FIFU editor box."
+                  }
+              ]
+          },
+          {
+              "id": "save-image",
+              "title": "Save a remote image",
+              "blocks": [
+                  {
+                      "type": "steps",
+                      "items": [
+                          {
+                              "title": "Edit a post and set its remote image in the FIFU editor box."
+                          },
+                          {
+                              "title": "Click [[Preview]] so the image is loaded in the editor."
+                          },
+                          {
+                              "title": "Click [[Upload to media library]] in the FIFU box."
+                          },
+                          {
+                              "title": "Save or update the post if WordPress asks you to."
+                          }
+                      ]
+                  },
+                  {
+                      "type": "paragraph",
+                      "text": "FIFU creates a WordPress attachment from the image URL and uses that attachment as the post featured image. For WooCommerce products, the editor upload flow can also convert gallery images."
+                  }
+              ]
+          },
+          {
+              "id": "scheduled-conversion",
+              "title": "Run the scheduled conversion",
+              "blocks": [
+                  {
+                      "type": "paragraph",
+                      "text": "The same [[Main]] tab has a separate option to periodically search for remote images and save them in the Media Library. Turn on [[run a function that periodically searches for remote images and saves them in the media library.]] to enable that job."
+                  },
+                  {
+                      "type": "callout",
+                      "tone": "warning",
+                      "title": "Back up before enabling the scheduled job",
+                      "text": "FIFU warns that making an image local through the scheduled event cannot be reverted. Make a backup before you enable it."
+                  }
+              ]
+          },
+          {
+              "id": "download-requirement",
+              "title": "If an image does not save",
+              "blocks": [
+                  {
+                      "type": "paragraph",
+                      "text": "FIFU downloads the image from its remote URL to create the attachment. If that download fails, the image is not saved. In [[Save in the Media Library]] › [[Proxy]], FIFU provides proxy options for image downloads."
+                  }
+              ]
+          }
+      ],
+      "related": [
+          "featured-image-from-url",
+          "product-and-category-images"
+      ]
+  }
   ]
 }

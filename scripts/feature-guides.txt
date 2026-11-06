@@ -1,0 +1,70 @@
+Automatic Updates
+DB Migration
+Link local image URLs to FIFU plugin
+Delete from Cloud
+Upload to Cloud
+Hotlink protection
+Unsplash Image Search
+FIFU Fields
+Widgets
+Featured Image (URL) Block
+Featured Media Filter
+Quick Editor
+WP-CLI
+FIFU API
+Quick Buy
+FIFU Product Gallery
+WP All Import add-on
+WooCommerce import
+Add image to order email
+Auto set category images
+Lightbox and Zoom
+Watch Later
+Privacy Enhanced Mode
+YouTube options
+Vimeo options
+Background Video
+Mute
+Playback Loop
+Autoplay
+Autoplay on Mouseover
+Video Controls
+Minimum Width
+Play Button
+Video Thumbnail
+Featured Video / Audio
+Taxonomy Image
+bbPress and BuddyBoss Platform
+Featured Slider
+FIFU Shortcode
+WP / WooCommerce REST API
+Featured Images in RSS Feeds
+Image SEO
+Square Image Options
+Optimized Images
+Debug Mode
+Delete All URLs
+Schedule Metadata Generation
+Clear Metadata
+Image Metadata
+Auto set featured media from post content
+Page Redirection
+Custom Popup
+Hide Featured Media
+Modify Post Content
+Default Featured Image
+Broken Link Checker
+Replace Not Found Image
+Disable right-click
+Auto-share on social media
+Auto set featured media using web page address
+Auto set screenshot as featured image
+Auto set featured media from custom field
+Auto set product images from ASIN
+Auto set featured image using post title and search engine
+Remote Variation Images
+Remote Product Gallery Images
+Remote Featured Image
+Save in the Media Library
+Activation
+Reset Settings

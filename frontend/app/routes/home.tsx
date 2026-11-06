@@ -269,8 +269,8 @@ export default function Home() {
                 </span>
               </li>
             </ol>
-            <Link to="/docs/getting-started/" className="text-link">
-              Read the plugin setup guide →
+            <Link to="/features/" className="text-link">
+              Explore the feature guides →
             </Link>
           </div>
           <div

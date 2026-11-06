@@ -148,6 +148,15 @@ export const featureRelevanceOrder = [
   'Automatic Updates',
 ] as const;
 
+export const fifuFeatureSlug = (title: string) =>
+  title
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
 export const featureCards = [
   {
     title: 'Reset Settings',
@@ -159,7 +168,8 @@ export const featureCards = [
   {
     title: 'Activation',
     category: 'Settings & Maintenance',
-    description: 'Activate FIFU to unlock the features included with your license.',
+    description:
+      'Enter your license key on the FIFU License key page and submit it for a check.',
     Icon: KeyRound,
   },
   {
@@ -229,7 +239,7 @@ export const featureCards = [
     title: 'Disable right-click',
     category: 'Image Display',
     description:
-      'Prevent visitors from opening the browser context menu on protected media.',
+      'Disable the browser context menu when visitors right-click images on your site.',
     Icon: MousePointer2,
   },
   {
@@ -271,7 +281,7 @@ export const featureCards = [
   {
     title: 'Page Redirection',
     category: 'Image Display',
-    description: 'Redirect visitors from a page to a destination you choose.',
+    description: 'Link a post’s featured image to a destination that opens in a new tab.',
     Icon: ArrowRightLeft,
   },
   {
@@ -329,7 +339,7 @@ export const featureCards = [
     title: 'Image SEO',
     category: 'SEO',
     description:
-      'Uses post titles as fallback alt text, adds image structured data, and supports Yoast and Rank Math.',
+      'Adds post-title fallback alt text and image structured data, with Yoast and Rank Math integrations.',
     Icon: FileSearch,
   },
   {
@@ -408,7 +418,8 @@ export const featureCards = [
   {
     title: 'Autoplay',
     category: 'Video & Audio',
-    description: 'Automatically start featured video playback.',
+    description:
+      'Choose where supported featured videos start automatically; autoplay requires Mute.',
     Icon: Play,
   },
   {

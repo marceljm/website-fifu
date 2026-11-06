@@ -66,6 +66,44 @@ import type { IllustrationKey } from './registry';
 
 const URL = 'https://…/beach.jpg';
 
+/* Save in the Media Library ------------------------------------------- */
+
+function SaveInMediaLibrary() {
+  return (
+    <Workflow
+      steps={[
+        {
+          title: 'Show the editor save button',
+          visual: (
+            <Panel title="FIFU Settings · Image">
+              <Tile icon={Download} label="Save in the Media Library" />
+              <Toggle label="show save button on post editor" on />
+            </Panel>
+          ),
+        },
+        {
+          title: 'Save the remote image',
+          visual: (
+            <Panel>
+              <Pic tone="sky" />
+              <Btn icon={Download}>Upload to media library</Btn>
+            </Panel>
+          ),
+        },
+        {
+          title: 'Use the local attachment',
+          visual: (
+            <Stack>
+              <Tile icon={FileSpreadsheet} label="WordPress Media Library" tone="green" />
+              <Chip tone="green" icon={CircleCheck}>Featured image</Chip>
+            </Stack>
+          ),
+        },
+      ]}
+    />
+  );
+}
+
 /* Getting started ---------------------------------------------------- */
 
 function GettingStarted() {
@@ -1331,6 +1369,7 @@ function FifuCloud() {
 
 /** One component per registry key. `satisfies` keeps both lists in sync. */
 export const SCENES = {
+  'save-in-media-library': SaveInMediaLibrary,
   'getting-started': GettingStarted,
   'featured-image-from-url': FeaturedImageFromUrl,
   'unsplash-image-search': UnsplashImageSearch,

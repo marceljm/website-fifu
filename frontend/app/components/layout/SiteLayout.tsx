@@ -12,7 +12,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <Link to="/integrations/">Integrations</Link>
           <Link to="/pricing/">Pricing</Link>
           <Link to="/reviews/">Reviews</Link>
-          <Link to="/docs/">Docs</Link>
           <Link to="/blog/">Blog</Link>
         </nav>
         <Link className="button small" to="/pricing/">
@@ -27,7 +26,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <p>A practical plugin for a clearer WordPress workflow.</p>
         <div className="footlinks">
           <Link to="/features/">Product</Link>
-          <Link to="/docs/">Resources</Link>
+          <Link to="/features/">Features</Link>
           <Link to="/privacy/">Privacy</Link>
           <Link to="/contact/">Contact</Link>
         </div>
