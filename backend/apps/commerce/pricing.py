@@ -1,18 +1,18 @@
-"""Server-side pricing rules for the fictional DemoSuite checkout."""
+"""Server-side pricing rules for FIFU license checkout previews."""
 
 from decimal import Decimal, ROUND_HALF_UP
 
 PLANS: dict[str, Decimal] = {
     "free": Decimal("0.00"),
-    "annual": Decimal("29.00"),
-    "lifetime": Decimal("89.00"),
+    "annual": Decimal("29.90"),
+    "lifetime": Decimal("89.90"),
 }
 
 DISCOUNT_TIERS: tuple[tuple[int, Decimal], ...] = (
-    (100, Decimal("0.20")),
-    (25, Decimal("0.15")),
-    (10, Decimal("0.10")),
-    (5, Decimal("0.05")),
+    (100, Decimal("0.50")),
+    (50, Decimal("0.40")),
+    (10, Decimal("0.30")),
+    (5, Decimal("0.20")),
 )
 MAX_QUANTITY = 500
 CENT = Decimal("0.01")
@@ -48,5 +48,5 @@ def quote(plan: str, quantity: int) -> dict[str, str | int]:
         "unit_price": str(unit_price),
         "discount": str(discount),
         "total": str(total),
-        "currency": "USD",
+        "currency": "EUR",
     }

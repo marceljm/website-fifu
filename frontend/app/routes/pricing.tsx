@@ -1,34 +1,22 @@
 import { Link } from 'react-router';
-import { useState } from 'react';
 import { Page } from '../components/layout/SiteLayout';
 export function meta() {
   return [
-    { title: 'WordPress Plugin Pricing | DemoSuite' },
+    { title: 'FIFU Pricing | License Keys' },
     {
       name: 'description',
       content:
-        'Compare free, annual, and lifetime DemoSuite WordPress plugin plans, including multi-site discounts.',
+        'Compare FIFU yearly and one-time license plans, volume discounts, and license activation terms.',
     },
   ];
 }
 export default function Pricing() {
-  const [quantity, setQuantity] = useState(1);
-  const discount =
-    quantity >= 100
-      ? 0.2
-      : quantity >= 25
-        ? 0.15
-        : quantity >= 10
-          ? 0.1
-          : quantity >= 5
-            ? 0.05
-            : 0;
-  const total = (29 * quantity * (1 - discount)).toFixed(2);
   return (
     <Page eyebrow="SIMPLE, HONEST PRICING" title="Choose the right plan for your site.">
       <p>
-        Start with the free plugin option. Choose an annual or lifetime plan when your
-        WordPress sites need more.
+        Buy one or more license keys now. The free plan supports unlimited sites across
+        unlimited domains; each paid license supports unlimited sites across two different
+        domains.
       </p>
       <div className="cards">
         <article className="plan">
@@ -37,11 +25,12 @@ export default function Pricing() {
           <strong>
             $0 <small>/ free</small>
           </strong>
-          <p>Try the essentials on your WordPress site.</p>
+          <p>Use FIFU on unlimited WordPress sites across unlimited domains.</p>
           <p>
-            ✓ 1 WordPress site
+            ✓ Unlimited WordPress sites
             <br />
-            ✓ 3 active projects
+            ✓ Unlimited domains
+            <br />✓ No support
             <br />✓ Core workflows
             <br />✓ Essential insights
           </p>
@@ -53,74 +42,87 @@ export default function Pricing() {
           <small>PRO · ANNUAL SITE LICENSE</small>
           <h2>Make more possible</h2>
           <strong>
-            $29 <small>/ site / year</small>
+            €29.90 <small>/ year</small>
           </strong>
-          <p>More plugin features, updates, and support for your site.</p>
+          <p>Support and updates for one year. Renewal is optional.</p>
           <p>
-            ✓ 1 WordPress site license
+            ✓ Unlimited WordPress sites across 2 different domains
             <br />
-            ✓ Unlimited projects
-            <br />✓ Advanced analytics
-            <br />✓ Automations & integrations
-            <br />✓ Priority support
+            ✓ Support and updates for 1 year
+            <br />✓ Support for 1 site
+            <br />✓ Use FIFU after the year without updates or support
           </p>
           <Link className="button" to="/checkout/?plan=annual">
-            Get Pro · $29/site/year
+            Get yearly license
           </Link>
         </article>
         <article className="plan">
           <small>PRO · LIFETIME</small>
           <h2>One-time purchase</h2>
           <strong>
-            $89 <small>/ site · one-time</small>
+            €89.90 <small>/ one-time</small>
           </strong>
-          <p>One payment for lifetime access to DemoSuite Pro for one site.</p>
+          <p>One payment for ongoing FIFU support and updates.</p>
           <p>
-            ✓ 1 WordPress site license
+            ✓ Unlimited WordPress sites across 2 different domains
             <br />
-            ✓ Everything in Pro
-            <br />✓ No renewal
-            <br />✓ Future updates included
+            ✓ Support and updates forever
+            <br />✓ Support for 1 site
+            <br />✓ No renewal required
           </p>
           <Link className="button" to="/checkout/?plan=lifetime">
-            Choose lifetime
+            Choose one-time plan
           </Link>
         </article>
       </div>
       <section className="section" style={{ padding: '56px 0' }}>
-        <h2>Multi-site pricing, calculated up front</h2>
+        <h2>License key volume discounts</h2>
         <p>
-          The annual discount applies to the full order: 5–9 site licenses save 5%, 10–24
-          save 10%, 25–99 save 15%, and 100+ save 20%.
+          Discounts apply to yearly and one-time plans. Before the discount, each license
+          costs €29.90 per year or €89.90 one-time.
         </p>
-        <label className="search-label">
-          WordPress site licenses
-          <input
-            aria-label="WordPress site license quantity"
-            type="number"
-            min="1"
-            max="500"
-            value={quantity}
-            onChange={(e) =>
-              setQuantity(
-                Math.min(500, Math.max(1, Math.floor(Number(e.target.value) || 1))),
-              )
-            }
-          />
-        </label>
-        <p aria-live="polite">
-          {quantity} × $29.00{' '}
-          {discount > 0 ? `− ${discount * 100}% multi-site discount` : ''} ={' '}
-          <strong>${total} / year</strong>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Number of keys</th>
+              <th scope="col">Discount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>20% off</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>30% off</td>
+            </tr>
+            <tr>
+              <td>50</td>
+              <td>40% off</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>50% off</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>License activation</h2>
+        <p>
+          Paid plans let you activate FIFU on unlimited WordPress sites across two
+          different domains: one production domain and one development or debugging
+          domain. The production domain includes its subdomains and subdirectories (for
+          example, example.com, www.example.com, shop.example.com, and example.com/shop).
+          The development domain is for development or debugging only and is expected to
+          use the same theme and plugins as the production site. Technical support is
+          limited to one site per license key.
         </p>
-        <Link className="button" to={`/checkout/?plan=annual&quantity=${quantity}`}>
-          Continue with this site price
-        </Link>
       </section>
-      <p>
-        Example pricing in USD. Demonstration checkout only; no payment information is
-        collected.
-      </p>
+      <p>Checkout preview only; payment information is not collected.</p>
       <Link className="text-link" to="/compare/">
         Compare plans →
       </Link>

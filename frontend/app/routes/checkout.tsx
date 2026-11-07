@@ -18,19 +18,8 @@ export default function Checkout() {
       plan === 'free'
         ? 1
         : Math.min(500, Math.max(1, Math.floor(Number(q.get('quantity') || 1)))),
-    unit = plan === 'lifetime' ? 89 : plan === 'free' ? 0 : 29,
-    discount =
-      plan === 'annual'
-        ? n >= 100
-          ? 0.2
-          : n >= 25
-            ? 0.15
-            : n >= 10
-              ? 0.1
-              : n >= 5
-                ? 0.05
-                : 0
-        : 0,
+    unit = plan === 'lifetime' ? 89.9 : plan === 'free' ? 0 : 29.9,
+    discount = n >= 100 ? 0.5 : n >= 50 ? 0.4 : n >= 10 ? 0.3 : n >= 5 ? 0.2 : 0,
     total = Math.round(unit * n * (1 - discount) * 100) / 100;
   return (
     <Page eyebrow="PLUGIN ORDER PREVIEW" title="Review your plugin plan.">
@@ -47,14 +36,14 @@ export default function Checkout() {
               value={plan}
               onChange={(e) => setQ({ plan: e.target.value, quantity: String(n) })}
             >
-              <option value="annual">Pro Annual · $29/site/year</option>
-              <option value="lifetime">Pro Lifetime · $89/site</option>
-              <option value="free">Free plugin · $0</option>
+              <option value="annual">Yearly · €29.90/license/year</option>
+              <option value="lifetime">One-Time · €89.90/license</option>
+              <option value="free">Free plugin · €0</option>
             </select>
           </label>
           {plan !== 'free' && (
             <label>
-              WordPress site licenses
+              License keys
               <input
                 type="number"
                 min="1"
@@ -72,11 +61,11 @@ export default function Checkout() {
             </label>
           )}
           <p>
-            {n} × ${unit.toFixed(2)}{' '}
-            {discount > 0 && `− ${discount * 100}% multi-site discount`}
+            {n} × €{unit.toFixed(2)}{' '}
+            {discount > 0 && `− ${discount * 100}% volume discount`}
           </p>
           <h2>
-            Total: ${total.toFixed(2)} {plan === 'annual' && '/ year'}
+            Total: €{total.toFixed(2)} {plan === 'annual' && '/ year'}
           </h2>
           <p>Payment collection is disabled in this sample flow.</p>
           <p>Example checkout only. Connect your payment provider before selling.</p>
