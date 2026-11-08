@@ -14923,10 +14923,15 @@ function FifuProductGalleryGuide() {
             <SlidersHorizontal size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">GALLERY OPTIONS</span>
-            <h2 id="fifu-gallery-options">Choose how media appears.</h2>
+            <span className="activation-feature-kicker">PRODUCT GALLERY SETTINGS</span>
+            <h2 id="fifu-gallery-options">Configure the product gallery.</h2>
           </div>
         </div>
+        <p>
+          Find these switches under{' '}
+          <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>.
+          They control how the product gallery displays its media.
+        </p>
         <dl className="fifu-fields-options">
           <div>
             <dt>Adaptive height</dt>
@@ -14954,18 +14959,26 @@ function FifuProductGalleryGuide() {
             </dd>
           </div>
         </dl>
+      </section>
+      <section
+        className="activation-feature-section"
+        aria-labelledby="fifu-gallery-slider-options"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <SlidersHorizontal size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">SHARED SLIDER CONTROLS</span>
+            <h2 id="fifu-gallery-slider-options">Set navigation and transitions.</h2>
+          </div>
+        </div>
         <p>
-          These switches are in{' '}
-          <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>.
-          The adjacent <strong>Custom content</strong> tab describes how
-          to display an iframe instead of an image in the lightbox.
-        </p>
-        <p>
-          Gallery navigation uses the shared controls in{' '}
+          Find these controls under{' '}
           <strong>
             FIFU → Settings → <Link to="/features/featured-slider/">Featured slider</Link>
-          </strong>
-          . These settings also affect other FIFU sliders.
+          </strong>.
+          They also affect other FIFU sliders, not only product galleries.
         </p>
         <dl className="fifu-fields-options">
           <div>
@@ -15015,6 +15028,20 @@ function FifuProductGalleryGuide() {
             <dd>Use a shared height for slider images.</dd>
           </div>
         </dl>
+      </section>
+      <section
+        className="activation-feature-section"
+        aria-labelledby="fifu-gallery-other-display"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <ExternalLink size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">MORE DISPLAY OPTIONS</span>
+            <h2 id="fifu-gallery-other-display">Open images or place a gallery elsewhere.</h2>
+          </div>
+        </div>
         <p>
           To open images in a lightbox, enable <strong>Lightbox</strong> under{' '}
           <strong>FIFU → Settings → WooCommerce → Lightbox and Zoom</strong>,
@@ -15023,9 +15050,11 @@ function FifuProductGalleryGuide() {
           <strong>Zoom</strong> setting can enable magnification on supported
           desktop image slides, not video slides. For details, see{' '}
           <Link to="/features/lightbox-and-zoom/">Lightbox and Zoom</Link>.
+        </p>
+        <p>
           To display a gallery in a widget area, add the{' '}
           <strong>(FIFU) Product gallery</strong> widget. It uses the current
-          post’s product gallery; see the{' '}
+          post’s gallery; see the{' '}
           <Link to="/features/widgets/">Widgets guide</Link>.
         </p>
       </section>
@@ -15084,7 +15113,9 @@ function FifuProductGalleryGuide() {
           </div>
         </div>
         <p>
-          Show a 360-degree product view, PDF, map, or other embeddable web page
+          Under <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>,
+          the <strong>Custom content</strong> tab explains this option. Show
+          a 360-degree product view, PDF, map, or other embeddable web page
           when a shopper opens an image in the lightbox. The product image
           remains visible in the gallery; the iframe URL supplies the content
           displayed after clicking it. The destination must allow iframe embedding.
