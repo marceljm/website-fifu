@@ -7623,7 +7623,8 @@ function ReplaceNotFoundImageGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Set a valid backup image URL in FIFU’s Image settings to replace failed FIFU-managed images in supported displays.
+        Set a backup image URL so supported FIFU images can show a replacement
+        when the browser cannot load the original file.
       </p>
 
       <section className="feature-highlight" aria-labelledby="replace-not-found-purpose">
@@ -7631,17 +7632,48 @@ function ReplaceNotFoundImageGuide() {
           <span className="feature-highlight-kicker">
             <ImageOff size={15} aria-hidden="true" /> IMAGE FALLBACK
           </span>
-          <h2 id="replace-not-found-purpose">Give failed image requests a useful replacement.</h2>
+          <h2 id="replace-not-found-purpose">Show a useful image instead of a broken one.</h2>
           <p>
-            A remote image can stop loading while its URL remains saved with your content. Set a backup when you want a recognizable image in supported FIFU displays instead of a broken image. The browser swaps the displayed image after a load error; your saved original URL stays in place, so this is useful when you rely on remote images and want a consistent fallback. Leave the field empty if you prefer no configured replacement.
+            Image hosts can remove files, change sharing permissions, or block
+            requests from your website. When a supported FIFU image fails to load,
+            the visitor's browser can display your chosen replacement instead.
+            The original image address remains saved in WordPress.
           </p>
         </div>
         <div className="feature-highlight-visual">
           <img
             src="/images/replace-not-found-image-guide-1.png"
-            alt="A broken image, the FIFU replacement URL setting, and the replacement image displayed on the page."
+            alt="A remote image fails to load, so the page displays the backup image configured in FIFU."
           />
         </div>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="replace-not-found-why"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <ImagePlus size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">WHEN TO USE IT</span>
+            <h2 id="replace-not-found-why">Keep your layouts readable when a host fails.</h2>
+          </div>
+        </div>
+        <p>
+          A broken featured image can leave an empty thumbnail or a browser's
+          missing-image icon in blog cards, articles, or product displays.
+          Choose a simple branded placeholder that still looks appropriate
+          across different kinds of content. This is particularly useful
+          when your images come from external servers you do not control.
+        </p>
+        <p>
+          The replacement is a <strong>display fallback</strong>. It does not
+          fix the original URL, download a local copy, or permanently replace
+          the post's image. If the original starts working again, visitors
+          can see it on a later page load.
+        </p>
       </section>
 
       <section
@@ -7653,28 +7685,92 @@ function ReplaceNotFoundImageGuide() {
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">SET THE BACKUP</span>
-            <h2 id="replace-not-found-setup">Save one image URL for supported FIFU displays.</h2>
+            <span className="activation-feature-kicker">SET UP YOUR BACKUP</span>
+            <h2 id="replace-not-found-setup">Choose one reliable replacement image.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
-            <p>In WordPress, open <strong>FIFU → Settings → Image</strong> and find <strong>Replace Not Found Image</strong>.</p>
+            <p>
+              In WordPress, open <strong>FIFU → Settings → Image</strong>
+              and find <strong>Replace Not Found Image</strong>.
+            </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Enter a complete URL to an image that your visitors can load. The field saves when its value changes. FIFU stores the setting as <code>fifu_error_url</code> after URL validation; validation does not confirm that the file exists or is publicly reachable.
+              Paste a complete public image address into <strong>Image URL</strong>.
+              Prefer <code>https://</code> and choose a small, stable image
+              that the hosting service allows other websites to display.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              To remove the configured fallback, clear the field and let the change save. Then check a page where a supported FIFU image is expected to load.
+              Leave the field after editing it so FIFU can save the change.
+              There is no separate enable switch: the configured URL
+              activates the replacement behavior in supported displays.
+            </p>
+          </li>
+          <li>
+            <span>4</span>
+            <p>
+              Open the backup URL in a private browser window to confirm
+              that it works without signing in. FIFU checks the URL's format
+              before saving, but that does not prove the image will load.
             </p>
           </li>
         </ol>
+        <p>
+          To stop using your custom replacement, clear <strong>Image URL</strong>
+          and let the setting save. Some integrations may still have their own
+          built-in placeholder.
+        </p>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="replace-not-found-how"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <RefreshCw size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">HOW IT WORKS</span>
+            <h2 id="replace-not-found-how">The browser swaps the displayed image after an error.</h2>
+          </div>
+        </div>
+        <ol className="activation-feature-steps">
+          <li>
+            <span>1</span>
+            <p>
+              A visitor opens a page containing a supported FIFU image.
+              The browser first requests the original image URL.
+            </p>
+          </li>
+          <li>
+            <span>2</span>
+            <p>
+              If that image request fails, FIFU's frontend handling points
+              the displayed image to your backup URL instead.
+            </p>
+          </li>
+          <li>
+            <span>3</span>
+            <p>
+              The page shows the backup if it loads successfully.
+              The post's saved remote URL is unchanged, so the same check
+              happens the next time the image is requested.
+            </p>
+          </li>
+        </ol>
+        <p>
+          This works when an image load fails; it is not a scheduled link
+          scan or a guarantee that every image on the site will be replaced.
+          The result depends on how your theme or integration renders the image.
+        </p>
       </section>
 
       <section
@@ -7687,32 +7783,79 @@ function ReplaceNotFoundImageGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">WHERE IT APPLIES</span>
-            <h2 id="replace-not-found-coverage">Supported displays and their behavior.</h2>
+            <h2 id="replace-not-found-coverage">Know which FIFU displays use the backup.</h2>
           </div>
         </div>
         <dl className="feature-guide-options">
           <div>
-            <dt>FIFU featured images</dt>
+            <dt>Remote featured images · Free and Premium</dt>
             <dd>
-              When the configured URL is valid, FIFU adds a load-error handler to supported featured-image markup. The handler changes the displayed <code>src</code> to the backup and removes <code>srcset</code>. If the image markup already has an <code>onerror</code> handler, FIFU leaves that handler alone, so its behavior may take precedence.
+              FIFU provides fallback handling for supported remote featured-image
+              output. Coverage can vary when a theme or another plugin builds
+              its own image markup or error handling.
             </dd>
           </div>
           <div>
-            <dt>Featured Slider</dt>
+            <dt>Featured Slider · Premium</dt>
             <dd>
-              Slider images use the same configured replacement when an image fails. See the <Link to="/features/featured-slider/">Featured Slider guide</Link> for setting up the image sequence.
+              Slider image rendering can use the same replacement URL.
+              See the <Link to="/features/featured-slider/">Featured Slider guide</Link>.
             </dd>
           </div>
           <div>
-            <dt>WooCommerce product galleries</dt>
+            <dt>WooCommerce product galleries · Premium</dt>
             <dd>
-              FIFU’s gallery renderer uses the configured URL for gallery image load errors. Frontend handling also attaches to product-gallery images after AJAX updates. For the gallery itself, see the <Link to="/features/fifu-product-gallery/">FIFU Product Gallery guide</Link>.
+              Supported FIFU-rendered gallery images can switch to the backup
+              on a load error, including images added through AJAX updates.
+              See the <Link to="/features/fifu-product-gallery/">FIFU Product Gallery guide</Link>.
             </dd>
           </div>
           <div>
-            <dt>Elementor FIFU Image widget</dt>
+            <dt>Elementor FIFU Image widget · Premium</dt>
             <dd>
-              In the Elementor FIFU Image widget, a valid setting supplies the replacement URL; without one, the widget uses its built-in default error image. Learn to place it in the <Link to="/features/widgets/">Widgets guide</Link>.
+              The Premium widget uses your configured backup image. If the field
+              is empty, that widget uses its own built-in error image instead.
+              The Free widget does not apply this custom fallback by itself.
+              See the <Link to="/features/widgets/">Widgets guide</Link>.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="replace-not-found-related"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <ListFilter size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">RELATED FEATURES</span>
+            <h2 id="replace-not-found-related">A fallback is different from an empty-image default.</h2>
+          </div>
+        </div>
+        <dl className="feature-guide-options">
+          <div>
+            <dt>Replace Not Found Image</dt>
+            <dd>
+              The post already has an image URL, but the browser cannot
+              display the image. This feature provides a visual backup.
+            </dd>
+          </div>
+          <div>
+            <dt><Link to="/features/default-featured-image/">Default Featured Image</Link></dt>
+            <dd>
+              A post has no featured image assigned. Use this feature to
+              give eligible content a shared thumbnail from the start.
+            </dd>
+          </div>
+          <div>
+            <dt><Link to="/features/broken-link-checker/">Broken Link Checker</Link></dt>
+            <dd>
+              Use this separate feature to check remote image links and
+              identify repeatedly failing URLs for review. A visual
+              replacement alone does not repair the broken links.
             </dd>
           </div>
         </dl>
@@ -7728,14 +7871,20 @@ function ReplaceNotFoundImageGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="replace-not-found-cli">Set or clear the URL from your shell.</h2>
+            <h2 id="replace-not-found-cli">Configure the URL from your server.</h2>
           </div>
         </div>
-        <p>Run these from your WordPress installation. Replace the example URL with your backup image address.</p>
+        <p>
+          If you manage WordPress from the command line, run this from
+          your WordPress installation and replace the example with your URL:
+        </p>
         <pre><code>wp fifu image --replace="https://example.com/backup.jpg"</code></pre>
-        <p>To clear the setting, use an empty value:</p>
+        <p>To clear your custom replacement:</p>
         <pre><code>wp fifu image --replace=""</code></pre>
-        <p>A non-empty value is saved only if it passes URL validation. An invalid value leaves the current setting unchanged.</p>
+        <p>
+          Invalid non-empty URLs are not saved, so the previous value
+          remains in place.
+        </p>
       </section>
 
       <section
@@ -7747,19 +7896,31 @@ function ReplaceNotFoundImageGuide() {
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">CHECK THE RESULT</span>
-            <h2 id="replace-not-found-troubleshooting">If the broken image remains.</h2>
+            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
+            <h2 id="replace-not-found-troubleshooting">If the backup does not appear</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            <strong>Confirm the backup loads:</strong> URL validation checks URL form, not whether the image exists or can be reached without authentication. Open the exact URL in a private browser window to check visitor access.
+            <strong>Test the backup itself:</strong> visit the exact URL
+            privately and verify that it returns a real image, not a
+            sharing page or sign-in form. The backup must be available
+            even when another image host is down.
           </li>
           <li>
-            <strong>Check the image markup:</strong> the featured-image handler is not added when markup already contains <code>onerror</code>. A theme or another plugin may therefore control that failure case.
+            <strong>Check that the setting saved:</strong> the field saves
+            when its value changes. A malformed URL is rejected without
+            replacing your previous setting.
           </li>
           <li>
-            <strong>Check the display type:</strong> the supported displays covered here are FIFU featured-image output, FIFU sliders, FIFU WooCommerce gallery images, and the Elementor FIFU Image widget. This setting is not a general replacement handler for every image on your site.
+            <strong>Check the output:</strong> the fallback applies to
+            supported FIFU displays, not every image tag on your website.
+            Other themes or scripts can manage load errors differently.
+          </li>
+          <li>
+            <strong>Check the original image:</strong> if it has genuinely
+            disappeared, update the post's source URL. The backup only
+            covers the visible error; it does not restore the original.
           </li>
         </ul>
       </section>
