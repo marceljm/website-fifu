@@ -14505,8 +14505,8 @@ function RemoteVariationImagesGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Give each WooCommerce variation its own remote image and gallery, then save the
-        variation and product.
+        Give each WooCommerce product variation its own remote featured image and
+        optional image gallery, without uploading the files to WordPress.
       </p>
 
       <section className="feature-highlight" aria-labelledby="remote-variation-intro">
@@ -14516,10 +14516,11 @@ function RemoteVariationImagesGuide() {
           </span>
           <h2 id="remote-variation-intro">Show the images that match each choice.</h2>
           <p>
-            Each variation can have its own main view, but one image may not show every
-            detail. Add remote gallery URLs so shoppers can inspect each option from
-            several views after selecting it. This keeps images specific to each variation
-            without adding copies to WordPress; use it when your options look different.
+            Products with different colors, styles, or finishes need photos that match
+            the selected option. With FIFU Premium and WooCommerce, you can assign
+            each variation a main image and extra views using remote URLs. Shoppers
+            can see the matching image set when they select that variation, while
+            the original files remain on their external hosts.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -14547,51 +14548,51 @@ function RemoteVariationImagesGuide() {
           <li>
             <span>1</span>
             <p>
-              To switch the full remote image set when shoppers choose a variation, enable{' '}
-              <strong>FIFU product gallery</strong> under{' '}
-              <strong>FIFU → FIFU Settings → FIFU Product Gallery</strong>. This replaces
-              WooCommerce’s single product image area with FIFU’s gallery. If you only
-              need each variation’s main image, this gallery switch is optional.
+              In WordPress, open a WooCommerce variable product. Set up its product
+              attributes and create the variations you want to photograph, such as
+              different colors or sizes.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Edit a WooCommerce variable product. Create its attributes and variations
-              first if they do not exist yet.
+              Go to <strong>Product data → Variations</strong> and expand the
+              variation you want to edit.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Open <strong>Product data → Variations</strong> and expand a variation. In
-              its <strong>Images</strong> area, select the first tile to enter an absolute{' '}
-              <code>http://</code> or <code>https://</code> image URL. The first tile is
-              the variation’s main image.
+              In the variation’s <strong>Images</strong> area, select the first
+              tile and enter a direct <code>https://</code> or <code>http://</code>{' '}
+              <strong>Image URL</strong>, such as{' '}
+              <code>https://example.com/blue-front.jpg</code>. This is the variation’s
+              main image; additional populated tiles become its gallery.
             </p>
           </li>
           <li>
             <span>4</span>
             <p>
-              In the image editor, add <strong>Alternative text</strong> if useful, then
-              confirm. Use the <strong>+</strong> tile to add more image URLs. Drag tiles
-              to set their order; the first stays the main image and the rest become the
-              gallery. Repeat for other variations.
+              After the image loads in the preview, enter{' '}
+              <strong>Alternative text</strong> to describe it and select{' '}
+              <strong>OK</strong>. Use an empty tile or <strong>+</strong> to add
+              more views. Drag the tiles to arrange them; the first populated
+              image in the saved order is the main image. Repeat for other variations.
             </p>
           </li>
           <li>
             <span>5</span>
             <p>
-              Select <strong>Save changes</strong> in the Variations panel, then select{' '}
-              <strong>Update</strong> on the product. Both saves are needed to persist
-              your edits.
+              Select <strong>Save changes</strong> in the Variations panel, then{' '}
+              <strong>Update</strong> the product. On a new product, use{' '}
+              <strong>Publish</strong> instead. Check the product page after saving.
             </p>
           </li>
         </ol>
         <p>
-          To remove an image, clear its URL in that tile and confirm. If you clear every
-          tile, the variation has no FIFU image set and uses the parent product media
-          instead.
+          To remove an image, open its tile, clear the URL, select{' '}
+          <strong>OK</strong>, and save the changes. If you remove all remote images
+          from a variation, the FIFU gallery falls back to the parent product’s media.
         </p>
       </section>
 
@@ -14614,21 +14615,23 @@ function RemoteVariationImagesGuide() {
           <div>
             <dt>Selected variation</dt>
             <dd>
-              With <strong>FIFU product gallery</strong> enabled, choosing variation
-              attributes switches the gallery to that variation’s saved image set. If the
-              matching variation has no image set, the gallery falls back to the parent
-              product’s images.
+              To switch the entire gallery when a shopper selects a matching
+              variation, enable <strong>FIFU product gallery</strong> under{' '}
+              <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>.
+              If the chosen variation has no images of its own, the gallery uses the
+              parent product’s media. This setting is optional if you only need
+              WooCommerce’s usual single variation image.
             </dd>
           </div>
           <div>
             <dt>Variantions images in the main gallery</dt>
             <dd>
-              This optional switch is in{' '}
-              <strong>FIFU → FIFU Settings → FIFU Product Gallery</strong>. When enabled,
-              the unselected product gallery also includes the first image from each
-              variation. Once a shopper selects attributes, the gallery switches to the
-              matching variation. Leave it off if you want the initial gallery to show
-              only parent product media. See the{' '}
+              This optional switch is also under{' '}
+              <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>.
+              When enabled, the initial gallery includes the first image from each
+              variation alongside the parent product images. After a shopper selects
+              a matching variation, its image set takes over. Leave this switch off
+              to keep the initial gallery limited to parent product media. See the{' '}
               <Link to="/features/fifu-product-gallery/">FIFU Product Gallery guide</Link>{' '}
               for its gallery setup and display controls.
             </dd>
@@ -14636,14 +14639,15 @@ function RemoteVariationImagesGuide() {
           <div>
             <dt>Upload to media library</dt>
             <dd>
-              If the <strong>Upload to media library</strong> checkbox appears below the
-              variation images, selecting it copies the remote main image and gallery
-              images into your Media Library when you save. The copied files become
-              variation attachments and the remote URL state is cleared for that
-              variation. To show this checkbox, enable{' '}
+              If the <strong>Upload to media library</strong> checkbox appears below
+              the variation images, it starts a different workflow: when you save,
+              FIFU attempts to download the remote main image and gallery images
+              as local attachments and clears the remote URL state. Back up the
+              product first; this conversion is not a routine requirement for
+              remote images. To display the checkbox, enable{' '}
               <strong>show save button on post editor</strong> under{' '}
-              <strong>FIFU → FIFU Settings → Media → Main</strong>. Leave it unchecked to
-              keep using remote URLs. The{' '}
+              <strong>FIFU → Settings → Image → Save in the Media Library → Main</strong>.
+              Leave it unchecked to keep using remote URLs. The{' '}
               <Link to="/features/save-in-the-media-library/">
                 Save in the Media Library guide
               </Link>{' '}
@@ -14672,18 +14676,22 @@ function RemoteVariationImagesGuide() {
           <div>
             <dt>No preview in the editor</dt>
             <dd>
-              Use a complete <code>http://</code> or <code>https://</code> image URL that
-              loads publicly. An invalid or unreachable URL cannot show a tile preview.
+              Use a complete, publicly accessible <code>http://</code> or{' '}
+              <code>https://</code> image URL. Try opening it in a private
+              browser window. If the remote host blocks access or the image
+              does not load, the preview and its alternative-text field may
+              not appear.
             </dd>
           </div>
           <div>
             <dt>Gallery does not switch</dt>
             <dd>
               Enable <strong>FIFU product gallery</strong> under{' '}
-              <strong>FIFU → FIFU Settings → FIFU Product Gallery</strong>. Save changes
-              in the Variations panel and update the product, then choose the variation on
-              the storefront. With no variation selected, the gallery may show parent
-              images and, if the merge setting is on, each variation’s first image.
+              <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>,
+              save the variations and update the product. On the storefront, choose
+              all attributes needed to identify a variation. Before a variation
+              is selected, the gallery shows parent product images and, when
+              merging is enabled, the first image of each variation.
             </dd>
           </div>
           <div>
@@ -14715,11 +14723,13 @@ function RemoteVariationImagesGuide() {
           <div>
             <dt>WP All Import Add-On</dt>
             <dd>
-              For variable-product imports, map <code>fifu_list_url</code> on each
-              variation record and identify that variation with its SKU. Separate image
-              URLs with a vertical bar or line break. Add matching{' '}
-              <code>fifu_list_alt</code> values in the same order when needed. The first
-              URL becomes the variation image and later URLs its gallery. See the{' '}
+              In the variable product’s imported variation data, provide a
+              variation <strong>SKU</strong> and its <code>fifu_list_url</code>.
+              Separate image addresses with <code>|</code> or a line break;
+              for example, <code>https://example.com/front.jpg|https://example.com/back.jpg</code>.
+              Add matching <code>fifu_list_alt</code> entries in the same order
+              when needed. The first URL becomes the variation’s main image,
+              and later URLs become gallery images. See the{' '}
               <Link to="/features/wp-all-import-add-on/">WP All Import Add-On guide</Link>{' '}
               for the import setup.
             </dd>
@@ -14727,10 +14737,12 @@ function RemoteVariationImagesGuide() {
           <div>
             <dt>WooCommerce REST API</dt>
             <dd>
-              On a <code>product_variation</code> request, send <code>fifu_list_url</code>{' '}
-              and optional <code>fifu_list_alt</code> in <code>meta_data</code>. Keep URL
-              and alt lists in the same order; the first URL is the variation image. See
-              the{' '}
+              In a WooCommerce REST API request to create or update a product
+              variation, include <code>fifu_list_url</code> and optionally{' '}
+              <code>fifu_list_alt</code> as <code>meta_data</code> entries with{' '}
+              <code>key</code> and <code>value</code>. Use the same{' '}
+              <code>|</code>-separated order for URLs and alternative text;
+              the first URL is the main image. See the{' '}
               <Link to="/features/wp-woocommerce-rest-api/">
                 WooCommerce REST API guide
               </Link>{' '}
