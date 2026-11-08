@@ -13243,26 +13243,26 @@ function RemoteFeaturedImageGuide() {
         </p>
         <dl className="feature-guide-options">
           <div>
-            <dt>WordPress 7.2 and newer</dt>
+            <dt>Block editor</dt>
             <dd>
-              In the block editor, WordPress's regular <strong>Featured image</strong>{' '}
-              field remains visible but is disabled while a FIFU remote image is set.
-              Remove the FIFU image to make the native field editable again.
+              While a FIFU remote image is assigned, WordPress's regular{' '}
+              <strong>Featured image</strong> control is hidden or shown as disabled,
+              depending on the editor interface. Remove the FIFU image to use the
+              native image picker again.
             </dd>
           </div>
           <div>
-            <dt>WordPress 7.1 and older</dt>
+            <dt>Classic Editor</dt>
             <dd>
-              The block editor hides its regular featured-image panel while a FIFU
-              remote image is set. Removing the FIFU image makes the panel available again.
+              FIFU hides the regular featured-image box while a remote image is
+              assigned. Removing the FIFU image makes the native box available again.
             </dd>
           </div>
           <div>
-            <dt>Classic Editor and Rank Math</dt>
+            <dt>Rank Math SEO</dt>
             <dd>
-              Classic Editor uses its existing panel-hiding behavior. When Rank Math SEO
-              is active, FIFU preserves access to the native featured-image field as a
-              compatibility exception, even if a remote image is assigned.
+              When Rank Math SEO is active, FIFU keeps the native featured-image
+              control available for compatibility, even when a remote image is set.
             </dd>
           </div>
         </dl>
