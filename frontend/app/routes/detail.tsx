@@ -17,6 +17,7 @@ import {
   ImagePlus,
   KeyRound,
   ListFilter,
+  Link2,
   Tags,
   MailPlus,
   MessageSquare,
@@ -38,6 +39,7 @@ import {
   Settings2,
   ShieldCheck,
   Video,
+  Wrench,
   VolumeX,
   UsersRound,
 } from 'lucide-react';
@@ -155,7 +157,7 @@ export function meta({ params }: { params: Record<string, string | undefined> })
       {
         name: 'description',
         content:
-          'Check featured image URLs in the background and review links that fail three checks in FIFU settings.',
+          'Monitor remote featured-image URLs during page rendering, with daily retries and a Broken Links results table.',
       },
     ];
   if (params.slug === 'default-featured-image')
@@ -7948,77 +7950,45 @@ function BrokenLinkCheckerGuide() {
       className="feature-guide-page activation-feature-page"
     >
       <p className="lead">
-        Automatically check remote featured-image URLs as your site serves content,
-        then review links that fail repeatedly.
+        Track recurring failures in remote featured-image URLs from the pages your
+        WordPress site actually renders.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="broken-link-purpose">
+      <section className="feature-highlight" aria-labelledby="broken-link-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
-            <Bug size={15} aria-hidden="true" /> REMOTE IMAGE MONITORING
+            <Link2 size={15} aria-hidden="true" /> CHECK REMOTE IMAGE URLS
           </span>
-          <h2 id="broken-link-purpose">
-            Find broken featured images without scanning your entire website.
+          <h2 id="broken-link-intro">
+            Find persistent image failures before they stay hidden in old posts.
           </h2>
           <p>
-            Remote images can disappear when hosting changes, access is restricted, or
-            a file is removed. FIFU checks image URLs encountered while WordPress
-            renders featured images, and lists an affected post only after the URL
-            fails multiple checks. Monitoring is designed to spread the work over
-            normal site activity instead of trying to validate every image at once.
+            When image files move or disappear from another host, the URL saved for a post
+            can stop working without an obvious record in WordPress. Turn on Link Checker
+            to queue FIFU featured-image URLs as pages render, then review URLs that fail
+            repeated checks. This helps you focus repairs on affected posts instead of
+            opening them one by one; it is useful when you rely on remote featured images
+            and optional when your images are stored locally or you do not need ongoing
+            monitoring.
           </p>
         </div>
         <div className="feature-highlight-visual">
           <img
-            src="/images/broken-link-checker-guide-1.webp"
-            alt="Four-step Broken Link Checker workflow: enable the feature, let visitors load pages, check URLs one at a time with 24-hour spacing, and review URLs after three failures."
+            src="/images/broken-link-checker-guide-1.png"
+            alt="Enable Link Checker, render a post with a featured image, and review a failed image URL in the Broken Links table"
           />
         </div>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="broken-link-use-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Globe size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="broken-link-use-title">
-              Keep track of images hosted outside WordPress.
-            </h2>
-          </div>
-        </div>
-        <p>
-          This is useful for sites with many posts, pages, or products using{' '}
-          <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-          You can review persistent image-link failures without opening every post
-          manually. FIFU monitors the primary remote featured-image URL, not every
-          image inside the post body or product gallery.
-        </p>
-        <p>
-          <strong>Checking depends on site activity.</strong> A visitor or search bot
-          can trigger a check when WordPress actually renders the featured image.
-          Older posts that are never requested may not be checked. When a page is
-          served entirely from a cache, that visit may not run WordPress or queue
-          a new check.
-        </p>
-      </section>
-
-      <section
-        className="activation-feature-section"
-        aria-labelledby="broken-link-enable-title"
-      >
+      <section className="activation-feature-section" aria-labelledby="blc-enable-title">
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">SET UP THE CHECKER</span>
-            <h2 id="broken-link-enable-title">
-              Enable monitoring and let your site collect results.
+            <span className="activation-feature-kicker">START MONITORING</span>
+            <h2 id="blc-enable-title">
+              Enable the check and let eligible pages enter the queue.
             </h2>
           </div>
         </div>
@@ -8033,229 +8003,180 @@ function BrokenLinkCheckerGuide() {
           <li>
             <span>2</span>
             <p>
-              Turn on <strong>Link Checker</strong>. No API key, URL list,
-              or separate scan schedule is required.
+              Turn on <strong>Link Checker</strong>. This is the only checker setting; you
+              do not need an API key, a list of URLs, or a scan schedule.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Visit a page that uses a FIFU remote featured image, or let your
-              normal site traffic load it. Eligible URLs are queued in the
-              background when WordPress generates the image output.
+              Let WordPress render pages that use remote FIFU featured images. This is
+              useful when you rely on{' '}
+              <Link to="/features/remote-featured-image/">Remote Featured Image</Link> for
+              post images. The direct image URL is queued in the background when the
+              featured-image output is generated.
             </p>
           </li>
           <li>
             <span>4</span>
             <p>
-              Return to <strong>Broken Link Checker → Broken Links</strong> after
-              your site has had time to check images. A new failure does not
-              appear in the list immediately.
+              Open <strong>Broken Link Checker → Broken Links</strong> to review any URLs
+              that meet the failure threshold.
             </p>
           </li>
         </ol>
-      </section>
-
-      <section
-        className="activation-feature-section"
-        aria-labelledby="broken-link-rules-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <ShieldCheck size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">HOW CHECKING WORKS</span>
-            <h2 id="broken-link-rules-title">
-              One queued check at a time, with daily retries.
-            </h2>
-          </div>
-        </div>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Traffic-driven checks</dt>
-            <dd>
-              When a supported FIFU featured image is requested during page
-              rendering, its direct HTTP or HTTPS URL can enter the queue.
-              The checker does not independently crawl every post on your site.
-            </dd>
-          </div>
-          <div>
-            <dt>Lightweight processing</dt>
-            <dd>
-              A background worker checks one queued URL at a time. It first
-              makes a lightweight request instead of downloading the full image,
-              which helps avoid overloading the website.
-            </dd>
-          </div>
-          <div>
-            <dt>Once per day, per URL</dt>
-            <dd>
-              The same URL becomes eligible for another check after 24 hours.
-              Multiple posts using the same image URL share its check history.
-            </dd>
-          </div>
-          <div>
-            <dt>Three consecutive failures</dt>
-            <dd>
-              A URL is considered broken after three failed checks. A successful
-              response resets its failure count to zero, so a temporary outage
-              does not immediately put an image on the list.
-            </dd>
-          </div>
-          <div>
-            <dt>What counts as a response</dt>
-            <dd>
-              The checker considers HTTP status codes from 200 through 399
-              successful. Other statuses or request errors count as failures.
-              It checks HTTP availability, not whether every successful
-              response contains a visually correct image.
-            </dd>
-          </div>
-        </dl>
         <p>
-          Because repeat attempts are separated by at least a day and require
-          the URL to be encountered again, it may take several days and several
-          page requests before a broken link appears.
+          The checker accepts valid direct <code>http</code> and <code>https</code> URLs.
+          It monitors the primary FIFU featured-image URL associated with a post; it does
+          not crawl every post, inspect images embedded in post text, or check every
+          gallery image. A URL shared by multiple posts uses one check history.
         </p>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="broken-link-results-title"
-      >
+      <section className="activation-feature-section" aria-labelledby="blc-results-title">
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
             <ListFilter size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">REVIEW AND REPAIR</span>
-            <h2 id="broken-link-results-title">
-              Open the affected post and replace its image URL.
-            </h2>
+            <span className="activation-feature-kicker">UNDERSTAND THE RESULTS</span>
+            <h2 id="blc-results-title">A URL appears after three failed checks.</h2>
+          </div>
+        </div>
+        <dl className="feature-guide-options">
+          <div>
+            <dt>Checks run in the background</dt>
+            <dd>
+              The worker processes one queued URL at a time. It sends an HTTP HEAD
+              request; if the server does not support HEAD (status 405 or 501), it retries
+              with a one-byte range request. Requests allow up to three redirects and an
+              eight-second timeout.
+            </dd>
+          </div>
+          <div>
+            <dt>Retries are at least 24 hours apart</dt>
+            <dd>
+              A previously checked URL is eligible again after 24 hours and only when it
+              is encountered again during featured-image rendering. Expect several days
+              for three failures if the site has low traffic or pages are served from
+              cache.
+            </dd>
+          </div>
+          <div>
+            <dt>Success clears its failure count</dt>
+            <dd>
+              HTTP responses from 200 through 399 count as success and reset the count to
+              zero. Other response codes and request errors add a failure. The check
+              measures whether the URL responds, not whether the response contains the
+              intended image.
+            </dd>
+          </div>
+          <div>
+            <dt>Broken Links table</dt>
+            <dd>
+              The table lists the post and its broken image URL as text. It excludes posts
+              in Trash, auto-drafts, and attachments. You need a WordPress account with
+              the <code>manage_options</code> capability to load the table. If no URLs
+              meet the threshold, the table displays “No Broken Links.”
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section className="activation-feature-section" aria-labelledby="blc-repair-title">
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Wrench size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">REPAIR A LISTED URL</span>
+            <h2 id="blc-repair-title">Update the source on the affected post.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              Open <strong>FIFU → Settings → Image → Broken Link Checker → Broken Links</strong>.
-              The table shows <strong>Post</strong> and <strong>Broken Image URL</strong>.
+              In{' '}
+              <strong>
+                FIFU → Settings → Image → Broken Link Checker → Broken Links
+              </strong>
+              , select the post title to open its editor. Copy the URL shown in the second
+              column into a browser tab if you want to inspect the current source.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Click the post title to open its editor. The broken image URL is
-              also linked, so you can inspect the original source.
-            </p>
-          </li>
-          <li>
-            <span>3</span>
-            <p>
-              Replace the URL with a working, publicly accessible image and
-              save the post. The list reflects current image associations
-              and recorded failures; it is not a record of repairs you made.
+              Replace the post’s featured-image URL with a working image address and save
+              the post. The table reflects current image associations and recorded
+              failures; it is not a repair history.
             </p>
           </li>
         </ol>
         <p>
-          You need an administrator-level account with the WordPress{' '}
-          <code>manage_options</code> capability to load this results table.
-          The table excludes trashed posts, auto-drafts, and attachments.
-        </p>
-      </section>
-
-      <section
-        className="activation-feature-section"
-        aria-labelledby="broken-link-related-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">RELATED FEATURES</span>
-            <h2 id="broken-link-related-title">
-              Monitoring a link is different from displaying a fallback.
-            </h2>
-          </div>
-        </div>
-        <p>
-          Broken Link Checker identifies repeatedly failing URLs so you can
-          repair them. <Link to="/features/replace-not-found-image/">Replace Not Found Image</Link>{' '}
-          instead shows a backup image when a supported image fails to load
-          in a visitor's browser. You can use the two features together:
-          one improves the visitor's experience, and the other helps you
-          find the original URLs that need attention.
+          If a URL is still failing, it can remain listed until a successful check resets
+          its failure count. For a visitor-facing substitute while a remote image fails to
+          load in the browser, you can also use{' '}
+          <Link to="/features/replace-not-found-image/">Replace Not Found Image</Link>; it
+          does not repair or replace the stored source URL.
         </p>
       </section>
 
       <section
         className="activation-feature-section activation-feature-help"
-        aria-labelledby="broken-link-troubleshoot-title"
+        aria-labelledby="blc-troubleshoot-title"
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon help">
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="broken-link-troubleshoot-title">
-              Why a visibly broken image might not be listed yet.
-            </h2>
+            <span className="activation-feature-kicker">IF A URL IS MISSING</span>
+            <h2 id="blc-troubleshoot-title">Check eligibility, timing, and access.</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            <strong>The post was not visited:</strong> the checker only queues
-            direct featured-image URLs encountered during WordPress image rendering.
-            It does not automatically work through every old post.
+            <strong>No row yet:</strong> confirm Link Checker is enabled and that
+            WordPress has rendered the post’s featured image. A full-page cache can serve
+            HTML without running WordPress, so that visit may not queue a check.
           </li>
           <li>
-            <strong>The page came from cache:</strong> serving cached HTML
-            without running WordPress may not trigger a new check.
+            <strong>The image looks wrong but is not listed:</strong> an HTTP response
+            from 200–399 is treated as available even if it is the wrong file or an error
+            page. Check the URL itself and the response from its host.
           </li>
           <li>
-            <strong>Not enough attempts:</strong> the same URL must fail three
-            times, with new attempts eligible after 24 hours. A successful
-            check resets the failure counter.
-          </li>
-          <li>
-            <strong>The URL responds successfully:</strong> a host can send an
-            HTTP success status while returning an unexpected file or page.
-            The checker measures request availability, not image content.
-          </li>
-          <li>
-            <strong>The results table is unavailable:</strong> verify that the
-            feature is enabled and your account has permission to manage
-            WordPress settings.
+            <strong>The table will not load:</strong> use an account with the{' '}
+            <code>manage_options</code> capability. This permission is required for the
+            results request.
           </li>
         </ul>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="broken-link-cli-title"
-      >
+      <section className="activation-feature-section" aria-labelledby="blc-cli-title">
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
             <Terminal size={19} aria-hidden="true" />
           </span>
           <div>
             <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="broken-link-cli-title">
-              Enable or disable checking from a terminal.
-            </h2>
+            <h2 id="blc-cli-title">Change the same toggle from a terminal.</h2>
           </div>
         </div>
-        <p>From your WordPress installation, enable monitoring with:</p>
-        <pre><code>wp fifu image --validate-featured-image-urls=on</code></pre>
-        <p>To disable it:</p>
-        <pre><code>wp fifu image --validate-featured-image-urls=off</code></pre>
+        <p>To enable checking from your WordPress installation, run:</p>
+        <pre>
+          <code>wp fifu image --validate-featured-image-urls=on</code>
+        </pre>
+        <p>To disable checking instead, run:</p>
+        <pre>
+          <code>wp fifu image --validate-featured-image-urls=off</code>
+        </pre>
         <p>
-          This changes the same toggle as the admin settings. It does not start
-          a bulk scan. See the <Link to="/features/wp-cli/">WP-CLI guide</Link>.
+          Each command changes the same setting as the admin toggle; neither starts a bulk
+          scan. For other terminal workflows, see the{' '}
+          <Link to="/features/wp-cli/">WP-CLI guide</Link>.
         </p>
       </section>
 
@@ -8273,7 +8194,6 @@ function BrokenLinkCheckerGuide() {
     </Page>
   );
 }
-
 function ModifyPostContentGuide() {
   return (
     <Page
