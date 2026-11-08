@@ -14830,8 +14830,8 @@ function FifuProductGalleryGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Replace WooCommerce’s product image area with one gallery for featured media,
-        product gallery items, and optional variation media.
+        Display remote images, optional videos, and variation-specific views in
+        a WooCommerce product gallery without uploading media files.
       </p>
       <section className="feature-highlight" aria-labelledby="fifu-gallery-intro">
         <div className="feature-highlight-copy">
@@ -14840,12 +14840,12 @@ function FifuProductGalleryGuide() {
           </span>
           <h2 id="fifu-gallery-intro">Use a gallery that works with remote media.</h2>
           <p>
-            Some theme galleries depend on image dimensions saved in the database. FIFU’s
-            gallery renders its remote image and video items without that dimension-saving
-            step, so you can present product media together without first processing every
-            remote image for dimensions. Use it when a product needs multiple views,
-            video, or variation-specific media; keep WooCommerce’s gallery if its current
-            display already meets your needs.
+            Some theme galleries depend on image dimensions stored in WordPress,
+            which can make externally hosted images harder to display. FIFU’s gallery
+            handles remote product media without first saving those dimensions.
+            Use it to show several product views, supported videos, or images that
+            change with a selected variation. If your theme’s default gallery
+            already works well with your images, switching is optional.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -14872,39 +14872,45 @@ function FifuProductGalleryGuide() {
           <li>
             <span>1</span>
             <p>
-              In WordPress, open <strong>FIFU → Settings → WooCommerce</strong>. In the{' '}
-              <strong>FIFU product gallery</strong> box, turn on the gallery switch.
+              In WordPress, go to <strong>FIFU → Settings → WooCommerce</strong>.
+              Find <strong>FIFU Product Gallery</strong> and enable{' '}
+              <strong>FIFU product gallery</strong>. This lets FIFU replace the
+              usual WooCommerce image area on eligible single-product pages.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Edit a product. Add image URLs in <strong>Image/video gallery</strong> and
-              video URLs in <strong>Video gallery</strong>. Drag items to set their order,
-              then save or update the product.
+              Edit a WooCommerce product. Set its main image or featured media
+              in FIFU’s featured-media area. Then open{' '}
+              <strong>Image/video gallery</strong> and select an empty or plus tile.
+              Paste an image URL (or a supported video URL when video support
+              is enabled), close the tile editor, and add more items as needed.
+              Drag tiles to reorder them, then save or update the product.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Open the product page to view its featured media and gallery items together.
-              For remote image URLs, follow the{' '}
+              Open the product page and confirm that the main image and other
+              gallery items appear in the expected order. For additional image
+              URLs, see{' '}
               <Link to="/features/remote-product-gallery-images/">
-                remote product gallery image guide
-              </Link>
-              ; for variation-level media, follow the{' '}
+                Remote Product Gallery Images
+              </Link>. To give each color or size its own images, see{' '}
               <Link to="/features/remote-variation-images/">
-                remote variation images guide
-              </Link>
-              .
+                Remote Variation Images
+              </Link>.
             </p>
           </li>
         </ol>
         <p>
-          To place the gallery at a specific point in product content, add{' '}
-          <code>[fifu_gallery]</code>. It uses the current post. For a different product,
-          replace <code>123</code> with that product’s ID in{' '}
-          <code>[fifu_gallery post_id="123"]</code>.
+          To place a gallery manually, use <code>[fifu_gallery]</code> in the
+          current product’s content, or <code>[fifu_gallery post_id="123"]</code>{' '}
+          to show the gallery for product ID <code>123</code>. Replace that ID with
+          your own. On a normal product page, FIFU can already display the
+          gallery automatically, so avoid inserting the shortcode there unless
+          you intend an additional gallery.
         </p>
       </section>
       <section
@@ -14931,22 +14937,27 @@ function FifuProductGalleryGuide() {
           <div>
             <dt>Videos before images</dt>
             <dd>
-              Place gallery video items before gallery images when the featured media type
-              does not already determine their order.
+              Place video gallery items before image gallery items when the
+              featured-media type does not already determine that order.
+              The main featured media still comes first.
             </dd>
           </div>
           <div>
             <dt>Variantions images in the main gallery</dt>
             <dd>
-              Include variable product variation media in the main gallery. Selecting a
-              variation filters the displayed variation media to that selection.
+              Include the first image of each variation alongside the parent
+              product’s images before a variation is chosen. When shoppers select
+              the attributes for a matching variation, the gallery switches to
+              its own image set; if that variation has no images, the parent
+              product gallery is used.
             </dd>
           </div>
         </dl>
         <p>
           These switches are in{' '}
-          <strong>FIFU → Settings → WooCommerce → FIFU product gallery</strong>. The
-          adjacent <strong>Custom content</strong> tab opens the iframe workflow below.
+          <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>.
+          The adjacent <strong>Custom content</strong> tab describes how
+          to display an iframe instead of an image in the lightbox.
         </p>
         <p>
           Gallery navigation uses the shared controls in{' '}
@@ -15004,12 +15015,17 @@ function FifuProductGalleryGuide() {
           </div>
         </dl>
         <p>
-          WooCommerce’s <Link to="/features/lightbox-and-zoom/">Lightbox and Zoom</Link>{' '}
-          settings control opening product media in a lightbox and zooming images. For a
-          widget area, add the <strong>(FIFU) Product gallery</strong> widget; it renders
-          the current product’s gallery and uses these slider settings. See the practical{' '}
-          <Link to="/features/widgets/">Widgets guide</Link> for placing a FIFU widget in
-          a widget area.
+          To open images in a lightbox, enable <strong>Lightbox</strong> under{' '}
+          <strong>FIFU → Settings → WooCommerce → Lightbox and Zoom</strong>,
+          or enable <strong>Show gallery on click</strong> under{' '}
+          <strong>FIFU → Settings → Featured Slider</strong>. The WooCommerce{' '}
+          <strong>Zoom</strong> setting can enable magnification on supported
+          desktop image slides, not video slides. For details, see{' '}
+          <Link to="/features/lightbox-and-zoom/">Lightbox and Zoom</Link>.
+          To display a gallery in a widget area, add the{' '}
+          <strong>(FIFU) Product gallery</strong> widget. It uses the current
+          post’s product gallery; see the{' '}
+          <Link to="/features/widgets/">Widgets guide</Link>.
         </p>
       </section>
       <section className="activation-feature-section" aria-labelledby="fifu-gallery-cli">
@@ -15067,30 +15083,35 @@ function FifuProductGalleryGuide() {
           </div>
         </div>
         <p>
-          Use an item as a lightbox link to a 360-degree view, PDF, map, web page, or
-          other content that can render in an iframe. This replaces that item’s image or
-          video in the lightbox; the gallery still needs an image thumbnail to select it.
+          Show a 360-degree product view, PDF, map, or other embeddable web page
+          when a shopper opens an image in the lightbox. The product image
+          remains visible in the gallery; the iframe URL supplies the content
+          displayed after clicking it. The destination must allow iframe embedding.
         </p>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              Edit the product and choose a slot in <strong>Image/video gallery</strong>.
+              Edit the product and select an image tile in{' '}
+              <strong>Image/video gallery</strong>.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Fill in both <strong>Image URL</strong> for its thumbnail and{' '}
-              <strong>iframe URL</strong> for the content.
+              Enter the gallery image address in{' '}
+              <strong>Image/Video URL</strong> and the embeddable page
+              address in <strong>iframe URL</strong>. Both fields are needed
+              for this image-based custom lightbox item.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Save the product and open that gallery item in the lightbox. Turn on
-              WooCommerce <strong>Lightbox</strong> or the slider’s{' '}
-              <strong>Show gallery on click</strong> option to open it.
+              Close the tile editor, save the product, and enable{' '}
+              <strong>Lightbox</strong> or <strong>Show gallery on click</strong>
+              as described above. Open the product page and click the
+              image to view the custom content.
             </p>
           </li>
         </ol>
@@ -15108,28 +15129,29 @@ function FifuProductGalleryGuide() {
             <h2 id="fifu-gallery-conditions">Check these conditions if it is missing.</h2>
           </div>
         </div>
-        <ul className="activation-feature-steps">
+        <ul className="activation-feature-help-list">
           <li>
-            <span>!</span>
-            <p>
-              Automatic replacement requires WooCommerce to be active, gallery mode
-              enabled, and a single product page outside the Elementor editor.
-            </p>
+            <strong>No automatic gallery:</strong> WooCommerce must be active,
+            <strong> FIFU product gallery</strong> must be enabled, and the
+            page must use WooCommerce’s normal single-product image template.
+            Automatic replacement is skipped inside the Elementor editor.
           </li>
           <li>
-            <span>!</span>
-            <p>
-              A product with no featured media or gallery items has nothing to show.
-              Confirm the product’s featured media and saved gallery items.
-            </p>
+            <strong>Missing images:</strong> confirm the product has saved featured
+            media or gallery items and that the remote URLs still load. The
+            gallery cannot display images that their hosts no longer serve.
           </li>
           <li>
-            <span>!</span>
-            <p>
-              A theme that replaces WooCommerce’s single-product image template may change
-              how automatic replacement works. Use <code>[fifu_gallery]</code> in product
-              content when you need to place the gallery manually.
-            </p>
+            <strong>Unexpected variation images:</strong> check whether{' '}
+            <strong>Variantions images in the main gallery</strong> is enabled.
+            It adds the variations’ first images before a specific variation
+            has been selected.
+          </li>
+          <li>
+            <strong>Theme uses a different image template:</strong> automatic
+            replacement may not run. You can place{' '}
+            <code>[fifu_gallery]</code> manually in suitable product content;
+            avoid rendering it twice on the same page.
           </li>
         </ul>
       </section>
