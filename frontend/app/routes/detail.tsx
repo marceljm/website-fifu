@@ -3290,8 +3290,8 @@ function LightboxAndZoomGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Let shoppers open a larger product gallery or inspect image details with desktop
-        hover zoom.
+        Open WooCommerce product images in a larger lightbox, or magnify image
+        details with desktop hover zoom.
       </p>
 
       <section className="feature-highlight" aria-labelledby="lightbox-zoom-intro">
@@ -3299,12 +3299,13 @@ function LightboxAndZoomGuide() {
           <span className="feature-highlight-kicker">
             <Search size={15} aria-hidden="true" /> PRODUCT IMAGE DETAILS
           </span>
-          <h2 id="lightbox-zoom-intro">Give product photos room to be inspected.</h2>
+          <h2 id="lightbox-zoom-intro">Help shoppers see the details before buying.</h2>
           <p>
-            Product-page images are otherwise limited to their displayed size. Enable a
-            lightbox for an enlarged gallery, Zoom for hover magnification, or both. This
-            helps shoppers check details that are hard to see in the page layout; leave
-            both off if your theme already gives you the viewing behavior you want.
+            Lightbox lets shoppers open product media in an overlay and browse
+            larger views. Zoom magnifies eligible product photos when a desktop
+            visitor moves the pointer over them. These are separate controls:
+            you can enable either one or both. They are useful when product
+            details are difficult to see at the size displayed by your theme.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -3332,29 +3333,34 @@ function LightboxAndZoomGuide() {
           <li>
             <span>1</span>
             <p>
-              In WordPress, open <strong>FIFU → Settings → WooCommerce</strong>, then find
-              the <strong>Zoom</strong> panel.
+              In WordPress, go to <strong>FIFU → Settings → WooCommerce</strong>
+              and find the <strong>Lightbox and Zoom</strong> section.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Enable <strong>Lightbox</strong> to let shoppers open the product media
-              gallery. On product pages, this also enables the slider gallery behavior.
+              Enable <strong>Lightbox</strong> to allow product media to open in
+              a larger viewer when clicked. If you use{' '}
+              <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>,
+              this also enables its clickable gallery viewer on product pages.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Enable <strong>Zoom</strong> to magnify image slides when shoppers hover.
-              The two switches are independent, so you can use either one or both.
+              Enable <strong>Zoom</strong> for hover magnification on supported
+              product image slides on desktop. This setting does not enable
+              hover zoom on mobile devices or video slides, and it is independent
+              of <strong>Lightbox</strong>.
             </p>
           </li>
           <li>
             <span>4</span>
             <p>
-              Save the switches you changed, open a WooCommerce product page, and try the
-              enabled interaction.
+              Wait for the settings to confirm they are saved, then refresh a
+              product page. Click an image to test Lightbox; move your pointer
+              over an image to test desktop Zoom.
             </p>
           </li>
         </ol>
@@ -3370,39 +3376,50 @@ function LightboxAndZoomGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">COVERAGE AND CONDITIONS</span>
-            <h2 id="lightbox-zoom-conditions-title">Know when zoom is available.</h2>
+            <h2 id="lightbox-zoom-conditions-title">If lightbox or zoom is missing.</h2>
           </div>
         </div>
         <dl className="fifu-fields-options">
           <div>
-            <dt>Page type</dt>
-            <dd>These Lightbox and Zoom controls target WooCommerce product pages.</dd>
-          </div>
-          <div>
-            <dt>Mobile</dt>
-            <dd>Hover zoom is not initialized on mobile devices.</dd>
-          </div>
-          <div>
-            <dt>Display width</dt>
+            <dt>Product page</dt>
             <dd>
-              If the slider or its image is under 175 pixels wide, the slider is replaced
-              by the first image and zoom is skipped.
+              Check the live WooCommerce single-product page rather than the
+              editor or a product listing. These settings are intended for
+              product media, not every image across the website.
             </dd>
           </div>
           <div>
-            <dt>Video slides</dt>
+            <dt>Mobile devices</dt>
             <dd>
-              Zoom is omitted for video slides and recognized video thumbnails; it applies
-              to eligible image slides.
+              Hover zoom is not initialized on mobile devices. Lightbox
+              viewing is a separate interaction and may still be available.
             </dd>
           </div>
           <div>
-            <dt>Theme display</dt>
+            <dt>Narrow galleries</dt>
             <dd>
-              A theme’s own WooCommerce gallery templates can change how product media
-              appears. If the lightbox or zoom is missing, first confirm you are testing a
-              product page and the relevant switch is enabled, then check whether the
-              theme supplies its own gallery.
+              When a FIFU slider or its image is narrower than 175 pixels,
+              FIFU may show the first image instead of the slider. In that
+              layout, its slider-based zoom will not initialize.
+            </dd>
+          </div>
+          <div>
+            <dt>Video and image sources</dt>
+            <dd>
+              Hover zoom applies to eligible photos, not video slides or
+              recognized video thumbnails. A remote image must also be
+              accessible from the storefront to display and magnify correctly.
+            </dd>
+          </div>
+          <div>
+            <dt>Theme and gallery compatibility</dt>
+            <dd>
+              A theme that replaces WooCommerce’s product-image template may use
+              its own lightbox or zoom controls, or prevent FIFU Product Gallery
+              from replacing the default display. Confirm the relevant
+              switch is on and check the theme’s gallery settings. See the{' '}
+              <Link to="/features/fifu-product-gallery/">FIFU Product Gallery guide</Link>{' '}
+              if you want FIFU to render the product gallery.
             </dd>
           </div>
         </dl>
