@@ -11201,22 +11201,22 @@ function QuickBuyGuide() {
       className="feature-guide-page activation-feature-page"
     >
       <p className="lead">
-        Let shoppers open FIFU product media in a lightbox on WooCommerce shop and
-        category archives, then continue to checkout.
+        Let customers preview WooCommerce products and purchase them directly
+        from shop and category pages, without opening each product page.
       </p>
 
       <section className="feature-highlight" aria-labelledby="quick-buy-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
-            <ShoppingCart size={15} aria-hidden="true" /> SHORTEN THE PRODUCT PATH
+            <ShoppingCart size={15} aria-hidden="true" /> SHOP WITHOUT LEAVING THE GRID
           </span>
-          <h2 id="quick-buy-intro">Move from the archive to purchase sooner.</h2>
+          <h2 id="quick-buy-intro">Preview a product and buy it sooner.</h2>
           <p>
-            Quick Buy puts a product preview and purchase controls over the archive, so
-            shoppers can review a product and start checkout without first opening its
-            full product page. Use it when your shop or product-category grid needs a
-            shorter route to purchase; leave it off if you want every shopper to use the
-            standard product page.
+            Quick Buy adds an expand icon to product images in WooCommerce shop and
+            category grids. The preview opens over the current page and can show
+            product images, descriptions, pricing, and purchase options. Customers
+            can choose an item and head to checkout without visiting its full
+            product page first.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -11236,8 +11236,8 @@ function QuickBuyGuide() {
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">ENABLE · PREVIEW · BUY</span>
-            <h2 id="quick-buy-workflow-title">Enable the archive shortcut.</h2>
+            <span className="activation-feature-kicker">SETUP AND SHOPPER WORKFLOW</span>
+            <h2 id="quick-buy-workflow-title">Enable Quick Buy and test it.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
@@ -11252,24 +11252,28 @@ function QuickBuyGuide() {
           <li>
             <span>2</span>
             <p>
-              Switch on <strong>Quick buy</strong>; the toggle saves when you change it.
-              The three text fields below it save automatically when you change a value.
+              Turn on <strong>Quick buy</strong>. The setting saves when you
+              change it. You can leave the optional text fields unchanged
+              to use their defaults.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              On a shop or product-category archive, select the lightbox/expand icon on a
-              product’s FIFU featured media. The lightbox shows product details and media,
-              price and availability, plus purchase controls.
+              Visit the storefront's <strong>Shop</strong> page or a
+              product-category page. Click a product image or use its
+              expand icon to open the Quick Buy preview. Where available,
+              you can browse the item's images and videos, read its
+              description, and check its price and availability.
             </p>
           </li>
           <li>
             <span>4</span>
             <p>
-              Choose any required variation and quantity, then select the purchase button.
-              A simple product or selected variation opens checkout with that item and
-              quantity; an external product opens its configured product URL.
+              For a simple product, choose a quantity and use the purchase button
+              to proceed to checkout. For a variable product, select its
+              required options first. An external or affiliate product
+              instead takes the customer to its configured purchase URL.
             </p>
           </li>
         </ol>
@@ -11284,117 +11288,136 @@ function QuickBuyGuide() {
             <ShoppingCart size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">OPTIONAL LIGHTBOX CONTENT</span>
+            <span className="activation-feature-kicker">OPTIONAL SETTINGS</span>
             <h2 id="quick-buy-controls-title">
-              Customize the button and product details.
+              Customize what shoppers see.
             </h2>
           </div>
         </div>
         <p>
-          These three fields are optional. Enter your values under{' '}
-          <strong>FIFU → Settings → WooCommerce → Quick Buy</strong>; each field saves
-          automatically when changed.
+          In <strong>FIFU → Settings → WooCommerce → Quick Buy</strong>, the
+          following three fields are optional. They save when their values
+          change and affect the information shown in the preview.
         </p>
         <dl className="fifu-fields-options">
           <div>
             <dt>Text button</dt>
             <dd>
-              Sets the button label. If blank, the product’s own button text is used when
-              present; otherwise the label is “Buy now.”
+              Sets the default purchase-button label, such as “Buy now.”
+              A product's own configured button text takes precedence.
+              If neither is provided, FIFU uses “Buy now.”
             </dd>
           </div>
           <div>
             <dt>Disclaimer</dt>
             <dd>
-              Adds a short disclaimer beneath the purchase button in the lightbox. Leave
-              blank to omit it.
+              Shows a short message beneath the purchase button.
+              Leave it empty if no extra message is needed.
             </dd>
           </div>
           <div>
             <dt>Custom field</dt>
             <dd>
-              Enter a product metadata key to show that product’s saved value in the
-              lightbox. Leave blank when you do not need extra metadata.
+              Enter a product custom-field key, for example one used
+              to store a specification or note. FIFU shows the value
+              saved for that product in the preview when present.
+              Leave it empty to hide this extra information.
             </dd>
           </div>
         </dl>
       </section>
 
       <section
-        className="activation-feature-section activation-feature-help"
+        className="activation-feature-section"
         aria-labelledby="quick-buy-limits-title"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <ShoppingCart size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">SUPPORTED PRODUCT TYPES</span>
+            <h2 id="quick-buy-limits-title">How Quick Buy handles each product.</h2>
+          </div>
+        </div>
+        <dl className="fifu-fields-options">
+          <div>
+            <dt>Simple products</dt>
+            <dd>
+              Show available pricing, stock information, and a quantity field
+              when the product has a regular price. The purchase button
+              sends the item and chosen quantity toward checkout.
+            </dd>
+          </div>
+          <div>
+            <dt>Variable products</dt>
+            <dd>
+              Shoppers select the required attributes, such as size or color,
+              before the purchase button becomes available. The preview
+              updates the displayed price and media when variation
+              information is available. An out-of-stock variation cannot
+              be purchased through Quick Buy.
+            </dd>
+          </div>
+          <div>
+            <dt>External or affiliate products</dt>
+            <dd>
+              The button opens the external purchase URL configured for
+              that WooCommerce product instead of adding it to
+              your store's checkout.
+            </dd>
+          </div>
+        </dl>
+        <p>
+          Quick Buy's built-in purchase controls cover simple, variable,
+          and external products. Other product types may require the
+          standard product page or a separate purchasing flow.
+        </p>
+      </section>
+
+      <section
+        className="activation-feature-section activation-feature-help"
+        aria-labelledby="quick-buy-troubleshooting-title"
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon help">
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">
-              COVERAGE · AVAILABILITY · TROUBLESHOOTING
-            </span>
-            <h2 id="quick-buy-limits-title">Know when the shortcut appears.</h2>
+            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
+            <h2 id="quick-buy-troubleshooting-title">
+              If the preview or purchase button is missing.
+            </h2>
           </div>
         </div>
-        <ul className="activation-feature-steps">
+        <ul className="activation-feature-help-list">
           <li>
-            <span>
-              <CircleAlert size={16} aria-hidden="true" />
-            </span>
-            <p>
-              <strong>Where it runs:</strong> WooCommerce shop and product-category
-              archives when Quick Buy is on. Its scripts and styles are not loaded on
-              product pages or the cart.
-            </p>
+            <strong>No expand icon:</strong> Confirm WooCommerce is active,
+            <strong> Quick buy</strong> is enabled, and you are viewing
+            the Shop page or a product-category page. Quick Buy is
+            not intended for single-product or cart pages.
           </li>
           <li>
-            <span>
-              <CircleAlert size={16} aria-hidden="true" />
-            </span>
-            <p>
-              <strong>Simple products:</strong> show price, stock status, and quantity
-              when a regular price exists. The quantity is passed to checkout.
-            </p>
+            <strong>No product preview:</strong> Make sure the product has
+            a featured image that appears on the shop grid, then test
+            clicking that image. Themes that replace the standard
+            product-card markup may need compatibility adjustments.
           </li>
           <li>
-            <span>
-              <CircleAlert size={16} aria-hidden="true" />
-            </span>
-            <p>
-              <strong>Variable products:</strong> shoppers choose from available attribute
-              values; the purchase button becomes available after a valid variation is
-              selected. Unavailable/out-of-stock variations cannot be purchased.
-            </p>
+            <strong>No purchase button for a variation:</strong> Select all
+            required attributes and check that the combination is in stock.
           </li>
           <li>
-            <span>
-              <CircleAlert size={16} aria-hidden="true" />
-            </span>
-            <p>
-              <strong>External products:</strong> the button follows the product’s
-              configured URL rather than adding the item to checkout.
-            </p>
-          </li>
-          <li>
-            <span>
-              <CircleAlert size={16} aria-hidden="true" />
-            </span>
-            <p>
-              <strong>Other product types:</strong> the Quick Buy purchase form is built
-              for simple, variable, and external products. Other WooCommerce product types
-              do not get one of these purchase forms.
-            </p>
-          </li>
-          <li>
-            <span>
-              <CircleAlert size={16} aria-hidden="true" />
-            </span>
-            <p>
-              <strong>No icon or lightbox:</strong> confirm WooCommerce is active, Quick
-              buy is enabled, you are on a shop/category archive, and the product has FIFU
-              featured media.
-            </p>
+            <strong>Need a different purchase label:</strong> Check both
+            the optional <strong>Text button</strong> field and the
+            product's own button text; the product-specific value wins.
           </li>
         </ul>
+        <p>
+          Quick Buy's archive preview is separate from the{' '}
+          <Link to="/features/lightbox-and-zoom/">Lightbox and Zoom</Link>{' '}
+          controls for product galleries.
+        </p>
       </section>
 
       <section className="feature-detail-cta">
