@@ -10878,19 +10878,20 @@ function WooCommerceImportGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Add FIFU media metadata to your WooCommerce product CSV and import images, video,
-        sliders, and iframe content with each product.
+        Import remote featured images, galleries, videos, and other FIFU media with
+        WooCommerce's built-in product CSV importer.
       </p>
       <section className="feature-highlight" aria-labelledby="wc-import-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ShoppingCart size={15} aria-hidden="true" /> WOOCOMMERCE PRODUCT IMPORT
           </span>
-          <h2 id="wc-import-intro">Import product media in the same catalog pass.</h2>
+          <h2 id="wc-import-intro">Import product details and remote media together.</h2>
           <p>
-            Product CSVs often contain catalog details but leave image and gallery work
-            for later. Map FIFU media columns once, and each inserted product carries its
-            remote media into FIFU without a separate editor pass.
+            If your product spreadsheet already contains image or video URLs,
+            you can bring them into FIFU during the normal WooCommerce CSV import.
+            Products receive their remote media without manually editing each one
+            or uploading the image files to WordPress.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -10911,13 +10912,12 @@ function WooCommerceImportGuide() {
           </div>
         </div>
         <p>
-          Use this when you create or update a catalog through WooCommerce’s product CSV
-          importer and your source already has remote media URLs. FIFU reads the mapped
-          product metadata after WooCommerce inserts each product, then synchronizes those
-          lists into its media records. That lets you maintain product details and media
-          in one repeatable import, reduces manual edits, and avoids uploading those
-          remote images into the WordPress Media Library just to attach them. If you do
-          not import products with WooCommerce CSVs, this workflow is optional.
+          Use this workflow when creating products or updating an existing catalog.
+          FIFU reads the custom metadata that WooCommerce imports for each product
+          and saves the corresponding media information. The image and video URLs
+          point to files hosted elsewhere; you do not have to upload those files
+          to the WordPress Media Library first. If you normally edit your
+          products one by one, you can continue using the FIFU product editor instead.
         </p>
       </section>
       <section className="activation-feature-section" aria-labelledby="wc-import-steps">
@@ -10927,39 +10927,73 @@ function WooCommerceImportGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">PREPARE AND IMPORT</span>
-            <h2 id="wc-import-steps">Map each CSV column to product metadata.</h2>
+            <h2 id="wc-import-steps">Prepare the CSV and run the importer.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              Prepare a WooCommerce product CSV with one column for each FIFU value you
-              need. Put multiple items in a list column in display order, separated by a
-              vertical bar (<code>|</code>).
+              Prepare a WooCommerce product CSV with your usual product fields,
+              such as <strong>Name</strong> and <strong>SKU</strong>. Add one
+              column for each FIFU field you need. Prefix custom metadata
+              headers with <code>meta:</code>, for example{' '}
+              <code>meta:fifu_list_url</code>. Separate multiple media URLs
+              within one cell with <code>|</code>, in the order you want them
+              displayed.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              In WordPress, open{' '}
-              <strong>FIFU → Settings → WooCommerce → Import → Custom fields</strong> to
-              match your columns to the keys below. The{' '}
-              <strong>Importing products...</strong> tab includes a{' '}
-              <strong>CSV example</strong> you can use as a starting layout. In the
-              WooCommerce product importer, map each CSV column to the same product
-              metadata key.
+              To find the supported field names, open{' '}
+              <strong>FIFU → Settings → WooCommerce → Import → Custom fields</strong>.
+              This tab is a <strong>reference list</strong>, not a place to
+              configure the import. The adjacent{' '}
+              <strong>Importing products...</strong> tab has a{' '}
+              <strong>CSV example</strong>; check its headers against your
+              WooCommerce import before using it.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Run the product import. When WooCommerce inserts each product, FIFU saves
-              the supported media lists and queues local metadata synchronization.
-              Products are handled in groups of up to 50 during the import request.
+              Go to <strong>Products → All Products → Import</strong> in
+              WooCommerce, select your CSV, and choose{' '}
+              <strong>Update existing products</strong> if you are updating
+              products already in the store. Use their existing IDs or SKUs
+              so WooCommerce can match the rows. Select{' '}
+              <strong>Continue</strong>.
+            </p>
+          </li>
+          <li>
+            <span>4</span>
+            <p>
+              On the <strong>Column mapping</strong> screen, check that each
+              FIFU column is mapped to <strong>Import as meta data</strong>
+              with the correct field name. Headers starting with{' '}
+              <code>meta:</code> are normally recognized automatically.
+              Correct any column mapped to <strong>Do not import</strong>,
+              then select <strong>Run the importer</strong>.
+            </p>
+          </li>
+          <li>
+            <span>5</span>
+            <p>
+              After the import finishes, open one imported product to check
+              its featured image and other media. FIFU processes the imported
+              fields and synchronizes the corresponding WooCommerce media
+              information.
             </p>
           </li>
         </ol>
+        <p>
+          For example, put{' '}
+          <code>https://example.com/front.jpg|https://example.com/side.jpg</code>{' '}
+          under <code>meta:fifu_list_url</code> and{' '}
+          <code>Front view|Side view</code> under <code>meta:fifu_list_alt</code>.
+          The first URL is the featured image; the second is a gallery image.
+        </p>
       </section>
       <section className="activation-feature-section" aria-labelledby="wc-import-fields">
         <div className="activation-feature-section-heading">
@@ -10967,8 +11001,8 @@ function WooCommerceImportGuide() {
             <Tags size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">SUPPORTED MEDIA FIELDS</span>
-            <h2 id="wc-import-fields">Use the key that matches each value.</h2>
+            <span className="activation-feature-kicker">IMAGE, VIDEO AND SLIDER FIELDS</span>
+            <h2 id="wc-import-fields">Choose the media fields you need.</h2>
           </div>
         </div>
         <dl className="fifu-fields-options">
@@ -10977,7 +11011,8 @@ function WooCommerceImportGuide() {
               <code>fifu_list_url</code>
             </dt>
             <dd>
-              Product featured image and gallery image URLs. Separate URLs with{' '}
+              Remote image URLs. The first is the product's featured image;
+              remaining URLs become its gallery images. Separate them with{' '}
               <code>|</code>.
             </dd>
           </div>
@@ -10986,9 +11021,9 @@ function WooCommerceImportGuide() {
               <code>fifu_list_alt</code>
             </dt>
             <dd>
-              Alternative text for those images, in the same order as{' '}
-              <code>fifu_list_url</code>. Keep empty positions when an image has no alt
-              text.
+              Alternative text matching the image URLs, in the same order.
+              Use <code>|</code> between descriptions; preserve empty positions
+              if an image has no alternative text.
             </dd>
           </div>
           <div>
@@ -10996,8 +11031,9 @@ function WooCommerceImportGuide() {
               <code>fifu_list_video_url</code>
             </dt>
             <dd>
-              Product featured video and video gallery URLs, separated with <code>|</code>
-              .
+              Featured video and additional video URLs, separated with{' '}
+              <code>|</code>. Image and video items belong to the same
+              product gallery, not separate WooCommerce gallery editors.
             </dd>
           </div>
           <div>
@@ -11005,33 +11041,64 @@ function WooCommerceImportGuide() {
               <code>fifu_slider_list_url</code>
             </dt>
             <dd>
-              URLs for the product’s featured slider, separated with <code>|</code>.
+              Image URLs for a FIFU Featured Slider, separated with{' '}
+              <code>|</code>. This is distinct from adding extra images to
+              the regular product gallery.
             </dd>
           </div>
           <div>
             <dt>
               <code>fifu_slider_list_alt</code>
             </dt>
-            <dd>Slider image alternative text, in the same order as the slider URLs.</dd>
+            <dd>
+              Alternative text for the slider images, in the same order
+              as <code>fifu_slider_list_url</code>.
+            </dd>
           </div>
           <div>
             <dt>
               <code>fifu_list_iframe_url</code>
             </dt>
             <dd>
-              Iframe content URLs for product media slots, separated with <code>|</code>.
+              Optional iframe URLs associated with product media items,
+              separated with <code>|</code>. These can be used for
+              embeddable content in the gallery's lightbox.
             </dd>
           </div>
+        </dl>
+        <p>
+          For standard product images and videos, use the image and video
+          list fields. Use the slider fields only when you want a{' '}
+          <Link to="/features/featured-slider/">Featured Slider</Link>.
+          A saved slider can take priority over the other featured media.
+          See <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>{' '}
+          for storefront display options.
+        </p>
+      </section>
+      <section
+        className="activation-feature-section"
+        aria-labelledby="wc-import-other-fields"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Tags size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">OPTIONAL AUTOMATION AND LINKS</span>
+            <h2 id="wc-import-other-fields">Other metadata you can import.</h2>
+          </div>
+        </div>
+        <dl className="fifu-fields-options">
           <div>
             <dt>
               <code>fifu_asin</code>
             </dt>
             <dd>
-              The product’s Amazon identifier. Use it with{' '}
+              The product's Amazon ASIN. Use it with{' '}
               <Link to="/features/auto-set-product-images-from-asin/">
                 Auto set product images from ASIN
               </Link>{' '}
-              when you use Amazon image lookup.
+              when automatic Amazon image lookup is enabled.
             </dd>
           </div>
           <div>
@@ -11039,11 +11106,11 @@ function WooCommerceImportGuide() {
               <code>fifu_finder_url</code>
             </dt>
             <dd>
-              The source webpage address FIFU checks for featured media when you use{' '}
+              A webpage address used by{' '}
               <Link to="/features/auto-set-featured-media-using-web-page-address/">
                 Auto set featured media using web page address
-              </Link>
-              .
+              </Link>{' '}
+              to find media.
             </dd>
           </div>
           <div>
@@ -11051,12 +11118,16 @@ function WooCommerceImportGuide() {
               <code>fifu_redirection_url</code>
             </dt>
             <dd>
-              The destination address for{' '}
-              <Link to="/features/page-redirection/">Page redirection</Link>, which
-              forwards visitors when they click the featured image.
+              The destination for{' '}
+              <Link to="/features/page-redirection/">Page redirection</Link>,
+              which can redirect clicks on the featured image.
             </dd>
           </div>
         </dl>
+        <p>
+          These fields support other FIFU features. Importing a value
+          does not automatically enable the feature that uses it.
+        </p>
       </section>
       <section
         className="activation-feature-section activation-feature-help"
@@ -11067,22 +11138,45 @@ function WooCommerceImportGuide() {
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">CHECK THE IMPORT</span>
-            <h2 id="wc-import-notes">If media is missing, check the mapping.</h2>
+            <span className="activation-feature-kicker">CHECK THE RESULT</span>
+            <h2 id="wc-import-notes">Avoid common import mistakes.</h2>
           </div>
         </div>
-        <p>
-          The integration runs when WooCommerce inserts a product. Check that the CSV
-          column is mapped to the exact key, list values use <code>|</code>, and each
-          alt-text item lines up with its image URL. An explicitly empty image or slider
-          URL list clears that list for the imported product.
-        </p>
-        <p>
-          When imported slider URLs synchronize successfully, FIFU treats the slider as
-          the active list for that product and clears competing image and video list
-          metadata. If you import both image and video lists, FIFU follows the priority it
-          detects in the product metadata.
-        </p>
+        <ul className="activation-feature-help-list">
+          <li>
+            <strong>A FIFU column was ignored:</strong> Check that its CSV
+            header starts with <code>meta:</code> or that you selected{' '}
+            <strong>Import as meta data</strong> on the mapping screen.
+            The name after <code>meta:</code> must match the FIFU key.
+          </li>
+          <li>
+            <strong>Images appear in the wrong order:</strong> Put the
+            featured image first in <code>fifu_list_url</code>.
+            Use <code>|</code> to separate URLs and align alternative
+            text with those positions.
+          </li>
+          <li>
+            <strong>Existing images disappeared after an update:</strong>{' '}
+            An explicitly empty imported <code>fifu_list_url</code> or{' '}
+            <code>fifu_slider_list_url</code> can clear that media
+            list. When updating products, include only the media fields
+            you intend to change. Check a small test import first.
+          </li>
+          <li>
+            <strong>Unexpected featured media:</strong> A populated
+            slider list can take priority over imported image and video
+            lists. If importing both image and video lists, the
+            selected featured-media type depends on the saved media
+            priority.
+          </li>
+          <li>
+            <strong>Product was not updated:</strong> Check its
+            ID or SKU and make sure{' '}
+            <strong>Update existing products</strong> was selected
+            for an update import. Review WooCommerce's import report
+            for skipped rows.
+          </li>
+        </ul>
       </section>
       <section className="feature-detail-cta">
         <div>
