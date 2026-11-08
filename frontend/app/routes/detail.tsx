@@ -13122,8 +13122,8 @@ function RemoteFeaturedImageGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Set a post, page, or product featured image from an image address, then save the
-        content to use it on your site.
+        Set a featured image for a post, page, or product from a public image URL,
+        without uploading a second copy to the WordPress Media Library.
       </p>
 
       <section className="feature-highlight" aria-labelledby="remote-image-intro">
@@ -13133,8 +13133,9 @@ function RemoteFeaturedImageGuide() {
           </span>
           <h2 id="remote-image-intro">Use the hosted image as your featured image.</h2>
           <p>
-            Keep the image at its current host and save its address with your content.
-            FIFU uses that address when WordPress requests the featured image.
+            FIFU keeps the file on its original host and connects its address to your
+            content. Your theme can display it through WordPress featured-image APIs
+            without downloading the image into your Media Library.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -13195,17 +13196,19 @@ function RemoteFeaturedImageGuide() {
           <li>
             <span>2</span>
             <p>
-              Paste a direct image address in <strong>Image URL or Keywords</strong>. The
-              image preview loads for an address beginning with <code>http</code> or{' '}
-              <code>//</code>. If you enter search terms, choose <strong>Preview</strong>{' '}
-              and select an image result; its address fills the image field.
+              Paste a publicly accessible image address into{' '}
+              <strong>Image URL or Keywords</strong>. Prefer an <code>https://</code>{' '}
+              address. FIFU recognizes URLs beginning with <code>http</code> or{' '}
+              <code>//</code> and starts a preview. If you type keywords instead,
+              choose <strong>Preview</strong> to search for a photo, then select a result.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Enter descriptive <strong>Alternative text</strong>. If you leave it empty,
-              the content title supplies the image alt text.
+              Enter meaningful <strong>Alternative text</strong> describing what the
+              image shows. If you leave it blank, FIFU falls back to the content title
+              when generating the image's alt text.
             </p>
           </li>
           <li>
@@ -13217,6 +13220,52 @@ function RemoteFeaturedImageGuide() {
             </p>
           </li>
         </ol>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="remote-image-native-panel"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Settings2 size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">WORDPRESS EDITOR COMPATIBILITY</span>
+            <h2 id="remote-image-native-panel">Understand the regular Featured image field.</h2>
+          </div>
+        </div>
+        <p>
+          FIFU uses the remote URL for the post's featured image, while maintaining
+          compatibility with WordPress featured-image APIs. It may create attachment
+          metadata for compatibility, but this does not mean the remote image file has
+          been downloaded into the Media Library.
+        </p>
+        <dl className="feature-guide-options">
+          <div>
+            <dt>WordPress 7.2 and newer</dt>
+            <dd>
+              In the block editor, WordPress's regular <strong>Featured image</strong>{' '}
+              field remains visible but is disabled while a FIFU remote image is set.
+              Remove the FIFU image to make the native field editable again.
+            </dd>
+          </div>
+          <div>
+            <dt>WordPress 7.1 and older</dt>
+            <dd>
+              The block editor hides its regular featured-image panel while a FIFU
+              remote image is set. Removing the FIFU image makes the panel available again.
+            </dd>
+          </div>
+          <div>
+            <dt>Classic Editor and Rank Math</dt>
+            <dd>
+              Classic Editor uses its existing panel-hiding behavior. When Rank Math SEO
+              is active, FIFU preserves access to the native featured-image field as a
+              compatibility exception, even if a remote image is assigned.
+            </dd>
+          </div>
+        </dl>
       </section>
 
       <section
@@ -13243,6 +13292,33 @@ function RemoteFeaturedImageGuide() {
         </p>
       </section>
 
+      <section
+        className="activation-feature-section"
+        aria-labelledby="remote-image-share-links"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Globe size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">HOSTED LINKS</span>
+            <h2 id="remote-image-share-links">Use a public image link that visitors can load.</h2>
+          </div>
+        </div>
+        <p>
+          A direct image URL is the most predictable option. FIFU also recognizes
+          supported Google Drive share URLs and OneDrive <code>1drv.ms</code> links,
+          converting them to image-content addresses. The source file must still be
+          shared publicly, and the host must allow the image to be embedded on your site.
+          Conversion cannot bypass a private file or the host's access restrictions.
+        </p>
+        <p>
+          Before publishing, open the image address in a private browser window to
+          check that visitors can load it without signing in. Prefer HTTPS images for
+          HTTPS websites; a remote host can change its access rules or remove files later.
+        </p>
+      </section>
+
       <section className="activation-feature-section" aria-labelledby="remote-image-bulk">
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
@@ -13256,13 +13332,14 @@ function RemoteFeaturedImageGuide() {
           </div>
         </div>
         <p>
-          For one-off list edits, open{' '}
+          For one-off edits, open{' '}
           <Link to="/features/quick-editor/">Quick Editor</Link> from the WordPress
-          content list, enter an image address and alternative text, then save. For an
-          integration, use the FIFU fields <code>fifu_image_url</code> and{' '}
-          <code>fifu_image_alt</code> when creating or updating a post through the
-          WordPress REST API; FIFU reads these values for the featured image. The{' '}
-          <Link to="/features/fifu-api/">FIFU API guide</Link> covers the API workflow.
+          content list, enter an image URL and alternative text, then save. For
+          authenticated WordPress REST API requests that create or update posts, use
+          the fields <code>fifu_image_url</code> and <code>fifu_image_alt</code>. See the{' '}
+          <Link to="/features/wp-woocommerce-rest-api/">WP / WooCommerce REST API guide</Link>{' '}
+          for request formats and product integrations. For your own PHP code, see
+          the <Link to="/features/fifu-api/">FIFU API guide</Link>.
         </p>
       </section>
 
@@ -13304,8 +13381,8 @@ function RemoteFeaturedImageGuide() {
           <div>
             <dt>Remove remote image</dt>
             <dd>
-              Clears the remote image and its alternative text in the editor. Save or
-              update the content to apply the removal.
+              Clears the remote URL and its alternative text. Save or update the
+              content to apply the removal; the file on the external host is not deleted.
             </dd>
           </div>
         </dl>
@@ -13326,21 +13403,30 @@ function RemoteFeaturedImageGuide() {
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            <strong>No preview or missing image:</strong> check that the address points to
-            an image and that the host still allows your site to load it. FIFU references
-            the remote file; it does not copy or restore it.
+            <strong>Preview shows an image-not-found placeholder:</strong> check the full
+            URL and verify that it loads an image, not an HTML sharing page or a sign-in
+            screen. The source must be publicly reachable.
+          </li>
+          <li>
+            <strong>Preview works but the published image is missing:</strong> check
+            whether the host blocks embedding or hotlinking, and whether the remote
+            file still exists. FIFU does not control the external server.
           </li>
           <li>
             <strong>Search terms show no chosen image:</strong> select an image from the
             results so its address is placed in the image field, then save the content.
           </li>
           <li>
-            <strong>You need a WordPress-hosted copy:</strong> upload a local image, or
-            use{' '}
+            <strong>You need a WordPress-hosted copy:</strong> use a local image, or see{' '}
             <Link to="/features/save-in-the-media-library/">
               Save in the Media Library
             </Link>{' '}
-            to copy a remote image into your Media Library.
+            for the separate workflow that downloads a remote file.
+          </li>
+          <li>
+            <strong>You want to change or clear an image:</strong> replace the URL and
+            preview the new image, or use the remove control and save. Clearing the FIFU
+            value does not delete the original image from its host.
           </li>
         </ul>
       </section>
