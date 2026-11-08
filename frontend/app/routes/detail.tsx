@@ -14884,9 +14884,10 @@ function FifuProductGalleryGuide() {
               Edit a WooCommerce product. Set its main image or featured media
               in FIFU’s featured-media area. Then open{' '}
               <strong>Image/video gallery</strong> and select an empty or plus tile.
-              Paste an image URL (or a supported video URL when video support
-              is enabled), close the tile editor, and add more items as needed.
-              Drag tiles to reorder them, then save or update the product.
+              Add remote image URLs and, when video support is enabled, supported
+              video URLs in this same gallery. Close the tile editor after entering
+              each URL, drag the tiles into your preferred order, then save or
+              update the product.
             </p>
           </li>
           <li>
