@@ -10817,7 +10817,7 @@ function WpAllImportAddonGuide() {
       <section className="activation-feature-section" aria-labelledby="wai-optional-title">
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
-            Tags size={19} aria-hidden="true" />
+            <Tags size={19} aria-hidden="true" />
           </span>
           <div>
             <span className="activation-feature-kicker">OTHER OPTIONAL FIELDS</span>
