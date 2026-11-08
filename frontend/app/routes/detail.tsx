@@ -3024,8 +3024,8 @@ function AutoSetCategoryImagesGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Fill WooCommerce product categories with an image from a product’s FIFU featured
-        image, then edit any category image yourself.
+        Automatically give WooCommerce product categories a thumbnail using remote
+        featured images already assigned to their products.
       </p>
 
       <section className="feature-highlight" aria-labelledby="category-images-intro">
@@ -3034,12 +3034,13 @@ function AutoSetCategoryImagesGuide() {
             <Tags size={15} aria-hidden="true" /> WOOCOMMERCE CATEGORIES
           </span>
           <h2 id="category-images-intro">
-            Give product categories a relevant thumbnail.
+            Reuse product images for category thumbnails.
           </h2>
           <p>
-            Enable one automatic fill to use product images for categories that have
-            products but no FIFU image. This helps you cover a large catalog without
-            choosing every category image by hand.
+            Turn on this option to fill missing WooCommerce category images
+            from products already using FIFU featured images. It is useful for
+            large catalogs where setting every category thumbnail manually
+            would take too much time. The images remain at their original URLs.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -3066,15 +3067,16 @@ function AutoSetCategoryImagesGuide() {
           </div>
         </div>
         <p>
-          A product category can lack a FIFU image even when its products already have
-          FIFU featured images. Turn this on when you want product imagery to give
-          category listings a visual starting point and reduce manual image assignment
-          across many categories. Each eligible category receives one image selected from
-          a non-trashed product assigned to it that has a FIFU image URL.
+          FIFU selects an image from a product assigned to the category. The
+          product must have a saved FIFU featured-image URL, and products in the
+          Trash are excluded. Categories without a suitable product image are
+          left unchanged.
         </p>
         <p>
-          The setting is optional. Leave it off if you prefer to curate every category
-          image yourself or do not use FIFU featured images on products.
+          <strong>This is an ongoing automatic feature, not just a one-time fill.</strong>{' '}
+          When it runs again, FIFU may replace an existing category image with
+          another product image. If you prefer to choose and keep category
+          thumbnails yourself, leave the feature disabled.
         </p>
       </section>
 
@@ -3088,42 +3090,42 @@ function AutoSetCategoryImagesGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">ENABLE AUTOMATIC ASSIGNMENT</span>
-            <h2 id="category-images-enable-title">Turn on the single setting.</h2>
+            <h2 id="category-images-enable-title">Enable automatic category images.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              In WordPress, open <strong>FIFU → Settings</strong> and go to{' '}
-              <strong>Auto set category images</strong> under WooCommerce.
+              In WordPress, open{' '}
+              <strong>FIFU → Settings → WooCommerce → Auto set category images</strong>.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Switch the setting on. FIFU fills eligible categories that do not yet have a
-              FIFU image; each category gets one image chosen from its products’ saved
-              FIFU image URLs.
+              Enable <strong>Auto set category images</strong>. FIFU can assign
+              missing category thumbnails using the remote featured images
+              of products in those categories.
+            </p>
+          </li>
+          <li>
+            <span>3</span>
+            <p>
+              Open <strong>Products → Categories</strong> to review the result.
+              Categories without an eligible product image will stay empty.
             </p>
           </li>
         </ol>
-        <dl className="fifu-fields-options">
-          <div>
-            <dt>Auto set category images</dt>
-            <dd>
-              On enables automatic assignment and updates. Off stops those runs. This is
-              the only control in this settings panel.
-            </dd>
-          </div>
-        </dl>
         <p>
-          If you manage WordPress from a terminal, enable or disable the same setting with{' '}
-          <code>wp fifu woo --category-auto=on</code> or{' '}
-          <code>wp fifu woo --category-auto=off</code>. Run either command from your
-          WordPress installation with WP-CLI available. The{' '}
-          <Link to="/features/wp-cli/">WP-CLI guide</Link> covers the command-line
-          workflow.
+          The switch can also be turned off at any time. This stops further
+          automatic assignments and changes, but it does not remove category
+          images that FIFU has already saved.
+        </p>
+        <p>
+          For WP-CLI, use <code>wp fifu woo --category-auto=on</code> to
+          enable the setting or <code>wp fifu woo --category-auto=off</code>{' '}
+          to disable it. See the <Link to="/features/wp-cli/">WP-CLI guide</Link>.
         </p>
       </section>
 
@@ -3138,7 +3140,7 @@ function AutoSetCategoryImagesGuide() {
           <div>
             <span className="activation-feature-kicker">SET OR CLEAR AN IMAGE</span>
             <h2 id="category-images-edit-title">
-              Manage a category’s image in its editor.
+              Set a specific image for a category.
             </h2>
           </div>
         </div>
@@ -3153,18 +3155,18 @@ function AutoSetCategoryImagesGuide() {
           <li>
             <span>2</span>
             <p>
-              In the <strong>FIFU</strong> area, enter an absolute image URL or search
-              keywords in <strong>Image URL or Keywords</strong>, then choose{' '}
-              <strong>Preview</strong>. For keyword searches, choose a result. Add
-              alternative text when the image needs it.
+              In the <strong>FIFU</strong> area, choose the image media type.
+              Paste an image URL in <strong>Image URL or Keywords</strong>, or
+              search by keywords and choose a result. Use <strong>Preview</strong>{' '}
+              to check the image and add descriptive alternative text as needed.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Save the category. The image URL and ALT text are saved for that product
-              category, and its WordPress category thumbnail is synchronized for themes
-              that display category images.
+              Save the category. FIFU stores the image URL and alternative text
+              with the category and synchronizes its WordPress-compatible
+              thumbnail information for themes that display category images.
             </p>
           </li>
         </ol>
@@ -3174,17 +3176,18 @@ function AutoSetCategoryImagesGuide() {
             <dd>
               Use an absolute URL that includes <code>http://</code> or{' '}
               <code>https://</code> and the domain, or enter search keywords and choose an
-              image result. Preview the image before saving. Use the remove control to
-              clear the current image. If you save an empty field while automatic
-              assignment is on, FIFU tries to assign a product image; with the setting
-              off, the image is cleared.
+              image result. Preview the image before saving. To clear the image,
+              use its remove control. If automatic assignment is enabled, clearing
+              the URL can cause FIFU to assign another image from the category's
+              products. Turn the automatic feature off first if you want it to
+              remain empty.
             </dd>
           </div>
           <div>
             <dt>Alternative text</dt>
             <dd>
-              Enter text describing the category image. Leaving it blank removes the saved
-              alternative text.
+              Describe what the image shows. Leaving this field blank clears the
+              category's saved alternative text.
             </dd>
           </div>
           <div>
@@ -3201,8 +3204,9 @@ function AutoSetCategoryImagesGuide() {
           <div>
             <dt>Upload to media library</dt>
             <dd>
-              This button appears when the upload control is enabled. Use it to upload the
-              current remote image as a WordPress media attachment; see the{' '}
+              This optional button appears when Media Library upload controls
+              are enabled. It downloads the image into WordPress instead of
+              continuing to reference only the remote file. See the{' '}
               <Link to="/features/save-in-the-media-library/">
                 Save in the Media Library guide
               </Link>{' '}
@@ -3229,7 +3233,7 @@ function AutoSetCategoryImagesGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">SELECTION AND UPDATES</span>
-            <h2 id="category-images-updates-title">Know which images can be assigned.</h2>
+            <h2 id="category-images-updates-title">Understand automatic updates.</h2>
           </div>
         </div>
         <ul className="activation-feature-steps">
@@ -3238,8 +3242,9 @@ function AutoSetCategoryImagesGuide() {
               <Check size={14} aria-hidden="true" />
             </span>
             <p>
-              A category needs at least one product and a product with a saved FIFU image
-              URL. Products in the trash are excluded.
+              A category must contain an eligible product with a saved FIFU
+              featured-image URL. A product with only a local WordPress image
+              is not sufficient for this automatic URL-based assignment.
             </p>
           </li>
           <li>
@@ -3247,11 +3252,11 @@ function AutoSetCategoryImagesGuide() {
               <Check size={14} aria-hidden="true" />
             </span>
             <p>
-              The initial fill skips categories that already have a FIFU image. While the
-              setting is on, FIFU checks again during content saves and category
-              metadata-generation runs. Later runs can choose a different product image
-              for a category, so treat automatic mode as ongoing rather than a one-time
-              import.
+              The initial fill targets categories missing a FIFU image.
+              Further runs can occur when products are saved or category
+              metadata is processed. These runs can replace a category's
+              current image, even if you previously selected it manually.
+              Disable the setting before curating fixed category images.
             </p>
           </li>
           <li>
@@ -3259,9 +3264,11 @@ function AutoSetCategoryImagesGuide() {
               <Check size={14} aria-hidden="true" />
             </span>
             <p>
-              If no image appears, confirm the category has products and at least one has
-              a FIFU featured image URL. You can enter a category image URL manually in
-              the category editor instead.
+              If a category stays empty, check its assigned products and confirm
+              at least one has a FIFU featured-image URL. You can also
+              enter an image URL manually under <strong>Products → Categories</strong>.
+              A parent category may use a subcategory's thumbnail when its own
+              thumbnail is missing.
             </p>
           </li>
         </ul>
