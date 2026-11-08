@@ -14252,8 +14252,8 @@ function RemoteProductGalleryImagesGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Add image URLs to a WooCommerce product gallery, arrange the product views, and
-        save them without uploading copies to your Media Library.
+        Add and arrange remote product gallery images in WooCommerce using their
+        URLs, without uploading copies to the Media Library.
       </p>
 
       <section
@@ -14268,9 +14268,10 @@ function RemoteProductGalleryImagesGuide() {
             Keep product views linked to their source.
           </h2>
           <p>
-            Store remote image links on the product instead of creating local media
-            copies. This can reduce duplicate uploads and Media Library upkeep when your
-            product images already live on a supplier or image host.
+            Add alternate product views from a supplier, CDN, or another image host.
+            Save their URLs with the WooCommerce product and arrange the images in your
+            preferred order. The files remain on their original servers, reducing
+            duplicate uploads and Media Library maintenance.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -14332,23 +14333,28 @@ function RemoteProductGalleryImagesGuide() {
           <li>
             <span>2</span>
             <p>
-              In FIFU’s <strong>Image/video gallery</strong>, select an empty image tile.
-              The product’s main image is set separately.
+              Find FIFU’s <strong>Image/video gallery</strong> in the featured-media
+              area, then select an empty tile or the plus tile. The gallery is shown
+              when the selected featured-media type is Image or Video. The product’s
+              main featured image is configured separately.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Enter a direct image link in <strong>Image/Video URL</strong>. Review the
-              preview, add <strong>Alternative text</strong>, then select{' '}
-              <strong>OK</strong>.
+              Paste a publicly accessible image address into{' '}
+              <strong>Image/Video URL</strong>, such as{' '}
+              <code>https://example.com/product-side.jpg</code>. Review the preview
+              and enter <strong>Alternative text</strong>. Close the popup to apply
+              the tile’s changes in the editor.
             </p>
           </li>
           <li>
             <span>4</span>
             <p>
-              Select the plus tile for each additional image. Drag tiles into the order
-              you want, then select <strong>Update</strong> to save the product.
+              Add more URLs as needed, drag the image tiles into your preferred order,
+              then select <strong>Update</strong> or <strong>Publish</strong> to save
+              the WooCommerce product.
             </p>
           </li>
         </ol>
@@ -14379,33 +14385,49 @@ function RemoteProductGalleryImagesGuide() {
           <div>
             <dt>Image/Video URL</dt>
             <dd>
-              Enter the remote image address. The tile previews the linked image when it
-              loads.
+              Enter a direct image address. The popup previews the linked image when
+              the host makes it accessible; it does not download the file to WordPress.
             </dd>
           </div>
           <div>
             <dt>Alternative text</dt>
-            <dd>Add a short description for the image’s text alternative.</dd>
+            <dd>
+              Describe what is shown in this product view to help visitors using
+              assistive technology. You can edit it again by opening the tile.
+            </dd>
           </div>
           <div>
-            <dt>Iframe URL</dt>
+            <dt>iframe URL</dt>
             <dd>
-              Leave this empty for an ordinary image. When you use the FIFU product
-              gallery lightbox, this optional field can show iframe content instead of the
-              image, such as a 360° view, PDF, map, or web page. Enter both the image URL
-              and iframe URL for that custom content.
+              Leave this empty for an ordinary image. For FIFU’s product gallery
+              lightbox, enter both an image URL and an iframe URL to display custom
+              embeddable content instead, such as a 360° view, PDF, map, or web page.
+              The image remains the gallery’s visual preview.
             </dd>
           </div>
           <div>
             <dt>Remove a remote image</dt>
             <dd>
-              Open its tile, clear the URL, select <strong>OK</strong>, and save the
-              product.
+              Use the <strong>Remove remote image</strong> control on its tile, then
+              save the product. Removing the URL does not delete the original
+              file from its external host.
             </dd>
           </div>
           <div>
             <dt>Order</dt>
-            <dd>Drag tiles into the display order before saving.</dd>
+            <dd>
+              Drag image tiles into your preferred sequence, then save the product.
+              When video support is enabled, the editor can display image and
+              video gallery items together.
+            </dd>
+          </div>
+          <div>
+            <dt>Existing local WooCommerce images</dt>
+            <dd>
+              Local product gallery images may appear as previews alongside your
+              remote images. They remain local WordPress attachments; seeing them
+              in the FIFU editor does not convert them to remote URLs.
+            </dd>
           </div>
         </dl>
       </section>
@@ -14450,9 +14472,13 @@ function RemoteProductGalleryImagesGuide() {
           </div>
         </div>
         <p>
-          If the preview fails or shows a not-found image, verify that the address points
-          directly to an image and loads successfully. The editor fields are hidden while
-          FIFU’s editor lock is enabled; turn off that lock to edit the gallery.
+          If the preview is blank or shows a not-found image, open the image URL in a
+          private browser window. It must point to a publicly accessible image, and its
+          host must allow your store to display it. If the gallery editor is missing,
+          confirm WooCommerce and FIFU Premium are active, Image or Video is selected
+          as the featured-media type, and the Premium editor is not locked. Remember
+          to save the product after closing an image popup; closing the popup alone
+          does not publish your changes.
         </p>
       </section>
 
