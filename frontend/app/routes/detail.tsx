@@ -2818,8 +2818,8 @@ function OrderEmailImagesGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Turn on one WooCommerce setting to add each product’s 100 × 100 image to order
-        emails.
+        Show product thumbnails beside ordered items in WooCommerce emails, including
+        remote featured images added with FIFU.
       </p>
 
       <section className="feature-highlight" aria-labelledby="order-email-purpose">
@@ -2828,12 +2828,13 @@ function OrderEmailImagesGuide() {
             <MailPlus size={15} aria-hidden="true" />
             ORDER ITEM IMAGES
           </span>
-          <h2 id="order-email-purpose">Give each ordered item a visual cue.</h2>
+          <h2 id="order-email-purpose">Make ordered products easier to recognize.</h2>
           <p>
-            Similar product names or variations can be hard to distinguish in an email.
-            Showing the product image beside its item can help you and your customers
-            confirm an order at a glance. Turn it on when that visual cue is useful; leave
-            it off when item text is enough.
+            An order may contain several products with similar names. Adding a small
+            thumbnail next to each available product image helps customers see what
+            they bought and helps store owners review the order. FIFU can supply
+            remotely hosted featured images through WooCommerce’s normal product
+            image rendering.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -2854,27 +2855,31 @@ function OrderEmailImagesGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">ENABLE IT</span>
-            <h2 id="order-email-enable">Switch on order item images.</h2>
+            <h2 id="order-email-enable">Enable thumbnails in order emails.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              In WordPress, open <strong>FIFU → Settings → WooCommerce</strong>.
+              In WordPress, go to <strong>FIFU → Settings → WooCommerce</strong>
+              and find <strong>Add image to order email</strong>.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Turn on <strong>Add image to order email</strong>.
+              Turn on the <strong>Add image to order email</strong> switch.
+              No product-by-product configuration is required for this option.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Open an order email that includes WooCommerce’s ordered-items table. Each
-              product row can now include its image.
+              Send a new test order email using your normal WooCommerce workflow.
+              In an HTML email that contains the standard ordered-items table,
+              products with available images can now show a thumbnail beside
+              their details.
             </p>
           </li>
         </ol>
@@ -2890,37 +2895,41 @@ function OrderEmailImagesGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">WHAT CHANGES</span>
-            <h2 id="order-email-behavior">The setting affects the order items table.</h2>
+            <h2 id="order-email-behavior">What changes in the email?</h2>
           </div>
         </div>
         <dl className="fifu-fields-options">
           <div>
-            <dt>Where images appear</dt>
+            <dt>Where thumbnails appear</dt>
             <dd>
-              WooCommerce emails that render the ordered-items table. Other email content
-              is not changed by this setting.
+              In WooCommerce’s standard ordered-items table when an email
+              renders that table. The setting does not add images to
+              the subject, header, or unrelated email sections.
             </dd>
           </div>
           <div>
-            <dt>Image size</dt>
+            <dt>Thumbnail size</dt>
             <dd>
-              The integration requests a 100 × 100 image for each item. There is no
-              separate size or placement control.
+              FIFU asks WooCommerce for thumbnails sized 100 × 100 pixels.
+              The final appearance can vary with the email template and
+              mail client. This switch has no separate size control.
             </dd>
           </div>
           <div>
-            <dt>When disabled</dt>
+            <dt>When turned off</dt>
             <dd>
-              The existing WooCommerce table is passed through without FIFU adding images.
+              FIFU leaves WooCommerce’s original order-items table untouched
+              by this feature. Emails already sent are not changed.
             </dd>
           </div>
         </dl>
         <p>
-          WooCommerce must be active and the email must render its ordered-items table for
-          this integration to apply. WooCommerce renders the product image; FIFU’s product
-          image filter can supply a{' '}
-          <Link to="/features/remote-featured-image/">remote FIFU featured image</Link>{' '}
-          through that rendering path.
+          The option uses WooCommerce’s product-image output, which can include a{' '}
+          <Link to="/features/remote-featured-image/">remote FIFU featured image</Link>.
+          Only products with an available image can display a thumbnail.
+          When enabled, FIFU asks WooCommerce to render the items table again
+          with images, so heavily customized email templates or email-design
+          plugins may display the rows differently.
         </p>
       </section>
 
@@ -2935,27 +2944,11 @@ function OrderEmailImagesGuide() {
           </div>
         </div>
         <p>
-          If you administer WordPress with WP-CLI, run one of these commands to enable or
-          disable the setting:
-        </p>
-        <dl className="fifu-fields-options">
-          <div>
-            <dt>Enable</dt>
-            <dd>
-              <code>wp fifu woo --order-email=on</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Disable</dt>
-            <dd>
-              <code>wp fifu woo --order-email=off</code>
-            </dd>
-          </div>
-        </dl>
-        <p>
-          The accepted values are <code>on</code> and <code>off</code>. For other FIFU
-          command-line controls, continue with the{' '}
-          <Link to="/features/wp-cli/">WP-CLI feature guide</Link>.
+          You can use WP-CLI instead of the settings switch. From your WordPress
+          installation, run <code>wp fifu woo --order-email=on</code> to enable
+          thumbnails or <code>wp fifu woo --order-email=off</code> to disable them.
+          See the <Link to="/features/wp-cli/">WP-CLI guide</Link> for
+          more command-line options.
         </p>
       </section>
 
@@ -2969,21 +2962,29 @@ function OrderEmailImagesGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="order-email-troubleshooting">If an item has no image</h2>
+            <h2 id="order-email-troubleshooting">If thumbnails do not appear</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            Confirm <strong>Add image to order email</strong> is on under FIFU → Settings
-            → WooCommerce.
+            <strong>Confirm the switch:</strong> Check{' '}
+            <strong>FIFU → Settings → WooCommerce → Add image to order email</strong>{' '}
+            and send a new test email. Previously delivered messages do not change.
           </li>
           <li>
-            Check that the email contains WooCommerce’s ordered-items table; the
-            integration filters that table only.
+            <strong>Check the product image:</strong> Make sure the product has
+            an image that WooCommerce can display. For a remote FIFU image,
+            open its URL and check that the host still serves the image.
           </li>
           <li>
-            Check whether the product image appears in WooCommerce’s product image output.
-            The email integration requests that output at 100 × 100 pixels.
+            <strong>Check the email template:</strong> This works through
+            WooCommerce’s standard ordered-items table. A custom template or
+            email builder that bypasses it may not show the thumbnails.
+          </li>
+          <li>
+            <strong>Check the recipient’s email app:</strong> Some mail clients
+            block externally hosted pictures until the recipient allows
+            images to load. Test the email in another client if needed.
           </li>
         </ul>
       </section>
