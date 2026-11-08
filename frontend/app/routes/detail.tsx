@@ -2818,67 +2818,43 @@ function OrderEmailImagesGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Add a 100 × 100 product image beside each item in WooCommerce order emails with
-        one setting.
+        Turn on one WooCommerce setting to add each product’s 100 × 100 image to order
+        emails.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="order-email-intro">
+      <section className="feature-highlight" aria-labelledby="order-email-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <MailPlus size={15} aria-hidden="true" />
-            WOOCOMMERCE ORDER EMAILS
+            ORDER ITEM IMAGES
           </span>
-          <h2 id="order-email-intro">Make ordered products easier to recognize.</h2>
+          <h2 id="order-email-purpose">Give each ordered item a visual cue.</h2>
           <p>
-            Turn on image display for the order items table. WooCommerce renders each item
-            with its product image at 100 × 100 pixels.
+            Similar product names or variations can be hard to distinguish in an email.
+            Showing the product image beside its item can help you and your customers
+            confirm an order at a glance. Turn it on when that visual cue is useful; leave
+            it off when item text is enough.
           </p>
         </div>
         <div className="feature-highlight-visual">
           <img
             src="/images/add-image-to-order-email-guide-1.png"
-            alt="Enable Add image to order email, then see product thumbnails beside item names in the order email."
+            alt="Turn on Add image to order email, then see a product image beside an item in the WooCommerce order email."
           />
         </div>
       </section>
 
       <section
         className="activation-feature-section"
-        aria-labelledby="order-email-purpose-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="order-email-purpose-title">Give order emails a visual reference.</h2>
-          </div>
-        </div>
-        <p>
-          WooCommerce’s order item table can list products without pictures. When you
-          enable this option, images appear alongside item details in emails that contain
-          that table. The visual cue can help you and your customers identify products
-          more quickly, especially when names or variations look similar.
-        </p>
-        <p>
-          Use it when you want product imagery in order emails. It is optional if
-          text-only item details already work for your store. WooCommerce must be active
-          for its order email table to be available.
-        </p>
-      </section>
-
-      <section
-        className="activation-feature-section"
-        aria-labelledby="order-email-setup-title"
+        aria-labelledby="order-email-enable"
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">ENABLE THE SETTING</span>
-            <h2 id="order-email-setup-title">Turn on product images.</h2>
+            <span className="activation-feature-kicker">ENABLE IT</span>
+            <h2 id="order-email-enable">Switch on order item images.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
@@ -2891,14 +2867,14 @@ function OrderEmailImagesGuide() {
           <li>
             <span>2</span>
             <p>
-              Switch on <strong>Add image to order email</strong>.
+              Turn on <strong>Add image to order email</strong>.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Review an order email that includes the order items table. Each item is
-              rendered with an image size of <strong>100 × 100 pixels</strong>.
+              Open an order email that includes WooCommerce’s ordered-items table. Each
+              product row can now include its image.
             </p>
           </li>
         </ol>
@@ -2906,97 +2882,108 @@ function OrderEmailImagesGuide() {
 
       <section
         className="activation-feature-section"
-        aria-labelledby="order-email-coverage-title"
+        aria-labelledby="order-email-behavior"
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
-            <ListFilter size={19} aria-hidden="true" />
+            <Image size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">COVERAGE AND CONTROL</span>
-            <h2 id="order-email-coverage-title">Know what changes.</h2>
+            <span className="activation-feature-kicker">WHAT CHANGES</span>
+            <h2 id="order-email-behavior">The setting affects the order items table.</h2>
           </div>
         </div>
         <dl className="fifu-fields-options">
           <div>
-            <dt>Emails affected</dt>
+            <dt>Where images appear</dt>
             <dd>
-              Emails that render WooCommerce’s ordered-items table. Other email content is
-              not replaced by this setting.
-            </dd>
-          </div>
-          <div>
-            <dt>Product image source</dt>
-            <dd>
-              The product image can come from a FIFU image URL or the WordPress Media
-              Library.
+              WooCommerce emails that render the ordered-items table. Other email content
+              is not changed by this setting.
             </dd>
           </div>
           <div>
             <dt>Image size</dt>
             <dd>
-              Fixed at 100 × 100 pixels; this feature has no separate size or placement
-              controls.
+              The integration requests a 100 × 100 image for each item. There is no
+              separate size or placement control.
             </dd>
           </div>
           <div>
-            <dt>Setting off</dt>
-            <dd>The original WooCommerce order items table is returned unchanged.</dd>
-          </div>
-          <div>
-            <dt>Optional WP-CLI control</dt>
+            <dt>When disabled</dt>
             <dd>
-              Run <code>wp fifu woo --order-email=on</code> to enable it or use{' '}
-              <code>--order-email=off</code> to disable it. See the{' '}
-              <Link to="/features/wp-cli/">WP-CLI guide</Link> for terminal prerequisites.
+              The existing WooCommerce table is passed through without FIFU adding images.
             </dd>
           </div>
         </dl>
+        <p>
+          WooCommerce must be active and the email must render its ordered-items table for
+          this integration to apply. WooCommerce renders the product image; FIFU’s product
+          image filter can supply a{' '}
+          <Link to="/features/remote-featured-image/">remote FIFU featured image</Link>{' '}
+          through that rendering path.
+        </p>
+      </section>
+
+      <section className="activation-feature-section" aria-labelledby="order-email-cli">
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Terminal size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
+            <h2 id="order-email-cli">Change the same switch from the command line.</h2>
+          </div>
+        </div>
+        <p>
+          If you administer WordPress with WP-CLI, run one of these commands to enable or
+          disable the setting:
+        </p>
+        <dl className="fifu-fields-options">
+          <div>
+            <dt>Enable</dt>
+            <dd>
+              <code>wp fifu woo --order-email=on</code>
+            </dd>
+          </div>
+          <div>
+            <dt>Disable</dt>
+            <dd>
+              <code>wp fifu woo --order-email=off</code>
+            </dd>
+          </div>
+        </dl>
+        <p>
+          The accepted values are <code>on</code> and <code>off</code>. For other FIFU
+          command-line controls, continue with the{' '}
+          <Link to="/features/wp-cli/">WP-CLI feature guide</Link>.
+        </p>
       </section>
 
       <section
         className="activation-feature-section activation-feature-help"
-        aria-labelledby="order-email-troubleshooting-title"
+        aria-labelledby="order-email-troubleshooting"
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon help">
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">IF IMAGES ARE MISSING</span>
-            <h2 id="order-email-troubleshooting-title">
-              Check the switch and the email content.
-            </h2>
+            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
+            <h2 id="order-email-troubleshooting">If an item has no image</h2>
           </div>
         </div>
-        <ul className="activation-feature-steps">
+        <ul className="activation-feature-help-list">
           <li>
-            <span>
-              <Check size={15} aria-hidden="true" />
-            </span>
-            <p>
-              Confirm <strong>Add image to order email</strong> is on under FIFU →
-              Settings → WooCommerce.
-            </p>
+            Confirm <strong>Add image to order email</strong> is on under FIFU → Settings
+            → WooCommerce.
           </li>
           <li>
-            <span>
-              <Check size={15} aria-hidden="true" />
-            </span>
-            <p>
-              Check that the message includes WooCommerce’s order items table; this
-              integration filters that table only.
-            </p>
+            Check that the email contains WooCommerce’s ordered-items table; the
+            integration filters that table only.
           </li>
           <li>
-            <span>
-              <Check size={15} aria-hidden="true" />
-            </span>
-            <p>
-              Email applications may hide remote images until the recipient allows them.
-              If the email’s item text appears but pictures do not, check the recipient’s
-              email image-display settings.
-            </p>
+            Check whether the product image appears in WooCommerce’s product image output.
+            The email integration requests that output at 100 × 100 pixels.
           </li>
         </ul>
       </section>
