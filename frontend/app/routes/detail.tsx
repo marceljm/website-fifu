@@ -10805,7 +10805,7 @@ function WpAllImportAddonGuide() {
             <dt>List delimiter</dt>
             <dd>
               The separator between URLs or descriptions, normally
-              <code> |</code>. Change it when your source uses another
+              <code>|</code>. Change it when your source uses another
               separator; FIFU normalizes the imported lists.
             </dd>
           </div>
