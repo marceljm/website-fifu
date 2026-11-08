@@ -7970,7 +7970,7 @@ function BrokenLinkCheckerGuide() {
         </div>
         <div className="feature-highlight-visual">
           <img
-            src="/images/broken-link-checker-guide.svg"
+            src="/images/broken-link-checker-guide-1.webp"
             alt="Four-step Broken Link Checker workflow: enable the feature, let visitors load pages, check URLs one at a time with 24-hour spacing, and review URLs after three failures."
           />
         </div>
