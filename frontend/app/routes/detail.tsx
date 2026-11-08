@@ -6971,8 +6971,8 @@ function AutoSetProductImagesFromAsinGuide() {
       className="feature-guide-page asin-feature-page"
     >
       <p className="lead">
-        Add Amazon product imagery to eligible content from its ASIN, without looking up
-        and pasting image URLs by hand.
+        Use an Amazon ASIN to automatically add remote product images to content
+        that does not already have featured media.
       </p>
 
       <section className="feature-highlight" aria-labelledby="asin-intro">
@@ -6980,13 +6980,13 @@ function AutoSetProductImagesFromAsinGuide() {
           <span className="feature-highlight-kicker">
             <ShoppingBag size={15} aria-hidden="true" /> ASIN IMAGE LOOKUP
           </span>
-          <h2 id="asin-intro">Fill image gaps from a product identifier.</h2>
+          <h2 id="asin-intro">Find product images without searching for URLs.</h2>
           <p>
-            When you have Amazon identifiers but no featured media, scheduled lookups can
-            save the returned images to your content. This helps you populate catalogs
-            with less manual image searching; use it for eligible items that have an ASIN
-            and no existing image. Items already using a featured image or FIFU media are
-            left alone.
+            If your products already have Amazon Standard Identification Numbers
+            (ASINs), FIFU can request their media using Amazon’s Product Advertising API.
+            Successful lookups save remote media URLs automatically, making it easier
+            to populate a catalog with missing images. Content that already has
+            featured media is skipped rather than overwritten.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -7007,36 +7007,39 @@ function AutoSetProductImagesFromAsinGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">SET UP THE LOOKUP</span>
-            <h2 id="asin-connect-title">Add your Amazon credentials.</h2>
+            <h2 id="asin-connect-title">Connect Amazon and enable automatic lookup.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              In WordPress, open <strong>FIFU → Settings → Auto</strong> and find the{' '}
-              <strong>Auto set product images from ASIN</strong> panel. In its{' '}
-              <strong>Credentials</strong> tab, enter your Amazon{' '}
+              In WordPress, go to <strong>FIFU → Settings → Auto</strong> and find{' '}
+              <strong>Auto set product images from ASIN</strong>. Open its{' '}
+              <strong>Credentials</strong> tab and enter the{' '}
               <strong>Partner tag</strong>, <strong>Access key</strong>, and{' '}
-              <strong>Secret key</strong>.
+              <strong>Secret key</strong> for your Amazon Product Advertising API
+              account. An ASIN alone is not enough to perform the lookup.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Choose the <strong>Locale</strong> that matches your Amazon marketplace. The
-              available choices are Australia, Belgium, Brazil, Canada, Egypt, France,
-              Germany, India, Italy, Japan, Mexico, Netherlands, Poland, Saudi Arabia,
-              Singapore, Spain, Sweden, Turkey, United Arab Emirates, United Kingdom, and
-              United States.
+              Choose the <strong>Locale</strong> for the Amazon marketplace where
+              the products are listed, such as United States, United Kingdom,
+              or Brazil. The complete list of supported locales appears in the
+              dropdown. Make sure the credentials are valid for the selected
+              marketplace.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              In <strong>Auto set</strong>, turn on the feature to schedule lookups.
-              Checks run every minute, and items are queued only when all four credential
-              values are present.
+              Open the <strong>Auto set</strong> tab and enable the switch.
+              This registers a recurring lookup job. FIFU checks for eligible
+              content on approximately a one-minute schedule, but an item is
+              queued only when all four credential values (including Locale)
+              are present. Results are not necessarily immediate.
             </p>
           </li>
         </ol>
@@ -7049,25 +7052,28 @@ function AutoSetProductImagesFromAsinGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">PROVIDE AN IDENTIFIER</span>
-            <h2 id="asin-input-title">Choose where each ASIN comes from.</h2>
+            <h2 id="asin-input-title">Provide the ASIN for each item.</h2>
           </div>
         </div>
         <dl className="feature-guide-options">
           <div>
             <dt>Enter it on the item</dt>
             <dd>
-              Edit a product or other supported content and enter the value in its{' '}
-              <strong>ASIN</strong> side panel, then save. The panel appears while the
-              feature is enabled.
+              Edit a product, post, or other content type that uses FIFU and
+              enter its identifier in the <strong>ASIN</strong> panel, then save
+              the item. The panel appears when this feature is enabled.
+              Enter the ASIN itself, not an Amazon product-page URL.
             </dd>
           </div>
           <div>
             <dt>Read an existing field</dt>
             <dd>
-              In the feature’s <strong>Custom field</strong> tab, enter the metadata key
-              that already stores your ASIN. Use <code>_sku</code> for WooCommerce’s SKU
-              field, or separate multiple keys with commas. A directly saved ASIN takes
-              priority; the configured field is used when the direct value is empty.
+              In <strong>FIFU → Settings → Auto</strong>, open this feature’s{' '}
+              <strong>Custom field</strong> tab and enter the metadata key that
+              contains an ASIN. For example, use <code>_sku</code> only when
+              your WooCommerce SKUs actually contain ASINs. You can enter several
+              field names separated by commas; FIFU uses the first nonempty
+              value it finds. An ASIN saved directly in FIFU takes priority.
             </dd>
           </div>
         </dl>
@@ -7080,30 +7086,36 @@ function AutoSetProductImagesFromAsinGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">WHAT THE CHECK DOES</span>
-            <h2 id="asin-result-title">Images go to the matching content type.</h2>
+            <h2 id="asin-result-title">What happens after a successful lookup?</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list asin-results">
           <li>
             <p>
-              For a WooCommerce product, returned image URLs become its FIFU product image
-              and gallery. Read the{' '}
+              <strong>WooCommerce products:</strong> returned image URLs are saved
+              as the FIFU product image and additional product gallery images.
+              The first image is the main product image; the others become
+              gallery items. See the{' '}
               <Link to="/features/fifu-product-gallery/">FIFU Product Gallery guide</Link>{' '}
-              for gallery display options.
+              for display options.
             </p>
           </li>
           <li>
             <p>
-              For other supported content types, returned URLs become a FIFU{' '}
-              <Link to="/features/featured-slider/">Featured Slider</Link>. A valid
-              product URL returned with the lookup is also saved as the content’s redirect
-              URL.
+              <strong>Posts and other supported content:</strong> returned image
+              URLs are saved as a FIFU{' '}
+              <Link to="/features/featured-slider/">Featured Slider</Link>.
+              The plugin also enables its featured slider setting for this
+              workflow.
             </p>
           </li>
         </ul>
         <p>
-          When the lookup returns no image URLs but does return video URLs, the workflow
-          uses the video URLs instead.
+          When the lookup provides a valid Amazon product link, FIFU also saves
+          it as the content’s redirection URL. If there are no image URLs
+          but video URLs are available, the workflow uses those URLs instead.
+          Images remain hosted remotely unless you separately choose to
+          download them.
         </p>
       </section>
 
@@ -7117,28 +7129,34 @@ function AutoSetProductImagesFromAsinGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">ELIGIBILITY AND CHECKS</span>
-            <h2 id="asin-eligibility-title">Know which items are checked.</h2>
+            <h2 id="asin-eligibility-title">Why might an item be skipped?</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            <strong>Existing media:</strong> items with a WordPress featured image or FIFU
-            image, video, custom video, or slider media are skipped. The check targets
-            missing featured media.
+            <strong>Already has media:</strong> items with a WordPress featured
+            image or existing FIFU featured image, video, custom video, or
+            slider are not candidates. This feature fills gaps; it does
+            not replace images that are already set.
           </li>
           <li>
-            <strong>No result:</strong> when Amazon returns no images or videos, the
-            identifier is marked as not found and is not repeatedly looked up as a fresh
-            item.
+            <strong>No media returned:</strong> FIFU marks the ASIN as not found
+            when a successful lookup returns neither images nor videos.
+            That identifier is not continuously retried as a new lookup.
+            Check the ASIN and marketplace if this happens.
           </li>
           <li>
-            <strong>Lookup failure:</strong> missing credentials prevent items from being
-            queued. Transport or unreadable-response failures are recorded as failed
-            attempts and handled by worker retry logic.
+            <strong>Lookup could not complete:</strong> check the Partner tag,
+            Access key, Secret key, and Locale first. Invalid or missing
+            credentials prevent successful lookups. Connection failures and
+            unreadable responses are treated as failed attempts rather than
+            as proof that the ASIN does not exist.
           </li>
           <li>
-            <strong>Already have an image:</strong> this is optional. Keep it off when you
-            already assign media yourself or your content does not have Amazon ASINs.
+            <strong>Nothing happens immediately:</strong> the feature works
+            through scheduled jobs, not an instant lookup when you save a
+            post. Check that it is enabled, the item has an ASIN, and it
+            does not already have featured media.
           </li>
         </ul>
       </section>
