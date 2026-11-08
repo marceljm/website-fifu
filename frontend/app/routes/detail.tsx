@@ -10599,227 +10599,157 @@ function WpAllImportAddonGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Map media values from your import file into FIFU fields so each imported record
-        receives its image, video, gallery, or redirect data.
+        Map image and media values from your import data to FIFU as WP All Import creates or updates content.
       </p>
-
-      <section className="feature-highlight" aria-labelledby="wai-intro">
+      <section className="feature-highlight" aria-labelledby="wai-import-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
-            <Puzzle size={15} aria-hidden="true" /> IMPORT MEDIA DATA
+            <Puzzle size={15} aria-hidden="true" /> IMPORT MAPPING
           </span>
-          <h2 id="wai-intro">Map once, apply media as records import.</h2>
+          <h2 id="wai-import-purpose">Assign FIFU media while your records are imported.</h2>
           <p>
-            Connect source columns to FIFU fields in WP All Import. Each imported record
-            then gets the matching FIFU values without requiring you to edit media record
-            by record.
+            The add-on maps source columns to FIFU fields and saves those values as each record is processed. That keeps media assignment in the same repeatable workflow as a large content or product import, reducing manual edits and helping later imports keep records aligned. Use it when your import file contains FIFU media data; it is optional if you do not use WP All Import or do not need to populate FIFU fields from it.
           </p>
         </div>
         <div className="feature-highlight-visual">
           <img
             src="/images/wp-all-import-add-on-guide-1.png"
-            alt="A source image URL mapped to a FIFU field, imported, and displayed on the resulting content."
+            alt="An image URL from an import row is mapped in the FIFU section and shown on the imported content."
           />
         </div>
       </section>
-
-      <section className="activation-feature-section" aria-labelledby="wai-purpose-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="wai-purpose-title">Keep imported media in FIFU’s data path.</h2>
-          </div>
-        </div>
-        <p>
-          An import can create many posts or products at once; entering FIFU media
-          afterward turns that batch into repeated manual work and can leave records
-          without matching media. Field mapping stores the source values with each
-          imported record, so later updates can refresh the same fields from the source
-          file. When you use remote image URLs, FIFU can display them through its media
-          fields without first importing a separate copy into the Media Library.
-        </p>
-        <p>
-          Use this add-on when your import file already contains media URLs or related
-          values. It is optional if you do not import with WP All Import or do not need
-          FIFU media fields populated from the import.
-        </p>
-      </section>
-
       <section className="activation-feature-section" aria-labelledby="wai-setup-title">
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">SET UP YOUR IMPORT</span>
-            <h2 id="wai-setup-title">Map FIFU fields in the import template.</h2>
+            <span className="activation-feature-kicker">SET UP A MAPPING</span>
+            <h2 id="wai-setup-title">Map source values in the FIFU panel.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              Activate FIFU and either WP All Import or WP All Import Pro. In the import
-              template’s record mapping, open the <strong>FIFU</strong> add-on section and
-              map each source column or fixed value to the matching FIFU field.
+              Activate FIFU and WP All Import or WP All Import Pro. Create or edit an import, choose its post type or taxonomy, and open the field mapping step. The add-on is registered automatically and appears as <strong>FIFU</strong>.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              For a list, set <strong>List delimiter</strong> to the separator used in
-              that source value. The default is <code>|</code>; FIFU normalizes mapped
-              lists to its pipe-separated format.
+              Drag the matching source element into a FIFU field, or enter a fixed value. Map URLs and lists in this panel; leave WP All Import’s separate <strong>Images</strong> text fields empty and do not add FIFU custom fields in its Custom Fields section.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Save the template and run the import. The mapped values are applied as each
-              record is imported; use the normal WP All Import update settings when
-              rerunning an import to control which existing records are updated.
+              For a list, set <strong>List delimiter</strong> to the separator used in your source, then save the import template and run it. FIFU converts the separator to <code>|</code> while processing the list.
             </p>
           </li>
         </ol>
-        <p>
-          Keep image titles in the same order as their image URLs. If a title field is
-          empty, FIFU uses the post title for a featured image or the product title for
-          product images as alternative text.
-        </p>
       </section>
-
-      <section className="activation-feature-section" aria-labelledby="wai-fields-title">
+      <section className="activation-feature-section" aria-labelledby="wai-fields-content-title">
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
             <Images size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">AVAILABLE MAPPING FIELDS</span>
-            <h2 id="wai-fields-title">Choose fields for the record type.</h2>
+            <span className="activation-feature-kicker">CONTENT AND TAXONOMY FIELDS</span>
+            <h2 id="wai-fields-content-title">Choose the fields that match your data.</h2>
           </div>
         </div>
         <dl className="fifu-fields-options">
           <div>
             <dt>Featured image (URL)</dt>
-            <dd>
-              Sets the FIFU featured image for regular content and category records.
-            </dd>
+            <dd>Image URL for a post, page, or supported taxonomy term. For product imports, use the product list field below.</dd>
           </div>
           <div>
             <dt>Featured image title</dt>
             <dd>
-              Sets alternative text for the featured image. If empty, the post title is
-              used.
+              Alternative text for the featured image. If empty, FIFU uses the post title.
             </dd>
           </div>
           <div>
             <dt>Featured video (URL)</dt>
             <dd>
-              Sets featured video data for regular content. Product records use the
-              product video list field instead.
+              Featured video URL for regular content and supported taxonomy terms. Video fields require <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> to be enabled. Product imports use the product video list field.
             </dd>
           </div>
           <div>
             <dt>Product image URL + gallery URLs</dt>
-            <dd>
-              Maps the product image and gallery URL list. Separate multiple values with
-              the selected list delimiter.
-            </dd>
+            <dd>WooCommerce product image and gallery URLs in one delimited list. The first URL is the product image; following URLs populate the gallery.</dd>
           </div>
           <div>
             <dt>Product image title + gallery titles</dt>
             <dd>
-              This displayed label appears for both list types: map product image/gallery
-              alternative text in matching order, and map slider alternative text in
-              matching order.
+              Alternative text in the same order as product and gallery URLs. Empty values fall back to the product title. This same label is also used for slider image titles.
             </dd>
           </div>
           <div>
             <dt>Product video URL + gallery URLs</dt>
-            <dd>
-              Maps a product video list. Use the same list delimiter as the source data.
-            </dd>
+            <dd>WooCommerce product video and video gallery URLs. Video fields require <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> to be enabled.</dd>
           </div>
           <div>
-            <dt>Featured slider (URLs)</dt>
+            <dt>
+              <Link to="/features/featured-slider/">Featured slider (URLs)</Link>
+            </dt>
             <dd>
-              Maps slider image URLs. Pair the list with title values in the same order
-              when you need slider alternative text; see the{' '}
-              <Link to="/features/featured-slider/">Featured Slider guide</Link> for the
-              display feature.
+              Delimited image URLs for a post slider. Enable Featured Slider to use it. For a product, the slider list takes priority over the product image/gallery list; use one list type for that product.
             </dd>
           </div>
           <div>
             <dt>List delimiter</dt>
             <dd>
-              Sets the separator for list values. Its default is <code>|</code>; the
-              imported lists are normalized to FIFU’s internal pipe-separated format.
+              Separator in your source lists; the default is <code>|</code>. Enter the separator your source uses here when it differs. FIFU normalizes supported list fields to pipe-separated values.
             </dd>
           </div>
           <div>
             <dt>ASIN</dt>
             <dd>
-              Imports the record’s Amazon Standard Identification Number value. For
-              scheduled image lookup from an ASIN, see{' '}
-              <Link to="/features/auto-set-product-images-from-asin/">
-                Auto set product images from ASIN
-              </Link>
-              .
+              Amazon product identifier used by <Link to="/features/auto-set-product-images-from-asin/">
+                automatic product images from ASIN
+              </Link>{' '}
+              when that feature is configured.
             </dd>
           </div>
           <div>
             <dt>Media finder (webpage URL)</dt>
             <dd>
-              Maps the source webpage address FIFU uses to find featured media when{' '}
-              <Link to="/features/auto-set-featured-media-using-web-page-address/">
-                Auto set featured media using web page address
+              Source page address used by <Link to="/features/auto-set-featured-media-using-web-page-address/">
+                automatic featured media from a webpage address
               </Link>{' '}
-              is enabled.
+              when that feature is configured.
             </dd>
           </div>
           <div>
             <dt>Page redirection (forwarding URL)</dt>
             <dd>
-              Maps the destination URL used to forward visitors when{' '}
-              <Link to="/features/page-redirection/">Page redirection</Link> is enabled.
+              Destination URL for <Link to="/features/page-redirection/">Page redirection</Link> when that feature is enabled.
             </dd>
           </div>
         </dl>
+        <p>
+          The FIFU panel registers these mappings. Product and gallery fields apply to WooCommerce imports; taxonomy image imports use the regular image fields handled by <Link to="/features/taxonomy-image/">Taxonomy Image</Link>. Feature-specific mappings take effect when you have enabled and configured the corresponding FIFU feature. Map only the values that apply to each record.
+        </p>
       </section>
-
       <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="wai-products-title"
+        className="activation-feature-section"
+        aria-labelledby="wai-product-variation-title"
       >
         <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
-            <CircleAlert size={18} aria-hidden="true" />
+          <span className="activation-feature-icon">
+            <ShoppingCart size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">PRODUCT IMPORTS</span>
-            <h2 id="wai-products-title">Use product-specific media fields.</h2>
+            <span className="activation-feature-kicker">WOOCOMMERCE PRODUCTS</span>
+            <h2 id="wai-product-variation-title">Import product media and variation lists.</h2>
           </div>
         </div>
         <p>
-          Product imports use the product image, video, and slider list fields instead of{' '}
-          <strong>Featured image (URL)</strong> and <strong>Featured video (URL)</strong>.
-          Activate WooCommerce for product and variation follow-up handling. If you also
-          use the separate{' '}
-          <Link to="/features/woocommerce-import/">WooCommerce import feature</Link>, its
-          importer maps product metadata directly; this add-on is for imports run through
-          WP All Import.
-        </p>
-        <p>
-          For variable products, a variation row can provide <code>sku</code> and{' '}
-          <code>fifu_list_url</code> values so its image list can be matched to the
-          variation. When a same-row variation has no image of its own, the integration
-          can use the parent product image as a fallback.
+          WooCommerce must be active for product and variation handling. Product imports use list fields; a direct <strong>Featured image (URL)</strong> mapping is not used for the product image. For variable products, include a variation’s SKU and its <code>fifu_list_url</code> in the same XML row so FIFU can match that URL list to the variation. If a same-row variation has no image of its own, the parent product image can be used as a fallback.
         </p>
       </section>
-
       <section
         className="activation-feature-section activation-feature-help"
         aria-labelledby="wai-check-title"
@@ -10829,32 +10759,25 @@ function WpAllImportAddonGuide() {
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">IF MEDIA IS MISSING</span>
-            <h2 id="wai-check-title">Check the mapped field and import type.</h2>
+            <span className="activation-feature-kicker">CHECK YOUR MAPPING</span>
+            <h2 id="wai-check-title">Resolve missing or misread values.</h2>
           </div>
         </div>
-        <ul className="activation-feature-steps">
+        <ul className="activation-feature-help-list">
           <li>
-            <span>!</span>
-            <p>
-              If the <strong>FIFU</strong> section is missing from record mapping, confirm
-              that WP All Import or WP All Import Pro is active and that the import is
-              running through WP All Import.
-            </p>
+            If the <strong>FIFU</strong> panel is absent, activate FIFU and WP All Import or WP All Import Pro, then open the import’s field mapping step.
           </li>
           <li>
-            <span>!</span>
-            <p>
-              If a product has no image list, map{' '}
-              <strong>Product image URL + gallery URLs</strong> rather than{' '}
-              <strong>Featured image (URL)</strong>. For any list that imports
-              incorrectly, confirm that <strong>List delimiter</strong> matches the
-              separator in your source value.
-            </p>
+            If a WooCommerce product has no image, map <strong>Product image URL + gallery URLs</strong>; regular content uses <strong>Featured image (URL)</strong>.
+          </li>
+          <li>
+            If list items do not split correctly, make <strong>List delimiter</strong> match the source separator. Keep image-title values in the same order as their image URLs.
+          </li>
+          <li>
+            If an optional video, slider, ASIN, finder, or forwarding value has no effect, confirm its related FIFU feature is enabled and configured. ASIN and webpage finder values supply those workflows; they do not themselves fetch media during the import.
           </li>
         </ul>
       </section>
-
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
