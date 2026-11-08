@@ -12352,8 +12352,8 @@ function DefaultFeaturedImageGuide() {
       className="feature-guide-page default-featured-image-guide"
     >
       <p className="lead">
-        Set an image URL and choose which post types should use it when they have no
-        featured image of their own.
+        Choose one image to display on posts, pages, or products that do not have
+        their own featured image.
       </p>
 
       <section className="feature-highlight" aria-labelledby="default-image-intro">
@@ -12362,17 +12362,17 @@ function DefaultFeaturedImageGuide() {
             <Image size={15} aria-hidden="true" />
             DEFAULT FEATURED IMAGE
           </span>
-          <h2 id="default-image-intro">Give image-less posts a consistent fallback.</h2>
+          <h2 id="default-image-intro">Keep your content cards from looking empty.</h2>
           <p>
-            The fallback fills missing featured-image slots while preserving a post’s own
-            image. It helps archive cards and other theme layouts avoid empty image areas
-            when you publish content without selecting a thumbnail.
+            Set a single, reusable image URL for content without a featured image.
+            FIFU fills eligible empty featured-image slots while leaving your
+            individually selected images in place.
           </p>
         </div>
         <div className="feature-highlight-visual">
           <img
             src="/images/default-featured-image-guide-1.png"
-            alt="Choose a default image URL, then see it fill an eligible post’s empty featured-image area."
+            alt="Set a default image URL and show the same image on content cards that have no featured image of their own."
           />
         </div>
       </section>
@@ -12386,20 +12386,49 @@ function DefaultFeaturedImageGuide() {
             <ImagePlus size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="default-image-purpose">
-              Use one image where posts would otherwise be blank.
-            </h2>
+            <span className="activation-feature-kicker">WHY USE IT</span>
+            <h2 id="default-image-purpose">Give image-less content a consistent look.</h2>
           </div>
         </div>
         <p>
-          Use this when you want a shared placeholder or branded image across selected
-          content types. With the feature enabled, a shared image attachment can fill the
-          thumbnail on eligible posts without one; themes that display featured images can
-          then show the fallback. This can make listings more consistent and reduce empty
-          image spaces without replacing individually assigned images. It is optional if
-          every post already has its own featured image or your theme does not use
-          featured images.
+          A post without a featured image can leave an empty space in blog listings,
+          related-post cards, or product grids. A default image is useful for
+          announcements, imported content, or older posts that do not have individual
+          thumbnails. Choose a neutral brand image or placeholder that looks appropriate
+          across all the post types you select. Your theme still decides where featured
+          images appear.
+        </p>
+        <p>
+          This is a fallback for <strong>missing featured images</strong>, not a way to
+          replace broken image URLs. If a remote image has stopped loading, see{' '}
+          <Link to="/features/replace-not-found-image/">Replace Not Found Image</Link>.
+        </p>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="default-image-requirement"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Database size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">BEFORE YOU START</span>
+            <h2 id="default-image-requirement">Keep Image Metadata enabled.</h2>
+          </div>
+        </div>
+        <p>
+          Check <strong>FIFU → Settings → Metadata → Image Metadata</strong>.
+          This setting is on by default and allows FIFU to maintain the
+          WordPress-compatible attachment records used by Default Featured Image.
+          The attachment represents the remote image URL; it does not mean FIFU
+          downloads another image file into your Media Library.
+        </p>
+        <p>
+          If you have disabled Image Metadata, turn it back on before configuring
+          the default image. See the{' '}
+          <Link to="/features/image-metadata/">Image Metadata guide</Link> for details.
         </p>
       </section>
 
@@ -12412,8 +12441,8 @@ function DefaultFeaturedImageGuide() {
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">SETTINGS · IMAGE</span>
-            <h2 id="default-image-setup-title">Set the fallback and its coverage.</h2>
+            <span className="activation-feature-kicker">SET UP THE DEFAULT</span>
+            <h2 id="default-image-setup-title">Choose the image and eligible post types.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
@@ -12426,26 +12455,33 @@ function DefaultFeaturedImageGuide() {
           <li>
             <span>2</span>
             <p>
-              In the <strong>Default featured image</strong> tab, paste the image address
-              into <strong>Image URL</strong>. Switch on the adjacent toggle to enable the
-              fallback. Use an image URL that your site can load.
+              On the <strong>Default featured image</strong> tab, enter a public,
+              direct image address in <strong>Image URL</strong>. Use an HTTPS URL
+              that loads without signing in. Wait for the setting to save.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              Open <strong>Filter by post type</strong> and edit the comma-separated post
-              type names. The default list is <code>post,page,product</code>, and the
-              panel shows post types found on your site. Include each type that should
-              receive the fallback.
+              Turn on the <strong>Default featured image</strong> toggle next to
+              the URL field. FIFU can now assign the default to existing eligible
+              posts without a featured image and to newly saved eligible posts.
             </p>
           </li>
           <li>
             <span>4</span>
             <p>
-              After adding or removing a type, switch the feature off and on again so the
-              new list is applied. Save the URL and toggle changes in their respective
-              controls.
+              Open <strong>Filter by post type</strong>. Enter the post-type slugs,
+              separated by commas. The initial list is <code>post,page,product</code>;
+              FIFU also lists the post types detected on your site below the field.
+            </p>
+          </li>
+          <li>
+            <span>5</span>
+            <p>
+              If you changed the post-type list, save it and turn the feature
+              <strong> off and back on</strong>. This reapplies the default to
+              the updated selection, including eligible existing content.
             </p>
           </li>
         </ol>
@@ -12460,41 +12496,70 @@ function DefaultFeaturedImageGuide() {
             <Image size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">WHAT CHANGES</span>
-            <h2 id="default-image-behavior">Your own featured media keeps priority.</h2>
+            <span className="activation-feature-kicker">WHAT HAPPENS NEXT</span>
+            <h2 id="default-image-behavior">The default applies only where it is needed.</h2>
           </div>
         </div>
         <dl className="feature-guide-options">
           <div>
-            <dt>Missing image</dt>
+            <dt>Existing content without an image</dt>
             <dd>
-              Eligible existing posts without a thumbnail can receive the default
-              attachment; newly saved eligible posts can receive it too.
+              When you enable the feature, FIFU can assign a shared default attachment
+              to eligible existing published posts and drafts with no featured image.
             </dd>
           </div>
           <div>
-            <dt>Existing image</dt>
+            <dt>New or updated content</dt>
             <dd>
-              A different assigned thumbnail stays in place. A custom video featured state
-              also blocks the fallback.
+              Eligible content saved without a featured image can receive the same
+              default automatically.
             </dd>
           </div>
           <div>
-            <dt>Changed URL</dt>
+            <dt>Posts with their own images</dt>
             <dd>
-              When the default URL changes, posts using the old default attachment are
-              updated to the new one. Clearing the URL removes that default attachment
-              reference.
+              A post's individually assigned WordPress or FIFU featured image takes
+              priority. The fallback does not intentionally replace it.
             </dd>
           </div>
           <div>
-            <dt>Homepage sharing</dt>
+            <dt>Changing the default URL</dt>
             <dd>
-              The configured URL can supply the homepage Open Graph image when no Open
-              Graph image is already set.
+              FIFU updates the shared default-image association so posts using the
+              previous default can display the new image. Posts with their own images
+              are not affected.
+            </dd>
+          </div>
+          <div>
+            <dt>Turning the feature off</dt>
+            <dd>
+              FIFU removes its default thumbnail associations from the affected
+              content. It does not delete independently assigned featured images
+              or the original remote image file.
             </dd>
           </div>
         </dl>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="default-image-sharing"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Globe size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">HOMEPAGE SHARING</span>
+            <h2 id="default-image-sharing">A possible image for social previews, too.</h2>
+          </div>
+        </div>
+        <p>
+          FIFU can also use the configured default-image URL for the homepage's
+          Open Graph image when the page does not already provide one. This helps
+          supply a sharing image, but an Open Graph image provided elsewhere takes
+          precedence. Choose a default image that also represents your site well.
+        </p>
       </section>
 
       <section
@@ -12506,28 +12571,32 @@ function DefaultFeaturedImageGuide() {
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">CHECK THE RESULT</span>
-            <h2 id="default-image-checks">
-              Confirm the three inputs that control coverage.
-            </h2>
+            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
+            <h2 id="default-image-checks">If the default image does not appear</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            <strong>Toggle:</strong> the default-image feature must be on.
+            <strong>Check both switches:</strong> confirm <strong>Default featured image</strong>{' '}
+            is enabled and <strong>Image Metadata</strong> is on.
           </li>
           <li>
-            <strong>URL:</strong> confirm <strong>Image URL</strong> contains the intended
-            image address.
+            <strong>Check the URL:</strong> open the image in a private browser window.
+            The host must serve the image publicly and permit it to appear on your site.
           </li>
           <li>
-            <strong>Post type:</strong> verify the content type is included in{' '}
-            <strong>Filter by post type</strong>; restart the toggle after changing that
-            list.
+            <strong>Check the post type:</strong> use its actual slug in{' '}
+            <strong>Filter by post type</strong>. After editing the list, turn the
+            feature off and on again.
           </li>
           <li>
-            <strong>Post state:</strong> a post’s own featured image or custom video state
-            takes precedence over the fallback.
+            <strong>Check for an existing featured image:</strong> FIFU does not
+            overwrite an individually assigned image simply to use the default.
+          </li>
+          <li>
+            <strong>Check your theme:</strong> the default fills the featured-image
+            field; it does not force a theme to display thumbnails in layouts that
+            do not render them.
           </li>
         </ul>
       </section>
