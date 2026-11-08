@@ -7960,16 +7960,15 @@ function BrokenLinkCheckerGuide() {
             <Link2 size={15} aria-hidden="true" /> CHECK REMOTE IMAGE URLS
           </span>
           <h2 id="broken-link-intro">
-            Find persistent image failures before they stay hidden in old posts.
+            Find recurring failures in the remote images your site displays.
           </h2>
           <p>
-            When image files move or disappear from another host, the URL saved for a post
-            can stop working without an obvious record in WordPress. Turn on Link Checker
-            to queue FIFU featured-image URLs as pages render, then review URLs that fail
-            repeated checks. This helps you focus repairs on affected posts instead of
-            opening them one by one; it is useful when you rely on remote featured images
-            and optional when your images are stored locally or you do not need ongoing
-            monitoring.
+            Remote image files can disappear, move, or become inaccessible while their
+            addresses remain saved in WordPress. Turn on Link Checker to check featured
+            images encountered as pages render. After repeated failures, you can find
+            affected posts in one place instead of checking them individually. This
+            is useful when you depend on externally hosted images and optional when
+            your content uses only local images.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -8074,10 +8073,11 @@ function BrokenLinkCheckerGuide() {
           <div>
             <dt>Broken Links table</dt>
             <dd>
-              The table lists the post and its broken image URL as text. It excludes posts
-              in Trash, auto-drafts, and attachments. You need a WordPress account with
-              the <code>manage_options</code> capability to load the table. If no URLs
-              meet the threshold, the table displays “No Broken Links.”
+              The table links each affected post title to its editor and each broken
+              image URL to its source address. It excludes posts in Trash, auto-drafts,
+              and attachments. You need the WordPress <code>manage_options</code>{' '}
+              capability to load the results. If no URLs meet the failure threshold,
+              the table has no matching entries.
             </dd>
           </div>
         </dl>
@@ -8101,8 +8101,8 @@ function BrokenLinkCheckerGuide() {
               <strong>
                 FIFU → Settings → Image → Broken Link Checker → Broken Links
               </strong>
-              , select the post title to open its editor. Copy the URL shown in the second
-              column into a browser tab if you want to inspect the current source.
+              , select the post title to open its editor. You can also open the image
+              URL directly from the second column to inspect the current source.
             </p>
           </li>
           <li>
@@ -8115,11 +8115,13 @@ function BrokenLinkCheckerGuide() {
           </li>
         </ol>
         <p>
-          If a URL is still failing, it can remain listed until a successful check resets
-          its failure count. For a visitor-facing substitute while a remote image fails to
-          load in the browser, you can also use{' '}
-          <Link to="/features/replace-not-found-image/">Replace Not Found Image</Link>; it
-          does not repair or replace the stored source URL.
+          Once you replace the post's broken image URL, the old URL is no longer
+          associated with that post and should no longer appear for it in the results.
+          If you keep the same broken URL, it stays listed until a successful check
+          resets its failure count. To show visitors a backup image while the original
+          fails to load, use{' '}
+          <Link to="/features/replace-not-found-image/">Replace Not Found Image</Link>.
+          A visual fallback does not repair the saved URL.
         </p>
       </section>
 
