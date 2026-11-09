@@ -1046,10 +1046,7 @@ function FifuShortcodeGuide() {
           <li>
             <span>2</span>
             <p>
-              Paste it into the post, page, or supported content area where you want the
-              output. Add <code>post_id</code> when you need a specific post; without it,
-              the shortcode uses the current global post. A missing, invalid, or
-              unavailable post ID produces no output.
+              Use <code>post_id</code> to show media from a specific post. Otherwise, the shortcode uses the current post.
             </p>
           </li>
           <li>
@@ -1321,9 +1318,7 @@ function WatchLaterGuide() {
           <li>
             <span>i</span>
             <p>
-              <strong>Browser-specific:</strong> the queue stores video thumbnail and
-              playback URLs in cookies in the visitor’s current browser. Clearing those
-              cookies removes the saved list.
+              Saved videos stay in the visitor's current browser. Clearing browser data also clears the list.
             </p>
           </li>
           <li>
@@ -1336,8 +1331,7 @@ function WatchLaterGuide() {
           <li>
             <span>i</span>
             <p>
-              <strong>Featured media only:</strong> the controls depend on FIFU rendering
-              a featured video thumbnail or supported player embed on the page.
+              These controls appear on supported FIFU featured videos, not every video embedded on the site.
             </p>
           </li>
         </ul>
@@ -2112,13 +2106,8 @@ function DbMigrationGuide() {
           <span className="feature-highlight-kicker">LEGACY DATA BACKFILL</span>
           <h2 id="db-migration-purpose">Move old FIFU records into dedicated tables.</h2>
           <p>
-            Older FIFU media values may still live in WordPress’s shared post metadata
-            table. Migration transfers supported legacy records into FIFU’s current URL,
-            mapping, and related tables in resumable batches. This can reduce FIFU’s
-            dependence on repeated lookups in a large shared table and helps avoid one
-            long migration request. Use it after upgrading a site with legacy FIFU data;
-            if no legacy records remain, you do not need a backfill.
-          </p>
+              Sites upgraded from older FIFU versions may need to move existing media data to the newer storage format. The migration handles this in small steps so large sites can complete the process without a single long operation.
+            </p>
         </div>
         <div className="feature-highlight-visual">
           <img
@@ -2163,15 +2152,13 @@ function DbMigrationGuide() {
           <li>
             <span>3</span>
             <p>
-              Choose <strong>Start migration</strong>. The background runner advances
-              through registered tasks in batches and saves progress between requests.
+              FIFU migrates the data in batches and saves progress so you can pause or resume the process.
             </p>
           </li>
         </ol>
         <p className="db-migration-callout">
-          <strong>Safety:</strong> Each task removes a legacy value only after the
-          corresponding new database record is confirmed.
-        </p>
+              FIFU keeps the old data until its replacement has been saved successfully.
+            </p>
       </section>
       <section
         className="activation-feature-section"
@@ -2199,17 +2186,13 @@ function DbMigrationGuide() {
           <div>
             <dt>Progress summary</dt>
             <dd>
-              Shows the current task, completed-task progress, records migrated in this
-              pass, historical processed records, remaining records, total errors, last
-              run, and last error.
+              Shows migration progress, completed work, remaining items, and any errors.
             </dd>
           </div>
           <div>
             <dt>Task rows</dt>
             <dd>
-              Show each task’s status, saved cursor, migrated and remaining counts,
-              errors, and last update. A task with errors remains eligible for retry even
-              if its scan reached the end.
+              Shows the progress and errors for each migration task.
             </dd>
           </div>
           <div>
@@ -2276,10 +2259,8 @@ function DbMigrationGuide() {
           tasks registered by your installed version.
         </p>
         <p>
-          Values are normalized into FIFU URL, key, mapping, alternative-text, and related
-          tables. This moves the supported FIFU records out of the legacy post metadata
-          path; unrelated WordPress post metadata continues to use its normal storage.
-        </p>
+              The migration moves supported older FIFU data into the newer format without changing unrelated WordPress content.
+            </p>
       </section>
       <section
         className="activation-feature-section"
@@ -3590,10 +3571,7 @@ function VimeoOptionsGuide() {
           <li>
             <span>3</span>
             <p>
-              When metadata is next retrieved, the Vimeo API is asked for the video’s MP4
-              files and pictures. The selected rendition is used when available; otherwise
-              the closest lower rendition is chosen, or the closest higher one if no lower
-              file exists.
+              FIFU tries your preferred resolution when that version is available. Otherwise, it chooses another available video quality.
             </p>
           </li>
         </ol>
@@ -3615,18 +3593,11 @@ function VimeoOptionsGuide() {
           </div>
         </div>
         <p>
-          If the status icon is red, verify the token includes all three scopes. If
-          Vimeo’s token check cannot complete, the icon cannot confirm the scopes. A
-          failed token check, failed API request, or missing MP4 file or thumbnail returns
-          the video to Vimeo streaming through the regular lookup path. Saving a new token
-          or resolution clears cached Vimeo metadata so the next lookup can use the new
-          choice.
-        </p>
+              If the token does not work or an MP4 file is unavailable, the standard Vimeo player is used. Check the token permissions if the MP4 option does not work.
+            </p>
         <p>
-          Background mode applies to Vimeo embeds. A direct MP4 file does not receive
-          Vimeo’s embed background parameter, so use the MP4 option when you specifically
-          need Vimeo’s available MP4 file and quality selection.
-        </p>
+              Background mode works with Vimeo embeds, not with the MP4 playback option.
+            </p>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="vimeo-cli-title">
@@ -3675,10 +3646,8 @@ function VimeoOptionsGuide() {
           </div>
         </dl>
         <p>
-          Run each command separately. Valid rendition values are <code>1080p</code>,{' '}
-          <code>720p</code>, <code>540p</code>, <code>360p</code>, and <code>240p</code>.
-          Saving the token or rendition clears the Vimeo metadata cache.
-        </p>
+              Use one option per command. Supported resolutions are 1080p, 720p, 540p, 360p, and 240p.
+            </p>
         <p>
           The token command does not run the settings page’s scope check. If you need the
           scope indicator updated, save the token through <strong>Access token</strong> in
@@ -3748,12 +3717,8 @@ function BackgroundVideoGuide() {
           </div>
         </div>
         <p>
-          A normal embedded player includes playback controls and can play sound.
-          Background mode adds Vimeo’s background playback parameter, which starts muted
-          and hides the controls. This can keep a hero or other decorative video moving
-          without covering the design with player chrome. It is optional when you want a
-          standard, visitor-controlled video player.
-        </p>
+              Background mode plays supported Vimeo videos silently, without visible controls. Use it for decorative videos rather than content visitors need to operate.
+            </p>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -3812,17 +3777,13 @@ function BackgroundVideoGuide() {
           <div>
             <dt>background video</dt>
             <dd>
-              Enables Vimeo background playback. When it is off, FIFU does not add Vimeo’s
-              background parameter for this mode.
+              Turn this on for silent, control-free Vimeo playback. Turn it off for the standard Vimeo player.
             </dd>
           </div>
           <div>
             <dt>on single post types only</dt>
             <dd>
-              When enabled, background mode applies only if the displayed Vimeo URL
-              matches that content item’s featured Vimeo URL. When disabled, the Vimeo
-              background option can apply wherever that eligible video is displayed. This
-              restriction is independent of the main background switch.
+              Turn this on to use background playback only on the page where the Vimeo video is featured. Leave it off to use background mode in other eligible placements too.
             </dd>
           </div>
         </dl>
@@ -3851,16 +3812,13 @@ function BackgroundVideoGuide() {
           <div>
             <dt>Provider coverage</dt>
             <dd>
-              Background mode is for Vimeo embeds only. YouTube and other provider embeds
-              do not get Vimeo’s background parameter, and direct video-file URLs bypass
-              embed parameter handling.
+              Background mode is available for Vimeo embeds, not YouTube or direct video files.
             </dd>
           </div>
           <div>
             <dt>Restriction is on, but playback is not backgrounded</dt>
             <dd>
-              Check that the Vimeo URL currently displayed is the same as the content
-              item’s featured Vimeo URL. The single-content option compares those URLs.
+              Make sure the page is displaying its own featured Vimeo video.
             </dd>
           </div>
           <div>
@@ -4496,9 +4454,7 @@ function VideoControlsGuide() {
           <li>
             <span>2</span>
             <p>
-              Find <strong>Video Controls</strong>. Turn the switch on to enable the
-              behavior described below, or off to suppress controls or interaction where
-              the player supports it. The switch saves the setting when you submit it.
+              Turn <strong>Video Controls</strong> on when visitors should control playback, or off for fewer player controls. Save the setting.
             </p>
           </li>
           <li>
@@ -4528,45 +4484,31 @@ function VideoControlsGuide() {
           <div>
             <dt>Native video files</dt>
             <dd>
-              On adds the browser’s <code>controls</code> attribute to the video element,
-              showing its native control bar. Off removes the bar.
+              When on, visitors can use the video file's playback controls. When off, those controls are hidden.
             </dd>
           </div>
           <div>
             <dt>YouTube embeds</dt>
             <dd>
-              Off adds <code>controls=0</code> to the player URL. On removes that
-              suppression parameter; YouTube determines the resulting control display.
+              When off, FIFU asks YouTube to hide playback controls. When on, YouTube can show its available controls.
             </dd>
           </div>
           <div>
             <dt>Vimeo embeds</dt>
             <dd>
-              This toggle does not change Vimeo’s player URL. Its controls follow Vimeo’s
-              player behavior;{' '}
-              <Link to="/features/background-video/">Background Video</Link> hides the
-              controls and mutes Vimeo playback when enabled.
+              Vimeo manages its own playback controls. To show a silent video without controls, see <Link to="/features/background-video/">Background Video</Link>.
             </dd>
           </div>
           <div>
             <dt>Other embedded players</dt>
             <dd>
-              Off disables pointer interaction with FIFU’s generated iframe, but does not
-              add a universal “hide controls” parameter. A provider may still show its
-              control bar. On restores pointer interaction; it cannot add controls that
-              the provider does not expose.
+              The effect varies by provider. Some players continue to display their own controls even when this setting is off.
             </dd>
           </div>
         </dl>
         <p>
-          This applies to FIFU-generated featured video players, not separate embeds that
-          you add directly with another block or player. Featured video and audio
-          providers include YouTube, Vimeo, Twitter, 9GAG, Cloudinary, Tumblr, Publitio,
-          JW Player, VideoPress, Sprout, Odysee, Rumble, Dailymotion, Cloudflare Stream,
-          Bunny Stream, Amazon, BitChute, Brighteon, Google Drive, Spotify, SoundCloud,
-          and local or remote video files. The control effect varies by provider as listed
-          above.
-        </p>
+              This setting applies to FIFU featured videos, not videos embedded separately through other plugins or blocks. For supported services, see <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
+            </p>
       </section>
 
       <section
@@ -4644,10 +4586,7 @@ function VideoControlsGuide() {
         <ul className="activation-feature-steps">
           <li>
             <p>
-              If controls remain visible after you turn the switch off, identify the
-              provider: only YouTube receives <code>controls=0</code>; Vimeo’s URL is
-              unchanged, and other embeds may keep their own visible bar even though
-              pointer interaction is disabled.
+              Some video providers manage their own controls. Check the published page and the provider's playback settings.
             </p>
           </li>
           <li>
@@ -5377,11 +5316,8 @@ function TaxonomyImageGuide() {
           </div>
         </div>
         <p>
-          For non-product taxonomy archives, FIFU prepends the term image to the archive
-          description when the current term has an image. WooCommerce product-category
-          archives are excluded from this automatic archive-description output. The image
-          uses an empty alt attribute in that archive placement.
-        </p>
+              FIFU can display term images in taxonomy archive descriptions. WooCommerce product categories use their own image integration.
+            </p>
         <p>
           To place images for a post’s assigned terms in content, use the{' '}
           <code>[fifu_taxonomy]</code> shortcode inside the post loop. The{' '}
@@ -5407,11 +5343,7 @@ function TaxonomyImageGuide() {
               <code>width</code> and <code>height</code>
             </dt>
             <dd>
-              Optional HTML image dimensions. If <strong>optimize featured images</strong>{' '}
-              with FIFU CDN is enabled, specifying a width also requests a resized image
-              URL; height is optional for that resize. See{' '}
-              <Link to="/features/optimized-images/">Optimized Images</Link> for that
-              delivery feature.
+              Optional image width and height. See <Link to="/features/optimized-images/">Optimized Images</Link> for image sizing options.
             </dd>
           </div>
           <div>
@@ -5422,11 +5354,8 @@ function TaxonomyImageGuide() {
           </div>
         </dl>
         <p>
-          The shortcode requires the feature to be enabled and to run inside the WordPress
-          post loop. If <code>slug</code> is missing, it returns “Taxonomy slug not
-          specified.” If the post has no terms in that taxonomy, it returns “No terms
-          found for this taxonomy.”
-        </p>
+              Use the shortcode with a valid taxonomy name on a post that has terms with images.
+            </p>
       </section>
 
       <section
@@ -5523,13 +5452,8 @@ function ImageSeoGuide() {
           </div>
         </div>
         <p>
-          A remote featured image may have no locally uploaded attachment record
-          containing descriptive alt text, and SEO or social previews may otherwise omit
-          its URL. FIFU associates the image description with your content and includes
-          its image URL in supported output. Useful alt text gives assistive technology a
-          text alternative; image URLs in page and structured metadata can help search
-          engines and social services associate the image with the content.
-        </p>
+              Add descriptive alternative text to help visitors using screen readers understand the image. FIFU can also make the featured image available to supported search and social-sharing tools.
+            </p>
         <p>
           Use this when you set featured media through FIFU and want descriptive image
           markup or image metadata on singular content pages. It is optional if your theme
@@ -5577,10 +5501,8 @@ function ImageSeoGuide() {
           </li>
         </ol>
         <p>
-          The saved value is read for the FIFU featured attachment’s image attributes. If
-          the featured image URL matches the first slider image, that image’s own
-          alternative text is used.
-        </p>
+              A slider image can use its own alternative text when one is provided.
+            </p>
       </section>
 
       <section
@@ -5600,34 +5522,25 @@ function ImageSeoGuide() {
           <div>
             <dt>Image alt text</dt>
             <dd>
-              FIFU supplies the saved description for its featured attachment. When that
-              value is unavailable, the post title is the fallback.
+              FIFU uses your image description as alternative text. If it is empty, the post title is used instead.
             </dd>
           </div>
           <div>
             <dt>Structured data</dt>
             <dd>
-              On singular pages, FIFU uses available slider image URLs, then other FIFU
-              image URLs, then the main image URL. Yoast’s schema graph is updated when
-              matching image fields exist. With a supported SEO plugin active, FIFU emits
-              image graph data; otherwise it outputs its own image data, including Article
-              or Product data where applicable.
+              FIFU shares available featured images with supported SEO plugins and structured data, including slider images where applicable.
             </dd>
           </div>
           <div>
             <dt>Yoast social previews</dt>
             <dd>
-              For singular content other than the front page and posts page, FIFU can
-              supply its main image to Yoast Open Graph and Twitter image fields. A custom
-              Yoast Open Graph or Twitter image set for the content takes precedence.
+              FIFU can supply featured images for Yoast SEO social previews. If you choose a custom social image in Yoast SEO, that image takes priority.
             </dd>
           </div>
           <div>
             <dt>Rank Math</dt>
             <dd>
-              FIFU integrates with Rank Math social image output and can rewrite its
-              sitemap image URLs to the FIFU CDN when <strong>Optimize Thumbnails</strong>{' '}
-              is enabled. Query-dependent remote URLs are preserved.
+              FIFU supports Rank Math's social images and image sitemaps, including optimized FIFU image URLs when enabled.
             </dd>
           </div>
         </dl>
@@ -5763,8 +5676,7 @@ function ScheduleMetadataGenerationGuide() {
           <li>
             <span>2</span>
             <p>
-              Find <strong>Schedule Metadata Generation</strong> and turn on its toggle.
-              FIFU registers the recurring job.
+              Turn on <strong>Schedule Metadata Generation</strong> to check for missing media data automatically.
             </p>
           </li>
           <li>
@@ -5803,9 +5715,7 @@ function ScheduleMetadataGenerationGuide() {
           <div>
             <dt>What it checks</dt>
             <dd>
-              FIFU media gaps on posts and terms. Post checks cover image and video URLs
-              plus supported gallery and slider records; term checks cover image and video
-              records.
+              Checks posts, products, and categories that have FIFU media but are missing the data WordPress needs to display it.
             </dd>
           </div>
           
@@ -6367,9 +6277,7 @@ function AutoSetScreenshotGuide() {
           <li>
             <span>4</span>
             <p>
-              When a configured field contains a web address beginning with{' '}
-              <code>http</code>, a scheduled check builds its screenshot URL and assigns
-              it as FIFU media if the post has no existing featured media.
+              FIFU creates a screenshot from the saved page address and uses it as featured media when the post has no featured image or video.
             </p>
           </li>
         </ol>
@@ -6389,19 +6297,13 @@ function AutoSetScreenshotGuide() {
           </div>
         </div>
         <p>
-          A post is skipped if it already has a WordPress featured thumbnail, FIFU image,
-          video, custom video, or first slider image. The generated URL is stored as FIFU
-          media; this workflow does not create a Media Library attachment. If you need to
-          save an image to the local library, see{' '}
-          <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link>
-          .
-        </p>
+              FIFU leaves existing featured media alone. Screenshots remain remote unless you choose to save them in the <Link to="/features/save-in-the-media-library/">Media Library</Link>.
+            </p>
         <dl className="feature-guide-options">
           <div>
             <dt>Size</dt>
             <dd>
-              Use <code>widthxheight</code>, with one to four digits for each dimension.
-              Blank or invalid input omits the size segment from the screenshot URL.
+              Enter dimensions such as <code>1280x960</code>, or leave the size empty to use the default.
             </dd>
           </div>
           <div>
@@ -6415,10 +6317,7 @@ function AutoSetScreenshotGuide() {
           <div>
             <dt>One post at a time</dt>
             <dd>
-              In the post editor, the <strong>Use screenshot</strong> checkbox prefixes
-              <code>https://screenshot.fifu.app/</code> to the image URL you enter. This
-              is a manual editor action, separate from the scheduled custom-field
-              workflow.
+              In the post editor, <strong>Use screenshot</strong> lets you create a screenshot from a page address without setting up the automatic custom-field workflow.
             </dd>
           </div>
         </dl>
@@ -8188,11 +8087,7 @@ function BrokenLinkCheckerGuide() {
           <li>
             <span>3</span>
             <p>
-              Let WordPress render pages that use remote FIFU featured images. This is
-              useful when you rely on{' '}
-              <Link to="/features/remote-featured-image/">Remote Featured Image</Link> for
-              post images. The direct image URL is queued in the background when the
-              featured-image output is generated.
+              FIFU checks eligible featured images as visitors browse the site.
             </p>
           </li>
           <li>
@@ -8204,11 +8099,8 @@ function BrokenLinkCheckerGuide() {
           </li>
         </ol>
         <p>
-          The checker accepts valid direct <code>http</code> and <code>https</code> URLs.
-          It monitors the primary FIFU featured-image URL associated with a post; it does
-          not crawl every post, inspect images embedded in post text, or check every
-          gallery image. A URL shared by multiple posts uses one check history.
-        </p>
+              The checker monitors remote FIFU featured images. It does not scan images inside post content or every product gallery image.
+            </p>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="blc-results-title">
@@ -8241,20 +8133,13 @@ function BrokenLinkCheckerGuide() {
           <div>
             <dt>Success clears its failure count</dt>
             <dd>
-              HTTP responses from 200 through 399 count as success and reset the count to
-              zero. Other response codes and request errors add a failure. The check
-              measures whether the URL responds, not whether the response contains the
-              intended image.
+              Successful checks clear the failure count. An image is listed as broken after three failed checks.
             </dd>
           </div>
           <div>
             <dt>Broken Links table</dt>
             <dd>
-              The table links each affected post title to its editor and each broken
-              image URL to its source address. It excludes posts in Trash, auto-drafts,
-              and attachments. You need the WordPress <code>manage_options</code>{' '}
-              capability to load the results. If no URLs meet the failure threshold,
-              the table has no matching entries.
+              The table links affected posts to their editors and shows their failing image addresses. Only administrators can view these results.
             </dd>
           </div>
         </dl>
@@ -8285,9 +8170,7 @@ function BrokenLinkCheckerGuide() {
           <li>
             <span>2</span>
             <p>
-              Replace the post’s featured-image URL with a working image address and save
-              the post. The table reflects current image associations and recorded
-              failures; it is not a repair history.
+              Saving a working image URL fixes the affected post. The list updates as the checker continues to run.
             </p>
           </li>
         </ol>
@@ -8470,10 +8353,7 @@ function ModifyPostContentGuide() {
           <div>
             <dt>remove duplicated media</dt>
             <dd>
-              Removes a matching image or supported featured video from displayed content.
-              It needs a featured-image attachment URL to begin matching. Image URL
-              matching ignores surrounding whitespace and HTML entity encoding, but
-              different URL variants do not count as a match.
+              Removes a duplicate of the featured image or supported video from the displayed post content. Other images are left alone.
             </dd>
           </div>
         </dl>
@@ -8504,10 +8384,7 @@ function ModifyPostContentGuide() {
           <li>
             <span>2</span>
             <p>
-              Clear the field to remove the post-type restriction. With slugs entered,
-              either change applies only on singular pages whose post type is in your
-              list. With the field empty, it can apply wherever WordPress displays post
-              content.
+              Enter post types to limit where this applies, or leave the field empty to use the default scope.
             </p>
           </li>
         </ol>
@@ -8531,29 +8408,17 @@ function ModifyPostContentGuide() {
         <ul className="activation-feature-help-list">
           <li>
             <p>
-              Confirm the post has a featured image attachment URL. If the image in the
-              body uses a different URL variant, FIFU leaves it in place. The matcher
-              removes the first matching image element per render pass. For a{' '}
-              <Link to="/features/featured-slider/">Featured Slider</Link>, it can remove
-              a FIFU slider fragment containing the first slider image URL.
+              If a duplicate remains, confirm that the image in the post matches the featured image.
             </p>
           </li>
           <li>
             <p>
-              A matching embedded <code>iframe</code> or <code>video</code> can be removed
-              when
-              <Link to="/features/featured-video-audio/"> Featured Video / Audio</Link> is
-              enabled and the embed source contains that post’s featured video ID. For a
-              custom video, the video URL must match, or its poster must match the
-              featured image URL. Video removal also depends on the featured-image
-              attachment URL being available.
+              Video duplicates can also be removed when the same featured video appears in the post content.
             </p>
           </li>
           <li>
             <p>
-              The add filter runs before removal. If both toggles are on, removal may
-              match and remove the image just added. Leave one off if you want to add an
-              image without also removing a matching copy.
+              Using both options together can cancel out the result. Enable only the change your layout needs.
             </p>
           </li>
           <li>
@@ -9034,11 +8899,8 @@ function DeleteAllUrlsGuide() {
             Clear remote media references across your site.
           </h2>
           <p>
-            FIFU stores remote image addresses and related media data in content metadata
-            and its URL tables. This irreversible action removes that FIFU data so you can
-            retire remote images and continue with local media without old FIFU
-            references.
-          </p>
+              This action permanently removes FIFU's saved remote media addresses and related data. Use it only when you want to stop using remote FIFU media across the site.
+            </p>
         </div>
         <div className="feature-highlight-visual">
           <img
@@ -9071,15 +8933,8 @@ function DeleteAllUrlsGuide() {
           <Link to="/features/clear-metadata/">Clear Metadata</Link> instead.
         </p>
         <p>
-          The run first performs Clear Metadata. Only after that operation reports
-          completion does it delete FIFU-prefixed post and term metadata and clear the
-          FIFU URL and mapping tables. This broad removal affects{' '}
-          <Link to="/features/remote-featured-image/">remote featured images</Link>,{' '}
-          <Link to="/features/fifu-product-gallery/">FIFU galleries</Link>,{' '}
-          <Link to="/features/featured-video-audio/">featured video and audio</Link>, and{' '}
-          <Link to="/features/featured-slider/">featured sliders</Link>; it does not
-          target only featured image URLs.
-        </p>
+              FIFU clears its image metadata first, then removes saved remote featured images, galleries, videos, audio, and sliders.
+            </p>
       </section>
 
       <section
@@ -9183,11 +9038,8 @@ function DeleteAllUrlsGuide() {
           again.
         </p>
         <p>
-          The database deletion runs in a transaction and rolls back when a delete query
-          fails. After a successful request, the run flag is turned off. Because the
-          removed FIFU references cannot be restored by this control, make sure you intend
-          to remove the remote media data before starting.
-        </p>
+              This action cannot restore removed images or their saved addresses. Make a backup before continuing.
+            </p>
       </section>
 
       <section className="feature-detail-cta">
@@ -10259,16 +10111,8 @@ function MuteGuide() {
           </div>
         </div>
         <p>
-          A featured video can play with sound unless its player starts muted. Turning on
-          Mute adds a muted state to supported video playback; for YouTube and Vimeo, FIFU
-          adds the provider’s mute parameter, and for local or direct video files it sets
-          the video element’s muted attribute. This helps avoid surprising visitors and
-          supports silent playback when you use{' '}
-          <Link to="/features/autoplay/">Autoplay</Link> or{' '}
-          <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link>. Use it
-          when you want silent starts, especially for automatically started video. Leave
-          it off for a device type when you want its videos to start with sound.
-        </p>
+              Turn on <strong>Mute</strong> when you want featured videos to start silently, especially when using <Link to="/features/autoplay/">Autoplay</Link> or <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link>. Leave it off when videos should start with sound.
+            </p>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="mute-setup-title">
@@ -10299,8 +10143,7 @@ function MuteGuide() {
           <li>
             <span>3</span>
             <p>
-              Open a page that displays a featured video on each device type you changed.
-              FIFU selects the matching switch using WordPress’s mobile-device check.
+              Test the result on desktop and mobile, since each has its own setting.
             </p>
           </li>
         </ol>
@@ -10364,8 +10207,7 @@ function MuteGuide() {
           <li>
             <span>1</span>
             <p>
-              Check the switch for the device you are testing. Desktop and mobile use
-              separate values selected through WordPress’s mobile-device check.
+              Desktop and mobile have separate mute settings. Check the setting for the device you are using.
             </p>
           </li>
           <li>
@@ -11842,12 +11684,8 @@ function FifuApiGuide() {
           </div>
         </div>
         <p>
-          Use the API when a custom integration, import, or publishing routine already has
-          a WordPress post or term ID and needs to assign FIFU media programmatically. The
-          helpers centralize FIFU storage and attachment synchronization, so your code
-          does not need to reproduce those media updates itself. If you assign media
-          manually in the editor, these PHP functions are optional.
-        </p>
+              Use these functions in custom integrations that assign featured media automatically. You do not need them when using the FIFU editor.
+            </p>
       </section>
 
       <section
@@ -11945,9 +11783,8 @@ function FifuApiGuide() {
           </div>
         </dl>
         <p>
-          Single image URLs must be valid HTTP or HTTPS addresses. List entries are
-          trimmed and empty entries are skipped.
-        </p>
+              Use complete image URLs. For image or video lists, separate entries as shown above.
+            </p>
       </section>
 
       <section
@@ -12402,9 +12239,7 @@ function WpCliGuide() {
           <li>
             <span>!</span>
             <p>
-              <strong>Command unavailable:</strong> run WP-CLI in the intended WordPress
-              installation, with FIFU active. The plugin registers <code>fifu</code> only
-              when the <code>WP_CLI</code> runtime constant is enabled.
+              Run WP-CLI from the correct WordPress installation with FIFU active.
             </p>
           </li>
           <li>
@@ -14919,16 +14754,8 @@ function FeaturedSliderGuide() {
           </div>
         </div>
         <p>
-          If your theme does not show featured media in the location you want, add{' '}
-          <code>[fifu_slider]</code> where the current post is available. To target a
-          specific post outside that context, use <code>[fifu_slider post_id="123"]</code>{' '}
-          and replace <code>123</code> with its post ID. Without a current post or a valid
-          ID, the shortcode returns no output. It also loads the slider assets for that
-          placement. Add optional numeric <code>width</code> and <code>height</code>{' '}
-          attributes to set the rendered dimensions. The{' '}
-          <Link to="/features/fifu-shortcode/">FIFU Shortcode guide</Link> covers the
-          other FIFU shortcode outputs.
-        </p>
+              You can set optional <code>width</code> and <code>height</code> values to control the displayed size. See <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link> for more examples.
+            </p>
       </section>
 
       <section
