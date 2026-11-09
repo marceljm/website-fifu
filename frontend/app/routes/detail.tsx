@@ -51,6 +51,7 @@ import {
   FeatureGuideHelpList,
   FeatureGuideHighlight,
   FeatureGuideOptions,
+  FeatureGuideSection,
   FeatureGuideSteps,
   FeatureRelatedGuides,
 } from '../components/features/FeatureGuideSections';
@@ -823,10 +824,7 @@ function CustomPopupGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="custom-popup-setup-title"
-      >
+      <FeatureGuideSection id="custom-popup-setup-title">
         <FeatureGuideHeading
           id="custom-popup-setup-title"
           icon={<>
@@ -864,7 +862,7 @@ function CustomPopupGuide() {
           </li>
         </FeatureGuideSteps>
         
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="custom-popup-cli"
@@ -880,10 +878,7 @@ function CustomPopupGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="custom-popup-behavior-title"
-      >
+      <FeatureGuideSection id="custom-popup-behavior-title">
         <FeatureGuideHeading
           id="custom-popup-behavior-title"
           icon={<>
@@ -905,12 +900,9 @@ function CustomPopupGuide() {
           screens, or 95% on screens 768 px wide or smaller. Its maximum height is 95% of
           the window.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="custom-popup-controls-title"
-      >
+      <FeatureGuideSection id="custom-popup-controls-title">
         <FeatureGuideHeading
           id="custom-popup-controls-title"
           icon={<>
@@ -955,12 +947,9 @@ function CustomPopupGuide() {
           </div>
           
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="custom-popup-check-title"
-      >
+      <FeatureGuideSection id="custom-popup-check-title">
         <FeatureGuideHeading
           id="custom-popup-check-title"
           icon={<>
@@ -990,7 +979,7 @@ function CustomPopupGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</FeatureRelatedGuides>
 
@@ -1032,10 +1021,7 @@ function FifuShortcodeGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-shortcode-use"
-      >
+      <FeatureGuideSection id="fifu-shortcode-use">
         <FeatureGuideHeading
           id="fifu-shortcode-use"
           icon={<>
@@ -1072,11 +1058,8 @@ function FifuShortcodeGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-shortcode-outputs"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-shortcode-outputs">
         <FeatureGuideHeading
           id="fifu-shortcode-outputs"
           icon={<>
@@ -1133,11 +1116,8 @@ function FifuShortcodeGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="fifu-shortcode-limits"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-shortcode-limits" help>
         <FeatureGuideHeading
           id="fifu-shortcode-limits"
           icon={<>
@@ -1175,7 +1155,7 @@ function FifuShortcodeGuide() {
             the shortcode output.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
       <FeatureGuideCta />
     </Page>
   );
@@ -1206,10 +1186,7 @@ function WatchLaterGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="watch-later-purpose-title"
-      >
+      <FeatureGuideSection id="watch-later-purpose-title">
         <FeatureGuideHeading
           id="watch-later-purpose-title"
           icon={<>
@@ -1229,11 +1206,8 @@ function WatchLaterGuide() {
           the current browser, so it does not follow a visitor to another browser or
           device; skip it if visitors do not need a saved video list.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="watch-later-setup-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="watch-later-setup-title">
         <FeatureGuideHeading
           id="watch-later-setup-title"
           icon={<>
@@ -1271,11 +1245,8 @@ function WatchLaterGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="watch-later-workflow-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="watch-later-workflow-title">
         <FeatureGuideHeading
           id="watch-later-workflow-title"
           icon={<>
@@ -1310,11 +1281,8 @@ function WatchLaterGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="watch-later-limits-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="watch-later-limits-title" help>
         <FeatureGuideHeading
           id="watch-later-limits-title"
           icon={<>
@@ -1348,7 +1316,7 @@ function WatchLaterGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
       <FeatureRelatedGuides><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
       <FeatureGuideCta />
@@ -1393,10 +1361,7 @@ function UnsplashImageSearchGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="unsplash-image-search-editor-title"
-      >
+      <FeatureGuideSection id="unsplash-image-search-editor-title">
         <FeatureGuideHeading
           id="unsplash-image-search-editor-title"
           icon={<>
@@ -1439,12 +1404,9 @@ function UnsplashImageSearchGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="unsplash-image-search-quick-title"
-      >
+      <FeatureGuideSection id="unsplash-image-search-quick-title">
         <FeatureGuideHeading
           id="unsplash-image-search-quick-title"
           icon={<>
@@ -1462,12 +1424,9 @@ function UnsplashImageSearchGuide() {
           field, and select <strong>Preview</strong>. Choose a result, then save the Quick
           Edit form to set that item’s featured image.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="unsplash-image-search-help-title"
-      >
+      <FeatureGuideSection id="unsplash-image-search-help-title" help>
         <FeatureGuideHeading
           id="unsplash-image-search-help-title"
           icon={<>
@@ -1519,7 +1478,7 @@ function UnsplashImageSearchGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -1566,10 +1525,7 @@ function DeleteFromCloudGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="delete-cloud-manual-title"
-      >
+      <FeatureGuideSection id="delete-cloud-manual-title">
         <FeatureGuideHeading
           id="delete-cloud-manual-title"
           icon={<>
@@ -1626,12 +1582,9 @@ function DeleteFromCloudGuide() {
           available. This does not restore a missing local file, so check each row’s title
           and location before confirming.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="delete-cloud-auto-title"
-      >
+      <FeatureGuideSection id="delete-cloud-auto-title">
         <FeatureGuideHeading
           id="delete-cloud-auto-title"
           icon={<>
@@ -1646,12 +1599,9 @@ function DeleteFromCloudGuide() {
         <p>
               In <strong>FIFU → Cloud → Delete</strong>, turn on <strong>Automatic delete</strong> to remove Cloud images that are no longer used. Keep it off if you prefer to review each deletion manually.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="delete-cloud-troubleshooting-title"
-      >
+      <FeatureGuideSection id="delete-cloud-troubleshooting-title" help>
         <FeatureGuideHeading
           id="delete-cloud-troubleshooting-title"
           icon={<>
@@ -1687,7 +1637,7 @@ function DeleteFromCloudGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/hotlink-protection/">Hotlink protection</Link>.</FeatureRelatedGuides>
 
@@ -1732,10 +1682,7 @@ function UploadToCloudGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="upload-cloud-connection-title"
-      >
+      <FeatureGuideSection id="upload-cloud-connection-title">
         <FeatureGuideHeading
           id="upload-cloud-connection-title"
           icon={<>
@@ -1769,12 +1716,9 @@ function UploadToCloudGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="upload-cloud-manual-title"
-      >
+      <FeatureGuideSection id="upload-cloud-manual-title">
         <FeatureGuideHeading
           id="upload-cloud-manual-title"
           icon={<>
@@ -1816,12 +1760,9 @@ function UploadToCloudGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="upload-cloud-automatic-title"
-      >
+      <FeatureGuideSection id="upload-cloud-automatic-title">
         <FeatureGuideHeading
           id="upload-cloud-automatic-title"
           icon={<>
@@ -1841,12 +1782,9 @@ function UploadToCloudGuide() {
           handled without selecting each one manually; manual upload remains available
           when you want control over each batch.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="upload-cloud-costs-title"
-      >
+      <FeatureGuideSection id="upload-cloud-costs-title">
         <FeatureGuideHeading
           id="upload-cloud-costs-title"
           icon={<>
@@ -1865,12 +1803,9 @@ function UploadToCloudGuide() {
           delivery can reduce image-processing work on your WordPress server and deliver
           smaller image variants to visitors.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="upload-cloud-recovery-title"
-      >
+      <FeatureGuideSection id="upload-cloud-recovery-title" help>
         <FeatureGuideHeading
           id="upload-cloud-recovery-title"
           icon={<>
@@ -1902,7 +1837,7 @@ function UploadToCloudGuide() {
           treat it as not completed and retry after confirming the connection and service
           status.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/hotlink-protection/">Hotlink protection</Link>.</FeatureRelatedGuides>
 
@@ -1948,10 +1883,7 @@ function LinkLocalImagesGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="local-images-workflow-title"
-      >
+      <FeatureGuideSection id="local-images-workflow-title">
         <FeatureGuideHeading
           id="local-images-workflow-title"
           icon={<>
@@ -1999,12 +1931,9 @@ function LinkLocalImagesGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="local-images-effects-title"
-      >
+      <FeatureGuideSection id="local-images-effects-title">
         <FeatureGuideHeading
           id="local-images-effects-title"
           icon={<>
@@ -2033,7 +1962,7 @@ function LinkLocalImagesGuide() {
           For the upload stage, continue with the{' '}
           <Link to="/features/upload-to-cloud/">Upload to Cloud guide</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/save-in-the-media-library/">Save in the Media Library</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -2068,10 +1997,7 @@ function DbMigrationGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="db-migration-start-title"
-      >
+      <FeatureGuideSection id="db-migration-start-title">
         <FeatureGuideHeading
           id="db-migration-start-title"
           icon={<>
@@ -2112,11 +2038,8 @@ function DbMigrationGuide() {
         <p className="db-migration-callout">
               FIFU keeps the old data until its replacement has been saved successfully.
             </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="db-migration-monitor-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="db-migration-monitor-title">
         <FeatureGuideHeading
           id="db-migration-monitor-title"
           icon={<>
@@ -2190,11 +2113,8 @@ function DbMigrationGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="db-migration-coverage-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="db-migration-coverage-title">
         <FeatureGuideHeading
           id="db-migration-coverage-title"
           icon={<>
@@ -2212,7 +2132,7 @@ function DbMigrationGuide() {
         <p>
               The migration moves supported older FIFU data into the newer format without changing unrelated WordPress content.
             </p>
-      </section>
+      </FeatureGuideSection>
             <FeatureCliSection
         id="db-migration-cli-title"
         commands={[
@@ -2234,10 +2154,7 @@ function DbMigrationGuide() {
         ]}
         note="Each command processes a batch. Repeat runs as needed; use Reset only when you intend to restart a task."
       />
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="db-migration-help-title"
-      >
+      <FeatureGuideSection id="db-migration-help-title" help>
         <FeatureGuideHeading
           id="db-migration-help-title"
           icon={<>
@@ -2269,7 +2186,7 @@ function DbMigrationGuide() {
           </div>
           
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
       <FeatureRelatedGuides><Link to="/features/image-metadata/">Image Metadata</Link>.</FeatureRelatedGuides>
 
       <FeatureGuideCta />
@@ -2305,10 +2222,7 @@ function FifuFieldsGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-fields-editor-title"
-      >
+      <FeatureGuideSection id="fifu-fields-editor-title">
         <FeatureGuideHeading
           id="fifu-fields-editor-title"
           icon={<>
@@ -2355,11 +2269,8 @@ function FifuFieldsGuide() {
           </Link>{' '}
           for those workflows.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-fields-gravity-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-fields-gravity-title">
         <FeatureGuideHeading
           id="fifu-fields-gravity-title"
           icon={<>
@@ -2400,11 +2311,8 @@ function FifuFieldsGuide() {
           <Link to="/features/featured-slider/">Featured Slider</Link> and{' '}
           <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-fields-vendors-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-fields-vendors-title">
         <FeatureGuideHeading
           id="fifu-fields-vendors-title"
           icon={<>
@@ -2439,11 +2347,8 @@ function FifuFieldsGuide() {
           saves, FIFU checks that the current account is a seller. Existing product URLs
           are populated in edit forms.
         </p>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="fifu-fields-availability-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-fields-availability-title" help>
         <FeatureGuideHeading
           id="fifu-fields-availability-title"
           icon={<>
@@ -2492,7 +2397,7 @@ function FifuFieldsGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
       <FeatureGuideCta />
     </Page>
   );
@@ -2533,10 +2438,7 @@ function FeaturedMediaFilterGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-media-filter-purpose-title"
-      >
+      <FeatureGuideSection id="featured-media-filter-purpose-title">
         <FeatureGuideHeading
           id="featured-media-filter-purpose-title"
           icon={<>
@@ -2555,12 +2457,9 @@ function FeaturedMediaFilterGuide() {
           when your list is already manageable or you do not need to sort content by media
           state.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-media-filter-workflow-title"
-      >
+      <FeatureGuideSection id="featured-media-filter-workflow-title">
         <FeatureGuideHeading
           id="featured-media-filter-workflow-title"
           icon={<>
@@ -2597,12 +2496,9 @@ function FeaturedMediaFilterGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-media-filter-options-title"
-      >
+      <FeatureGuideSection id="featured-media-filter-options-title">
         <FeatureGuideHeading
           id="featured-media-filter-options-title"
           icon={<>
@@ -2641,12 +2537,9 @@ function FeaturedMediaFilterGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="featured-media-filter-help-title"
-      >
+      <FeatureGuideSection id="featured-media-filter-help-title" help>
         <FeatureGuideHeading
           id="featured-media-filter-help-title"
           icon={<>
@@ -2662,7 +2555,7 @@ function FeaturedMediaFilterGuide() {
         <p>
               If you do not see the filter, open a supported WordPress content list and check that your account can edit that content type.
             </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</FeatureRelatedGuides>
 
@@ -2706,10 +2599,7 @@ function OrderEmailImagesGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="order-email-enable"
-      >
+      <FeatureGuideSection id="order-email-enable">
         <FeatureGuideHeading
           id="order-email-enable"
           icon={<>
@@ -2746,12 +2636,9 @@ function OrderEmailImagesGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="order-email-behavior"
-      >
+      <FeatureGuideSection id="order-email-behavior">
         <FeatureGuideHeading
           id="order-email-behavior"
           icon={<>
@@ -2789,7 +2676,7 @@ function OrderEmailImagesGuide() {
           with images, so heavily customized email templates or email-design
           plugins may display the rows differently.
         </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="order-email-cli"
@@ -2805,10 +2692,7 @@ function OrderEmailImagesGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="order-email-troubleshooting"
-      >
+      <FeatureGuideSection id="order-email-troubleshooting" help>
         <FeatureGuideHeading
           id="order-email-troubleshooting"
           icon={<>
@@ -2843,7 +2727,7 @@ function OrderEmailImagesGuide() {
             images to load. Test the email in another client if needed.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</FeatureRelatedGuides>
 
@@ -2887,10 +2771,7 @@ function AutoSetCategoryImagesGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="category-images-purpose-title"
-      >
+      <FeatureGuideSection id="category-images-purpose-title">
         <FeatureGuideHeading
           id="category-images-purpose-title"
           icon={<>
@@ -2914,12 +2795,9 @@ function AutoSetCategoryImagesGuide() {
           another product image. If you prefer to choose and keep category
           thumbnails yourself, leave the feature disabled.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="category-images-enable-title"
-      >
+      <FeatureGuideSection id="category-images-enable-title">
         <FeatureGuideHeading
           id="category-images-enable-title"
           icon={<>
@@ -2961,7 +2839,7 @@ function AutoSetCategoryImagesGuide() {
           images that FIFU has already saved.
         </p>
         
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="category-images-cli"
@@ -2977,10 +2855,7 @@ function AutoSetCategoryImagesGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="category-images-edit-title"
-      >
+      <FeatureGuideSection id="category-images-edit-title">
         <FeatureGuideHeading
           id="category-images-edit-title"
           icon={<>
@@ -3069,12 +2944,9 @@ function AutoSetCategoryImagesGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="category-images-updates-title"
-      >
+      <FeatureGuideSection id="category-images-updates-title">
         <FeatureGuideHeading
           id="category-images-updates-title"
           icon={<>
@@ -3123,7 +2995,7 @@ function AutoSetCategoryImagesGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -3164,10 +3036,7 @@ function LightboxAndZoomGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="lightbox-zoom-settings-title"
-      >
+      <FeatureGuideSection id="lightbox-zoom-settings-title">
         <FeatureGuideHeading
           id="lightbox-zoom-settings-title"
           icon={<>
@@ -3214,12 +3083,9 @@ function LightboxAndZoomGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="lightbox-zoom-conditions-title"
-      >
+      <FeatureGuideSection id="lightbox-zoom-conditions-title">
         <FeatureGuideHeading
           id="lightbox-zoom-conditions-title"
           icon={<>
@@ -3268,7 +3134,7 @@ function LightboxAndZoomGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
@@ -3311,7 +3177,7 @@ function VimeoOptionsGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section className="activation-feature-section" aria-labelledby="vimeo-setup-title">
+      <FeatureGuideSection id="vimeo-setup-title">
         <FeatureGuideHeading
           id="vimeo-setup-title"
           icon={<>
@@ -3342,12 +3208,9 @@ function VimeoOptionsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="vimeo-background-options-title"
-      >
+      <FeatureGuideSection id="vimeo-background-options-title">
         <FeatureGuideHeading
           id="vimeo-background-options-title"
           icon={<>
@@ -3385,9 +3248,9 @@ function VimeoOptionsGuide() {
           The <Link to="/features/background-video/">Background Video guide</Link> also
           explains this playback mode in the broader video settings workflow.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="vimeo-token-title">
+      <FeatureGuideSection id="vimeo-token-title">
         <FeatureGuideHeading
           id="vimeo-token-title"
           icon={<>
@@ -3435,12 +3298,9 @@ function VimeoOptionsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="vimeo-limits-title"
-      >
+      <FeatureGuideSection id="vimeo-limits-title" help>
         <FeatureGuideHeading
           id="vimeo-limits-title"
           icon={<>
@@ -3459,7 +3319,7 @@ function VimeoOptionsGuide() {
         <p>
               Background mode works with Vimeo embeds, not with the MP4 playback option.
             </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="vimeo-cli-title"
@@ -3522,10 +3382,7 @@ function BackgroundVideoGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="background-video-workflow-title"
-      >
+      <FeatureGuideSection id="background-video-workflow-title">
         <FeatureGuideHeading
           id="background-video-workflow-title"
           icon={<>
@@ -3578,11 +3435,8 @@ function BackgroundVideoGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="background-video-scope-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="background-video-scope-title">
         <FeatureGuideHeading
           id="background-video-scope-title"
           icon={<>
@@ -3613,11 +3467,8 @@ function BackgroundVideoGuide() {
           single-content page. Keep it off when the same Vimeo video should retain
           background behavior wherever it appears.
         </p>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="background-video-conditions-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="background-video-conditions-title" help>
         <FeatureGuideHeading
           id="background-video-conditions-title"
           icon={<>
@@ -3656,7 +3507,7 @@ function BackgroundVideoGuide() {
           For the other Vimeo playback and file settings, continue with the{' '}
           <Link to="/features/vimeo-options/">Vimeo options guide</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
             <FeatureCliSection
         id="background-video-cli-title"
         commands={[
@@ -3714,10 +3565,7 @@ function AutoplayOnMouseoverGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="mouseover-when-title"
-      >
+      <FeatureGuideSection id="mouseover-when-title">
         <FeatureGuideHeading
           id="mouseover-when-title"
           icon={<>
@@ -3735,12 +3583,9 @@ function AutoplayOnMouseoverGuide() {
           it off if you prefer click-to-play or pointer hover is not a natural part of
           browsing.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="mouseover-config-title"
-      >
+      <FeatureGuideSection id="mouseover-config-title">
         <FeatureGuideHeading
           id="mouseover-config-title"
           icon={<>
@@ -3791,12 +3636,9 @@ function AutoplayOnMouseoverGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="mouseover-coverage-title"
-      >
+      <FeatureGuideSection id="mouseover-coverage-title" help>
         <FeatureGuideHeading
           id="mouseover-coverage-title"
           icon={<>
@@ -3819,7 +3661,7 @@ function AutoplayOnMouseoverGuide() {
           <Link to="/features/video-controls/">Video Controls</Link> on. Video files do
           not need Video Controls.
         </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="mouseover-cli-title"
@@ -3869,7 +3711,7 @@ function AutoplayGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section className="activation-feature-section" aria-labelledby="autoplay-purpose">
+      <FeatureGuideSection id="autoplay-purpose">
         <FeatureGuideHeading
           id="autoplay-purpose"
           icon={<>
@@ -3894,9 +3736,9 @@ function AutoplayGuide() {
           remote video files. Other supported video and audio providers do not appear in
           this autoplay-specific support list.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="autoplay-setup">
+      <FeatureGuideSection id="autoplay-setup">
         <FeatureGuideHeading
           id="autoplay-setup"
           icon={<>
@@ -3960,7 +3802,7 @@ function AutoplayGuide() {
           homepage video to begin together; loading several videos at once can use more
           network and device resources than starting only the video in view.
         </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="autoplay-controls"
@@ -3993,10 +3835,7 @@ function AutoplayGuide() {
         note="Replace on with off to disable any option. Homepage-wide playback requires homepage autoplay to be enabled. Autoplay needs the appropriate Mute setting."
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="autoplay-check"
-      >
+      <FeatureGuideSection id="autoplay-check" help>
         <FeatureGuideHeading
           id="autoplay-check"
           icon={<>
@@ -4034,7 +3873,7 @@ function AutoplayGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -4074,10 +3913,7 @@ function MinimumWidthGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="minimum-width-config-title"
-      >
+      <FeatureGuideSection id="minimum-width-config-title">
         <FeatureGuideHeading
           id="minimum-width-config-title"
           icon={<>
@@ -4114,12 +3950,9 @@ function MinimumWidthGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="minimum-width-rules-title"
-      >
+      <FeatureGuideSection id="minimum-width-rules-title">
         <FeatureGuideHeading
           id="minimum-width-rules-title"
           icon={<>
@@ -4135,7 +3968,7 @@ function MinimumWidthGuide() {
           If the thumbnail appears instead of a player, try a lower minimum width.
           Increase it to keep thumbnails visible in narrower layouts.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
@@ -4175,10 +4008,7 @@ function VideoControlsGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-controls-purpose-title"
-      >
+      <FeatureGuideSection id="video-controls-purpose-title">
         <FeatureGuideHeading
           id="video-controls-purpose-title"
           icon={<>
@@ -4199,12 +4029,9 @@ function VideoControlsGuide() {
           featured video players, so it is optional if you do not display those players or
           want to keep their controls available.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-controls-setup-title"
-      >
+      <FeatureGuideSection id="video-controls-setup-title">
         <FeatureGuideHeading
           id="video-controls-setup-title"
           icon={<>
@@ -4241,12 +4068,9 @@ function VideoControlsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-controls-effects-title"
-      >
+      <FeatureGuideSection id="video-controls-effects-title">
         <FeatureGuideHeading
           id="video-controls-effects-title"
           icon={<>
@@ -4287,12 +4111,9 @@ function VideoControlsGuide() {
         <p>
               This setting applies to FIFU featured videos, not videos embedded separately through other plugins or blocks. For supported services, see <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-controls-related-title"
-      >
+      <FeatureGuideSection id="video-controls-related-title">
         <FeatureGuideHeading
           id="video-controls-related-title"
           icon={<>
@@ -4307,7 +4128,7 @@ function VideoControlsGuide() {
         <p>
               Embedded videos using <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link> require <strong>Video Controls</strong> and <strong>Mute</strong> to be enabled. Keep playback controls on when visitors need to pause the video.
             </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="video-controls-cli-title"
@@ -4323,10 +4144,7 @@ function VideoControlsGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="video-controls-help-title"
-      >
+      <FeatureGuideSection id="video-controls-help-title" help>
         <FeatureGuideHeading
           id="video-controls-help-title"
           icon={<>
@@ -4352,7 +4170,7 @@ function VideoControlsGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -4389,10 +4207,7 @@ function PlayButtonGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="play-button-requirements-title"
-      >
+      <FeatureGuideSection id="play-button-requirements-title">
         <FeatureGuideHeading
           id="play-button-requirements-title"
           icon={<>
@@ -4440,12 +4255,9 @@ function PlayButtonGuide() {
           Cloudflare Stream, Bunny Stream, Amazon, BitChute, Brighteon, Google Drive,
           MEGA, Spotify, SoundCloud, and remote or local video files.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="play-button-setup-title"
-      >
+      <FeatureGuideSection id="play-button-setup-title">
         <FeatureGuideHeading
           id="play-button-setup-title"
           icon={<>
@@ -4501,12 +4313,9 @@ function PlayButtonGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="play-button-grid-title"
-      >
+      <FeatureGuideSection id="play-button-grid-title">
         <FeatureGuideHeading
           id="play-button-grid-title"
           icon={<>
@@ -4524,12 +4333,9 @@ function PlayButtonGuide() {
           <strong>WooCommerce</strong> to hide it on shop and product category pages.
           These switches hide the play button, not the featured video thumbnail itself.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="play-button-availability-title"
-      >
+      <FeatureGuideSection id="play-button-availability-title" help>
         <FeatureGuideHeading
           id="play-button-availability-title"
           icon={<>
@@ -4566,7 +4372,7 @@ function PlayButtonGuide() {
             is not enabled for the page you are checking.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="play-button-cli-title"
@@ -4648,10 +4454,7 @@ function VideoThumbnailGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-thumbnail-source-title"
-      >
+      <FeatureGuideSection id="video-thumbnail-source-title">
         <FeatureGuideHeading
           id="video-thumbnail-source-title"
           icon={<>
@@ -4706,12 +4509,9 @@ function VideoThumbnailGuide() {
         <p>
               When importing video thumbnails, use the field mappings described in the <Link to="/features/wp-all-import-add-on/">WP All Import add-on</Link> guide rather than putting import values in the editor's video field.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-thumbnail-contexts-title"
-      >
+      <FeatureGuideSection id="video-thumbnail-contexts-title">
         <FeatureGuideHeading
           id="video-thumbnail-contexts-title"
           icon={<>
@@ -4765,12 +4565,9 @@ function VideoThumbnailGuide() {
           may show the embedded video instead of its image,
           depending on the video and theme.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-thumbnail-play-title"
-      >
+      <FeatureGuideSection id="video-thumbnail-play-title">
         <FeatureGuideHeading
           id="video-thumbnail-play-title"
           icon={<>
@@ -4834,12 +4631,9 @@ function VideoThumbnailGuide() {
           sizing rule and does not replace the four
           page-context switches.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="video-thumbnail-help-title"
-      >
+      <FeatureGuideSection id="video-thumbnail-help-title" help>
         <FeatureGuideHeading
           id="video-thumbnail-help-title"
           icon={<>
@@ -4888,7 +4682,7 @@ function VideoThumbnailGuide() {
             the published page, not just the editor preview.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -4931,10 +4725,7 @@ function TaxonomyImageGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="taxonomy-image-enable"
-      >
+      <FeatureGuideSection id="taxonomy-image-enable">
         <FeatureGuideHeading
           id="taxonomy-image-enable"
           icon={<>
@@ -4967,12 +4758,9 @@ function TaxonomyImageGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="taxonomy-image-assign"
-      >
+      <FeatureGuideSection id="taxonomy-image-assign">
         <FeatureGuideHeading
           id="taxonomy-image-assign"
           icon={<>
@@ -5008,12 +4796,9 @@ function TaxonomyImageGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="taxonomy-image-display"
-      >
+      <FeatureGuideSection id="taxonomy-image-display">
         <FeatureGuideHeading
           id="taxonomy-image-display"
           icon={<>
@@ -5066,12 +4851,9 @@ function TaxonomyImageGuide() {
         <p>
               Use the shortcode with a valid taxonomy name on a post that has terms with images.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="taxonomy-image-coverage"
-      >
+      <FeatureGuideSection id="taxonomy-image-coverage" help>
         <FeatureGuideHeading
           id="taxonomy-image-coverage"
           icon={<>
@@ -5101,7 +4883,7 @@ function TaxonomyImageGuide() {
             available for other taxonomies and themes.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -5137,10 +4919,7 @@ function ImageSeoGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="image-seo-purpose-title"
-      >
+      <FeatureGuideSection id="image-seo-purpose-title">
         <FeatureGuideHeading
           id="image-seo-purpose-title"
           icon={<>
@@ -5161,12 +4940,9 @@ function ImageSeoGuide() {
           or SEO setup already supplies the right description and image data, or if your
           content has no FIFU image.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="image-seo-alt-title"
-      >
+      <FeatureGuideSection id="image-seo-alt-title">
         <FeatureGuideHeading
           id="image-seo-alt-title"
           icon={<>
@@ -5206,12 +4982,9 @@ function ImageSeoGuide() {
         <p>
               A slider image can use its own alternative text when one is provided.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="image-seo-output-title"
-      >
+      <FeatureGuideSection id="image-seo-output-title">
         <FeatureGuideHeading
           id="image-seo-output-title"
           icon={<>
@@ -5249,12 +5022,9 @@ function ImageSeoGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="image-seo-check-title"
-      >
+      <FeatureGuideSection id="image-seo-check-title" help>
         <FeatureGuideHeading
           id="image-seo-check-title"
           icon={<>
@@ -5280,7 +5050,7 @@ function ImageSeoGuide() {
           </li>
           
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/image-metadata/">Image Metadata</Link>, <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-images-in-rss-feeds/">Featured Images in RSS Feeds</Link>.</FeatureRelatedGuides>
 
@@ -5322,10 +5092,7 @@ function ScheduleMetadataGenerationGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="schedule-metadata-purpose-title"
-      >
+      <FeatureGuideSection id="schedule-metadata-purpose-title">
         <FeatureGuideHeading
           id="schedule-metadata-purpose-title"
           icon={<>
@@ -5346,12 +5113,9 @@ function ScheduleMetadataGenerationGuide() {
           you want to start a generation pass yourself. If your URLs always enter through
           FIFU’s normal editor or import workflow, this schedule is optional.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="schedule-metadata-setup-title"
-      >
+      <FeatureGuideSection id="schedule-metadata-setup-title">
         <FeatureGuideHeading
           id="schedule-metadata-setup-title"
           icon={<>
@@ -5384,12 +5148,9 @@ function ScheduleMetadataGenerationGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="schedule-metadata-controls-title"
-      >
+      <FeatureGuideSection id="schedule-metadata-controls-title">
         <FeatureGuideHeading
           id="schedule-metadata-controls-title"
           icon={<>
@@ -5417,7 +5178,7 @@ function ScheduleMetadataGenerationGuide() {
           </div>
           
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="schedule-metadata-cli"
@@ -5433,10 +5194,7 @@ function ScheduleMetadataGenerationGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="schedule-metadata-troubleshooting-title"
-      >
+      <FeatureGuideSection id="schedule-metadata-troubleshooting-title" help>
         <FeatureGuideHeading
           id="schedule-metadata-troubleshooting-title"
           icon={<>
@@ -5462,7 +5220,7 @@ function ScheduleMetadataGenerationGuide() {
             unreachable image host available.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/clear-metadata/">Clear Metadata</Link>.</FeatureRelatedGuides>
 
@@ -5503,10 +5261,7 @@ function ImageMetadataGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="image-metadata-use-title"
-      >
+      <FeatureGuideSection id="image-metadata-use-title">
         <FeatureGuideHeading
           id="image-metadata-use-title"
           icon={<>
@@ -5528,12 +5283,9 @@ function ImageMetadataGuide() {
           one-time pass unused; FIFU's normal save and import flows may have prepared them
           already.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="image-metadata-workflow-title"
-      >
+      <FeatureGuideSection id="image-metadata-workflow-title">
         <FeatureGuideHeading
           id="image-metadata-workflow-title"
           icon={<>
@@ -5578,12 +5330,9 @@ function ImageMetadataGuide() {
           if it is active. Re-enable that schedule afterward if you still need recurring
           checks for URLs added outside the usual FIFU workflow.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="image-metadata-coverage-title"
-      >
+      <FeatureGuideSection id="image-metadata-coverage-title">
         <FeatureGuideHeading
           id="image-metadata-coverage-title"
           icon={<>
@@ -5620,7 +5369,7 @@ function ImageMetadataGuide() {
         <p>
               FIFU only generates missing information. Existing images are left alone.
             </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="image-metadata-controls-title"
@@ -5636,10 +5385,7 @@ function ImageMetadataGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="image-metadata-recovery-title"
-      >
+      <FeatureGuideSection id="image-metadata-recovery-title" help>
         <FeatureGuideHeading
           id="image-metadata-recovery-title"
           icon={<>
@@ -5674,7 +5420,7 @@ function ImageMetadataGuide() {
             you continue using remote FIFU media and need those records rebuilt.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -5716,10 +5462,7 @@ function AutoSetFeaturedMediaGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="auto-content-enable-title"
-      >
+      <FeatureGuideSection id="auto-content-enable-title">
         <FeatureGuideHeading
           id="auto-content-enable-title"
           icon={<>
@@ -5758,12 +5501,9 @@ function AutoSetFeaturedMediaGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="auto-content-filters-title"
-      >
+      <FeatureGuideSection id="auto-content-filters-title">
         <FeatureGuideHeading
           id="auto-content-filters-title"
           icon={<>
@@ -5810,12 +5550,9 @@ function AutoSetFeaturedMediaGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="auto-content-limits-title"
-      >
+      <FeatureGuideSection id="auto-content-limits-title" help>
         <FeatureGuideHeading
           id="auto-content-limits-title"
           icon={<>
@@ -5831,7 +5568,7 @@ function AutoSetFeaturedMediaGuide() {
         <p>
               FIFU looks through your saved post content for supported images and videos, then chooses the first eligible item. Use the source filters to skip media you do not want to feature.
             </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.</FeatureRelatedGuides>
 
@@ -5876,10 +5613,7 @@ function AutoSetScreenshotGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="screenshot-feature-setup"
-      >
+      <FeatureGuideSection id="screenshot-feature-setup">
         <FeatureGuideHeading
           id="screenshot-feature-setup"
           icon={<>
@@ -5924,12 +5658,9 @@ function AutoSetScreenshotGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="screenshot-feature-coverage"
-      >
+      <FeatureGuideSection id="screenshot-feature-coverage" help>
         <FeatureGuideHeading
           id="screenshot-feature-coverage"
           icon={<>
@@ -5968,7 +5699,7 @@ function AutoSetScreenshotGuide() {
           </div>
         </FeatureGuideOptions>
         
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="screenshot-cli"
@@ -6033,10 +5764,7 @@ function PageRedirectionGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="page-redirection-enable-title"
-      >
+      <FeatureGuideSection id="page-redirection-enable-title">
         <FeatureGuideHeading
           id="page-redirection-enable-title"
           icon={<>
@@ -6064,12 +5792,9 @@ function PageRedirectionGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="page-redirection-destination-title"
-      >
+      <FeatureGuideSection id="page-redirection-destination-title">
         <FeatureGuideHeading
           id="page-redirection-destination-title"
           icon={<>
@@ -6107,12 +5832,9 @@ function PageRedirectionGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="page-redirection-coverage-title"
-      >
+      <FeatureGuideSection id="page-redirection-coverage-title">
         <FeatureGuideHeading
           id="page-redirection-coverage-title"
           icon={<>
@@ -6127,12 +5849,9 @@ function PageRedirectionGuide() {
         <p>
               This feature is available for supported posts, pages, and bbPress content. It does not apply to WooCommerce products.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="page-redirection-troubleshooting-title"
-      >
+      <FeatureGuideSection id="page-redirection-troubleshooting-title" help>
         <FeatureGuideHeading
           id="page-redirection-troubleshooting-title"
           icon={<>
@@ -6168,7 +5887,7 @@ function PageRedirectionGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</FeatureRelatedGuides>
 
@@ -6206,7 +5925,7 @@ function DisableRightClickGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section className="activation-feature-section" aria-labelledby="disable-right-click-setup">
+      <FeatureGuideSection id="disable-right-click-setup">
         <FeatureGuideHeading
           id="disable-right-click-setup"
           icon={<>
@@ -6232,7 +5951,7 @@ function DisableRightClickGuide() {
             <p>Open a public page and right-click an image to confirm that its browser context menu no longer opens.</p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="disable-right-click-cli"
@@ -6248,7 +5967,7 @@ function DisableRightClickGuide() {
         ]}
       />
 
-      <section className="activation-feature-section activation-feature-help" aria-labelledby="disable-right-click-scope">
+      <FeatureGuideSection id="disable-right-click-scope" help>
         <FeatureGuideHeading
           id="disable-right-click-scope"
           icon={<>
@@ -6266,7 +5985,7 @@ function DisableRightClickGuide() {
           <li><strong>This is a deterrent, not access control.</strong> Visitors may still obtain an image through other browser or network tools.</li>
           <li><strong>If the menu still appears,</strong> confirm the setting is on and test the image itself on a public page rather than in the admin editor.</li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/hotlink-protection/">Hotlink protection</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -6303,10 +6022,7 @@ function AutoSetFeaturedMediaByPageGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="page-finder-enable"
-      >
+      <FeatureGuideSection id="page-finder-enable">
         <FeatureGuideHeading
           id="page-finder-enable"
           icon={<>
@@ -6323,12 +6039,9 @@ function AutoSetFeaturedMediaByPageGuide() {
           <li><span>2</span><p>On <strong>Auto set</strong>, enable <strong>auto set featured media using web page address</strong>. The scheduled finder checks about once a minute for eligible content without FIFU featured media.</p></li>
           <li><span>3</span><p>Leave <strong>look for embedded videos</strong> off to search for an image only. Turn it on if you also want the first embedded video found to be assigned as featured video; the <Link to="/features/featured-video-audio/">Featured Video / Audio guide</Link> explains how FIFU displays that media.</p></li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="page-finder-source"
-      >
+      <FeatureGuideSection id="page-finder-source">
         <FeatureGuideHeading
           id="page-finder-source"
           icon={<>
@@ -6361,9 +6074,9 @@ function AutoSetFeaturedMediaByPageGuide() {
           </li>
         </FeatureGuideSteps>
         <p>These custom fields must contain a web page address. If your field already contains the image or video URL itself, use the <Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field guide</Link> for that workflow.</p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="page-finder-integrations">
+      <FeatureGuideSection id="page-finder-integrations">
         <FeatureGuideHeading
           id="page-finder-integrations"
           icon={<>
@@ -6378,7 +6091,7 @@ function AutoSetFeaturedMediaByPageGuide() {
         <p>If you create content in bulk, map the source page to <code>Media finder (webpage URL)</code> in the <Link to="/features/wp-all-import-add-on/">WP All Import add-on</Link>. The WordPress REST integration also accepts the post field <code>fifu_finder_url</code>, so your publishing process can set the same source address. See the <Link to="/features/wp-woocommerce-rest-api/">WordPress and WooCommerce REST API guide</Link> for the integration's broader setup.</p>
         <p>You can configure the finder from a WordPress installation with <Link to="/features/wp-cli/">WP-CLI</Link>:</p>
         
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="page-finder-cli"
@@ -6408,10 +6121,7 @@ function AutoSetFeaturedMediaByPageGuide() {
         note="Use off to disable the optional video or Amazon lookup."
       />
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="page-finder-amazon"
-      >
+      <FeatureGuideSection id="page-finder-amazon">
         <FeatureGuideHeading
           id="page-finder-amazon"
           icon={<>
@@ -6426,9 +6136,9 @@ function AutoSetFeaturedMediaByPageGuide() {
         <p>Open the <strong>Amazon</strong> tab in the same settings panel and enable <strong>set images and videos to the product gallery</strong> if you want Amazon page results added to a product's gallery. Amazon pages, including <code>amzn.to</code> short links, use this branch only while that option is on. With it off, they use the regular single-media lookup.</p>
         <p>For regular page lookups, FIFU prefers the page's Open Graph image; if that is unavailable, it selects the largest image it can measure. When video search is on, the finder can instead assign the first embedded video it finds. Amazon results may include multiple images and videos for the product gallery.</p>
         <p>For a separate workflow that sets a product gallery from image URLs you already have, read <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.</p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section activation-feature-help" aria-labelledby="page-finder-results">
+      <FeatureGuideSection id="page-finder-results" help>
         <FeatureGuideHeading
           id="page-finder-results"
           icon={<>
@@ -6446,7 +6156,7 @@ function AutoSetFeaturedMediaByPageGuide() {
           <li><strong>If nothing is assigned,</strong> confirm the page address is saved and the source page returns a usable image or embedded video. Failed, non-success, or empty remote lookup responses do not produce media.</li>
           <li><strong>This feature stores media URLs.</strong> It does not copy the found image into the WordPress Media Library. To save remote images locally instead, read <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link>.</li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -6489,10 +6199,7 @@ function AutoSetCustomFieldGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="custom-field-setup"
-      >
+      <FeatureGuideSection id="custom-field-setup">
         <FeatureGuideHeading
           id="custom-field-setup"
           icon={<>
@@ -6539,12 +6246,9 @@ function AutoSetCustomFieldGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="custom-field-coverage"
-      >
+      <FeatureGuideSection id="custom-field-coverage">
         <FeatureGuideHeading
           id="custom-field-coverage"
           icon={<>
@@ -6562,12 +6266,9 @@ function AutoSetCustomFieldGuide() {
         <p>
               Enter the name of a field that already stores an image or video URL, or use a URL template if the field stores an identifier. You do not need this setting if another workflow already assigns featured media.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="custom-field-troubleshooting"
-      >
+      <FeatureGuideSection id="custom-field-troubleshooting">
         <FeatureGuideHeading
           id="custom-field-troubleshooting"
           icon={<>
@@ -6603,7 +6304,7 @@ function AutoSetCustomFieldGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="custom-field-cli"
@@ -6665,10 +6366,7 @@ function AutoSetProductImagesFromAsinGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="asin-connect-title"
-      >
+      <FeatureGuideSection id="asin-connect-title">
         <FeatureGuideHeading
           id="asin-connect-title"
           icon={<>
@@ -6709,9 +6407,9 @@ function AutoSetProductImagesFromAsinGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="asin-input-title">
+      <FeatureGuideSection id="asin-input-title">
         <FeatureGuideHeading
           id="asin-input-title"
           icon={<>
@@ -6745,9 +6443,9 @@ function AutoSetProductImagesFromAsinGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="asin-result-title">
+      <FeatureGuideSection id="asin-result-title">
         <FeatureGuideHeading
           id="asin-result-title"
           icon={<>
@@ -6787,12 +6485,9 @@ function AutoSetProductImagesFromAsinGuide() {
           Images remain hosted remotely unless you separately choose to
           download them.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="asin-eligibility-title"
-      >
+      <FeatureGuideSection id="asin-eligibility-title" help>
         <FeatureGuideHeading
           id="asin-eligibility-title"
           icon={<>
@@ -6832,7 +6527,7 @@ function AutoSetProductImagesFromAsinGuide() {
             does not already have featured media.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</FeatureRelatedGuides>
 
@@ -6875,10 +6570,7 @@ function AutomaticUpdatesGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="automatic-updates-license-title"
-      >
+      <FeatureGuideSection id="automatic-updates-license-title">
         <FeatureGuideHeading
           id="automatic-updates-license-title"
           icon={<>
@@ -6934,11 +6626,8 @@ function AutomaticUpdatesGuide() {
           For the broader license activation workflow, see the{' '}
           <Link to="/features/activation/">Activation guide</Link>.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="automatic-updates-install-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="automatic-updates-install-title">
         <FeatureGuideHeading
           id="automatic-updates-install-title"
           icon={<>
@@ -6977,11 +6666,8 @@ function AutomaticUpdatesGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="automatic-updates-troubleshoot-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="automatic-updates-troubleshoot-title" help>
         <FeatureGuideHeading
           id="automatic-updates-troubleshoot-title"
           icon={<>
@@ -7020,7 +6706,7 @@ function AutomaticUpdatesGuide() {
             </dd>
           </div>
         </dl>
-      </section>
+      </FeatureGuideSection>
       <FeatureRelatedGuides><Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</FeatureRelatedGuides>
 
       <FeatureGuideCta spaced />
@@ -7058,7 +6744,7 @@ function AutoSetFeaturedImageByTitleGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section className="activation-feature-section" aria-labelledby="title-search-use">
+      <FeatureGuideSection id="title-search-use">
         <FeatureGuideHeading
           id="title-search-use"
           icon={<>
@@ -7083,11 +6769,8 @@ function AutoSetFeaturedImageByTitleGuide() {
           automatically. It checks one eligible post per minute, so it is intended for
           gradual assignment rather than an immediate bulk pass.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="title-search-manual"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="title-search-manual">
         <FeatureGuideHeading
           id="title-search-manual"
           icon={<>
@@ -7130,11 +6813,8 @@ function AutoSetFeaturedImageByTitleGuide() {
           <strong>Preview</strong>, choose a result, then select <strong>Save</strong>.
           Leave keywords empty to search from the post title.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="title-search-filters"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="title-search-filters">
         <FeatureGuideHeading
           id="title-search-filters"
           icon={<>
@@ -7188,8 +6868,8 @@ function AutoSetFeaturedImageByTitleGuide() {
           Broader filters are more likely to return candidates. A vague title or
           restrictive combination can produce irrelevant results or none at all.
         </p>
-      </section>
-      <section className="activation-feature-section" aria-labelledby="title-search-auto">
+      </FeatureGuideSection>
+      <FeatureGuideSection id="title-search-auto">
         <FeatureGuideHeading
           id="title-search-auto"
           icon={<>
@@ -7234,11 +6914,8 @@ function AutoSetFeaturedImageByTitleGuide() {
           titles and filter combinations, so use manual review if every image must be
           approved before assignment.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="title-search-credit"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="title-search-credit">
         <FeatureGuideHeading
           id="title-search-credit"
           icon={<>
@@ -7257,11 +6934,8 @@ function AutoSetFeaturedImageByTitleGuide() {
           <strong>FIFU → Settings → Image</strong>. The link destination is the returned
           remote post address.
         </p>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="title-search-troubleshoot"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="title-search-troubleshoot" help>
         <FeatureGuideHeading
           id="title-search-troubleshoot"
           icon={<>
@@ -7290,7 +6964,7 @@ function AutoSetFeaturedImageByTitleGuide() {
             scheduled process handles only one eligible item per minute.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
       <FeatureRelatedGuides><Link to="/features/unsplash-image-search/">Unsplash Image Search</Link>.</FeatureRelatedGuides>
 
       <FeatureGuideCta />
@@ -7331,10 +7005,7 @@ function ReplaceNotFoundImageGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="replace-not-found-why"
-      >
+      <FeatureGuideSection id="replace-not-found-why">
         <FeatureGuideHeading
           id="replace-not-found-why"
           icon={<>
@@ -7359,12 +7030,9 @@ function ReplaceNotFoundImageGuide() {
           the post's image. If the original starts working again, visitors
           can see it on a later page load.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="replace-not-found-setup"
-      >
+      <FeatureGuideSection id="replace-not-found-setup">
         <FeatureGuideHeading
           id="replace-not-found-setup"
           icon={<>
@@ -7414,12 +7082,9 @@ function ReplaceNotFoundImageGuide() {
           and let the setting save. Some integrations may still have their own
           built-in placeholder.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="replace-not-found-how"
-      >
+      <FeatureGuideSection id="replace-not-found-how">
         <FeatureGuideHeading
           id="replace-not-found-how"
           icon={<>
@@ -7460,12 +7125,9 @@ function ReplaceNotFoundImageGuide() {
           scan or a guarantee that every image on the site will be replaced.
           The result depends on how your theme or integration renders the image.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="replace-not-found-coverage"
-      >
+      <FeatureGuideSection id="replace-not-found-coverage">
         <FeatureGuideHeading
           id="replace-not-found-coverage"
           icon={<>
@@ -7511,12 +7173,9 @@ function ReplaceNotFoundImageGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="replace-not-found-related"
-      >
+      <FeatureGuideSection id="replace-not-found-related">
         <FeatureGuideHeading
           id="replace-not-found-related"
           icon={<>
@@ -7552,7 +7211,7 @@ function ReplaceNotFoundImageGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="replace-not-found-cli"
@@ -7569,10 +7228,7 @@ function ReplaceNotFoundImageGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="replace-not-found-troubleshooting"
-      >
+      <FeatureGuideSection id="replace-not-found-troubleshooting" help>
         <FeatureGuideHeading
           id="replace-not-found-troubleshooting"
           icon={<>
@@ -7608,7 +7264,7 @@ function ReplaceNotFoundImageGuide() {
             covers the visible error; it does not restore the original.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -7652,7 +7308,7 @@ function BrokenLinkCheckerGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section className="activation-feature-section" aria-labelledby="blc-enable-title">
+      <FeatureGuideSection id="blc-enable-title">
         <FeatureGuideHeading
           id="blc-enable-title"
           icon={<>
@@ -7696,9 +7352,9 @@ function BrokenLinkCheckerGuide() {
         <p>
               The checker monitors remote FIFU featured images. It does not scan images inside post content or every product gallery image.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="blc-results-title">
+      <FeatureGuideSection id="blc-results-title">
         <FeatureGuideHeading
           id="blc-results-title"
           icon={<>
@@ -7740,9 +7396,9 @@ function BrokenLinkCheckerGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="blc-repair-title">
+      <FeatureGuideSection id="blc-repair-title">
         <FeatureGuideHeading
           id="blc-repair-title"
           icon={<>
@@ -7782,12 +7438,9 @@ function BrokenLinkCheckerGuide() {
           <Link to="/features/replace-not-found-image/">Replace Not Found Image</Link>.
           A visual fallback does not repair the saved URL.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="blc-troubleshoot-title"
-      >
+      <FeatureGuideSection id="blc-troubleshoot-title" help>
         <FeatureGuideHeading
           id="blc-troubleshoot-title"
           icon={<>
@@ -7816,7 +7469,7 @@ function BrokenLinkCheckerGuide() {
             to view the broken-link results.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="blc-cli-title"
@@ -7875,10 +7528,7 @@ function ModifyPostContentGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="modify-content-setup"
-      >
+      <FeatureGuideSection id="modify-content-setup">
         <FeatureGuideHeading
           id="modify-content-setup"
           icon={<>
@@ -7908,12 +7558,9 @@ function ModifyPostContentGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="modify-content-options"
-      >
+      <FeatureGuideSection id="modify-content-options">
         <FeatureGuideHeading
           id="modify-content-options"
           icon={<>
@@ -7942,12 +7589,9 @@ function ModifyPostContentGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="modify-content-scope"
-      >
+      <FeatureGuideSection id="modify-content-scope">
         <FeatureGuideHeading
           id="modify-content-scope"
           icon={<>
@@ -7975,12 +7619,9 @@ function ModifyPostContentGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="modify-content-matching"
-      >
+      <FeatureGuideSection id="modify-content-matching" help>
         <FeatureGuideHeading
           id="modify-content-matching"
           icon={<>
@@ -8017,7 +7658,7 @@ function ModifyPostContentGuide() {
             </p>
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -8063,10 +7704,7 @@ function HideFeaturedMediaGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="hide-featured-media-setup"
-      >
+      <FeatureGuideSection id="hide-featured-media-setup">
         <FeatureGuideHeading
           id="hide-featured-media-setup"
           icon={<>
@@ -8110,12 +7748,9 @@ function HideFeaturedMediaGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="hide-featured-media-filters"
-      >
+      <FeatureGuideSection id="hide-featured-media-filters">
         <FeatureGuideHeading
           id="hide-featured-media-filters"
           icon={<>
@@ -8155,12 +7790,9 @@ function HideFeaturedMediaGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="hide-featured-media-coverage"
-      >
+      <FeatureGuideSection id="hide-featured-media-coverage">
         <FeatureGuideHeading
           id="hide-featured-media-coverage"
           icon={<>
@@ -8192,7 +7824,7 @@ function HideFeaturedMediaGuide() {
             does not change the saved featured image data used elsewhere.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="hide-featured-media-cli"
@@ -8224,10 +7856,7 @@ function HideFeaturedMediaGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="hide-featured-media-troubleshooting"
-      >
+      <FeatureGuideSection id="hide-featured-media-troubleshooting" help>
         <FeatureGuideHeading
           id="hide-featured-media-troubleshooting"
           icon={<>
@@ -8257,7 +7886,7 @@ function HideFeaturedMediaGuide() {
             display setting.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/modify-post-content/">Modify Post Content</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</FeatureRelatedGuides>
 
@@ -8298,10 +7927,7 @@ function ClearMetadataGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="clear-metadata-workflow-title"
-      >
+      <FeatureGuideSection id="clear-metadata-workflow-title">
         <FeatureGuideHeading
           id="clear-metadata-workflow-title"
           icon={<>
@@ -8340,12 +7966,9 @@ function ClearMetadataGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="clear-metadata-effects-title"
-      >
+      <FeatureGuideSection id="clear-metadata-effects-title">
         <FeatureGuideHeading
           id="clear-metadata-effects-title"
           icon={<>
@@ -8370,12 +7993,9 @@ function ClearMetadataGuide() {
           the <Link to="/features/image-metadata/">Image Metadata guide</Link> for that
           regeneration workflow.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="clear-metadata-limits-title"
-      >
+      <FeatureGuideSection id="clear-metadata-limits-title" help>
         <FeatureGuideHeading
           id="clear-metadata-limits-title"
           icon={<>
@@ -8401,7 +8021,7 @@ function ClearMetadataGuide() {
             removal of saved FIFU addresses. That operation runs metadata cleanup first.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="clear-metadata-cli"
@@ -8452,10 +8072,7 @@ function DeleteAllUrlsGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="delete-all-urls-purpose-title"
-      >
+      <FeatureGuideSection id="delete-all-urls-purpose-title">
         <FeatureGuideHeading
           id="delete-all-urls-purpose-title"
           icon={<>
@@ -8477,12 +8094,9 @@ function DeleteAllUrlsGuide() {
         <p>
               FIFU clears its image metadata first, then removes saved remote featured images, galleries, videos, audio, and sliders.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="delete-all-urls-prereq-title"
-      >
+      <FeatureGuideSection id="delete-all-urls-prereq-title">
         <FeatureGuideHeading
           id="delete-all-urls-prereq-title"
           icon={<>
@@ -8523,12 +8137,9 @@ function DeleteAllUrlsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="delete-all-urls-use-title"
-      >
+      <FeatureGuideSection id="delete-all-urls-use-title">
         <FeatureGuideHeading
           id="delete-all-urls-use-title"
           icon={<>
@@ -8561,12 +8172,9 @@ function DeleteAllUrlsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="delete-all-urls-help-title"
-      >
+      <FeatureGuideSection id="delete-all-urls-help-title" help>
         <FeatureGuideHeading
           id="delete-all-urls-help-title"
           icon={<>
@@ -8587,7 +8195,7 @@ function DeleteAllUrlsGuide() {
         <p>
               This action cannot restore removed images or their saved addresses. Make a backup before continuing.
             </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -8626,10 +8234,7 @@ function OptimizedImagesGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="optimized-purpose-title"
-      >
+      <FeatureGuideSection id="optimized-purpose-title">
         <FeatureGuideHeading
           id="optimized-purpose-title"
           icon={<>
@@ -8650,12 +8255,9 @@ function OptimizedImagesGuide() {
           inline images below the fold. If your pages already serve appropriately sized
           files, these options are optional.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="optimized-enable-title"
-      >
+      <FeatureGuideSection id="optimized-enable-title">
         <FeatureGuideHeading
           id="optimized-enable-title"
           icon={<>
@@ -8692,12 +8294,9 @@ function OptimizedImagesGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="optimized-providers-title"
-      >
+      <FeatureGuideSection id="optimized-providers-title">
         <FeatureGuideHeading
           id="optimized-providers-title"
           icon={<>
@@ -8758,12 +8357,9 @@ function OptimizedImagesGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="optimized-limits-title"
-      >
+      <FeatureGuideSection id="optimized-limits-title" help>
         <FeatureGuideHeading
           id="optimized-limits-title"
           icon={<>
@@ -8803,7 +8399,7 @@ function OptimizedImagesGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -8843,10 +8439,7 @@ function SquareImageOptionsGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="square-purpose-title"
-      >
+      <FeatureGuideSection id="square-purpose-title">
         <FeatureGuideHeading
           id="square-purpose-title"
           icon={<>
@@ -8872,12 +8465,9 @@ function SquareImageOptionsGuide() {
           want its registered image sizes instead; you do not need square output if your
           design already uses varied image proportions.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="square-settings-title"
-      >
+      <FeatureGuideSection id="square-settings-title">
         <FeatureGuideHeading
           id="square-settings-title"
           icon={<>
@@ -8918,12 +8508,9 @@ function SquareImageOptionsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="square-options-title"
-      >
+      <FeatureGuideSection id="square-options-title">
         <FeatureGuideHeading
           id="square-options-title"
           icon={<>
@@ -8964,12 +8551,9 @@ function SquareImageOptionsGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="square-scope-title"
-      >
+      <FeatureGuideSection id="square-scope-title" help>
         <FeatureGuideHeading
           id="square-scope-title"
           icon={<>
@@ -8991,7 +8575,7 @@ function SquareImageOptionsGuide() {
           remains visible with added space, the device is set to extend; if edges
           disappear, it is set to crop.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -9031,10 +8615,7 @@ function FeaturedImagesRssGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="rss-feature-purpose-title"
-      >
+      <FeatureGuideSection id="rss-feature-purpose-title">
         <FeatureGuideHeading
           id="rss-feature-purpose-title"
           icon={<>
@@ -9057,12 +8638,9 @@ function FeaturedImagesRssGuide() {
           consumes RSS items. It is automatic; you do not need it if your feed consumers
           ignore Media RSS image entries or your posts do not use featured images.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="rss-feature-workflow-title"
-      >
+      <FeatureGuideSection id="rss-feature-workflow-title">
         <FeatureGuideHeading
           id="rss-feature-workflow-title"
           icon={<>
@@ -9098,12 +8676,9 @@ function FeaturedImagesRssGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="rss-feature-coverage-title"
-      >
+      <FeatureGuideSection id="rss-feature-coverage-title" help>
         <FeatureGuideHeading
           id="rss-feature-coverage-title"
           icon={<>
@@ -9130,7 +8705,7 @@ function FeaturedImagesRssGuide() {
         <p>
               Check that the image URL works and that the feed reader supports images. Not every feed reader displays them.
             </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</FeatureRelatedGuides>
 
@@ -9168,10 +8743,7 @@ function BbpressBuddybossGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="community-context-title"
-      >
+      <FeatureGuideSection id="community-context-title">
         <FeatureGuideHeading
           id="community-context-title"
           icon={<>
@@ -9196,11 +8768,8 @@ function BbpressBuddybossGuide() {
           workflow references an image hosted elsewhere instead of uploading that image
           through these forms.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="community-setup-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="community-setup-title">
         <FeatureGuideHeading
           id="community-setup-title"
           icon={<>
@@ -9232,11 +8801,8 @@ function BbpressBuddybossGuide() {
           Platform active for activity conversion. Its Activity component must be active
           for the front-end paste helper and styles to load.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="bbpress-flow-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="bbpress-flow-title">
         <FeatureGuideHeading
           id="bbpress-flow-title"
           icon={<>
@@ -9284,11 +8850,8 @@ function BbpressBuddybossGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="buddyboss-flow-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="buddyboss-flow-title">
         <FeatureGuideHeading
           id="buddyboss-flow-title"
           icon={<>
@@ -9336,11 +8899,8 @@ function BbpressBuddybossGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="community-troubleshooting-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="community-troubleshooting-title" help>
         <FeatureGuideHeading
           id="community-troubleshooting-title"
           icon={<>
@@ -9372,7 +8932,7 @@ function BbpressBuddybossGuide() {
           </div>
           
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/taxonomy-image/">Taxonomy Image</Link> and <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link>.</FeatureRelatedGuides>
 
@@ -9413,10 +8973,7 @@ function PlaybackLoopGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="playback-loop-enable-title"
-      >
+      <FeatureGuideSection id="playback-loop-enable-title">
         <FeatureGuideHeading
           id="playback-loop-enable-title"
           icon={<>
@@ -9443,12 +9000,9 @@ function PlaybackLoopGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="playback-loop-coverage-title"
-      >
+      <FeatureGuideSection id="playback-loop-coverage-title">
         <FeatureGuideHeading
           id="playback-loop-coverage-title"
           icon={<>
@@ -9485,7 +9039,7 @@ function PlaybackLoopGuide() {
           <Link to="/features/vimeo-options/">Vimeo options</Link> guide. The loop switch
           itself remains global.
         </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="playback-loop-cli-title"
@@ -9501,10 +9055,7 @@ function PlaybackLoopGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="playback-loop-help-title"
-      >
+      <FeatureGuideSection id="playback-loop-help-title" help>
         <FeatureGuideHeading
           id="playback-loop-help-title"
           icon={<>
@@ -9532,7 +9083,7 @@ function PlaybackLoopGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</FeatureRelatedGuides>
 
@@ -9572,10 +9123,7 @@ function MuteGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="mute-purpose-title"
-      >
+      <FeatureGuideSection id="mute-purpose-title">
         <FeatureGuideHeading
           id="mute-purpose-title"
           icon={<>
@@ -9590,9 +9138,9 @@ function MuteGuide() {
         <p>
               Turn on <strong>Mute</strong> when you want featured videos to start silently, especially when using <Link to="/features/autoplay/">Autoplay</Link> or <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link>. Leave it off when videos should start with sound.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="mute-setup-title">
+      <FeatureGuideSection id="mute-setup-title">
         <FeatureGuideHeading
           id="mute-setup-title"
           icon={<>
@@ -9626,12 +9174,9 @@ function MuteGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="mute-coverage-title"
-      >
+      <FeatureGuideSection id="mute-coverage-title">
         <FeatureGuideHeading
           id="mute-coverage-title"
           icon={<>
@@ -9649,7 +9194,7 @@ function MuteGuide() {
           The device setting determines the starting sound
           state; visitors can still change it with player controls.
         </p>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="mute-cli-title"
@@ -9673,10 +9218,7 @@ function MuteGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="mute-help-title"
-      >
+      <FeatureGuideSection id="mute-help-title" help>
         <FeatureGuideHeading
           id="mute-help-title"
           icon={<>
@@ -9705,7 +9247,7 @@ function MuteGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/background-video/">Background Video</Link>.</FeatureRelatedGuides>
 
@@ -9750,10 +9292,7 @@ function YoutubeOptionsGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="youtube-options-setup-title"
-      >
+      <FeatureGuideSection id="youtube-options-setup-title">
         <FeatureGuideHeading
           id="youtube-options-setup-title"
           icon={<>
@@ -9787,12 +9326,9 @@ function YoutubeOptionsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="youtube-options-coverage-title"
-      >
+      <FeatureGuideSection id="youtube-options-coverage-title">
         <FeatureGuideHeading
           id="youtube-options-coverage-title"
           icon={<>
@@ -9826,7 +9362,7 @@ function YoutubeOptionsGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="youtube-options-cli-title"
@@ -9842,10 +9378,7 @@ function YoutubeOptionsGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="youtube-options-help-title"
-      >
+      <FeatureGuideSection id="youtube-options-help-title" help>
         <FeatureGuideHeading
           id="youtube-options-help-title"
           icon={<>
@@ -9861,7 +9394,7 @@ function YoutubeOptionsGuide() {
         <p>
               Make sure the setting is on and test with a YouTube video added through FIFU.
             </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</FeatureRelatedGuides>
 
@@ -9905,10 +9438,7 @@ function PrivacyEnhancedModeGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="privacy-enhanced-settings-title"
-      >
+      <FeatureGuideSection id="privacy-enhanced-settings-title">
         <FeatureGuideHeading
           id="privacy-enhanced-settings-title"
           icon={<>
@@ -9942,12 +9472,9 @@ function PrivacyEnhancedModeGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="privacy-enhanced-scope-title"
-      >
+      <FeatureGuideSection id="privacy-enhanced-scope-title">
         <FeatureGuideHeading
           id="privacy-enhanced-scope-title"
           icon={<>
@@ -9979,7 +9506,7 @@ function PrivacyEnhancedModeGuide() {
           </div>
           
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="privacy-enhanced-cli"
@@ -9995,10 +9522,7 @@ function PrivacyEnhancedModeGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="privacy-enhanced-check-title"
-      >
+      <FeatureGuideSection id="privacy-enhanced-check-title" help>
         <FeatureGuideHeading
           id="privacy-enhanced-check-title"
           icon={<>
@@ -10030,7 +9554,7 @@ function PrivacyEnhancedModeGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -10071,7 +9595,7 @@ function WpAllImportAddonGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section className="activation-feature-section" aria-labelledby="wai-setup-title">
+      <FeatureGuideSection id="wai-setup-title">
         <FeatureGuideHeading
           id="wai-setup-title"
           icon={<>
@@ -10134,9 +9658,9 @@ function WpAllImportAddonGuide() {
           WooCommerce's built-in CSV importer instead, use the{' '}
           <Link to="/features/woocommerce-import/">WooCommerce import guide</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="wai-content-title">
+      <FeatureGuideSection id="wai-content-title">
         <FeatureGuideHeading
           id="wai-content-title"
           icon={<>
@@ -10192,12 +9716,9 @@ function WpAllImportAddonGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="wai-products-title"
-      >
+      <FeatureGuideSection id="wai-products-title">
         <FeatureGuideHeading
           id="wai-products-title"
           icon={<>
@@ -10271,12 +9792,9 @@ function WpAllImportAddonGuide() {
           stay paired as the main image; the second pair becomes a gallery image and its
           alternative text.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="wai-variations-title"
-      >
+      <FeatureGuideSection id="wai-variations-title">
         <FeatureGuideHeading
           id="wai-variations-title"
           icon={<>
@@ -10296,13 +9814,10 @@ function WpAllImportAddonGuide() {
           The FAQ below includes downloadable XML and Import
           template examples for this workflow.
         </p>
-      </section>
+      </FeatureGuideSection>
 
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="wai-optional-title"
-      >
+      <FeatureGuideSection id="wai-optional-title">
         <FeatureGuideHeading
           id="wai-optional-title"
           icon={<>
@@ -10352,12 +9867,9 @@ function WpAllImportAddonGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="wai-faq-title"
-      >
+      <FeatureGuideSection id="wai-faq-title">
         <FeatureGuideHeading
           id="wai-faq-title"
           icon={<>
@@ -10464,12 +9976,9 @@ function WpAllImportAddonGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="wai-check-title"
-      >
+      <FeatureGuideSection id="wai-check-title" help>
         <FeatureGuideHeading
           id="wai-check-title"
           icon={<>
@@ -10518,7 +10027,7 @@ function WpAllImportAddonGuide() {
             different fields for posts, taxonomies, and products.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -10555,7 +10064,7 @@ function WooCommerceImportGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section className="activation-feature-section" aria-labelledby="wc-import-purpose">
+      <FeatureGuideSection id="wc-import-purpose">
         <FeatureGuideHeading
           id="wc-import-purpose"
           icon={<>
@@ -10575,8 +10084,8 @@ function WooCommerceImportGuide() {
           to the WordPress Media Library first. If you normally edit your
           products one by one, you can continue using the FIFU product editor instead.
         </p>
-      </section>
-      <section className="activation-feature-section" aria-labelledby="wc-import-steps">
+      </FeatureGuideSection>
+      <FeatureGuideSection id="wc-import-steps">
         <FeatureGuideHeading
           id="wc-import-steps"
           icon={<>
@@ -10652,8 +10161,8 @@ function WooCommerceImportGuide() {
           <code>Front view|Side view</code> under <code>meta:fifu_list_alt</code>.
           The first URL is the featured image; the second is a gallery image.
         </p>
-      </section>
-      <section className="activation-feature-section" aria-labelledby="wc-import-fields">
+      </FeatureGuideSection>
+      <FeatureGuideSection id="wc-import-fields">
         <FeatureGuideHeading
           id="wc-import-fields"
           icon={<>
@@ -10734,11 +10243,8 @@ function WooCommerceImportGuide() {
           See <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>{' '}
           for storefront display options.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="wc-import-other-fields"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="wc-import-other-fields">
         <FeatureGuideHeading
           id="wc-import-other-fields"
           icon={<>
@@ -10790,11 +10296,8 @@ function WooCommerceImportGuide() {
           These fields support other FIFU features. Importing a value
           does not automatically enable the feature that uses it.
         </p>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="wc-import-notes"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="wc-import-notes" help>
         <FeatureGuideHeading
           id="wc-import-notes"
           icon={<>
@@ -10842,7 +10345,7 @@ function WooCommerceImportGuide() {
             for skipped rows.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
       <FeatureGuideCta />
     </Page>
   );
@@ -10882,10 +10385,7 @@ function QuickBuyGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="quick-buy-workflow-title"
-      >
+      <FeatureGuideSection id="quick-buy-workflow-title">
         <FeatureGuideHeading
           id="quick-buy-workflow-title"
           icon={<>
@@ -10934,12 +10434,9 @@ function QuickBuyGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="quick-buy-controls-title"
-      >
+      <FeatureGuideSection id="quick-buy-controls-title">
         <FeatureGuideHeading
           id="quick-buy-controls-title"
           icon={<>
@@ -10982,12 +10479,9 @@ function QuickBuyGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="quick-buy-limits-title"
-      >
+      <FeatureGuideSection id="quick-buy-limits-title">
         <FeatureGuideHeading
           id="quick-buy-limits-title"
           icon={<>
@@ -11032,12 +10526,9 @@ function QuickBuyGuide() {
           and external products. Other product types may require the
           standard product page or a separate purchasing flow.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="quick-buy-troubleshooting-title"
-      >
+      <FeatureGuideSection id="quick-buy-troubleshooting-title" help>
         <FeatureGuideHeading
           id="quick-buy-troubleshooting-title"
           icon={<>
@@ -11078,7 +10569,7 @@ function QuickBuyGuide() {
           <Link to="/features/lightbox-and-zoom/">Lightbox and Zoom</Link>{' '}
           controls for product galleries.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link> and <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.</FeatureRelatedGuides>
 
@@ -11117,10 +10608,7 @@ function FifuApiGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-api-use-title"
-      >
+      <FeatureGuideSection id="fifu-api-use-title">
         <FeatureGuideHeading
           id="fifu-api-use-title"
           icon={<>
@@ -11135,12 +10623,9 @@ function FifuApiGuide() {
         <p>
               Use these functions in custom integrations that assign featured media automatically. You do not need them when using the FIFU editor.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-api-setup-title"
-      >
+      <FeatureGuideSection id="fifu-api-setup-title">
         <FeatureGuideHeading
           id="fifu-api-setup-title"
           icon={<>
@@ -11176,12 +10661,9 @@ function FifuApiGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-api-post-title"
-      >
+      <FeatureGuideSection id="fifu-api-post-title">
         <FeatureGuideHeading
           id="fifu-api-post-title"
           icon={<>
@@ -11236,12 +10718,9 @@ function FifuApiGuide() {
         <p>
               Use complete image URLs. For image or video lists, separate entries as shown above.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-api-term-title"
-      >
+      <FeatureGuideSection id="fifu-api-term-title">
         <FeatureGuideHeading
           id="fifu-api-term-title"
           icon={<>
@@ -11267,12 +10746,9 @@ function FifuApiGuide() {
             <dd>Set video media for a term.</dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="fifu-api-results-title"
-      >
+      <FeatureGuideSection id="fifu-api-results-title" help>
         <FeatureGuideHeading
           id="fifu-api-results-title"
           icon={<>
@@ -11296,7 +10772,7 @@ function FifuApiGuide() {
           image URL uses HTTP or HTTPS. A blank image URL deliberately clears the post’s
           featured image; it is not a valid way to provide an image.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/wp-woocommerce-rest-api/">WP / WooCommerce REST API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -11338,10 +10814,7 @@ function WpWooCommerceRestApiGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="rest-api-start-title"
-      >
+      <FeatureGuideSection id="rest-api-start-title">
         <FeatureGuideHeading
           id="rest-api-start-title"
           icon={<>
@@ -11379,12 +10852,9 @@ function WpWooCommerceRestApiGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="rest-api-fields-title"
-      >
+      <FeatureGuideSection id="rest-api-fields-title">
         <FeatureGuideHeading
           id="rest-api-fields-title"
           icon={<>
@@ -11402,12 +10872,9 @@ function WpWooCommerceRestApiGuide() {
           <div><dt>Other post values</dt><dd><code>fifu_asin</code>, <code>fifu_finder_url</code>, and <code>fifu_redirection_url</code> accept top-level values or entries inside <code>meta</code>.</dd></div>
           <div><dt>Slider image entries</dt><dd>You can also send indexed <code>fifu_slider_image_url_0</code>, <code>fifu_slider_image_alt_0</code> fields (continue the index for more images). Returned slider image URLs use the same indexed field pattern.</dd></div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="rest-api-woocommerce-title"
-      >
+      <FeatureGuideSection id="rest-api-woocommerce-title" help>
         <FeatureGuideHeading
           id="rest-api-woocommerce-title"
           icon={<>
@@ -11434,9 +10901,9 @@ function WpWooCommerceRestApiGuide() {
 ]`}</code></pre>
         <p>Put each alt value in the same position as its image URL. The same vertical-bar format applies to slider URL and alt lists. For product categories, use <code>meta_data</code> entries for <code>fifu_image_url</code>, optional <code>fifu_image_alt</code>, or <code>fifu_video_url</code>.</p>
         <p>For products and variations, the supported FIFU fields are limited to those five gallery and slider keys; other FIFU keys in <code>meta_data</code> are ignored by this integration.</p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section activation-feature-help" aria-labelledby="rest-api-troubleshoot-title">
+      <FeatureGuideSection id="rest-api-troubleshoot-title" help>
         <FeatureGuideHeading
           id="rest-api-troubleshoot-title"
           icon={<>
@@ -11454,7 +10921,7 @@ function WpWooCommerceRestApiGuide() {
           <li><strong>WooCommerce gallery or slider did not change:</strong> confirm the key is one of the five supported product/variation fields and is an item in <code>meta_data</code>. Separate list entries with <code>|</code>.</li>
           <li><strong>Wrong featured media appears:</strong> for WordPress posts, image, video, and slider fields compete for the featured-media slot. Send the intended type; a nonempty slider list takes priority over image/video values.</li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/fifu-api/">FIFU API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</FeatureRelatedGuides>
 
@@ -11490,7 +10957,7 @@ function WpCliGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section className="activation-feature-section" aria-labelledby="wp-cli-use-title">
+      <FeatureGuideSection id="wp-cli-use-title">
         <FeatureGuideHeading
           id="wp-cli-use-title"
           icon={<>
@@ -11528,11 +10995,8 @@ function WpCliGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="wp-cli-commands-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="wp-cli-commands-title">
         <FeatureGuideHeading
           id="wp-cli-commands-title"
           icon={<>
@@ -11641,11 +11105,8 @@ function WpCliGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="wp-cli-create-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="wp-cli-create-title">
         <FeatureGuideHeading
           id="wp-cli-create-title"
           icon={<>
@@ -11669,11 +11130,8 @@ function WpCliGuide() {
           <code>fifu_image_alt</code> when you have alternative text to save. FIFU’s
           metadata maintenance can be enabled with <code>wp fifu metadata on</code>.
         </p>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="wp-cli-limits-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="wp-cli-limits-title" help>
         <FeatureGuideHeading
           id="wp-cli-limits-title"
           icon={<>
@@ -11708,7 +11166,7 @@ function WpCliGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
       <FeatureRelatedGuides><Link to="/features/fifu-api/">FIFU API</Link>.</FeatureRelatedGuides>
 
       <FeatureGuideCta />
@@ -11751,10 +11209,7 @@ function QuickEditorGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="quick-editor-purpose-title"
-      >
+      <FeatureGuideSection id="quick-editor-purpose-title">
         <FeatureGuideHeading
           id="quick-editor-purpose-title"
           icon={<>
@@ -11774,12 +11229,9 @@ function QuickEditorGuide() {
           before saving. Use it when the item is reachable in a supported WordPress list;
           use the full editor when you need controls that are not exposed here.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="quick-editor-open-title"
-      >
+      <FeatureGuideSection id="quick-editor-open-title">
         <FeatureGuideHeading
           id="quick-editor-open-title"
           icon={<>
@@ -11815,12 +11267,9 @@ function QuickEditorGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="quick-editor-media-title"
-      >
+      <FeatureGuideSection id="quick-editor-media-title">
         <FeatureGuideHeading
           id="quick-editor-media-title"
           icon={<>
@@ -11903,12 +11352,9 @@ function QuickEditorGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="quick-editor-access-title"
-      >
+      <FeatureGuideSection id="quick-editor-access-title" help>
         <FeatureGuideHeading
           id="quick-editor-access-title"
           icon={<>
@@ -11955,7 +11401,7 @@ function QuickEditorGuide() {
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -11995,10 +11441,7 @@ function WidgetsGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="widgets-wordpress-title"
-      >
+      <FeatureGuideSection id="widgets-wordpress-title">
         <FeatureGuideHeading
           id="widgets-wordpress-title"
           icon={<>
@@ -12059,12 +11502,9 @@ function WidgetsGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="widgets-elementor-title"
-      >
+      <FeatureGuideSection id="widgets-elementor-title">
         <FeatureGuideHeading
           id="widgets-elementor-title"
           icon={<>
@@ -12105,12 +11545,9 @@ function WidgetsGuide() {
         <p>
               If an image fails to load, FIFU shows the fallback image. Remove the image URL and save to clear the featured image.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="widgets-help-title"
-      >
+      <FeatureGuideSection id="widgets-help-title" help>
         <FeatureGuideHeading
           id="widgets-help-title"
           icon={<>
@@ -12131,7 +11568,7 @@ function WidgetsGuide() {
           gallery content. Elementor widgets require Elementor to be active, and its
           Featured Video widget also requires Featured Video / Audio to be enabled.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -12174,10 +11611,7 @@ function HotlinkProtectionGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="hotlink-enable-title"
-      >
+      <FeatureGuideSection id="hotlink-enable-title">
         <FeatureGuideHeading
           id="hotlink-enable-title"
           icon={<>
@@ -12212,12 +11646,9 @@ function HotlinkProtectionGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="hotlink-scope-title"
-      >
+      <FeatureGuideSection id="hotlink-scope-title">
         <FeatureGuideHeading
           id="hotlink-scope-title"
           icon={<>
@@ -12235,12 +11666,9 @@ function HotlinkProtectionGuide() {
           host are outside this protection. If you need hosted copies first, follow the{' '}
           <Link to="/features/upload-to-cloud/">Upload to Cloud guide</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="hotlink-help-title"
-      >
+      <FeatureGuideSection id="hotlink-help-title" help>
         <FeatureGuideHeading
           id="hotlink-help-title"
           icon={<>
@@ -12262,7 +11690,7 @@ function HotlinkProtectionGuide() {
           again later. An incomplete sign-up cannot authorize the request, and a failed or
           unreadable Cloud response is treated as a retry-later condition.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/optimized-images/">Optimized Images</Link>.</FeatureRelatedGuides>
 
@@ -12304,10 +11732,7 @@ function DefaultFeaturedImageGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="default-image-purpose"
-      >
+      <FeatureGuideSection id="default-image-purpose">
         <FeatureGuideHeading
           id="default-image-purpose"
           icon={<>
@@ -12332,12 +11757,9 @@ function DefaultFeaturedImageGuide() {
           replace broken image URLs. If a remote image has stopped loading, see{' '}
           <Link to="/features/replace-not-found-image/">Replace Not Found Image</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="default-image-requirement"
-      >
+      <FeatureGuideSection id="default-image-requirement">
         <FeatureGuideHeading
           id="default-image-requirement"
           icon={<>
@@ -12357,12 +11779,9 @@ function DefaultFeaturedImageGuide() {
           the default image. See the{' '}
           <Link to="/features/image-metadata/">Image Metadata guide</Link> for details.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="default-image-setup-title"
-      >
+      <FeatureGuideSection id="default-image-setup-title">
         <FeatureGuideHeading
           id="default-image-setup-title"
           icon={<>
@@ -12414,12 +11833,9 @@ function DefaultFeaturedImageGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="default-image-behavior"
-      >
+      <FeatureGuideSection id="default-image-behavior">
         <FeatureGuideHeading
           id="default-image-behavior"
           icon={<>
@@ -12470,12 +11886,9 @@ function DefaultFeaturedImageGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="default-image-sharing"
-      >
+      <FeatureGuideSection id="default-image-sharing">
         <FeatureGuideHeading
           id="default-image-sharing"
           icon={<>
@@ -12493,12 +11906,9 @@ function DefaultFeaturedImageGuide() {
           supply a sharing image, but an Open Graph image provided elsewhere takes
           precedence. Choose a default image that also represents your site well.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="default-image-checks"
-      >
+      <FeatureGuideSection id="default-image-checks" help>
         <FeatureGuideHeading
           id="default-image-checks"
           icon={<>
@@ -12535,7 +11945,7 @@ function DefaultFeaturedImageGuide() {
             do not render them.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
@@ -12574,7 +11984,7 @@ function ActivationGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section className="activation-feature-section" aria-labelledby="activation-why">
+      <FeatureGuideSection id="activation-why">
         <FeatureGuideHeading
           id="activation-why"
           icon={<>
@@ -12598,11 +12008,8 @@ function ActivationGuide() {
           activation may be unnecessary. A changed domain needs support assistance before
           the key can cover it.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="activation-steps-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="activation-steps-title">
         <FeatureGuideHeading
           id="activation-steps-title"
           icon={<>
@@ -12640,11 +12047,8 @@ function ActivationGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="activation-options-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="activation-options-title">
         <FeatureGuideHeading
           id="activation-options-title"
           icon={<>
@@ -12679,11 +12083,8 @@ function ActivationGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="activation-troubleshooting-title"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="activation-troubleshooting-title" help>
         <FeatureGuideHeading
           id="activation-troubleshooting-title"
           icon={<>
@@ -12724,7 +12125,7 @@ function ActivationGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
       <FeatureRelatedGuides><Link to="/features/automatic-updates/">Automatic Updates</Link>, <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</FeatureRelatedGuides>
 
       <FeatureGuideCta spaced title="Find another FIFU feature." />
@@ -12768,10 +12169,7 @@ function ResetSettingsGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="reset-settings-effects"
-      >
+      <FeatureGuideSection id="reset-settings-effects">
         <FeatureGuideHeading
           id="reset-settings-effects"
           icon={<>
@@ -12815,12 +12213,9 @@ function ResetSettingsGuide() {
           when you want to troubleshoot a configuration; it is unnecessary if you only
           need to change one setting.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="reset-settings-run"
-      >
+      <FeatureGuideSection id="reset-settings-run">
         <FeatureGuideHeading
           id="reset-settings-run"
           icon={<>
@@ -12860,7 +12255,7 @@ function ResetSettingsGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="reset-settings-cli"
@@ -12907,10 +12302,7 @@ function DebugModeGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="debug-enable-title"
-      >
+      <FeatureGuideSection id="debug-enable-title">
         <FeatureGuideHeading
           id="debug-enable-title"
           icon={<>
@@ -12948,7 +12340,7 @@ function DebugModeGuide() {
           </li>
         </FeatureGuideSteps>
         
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="debug-mode-cli"
@@ -12965,7 +12357,7 @@ function DebugModeGuide() {
         note="Disable Debug Mode after troubleshooting."
       />
 
-      <section className="activation-feature-section" aria-labelledby="debug-tools-title">
+      <FeatureGuideSection id="debug-tools-title">
         <FeatureGuideHeading
           id="debug-tools-title"
           icon={<>
@@ -13009,12 +12401,9 @@ function DebugModeGuide() {
           administrators. Use it when you need to migrate FIFU media data; migration is a
           separate task from collecting a debug report.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="debug-sharing-title"
-      >
+      <FeatureGuideSection id="debug-sharing-title" help>
         <FeatureGuideHeading
           id="debug-sharing-title"
           icon={<>
@@ -13066,7 +12455,7 @@ function DebugModeGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -13105,10 +12494,7 @@ function RemoteFeaturedImageGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-image-purpose"
-      >
+      <FeatureGuideSection id="remote-image-purpose">
         <FeatureGuideHeading
           id="remote-image-purpose"
           icon={<>
@@ -13123,12 +12509,9 @@ function RemoteFeaturedImageGuide() {
         <p>
               FIFU lets you set a featured image using an address from another website instead of uploading the file to WordPress. The image stays on its original host and appears wherever your theme displays featured images.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-image-editor"
-      >
+      <FeatureGuideSection id="remote-image-editor">
         <FeatureGuideHeading
           id="remote-image-editor"
           icon={<>
@@ -13175,12 +12558,9 @@ function RemoteFeaturedImageGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-image-native-panel"
-      >
+      <FeatureGuideSection id="remote-image-native-panel">
         <FeatureGuideHeading
           id="remote-image-native-panel"
           icon={<>
@@ -13223,12 +12603,9 @@ function RemoteFeaturedImageGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-image-block"
-      >
+      <FeatureGuideSection id="remote-image-block">
         <FeatureGuideHeading
           id="remote-image-block"
           icon={<>
@@ -13249,12 +12626,9 @@ function RemoteFeaturedImageGuide() {
           same FIFU featured-image data; save or update the content to keep the change.
           Removing the block restores its last image values to the FIFU editor panel.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-image-share-links"
-      >
+      <FeatureGuideSection id="remote-image-share-links">
         <FeatureGuideHeading
           id="remote-image-share-links"
           icon={<>
@@ -13278,9 +12652,9 @@ function RemoteFeaturedImageGuide() {
           check that visitors can load it without signing in. Prefer HTTPS images for
           HTTPS websites; a remote host can change its access rules or remove files later.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="remote-image-bulk">
+      <FeatureGuideSection id="remote-image-bulk">
         <FeatureGuideHeading
           id="remote-image-bulk"
           icon={<>
@@ -13302,12 +12676,9 @@ function RemoteFeaturedImageGuide() {
           for request formats and product integrations. For your own PHP code, see
           the <Link to="/features/fifu-api/">FIFU API guide</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-image-fields"
-      >
+      <FeatureGuideSection id="remote-image-fields">
         <FeatureGuideHeading
           id="remote-image-fields"
           icon={<>
@@ -13349,12 +12720,9 @@ function RemoteFeaturedImageGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="remote-image-checks"
-      >
+      <FeatureGuideSection id="remote-image-checks" help>
         <FeatureGuideHeading
           id="remote-image-checks"
           icon={<>
@@ -13395,7 +12763,7 @@ function RemoteFeaturedImageGuide() {
             value does not delete the original image from its host.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -13435,10 +12803,7 @@ function FeaturedVideoAudioGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-audio-purpose"
-      >
+      <FeatureGuideSection id="video-audio-purpose">
         <FeatureGuideHeading
           id="video-audio-purpose"
           icon={<>
@@ -13459,12 +12824,9 @@ function FeaturedVideoAudioGuide() {
           an image-only featured item, not replacements for
           everything in the post body.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-audio-enable"
-      >
+      <FeatureGuideSection id="video-audio-enable">
         <FeatureGuideHeading
           id="video-audio-enable"
           icon={<>
@@ -13497,12 +12859,9 @@ function FeaturedVideoAudioGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-audio-services"
-      >
+      <FeatureGuideSection id="video-audio-services">
         <FeatureGuideHeading
           id="video-audio-services"
           icon={<>
@@ -13577,12 +12936,9 @@ function FeaturedVideoAudioGuide() {
         <p>
               Use a public, supported video or audio address and preview it before saving. A service may block private or restricted videos from appearing on your site.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-audio-video-workflow"
-      >
+      <FeatureGuideSection id="video-audio-video-workflow">
         <FeatureGuideHeading
           id="video-audio-video-workflow"
           icon={<>
@@ -13640,12 +12996,9 @@ function FeaturedVideoAudioGuide() {
           compatible direct media files; the source must be
           playable by the browser.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-audio-audio-workflow"
-      >
+      <FeatureGuideSection id="video-audio-audio-workflow">
         <FeatureGuideHeading
           id="video-audio-audio-workflow"
           icon={<>
@@ -13691,12 +13044,9 @@ function FeaturedVideoAudioGuide() {
           display the supported provider embed instead of
           treating the link as a raw audio file.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-audio-options"
-      >
+      <FeatureGuideSection id="video-audio-options">
         <FeatureGuideHeading
           id="video-audio-options"
           icon={<>
@@ -13765,12 +13115,9 @@ function FeaturedVideoAudioGuide() {
           For quick URL updates from content lists, see{' '}
           <Link to="/features/quick-editor/">Quick Editor</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="video-audio-checks"
-      >
+      <FeatureGuideSection id="video-audio-checks" help>
         <FeatureGuideHeading
           id="video-audio-checks"
           icon={<>
@@ -13819,7 +13166,7 @@ function FeaturedVideoAudioGuide() {
             media display depends on theme and template support.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
@@ -13861,10 +13208,7 @@ function FeaturedSliderGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-slider-purpose-title"
-      >
+      <FeatureGuideSection id="featured-slider-purpose-title">
         <FeatureGuideHeading
           id="featured-slider-purpose-title"
           icon={<>
@@ -13884,12 +13228,9 @@ function FeaturedSliderGuide() {
           help you show more context without placing a separate gallery in the body. If
           one image already does the job, you can leave the slider disabled.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-slider-enable-title"
-      >
+      <FeatureGuideSection id="featured-slider-enable-title">
         <FeatureGuideHeading
           id="featured-slider-enable-title"
           icon={<>
@@ -13932,12 +13273,9 @@ function FeaturedSliderGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-slider-steps-title"
-      >
+      <FeatureGuideSection id="featured-slider-steps-title">
         <FeatureGuideHeading
           id="featured-slider-steps-title"
           icon={<>
@@ -13987,12 +13325,9 @@ function FeaturedSliderGuide() {
           FIFU’s upload option is enabled and the slider already contains media.
           Otherwise, add remote media URLs in the tiles.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-slider-options-title"
-      >
+      <FeatureGuideSection id="featured-slider-options-title">
         <FeatureGuideHeading
           id="featured-slider-options-title"
           icon={<>
@@ -14080,12 +13415,9 @@ function FeaturedSliderGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-slider-shortcode-title"
-      >
+      <FeatureGuideSection id="featured-slider-shortcode-title">
         <FeatureGuideHeading
           id="featured-slider-shortcode-title"
           icon={<>
@@ -14100,12 +13432,9 @@ function FeaturedSliderGuide() {
         <p>
               You can set optional <code>width</code> and <code>height</code> values to control the displayed size. See <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link> for more examples.
             </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="featured-slider-help-title"
-      >
+      <FeatureGuideSection id="featured-slider-help-title" help>
         <FeatureGuideHeading
           id="featured-slider-help-title"
           icon={<>
@@ -14135,7 +13464,7 @@ function FeaturedSliderGuide() {
           
           
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</FeatureRelatedGuides>
 
@@ -14179,10 +13508,7 @@ function RemoteProductGalleryImagesGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-product-gallery-purpose-title"
-      >
+      <FeatureGuideSection id="remote-product-gallery-purpose-title">
         <FeatureGuideHeading
           id="remote-product-gallery-purpose-title"
           icon={<>
@@ -14202,12 +13528,9 @@ function RemoteProductGalleryImagesGuide() {
           <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link>{' '}
           workflow instead.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-product-gallery-steps-title"
-      >
+      <FeatureGuideSection id="remote-product-gallery-steps-title">
         <FeatureGuideHeading
           id="remote-product-gallery-steps-title"
           icon={<>
@@ -14261,12 +13584,9 @@ function RemoteProductGalleryImagesGuide() {
           column on the Products list. Its gallery editor also lets you add, edit, remove,
           and reorder product images; select <strong>Save</strong> when you finish.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-product-gallery-controls-title"
-      >
+      <FeatureGuideSection id="remote-product-gallery-controls-title">
         <FeatureGuideHeading
           id="remote-product-gallery-controls-title"
           icon={<>
@@ -14327,12 +13647,9 @@ function RemoteProductGalleryImagesGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-product-gallery-display-title"
-      >
+      <FeatureGuideSection id="remote-product-gallery-display-title">
         <FeatureGuideHeading
           id="remote-product-gallery-display-title"
           icon={<>
@@ -14353,12 +13670,9 @@ function RemoteProductGalleryImagesGuide() {
           the <Link to="/features/fifu-product-gallery/">FIFU Product Gallery guide</Link>{' '}
           for its display controls.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="remote-product-gallery-help-title"
-      >
+      <FeatureGuideSection id="remote-product-gallery-help-title" help>
         <FeatureGuideHeading
           id="remote-product-gallery-help-title"
           icon={<>
@@ -14380,7 +13694,7 @@ function RemoteProductGalleryImagesGuide() {
           to save the product after closing an image popup; closing the popup alone
           does not publish your changes.
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -14421,10 +13735,7 @@ function RemoteVariationImagesGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-variation-setup-title"
-      >
+      <FeatureGuideSection id="remote-variation-setup-title">
         <FeatureGuideHeading
           id="remote-variation-setup-title"
           icon={<>
@@ -14486,12 +13797,9 @@ function RemoteVariationImagesGuide() {
           <strong>OK</strong>, and save the changes. If you remove all remote images
           from a variation, the FIFU gallery falls back to the parent product’s media.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-variation-display-title"
-      >
+      <FeatureGuideSection id="remote-variation-display-title">
         <FeatureGuideHeading
           id="remote-variation-display-title"
           icon={<>
@@ -14535,12 +13843,9 @@ function RemoteVariationImagesGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-variation-check-title"
-      >
+      <FeatureGuideSection id="remote-variation-check-title">
         <FeatureGuideHeading
           id="remote-variation-check-title"
           icon={<>
@@ -14583,12 +13888,9 @@ function RemoteVariationImagesGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-variation-import-title"
-      >
+      <FeatureGuideSection id="remote-variation-import-title">
         <FeatureGuideHeading
           id="remote-variation-import-title"
           icon={<>
@@ -14631,7 +13933,7 @@ function RemoteVariationImagesGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
             <FeatureCliSection
         id="remote-variation-cli-title"
@@ -14647,10 +13949,7 @@ function RemoteVariationImagesGuide() {
         ]}
       />
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-variation-related-title"
-      >
+      <FeatureGuideSection id="remote-variation-related-title">
         <FeatureGuideHeading
           id="remote-variation-related-title"
           icon={<>
@@ -14670,7 +13969,7 @@ function RemoteVariationImagesGuide() {
           </Link>
           .
         </p>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
@@ -14705,10 +14004,7 @@ function FifuProductGalleryGuide() {
           />
         </div>
       </FeatureGuideHighlight>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-gallery-enable"
-      >
+      <FeatureGuideSection id="fifu-gallery-enable">
         <FeatureGuideHeading
           id="fifu-gallery-enable"
           icon={<>
@@ -14765,11 +14061,8 @@ function FifuProductGalleryGuide() {
           gallery automatically, so avoid inserting the shortcode there unless
           you intend an additional gallery.
         </p>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-gallery-options"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-gallery-options">
         <FeatureGuideHeading
           id="fifu-gallery-options"
           icon={<>
@@ -14813,11 +14106,8 @@ function FifuProductGalleryGuide() {
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-gallery-slider-options"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-gallery-slider-options">
         <FeatureGuideHeading
           id="fifu-gallery-slider-options"
           icon={<>
@@ -14884,11 +14174,8 @@ function FifuProductGalleryGuide() {
             <dd>Use a shared height for slider images.</dd>
           </div>
         </FeatureGuideOptions>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-gallery-other-display"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-gallery-other-display">
         <FeatureGuideHeading
           id="fifu-gallery-other-display"
           icon={<>
@@ -14915,7 +14202,7 @@ function FifuProductGalleryGuide() {
           post’s gallery; see the{' '}
           <Link to="/features/widgets/">Widgets guide</Link>.
         </p>
-      </section>
+      </FeatureGuideSection>
             <FeatureCliSection
         id="fifu-gallery-cli"
         commands={[
@@ -14938,10 +14225,7 @@ function FifuProductGalleryGuide() {
         ]}
         note="Replace on with off to disable an option."
       />
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-gallery-custom"
-      >
+      <FeatureGuideSection id="fifu-gallery-custom">
         <FeatureGuideHeading
           id="fifu-gallery-custom"
           icon={<>
@@ -14983,11 +14267,8 @@ function FifuProductGalleryGuide() {
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="fifu-gallery-conditions"
-      >
+      </FeatureGuideSection>
+      <FeatureGuideSection id="fifu-gallery-conditions">
         <FeatureGuideHeading
           id="fifu-gallery-conditions"
           icon={<>
@@ -15024,7 +14305,7 @@ function FifuProductGalleryGuide() {
             avoid rendering it twice on the same page.
           </li>
         </FeatureGuideHelpList>
-      </section>
+      </FeatureGuideSection>
       <FeatureGuideCta spaced />
     </Page>
   );
@@ -15058,7 +14339,7 @@ function AutoShareSocialGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section className="activation-feature-section" aria-labelledby="auto-share-connect">
+      <FeatureGuideSection id="auto-share-connect">
         <FeatureGuideHeading
           id="auto-share-connect"
           icon={<>
@@ -15076,9 +14357,9 @@ function AutoShareSocialGuide() {
           <li><span>3</span><p>For X, first enter your app’s <strong>OAuth 2.0 Client ID</strong> in the X panel and save it. Your X developer app must allow <strong>Read and write</strong>, use the <strong>Native App</strong> type, and include this callback URI: <code>https://auto-share.fifu.workers.dev/v2/oauth/x/callback</code>.</p></li>
           <li><span>4</span><p>Publish or update a standard WordPress post that has an image. WordPress schedules the sharing check for about five seconds after the save; WP-Cron must run for that check to execute.</p></li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="auto-share-requirements">
+      <FeatureGuideSection id="auto-share-requirements">
         <FeatureGuideHeading
           id="auto-share-requirements"
           icon={<>
@@ -15095,9 +14376,9 @@ function AutoShareSocialGuide() {
           <div><dt>Instagram</dt><dd>Connect a public Professional account (Business or Creator); personal or private accounts are not supported. The site must use HTTPS, and the post needs an HTTPS image hosted on your own site for Instagram sharing.</dd></div>
           <div><dt>X</dt><dd>Create an app at <a href="https://developer.x.com" target="_blank" rel="noreferrer">X Developer</a>, set Read and write permissions, choose Native App, register the callback URI above, and paste the app’s Client ID into the X panel.</dd></div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section" aria-labelledby="auto-share-eligibility">
+      <FeatureGuideSection id="auto-share-eligibility">
         <FeatureGuideHeading
           id="auto-share-eligibility"
           icon={<>
@@ -15115,9 +14396,9 @@ function AutoShareSocialGuide() {
           <div><dt>Repeat saves</dt><dd>Once a post is recorded as shared on a network, later saves do not automatically send it to that same network again. Other connected networks are tracked independently.</dd></div>
           <div><dt>Media differences</dt><dd>Facebook and X can share the post link and text. Instagram requires a suitable HTTPS image hosted on your site; an image hosted only on another domain may not work there.</dd></div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section className="activation-feature-section activation-feature-help" aria-labelledby="auto-share-test">
+      <FeatureGuideSection id="auto-share-test" help>
         <FeatureGuideHeading
           id="auto-share-test"
           icon={<>
@@ -15136,7 +14417,7 @@ function AutoShareSocialGuide() {
           <li><span>•</span><p>If no post is queued, confirm it is a published standard post with an image, then check the main switch, that network’s switch, and its connection. For Facebook, verify the public Page and HTTPS site; for Instagram, verify the public Professional account and a same-site HTTPS image; for X, verify the Client ID and app callback and permissions.</p></li>
           <li><span>•</span><p>A post already marked as shared to a network is not sent again by the test. The daily per-network limit is 16 posts. A failed result names the affected network and includes its returned error when available.</p></li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</FeatureRelatedGuides>
 
