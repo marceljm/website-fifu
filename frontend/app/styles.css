@@ -4674,6 +4674,116 @@ body {
   }
 }
 
+/* Shared WP-CLI command cards used by feature guides. */
+.feature-guide-page .feature-cli-section > .feature-cli-intro,
+.feature-guide-page .feature-cli-section > .feature-cli-note,
+.feature-guide-page .feature-cli-section > .feature-cli-reference {
+  margin: 0 0 14px 52px;
+  max-width: 820px;
+  color: #5c6a7e;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.feature-guide-page .feature-cli-command-list {
+  display: grid;
+  gap: 12px;
+  margin-left: 52px;
+  min-width: 0;
+}
+.feature-guide-page .feature-cli-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  background: #fff;
+}
+.feature-guide-page .feature-cli-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 15px;
+  color: #26364d;
+  font-size: 14px;
+}
+.feature-guide-page .feature-cli-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  padding: 5px 9px;
+  border: 1px solid #dbe3ef;
+  border-radius: 7px;
+  background: #f8faff;
+  color: #2563eb;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+.feature-guide-page .feature-cli-copy:hover {
+  background: #edf3ff;
+  border-color: #bcd0f2;
+}
+.feature-guide-page .feature-cli-copy:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+.feature-guide-page .feature-cli-card pre {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  border: 0;
+  border-top: 1px solid #e8edf5;
+  border-radius: 0;
+  background: #f3f6fc;
+  color: #26364d;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre;
+}
+.feature-guide-page .feature-cli-card pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  white-space: inherit;
+  overflow-wrap: normal;
+}
+.feature-guide-page .feature-cli-description {
+  margin: 0;
+  padding: 10px 15px 12px;
+  color: #5c6a7e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.feature-guide-page .feature-cli-section > .feature-cli-note {
+  margin-top: 16px;
+}
+.feature-guide-page .feature-cli-section > .feature-cli-reference {
+  margin-top: 12px;
+}
+.feature-guide-page .feature-cli-reference a {
+  color: #2563eb;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 620px) {
+  .feature-guide-page .feature-cli-command-list,
+  .feature-guide-page .feature-cli-section > .feature-cli-intro,
+  .feature-guide-page .feature-cli-section > .feature-cli-note,
+  .feature-guide-page .feature-cli-section > .feature-cli-reference {
+    margin-left: 0;
+  }
+  .feature-guide-page .feature-cli-card pre {
+    font-size: 12px;
+  }
+}
+
 /* Feature guides reuse the help center guide palette and card treatment. */
 .feature-guide {
   max-width: 1160px;
