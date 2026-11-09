@@ -981,6 +981,10 @@ function CustomPopupGuide() {
         </dl>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -1352,6 +1356,10 @@ function WatchLaterGuide() {
           </li>
         </ul>
       </section>
+      <p>
+        Related guides: <Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -1534,6 +1542,10 @@ function UnsplashImageSearchGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -1710,6 +1722,10 @@ function DeleteFromCloudGuide() {
           </div>
         </dl>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/hotlink-protection/">Hotlink protection</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -1930,6 +1946,10 @@ function UploadToCloudGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/hotlink-protection/">Hotlink protection</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -2068,6 +2088,10 @@ function LinkLocalImagesGuide() {
           <Link to="/features/upload-to-cloud/">Upload to Cloud guide</Link>.
         </p>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -2382,6 +2406,10 @@ wp fifu-migrate run-all --limit=1000 --time=30`}</code>
           </div>
         </dl>
       </section>
+      <p>
+        Related guides: <Link to="/features/image-metadata/">Image Metadata</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -2795,6 +2823,10 @@ function FeaturedMediaFilterGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -2988,6 +3020,10 @@ function OrderEmailImagesGuide() {
           </li>
         </ul>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.
+      </p>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -3419,6 +3455,10 @@ function LightboxAndZoomGuide() {
           </div>
         </dl>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/play-button/">Play Button</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -4394,6 +4434,10 @@ function MinimumWidthGuide() {
           appear too small in your layout.
         </p>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -5671,6 +5715,10 @@ function ImageSeoGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/image-metadata/">Image Metadata</Link>, <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-images-in-rss-feeds/">Featured Images in RSS Feeds</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -5868,6 +5916,10 @@ function ScheduleMetadataGenerationGuide() {
           </li>
         </ul>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/clear-metadata/">Clear Metadata</Link>.
+      </p>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -6278,6 +6330,10 @@ function AutoSetFeaturedMediaGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -6436,6 +6492,10 @@ function AutoSetScreenshotGuide() {
           accepts the same format as the setting.
         </p>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -6624,6 +6684,10 @@ function PageRedirectionGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -6735,6 +6799,10 @@ function DisableRightClickGuide() {
           <li><strong>If the menu still appears,</strong> confirm the setting is on and test the image itself on a public page rather than in the admin editor.</li>
         </ul>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/hotlink-protection/">Hotlink protection</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -7082,6 +7150,10 @@ function AutoSetCustomFieldGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/auto-set-featured-media-from-post-content/">Auto set featured media from post content</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -7295,6 +7367,10 @@ function AutoSetProductImagesFromAsinGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -7487,6 +7563,10 @@ function AutomaticUpdatesGuide() {
           </div>
         </dl>
       </section>
+      <p>
+        Related guides: <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.
+      </p>
+
       <section className="feature-detail-cta activation-feature-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -7754,6 +7834,10 @@ function AutoSetFeaturedImageByTitleGuide() {
           </li>
         </ul>
       </section>
+      <p>
+        Related guides: <Link to="/features/unsplash-image-search/">Unsplash Image Search</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -8541,6 +8625,10 @@ function ModifyPostContentGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
+
       <section className="feature-detail-cta activation-feature-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -8801,6 +8889,10 @@ function HideFeaturedMediaGuide() {
           </li>
         </ul>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/modify-post-content/">Modify Post Content</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -9401,6 +9493,10 @@ function OptimizedImagesGuide() {
         </dl>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
+
       <section className="feature-detail-cta activation-feature-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -9593,6 +9689,10 @@ function SquareImageOptionsGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -9738,6 +9838,10 @@ function FeaturedImagesRssGuide() {
           display the image; it cannot make a consumer that ignores Media RSS show it.
         </p>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/image-seo/">Image SEO</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -9995,6 +10099,10 @@ function BbpressBuddybossGuide() {
         </dl>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/taxonomy-image/">Taxonomy Image</Link> and <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link>.
+      </p>
+
       <section className="feature-detail-cta activation-feature-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -10173,6 +10281,10 @@ function PlaybackLoopGuide() {
           </li>
         </ul>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -10358,6 +10470,10 @@ function MuteGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/background-video/">Background Video</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -10528,6 +10644,10 @@ function YoutubeOptionsGuide() {
           <Link to="/features/privacy-enhanced-mode/">Privacy Enhanced Mode guide</Link>.
         </p>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -11751,6 +11871,10 @@ function QuickBuyGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link> and <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -11973,6 +12097,10 @@ function FifuApiGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/wp-woocommerce-rest-api/">WP / WooCommerce REST API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -12126,6 +12254,10 @@ function WpWooCommerceRestApiGuide() {
           <li><strong>Wrong featured media appears:</strong> for WordPress posts, image, video, and slider fields compete for the featured-media slot. Send the intended type; a nonempty slider list takes priority over image/video values.</li>
         </ul>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/fifu-api/">FIFU API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -12386,6 +12518,10 @@ function WpCliGuide() {
           </li>
         </ul>
       </section>
+      <p>
+        Related guides: <Link to="/features/fifu-api/">FIFU API</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -12964,6 +13100,10 @@ function HotlinkProtectionGuide() {
         </p>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/optimized-images/">Optimized Images</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -13236,6 +13376,10 @@ function DefaultFeaturedImageGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
+      </p>
+
       <section className="feature-detail-cta activation-feature-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -13425,6 +13569,10 @@ function ActivationGuide() {
           </div>
         </dl>
       </section>
+      <p>
+        Related guides: <Link to="/features/automatic-updates/">Automatic Updates</Link>, <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.
+      </p>
+
       <section className="feature-detail-cta activation-feature-cta">
         <div>
           <h2>Find another FIFU feature.</h2>
@@ -13593,6 +13741,10 @@ function ResetSettingsGuide() {
           see the <Link to="/features/wp-cli/">WP-CLI guide</Link>.
         </p>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/activation/">Activation</Link>.
+      </p>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -14563,6 +14715,10 @@ function FeaturedVideoAudioGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides: <Link to="/features/play-button/">Play Button</Link>.
+      </p>
+
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -14900,6 +15056,10 @@ function FeaturedSliderGuide() {
           </li>
         </ul>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
@@ -15964,6 +16124,10 @@ function AutoShareSocialGuide() {
           <li><span>•</span><p>A post already marked as shared to a network is not sent again by the test. The daily per-network limit is 16 posts. A failed result names the affected network and includes its returned error when available.</p></li>
         </ol>
       </section>
+
+      <p>
+        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/image-seo/">Image SEO</Link>.
+      </p>
 
       <section className="feature-detail-cta">
         <div>
