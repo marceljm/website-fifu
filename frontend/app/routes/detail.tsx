@@ -14036,8 +14036,8 @@ function FeaturedVideoAudioGuide() {
       className="feature-guide-page activation-feature-page"
     >
       <p className="lead">
-        Add a supported video or audio address to a content item, preview playback in the
-        editor, and save it as that item’s featured media.
+        Set a hosted video or playable audio file as featured media for a post,
+        page, or product, with an optional thumbnail or cover image.
       </p>
 
       <section className="feature-highlight" aria-labelledby="video-audio-intro">
@@ -14045,10 +14045,12 @@ function FeaturedVideoAudioGuide() {
           <span className="feature-highlight-kicker">
             <Video size={15} aria-hidden="true" /> MEDIA URL WORKFLOW
           </span>
-          <h2 id="video-audio-intro">Make a media link playable content.</h2>
+          <h2 id="video-audio-intro">Feature a video or an audio recording.</h2>
           <p>
-            FIFU associates a provider or file URL with the post, page, or product, then
-            renders it through the matching video or audio player.
+            Share a clip, demonstration, podcast episode, or recording
+            without uploading the original media to your WordPress
+            Media Library. FIFU stores its URL and displays a suitable
+            player when the source and your theme support it.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -14070,17 +14072,18 @@ function FeaturedVideoAudioGuide() {
           <div>
             <span className="activation-feature-kicker">WHEN TO USE IT</span>
             <h2 id="video-audio-purpose">
-              Use a media URL instead of an image-only featured item.
+              Use playable media where a static image isn't enough.
             </h2>
           </div>
         </div>
         <p>
-          A featured image stores an image address; a featured video or audio URL lets
-          supported content render playable media instead. Use it when a post, page, or
-          product should lead with a clip or track hosted by a supported service or video
-          file. This keeps the media source attached to the content and lets FIFU create a
-          player from that source. It is optional when a static image is enough or another
-          workflow already handles your media.
+          A featured video can display an embed from a recognized
+          provider or a playable video file. Featured Audio uses an
+          audio player for a direct audio URL. Both can have a
+          thumbnail or cover image for places where a still image is
+          needed, such as content lists. They are alternatives to
+          an image-only featured item, not replacements for
+          everything in the post body.
         </p>
       </section>
 
@@ -14093,8 +14096,8 @@ function FeaturedVideoAudioGuide() {
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">PREREQUISITE</span>
-            <h2 id="video-audio-enable">Enable the media fields once.</h2>
+            <span className="activation-feature-kicker">ENABLE THE FEATURE</span>
+            <h2 id="video-audio-enable">Turn on Featured Video / Audio.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
@@ -14102,18 +14105,19 @@ function FeaturedVideoAudioGuide() {
             <span>1</span>
             <p>
               In WordPress, open{' '}
-              <strong>FIFU → Settings → Video → Featured video / audio</strong> and enable
-              it. This switch enables the video and audio choices in the FIFU editor.
+              <strong>FIFU → Settings → Video → Featured video / audio</strong>{' '}
+              and enable the switch. The same setting makes both
+              media types available in the FIFU editor.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              The supported provider URLs include YouTube, Vimeo, Twitter, 9GAG,
-              Cloudinary, Tumblr, Publitio, JW Player, VideoPress, Sprout, Odysee, Rumble,
-              Dailymotion, Cloudflare Stream, Bunny Stream, Amazon, BitChute, Brighteon,
-              Google Drive, Spotify, and SoundCloud. You can also use local or remote
-              video files.
+              Edit a post, page, or product and find the{' '}
+              <strong>FIFU</strong> featured-media panel. Use
+              its media-type selector to choose{' '}
+              <strong>Featured video</strong> or{' '}
+              <strong>Featured audio</strong>.
             </p>
           </li>
         </ol>
@@ -14121,56 +14125,113 @@ function FeaturedVideoAudioGuide() {
 
       <section
         className="activation-feature-section"
-        aria-labelledby="video-audio-workflow"
+        aria-labelledby="video-audio-video-workflow"
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
-            <MousePointerClick size={19} aria-hidden="true" />
+            <Video size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">ADD · PREVIEW · SAVE</span>
-            <h2 id="video-audio-workflow">Set a video or audio URL.</h2>
+            <span className="activation-feature-kicker">FEATURED VIDEO</span>
+            <h2 id="video-audio-video-workflow">Add and preview a video.</h2>
           </div>
         </div>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
             <p>
-              Edit the post, page, or product and open the <strong>FIFU</strong> media
-              panel. Choose <strong>Featured video</strong> or{' '}
-              <strong>Featured audio</strong>.
+              Choose <strong>Featured video</strong> in the FIFU
+              media selector. Paste a link from a supported video
+              service or a direct video-file URL into{' '}
+              <strong>Video URL</strong>.
             </p>
           </li>
           <li>
             <span>2</span>
             <p>
-              Paste the playable address into <strong>Video URL</strong> or{' '}
-              <strong>Audio URL</strong>, then select <strong>Preview</strong>. For video,
-              FIFU previews recognized services in an embedded player and local or remote
-              video files in a video player. Audio preview uses an audio player.
+              Select <strong>Preview</strong>. FIFU opens recognized
+              provider URLs in an embedded player and uses a video
+              player for supported files. Check that the video
+              plays before saving the post.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
-              For a local video, play or seek to the frame you want and choose{' '}
-              <strong>Set frame as thumbnail</strong>. Save or update the content; the
-              captured thumbnail is added to your Media Library. Remote videos require a
-              featured image thumbnail as well.
+              For a video stored in your WordPress Media Library,
+              seek to a useful frame and select{' '}
+              <strong>Set frame as thumbnail</strong>. The chosen
+              frame is saved as an image in the Media Library
+              when you save or update the content.
             </p>
           </li>
           <li>
             <span>4</span>
             <p>
-              To replace media, enter another URL and save. To clear it, use{' '}
-              <strong>Remove remote video</strong> or <strong>Remove audio</strong>, then
-              save the content.
+              Save or update the post, page, or product.
+              To replace the video later, enter a different URL;
+              to clear it, use <strong>Remove remote video</strong>{' '}
+              and save again.
             </p>
           </li>
         </ol>
         <p>
-          For an existing item, the <Link to="/features/quick-editor/">Quick Editor</Link>{' '}
-          also exposes featured video and audio URL fields from the content list.
+          FIFU recognizes services such as YouTube, Vimeo, Rumble,
+          Dailymotion, Cloudflare Stream, and others listed in{' '}
+          <strong>FIFU → Settings → Video</strong>. Spotify and
+          SoundCloud are supported through provider embeds.
+          File support includes formats such as MP4, MOV, WebM,
+          OGG, and HLS playlists (<code>.m3u8</code>), subject
+          to browser, codec, and hosting compatibility.
+        </p>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="video-audio-audio-workflow"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Music2 size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">FEATURED AUDIO</span>
+            <h2 id="video-audio-audio-workflow">Add an audio track or recording.</h2>
+          </div>
+        </div>
+        <ol className="activation-feature-steps">
+          <li>
+            <span>1</span>
+            <p>
+              Select <strong>Featured audio</strong> in the FIFU
+              media selector. Paste the URL of a directly playable
+              audio file into <strong>Audio URL</strong>.
+            </p>
+          </li>
+          <li>
+            <span>2</span>
+            <p>
+              Select <strong>Preview</strong> to load the
+              browser's audio player. Confirm the file is
+              accessible and plays correctly.
+            </p>
+          </li>
+          <li>
+            <span>3</span>
+            <p>
+              Optionally provide a <strong>Thumbnail URL</strong>{' '}
+              for artwork or a cover image. Save or update the
+              content. To remove the audio, select{' '}
+              <strong>Remove audio</strong> and save again.
+            </p>
+          </li>
+        </ol>
+        <p>
+          The audio field uses a standard audio player, so it needs
+          a direct file URL and a format the visitor's browser
+          supports. A Spotify or SoundCloud page link is not
+          the same as a direct audio file; use FIFU's
+          supported-provider video/embed workflow for those links.
         </p>
       </section>
 
@@ -14180,35 +14241,69 @@ function FeaturedVideoAudioGuide() {
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
-            <Settings2 size={19} aria-hidden="true" />
+            <FileImage size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">VIDEO FILE DETAILS</span>
-            <h2 id="video-audio-options">Use optional file timing.</h2>
+            <span className="activation-feature-kicker">THUMBNAILS AND FILE OPTIONS</span>
+            <h2 id="video-audio-options">Choose a thumbnail and playback range.</h2>
           </div>
         </div>
         <dl className="fifu-fields-options">
           <div>
-            <dt>Video timing</dt>
+            <dt>Supported video providers</dt>
             <dd>
-              Add <code>#t=N</code> to a local or remote video URL to start at N seconds.
-              Use <code>#t=N,M</code> to set a start and end time.
+              FIFU can retrieve thumbnails for many recognized
+              video providers. Check the preview and the final
+              page rather than assuming every provider supplies
+              an image.
             </dd>
           </div>
           <div>
-            <dt>Thumbnail requirement</dt>
+            <dt>Direct or custom video files</dt>
             <dd>
-              A remote featured video needs a featured image to represent it as a
-              thumbnail. For a video in your Media Library, save a frame with{' '}
-              <strong>Set frame as thumbnail</strong>; this creates the thumbnail image in
-              your Media Library.
+              If FIFU cannot obtain a thumbnail from the source,
+              provide an image URL in the optional{' '}
+              <strong>Thumbnail URL</strong> field when shown.
+              Direct remote video files generally need a separate
+              remote thumbnail image.
+            </dd>
+          </div>
+          <div>
+            <dt>Video files in your Media Library</dt>
+            <dd>
+              Preview the video, move to the desired frame, and
+              use <strong>Set frame as thumbnail</strong>.
+              This creates a local image attachment when
+              the content is saved.
+            </dd>
+          </div>
+          <div>
+            <dt>Audio cover image</dt>
+            <dd>
+              Add a remote <strong>Thumbnail URL</strong> when
+              using Featured Audio to show artwork alongside
+              or instead of the player where supported.
+              Removing audio can also clear its matching
+              FIFU featured-image URL, so check the image
+              after changing audio.
+            </dd>
+          </div>
+          <div>
+            <dt>Start and end times for video files</dt>
+            <dd>
+              Add <code>#t=15</code> to start at 15 seconds,
+              or <code>#t=15,45</code> to request playback
+              from 15 to 45 seconds. This media-fragment
+              syntax applies to compatible video-file URLs;
+              provider embeds may handle timing differently.
             </dd>
           </div>
         </dl>
         <p>
-          When you want visitors to see a still image first and load the video after
-          selecting it, see the{' '}
-          <Link to="/features/video-thumbnail/">Video Thumbnail guide</Link>.
+          To show a still image first and load the player after
+          a click, see <Link to="/features/video-thumbnail/">Video Thumbnail</Link>.
+          For quick URL updates from content lists, see{' '}
+          <Link to="/features/quick-editor/">Quick Editor</Link>.
         </p>
       </section>
 
@@ -14222,27 +14317,43 @@ function FeaturedVideoAudioGuide() {
           </span>
           <div>
             <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="video-audio-checks">If preview or display fails</h2>
+            <h2 id="video-audio-checks">When the player or thumbnail is missing.</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            <strong>No editor field:</strong> enable{' '}
-            <strong>Featured video / audio</strong> in the Video settings.
+            <strong>No video or audio choice:</strong> Confirm
+            <strong> FIFU → Settings → Video → Featured video / audio</strong>{' '}
+            is enabled, then reopen the editor.
           </li>
           <li>
-            <strong>Video does not preview:</strong> check that the address belongs to one
-            of the supported services or points directly to a playable local/remote video
-            file.
+            <strong>Video preview does not play:</strong> Check
+            the provider link or test the direct video URL in
+            a browser. A host may block embedding, and a file
+            may use an unsupported codec or require authentication.
           </li>
           <li>
-            <strong>Remote video has no thumbnail:</strong> set a featured image for the
-            content; remote video thumbnails are not generated from the remote video URL
-            in this workflow.
+            <strong>Audio preview is empty:</strong> Use a
+            direct audio-file URL rather than a webpage or
+            streaming-service share link. Make sure the
+            browser can play the file format.
           </li>
           <li>
-            <strong>Local video has no thumbnail:</strong> select a frame in the editor
-            and save it with <strong>Set frame as thumbnail</strong>.
+            <strong>No video thumbnail:</strong> Check whether
+            the provider supplies an image. For a custom
+            remote video, supply a thumbnail URL; for a
+            Media Library video, capture a frame.
+          </li>
+          <li>
+            <strong>No audio cover:</strong> Add a valid{' '}
+            <strong>Thumbnail URL</strong>. If you removed
+            audio, check whether its associated featured
+            image was cleared as well.
+          </li>
+          <li>
+            <strong>Works in the editor but not the theme:</strong>{' '}
+            Test the published page and its archive. Featured
+            media display depends on theme and template support.
           </li>
         </ul>
       </section>
