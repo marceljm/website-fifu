@@ -34,6 +34,26 @@ export function FeatureGuideHeading({
   );
 }
 
+export function FeatureGuideSection({
+  id,
+  help = false,
+  className = '',
+  children,
+}: ChildrenProps & { id: string; help?: boolean; className?: string }) {
+  const classes = [
+    'activation-feature-section',
+    help ? 'activation-feature-help' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
+  return (
+    <section className={classes} aria-labelledby={id}>
+      {children}
+    </section>
+  );
+}
+
 export function FeatureGuideHighlight({
   id,
   children,
