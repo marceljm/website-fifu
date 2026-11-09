@@ -45,6 +45,7 @@ import {
 } from 'lucide-react';
 import { Link, useParams } from 'react-router';
 import { Page } from '../components/layout/SiteLayout';
+import { FeatureCliSection } from '../components/features/FeatureCliSection';
 import { featureCards, fifuFeatureSlug } from '../data/fifu-features';
 import SaveInMediaLibraryGuide from './save-in-media-library-guide';
 import { FeaturedImageUrlBlockGuide } from './featured-image-url-block-guide';
@@ -2251,71 +2252,27 @@ function DbMigrationGuide() {
               The migration moves supported older FIFU data into the newer format without changing unrelated WordPress content.
             </p>
       </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="db-migration-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              OPTIONAL · <Link to="/features/wp-cli/">WP-CLI</Link>
-            </span>
-            <h2 id="db-migration-cli-title">Run batches from a terminal.</h2>
-          </div>
-        </div>
-        <p>
-          From your WordPress installation, run one batch for a task or one batch for
-          every registered task. Each command invocation advances a batch; repeat commands
-          to continue processing. Use the task name shown in the migration panel, such as <code>featured</code>.
-        </p>
-        <pre>
-          <code>{`wp fifu-migrate run_task featured
-wp fifu-migrate run-all --limit=1000 --time=30`}</code>
-        </pre>
-        <dl className="db-migration-options">
-          <div>
-            <dt>
-              <code>run_task &lt;task&gt;</code>
-            </dt>
-            <dd>
-              Runs one batch for the named registered task. An unknown name returns an
-              error.
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <code>run-all</code>
-            </dt>
-            <dd>Runs one batch for every registered task.</dd>
-          </div>
-          <div>
-            <dt>
-              <code>--limit=&lt;number&gt;</code>
-            </dt>
-            <dd>
-              Maximum records per batch; default <code>500</code>.
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <code>--time=&lt;seconds&gt;</code>
-            </dt>
-            <dd>
-              Approximate time limit per batch; default <code>20</code> seconds. With{' '}
-              <code>run-all</code>, the limit applies to each task.
-            </dd>
-          </div>
-        </dl>
-        <p className="db-migration-callout">
-              Resetting a migration task starts that task from the beginning. Only use this when you need to repeat it.
-            </p>
-        <pre>
-          <code>{`wp fifu-migrate reset_task featured`}</code>
-        </pre>
-      </section>
+            <FeatureCliSection
+        id="db-migration-cli-title"
+        commands={[
+            {
+              "label": "Run one migration task",
+              "command": "wp fifu-migrate run_task featured",
+              "description": "Processes a batch for the named task."
+            },
+            {
+              "label": "Run all migration tasks",
+              "command": "wp fifu-migrate run-all --limit=1000 --time=30",
+              "description": "Processes a batch for each task, with optional size and time limits."
+            },
+            {
+              "label": "Restart a migration task",
+              "command": "wp fifu-migrate reset_task featured",
+              "description": "Restarts the named task from the beginning."
+            }
+          ]}
+        note="Each command processes a batch. Repeat runs as needed; use Reset only when you intend to restart a task."
+      />
       <section
         className="activation-feature-section activation-feature-help"
         aria-labelledby="db-migration-help-title"
@@ -2899,24 +2856,19 @@ function OrderEmailImagesGuide() {
         </p>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="order-email-cli">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="order-email-cli">Change the same switch from the command line.</h2>
-          </div>
-        </div>
-        <p>
-          You can use WP-CLI instead of the settings switch. From your WordPress
-          installation, run <code>wp fifu woo --order-email=on</code> to enable
-          thumbnails or <code>wp fifu woo --order-email=off</code> to disable them.
-          See the <Link to="/features/wp-cli/">WP-CLI guide</Link> for
-          more command-line options.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="order-email-cli"
+        commands={[
+            {
+              "label": "Show product images in order emails",
+              "command": "wp fifu woo --order-email=on"
+            },
+            {
+              "label": "Hide product images in order emails",
+              "command": "wp fifu woo --order-email=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -3583,60 +3535,30 @@ function VimeoOptionsGuide() {
             </p>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="vimeo-cli-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="vimeo-cli-title">Change settings from the command line.</h2>
-          </div>
-        </div>
-        <p>
-          If you already use <Link to="/features/wp-cli/">WP-CLI</Link>, the video command
-          accepts these Vimeo-related options. Use one option per command; replace the
-          example token and resolution with your own values.
-        </p>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Background playback</dt>
-            <dd>
-              <code>wp fifu video --background=on</code> · use{' '}
-              <code>--background=off</code> to turn it off.
-            </dd>
-          </div>
-          <div>
-            <dt>Single content pages only</dt>
-            <dd>
-              <code>wp fifu video --background-single=on</code> · use{' '}
-              <code>--background-single=off</code> to turn it off.
-            </dd>
-          </div>
-          <div>
-            <dt>Access token</dt>
-            <dd>
-              <code>wp fifu video --vimeo-access-token=&lt;token&gt;</code> · replace{' '}
-              <code>&lt;token&gt;</code> with your Vimeo personal access token.
-            </dd>
-          </div>
-          <div>
-            <dt>MP4 rendition</dt>
-            <dd>
-              <code>wp fifu video --vimeo-mp4-rendition=720p</code> · replace{' '}
-              <code>720p</code> with a supported rendition.
-            </dd>
-          </div>
-        </dl>
-        <p>
-              Use one option per command. Supported resolutions are 1080p, 720p, 540p, 360p, and 240p.
-            </p>
-        <p>
-          The token command does not run the settings page’s scope check. If you need the
-          scope indicator updated, save the token through <strong>Access token</strong> in
-          Vimeo settings after using WP-CLI.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="vimeo-cli-title"
+        commands={[
+            {
+              "label": "Enable Vimeo background playback",
+              "command": "wp fifu video --background=on"
+            },
+            {
+              "label": "Limit background playback to single pages",
+              "command": "wp fifu video --background-single=on"
+            },
+            {
+              "label": "Set your Vimeo access token",
+              "command": "wp fifu video --vimeo-access-token=<token>",
+              "description": "Replace <token> with your Vimeo personal access token."
+            },
+            {
+              "label": "Choose a preferred MP4 quality",
+              "command": "wp fifu video --vimeo-mp4-rendition=720p",
+              "description": "Supported values: 1080p, 720p, 540p, 360p, and 240p."
+            }
+          ]}
+        note="Replace on with off to disable a switch. To verify access-token permissions, save the token on the Vimeo settings page."
+      />
 
       <section className="feature-detail-cta">
         <div>
@@ -3818,45 +3740,27 @@ function BackgroundVideoGuide() {
           <Link to="/features/vimeo-options/">Vimeo options guide</Link>.
         </p>
       </section>
-      <section
-        className="activation-feature-section"
-        aria-labelledby="background-video-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="background-video-cli-title">
-              Change either setting from the command line.
-            </h2>
-          </div>
-        </div>
-        <p>
-          If you manage WordPress with <Link to="/features/wp-cli/">WP-CLI</Link>, set
-          either option independently:
-        </p>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Background playback</dt>
-            <dd>
-              <code>wp fifu video --background=on</code> enables it; use{' '}
-              <code>--background=off</code> to disable it.
-            </dd>
-          </div>
-          <div>
-            <dt>Single-content restriction</dt>
-            <dd>
-              <code>wp fifu video --background-single=on</code> enables the URL-match
-              restriction; use <code>--background-single=off</code> to disable it.
-            </dd>
-          </div>
-        </dl>
-        <p>
-          Each flag accepts <code>on</code> or <code>off</code>.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="background-video-cli-title"
+        commands={[
+            {
+              "label": "Enable background video",
+              "command": "wp fifu video --background=on"
+            },
+            {
+              "label": "Disable background video",
+              "command": "wp fifu video --background=off"
+            },
+            {
+              "label": "Restrict background video to single pages",
+              "command": "wp fifu video --background-single=on"
+            },
+            {
+              "label": "Remove the single-page restriction",
+              "command": "wp fifu video --background-single=off"
+            }
+          ]}
+      />
       <section className="feature-detail-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
@@ -4005,29 +3909,20 @@ function AutoplayOnMouseoverGuide() {
         </p>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="mouseover-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="mouseover-cli-title">Set the same toggle from the command line.</h2>
-          </div>
-        </div>
-        <p>
-          If you manage WordPress with <Link to="/features/wp-cli/">WP-CLI</Link>, run
-          this from your WordPress installation to enable hover playback. Use{' '}
-          <code>off</code> to disable it. This changes only the hover toggle; Mute and
-          Video Controls remain separate prerequisites.
-        </p>
-        <pre>
-          <code>{'wp fifu video --mouse=on'}</code>
-        </pre>
-      </section>
+            <FeatureCliSection
+        id="mouseover-cli-title"
+        commands={[
+            {
+              "label": "Enable hover playback",
+              "command": "wp fifu video --mouse=on"
+            },
+            {
+              "label": "Disable hover playback",
+              "command": "wp fifu video --mouse=off"
+            }
+          ]}
+        note="Hover playback also needs the matching Mute setting, and embedded YouTube or Vimeo players need Video Controls enabled."
+      />
 
       <section className="feature-detail-cta">
         <div>
@@ -4161,30 +4056,36 @@ function AutoplayGuide() {
         </p>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="autoplay-controls">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="autoplay-controls">
-              Change the location switches from the command line.
-            </h2>
-          </div>
-        </div>
-        <p>
-          If you manage WordPress with <Link to="/features/wp-cli/">WP-CLI</Link>, run a
-          command from your WordPress installation and replace <code>&lt;on|off&gt;</code>{' '}
-          with <code>on</code> or <code>off</code>. The first four commands match the
-          location switches above; the last two set Mute by device. The homepage
-          all-videos option takes effect only while{' '}
-          <strong>Autoplay · on homepage</strong> is also on.
-        </p>
-        <pre>
-          <code>{`wp fifu video --autoplay=<on|off>\nwp fifu video --autoplay-front=<on|off>\nwp fifu video --autoplay-front-all=<on|off>\nwp fifu video --autoplay-else=<on|off>\nwp fifu video --mute-desktop=<on|off>\nwp fifu video --mute-mobile=<on|off>`}</code>
-        </pre>
-      </section>
+            <FeatureCliSection
+        id="autoplay-controls"
+        commands={[
+            {
+              "label": "Autoplay on single post pages",
+              "command": "wp fifu video --autoplay=on"
+            },
+            {
+              "label": "Autoplay on the homepage",
+              "command": "wp fifu video --autoplay-front=on"
+            },
+            {
+              "label": "Play all homepage videos together",
+              "command": "wp fifu video --autoplay-front-all=on"
+            },
+            {
+              "label": "Autoplay in other locations",
+              "command": "wp fifu video --autoplay-else=on"
+            },
+            {
+              "label": "Mute on desktop",
+              "command": "wp fifu video --mute-desktop=on"
+            },
+            {
+              "label": "Mute on mobile",
+              "command": "wp fifu video --mute-mobile=on"
+            }
+          ]}
+        note="Replace on with off to disable any option. Homepage-wide playback requires homepage autoplay to be enabled. Autoplay needs the appropriate Mute setting."
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -4512,39 +4413,19 @@ function VideoControlsGuide() {
             </p>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="video-controls-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="video-controls-cli-title">Set the same toggle from your shell</h2>
-          </div>
-        </div>
-        <p>
-          If you administer WordPress with <Link to="/features/wp-cli/">WP-CLI</Link>, run
-          the command you need from your WordPress installation. Each value updates the
-          same site-wide preference as the settings switch.
-        </p>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Enable controls</dt>
-            <dd>
-              <code>wp fifu video --controls=on</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Disable controls</dt>
-            <dd>
-              <code>wp fifu video --controls=off</code>
-            </dd>
-          </div>
-        </dl>
-      </section>
+            <FeatureCliSection
+        id="video-controls-cli-title"
+        commands={[
+            {
+              "label": "Enable player controls",
+              "command": "wp fifu video --controls=on"
+            },
+            {
+              "label": "Disable player controls",
+              "command": "wp fifu video --controls=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -4793,73 +4674,44 @@ function PlayButtonGuide() {
         </ul>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="play-button-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="play-button-cli-title">
-              Set the same options from the command line.
-            </h2>
-          </div>
-        </div>
-        <p>
-          Run an individual command from your WordPress installation. For example, this
-          selects lightbox playback:
-        </p>
-        <pre>
-          <code>wp fifu video --play-mode=lightbox</code>
-        </pre>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>
-              <code>--play=on|off</code>
-            </dt>
-            <dd>Enable or disable the overlay.</dd>
-          </div>
-          <div>
-            <dt>
-              <code>--play-mode=inline|lightbox</code>
-            </dt>
-            <dd>Choose the playback mode.</dd>
-          </div>
-          <div>
-            <dt>
-              <code>--play-color=&lt;color&gt;</code>
-            </dt>
-            <dd>Set the hover background color as a text value.</dd>
-          </div>
-          <div>
-            <dt>
-              <code>--play-size=&lt;integer&gt;</code>
-            </dt>
-            <dd>Set the size in pixels; use a positive integer.</dd>
-          </div>
-          <div>
-            <dt>
-              <code>--play-zindex=&lt;integer&gt;</code>
-            </dt>
-            <dd>Set stacking order; use a positive integer.</dd>
-          </div>
-          <div>
-            <dt>
-              <code>--play-hide=on|off</code>
-            </dt>
-            <dd>Toggle hiding on WordPress home, archive, and search contexts.</dd>
-          </div>
-          <div>
-            <dt>
-              <code>--play-hide-wc=on|off</code>
-            </dt>
-            <dd>Toggle hiding on WooCommerce shop and product category pages.</dd>
-          </div>
-        </dl>
-      </section>
+            <FeatureCliSection
+        id="play-button-cli-title"
+        commands={[
+            {
+              "label": "Enable the play button",
+              "command": "wp fifu video --play=on"
+            },
+            {
+              "label": "Open videos in a lightbox",
+              "command": "wp fifu video --play-mode=lightbox",
+              "description": "Use inline instead of lightbox to play in place."
+            },
+            {
+              "label": "Change the hover color",
+              "command": "wp fifu video --play-color=<color>",
+              "description": "Replace <color> with a supported color value."
+            },
+            {
+              "label": "Set play-button size",
+              "command": "wp fifu video --play-size=<integer>",
+              "description": "Replace <integer> with a positive size in pixels."
+            },
+            {
+              "label": "Adjust stacking order",
+              "command": "wp fifu video --play-zindex=<integer>",
+              "description": "Replace <integer> with a positive stacking value."
+            },
+            {
+              "label": "Hide the button in WordPress grids",
+              "command": "wp fifu video --play-hide=on"
+            },
+            {
+              "label": "Hide the button in WooCommerce grids",
+              "command": "wp fifu video --play-hide-wc=on"
+            }
+          ]}
+        note="Use off instead of on to disable a switch. Replace any value in angle brackets before running its command."
+      />
 
       <section className="feature-detail-cta">
         <div>
@@ -5903,40 +5755,19 @@ function ImageMetadataGuide() {
             </p>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="image-metadata-controls-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="image-metadata-controls-title">
-              Control the same pass from your shell.
-            </h2>
-          </div>
-        </div>
-        <p>
-          If <Link to="/features/wp-cli/">WP-CLI</Link> is available in your WordPress
-          installation, use these commands to start or stop Image Metadata generation.
-        </p>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Start or resume</dt>
-            <dd>
-              <code>wp fifu metadata on</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Pause</dt>
-            <dd>
-              <code>wp fifu metadata off</code>
-            </dd>
-          </div>
-        </dl>
-      </section>
+            <FeatureCliSection
+        id="image-metadata-controls-title"
+        commands={[
+            {
+              "label": "Generate missing metadata",
+              "command": "wp fifu metadata on"
+            },
+            {
+              "label": "Stop metadata generation",
+              "command": "wp fifu metadata off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -6550,30 +6381,19 @@ function DisableRightClickGuide() {
         </ol>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="disable-right-click-cli">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="disable-right-click-cli">Change the same setting from a terminal.</h2>
-          </div>
-        </div>
-        <p>
-          If WP-CLI is installed and available for your site, run one command from your WordPress installation directory. The <Link to="/features/wp-cli/">WP-CLI guide</Link> covers FIFU’s other command-line options.
-        </p>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Enable</dt>
-            <dd><code>wp fifu image --block=on</code></dd>
-          </div>
-          <div>
-            <dt>Disable</dt>
-            <dd><code>wp fifu image --block=off</code></dd>
-          </div>
-        </dl>
-      </section>
+            <FeatureCliSection
+        id="disable-right-click-cli"
+        commands={[
+            {
+              "label": "Disable right-click on images",
+              "command": "wp fifu image --block=on"
+            },
+            {
+              "label": "Allow right-click again",
+              "command": "wp fifu image --block=off"
+            }
+          ]}
+      />
 
       <section className="activation-feature-section activation-feature-help" aria-labelledby="disable-right-click-scope">
         <div className="activation-feature-section-heading">
@@ -6904,35 +6724,24 @@ function AutoSetCustomFieldGuide() {
         </dl>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="custom-field-cli">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="custom-field-cli">Set the key or toggle from WordPress CLI.</h2>
-          </div>
-        </div>
-        <p>
-          Run a command from your WordPress installation. Replace <code>image_url</code>{' '}
-          with your metadata key.
-        </p>
-        <pre>
-          <code>wp fifu customfield --field=image_url</code>
-        </pre>
-        <p>To enable scheduled assignment, run:</p>
-        <pre>
-          <code>wp fifu customfield on</code>
-        </pre>
-        <p>To disable it later, run this separate command:</p>
-        <pre>
-          <code>wp fifu customfield off</code>
-        </pre>
-        <p>
-          The <Link to="/features/wp-cli/">WP-CLI guide</Link> covers other FIFU commands.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="custom-field-cli"
+        commands={[
+            {
+              "label": "Choose the custom field",
+              "command": "wp fifu customfield --field=image_url",
+              "description": "Replace image_url with your field key."
+            },
+            {
+              "label": "Enable automatic assignment",
+              "command": "wp fifu customfield on"
+            },
+            {
+              "label": "Disable automatic assignment",
+              "command": "wp fifu customfield off"
+            }
+          ]}
+      />
 
       <nav className="feature-related-guides" aria-label="Related guides">
         <strong>Related guides</strong>
@@ -7883,27 +7692,20 @@ function ReplaceNotFoundImageGuide() {
         </dl>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="replace-not-found-cli"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="replace-not-found-cli">Configure the URL from your server.</h2>
-          </div>
-        </div>
-        <p>
-          If you manage WordPress from the command line, run this from
-          your WordPress installation and replace the example with your URL:
-        </p>
-        <pre><code>wp fifu image --replace="https://example.com/backup.jpg"</code></pre>
-        <p>To clear your custom replacement:</p>
-        <pre><code>wp fifu image --replace=""</code></pre>
-      </section>
+            <FeatureCliSection
+        id="replace-not-found-cli"
+        commands={[
+            {
+              "label": "Set a replacement image",
+              "command": "wp fifu image --replace=\"https://example.com/backup.jpg\"",
+              "description": "Replace the example address with your image URL."
+            },
+            {
+              "label": "Remove the replacement image",
+              "command": "wp fifu image --replace=\"\""
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -8154,30 +7956,20 @@ function BrokenLinkCheckerGuide() {
         </ul>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="blc-cli-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="blc-cli-title">Change the same toggle from a terminal.</h2>
-          </div>
-        </div>
-        <p>To enable checking from your WordPress installation, run:</p>
-        <pre>
-          <code>wp fifu image --validate-featured-image-urls=on</code>
-        </pre>
-        <p>To disable checking instead, run:</p>
-        <pre>
-          <code>wp fifu image --validate-featured-image-urls=off</code>
-        </pre>
-        <p>
-          Each command changes the same setting as the admin toggle; neither starts a bulk
-          scan. For other terminal workflows, see the{' '}
-          <Link to="/features/wp-cli/">WP-CLI guide</Link>.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="blc-cli-title"
+        commands={[
+            {
+              "label": "Enable the checker",
+              "command": "wp fifu image --validate-featured-image-urls=on"
+            },
+            {
+              "label": "Disable the checker",
+              "command": "wp fifu image --validate-featured-image-urls=off"
+            }
+          ]}
+        note="These commands change the setting; they do not start a bulk scan."
+      />
 
       <section className="feature-detail-cta">
         <div>
@@ -8553,52 +8345,35 @@ function HideFeaturedMediaGuide() {
         </ul>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="hide-featured-media-cli"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="hide-featured-media-cli">
-              Set the same options from the command line.
-            </h2>
-          </div>
-        </div>
-        <p>
-          If you manage WordPress with <Link to="/features/wp-cli/">WP-CLI</Link>, run the
-          relevant command from the site’s WordPress directory. Each command updates only
-          its named option.
-        </p>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Enable or disable</dt>
-            <dd>
-              <code>wp fifu image --hide=on</code> enables the rule; use{' '}
-              <code>--hide=off</code> to disable it.
-            </dd>
-          </div>
-          <div>
-            <dt>Post types</dt>
-            <dd>
-              <code>wp fifu image --hide-types=post,page</code> replaces the post type
-              filter. Pass an empty value, <code>wp fifu image --hide-types=</code>, to
-              clear it.
-            </dd>
-          </div>
-          <div>
-            <dt>Post formats</dt>
-            <dd>
-              <code>wp fifu image --hide-formats=video,audio</code> replaces the post
-              format filter. Pass an empty value,{' '}
-              <code>wp fifu image --hide-formats=</code>, to clear it.
-            </dd>
-          </div>
-        </dl>
-      </section>
+            <FeatureCliSection
+        id="hide-featured-media-cli"
+        commands={[
+            {
+              "label": "Hide featured media",
+              "command": "wp fifu image --hide=on"
+            },
+            {
+              "label": "Show featured media again",
+              "command": "wp fifu image --hide=off"
+            },
+            {
+              "label": "Choose post types",
+              "command": "wp fifu image --hide-types=post,page"
+            },
+            {
+              "label": "Clear the post-type filter",
+              "command": "wp fifu image --hide-types="
+            },
+            {
+              "label": "Choose post formats",
+              "command": "wp fifu image --hide-formats=video,audio"
+            },
+            {
+              "label": "Clear the post-format filter",
+              "command": "wp fifu image --hide-formats="
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -9903,35 +9678,19 @@ function PlaybackLoopGuide() {
         </p>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="playback-loop-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="playback-loop-cli-title">Set the toggle from the command line.</h2>
-          </div>
-        </div>
-        <p>Use either command to set the same global option from WP-CLI:</p>
-        <dl className="feature-guide-options">
-          <div>
-            <dt>Enable</dt>
-            <dd>
-              <code>wp fifu video --loop=on</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Disable</dt>
-            <dd>
-              <code>wp fifu video --loop=off</code>
-            </dd>
-          </div>
-        </dl>
-      </section>
+            <FeatureCliSection
+        id="playback-loop-cli-title"
+        commands={[
+            {
+              "label": "Enable looping",
+              "command": "wp fifu video --loop=on"
+            },
+            {
+              "label": "Disable looping",
+              "command": "wp fifu video --loop=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -10087,25 +9846,27 @@ function MuteGuide() {
         </p>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="mute-cli-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="mute-cli-title">Change a switch from the command line.</h2>
-          </div>
-        </div>
-        <p>
-          Run <code>wp fifu video --mute-desktop=on</code> or{' '}
-          <code>wp fifu video --mute-desktop=off</code> to set desktop playback. Use{' '}
-          <code>wp fifu video --mute-mobile=on</code> or{' '}
-          <code>wp fifu video --mute-mobile=off</code> for mobile. Run the command from
-          your WordPress installation with WP-CLI available; each command changes only the
-          named device option.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="mute-cli-title"
+        commands={[
+            {
+              "label": "Mute desktop videos",
+              "command": "wp fifu video --mute-desktop=on"
+            },
+            {
+              "label": "Allow sound on desktop",
+              "command": "wp fifu video --mute-desktop=off"
+            },
+            {
+              "label": "Mute mobile videos",
+              "command": "wp fifu video --mute-mobile=on"
+            },
+            {
+              "label": "Allow sound on mobile",
+              "command": "wp fifu video --mute-mobile=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -10268,26 +10029,19 @@ function YoutubeOptionsGuide() {
         </dl>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="youtube-options-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · COMMAND LINE</span>
-            <h2 id="youtube-options-cli-title">Set it with WP-CLI.</h2>
-          </div>
-        </div>
-        <p>
-          If you use <Link to="/features/wp-cli/">WP-CLI</Link>, run{' '}
-          <code>wp fifu video --privacy=on</code> to enable the option or{' '}
-          <code>wp fifu video --privacy=off</code> to disable it. The accepted values are
-          <code>on</code> and <code>off</code>.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="youtube-options-cli-title"
+        commands={[
+            {
+              "label": "Enable privacy-enhanced YouTube",
+              "command": "wp fifu video --privacy=on"
+            },
+            {
+              "label": "Use regular YouTube embeds",
+              "command": "wp fifu video --privacy=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -13349,33 +13103,16 @@ function ResetSettingsGuide() {
         </ol>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="reset-settings-cli"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL COMMAND LINE</span>
-            <h2 id="reset-settings-cli">Run the same reset with WP-CLI.</h2>
-          </div>
-        </div>
-        <p>
-          If you administer WordPress with WP-CLI, run this from your site’s WordPress
-          installation. It immediately resets FIFU’s configurable settings using the same
-          reset routine as the dashboard switch.
-        </p>
-        <pre>
-          <code>wp fifu reset</code>
-        </pre>
-        <p>
-          This command has no extra reset mode or confirmation option. Use it only when
-          you intend to clear those settings. For command access and other FIFU commands,
-          see the <Link to="/features/wp-cli/">WP-CLI guide</Link>.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="reset-settings-cli"
+        commands={[
+            {
+              "label": "Reset FIFU settings",
+              "command": "wp fifu reset"
+            }
+          ]}
+        note="This immediately restores FIFU settings to their defaults. Back up your configuration before running it."
+      />
 
       <nav className="feature-related-guides" aria-label="Related guides">
         <strong>Related guides</strong>
@@ -15156,35 +14893,19 @@ function RemoteVariationImagesGuide() {
         </dl>
       </section>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="remote-variation-cli-title"
-      >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="remote-variation-cli-title">
-              Set the gallery merge switch from a terminal.
-            </h2>
-          </div>
-        </div>
-        <p>
-          From your WordPress installation, run one command to control the same optional
-          setting:
-        </p>
-        <pre>
-          <code>wp fifu woo --variations-merge=on</code>
-        </pre>
-        <p>
-          Use <code>off</code> instead of <code>on</code> to disable it. This controls
-          whether variation images join the unselected main gallery; it does not add or
-          change a variation’s saved URLs. See the{' '}
-          <Link to="/features/wp-cli/">WP-CLI guide</Link> for command prerequisites.
-        </p>
-      </section>
+            <FeatureCliSection
+        id="remote-variation-cli-title"
+        commands={[
+            {
+              "label": "Include variation images in the main gallery",
+              "command": "wp fifu woo --variations-merge=on"
+            },
+            {
+              "label": "Keep variation images separate",
+              "command": "wp fifu woo --variations-merge=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section"
@@ -15457,47 +15178,28 @@ function FifuProductGalleryGuide() {
           <Link to="/features/widgets/">Widgets guide</Link>.
         </p>
       </section>
-      <section className="activation-feature-section" aria-labelledby="fifu-gallery-cli">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-            <h2 id="fifu-gallery-cli">Set the gallery switches from a terminal.</h2>
-          </div>
-        </div>
-        <p>
-          Run one command at a time from your WordPress installation. Replace{' '}
-          <code>on</code> with <code>off</code> to disable that switch.
-        </p>
-        <dl className="fifu-fields-options">
-          <div>
-            <dt>Gallery mode</dt>
-            <dd>
-              <code>wp fifu woo --gallery=on</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Adaptive height</dt>
-            <dd>
-              <code>wp fifu woo --adaptive=on</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Videos before images</dt>
-            <dd>
-              <code>wp fifu woo --videos-before=on</code>
-            </dd>
-          </div>
-          <div>
-            <dt>Merge variation images</dt>
-            <dd>
-              <code>wp fifu woo --variations-merge=on</code>
-            </dd>
-          </div>
-        </dl>
-      </section>
+            <FeatureCliSection
+        id="fifu-gallery-cli"
+        commands={[
+            {
+              "label": "Enable FIFU Product Gallery",
+              "command": "wp fifu woo --gallery=on"
+            },
+            {
+              "label": "Enable adaptive height",
+              "command": "wp fifu woo --adaptive=on"
+            },
+            {
+              "label": "Display videos before images",
+              "command": "wp fifu woo --videos-before=on"
+            },
+            {
+              "label": "Merge variation images",
+              "command": "wp fifu woo --variations-merge=on"
+            }
+          ]}
+        note="Replace on with off to disable an option."
+      />
       <section
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-custom"
