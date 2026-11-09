@@ -1653,7 +1653,7 @@ function DeleteFromCloudGuide() {
           </div>
         </div>
         <p>
-              Turn on <strong>Automatic delete</strong> to remove Cloud images that are no longer used. Keep it off if you prefer to review each deletion manually.
+              In <strong>FIFU → Cloud → Delete</strong>, turn on <strong>Automatic delete</strong> to remove Cloud images that are no longer used. Keep it off if you prefer to review each deletion manually.
             </p>
       </section>
 
@@ -2312,9 +2312,8 @@ wp fifu-migrate run-all --limit=1000 --time=30`}</code>
           </div>
         </dl>
         <p className="db-migration-callout">
-          <strong>Restart a task only when needed.</strong> Resetting clears its saved
-          cursor and counters, so its next batch scans from the beginning.
-        </p>
+              Resetting a migration task starts that task from the beginning. Only use this when you need to repeat it.
+            </p>
         <pre>
           <code>{`wp fifu-migrate reset_task featured`}</code>
         </pre>
@@ -4511,7 +4510,7 @@ function VideoControlsGuide() {
           </div>
         </div>
         <p>
-              For hover playback, follow the <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link> settings. Keep controls available when visitors need to pause or interact with the video.
+              Embedded videos using <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link> require <strong>Video Controls</strong> and <strong>Mute</strong> to be enabled. Keep playback controls on when visitors need to pause the video.
             </p>
       </section>
 
@@ -8157,14 +8156,13 @@ function BrokenLinkCheckerGuide() {
             HTML without running WordPress, so that visit may not queue a check.
           </li>
           <li>
-            <strong>The image looks wrong but is not listed:</strong> an HTTP response
-            from 200–399 is treated as available even if it is the wrong file or an error
-            page. Check the URL itself and the response from its host.
+            <strong>The image looks wrong but is not listed:</strong> the checker confirms
+            whether an address responds, not whether it displays the intended image.
+            Open the URL to check what the host actually shows.
           </li>
           <li>
-            <strong>The table will not load:</strong> use an account with the{' '}
-            <code>manage_options</code> capability. This permission is required for the
-            results request.
+            <strong>The table will not load:</strong> sign in as a site administrator
+            to view the broken-link results.
           </li>
         </ul>
       </section>
@@ -9911,9 +9909,7 @@ function PlaybackLoopGuide() {
           <div>
             <dt>What changes</dt>
             <dd>
-              Video embeds receive looping playback behavior. HTML video players receive
-              the loop setting; YouTube embeds also receive the current video as their
-              playlist so it can repeat.
+              When enabled, supported featured videos repeat after they finish. The exact behavior depends on the video service.
             </dd>
           </div>
         </dl>
@@ -15552,7 +15548,7 @@ function FifuProductGalleryGuide() {
           </div>
         </div>
         <p>
-              Use <strong>Custom content</strong> to open an embedded view, such as a 360° product view, PDF, or map, when shoppers select a gallery image. The external page must allow embedding.
+              Under <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery → Custom content</strong>, you can show embedded content, such as a 360° product view, PDF, or map, when shoppers select a gallery image. The external page must allow embedding.
             </p>
         <ol className="activation-feature-steps">
           <li>
