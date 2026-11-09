@@ -4720,8 +4720,7 @@ function PlayButtonGuide() {
           <div>
             <dt>size</dt>
             <dd>
-              Sets the control’s font size in pixels; its padding is adjusted from this
-              value.
+              Changes the size of the play icon so it stays visible over thumbnails.
             </dd>
           </div>
           <div>
@@ -4969,14 +4968,8 @@ function VideoThumbnailGuide() {
           </div>
         </dl>
         <p>
-          If an importer supports FIFU’s combined video-and-thumbnail
-          value, its documented format is{' '}
-          <code>video_url\image_url</code> (a backslash between
-          the URLs). This is an import convention, not something
-          to paste into the editor’s <strong>Video URL</strong> field.
-          See the <Link to="/features/wp-all-import-add-on/">WP All Import Add-on</Link>{' '}
-          guide for FIFU import mappings.
-        </p>
+              When importing video thumbnails, use the field mappings described in the <Link to="/features/wp-all-import-add-on/">WP All Import add-on</Link> guide rather than putting import values in the editor's video field.
+            </p>
       </section>
 
       <section
@@ -7035,11 +7028,7 @@ function AutoSetProductImagesFromAsinGuide() {
           <li>
             <span>3</span>
             <p>
-              Open the <strong>Auto set</strong> tab and enable the switch.
-              This registers a recurring lookup job. FIFU checks for eligible
-              content on approximately a one-minute schedule, but an item is
-              queued only when all four credential values (including Locale)
-              are present. Results are not necessarily immediate.
+              FIFU looks for eligible content automatically after the feature is enabled and the required Amazon credentials are saved. New images may take a little time to appear.
             </p>
           </li>
         </ol>
@@ -9391,11 +9380,8 @@ function SquareImageOptionsGuide() {
           </div>
         </div>
         <p>
-          Square options apply to images served by FIFU CDN or FIFU Cloud. The delivery
-          code selects the desktop or mobile value using the request device and sets
-          square dimensions with crop or fit behavior. Images served through other paths
-          are not covered by these settings.
-        </p>
+              These options apply only to images delivered through FIFU CDN or FIFU Cloud. Other images keep their normal appearance.
+            </p>
         <p>
           If an image remains rectangular, confirm that its delivery uses FIFU CDN or FIFU
           Cloud and that the matching device selection is not empty. If the entire image
@@ -10243,8 +10229,7 @@ function YoutubeOptionsGuide() {
           <li>
             <span>3</span>
             <p>
-              Load a page with a supported FIFU YouTube video. Its rendered embed uses{' '}
-              <code>youtube-nocookie.com/embed/…</code> while the setting is on.
+              Play a FIFU YouTube video on your site to confirm it works after enabling the setting.
             </p>
           </li>
         </ol>
@@ -10281,8 +10266,7 @@ function YoutubeOptionsGuide() {
           <div>
             <dt>Scope</dt>
             <dd>
-              This changes the rendered embed host only. It does not rewrite the YouTube
-              URL saved for your media, and it does not change other video providers.
+              The YouTube address saved with your post does not change. Other video services are unaffected.
             </dd>
           </div>
         </dl>
@@ -10323,13 +10307,8 @@ function YoutubeOptionsGuide() {
           </div>
         </div>
         <p>
-          Check that{' '}
-          <strong>FIFU → Video → YouTube options → Privacy Enhanced Mode</strong>
-          is on. The host changes only for generated embed URLs that match YouTube’s
-          supported embed pattern; the saved source URL remains as entered. For a focused
-          explanation of this setting, read the{' '}
-          <Link to="/features/privacy-enhanced-mode/">Privacy Enhanced Mode guide</Link>.
-        </p>
+              Make sure the setting is on and test with a YouTube video added through FIFU.
+            </p>
       </section>
 
       <nav className="feature-related-guides" aria-label="Related guides">
@@ -10418,8 +10397,7 @@ function PrivacyEnhancedModeGuide() {
           <li>
             <span>3</span>
             <p>
-              Load a page with a supported FIFU YouTube video. Its rendered embed uses{' '}
-              <code>youtube-nocookie.com/embed/…</code> while the setting is on.
+              Open a page with a FIFU YouTube video to confirm it plays normally with privacy-enhanced mode enabled.
             </p>
           </li>
         </ol>
@@ -10442,9 +10420,7 @@ function PrivacyEnhancedModeGuide() {
           <div>
             <dt>Privacy Enhanced Mode</dt>
             <dd>
-              On changes supported YouTube embed hosts from <code>youtube.com</code> to{' '}
-              <code>youtube-nocookie.com</code>. Off keeps the regular host. The saved
-              YouTube source URL is not rewritten.
+              When on, FIFU uses YouTube's privacy-enhanced playback mode for supported embeds. The original address saved with your post stays unchanged.
             </dd>
           </div>
           <div>
@@ -10489,9 +10465,7 @@ function PrivacyEnhancedModeGuide() {
               <Check size={14} aria-hidden="true" />
             </span>
             <p>
-              Confirm the toggle is on, then reload the page that renders the FIFU video.
-              The stored source URL can still show <code>youtube.com</code>; the setting
-              changes the generated embed URL.
+              Make sure the setting is enabled, then reload a page that displays a FIFU YouTube video.
             </p>
           </li>
           <li>
@@ -14556,8 +14530,7 @@ function FeaturedSliderGuide() {
           <div>
             <dt>Transition duration (in ms)</dt>
             <dd>
-              Sets the transition time; the input increments by 500 ms and is capped at
-              2,000 ms.
+              Controls how long the transition animation takes.
             </dd>
           </div>
           <div>
@@ -15275,13 +15248,8 @@ function FifuProductGalleryGuide() {
           </span>
           <h2 id="fifu-gallery-intro">Use a gallery that works with remote media.</h2>
           <p>
-            Some theme galleries depend on image dimensions stored in WordPress,
-            which can make externally hosted images harder to display. FIFU’s gallery
-            handles remote product media without first saving those dimensions.
-            Use it to show several product views, supported videos, or images that
-            change with a selected variation. If your theme’s default gallery
-            already works well with your images, switching is optional.
-          </p>
+              FIFU Product Gallery shows remote product images and videos without requiring local copies. You can also display variation-specific images.
+            </p>
         </div>
         <div className="feature-highlight-visual">
           <img
