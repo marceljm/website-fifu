@@ -6210,3 +6210,91 @@ body {
     font-size: 14px;
   }
 }
+
+/* Shared feature-guide patterns: settings tables, help lists and related guides. */
+.page .feature-section-options {
+  display: grid;
+  gap: 0;
+  margin: 0 0 0 52px;
+  padding: 0;
+  border-top: 1px solid #e9edf3;
+}
+.page .feature-section-options > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.3fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e9edf3;
+}
+.page .feature-section-options dt {
+  min-width: 0;
+  color: #26364d;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.page .feature-section-options dd {
+  min-width: 0;
+  margin: 0;
+  color: #5c6a7e;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.page .activation-feature-help-list {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 0 52px;
+  padding-left: 1.2em;
+  color: #5c6a7e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.page .feature-related-guides {
+  margin: 36px 0 0;
+  padding: 19px 22px;
+  border-top: 1px solid #e7ebf1;
+  border-bottom: 1px solid #e7ebf1;
+}
+.page .feature-related-guides > strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #26364d;
+  font-size: 15px;
+  font-weight: 700;
+}
+.page .feature-related-guides > p {
+  margin: 0;
+  color: #5c6a7e;
+  line-height: 1.7;
+}
+.page .feature-related-guides a {
+  color: #2563eb;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.page .feature-related-guides a:hover {
+  color: #1d4ed8;
+  text-decoration-thickness: 2px;
+}
+.page .feature-related-guides a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .page .feature-section-options,
+  .page .activation-feature-help-list {
+    margin-left: 0;
+  }
+  .page .feature-section-options > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .page .feature-related-guides {
+    margin-top: 28px;
+    padding: 16px 0;
+  }
+}
