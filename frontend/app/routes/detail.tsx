@@ -14125,6 +14125,91 @@ function FeaturedVideoAudioGuide() {
 
       <section
         className="activation-feature-section"
+        aria-labelledby="video-audio-services"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Globe size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">SUPPORTED VIDEO AND AUDIO SERVICES</span>
+            <h2 id="video-audio-services">Which services does FIFU support?</h2>
+          </div>
+        </div>
+        <p>
+          FIFU recognizes the following services for featured
+          media. Use a public, playable URL in the{' '}
+          <strong>Featured video</strong> field for these
+          hosted providers, including the music platforms.
+          The list covers the services supported by FIFU
+          rather than just a few popular examples.
+        </p>
+        <dl className="fifu-fields-options">
+          <div>
+            <dt>Video and social platforms</dt>
+            <dd>
+              YouTube, Vimeo, X (Twitter), TikTok, 9GAG,
+              Tumblr, Odysee, Rumble, Dailymotion,
+              BitChute, and Brighteon.
+            </dd>
+          </div>
+          <div>
+            <dt>Video hosting, players, and cloud storage</dt>
+            <dd>
+              Cloudinary, Publitio, JW Player, VideoPress
+              (WordPress.com), SproutVideo, Cloudflare Stream,
+              Bunny Stream, Google Drive, MEGA, and
+              Amazon-hosted video files.
+            </dd>
+          </div>
+          <div>
+            <dt>Music and audio services</dt>
+            <dd>
+              Spotify and SoundCloud are supported as embedded
+              providers through <strong>Featured video</strong>.
+              Spotify support is for track URLs; the
+              service's other link types are not automatically
+              interchangeable. SoundCloud uses its supported
+              track/player links.
+            </dd>
+          </div>
+          <div>
+            <dt>Local and remote video files</dt>
+            <dd>
+              MP4, MOV, WebM, OGG, and HLS streams
+              (<code>.m3u8</code>). You can use a video
+              uploaded to the WordPress Media Library or
+              a directly accessible file on another server.
+              The visitor's browser, file codecs, hosting
+              permissions, and streaming support still matter.
+            </dd>
+          </div>
+          <div>
+            <dt>Direct audio files</dt>
+            <dd>
+              Use <strong>Featured audio</strong> for a
+              directly playable audio file, such as MP3,
+              OGG, or WAV, when the browser supports its
+              format. A Spotify or SoundCloud share page
+              does not belong in the direct{' '}
+              <strong>Audio URL</strong> field.
+            </dd>
+          </div>
+        </dl>
+        <p>
+          A recognized service does not guarantee that every
+          URL from that service will work. The content must
+          be accessible, permit embedding when necessary,
+          and use a URL pattern FIFU understands. For
+          example, Amazon support includes hosted MP4
+          links from <code>m.media-amazon.com</code>, not
+          arbitrary Amazon product pages. Test the
+          preview before saving.
+        </p>
+      </section>
+
+      <section
+        className="activation-feature-section"
         aria-labelledby="video-audio-video-workflow"
       >
         <div className="activation-feature-section-heading">
@@ -14176,13 +14261,11 @@ function FeaturedVideoAudioGuide() {
           </li>
         </ol>
         <p>
-          FIFU recognizes services such as YouTube, Vimeo, Rumble,
-          Dailymotion, Cloudflare Stream, and others listed in{' '}
-          <strong>FIFU → Settings → Video</strong>. Spotify and
-          SoundCloud are supported through provider embeds.
-          File support includes formats such as MP4, MOV, WebM,
-          OGG, and HLS playlists (<code>.m3u8</code>), subject
-          to browser, codec, and hosting compatibility.
+          For the complete list of recognized platforms, see
+          <strong> Supported video and audio services</strong>{' '}
+          above. The video preview can also work with
+          compatible direct media files; the source must be
+          playable by the browser.
         </p>
       </section>
 
@@ -14227,11 +14310,11 @@ function FeaturedVideoAudioGuide() {
           </li>
         </ol>
         <p>
-          The audio field uses a standard audio player, so it needs
-          a direct file URL and a format the visitor's browser
-          supports. A Spotify or SoundCloud page link is not
-          the same as a direct audio file; use FIFU's
-          supported-provider video/embed workflow for those links.
+          The audio field uses a standard browser audio player.
+          For Spotify tracks and SoundCloud links, use
+          <strong> Featured video</strong> so FIFU can
+          display the supported provider embed instead of
+          treating the link as a raw audio file.
         </p>
       </section>
 
@@ -14250,12 +14333,12 @@ function FeaturedVideoAudioGuide() {
         </div>
         <dl className="fifu-fields-options">
           <div>
-            <dt>Supported video providers</dt>
+            <dt>Embedded video providers</dt>
             <dd>
-              FIFU can retrieve thumbnails for many recognized
-              video providers. Check the preview and the final
-              page rather than assuming every provider supplies
-              an image.
+              FIFU can obtain thumbnails for many of
+              the supported services listed above. Some
+              embeds may not provide a usable thumbnail,
+              so check the preview and published page.
             </dd>
           </div>
           <div>
