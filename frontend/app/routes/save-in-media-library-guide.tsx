@@ -48,13 +48,8 @@ export default function SaveInMediaLibraryGuide() {
           </div>
         </div>
         <p>
-          A remote FIFU image is displayed from its source URL and is not a WordPress
-          attachment. Saving it creates an attachment in your site’s Media Library and
-          switches the post or product to that local media. This is useful when a workflow
-          needs attachment IDs or locally hosted files; if you want to keep images remote
-          and avoid local copies, leave this feature unused. Local uploads also use your
-          site’s storage and image-processing resources.
-        </p>
+              Saving a remote image places a copy in your WordPress Media Library and uses it for the post or product. This is useful when a theme or plugin needs a locally stored image. If you prefer remote images, you can leave this feature off.
+            </p>
         <p>
           If you only need to display remote featured images or remote WooCommerce gallery
           images, keep using{' '}
@@ -112,18 +107,7 @@ export default function SaveInMediaLibraryGuide() {
           <div>
             <dt>Proxy</dt>
             <dd>
-              Enable{' '}
-              <strong>
-                use proxies to intermediate the traffic between your site and the image
-                hosts
-              </strong>{' '}
-              if a host blocks downloads from your server. Public proxies may be
-              rate-limited, blocked, or slower; FIFU rotates through alternatives and
-              caches working proxies. For a private proxy, enter one or more IP and port
-              values, optionally with credentials, such as <code>192.168.0.1:80</code> or{' '}
-              <code>user:pass@192.168.0.1:8080</code>. A configured private proxy takes
-              precedence over the public list; leave the proxy toggle on to use it for
-              downloads.
+              Enable <strong>Proxy</strong> if an image host blocks downloads from your server. You can use a public proxy or enter your own proxy address and credentials in the private proxy settings.
             </dd>
           </div>
         </dl>
@@ -194,10 +178,7 @@ export default function SaveInMediaLibraryGuide() {
           <li>
             <span>3</span>
             <p>
-              FIFU downloads the image and creates a WordPress attachment. A successful
-              featured-image upload sets the attachment as featured and clears the remote
-              image URL and alt value. Product gallery uploads replace the remote gallery
-              with local attachment IDs.
+              Once uploaded, the local image replaces the remote featured image. Product gallery uploads likewise replace the remote images with local copies.
             </p>
           </li>
         </ol>
@@ -224,11 +205,8 @@ export default function SaveInMediaLibraryGuide() {
           </div>
         </div>
         <p>
-          The periodic job looks for remote featured images on posts and taxonomy terms,
-          plus remote product gallery images. It uses the same allowed-domain list and
-          skips items already processed. Keep the list narrow if only selected image hosts
-          should be converted.
-        </p>
+              It respects the allowed-domain list. Use a narrower list when you want to convert images from specific hosts only.
+            </p>
         <p>
           Back up your site before enabling the job. A conversion changes the image from a
           remote URL to a local attachment and cannot be automatically reverted. The job
@@ -268,10 +246,7 @@ export default function SaveInMediaLibraryGuide() {
           <div>
             <dt>Download fails</dt>
             <dd>
-              Confirm the remote URL is reachable from your web server and points to an
-              image. Some hosts block repeated requests; enable Proxy or configure a
-              working private proxy. Proxy limits and blocked proxy IPs can make the
-              process slower or still fail.
+              If the download still fails, try another image address or a different proxy.
             </dd>
           </div>
         </dl>
