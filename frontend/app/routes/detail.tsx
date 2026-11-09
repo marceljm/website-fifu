@@ -46,6 +46,7 @@ import { Link, useParams } from 'react-router';
 import { Page } from '../components/layout/SiteLayout';
 import { FeatureCliSection } from '../components/features/FeatureCliSection';
 import {
+  FeatureGuideChecklist,
   FeatureGuideCta,
   FeatureGuideHeading,
   FeatureGuideHelpList,
@@ -802,7 +803,7 @@ function CustomPopupGuide() {
         FIFU featured image.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="custom-popup-intro">
+      <FeatureGuideHighlight id="custom-popup-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <MessageSquare size={15} aria-hidden="true" /> CUSTOM EMBED
@@ -821,7 +822,7 @@ function CustomPopupGuide() {
             alt="Enable Custom Popup, save embed code in a post, and open its embedded media by clicking the featured image."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -838,7 +839,7 @@ function CustomPopupGuide() {
           >
           Turn it on and add each embed.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -862,7 +863,7 @@ function CustomPopupGuide() {
               then click its FIFU featured image to open the embed in a popup.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         
       </section>
 
@@ -922,7 +923,7 @@ function CustomPopupGuide() {
           >
           Where the controls apply
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Custom Popup</dt>
             <dd>
@@ -954,7 +955,7 @@ function CustomPopupGuide() {
             </dd>
           </div>
           
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -973,7 +974,7 @@ function CustomPopupGuide() {
           >
           If the popup does not open
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Editor field is missing</dt>
             <dd>
@@ -989,25 +990,12 @@ function CustomPopupGuide() {
               featured image and test that image on the published page.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -1023,7 +1011,7 @@ function FifuShortcodeGuide() {
         Add a shortcode to post or page content to render FIFU featured media at that
         exact point.
       </p>
-      <section className="feature-highlight" aria-labelledby="fifu-shortcode-intro">
+      <FeatureGuideHighlight id="fifu-shortcode-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Terminal size={15} aria-hidden="true" /> PLACE MEDIA IN CONTENT
@@ -1044,7 +1032,7 @@ function FifuShortcodeGuide() {
             alt="A FIFU shortcode in content renders the post’s featured image in a page preview"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="fifu-shortcode-use"
@@ -1060,7 +1048,7 @@ function FifuShortcodeGuide() {
           >
           Insert a shortcode
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -1084,7 +1072,7 @@ function FifuShortcodeGuide() {
               slider, or product gallery at the shortcode location.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section"
@@ -1101,7 +1089,7 @@ function FifuShortcodeGuide() {
           >
           Choose the output and parameters
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>
               <code>[fifu]</code>
@@ -1145,7 +1133,7 @@ function FifuShortcodeGuide() {
               <code>[fifu_taxonomy slug="category" width="150" height="100"]</code>.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section activation-feature-help"
@@ -1163,7 +1151,7 @@ function FifuShortcodeGuide() {
           >
           When output is empty
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Featured image or slider:</strong> confirm the target post exists and
             has the relevant FIFU media. These outputs return nothing when the post cannot
@@ -1187,19 +1175,9 @@ function FifuShortcodeGuide() {
             <code>height</code> are optional dimensions for
             the shortcode output.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -1211,7 +1189,7 @@ function WatchLaterGuide() {
         Enable Watch Later for featured videos so visitors can save a personal queue in
         their browser and play it as a gallery.
       </p>
-      <section className="feature-highlight" aria-labelledby="watch-later-intro">
+      <FeatureGuideHighlight id="watch-later-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Video size={15} aria-hidden="true" /> VIDEO QUEUE
@@ -1228,7 +1206,7 @@ function WatchLaterGuide() {
             alt="A featured video saved with the Watch later control and opened in a queue gallery"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="watch-later-purpose-title"
@@ -1268,7 +1246,7 @@ function WatchLaterGuide() {
           >
           Choose whether to show the controls.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -1293,7 +1271,7 @@ function WatchLaterGuide() {
               the left side of the featured video. Leave it off to keep them on the right.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section"
@@ -1310,7 +1288,7 @@ function WatchLaterGuide() {
           >
           Use the queue on a page with featured videos.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -1332,7 +1310,7 @@ function WatchLaterGuide() {
               Watch later control again.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section activation-feature-help"
@@ -1350,7 +1328,7 @@ function WatchLaterGuide() {
           >
           Understand what the queue keeps.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>i</span>
             <p>
@@ -1370,24 +1348,11 @@ function WatchLaterGuide() {
               These controls appear on supported FIFU featured videos, not every video embedded on the site.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -1404,10 +1369,7 @@ function UnsplashImageSearchGuide() {
         the featured image for your content.
       </p>
 
-      <section
-        className="feature-highlight"
-        aria-labelledby="unsplash-image-search-intro"
-      >
+      <FeatureGuideHighlight id="unsplash-image-search-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Search size={15} aria-hidden="true" /> SEARCH · SELECT · SAVE
@@ -1430,7 +1392,7 @@ function UnsplashImageSearchGuide() {
             alt="Enter keywords in FIFU’s image field, choose an Unsplash photo, and preview its selected URL."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -1447,7 +1409,7 @@ function UnsplashImageSearchGuide() {
           >
           Search and save a featured image.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -1477,7 +1439,7 @@ function UnsplashImageSearchGuide() {
               FIFU featured image.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -1519,7 +1481,7 @@ function UnsplashImageSearchGuide() {
           >
           What to check when search is empty.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>
               <Check size={15} aria-hidden="true" />
@@ -1557,25 +1519,12 @@ function UnsplashImageSearchGuide() {
               Use this when remote image URLs fit your site’s workflow.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -1592,7 +1541,7 @@ function DeleteFromCloudGuide() {
         optional cleanup for images FIFU no longer finds in use.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="delete-cloud-purpose">
+      <FeatureGuideHighlight id="delete-cloud-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <CloudOff size={15} aria-hidden="true" /> CLOUD STORAGE CLEANUP
@@ -1616,7 +1565,7 @@ function DeleteFromCloudGuide() {
             alt="Select cloud image rows, confirm deletion, and see the removed rows disappear from the inventory."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -1641,7 +1590,7 @@ function DeleteFromCloudGuide() {
           <Link to="/features/upload-to-cloud/">Upload to Cloud</Link> appear in this same
           inventory.
         </p>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -1670,7 +1619,7 @@ function DeleteFromCloudGuide() {
               without deleting the selected images.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           Deletion is permanent and cannot be undone. When deletion succeeds, FIFU removes
           the Cloud URL from the associated media record and returns supported featured,
@@ -1716,7 +1665,7 @@ function DeleteFromCloudGuide() {
           >
           When the inventory or action is unavailable.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Not connected</dt>
             <dd>
@@ -1738,25 +1687,12 @@ function DeleteFromCloudGuide() {
               connection is available.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/hotlink-protection/">Hotlink protection</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/hotlink-protection/">Hotlink protection</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -1773,7 +1709,7 @@ function UploadToCloudGuide() {
         their original host changes or disappears.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="upload-cloud-intro">
+      <FeatureGuideHighlight id="upload-cloud-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <CloudUpload size={15} aria-hidden="true" /> STABLE IMAGE HOSTING
@@ -1795,7 +1731,7 @@ function UploadToCloudGuide() {
             loading="eager"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -1812,7 +1748,7 @@ function UploadToCloudGuide() {
           >
           Connect the site before uploading.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -1833,7 +1769,7 @@ function UploadToCloudGuide() {
               automatic upload controls require a completed connection.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -1851,7 +1787,7 @@ function UploadToCloudGuide() {
           >
           Find and upload selected images.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -1880,7 +1816,7 @@ function UploadToCloudGuide() {
               replaced by Cloud URLs used to display the images.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -1969,22 +1905,9 @@ function UploadToCloudGuide() {
         </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/hotlink-protection/">Hotlink protection</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/hotlink-protection/">Hotlink protection</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -2001,7 +1924,7 @@ function LinkLocalImagesGuide() {
         send them to FIFU Cloud.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="local-image-link-intro">
+      <FeatureGuideHighlight id="local-image-link-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Image size={15} aria-hidden="true" /> LOCAL IMAGE URLS
@@ -2024,7 +1947,7 @@ function LinkLocalImagesGuide() {
             loading="eager"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -2041,7 +1964,7 @@ function LinkLocalImagesGuide() {
           >
           Copy selected local image URLs into FIFU.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -2076,7 +1999,7 @@ function LinkLocalImagesGuide() {
               the service is available.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -2113,22 +2036,9 @@ function LinkLocalImagesGuide() {
         </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/save-in-the-media-library/">Save in the Media Library</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/save-in-the-media-library/">Save in the Media Library</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -2143,7 +2053,7 @@ function DbMigrationGuide() {
       <p className="lead">
         Move media data saved by older FIFU versions into the current format.
       </p>
-      <section className="feature-highlight" aria-labelledby="db-migration-purpose">
+      <FeatureGuideHighlight id="db-migration-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">LEGACY DATA BACKFILL</span>
           <h2 id="db-migration-purpose">Move old FIFU records into dedicated tables.</h2>
@@ -2158,7 +2068,7 @@ function DbMigrationGuide() {
             loading="eager"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="db-migration-start-title"
@@ -2174,7 +2084,7 @@ function DbMigrationGuide() {
           >
           Start the background migration.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -2199,7 +2109,7 @@ function DbMigrationGuide() {
               FIFU migrates the data in batches and saves progress so you can pause or resume the process.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p className="db-migration-callout">
               FIFU keeps the old data until its replacement has been saved successfully.
             </p>
@@ -2219,7 +2129,7 @@ function DbMigrationGuide() {
           >
           Use the summary and task rows.
         </FeatureGuideHeading>
-        <dl className="db-migration-options">
+        <FeatureGuideOptions variant="migration">
           <div>
             <dt>Overall status</dt>
             <dd>
@@ -2280,7 +2190,7 @@ function DbMigrationGuide() {
               for troubleshooting.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section"
@@ -2341,7 +2251,7 @@ function DbMigrationGuide() {
           >
           Check access, runtime, and task errors.
         </FeatureGuideHeading>
-        <dl className="db-migration-options">
+        <FeatureGuideOptions variant="migration">
           <div>
             <dt>The menu is missing</dt>
             <dd>
@@ -2359,24 +2269,11 @@ function DbMigrationGuide() {
             </dd>
           </div>
           
-        </dl>
+        </FeatureGuideOptions>
       </section>
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/image-metadata/">Image Metadata</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/image-metadata/">Image Metadata</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -2387,7 +2284,7 @@ function FifuFieldsGuide() {
         Enter a remote media URL where you create content; FIFU applies it to the saved
         post or product.
       </p>
-      <section className="feature-highlight" aria-labelledby="fifu-fields-intro">
+      <FeatureGuideHighlight id="fifu-fields-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <FileImage size={15} aria-hidden="true" /> MEDIA IN YOUR WORKFLOW
@@ -2408,7 +2305,7 @@ function FifuFieldsGuide() {
             alt="Enter an image URL in the FIFU editor panel, save the post, and display the image on the published page"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="fifu-fields-editor-title"
@@ -2424,7 +2321,7 @@ function FifuFieldsGuide() {
           >
           Save a featured media URL.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -2447,7 +2344,7 @@ function FifuFieldsGuide() {
               workflow explains how supported themes and integrations display it.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           For a WooCommerce product, use the product editor’s FIFU fields for the main
           image and image/video gallery. Add, preview, reorder, or remove gallery items,
@@ -2475,7 +2372,7 @@ function FifuFieldsGuide() {
           >
           Collect media with a submission.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -2495,7 +2392,7 @@ function FifuFieldsGuide() {
               configured post-creation workflow.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           Additional <strong>Featured Slider (FIFU)</strong> and{' '}
           <strong>Featured Video (FIFU)</strong> fields are available only when the
@@ -2520,7 +2417,7 @@ function FifuFieldsGuide() {
           >
           Let marketplace vendors set product images.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Dokan</dt>
             <dd>
@@ -2537,7 +2434,7 @@ function FifuFieldsGuide() {
               Save or process the product to store that URL as its FIFU featured image.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           These fields appear when the matching vendor integration is active. For Dokan
           saves, FIFU checks that the current account is a seller. Existing product URLs
@@ -2560,7 +2457,7 @@ function FifuFieldsGuide() {
           >
           Check the integration and media type.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Image</dt>
             <dd>
@@ -2595,19 +2492,9 @@ function FifuFieldsGuide() {
               create a post.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -2624,10 +2511,7 @@ function FeaturedMediaFilterGuide() {
         item.
       </p>
 
-      <section
-        className="feature-highlight"
-        aria-labelledby="featured-media-filter-intro"
-      >
+      <FeatureGuideHighlight id="featured-media-filter-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ListFilter size={15} aria-hidden="true" /> ADMIN CONTENT LISTS
@@ -2648,7 +2532,7 @@ function FeaturedMediaFilterGuide() {
             alt="Choose Featured video in a content list filter and review the matching items."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -2689,7 +2573,7 @@ function FeaturedMediaFilterGuide() {
           >
           Choose a status and apply it.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -2713,7 +2597,7 @@ function FeaturedMediaFilterGuide() {
               again.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -2731,7 +2615,7 @@ function FeaturedMediaFilterGuide() {
           >
           Match the state you want to review.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Status</dt>
             <dd>
@@ -2757,7 +2641,7 @@ function FeaturedMediaFilterGuide() {
               type.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -2781,22 +2665,9 @@ function FeaturedMediaFilterGuide() {
             </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -2813,7 +2684,7 @@ function OrderEmailImagesGuide() {
         remote featured images added with FIFU.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="order-email-purpose">
+      <FeatureGuideHighlight id="order-email-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <MailPlus size={15} aria-hidden="true" />
@@ -2834,7 +2705,7 @@ function OrderEmailImagesGuide() {
             alt="Turn on Add image to order email, then see a product image beside an item in the WooCommerce order email."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -2851,7 +2722,7 @@ function OrderEmailImagesGuide() {
           >
           Enable thumbnails in order emails.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -2875,7 +2746,7 @@ function OrderEmailImagesGuide() {
               their details.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -2893,7 +2764,7 @@ function OrderEmailImagesGuide() {
           >
           What changes in the email?
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Where thumbnails appear</dt>
             <dd>
@@ -2910,7 +2781,7 @@ function OrderEmailImagesGuide() {
               by this feature. Emails already sent are not changed.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           The option uses WooCommerce’s product-image output, which can include a{' '}
           <Link to="/features/remote-featured-image/">remote FIFU featured image</Link>.
@@ -2951,7 +2822,7 @@ function OrderEmailImagesGuide() {
           >
           If thumbnails do not appear
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Confirm the switch:</strong> Check{' '}
             <strong>FIFU → Settings → WooCommerce → Add image to order email</strong>{' '}
@@ -2972,25 +2843,12 @@ function OrderEmailImagesGuide() {
             block externally hosted pictures until the recipient allows
             images to load. Test the email in another client if needed.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Browse the feature list to find another workflow for your store.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced description="Browse the feature list to find another workflow for your store." />
     </Page>
   );
 }
@@ -3007,7 +2865,7 @@ function AutoSetCategoryImagesGuide() {
         featured images already assigned to their products.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="category-images-intro">
+      <FeatureGuideHighlight id="category-images-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Tags size={15} aria-hidden="true" /> WOOCOMMERCE CATEGORIES
@@ -3028,7 +2886,7 @@ function AutoSetCategoryImagesGuide() {
             alt="An enabled category image setting selects a product’s FIFU image for a category thumbnail"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -3074,7 +2932,7 @@ function AutoSetCategoryImagesGuide() {
           >
           Enable automatic category images.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -3097,7 +2955,7 @@ function AutoSetCategoryImagesGuide() {
               Categories without an eligible product image will stay empty.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           The switch can also be turned off at any time. This stops further
           automatic assignments and changes, but it does not remove category
@@ -3135,7 +2993,7 @@ function AutoSetCategoryImagesGuide() {
           >
           Set a specific image for a category.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -3160,8 +3018,8 @@ function AutoSetCategoryImagesGuide() {
               thumbnail information for themes that display category images.
             </p>
           </li>
-        </ol>
-        <dl className="fifu-fields-options">
+        </FeatureGuideSteps>
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Image URL or Keywords</dt>
             <dd>
@@ -3211,7 +3069,7 @@ function AutoSetCategoryImagesGuide() {
               image to use in the category.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -3230,7 +3088,7 @@ function AutoSetCategoryImagesGuide() {
           >
           Understand automatic updates.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>
               <Check size={14} aria-hidden="true" />
@@ -3265,20 +3123,10 @@ function AutoSetCategoryImagesGuide() {
               thumbnail is missing.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -3295,7 +3143,7 @@ function LightboxAndZoomGuide() {
         details with desktop hover zoom.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="lightbox-zoom-intro">
+      <FeatureGuideHighlight id="lightbox-zoom-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Search size={15} aria-hidden="true" /> PRODUCT IMAGE DETAILS
@@ -3315,7 +3163,7 @@ function LightboxAndZoomGuide() {
             alt="A product image opens in a larger lightbox gallery and a desktop hover zoom reveals image detail."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -3332,7 +3180,7 @@ function LightboxAndZoomGuide() {
           >
           Turn on the behavior you need.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -3366,7 +3214,7 @@ function LightboxAndZoomGuide() {
               over an image to test desktop Zoom.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -3384,7 +3232,7 @@ function LightboxAndZoomGuide() {
           >
           If lightbox or zoom is missing.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Product page</dt>
             <dd>
@@ -3420,25 +3268,12 @@ function LightboxAndZoomGuide() {
               if you want FIFU to render the product gallery.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/play-button/">Play Button</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -3455,7 +3290,7 @@ function VimeoOptionsGuide() {
         to select an available MP4 rendition.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="vimeo-options-intro">
+      <FeatureGuideHighlight id="vimeo-options-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Video size={15} aria-hidden="true" /> VIMEO OPTIONS
@@ -3475,7 +3310,7 @@ function VimeoOptionsGuide() {
             alt="Vimeo settings for background playback and MP4 quality, followed by a featured video playing on a page"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section className="activation-feature-section" aria-labelledby="vimeo-setup-title">
         <FeatureGuideHeading
@@ -3489,7 +3324,7 @@ function VimeoOptionsGuide() {
           >
           Open Vimeo options.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -3507,7 +3342,7 @@ function VimeoOptionsGuide() {
               <strong>Preview</strong>, then save or update the content.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -3525,7 +3360,7 @@ function VimeoOptionsGuide() {
           >
           Choose where background mode applies.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Background video</dt>
             <dd>
@@ -3541,7 +3376,7 @@ function VimeoOptionsGuide() {
               mode to eligible Vimeo videos across the site.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Each toggle saves when you change it. If you turn on the single-content
           restriction, make sure the page’s featured video is the Vimeo video you expect
@@ -3565,7 +3400,7 @@ function VimeoOptionsGuide() {
           >
           Add a token and choose a rendition.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -3600,7 +3435,7 @@ function VimeoOptionsGuide() {
               FIFU tries your preferred resolution when that version is available. Otherwise, it chooses another available video quality.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -3652,17 +3487,7 @@ function VimeoOptionsGuide() {
         note="Replace on with off to disable a switch. To verify access-token permissions, save the token on the Vimeo settings page."
       />
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -3678,7 +3503,7 @@ function BackgroundVideoGuide() {
         Choose a Vimeo video as featured media, then set where it uses FIFU’s background
         playback mode.
       </p>
-      <section className="feature-highlight" aria-labelledby="background-video-intro">
+      <FeatureGuideHighlight id="background-video-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Video size={15} aria-hidden="true" /> VIMEO BACKGROUND PLAYBACK
@@ -3697,7 +3522,7 @@ function BackgroundVideoGuide() {
             alt="Set a Vimeo video as featured media, enable background playback, and display it behind page content"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="background-video-workflow-title"
@@ -3716,7 +3541,7 @@ function BackgroundVideoGuide() {
         <p>
               Background mode plays supported Vimeo videos silently, without visible controls. Use it for decorative videos rather than content visitors need to operate.
             </p>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -3753,7 +3578,7 @@ function BackgroundVideoGuide() {
               mode.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section"
@@ -3770,7 +3595,7 @@ function BackgroundVideoGuide() {
           >
           Restrict background mode to the matching content page.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>background video</dt>
             <dd>
@@ -3783,7 +3608,7 @@ function BackgroundVideoGuide() {
               Turn this on to use background playback only on the page where the Vimeo video is featured. Leave it off to use background mode in other eligible placements too.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Use the restriction when the video should behave as a background only on its own
           single-content page. Keep it off when the same Vimeo video should retain
@@ -3806,7 +3631,7 @@ function BackgroundVideoGuide() {
           >
           Check the video type and URL match.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Provider coverage</dt>
             <dd>
@@ -3827,7 +3652,7 @@ function BackgroundVideoGuide() {
               does not enable background playback.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           For the other Vimeo playback and file settings, continue with the{' '}
           <Link to="/features/vimeo-options/">Vimeo options guide</Link>.
@@ -3854,17 +3679,7 @@ function BackgroundVideoGuide() {
           },
         ]}
       />
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -3881,7 +3696,7 @@ function AutoplayOnMouseoverGuide() {
         embeds also need Video Controls.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="mouseover-intro">
+      <FeatureGuideHighlight id="mouseover-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">VIDEO PLAYBACK</span>
           <h2 id="mouseover-intro">Preview video with a pointer hover.</h2>
@@ -3898,7 +3713,7 @@ function AutoplayOnMouseoverGuide() {
             alt="Enable mouseover playback and its prerequisites, then see a featured video play on hover and pause when the pointer leaves"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -3938,7 +3753,7 @@ function AutoplayOnMouseoverGuide() {
           >
           Enable the setting and its prerequisites.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -3976,7 +3791,7 @@ function AutoplayOnMouseoverGuide() {
               player to start playback; move it away to pause.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -4022,17 +3837,7 @@ function AutoplayOnMouseoverGuide() {
         note="Hover playback also needs the matching Mute setting, and embedded YouTube or Vimeo players need Video Controls enabled."
       />
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -4045,7 +3850,7 @@ function AutoplayGuide() {
         where you want playback.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="autoplay-intro">
+      <FeatureGuideHighlight id="autoplay-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Play size={15} aria-hidden="true" /> FEATURED VIDEO PLAYBACK
@@ -4063,7 +3868,7 @@ function AutoplayGuide() {
             alt="Autoplay and Mute settings lead to a featured video playing silently on a page."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section className="activation-feature-section" aria-labelledby="autoplay-purpose">
         <FeatureGuideHeading
@@ -4104,7 +3909,7 @@ function AutoplayGuide() {
           >
           Choose the pages that should start playback.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -4150,7 +3955,7 @@ function AutoplayGuide() {
               switch for the visitor’s device.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           The simultaneous homepage option is optional. Use it only when you want every
           homepage video to begin together; loading several videos at once can use more
@@ -4205,7 +4010,7 @@ function AutoplayGuide() {
           >
           Verify the device, page, and video type.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>!</span>
             <p>
@@ -4229,20 +4034,10 @@ function AutoplayGuide() {
               That separate feature responds to pointer entry rather than page visibility.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -4259,7 +4054,7 @@ function MinimumWidthGuide() {
         width at which FIFU may show the player.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="minimum-width-intro">
+      <FeatureGuideHighlight id="minimum-width-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Video size={15} aria-hidden="true" /> VIDEO DISPLAY
@@ -4278,7 +4073,7 @@ function MinimumWidthGuide() {
             alt="Set a minimum width, retain a thumbnail in a narrow container, and show a video player in a wider container"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -4295,7 +4090,7 @@ function MinimumWidthGuide() {
           >
           Choose a minimum width
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -4319,7 +4114,7 @@ function MinimumWidthGuide() {
               below it, the thumbnail remains.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -4343,22 +4138,9 @@ function MinimumWidthGuide() {
         </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -4374,7 +4156,7 @@ function VideoControlsGuide() {
         Choose whether FIFU featured video players expose playback controls to visitors.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="video-controls-intro">
+      <FeatureGuideHighlight id="video-controls-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <SlidersHorizontal size={15} aria-hidden="true" /> FEATURED VIDEO PLAYBACK
@@ -4392,7 +4174,7 @@ function VideoControlsGuide() {
             alt="Turn on Video Controls and show playback controls on a featured video"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -4435,7 +4217,7 @@ function VideoControlsGuide() {
           >
           Choose the site-wide behavior.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -4459,7 +4241,7 @@ function VideoControlsGuide() {
               on whether it is a native video file or an embedded player.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -4477,7 +4259,7 @@ function VideoControlsGuide() {
           >
           What on and off mean
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Native video files</dt>
             <dd>
@@ -4502,7 +4284,7 @@ function VideoControlsGuide() {
               The effect varies by provider. Some players continue to display their own controls even when this setting is off.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
               This setting applies to FIFU featured videos, not videos embedded separately through other plugins or blocks. For supported services, see <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
             </p>
@@ -4558,7 +4340,7 @@ function VideoControlsGuide() {
           >
           When the player still shows controls
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <p>
               Some video providers manage their own controls. Check the published page and the provider's playback settings.
@@ -4570,20 +4352,10 @@ function VideoControlsGuide() {
               preference does not configure it. Check that embed’s own player options.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -4595,7 +4367,7 @@ function PlayButtonGuide() {
         Give visitors an on-demand way to play a featured video from its thumbnail.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="play-button-intro">
+      <FeatureGuideHighlight id="play-button-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Play size={15} aria-hidden="true" /> VIDEO THUMBNAIL PLAYBACK
@@ -4616,7 +4388,7 @@ function PlayButtonGuide() {
             alt="Configure the play button, select the overlay on a video thumbnail, and view inline playback."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -4642,7 +4414,7 @@ function PlayButtonGuide() {
           choosing a frame in the featured video field and selecting “set this frame as
           thumbnail.”
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Home</dt>
             <dd>Displays thumbnails on the front page and WooCommerce shop.</dd>
@@ -4662,7 +4434,7 @@ function PlayButtonGuide() {
             <dt>Custom post type</dt>
             <dd>Displays on individual custom post type entries.</dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Supported sources include YouTube, Vimeo, X/Twitter, TikTok, 9GAG, Cloudinary,
           Tumblr, Publitio, JW Player, VideoPress, Sprout, Odysee, Rumble, Dailymotion,
@@ -4686,7 +4458,7 @@ function PlayButtonGuide() {
           >
           Choose how the overlay behaves.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -4706,12 +4478,12 @@ function PlayButtonGuide() {
               behavior.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           Each toggle or changed value saves separately; wait for the{' '}
           <strong>Success</strong> message before leaving the settings screen.
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>color</dt>
             <dd>Sets the play control’s hover background color.</dd>
@@ -4729,7 +4501,7 @@ function PlayButtonGuide() {
               overlaps it.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -4771,7 +4543,7 @@ function PlayButtonGuide() {
           >
           Check these display conditions.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Video and thumbnail:</strong> the video setting and Play Button toggle
             must be on, the video URL must resolve, and the video must be displayed as a
@@ -4794,7 +4566,7 @@ function PlayButtonGuide() {
             <strong>Grid switches:</strong> confirm that WordPress or WooCommerce hiding
             is not enabled for the page you are checking.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
             <FeatureCliSection
@@ -4836,17 +4608,7 @@ function PlayButtonGuide() {
         note="Use off instead of on to disable a switch. Adjust example colors and numbers to suit your layout."
       />
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -4864,7 +4626,7 @@ function VideoThumbnailGuide() {
         and minimum video width.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="video-thumbnail-intro">
+      <FeatureGuideHighlight id="video-thumbnail-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Video size={15} aria-hidden="true" /> VIDEO THUMBNAILS
@@ -4885,7 +4647,7 @@ function VideoThumbnailGuide() {
             alt="Create a video still, choose where thumbnails remain visible, and let visitors select the preview to load playback"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -4909,7 +4671,7 @@ function VideoThumbnailGuide() {
           it does not create a video or enable the Featured Video
           field by itself.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Recognized video services</dt>
             <dd>
@@ -4941,7 +4703,7 @@ function VideoThumbnailGuide() {
               reachable by site visitors.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
               When importing video thumbnails, use the field mappings described in the <Link to="/features/wp-all-import-add-on/">WP All Import add-on</Link> guide rather than putting import values in the editor's video field.
             </p>
@@ -4970,7 +4732,7 @@ function VideoThumbnailGuide() {
           you want to keep the thumbnail instead of replacing
           it with the video player:
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>on homepage</dt>
             <dd>
@@ -4996,7 +4758,7 @@ function VideoThumbnailGuide() {
               individual WooCommerce products where applicable.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Each switch is independent. Check the front page,
           an archive, and a single post or product after
@@ -5031,7 +4793,7 @@ function VideoThumbnailGuide() {
           and enable it. See the Play Button guide for
           its full set of display and playback options.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Mode: Inline or Lightbox</dt>
             <dd>
@@ -5064,7 +4826,7 @@ function VideoThumbnailGuide() {
               The underlying thumbnail can still appear.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           On the same Video settings page,{' '}
           <Link to="/features/minimum-width/">Minimum Width</Link>{' '}
@@ -5091,7 +4853,7 @@ function VideoThumbnailGuide() {
           >
           If the thumbnail or playback is missing.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>No thumbnail:</strong> Verify the video
             URL and check whether FIFU found a provider image.
@@ -5126,20 +4888,10 @@ function VideoThumbnailGuide() {
             custom post types have separate rules. Test
             the published page, not just the editor preview.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -5156,7 +4908,7 @@ function TaxonomyImageGuide() {
         taxonomy archives.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="taxonomy-image-intro">
+      <FeatureGuideHighlight id="taxonomy-image-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Tags size={15} aria-hidden="true" /> TERM IMAGES
@@ -5178,7 +4930,7 @@ function TaxonomyImageGuide() {
             alt="Add an image URL to a taxonomy term and display the saved image on its archive"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -5195,7 +4947,7 @@ function TaxonomyImageGuide() {
           >
           Turn on Taxonomy Image.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -5215,7 +4967,7 @@ function TaxonomyImageGuide() {
               <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -5233,7 +4985,7 @@ function TaxonomyImageGuide() {
           >
           Save a URL with each term.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -5256,7 +5008,7 @@ function TaxonomyImageGuide() {
               Clear the URL and save to remove the image.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -5286,7 +5038,7 @@ function TaxonomyImageGuide() {
         <pre>
           <code>{'[fifu_taxonomy slug="category" width="150" height="100"]'}</code>
         </pre>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>
               <code>slug</code>
@@ -5311,7 +5063,7 @@ function TaxonomyImageGuide() {
             </dt>
             <dd>Optional inline style attribute for the rendered image.</dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
               Use the shortcode with a valid taxonomy name on a post that has terms with images.
             </p>
@@ -5333,7 +5085,7 @@ function TaxonomyImageGuide() {
           >
           Check the taxonomy, saved URL, and output location.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Fields are missing:</strong> enable Taxonomy Image in the Developers
             settings. Standard term fields exclude WooCommerce product categories, which
@@ -5349,20 +5101,10 @@ function TaxonomyImageGuide() {
             Variation Swatches for WooCommerce. The term fields and shortcode remain
             available for other taxonomies and themes.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -5375,7 +5117,7 @@ function ImageSeoGuide() {
         page markup, social metadata, and supported structured data.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="image-seo-intro">
+      <FeatureGuideHighlight id="image-seo-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <FileImage size={15} aria-hidden="true" /> IMAGE DESCRIPTION & DISCOVERY
@@ -5394,7 +5136,7 @@ function ImageSeoGuide() {
             alt="Enter alternative text for a featured image, then use the image and its URL in page metadata and structured data."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -5437,7 +5179,7 @@ function ImageSeoGuide() {
           >
           Set alternative text for the featured image.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -5461,7 +5203,7 @@ function ImageSeoGuide() {
               alt text. Add your own text when the title does not describe the image well.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
               A slider image can use its own alternative text when one is provided.
             </p>
@@ -5482,7 +5224,7 @@ function ImageSeoGuide() {
           >
           Know which metadata FIFU supplies.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Image alt text</dt>
             <dd>
@@ -5507,7 +5249,7 @@ function ImageSeoGuide() {
               FIFU supports Rank Math's social images and image sitemaps, including optimized FIFU image URLs when enabled.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -5526,7 +5268,7 @@ function ImageSeoGuide() {
           >
           If image data is missing
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>No description:</strong> confirm the content has a FIFU featured
             image, enter text in its <strong>Alternative text</strong> field, then save.
@@ -5538,25 +5280,12 @@ function ImageSeoGuide() {
             that its integration is active and that the page has an image URL.
           </li>
           
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/image-metadata/">Image Metadata</Link>, <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-images-in-rss-feeds/">Featured Images in RSS Feeds</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/image-metadata/">Image Metadata</Link>, <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-images-in-rss-feeds/">Featured Images in RSS Feeds</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -5573,7 +5302,7 @@ function ScheduleMetadataGenerationGuide() {
         not received their required WordPress metadata.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="schedule-metadata-intro">
+      <FeatureGuideHighlight id="schedule-metadata-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <RefreshCw size={15} aria-hidden="true" /> REPAIR NONSTANDARD URL WORKFLOWS
@@ -5592,7 +5321,7 @@ function ScheduleMetadataGenerationGuide() {
             alt="A saved FIFU image URL is checked by the schedule and receives its missing metadata record."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -5635,7 +5364,7 @@ function ScheduleMetadataGenerationGuide() {
           >
           Enable the recurring check.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -5655,7 +5384,7 @@ function ScheduleMetadataGenerationGuide() {
               checks every minute for missing metadata on post and term records.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -5673,7 +5402,7 @@ function ScheduleMetadataGenerationGuide() {
           >
           One toggle controls the recurring job.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Schedule Metadata Generation</dt>
             <dd>
@@ -5688,7 +5417,7 @@ function ScheduleMetadataGenerationGuide() {
             </dd>
           </div>
           
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <FeatureCliSection
@@ -5721,7 +5450,7 @@ function ScheduleMetadataGenerationGuide() {
           >
           Check the saved URL and job conditions.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>The expected image is not picked up:</strong> confirm the FIFU URL is
             saved on the intended post or term. The scan only finds FIFU media records
@@ -5733,25 +5462,12 @@ function ScheduleMetadataGenerationGuide() {
             creates missing metadata; it does not correct an invalid URL or make an
             unreachable image host available.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/clear-metadata/">Clear Metadata</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/clear-metadata/">Clear Metadata</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced />
     </Page>
   );
 }
@@ -5768,7 +5484,7 @@ function ImageMetadataGuide() {
         components work with your saved remote FIFU media.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="image-metadata-intro">
+      <FeatureGuideHighlight id="image-metadata-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Database size={15} aria-hidden="true" /> REPAIR MISSING RECORDS
@@ -5786,7 +5502,7 @@ function ImageMetadataGuide() {
             alt="A post with a remote image URL receives missing attachment metadata after you start the FIFU generation pass."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -5830,7 +5546,7 @@ function ImageMetadataGuide() {
           >
           Start the missing-records queue.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -5854,7 +5570,7 @@ function ImageMetadataGuide() {
               progress reaches 100%.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           Starting this manual run turns off{' '}
           <Link to="/features/schedule-metadata-generation/">
@@ -5880,7 +5596,7 @@ function ImageMetadataGuide() {
           >
           The queue covers FIFU media on posts, products, and terms.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Posts and post types</dt>
             <dd>
@@ -5901,7 +5617,7 @@ function ImageMetadataGuide() {
               metadata marker.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
               FIFU only generates missing information. Existing images are left alone.
             </p>
@@ -5937,7 +5653,7 @@ function ImageMetadataGuide() {
           >
           Check the saved address and queue state.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>The image remains unavailable:</strong> confirm the post, product, or
             term has the intended FIFU URL and that the remote address is reachable. This
@@ -5958,20 +5674,10 @@ function ImageMetadataGuide() {
             FIFU-generated records but keeps saved URLs. Run this guide's pass again if
             you continue using remote FIFU media and need those records rebuilt.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -5988,7 +5694,7 @@ function AutoSetFeaturedMediaGuide() {
         media, automatically.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="auto-content-intro">
+      <FeatureGuideHighlight id="auto-content-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <FileImage size={15} aria-hidden="true" /> POST CONTENT SCAN
@@ -6009,7 +5715,7 @@ function AutoSetFeaturedMediaGuide() {
             alt="Post content with image and video, the Auto set control, and the first eligible image assigned as featured media"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -6026,7 +5732,7 @@ function AutoSetFeaturedMediaGuide() {
           >
           Turn it on for new or edited posts.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -6052,7 +5758,7 @@ function AutoSetFeaturedMediaGuide() {
               you can switch it on again to repeat.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -6070,7 +5776,7 @@ function AutoSetFeaturedMediaGuide() {
           >
           Set filters for the content scan.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Filter by post type</dt>
             <dd>
@@ -6104,7 +5810,7 @@ function AutoSetFeaturedMediaGuide() {
               item. A local WordPress featured image prevents automatic replacement.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -6128,22 +5834,9 @@ function AutoSetFeaturedMediaGuide() {
             </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -6160,7 +5853,7 @@ function AutoSetScreenshotGuide() {
         no featured media.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="screenshot-feature-purpose">
+      <FeatureGuideHighlight id="screenshot-feature-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Image size={15} aria-hidden="true" /> AUTOMATIC SCREENSHOTS
@@ -6182,7 +5875,7 @@ function AutoSetScreenshotGuide() {
             alt="A saved page URL flows through the screenshot setting and becomes a post’s featured image"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -6199,7 +5892,7 @@ function AutoSetScreenshotGuide() {
           >
           Connect the page URL field.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -6231,7 +5924,7 @@ function AutoSetScreenshotGuide() {
               FIFU creates a screenshot from the saved page address and uses it as featured media when the post has no featured image or video.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -6253,7 +5946,7 @@ function AutoSetScreenshotGuide() {
         <p>
               FIFU leaves existing featured media alone. Screenshots remain remote unless you choose to save them in the <Link to="/features/save-in-the-media-library/">Media Library</Link>.
             </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Size</dt>
             <dd>
@@ -6274,7 +5967,7 @@ function AutoSetScreenshotGuide() {
               In the post editor, <strong>Use screenshot</strong> lets you create a screenshot from a page address without setting up the automatic custom-field workflow.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         
       </section>
 
@@ -6301,22 +5994,9 @@ function AutoSetScreenshotGuide() {
         ]}
       />
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -6333,7 +6013,7 @@ function PageRedirectionGuide() {
         itself remains on your site.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="page-redirection-intro">
+      <FeatureGuideHighlight id="page-redirection-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ExternalLink size={15} aria-hidden="true" /> FEATURED IMAGE DESTINATION
@@ -6352,7 +6032,7 @@ function PageRedirectionGuide() {
             alt="Enter and save a forwarding URL, then open it by clicking the page’s featured image"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -6369,7 +6049,7 @@ function PageRedirectionGuide() {
           >
           Turn on Page redirection.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -6384,7 +6064,7 @@ function PageRedirectionGuide() {
               appears on supported content items.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -6402,7 +6082,7 @@ function PageRedirectionGuide() {
           >
           Add the destination to your content.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -6427,7 +6107,7 @@ function PageRedirectionGuide() {
               destination in a new tab. The content page itself is not redirected.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -6466,7 +6146,7 @@ function PageRedirectionGuide() {
           >
           If the image does not open the destination
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>!</span>
             <p>
@@ -6488,25 +6168,12 @@ function PageRedirectionGuide() {
               to the matching featured image in the page markup.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -6522,7 +6189,7 @@ function DisableRightClickGuide() {
         Enable one Image setting to suppress the browser context menu on images across your site.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="disable-right-click-intro">
+      <FeatureGuideHighlight id="disable-right-click-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <MousePointerClick size={15} aria-hidden="true" /> IMAGE CONTEXT MENU
@@ -6538,7 +6205,7 @@ function DisableRightClickGuide() {
             alt="A site image, the Disable right-click setting switched on, and the image shown without a browser context menu."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section className="activation-feature-section" aria-labelledby="disable-right-click-setup">
         <FeatureGuideHeading
@@ -6552,7 +6219,7 @@ function DisableRightClickGuide() {
           >
           Turn on the site-wide setting.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>In WordPress admin, open <strong>FIFU → Settings → Image</strong>.</p>
@@ -6565,7 +6232,7 @@ function DisableRightClickGuide() {
             <span>3</span>
             <p>Open a public page and right-click an image to confirm that its browser context menu no longer opens.</p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
             <FeatureCliSection
@@ -6595,29 +6262,16 @@ function DisableRightClickGuide() {
           >
           Know what the setting affects.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li><strong>Only image menus are suppressed.</strong> The handler targets frontend <code>&lt;img&gt;</code> elements; right-clicking page text or a background is outside its scope.</li>
           <li><strong>This is a deterrent, not access control.</strong> Visitors may still obtain an image through other browser or network tools.</li>
           <li><strong>If the menu still appears,</strong> confirm the setting is on and test the image itself on a public page rather than in the admin editor.</li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/hotlink-protection/">Hotlink protection</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/hotlink-protection/">Hotlink protection</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -6632,7 +6286,7 @@ function AutoSetFeaturedMediaByPageGuide() {
         Save a source page address on a content item, and FIFU can find its featured media automatically.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="page-finder-purpose">
+      <FeatureGuideHighlight id="page-finder-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Search size={15} aria-hidden="true" /> AUTOMATIC MEDIA ASSIGNMENT
@@ -6648,7 +6302,7 @@ function AutoSetFeaturedMediaByPageGuide() {
             alt="A saved Web page URL leads to the same product image featured on a post"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -6665,11 +6319,11 @@ function AutoSetFeaturedMediaByPageGuide() {
           >
           Turn on page-based media lookup.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li><span>1</span><p>In WordPress admin, open <strong>FIFU → Settings → Automatic</strong>, then find <strong>Auto set featured media using web page address</strong>.</p></li>
           <li><span>2</span><p>On <strong>Auto set</strong>, enable <strong>auto set featured media using web page address</strong>. The scheduled finder checks about once a minute for eligible content without FIFU featured media.</p></li>
           <li><span>3</span><p>Leave <strong>look for embedded videos</strong> off to search for an image only. Turn it on if you also want the first embedded video found to be assigned as featured video; the <Link to="/features/featured-video-audio/">Featured Video / Audio guide</Link> explains how FIFU displays that media.</p></li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -6687,7 +6341,7 @@ function AutoSetFeaturedMediaByPageGuide() {
           >
           Save the page address with each item.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -6706,7 +6360,7 @@ function AutoSetFeaturedMediaByPageGuide() {
               A URL entered in the item's <strong>Web page URL</strong> field takes priority. If it is empty, FIFU uses the first populated configured custom field.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>These custom fields must contain a web page address. If your field already contains the image or video URL itself, use the <Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field guide</Link> for that workflow.</p>
       </section>
 
@@ -6788,24 +6442,14 @@ function AutoSetFeaturedMediaByPageGuide() {
           >
           Know when the finder can act.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li><strong>Existing featured media stays in place.</strong> The scheduled scan selects items without FIFU image, video, custom-video, or slider-image values.</li>
           <li><strong>If nothing is assigned,</strong> confirm the page address is saved and the source page returns a usable image or embedded video. Failed, non-success, or empty remote lookup responses do not produce media.</li>
           <li><strong>This feature stores media URLs.</strong> It does not copy the found image into the WordPress Media Library. To save remote images locally instead, read <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link>.</li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -6822,7 +6466,7 @@ function AutoSetCustomFieldGuide() {
         for posts and terms.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="custom-field-auto-intro">
+      <FeatureGuideHighlight id="custom-field-auto-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ImagePlus size={15} aria-hidden="true" /> METADATA TO FEATURED MEDIA
@@ -6844,7 +6488,7 @@ function AutoSetCustomFieldGuide() {
             alt="A custom field URL and enabled Auto set option resulting in featured media on a post"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -6861,7 +6505,7 @@ function AutoSetCustomFieldGuide() {
           >
           Choose the metadata key and enable the check.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -6895,7 +6539,7 @@ function AutoSetCustomFieldGuide() {
               saved.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -6936,7 +6580,7 @@ function AutoSetCustomFieldGuide() {
           >
           Check the saved key and URL value.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>No assignment appears</dt>
             <dd>
@@ -6959,7 +6603,7 @@ function AutoSetCustomFieldGuide() {
               used by a URL template.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
             <FeatureCliSection
@@ -6981,22 +6625,9 @@ function AutoSetCustomFieldGuide() {
         ]}
       />
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/auto-set-featured-media-from-post-content/">Auto set featured media from post content</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/auto-set-featured-media-from-post-content/">Auto set featured media from post content</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -7013,7 +6644,7 @@ function AutoSetProductImagesFromAsinGuide() {
         that does not already have featured media.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="asin-intro">
+      <FeatureGuideHighlight id="asin-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ShoppingBag size={15} aria-hidden="true" /> ASIN IMAGE LOOKUP
@@ -7033,7 +6664,7 @@ function AutoSetProductImagesFromAsinGuide() {
             alt="An ASIN is looked up and the returned product images appear as a product image and gallery."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -7050,7 +6681,7 @@ function AutoSetProductImagesFromAsinGuide() {
           >
           Connect Amazon and enable automatic lookup.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -7078,7 +6709,7 @@ function AutoSetProductImagesFromAsinGuide() {
               FIFU looks for eligible content automatically after the feature is enabled and the required Amazon credentials are saved. New images may take a little time to appear.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="asin-input-title">
@@ -7093,7 +6724,7 @@ function AutoSetProductImagesFromAsinGuide() {
           >
           Provide the ASIN for each item.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Enter it on the item</dt>
             <dd>
@@ -7114,7 +6745,7 @@ function AutoSetProductImagesFromAsinGuide() {
               value it finds. An ASIN saved directly in FIFU takes priority.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="asin-result-title">
@@ -7175,7 +6806,7 @@ function AutoSetProductImagesFromAsinGuide() {
           >
           Why might an item be skipped?
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Already has media:</strong> items with a WordPress featured
             image or existing FIFU featured image, video, custom video, or
@@ -7201,25 +6832,12 @@ function AutoSetProductImagesFromAsinGuide() {
             post. Check that it is enabled, the item has an ASIN, and it
             does not already have featured media.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -7235,7 +6853,7 @@ function AutomaticUpdatesGuide() {
         Register a FIFU Premium license, then check for releases and choose whether
         WordPress installs them automatically.
       </p>
-      <section className="feature-highlight" aria-labelledby="automatic-updates-intro">
+      <FeatureGuideHighlight id="automatic-updates-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <RefreshCw size={15} aria-hidden="true" /> WORDPRESS RELEASE DELIVERY
@@ -7257,7 +6875,7 @@ function AutomaticUpdatesGuide() {
             loading="eager"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="automatic-updates-license-title"
@@ -7273,7 +6891,7 @@ function AutomaticUpdatesGuide() {
           >
           Submit your license key.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -7289,7 +6907,7 @@ function AutomaticUpdatesGuide() {
               site for release checks.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <dl className="automatic-updates-license-rules">
           <div>
             <dt>Domain coverage</dt>
@@ -7333,7 +6951,7 @@ function AutomaticUpdatesGuide() {
           >
           Choose how releases are installed.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -7359,7 +6977,7 @@ function AutomaticUpdatesGuide() {
               only; update checks still run.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section activation-feature-help"
@@ -7404,22 +7022,9 @@ function AutomaticUpdatesGuide() {
           </div>
         </dl>
       </section>
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced />
     </Page>
   );
 }
@@ -7435,7 +7040,7 @@ function AutoSetFeaturedImageByTitleGuide() {
         Search with a post title, review a result in the editor, or optionally schedule
         assignments for posts that have no featured image.
       </p>
-      <section className="feature-highlight" aria-labelledby="title-search-purpose">
+      <FeatureGuideHighlight id="title-search-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Search size={15} aria-hidden="true" /> TITLE-BASED IMAGE SEARCH
@@ -7453,7 +7058,7 @@ function AutoSetFeaturedImageByTitleGuide() {
             alt="A post title is searched for matching images, then a selected image is previewed in the post editor."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section className="activation-feature-section" aria-labelledby="title-search-use">
         <FeatureGuideHeading
           id="title-search-use"
@@ -7495,7 +7100,7 @@ function AutoSetFeaturedImageByTitleGuide() {
           >
           Preview a match before you save.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -7519,7 +7124,7 @@ function AutoSetFeaturedImageByTitleGuide() {
               update the post to store it as the featured image.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           You can also search from <Link to="/features/quick-editor/">Quick Editor</Link>:
           enter keywords in <strong>Image URL or Keywords</strong>, select{' '}
@@ -7550,7 +7155,7 @@ function AutoSetFeaturedImageByTitleGuide() {
           </strong>{' '}
           to adjust these independent filters:
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Filter by size</dt>
             <dd>
@@ -7579,7 +7184,7 @@ function AutoSetFeaturedImageByTitleGuide() {
               candidate image URLs.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Broader filters are more likely to return candidates. A vague title or
           restrictive combination can produce irrelevant results or none at all.
@@ -7597,7 +7202,7 @@ function AutoSetFeaturedImageByTitleGuide() {
           >
           Fill missing featured images gradually.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -7624,7 +7229,7 @@ function AutoSetFeaturedImageByTitleGuide() {
               post in that interval.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           Scheduled assignment is optional. Search results can be a poor fit for some
           titles and filter combinations, so use manual review if every image must be
@@ -7670,7 +7275,7 @@ function AutoSetFeaturedImageByTitleGuide() {
           >
           When results are empty or off-topic.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>No useful matches:</strong> test the post title with Keywords left
             empty, then relax minimum dimensions, source sites, layout, or blocklist
@@ -7685,24 +7290,11 @@ function AutoSetFeaturedImageByTitleGuide() {
             included in <strong>Post types</strong> and still has no featured image. The
             scheduled process handles only one eligible item per minute.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/unsplash-image-search/">Unsplash Image Search</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/unsplash-image-search/">Unsplash Image Search</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -7719,7 +7311,7 @@ function ReplaceNotFoundImageGuide() {
         when the browser cannot load the original file.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="replace-not-found-purpose">
+      <FeatureGuideHighlight id="replace-not-found-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ImageOff size={15} aria-hidden="true" /> IMAGE FALLBACK
@@ -7738,7 +7330,7 @@ function ReplaceNotFoundImageGuide() {
             alt="A remote image fails to load, so the page displays the backup image configured in FIFU."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -7785,7 +7377,7 @@ function ReplaceNotFoundImageGuide() {
           >
           Choose one reliable replacement image.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -7817,7 +7409,7 @@ function ReplaceNotFoundImageGuide() {
               before saving, but that does not prove the image will load.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           To stop using your custom replacement, clear <strong>Image URL</strong>
           and let the setting save. Some integrations may still have their own
@@ -7840,7 +7432,7 @@ function ReplaceNotFoundImageGuide() {
           >
           The browser swaps the displayed image after an error.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -7863,7 +7455,7 @@ function ReplaceNotFoundImageGuide() {
               happens the next time the image is requested.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           This works when an image load fails; it is not a scheduled link
           scan or a guarantee that every image on the site will be replaced.
@@ -7886,7 +7478,7 @@ function ReplaceNotFoundImageGuide() {
           >
           Know which FIFU displays use the backup.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Remote featured images · Free and Premium</dt>
             <dd>
@@ -7919,7 +7511,7 @@ function ReplaceNotFoundImageGuide() {
               See the <Link to="/features/widgets/">Widgets guide</Link>.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -7937,7 +7529,7 @@ function ReplaceNotFoundImageGuide() {
           >
           A fallback is different from an empty-image default.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Replace Not Found Image</dt>
             <dd>
@@ -7960,7 +7552,7 @@ function ReplaceNotFoundImageGuide() {
               replacement alone does not repair the broken links.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
             <FeatureCliSection
@@ -7994,7 +7586,7 @@ function ReplaceNotFoundImageGuide() {
           >
           If the backup does not appear
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Test the backup itself:</strong> visit the exact URL
             privately and verify that it returns a real image, not a
@@ -8016,20 +7608,10 @@ function ReplaceNotFoundImageGuide() {
             disappeared, update the post's source URL. The backup only
             covers the visible error; it does not restore the original.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -8046,7 +7628,7 @@ function BrokenLinkCheckerGuide() {
         WordPress site actually renders.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="broken-link-intro">
+      <FeatureGuideHighlight id="broken-link-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Link2 size={15} aria-hidden="true" /> CHECK REMOTE IMAGE URLS
@@ -8069,7 +7651,7 @@ function BrokenLinkCheckerGuide() {
             alt="Enable Link Checker, render a post with a featured image, and review a failed image URL in the Broken Links table"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section className="activation-feature-section" aria-labelledby="blc-enable-title">
         <FeatureGuideHeading
@@ -8083,7 +7665,7 @@ function BrokenLinkCheckerGuide() {
           >
           Enable the check and let eligible pages enter the queue.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -8111,7 +7693,7 @@ function BrokenLinkCheckerGuide() {
               that meet the failure threshold.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
               The checker monitors remote FIFU featured images. It does not scan images inside post content or every product gallery image.
             </p>
@@ -8129,7 +7711,7 @@ function BrokenLinkCheckerGuide() {
           >
           A URL appears after three failed checks.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Checks run in the background</dt>
             <dd>
@@ -8158,7 +7740,7 @@ function BrokenLinkCheckerGuide() {
               The table links affected posts to their editors and shows their failing image addresses. Only administrators can view these results.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="blc-repair-title">
@@ -8173,7 +7755,7 @@ function BrokenLinkCheckerGuide() {
           >
           Update the source on the affected post.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -8191,7 +7773,7 @@ function BrokenLinkCheckerGuide() {
               Saving a working image URL fixes the affected post. The list updates as the checker continues to run.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           Once you replace the post's broken image URL, the old URL is no longer
           associated with that post and should no longer appear for it in the results.
@@ -8219,7 +7801,7 @@ function BrokenLinkCheckerGuide() {
           >
           Check eligibility, timing, and access.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>No row yet:</strong> confirm Link Checker is enabled and that
             WordPress has rendered the post’s featured image. A full-page cache can serve
@@ -8234,7 +7816,7 @@ function BrokenLinkCheckerGuide() {
             <strong>The table will not load:</strong> sign in as a site administrator
             to view the broken-link results.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
             <FeatureCliSection
@@ -8252,17 +7834,7 @@ function BrokenLinkCheckerGuide() {
         note="These commands change the setting; they do not start a bulk scan."
       />
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -8278,7 +7850,7 @@ function ModifyPostContentGuide() {
         leaving your saved post content intact.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="modify-content-intro">
+      <FeatureGuideHighlight id="modify-content-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <FileImage size={15} aria-hidden="true" />
@@ -8302,7 +7874,7 @@ function ModifyPostContentGuide() {
             alt="Modify Post Content toggles, a post with repeated featured media, and the displayed article image"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -8319,7 +7891,7 @@ function ModifyPostContentGuide() {
           >
           Choose one display change.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -8336,7 +7908,7 @@ function ModifyPostContentGuide() {
               the content output, not the text stored in the editor.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -8354,7 +7926,7 @@ function ModifyPostContentGuide() {
           >
           What each toggle changes
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>add missing media</dt>
             <dd>
@@ -8370,7 +7942,7 @@ function ModifyPostContentGuide() {
               Removes a duplicate of the featured image or supported video from the displayed post content. Other images are left alone.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -8388,7 +7960,7 @@ function ModifyPostContentGuide() {
           >
           Apply the changes to selected post types.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -8403,7 +7975,7 @@ function ModifyPostContentGuide() {
               Enter post types to limit where this applies, or leave the field empty to use the default scope.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -8422,7 +7994,7 @@ function ModifyPostContentGuide() {
           >
           If repeated media remains
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <p>
               If a duplicate remains, confirm that the image in the post matches the featured image.
@@ -8445,25 +8017,12 @@ function ModifyPostContentGuide() {
               controls do not edit stored content.
             </p>
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Browse the feature list for other ways to manage featured media.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced description="Browse the feature list for other ways to manage featured media." />
     </Page>
   );
 }
@@ -8480,10 +8039,7 @@ function HideFeaturedMediaGuide() {
         your homepage and post lists.
       </p>
 
-      <section
-        className="feature-highlight"
-        aria-labelledby="hide-featured-media-purpose"
-      >
+      <FeatureGuideHighlight id="hide-featured-media-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <EyeOff size={15} aria-hidden="true" /> CONTROL SINGULAR DISPLAY
@@ -8506,7 +8062,7 @@ function HideFeaturedMediaGuide() {
             alt="Enable Hide in FIFU settings, hide featured media on a matching singular page, and keep it visible in a post list"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -8523,7 +8079,7 @@ function HideFeaturedMediaGuide() {
           >
           Choose where the media disappears.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -8554,7 +8110,7 @@ function HideFeaturedMediaGuide() {
               the featured media; also check a list view to confirm its media remains.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -8572,7 +8128,7 @@ function HideFeaturedMediaGuide() {
           >
           Limit the rule by content type.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Filter by post type</dt>
             <dd>
@@ -8599,7 +8155,7 @@ function HideFeaturedMediaGuide() {
               to hide the featured media.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -8617,7 +8173,7 @@ function HideFeaturedMediaGuide() {
           >
           Understand the display boundary.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Hidden:</strong> FIFU featured media on a matching singular page. The
             image and video renderers output hidden media, and the slider renderer applies{' '}
@@ -8636,7 +8192,7 @@ function HideFeaturedMediaGuide() {
             <strong>Social sharing:</strong> this display rule affects page rendering; it
             does not change the saved featured image data used elsewhere.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
             <FeatureCliSection
@@ -8685,7 +8241,7 @@ function HideFeaturedMediaGuide() {
           >
           If the result does not match.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             If FIFU media remains on a singular page, confirm the <strong>Hide</strong>{' '}
             toggle is on and that every populated filter matches the page’s type and
@@ -8701,25 +8257,12 @@ function HideFeaturedMediaGuide() {
             setting is not the cause under the current rule; inspect the theme or another
             display setting.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/modify-post-content/">Modify Post Content</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/modify-post-content/">Modify Post Content</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -8736,7 +8279,7 @@ function ClearMetadataGuide() {
         image URLs.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="clear-metadata-intro">
+      <FeatureGuideHighlight id="clear-metadata-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Database size={15} aria-hidden="true" /> METADATA MAINTENANCE
@@ -8754,7 +8297,7 @@ function ClearMetadataGuide() {
             alt="Enable Clear Metadata, follow batch progress, and retain a remote image URL after cleanup"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -8771,7 +8314,7 @@ function ClearMetadataGuide() {
           >
           Start it from Metadata settings.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -8797,7 +8340,7 @@ function ClearMetadataGuide() {
               are also disabled as part of completion.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -8846,7 +8389,7 @@ function ClearMetadataGuide() {
           >
           Wait for active metadata work to finish.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Another metadata task is running:</strong> a cleanup request is
             reported as busy. Wait until that operation completes, then start cleanup
@@ -8858,7 +8401,7 @@ function ClearMetadataGuide() {
             <Link to="/features/delete-all-urls/">Delete All URLs</Link> for the broader
             removal of saved FIFU addresses. That operation runs metadata cleanup first.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
       <FeatureCliSection
@@ -8872,17 +8415,7 @@ function ClearMetadataGuide() {
         note="This clears generated metadata but keeps saved remote image addresses."
       />
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -8899,7 +8432,7 @@ function DeleteAllUrlsGuide() {
         leaving remote FIFU media behind.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="delete-all-urls-intro">
+      <FeatureGuideHighlight id="delete-all-urls-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <CircleAlert size={15} aria-hidden="true" />
@@ -8918,7 +8451,7 @@ function DeleteAllUrlsGuide() {
             alt="Enable the deletion prerequisite, run Delete All URLs, and remove FIFU image and media references"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -8968,7 +8501,7 @@ function DeleteAllUrlsGuide() {
           <code>false</code>, so the deletion handler exits unless you explicitly enable
           it.
         </p>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -8990,7 +8523,7 @@ function DeleteAllUrlsGuide() {
               the saved value before you run the action.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -9012,7 +8545,7 @@ function DeleteAllUrlsGuide() {
           The action is in <strong>FIFU → Settings → Metadata → Delete All URLs</strong>,
           below the metadata and cleanup controls.
         </p>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9028,7 +8561,7 @@ function DeleteAllUrlsGuide() {
               Metadata first, then sends the deletion request only when cleanup completes.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -9057,17 +8590,7 @@ function DeleteAllUrlsGuide() {
             </p>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -9084,7 +8607,7 @@ function OptimizedImagesGuide() {
         optimize and lazy-load images inside post content.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="optimized-images-intro">
+      <FeatureGuideHighlight id="optimized-images-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Image size={15} aria-hidden="true" /> IMAGE DELIVERY
@@ -9102,7 +8625,7 @@ function OptimizedImagesGuide() {
             alt="A WordPress page requests a smaller remote image, the CDN resizes it, and the resulting thumbnail appears in desktop and mobile layouts."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -9145,7 +8668,7 @@ function OptimizedImagesGuide() {
           >
           Enable the delivery paths you need.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9169,7 +8692,7 @@ function OptimizedImagesGuide() {
               lazy loading. This switch does not depend on the featured-image switch.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -9187,7 +8710,7 @@ function OptimizedImagesGuide() {
           >
           Choose a CDN and optional square output.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>
               <strong>FIFU CDN</strong> tab
@@ -9235,7 +8758,7 @@ function OptimizedImagesGuide() {
               overrides; browsing the relevant page types again repopulates the list.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -9254,7 +8777,7 @@ function OptimizedImagesGuide() {
           >
           Check what the optimizer can process.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Featured-image resizing</dt>
             <dd>
@@ -9280,25 +8803,12 @@ function OptimizedImagesGuide() {
               delivery option and test the published page.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced />
     </Page>
   );
 }
@@ -9315,7 +8825,7 @@ function SquareImageOptionsGuide() {
         through FIFU CDN or FIFU Cloud.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="square-images-intro">
+      <FeatureGuideHighlight id="square-images-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Image size={15} aria-hidden="true" /> IMAGE SHAPE
@@ -9332,7 +8842,7 @@ function SquareImageOptionsGuide() {
             alt="Desktop and mobile square image choices lead to cropped or extended square versions of an image."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -9380,7 +8890,7 @@ function SquareImageOptionsGuide() {
           >
           Set desktop and mobile separately.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9408,7 +8918,7 @@ function SquareImageOptionsGuide() {
               when it changes, and the settings screen reports whether the save succeeded.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -9426,7 +8936,7 @@ function SquareImageOptionsGuide() {
           >
           Choose how each square is made.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Make square by cropping</dt>
             <dd>
@@ -9454,7 +8964,7 @@ function SquareImageOptionsGuide() {
               use different treatments or disable square output on either one.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -9484,22 +8994,9 @@ function SquareImageOptionsGuide() {
         </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -9516,7 +9013,7 @@ function FeaturedImagesRssGuide() {
         compatible feed readers and email services.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="rss-feature-intro">
+      <FeatureGuideHighlight id="rss-feature-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Rss size={15} aria-hidden="true" /> RSS 2 FEED MEDIA
@@ -9533,7 +9030,7 @@ function FeaturedImagesRssGuide() {
             alt="A post image is added to an RSS item as media content and shown in an email feed reader."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -9578,7 +9075,7 @@ function FeaturedImagesRssGuide() {
           >
           Add an image to a feed item.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9601,7 +9098,7 @@ function FeaturedImagesRssGuide() {
               declares the Media RSS namespace automatically.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -9636,22 +9133,9 @@ function FeaturedImagesRssGuide() {
             </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -9667,7 +9151,7 @@ function BbpressBuddybossGuide() {
         Enable the shared integration, then add remote images to bbPress discussions or
         paste image links into BuddyBoss activity.
       </p>
-      <section className="feature-highlight" aria-labelledby="community-media-intro">
+      <FeatureGuideHighlight id="community-media-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <MessageSquare size={15} aria-hidden="true" /> DISCUSSION MEDIA
@@ -9684,7 +9168,7 @@ function BbpressBuddybossGuide() {
             alt="Add a remote image to a bbPress discussion or BuddyBoss activity and display it with the conversation"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="community-context-title"
@@ -9729,7 +9213,7 @@ function BbpressBuddybossGuide() {
           >
           Turn on the shared community option.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9743,7 +9227,7 @@ function BbpressBuddybossGuide() {
               on/off option for both integrations; there are no separate switches here.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           Keep bbPress active to use the forum field and display hooks. Keep BuddyBoss
           Platform active for activity conversion. Its Activity component must be active
@@ -9765,7 +9249,7 @@ function BbpressBuddybossGuide() {
           >
           Add an image URL to a topic or reply.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9774,8 +9258,8 @@ function BbpressBuddybossGuide() {
               one, the field is filled with its saved FIFU URL when one exists.
             </p>
           </li>
-        </ol>
-        <dl className="feature-guide-options">
+        </FeatureGuideSteps>
+        <FeatureGuideOptions>
           <div>
             <dt>Where the image appears</dt>
             <dd>
@@ -9800,7 +9284,7 @@ function BbpressBuddybossGuide() {
               on the theme.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section"
@@ -9817,7 +9301,7 @@ function BbpressBuddybossGuide() {
           >
           Paste direct image links into activity.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9834,8 +9318,8 @@ function BbpressBuddybossGuide() {
               copies of the same image link are deduplicated in the displayed content.
             </p>
           </li>
-        </ol>
-        <dl className="feature-guide-options">
+        </FeatureGuideSteps>
+        <FeatureGuideOptions>
           <div>
             <dt>Paste helper suffixes</dt>
             <dd>
@@ -9852,7 +9336,7 @@ function BbpressBuddybossGuide() {
               pasting it into the activity editor.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section activation-feature-help"
@@ -9870,7 +9354,7 @@ function BbpressBuddybossGuide() {
           >
           Check the matching platform and image path.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>bbPress field or image is missing</dt>
             <dd>
@@ -9888,25 +9372,12 @@ function BbpressBuddybossGuide() {
             </dd>
           </div>
           
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/taxonomy-image/">Taxonomy Image</Link> and <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/taxonomy-image/">Taxonomy Image</Link> and <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced />
     </Page>
   );
 }
@@ -9923,7 +9394,7 @@ function PlaybackLoopGuide() {
         reaches the end.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="playback-loop-intro">
+      <FeatureGuideHighlight id="playback-loop-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <RefreshCw size={15} aria-hidden="true" /> VIDEO PLAYBACK
@@ -9941,7 +9412,7 @@ function PlaybackLoopGuide() {
             alt="Turn on the Playback Loop setting, then a featured video repeats from the end to the beginning."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -9958,7 +9429,7 @@ function PlaybackLoopGuide() {
           >
           Turn on the site-wide switch.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -9972,7 +9443,7 @@ function PlaybackLoopGuide() {
               applies to supported featured video players across your site.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -9990,7 +9461,7 @@ function PlaybackLoopGuide() {
           >
           Where the switch applies.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Supported players</dt>
             <dd>YouTube, Vimeo, local videos, and remote video files.</dd>
@@ -10008,7 +9479,7 @@ function PlaybackLoopGuide() {
               When enabled, supported featured videos repeat after they finish. The exact behavior depends on the video service.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           If you also need to adjust provider-specific embed behavior, read the{' '}
           <Link to="/features/youtube-options/">YouTube options</Link> or{' '}
@@ -10047,7 +9518,7 @@ function PlaybackLoopGuide() {
           >
           If a video stops at the end.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>1</span>
             <p>
@@ -10061,25 +9532,12 @@ function PlaybackLoopGuide() {
               a remote video file. Other player types are not listed for this setting.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -10096,7 +9554,7 @@ function MuteGuide() {
         FIFU’s Video settings.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="mute-intro">
+      <FeatureGuideHighlight id="mute-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <VolumeX size={15} aria-hidden="true" /> VIDEO PLAYBACK
@@ -10113,7 +9571,7 @@ function MuteGuide() {
             alt="Desktop and mobile mute settings lead to a featured video playing silently"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -10147,7 +9605,7 @@ function MuteGuide() {
           >
           Set each device control.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -10168,7 +9626,7 @@ function MuteGuide() {
               Test the result on desktop and mobile, since each has its own setting.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -10232,7 +9690,7 @@ function MuteGuide() {
           >
           If playback starts with sound.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>1</span>
             <p>
@@ -10247,25 +9705,12 @@ function MuteGuide() {
               audio independently.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/background-video/">Background Video</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/background-video/">Background Video</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -10282,7 +9727,7 @@ function YoutubeOptionsGuide() {
         with one setting.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="youtube-options-intro">
+      <FeatureGuideHighlight id="youtube-options-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ShieldCheck size={15} aria-hidden="true" /> YOUTUBE VIDEO EMBEDS
@@ -10304,7 +9749,7 @@ function YoutubeOptionsGuide() {
             alt="Enable Privacy Enhanced Mode and route a supported YouTube embed through youtube-nocookie.com."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -10321,7 +9766,7 @@ function YoutubeOptionsGuide() {
           >
           Enable the setting.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -10342,7 +9787,7 @@ function YoutubeOptionsGuide() {
               Play a FIFU YouTube video on your site to confirm it works after enabling the setting.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -10360,7 +9805,7 @@ function YoutubeOptionsGuide() {
           >
           What changes when it is on.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>On</dt>
             <dd>
@@ -10381,7 +9826,7 @@ function YoutubeOptionsGuide() {
               The YouTube address saved with your post does not change. Other video services are unaffected.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
             <FeatureCliSection
@@ -10419,22 +9864,9 @@ function YoutubeOptionsGuide() {
             </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -10450,7 +9882,7 @@ function PrivacyEnhancedModeGuide() {
         Route supported YouTube video embeds through YouTube’s privacy-enhanced domain by
         turning on one FIFU setting.
       </p>
-      <section className="feature-highlight" aria-labelledby="privacy-enhanced-intro">
+      <FeatureGuideHighlight id="privacy-enhanced-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ShieldCheck size={15} aria-hidden="true" /> YOUTUBE VIDEO EMBEDS
@@ -10472,7 +9904,7 @@ function PrivacyEnhancedModeGuide() {
             alt="Turn on FIFU privacy enhanced mode, change a YouTube embed to youtube-nocookie.com, and display the video on a site."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -10489,7 +9921,7 @@ function PrivacyEnhancedModeGuide() {
           >
           Enable the setting.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -10510,7 +9942,7 @@ function PrivacyEnhancedModeGuide() {
               Open a page with a FIFU YouTube video to confirm it plays normally with privacy-enhanced mode enabled.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -10528,7 +9960,7 @@ function PrivacyEnhancedModeGuide() {
           >
           What changes
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Privacy Enhanced Mode</dt>
             <dd>
@@ -10547,7 +9979,7 @@ function PrivacyEnhancedModeGuide() {
             </dd>
           </div>
           
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <FeatureCliSection
@@ -10580,7 +10012,7 @@ function PrivacyEnhancedModeGuide() {
           >
           If the regular host still appears
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>
               <Check size={14} aria-hidden="true" />
@@ -10598,20 +10030,10 @@ function PrivacyEnhancedModeGuide() {
               provider does not become a YouTube privacy embed.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -10628,7 +10050,7 @@ function WpAllImportAddonGuide() {
         media while WP All Import creates or updates your content.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="wai-import-purpose">
+      <FeatureGuideHighlight id="wai-import-purpose">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Puzzle size={15} aria-hidden="true" /> BULK MEDIA MAPPING
@@ -10648,7 +10070,7 @@ function WpAllImportAddonGuide() {
             alt="A product image URL is mapped to the FIFU product image and gallery field, then appears in the imported product gallery."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section className="activation-feature-section" aria-labelledby="wai-setup-title">
         <FeatureGuideHeading
@@ -10662,7 +10084,7 @@ function WpAllImportAddonGuide() {
           >
           Map fields in the FIFU panel.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -10707,7 +10129,7 @@ function WpAllImportAddonGuide() {
               WP All Import is configured to update existing matching records.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           This guide covers WP All Import. If you are importing products with
           WooCommerce's built-in CSV importer instead, use the{' '}
@@ -10735,7 +10157,7 @@ function WpAllImportAddonGuide() {
           See <Link to="/features/taxonomy-image/">Taxonomy Image</Link>
           for where those images appear.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Featured image (URL)</dt>
             <dd>
@@ -10770,7 +10192,7 @@ function WpAllImportAddonGuide() {
               single featured image rather than configuring both.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -10793,7 +10215,7 @@ function WpAllImportAddonGuide() {
           image and the remaining URLs become gallery images. Product video URLs can also
           be added to the product media gallery.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Product image URL + gallery URLs</dt>
             <dd>
@@ -10840,7 +10262,7 @@ function WpAllImportAddonGuide() {
               separator; FIFU normalizes the imported lists.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Example: map{' '}
           <code>https://example.com/front.jpg|https://example.com/side.jpg</code> to{' '}
@@ -10899,7 +10321,7 @@ function WpAllImportAddonGuide() {
           supplies the feature with data; each feature still needs
           its own configuration.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>ASIN</dt>
             <dd>
@@ -10930,7 +10352,7 @@ function WpAllImportAddonGuide() {
               that feature separately to use the imported address.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -10954,7 +10376,7 @@ function WpAllImportAddonGuide() {
           The adjacent <strong>Importing...</strong> tab also has a{' '}
           <strong>CSV example</strong> you can download.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Importing variable products</dt>
             <dd>
@@ -11042,7 +10464,7 @@ function WpAllImportAddonGuide() {
               and build gallery URL lists for an import file.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -11061,7 +10483,7 @@ function WpAllImportAddonGuide() {
           >
           Resolve common mapping problems.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>The FIFU panel is missing:</strong> Confirm FIFU Premium and WP All
             Import or WP All Import Pro are active. The panel is added to the import
@@ -11096,20 +10518,10 @@ function WpAllImportAddonGuide() {
             its related FIFU feature first. The panel shows
             different fields for posts, taxonomies, and products.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -11124,7 +10536,7 @@ function WooCommerceImportGuide() {
         Import remote featured images, galleries, videos, and other FIFU media with
         WooCommerce's built-in product CSV importer.
       </p>
-      <section className="feature-highlight" aria-labelledby="wc-import-intro">
+      <FeatureGuideHighlight id="wc-import-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ShoppingCart size={15} aria-hidden="true" /> WOOCOMMERCE PRODUCT IMPORT
@@ -11143,7 +10555,7 @@ function WooCommerceImportGuide() {
             alt="A product CSV maps FIFU image URL and alt-text columns, imports the product, and fills its media gallery."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section className="activation-feature-section" aria-labelledby="wc-import-purpose">
         <FeatureGuideHeading
           id="wc-import-purpose"
@@ -11177,7 +10589,7 @@ function WooCommerceImportGuide() {
           >
           Prepare the CSV and run the importer.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -11233,7 +10645,7 @@ function WooCommerceImportGuide() {
               information.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           For example, put{' '}
           <code>https://example.com/front.jpg|https://example.com/side.jpg</code>{' '}
@@ -11254,7 +10666,7 @@ function WooCommerceImportGuide() {
           >
           Choose the media fields you need.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>
               <code>fifu_list_url</code>
@@ -11314,7 +10726,7 @@ function WooCommerceImportGuide() {
               embeddable content in the gallery's lightbox.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           For standard product images and videos, use the image and video
           list fields. Use the slider fields only when you want a{' '}
@@ -11339,7 +10751,7 @@ function WooCommerceImportGuide() {
           >
           Other metadata you can import.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>
               <code>fifu_asin</code>
@@ -11374,7 +10786,7 @@ function WooCommerceImportGuide() {
               which can redirect clicks on the featured image.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           These fields support other FIFU features. Importing a value
           does not automatically enable the feature that uses it.
@@ -11396,7 +10808,7 @@ function WooCommerceImportGuide() {
           >
           Avoid common import mistakes.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>A FIFU column was ignored:</strong> Check that its CSV
             header starts with <code>meta:</code> or that you selected{' '}
@@ -11430,19 +10842,9 @@ function WooCommerceImportGuide() {
             for an update import. Review WooCommerce's import report
             for skipped rows.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -11459,7 +10861,7 @@ function QuickBuyGuide() {
         from shop and category pages, without opening each product page.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="quick-buy-intro">
+      <FeatureGuideHighlight id="quick-buy-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ShoppingCart size={15} aria-hidden="true" /> SHOP WITHOUT LEAVING THE GRID
@@ -11479,7 +10881,7 @@ function QuickBuyGuide() {
             alt="A shopper opens a product lightbox from a WooCommerce archive and proceeds to checkout."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -11496,7 +10898,7 @@ function QuickBuyGuide() {
           >
           Enable Quick Buy and test it.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -11532,7 +10934,7 @@ function QuickBuyGuide() {
               instead takes the customer to its configured purchase URL.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -11555,7 +10957,7 @@ function QuickBuyGuide() {
           following three fields are optional. They save when their values
           change and affect the information shown in the preview.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Text button</dt>
             <dd>
@@ -11580,7 +10982,7 @@ function QuickBuyGuide() {
               Leave it empty to hide this extra information.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -11598,7 +11000,7 @@ function QuickBuyGuide() {
           >
           How Quick Buy handles each product.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Simple products</dt>
             <dd>
@@ -11625,7 +11027,7 @@ function QuickBuyGuide() {
               your store's checkout.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Quick Buy's built-in purchase controls cover simple, variable,
           and external products. Other product types may require the
@@ -11649,7 +11051,7 @@ function QuickBuyGuide() {
           >
           If the preview or purchase button is missing.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>No expand icon:</strong> Confirm WooCommerce is active,
             <strong> Quick buy</strong> is enabled, and you are viewing
@@ -11671,7 +11073,7 @@ function QuickBuyGuide() {
             the optional <strong>Text button</strong> field and the
             product's own button text; the product-specific value wins.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
         <p>
           Quick Buy's archive preview is separate from the{' '}
           <Link to="/features/lightbox-and-zoom/">Lightbox and Zoom</Link>{' '}
@@ -11679,22 +11081,9 @@ function QuickBuyGuide() {
         </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link> and <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link> and <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -11707,7 +11096,7 @@ function FifuApiGuide() {
         image and video media on terms.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="fifu-api-intro">
+      <FeatureGuideHighlight id="fifu-api-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Puzzle size={15} aria-hidden="true" />
@@ -11727,7 +11116,7 @@ function FifuApiGuide() {
             alt="A PHP helper assigns a remote featured image to a post, which then displays the image."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -11764,7 +11153,7 @@ function FifuApiGuide() {
           >
           Add the helper where your integration runs.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -11787,7 +11176,7 @@ function FifuApiGuide() {
               FIFU being inactive.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -11805,7 +11194,7 @@ function FifuApiGuide() {
           >
           Choose the helper for the media you are saving.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>
               <code>fifu_dev_set_image( $post_id, $image_url )</code>
@@ -11844,7 +11233,7 @@ function FifuApiGuide() {
               order; extra alt-text entries are trimmed to the URL count.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
               Use complete image URLs. For image or video lists, separate entries as shown above.
             </p>
@@ -11865,7 +11254,7 @@ function FifuApiGuide() {
           >
           Set an image or video on a term.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>
               <code>fifu_dev_set_category_image( $term_id, $image_url )</code>
@@ -11878,7 +11267,7 @@ function FifuApiGuide() {
             </dt>
             <dd>Set video media for a term.</dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -11910,22 +11299,9 @@ function FifuApiGuide() {
         </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/wp-woocommerce-rest-api/">WP / WooCommerce REST API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/wp-woocommerce-rest-api/">WP / WooCommerce REST API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -11941,7 +11317,7 @@ function WpWooCommerceRestApiGuide() {
         Add FIFU media values to WordPress or WooCommerce REST create and update requests to manage remote media alongside content.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="rest-api-intro">
+      <FeatureGuideHighlight id="rest-api-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Code2 size={15} aria-hidden="true" />
@@ -11961,7 +11337,7 @@ function WpWooCommerceRestApiGuide() {
             alt="A WordPress REST request sends fifu_image_url, saves the content, and shows the remote image on the site."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -11978,7 +11354,7 @@ function WpWooCommerceRestApiGuide() {
           >
           Choose the content endpoint, then add media fields.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -12003,7 +11379,7 @@ function WpWooCommerceRestApiGuide() {
               Read the returned content or request it again to confirm the saved values. The WordPress response adds nonempty <code>fifu_image_url</code>, <code>fifu_video_url</code>, indexed <code>fifu_slider_image_url_0</code> fields, <code>fifu_image_alt</code>, <code>fifu_asin</code>, <code>fifu_finder_url</code>, and <code>fifu_redirection_url</code> when present.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -12021,12 +11397,12 @@ function WpWooCommerceRestApiGuide() {
           >
           Choose the value for each media type.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div><dt>Featured image</dt><dd><code>fifu_image_url</code> sets the remote image URL; <code>fifu_image_alt</code> sets its alternative text.</dd></div>
           <div><dt>Featured video</dt><dd><code>fifu_video_url</code> sets the video URL. For slider images, use <code>fifu_slider_list_url</code> and optional parallel <code>fifu_slider_list_alt</code> values, separated by vertical bars.</dd></div>
           <div><dt>Other post values</dt><dd><code>fifu_asin</code>, <code>fifu_finder_url</code>, and <code>fifu_redirection_url</code> accept top-level values or entries inside <code>meta</code>.</dd></div>
           <div><dt>Slider image entries</dt><dd>You can also send indexed <code>fifu_slider_image_url_0</code>, <code>fifu_slider_image_alt_0</code> fields (continue the index for more images). Returned slider image URLs use the same indexed field pattern.</dd></div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -12048,11 +11424,11 @@ function WpWooCommerceRestApiGuide() {
         <p>
           For products and variations, include FIFU entries in WooCommerce’s <code>meta_data</code> array. The REST integration handles the following five fields for both object types.
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div><dt>Product image gallery</dt><dd><code>fifu_list_url</code> holds image URLs and <code>fifu_list_alt</code> holds matching alternative text.</dd></div>
           <div><dt>Product video gallery</dt><dd><code>fifu_list_video_url</code> holds the video URL list.</dd></div>
           <div><dt>Product slider</dt><dd><code>fifu_slider_list_url</code> holds slider image URLs and <code>fifu_slider_list_alt</code> holds matching alternative text.</dd></div>
-        </dl>
+        </FeatureGuideOptions>
         <pre><code>{`"meta_data": [
   { "key": "fifu_list_url", "value": "https://example.com/one.jpg|https://example.com/two.jpg" },
   { "key": "fifu_list_alt", "value": "Front view|Side view" }
@@ -12074,29 +11450,16 @@ function WpWooCommerceRestApiGuide() {
           >
           Match the request format to its endpoint.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li><strong>WordPress post value is missing:</strong> confirm the content type exposes the REST API and supports featured images; send the field at top level or inside <code>meta</code>.</li>
           <li><strong>WooCommerce gallery or slider did not change:</strong> confirm the key is one of the five supported product/variation fields and is an item in <code>meta_data</code>. Separate list entries with <code>|</code>.</li>
           <li><strong>Wrong featured media appears:</strong> for WordPress posts, image, video, and slider fields compete for the featured-media slot. Send the intended type; a nonempty slider list takes priority over image/video values.</li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/fifu-api/">FIFU API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/fifu-api/">FIFU API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -12108,7 +11471,7 @@ function WpCliGuide() {
         Use your server terminal to change FIFU options, launch supported jobs, and create
         WordPress content with remote media.
       </p>
-      <section className="feature-highlight" aria-labelledby="wp-cli-intro">
+      <FeatureGuideHighlight id="wp-cli-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Terminal size={15} aria-hidden="true" /> SERVER WORKFLOW
@@ -12127,7 +11490,7 @@ function WpCliGuide() {
             alt="A WP-CLI command changes a FIFU setting and the remote featured image appears on a post."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section className="activation-feature-section" aria-labelledby="wp-cli-use-title">
         <FeatureGuideHeading
           id="wp-cli-use-title"
@@ -12140,7 +11503,7 @@ function WpCliGuide() {
           >
           Run commands from the WordPress installation.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -12165,7 +11528,7 @@ function WpCliGuide() {
               to inspect the registered command syntax on your installation.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section"
@@ -12182,7 +11545,7 @@ function WpCliGuide() {
           >
           Choose the setting or operation you need.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>
               <code>content</code>
@@ -12278,7 +11641,7 @@ function WpCliGuide() {
               setup commands.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section"
@@ -12324,7 +11687,7 @@ function WpCliGuide() {
           >
           Check the runtime and accepted value.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>!</span>
             <p>
@@ -12345,24 +11708,11 @@ function WpCliGuide() {
               settings.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/fifu-api/">FIFU API</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/fifu-api/">FIFU API</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -12379,7 +11729,7 @@ function QuickEditorGuide() {
         without opening each editor.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="quick-editor-intro">
+      <FeatureGuideHighlight id="quick-editor-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <MousePointerClick size={15} aria-hidden="true" /> EDIT FROM THE LIST
@@ -12400,7 +11750,7 @@ function QuickEditorGuide() {
             alt="Select a FIFU thumbnail, preview media in Quick Editor, and see the updated thumbnail in the content list."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -12442,7 +11792,7 @@ function QuickEditorGuide() {
           >
           Find a FIFU thumbnail in a content list.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -12465,7 +11815,7 @@ function QuickEditorGuide() {
               variation before editing. Save each selected item separately.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -12483,7 +11833,7 @@ function QuickEditorGuide() {
           >
           Choose media and save the change.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Featured image</dt>
             <dd>
@@ -12553,7 +11903,7 @@ function QuickEditorGuide() {
               it does not change the media.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -12572,7 +11922,7 @@ function QuickEditorGuide() {
           >
           Check access and optional media types.
         </FeatureGuideHeading>
-        <ul className="activation-feature-steps">
+        <FeatureGuideChecklist>
           <li>
             <span>
               <CircleAlert size={14} aria-hidden="true" />
@@ -12605,20 +11955,10 @@ function QuickEditorGuide() {
               fields shown in the editor after you save.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -12631,7 +11971,7 @@ function WidgetsGuide() {
         an Elementor layout.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="widgets-intro">
+      <FeatureGuideHighlight id="widgets-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Puzzle size={15} aria-hidden="true" /> MEDIA IN YOUR SITE LAYOUT
@@ -12654,7 +11994,7 @@ function WidgetsGuide() {
             alt="Add the FIFU Featured media widget to a widget area and see the current content image on the page."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -12671,7 +12011,7 @@ function WidgetsGuide() {
           >
           Choose a widget for the current content.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -12694,8 +12034,8 @@ function WidgetsGuide() {
               site to confirm the result.
             </p>
           </li>
-        </ol>
-        <dl className="fifu-fields-options">
+        </FeatureGuideSteps>
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>(FIFU) Featured media</dt>
             <dd>
@@ -12719,7 +12059,7 @@ function WidgetsGuide() {
               display.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -12737,7 +12077,7 @@ function WidgetsGuide() {
           >
           Set the media in an Elementor section.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -12756,7 +12096,7 @@ function WidgetsGuide() {
               with it.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           To place a video thumbnail, add <strong>(FIFU) Featured Video</strong> and enter
           its <strong>Video URL</strong>. This widget is available only when{' '}
@@ -12794,17 +12134,7 @@ function WidgetsGuide() {
         </p>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -12821,7 +12151,7 @@ function HotlinkProtectionGuide() {
         those images available in social posts.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="hotlink-intro">
+      <FeatureGuideHighlight id="hotlink-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ShieldCheck size={15} aria-hidden="true" /> FIFU CLOUD ACCESS
@@ -12843,7 +12173,7 @@ function HotlinkProtectionGuide() {
             loading="eager"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -12860,7 +12190,7 @@ function HotlinkProtectionGuide() {
           >
           Turn on hotlink protection.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -12882,7 +12212,7 @@ function HotlinkProtectionGuide() {
               applies the restriction to its hosted images. Social networks remain exempt.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -12935,22 +12265,9 @@ function HotlinkProtectionGuide() {
         </p>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/optimized-images/">Optimized Images</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/optimized-images/">Optimized Images</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -12967,7 +12284,7 @@ function DefaultFeaturedImageGuide() {
         their own featured image.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="default-image-intro">
+      <FeatureGuideHighlight id="default-image-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Image size={15} aria-hidden="true" />
@@ -12986,7 +12303,7 @@ function DefaultFeaturedImageGuide() {
             alt="Set a default image URL and show the same image on content cards that have no featured image of their own."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -13058,7 +12375,7 @@ function DefaultFeaturedImageGuide() {
           >
           Choose the image and eligible post types.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -13097,7 +12414,7 @@ function DefaultFeaturedImageGuide() {
               the updated selection, including eligible existing content.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -13115,7 +12432,7 @@ function DefaultFeaturedImageGuide() {
           >
           The default applies only where it is needed.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Existing content without an image</dt>
             <dd>
@@ -13153,7 +12470,7 @@ function DefaultFeaturedImageGuide() {
               or the original remote image file.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -13195,7 +12512,7 @@ function DefaultFeaturedImageGuide() {
           >
           If the default image does not appear
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Check both switches:</strong> confirm <strong>Default featured image</strong>{' '}
             is enabled and <strong>Image Metadata</strong> is on.
@@ -13218,25 +12535,12 @@ function DefaultFeaturedImageGuide() {
             field; it does not force a theme to display thumbnails in layouts that
             do not render them.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced />
     </Page>
   );
 }
@@ -13252,7 +12556,7 @@ function ActivationGuide() {
         Submit your license key to register this site’s domain and unlock the licensed
         FIFU features and updates.
       </p>
-      <section className="feature-highlight" aria-labelledby="activation-intro">
+      <FeatureGuideHighlight id="activation-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <KeyRound size={15} aria-hidden="true" /> LICENSE ACTIVATION
@@ -13270,7 +12574,7 @@ function ActivationGuide() {
             alt="Enter a license key, submit it for validation, and return to FIFU settings after successful activation."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section className="activation-feature-section" aria-labelledby="activation-why">
         <FeatureGuideHeading
           id="activation-why"
@@ -13311,7 +12615,7 @@ function ActivationGuide() {
           >
           Activate the license key.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -13336,7 +12640,7 @@ function ActivationGuide() {
               correct the key or resolve its status.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section"
@@ -13353,7 +12657,7 @@ function ActivationGuide() {
           >
           Know what each control does.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Activation tab</dt>
             <dd>
@@ -13375,7 +12679,7 @@ function ActivationGuide() {
               expired or you need renewal details.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section activation-feature-help"
@@ -13393,7 +12697,7 @@ function ActivationGuide() {
           >
           Resolve common activation results.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Invalid key</dt>
             <dd>
@@ -13420,24 +12724,11 @@ function ActivationGuide() {
               contact support.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/automatic-updates/">Automatic Updates</Link>, <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/automatic-updates/">Automatic Updates</Link>, <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Find another FIFU feature.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced title="Find another FIFU feature." />
     </Page>
   );
 }
@@ -13454,7 +12745,7 @@ function ResetSettingsGuide() {
         license details, default image, and content image URLs stay in place.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="reset-settings-intro">
+      <FeatureGuideHighlight id="reset-settings-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <RotateCcw size={15} aria-hidden="true" /> SETTINGS RESET
@@ -13476,7 +12767,7 @@ function ResetSettingsGuide() {
             alt="Turn on Reset Settings in the Metadata tab, wait for the page reload, and return to default options with license and default image settings retained."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -13493,7 +12784,7 @@ function ResetSettingsGuide() {
           >
           Know what stays before you reset.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Reset</dt>
             <dd>
@@ -13519,7 +12810,7 @@ function ResetSettingsGuide() {
               assignments or run a separate content cleanup.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Write down any custom option values you still need before resetting. Use this
           when you want to troubleshoot a configuration; it is unnecessary if you only
@@ -13546,7 +12837,7 @@ function ResetSettingsGuide() {
           You need permission to manage FIFU settings: <code>manage_options</code> in the
           site dashboard or <code>manage_network_options</code> in network administration.
         </p>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -13569,7 +12860,7 @@ function ResetSettingsGuide() {
               Your retained settings and content image assignments remain available.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
             <FeatureCliSection
@@ -13583,22 +12874,9 @@ function ResetSettingsGuide() {
         note="This immediately restores FIFU settings to their defaults. Back up your configuration before running it."
       />
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/activation/">Activation</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/activation/">Activation</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Find another FIFU feature.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced title="Find another FIFU feature." />
     </Page>
   );
 }
@@ -13611,7 +12889,7 @@ function DebugModeGuide() {
         or site diagnostics while you investigate a problem.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="debug-feature-intro">
+      <FeatureGuideHighlight id="debug-feature-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Bug size={15} aria-hidden="true" />
@@ -13628,7 +12906,7 @@ function DebugModeGuide() {
             alt="Enable Debug Mode, copy item diagnostics, and download available logs from Status"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -13645,7 +12923,7 @@ function DebugModeGuide() {
           >
           Enable it while you reproduce the issue.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -13669,7 +12947,7 @@ function DebugModeGuide() {
               downloads.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         
       </section>
 
@@ -13700,7 +12978,7 @@ function DebugModeGuide() {
           >
           Choose the diagnostic that fits the issue.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Copy debug data</dt>
             <dd>
@@ -13725,7 +13003,7 @@ function DebugModeGuide() {
               Use <strong>Download debug logs</strong> on the Status page to collect recent FIFU logs for troubleshooting. Review the file before sending it to support.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           Enabling Debug Mode also reveals the separate{' '}
           <Link to="/features/db-migration/">DB Migration</Link> submenu for
@@ -13757,7 +13035,7 @@ function DebugModeGuide() {
           and site details, and log redaction only covers recognized patterns. Review each
           export yourself before sending it to support.
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>No download action</dt>
             <dd>
@@ -13788,20 +13066,10 @@ function DebugModeGuide() {
               </p>
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -13818,7 +13086,7 @@ function RemoteFeaturedImageGuide() {
         without uploading a second copy to the WordPress Media Library.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="remote-image-intro">
+      <FeatureGuideHighlight id="remote-image-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Image size={15} aria-hidden="true" /> REMOTE FEATURED IMAGE
@@ -13836,7 +13104,7 @@ function RemoteFeaturedImageGuide() {
             alt="Add a remote image address and alternative text in the FIFU editor, save, and display the image as featured media."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -13873,7 +13141,7 @@ function RemoteFeaturedImageGuide() {
           >
           Save an image address with your content.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -13907,7 +13175,7 @@ function RemoteFeaturedImageGuide() {
               featured image.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -13931,7 +13199,7 @@ function RemoteFeaturedImageGuide() {
           metadata for compatibility, but this does not mean the remote image file has
           been downloaded into the Media Library.
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Block editor</dt>
             <dd>
@@ -13955,7 +13223,7 @@ function RemoteFeaturedImageGuide() {
               control available for compatibility, even when a remote image is set.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -14052,7 +13320,7 @@ function RemoteFeaturedImageGuide() {
           >
           Know what each control changes.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Image URL or Keywords</dt>
             <dd>
@@ -14081,7 +13349,7 @@ function RemoteFeaturedImageGuide() {
               content to apply the removal; the file on the external host is not deleted.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -14100,7 +13368,7 @@ function RemoteFeaturedImageGuide() {
           >
           Keep the remote address reachable.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>Preview shows an image-not-found placeholder:</strong> check the full
             URL and verify that it loads an image, not an HTML sharing page or a sign-in
@@ -14127,20 +13395,10 @@ function RemoteFeaturedImageGuide() {
             preview the new image, or use the remove control and save. Clearing the FIFU
             value does not delete the original image from its host.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -14157,7 +13415,7 @@ function FeaturedVideoAudioGuide() {
         page, or product, with an optional thumbnail or cover image.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="video-audio-intro">
+      <FeatureGuideHighlight id="video-audio-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Video size={15} aria-hidden="true" /> MEDIA URL WORKFLOW
@@ -14176,7 +13434,7 @@ function FeaturedVideoAudioGuide() {
             alt="Enter a featured video URL, preview its playback, and see the saved video on a page."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -14219,7 +13477,7 @@ function FeaturedVideoAudioGuide() {
           >
           Turn on Featured Video / Audio.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -14239,7 +13497,7 @@ function FeaturedVideoAudioGuide() {
               <strong>Featured audio</strong>.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -14265,7 +13523,7 @@ function FeaturedVideoAudioGuide() {
           The list covers the services supported by FIFU
           rather than just a few popular examples.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Video and social platforms</dt>
             <dd>
@@ -14316,7 +13574,7 @@ function FeaturedVideoAudioGuide() {
               <strong>Audio URL</strong> field.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
               Use a public, supported video or audio address and preview it before saving. A service may block private or restricted videos from appearing on your site.
             </p>
@@ -14337,7 +13595,7 @@ function FeaturedVideoAudioGuide() {
           >
           Add and preview a video.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -14375,7 +13633,7 @@ function FeaturedVideoAudioGuide() {
               and save again.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           For the complete list of recognized platforms, see
           <strong> Supported video and audio services</strong>{' '}
@@ -14400,7 +13658,7 @@ function FeaturedVideoAudioGuide() {
           >
           Add an audio track or recording.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -14426,7 +13684,7 @@ function FeaturedVideoAudioGuide() {
               <strong>Remove audio</strong> and save again.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           The audio field uses a standard browser audio player.
           For Spotify tracks and SoundCloud links, use
@@ -14451,7 +13709,7 @@ function FeaturedVideoAudioGuide() {
           >
           Choose a thumbnail and playback range.
         </FeatureGuideHeading>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Embedded video providers</dt>
             <dd>
@@ -14501,7 +13759,7 @@ function FeaturedVideoAudioGuide() {
               provider embeds may handle timing differently.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
         <p>
           To show a still image first and load the player after
           a click, see <Link to="/features/video-thumbnail/">Video Thumbnail</Link>.
@@ -14526,7 +13784,7 @@ function FeaturedVideoAudioGuide() {
           >
           When the player or thumbnail is missing.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>No video or audio choice:</strong> Confirm
             <strong> FIFU → Settings → Video → Featured video / audio</strong>{' '}
@@ -14561,25 +13819,12 @@ function FeaturedVideoAudioGuide() {
             Test the published page and its archive. Featured
             media display depends on theme and template support.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/play-button/">Play Button</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/play-button/">Play Button</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -14596,7 +13841,7 @@ function FeaturedSliderGuide() {
         visitors move through it.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="featured-slider-intro">
+      <FeatureGuideHighlight id="featured-slider-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Images size={15} aria-hidden="true" />
@@ -14615,7 +13860,7 @@ function FeaturedSliderGuide() {
             alt="Add ordered media tiles in the Featured slider editor and display them as a slider on the content page."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -14657,7 +13902,7 @@ function FeaturedSliderGuide() {
           >
           Choose how sliders behave across your site.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -14687,7 +13932,7 @@ function FeaturedSliderGuide() {
               want custom arrow artwork.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
@@ -14705,7 +13950,7 @@ function FeaturedSliderGuide() {
           >
           Build and save the sequence.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -14737,7 +13982,7 @@ function FeaturedSliderGuide() {
               saved with the content.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           On a WooCommerce product, an <strong>Upload</strong> control appears only when
           FIFU’s upload option is enabled and the slider already contains media.
@@ -14760,7 +14005,7 @@ function FeaturedSliderGuide() {
           >
           Adjust navigation, timing, and layout.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Start autoplay automatically</dt>
             <dd>Begins advancing slides on its own.</dd>
@@ -14835,7 +14080,7 @@ function FeaturedSliderGuide() {
               <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -14874,7 +14119,7 @@ function FeaturedSliderGuide() {
           >
           If the slider is missing or looks different.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>A tile preview is empty:</strong> check that its URL begins with{' '}
             <code>http</code> and opens directly. The page uses the saved URL.
@@ -14890,25 +14135,12 @@ function FeaturedSliderGuide() {
           </li>
           
           
-        </ul>
+        </FeatureGuideHelpList>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -14925,10 +14157,7 @@ function RemoteProductGalleryImagesGuide() {
         URLs, without uploading copies to the Media Library.
       </p>
 
-      <section
-        className="feature-highlight"
-        aria-labelledby="remote-product-gallery-intro"
-      >
+      <FeatureGuideHighlight id="remote-product-gallery-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <ImagePlus size={15} aria-hidden="true" /> PRODUCT MEDIA BY URL
@@ -14949,7 +14178,7 @@ function RemoteProductGalleryImagesGuide() {
             alt="Add a remote image URL and alternative text in the WooCommerce product gallery, then view the saved image in the product gallery."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -14991,7 +14220,7 @@ function RemoteProductGalleryImagesGuide() {
           >
           Build the gallery on a product.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -15026,7 +14255,7 @@ function RemoteProductGalleryImagesGuide() {
               the WooCommerce product.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           For a quick change, open{' '}
           <Link to="/features/quick-editor/">FIFU Quick Edit</Link> from the product image
@@ -15050,7 +14279,7 @@ function RemoteProductGalleryImagesGuide() {
           >
           What each image tile controls.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Image/Video URL</dt>
             <dd>
@@ -15098,7 +14327,7 @@ function RemoteProductGalleryImagesGuide() {
               in the FIFU editor does not convert them to remote URLs.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -15154,17 +14383,7 @@ function RemoteProductGalleryImagesGuide() {
         </p>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -15181,7 +14400,7 @@ function RemoteVariationImagesGuide() {
         optional image gallery, without uploading the files to WordPress.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="remote-variation-intro">
+      <FeatureGuideHighlight id="remote-variation-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Images size={15} aria-hidden="true" /> WOOCOMMERCE VARIATIONS
@@ -15201,7 +14420,7 @@ function RemoteVariationImagesGuide() {
             alt="Enter and save image URLs for a WooCommerce variation, then show that image set when a shopper selects the variation."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
@@ -15218,7 +14437,7 @@ function RemoteVariationImagesGuide() {
           >
           Add its main image and gallery.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -15262,7 +14481,7 @@ function RemoteVariationImagesGuide() {
               <strong>Publish</strong> instead. Check the product page after saving.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           To remove an image, open its tile, clear the URL, select{' '}
           <strong>OK</strong>, and save the changes. If you remove all remote images
@@ -15285,7 +14504,7 @@ function RemoteVariationImagesGuide() {
           >
           Choose how variation images appear.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Selected variation</dt>
             <dd>
@@ -15316,7 +14535,7 @@ function RemoteVariationImagesGuide() {
               To turn remote variation images into local copies, enable the upload button under <strong>FIFU → Settings → Image → Save in the Media Library → Main</strong>. Use this only if you want WordPress to store the images; leave it off to keep remote URLs. See <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link>.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -15335,7 +14554,7 @@ function RemoteVariationImagesGuide() {
           >
           If an image is missing, check the URL and saves.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>No preview in the editor</dt>
             <dd>
@@ -15364,7 +14583,7 @@ function RemoteVariationImagesGuide() {
               product’s media.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
@@ -15382,7 +14601,7 @@ function RemoteVariationImagesGuide() {
           >
           Keep the same image order in automated workflows.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>WP All Import Add-On</dt>
             <dd>
@@ -15412,7 +14631,7 @@ function RemoteVariationImagesGuide() {
               for API access and request setup.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
             <FeatureCliSection
@@ -15454,17 +14673,7 @@ function RemoteVariationImagesGuide() {
         </p>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
@@ -15480,7 +14689,7 @@ function FifuProductGalleryGuide() {
         Display remote images, optional videos, and variation-specific views in
         a WooCommerce product gallery without uploading media files.
       </p>
-      <section className="feature-highlight" aria-labelledby="fifu-gallery-intro">
+      <FeatureGuideHighlight id="fifu-gallery-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Images size={15} aria-hidden="true" /> PRODUCT MEDIA DISPLAY
@@ -15496,7 +14705,7 @@ function FifuProductGalleryGuide() {
             alt="Product gallery media is arranged in the editor, combined with variation media, and displayed on a product page."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
       <section
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-enable"
@@ -15512,7 +14721,7 @@ function FifuProductGalleryGuide() {
           >
           Enable the gallery and add product media.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -15548,7 +14757,7 @@ function FifuProductGalleryGuide() {
               </Link>.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           To place a gallery manually, use <code>[fifu_gallery]</code> in the
           current product’s content, or <code>[fifu_gallery post_id="123"]</code>{' '}
@@ -15578,7 +14787,7 @@ function FifuProductGalleryGuide() {
           <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>.
           They control how the product gallery displays its media.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Adaptive height</dt>
             <dd>
@@ -15604,7 +14813,7 @@ function FifuProductGalleryGuide() {
               product gallery is used.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section"
@@ -15628,7 +14837,7 @@ function FifuProductGalleryGuide() {
           </strong>.
           They also affect other FIFU sliders, not only product galleries.
         </p>
-        <dl className="fifu-fields-options">
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Start autoplay automatically</dt>
             <dd>Advance through gallery items automatically.</dd>
@@ -15675,7 +14884,7 @@ function FifuProductGalleryGuide() {
             <dt>Display images at the same height</dt>
             <dd>Use a shared height for slider images.</dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
       <section
         className="activation-feature-section"
@@ -15748,7 +14957,7 @@ function FifuProductGalleryGuide() {
         <p>
               Under <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery → Custom content</strong>, you can show embedded content, such as a 360° product view, PDF, or map, when shoppers select a gallery image. The external page must allow embedding.
             </p>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -15774,7 +14983,7 @@ function FifuProductGalleryGuide() {
               image to view the custom content.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
       <section
         className="activation-feature-section"
@@ -15792,7 +15001,7 @@ function FifuProductGalleryGuide() {
           >
           Check these conditions if it is missing.
         </FeatureGuideHeading>
-        <ul className="activation-feature-help-list">
+        <FeatureGuideHelpList>
           <li>
             <strong>No automatic gallery:</strong> WooCommerce must be active,
             <strong> FIFU product gallery</strong> must be enabled, and the
@@ -15815,19 +15024,9 @@ function FifuProductGalleryGuide() {
             <code>[fifu_gallery]</code> manually in suitable product content;
             avoid rendering it twice on the same page.
           </li>
-        </ul>
+        </FeatureGuideHelpList>
       </section>
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced />
     </Page>
   );
 }
@@ -15842,7 +15041,7 @@ function AutoShareSocialGuide() {
       <p className="lead">
         Connect Facebook, Instagram, or X once, then queue eligible published WordPress posts to the accounts you enable.
       </p>
-      <section className="feature-highlight" aria-labelledby="auto-share-intro">
+      <FeatureGuideHighlight id="auto-share-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Share2 size={15} aria-hidden="true" /> AUTOMATIC POST DISTRIBUTION
@@ -15858,7 +15057,7 @@ function AutoShareSocialGuide() {
             alt="A published WordPress post is connected and shared to Facebook, Instagram, and X"
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section className="activation-feature-section" aria-labelledby="auto-share-connect">
         <FeatureGuideHeading
@@ -15872,12 +15071,12 @@ function AutoShareSocialGuide() {
           >
           Turn on sharing for the networks you use.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li><span>1</span><p>In WordPress, open <strong>FIFU → Settings</strong> and find <strong>Auto-share on social media</strong>. Turn on the main <strong>Auto share</strong> switch to allow automatic sharing.</p></li>
           <li><span>2</span><p>Open the <strong>Social media</strong> tab, then choose <strong>Facebook</strong>, <strong>Instagram</strong>, or <strong>X</strong>. Turn on a network’s switch to connect its account; turn it off to disconnect that account. Only networks both enabled and connected are used automatically.</p></li>
           <li><span>3</span><p>For X, first enter your app’s <strong>OAuth 2.0 Client ID</strong> in the X panel and save it. Your X developer app must allow <strong>Read and write</strong>, use the <strong>Native App</strong> type, and include this callback URI: <code>https://auto-share.fifu.workers.dev/v2/oauth/x/callback</code>.</p></li>
           <li><span>4</span><p>Publish or update a standard WordPress post that has an image. WordPress schedules the sharing check for about five seconds after the save; WP-Cron must run for that check to execute.</p></li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="auto-share-requirements">
@@ -15892,11 +15091,11 @@ function AutoShareSocialGuide() {
           >
           Prepare each network before connecting.
         </FeatureGuideHeading>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div><dt>Facebook</dt><dd>Connect a Facebook Page, not a personal profile. The Page must be published and visible to everyone. Your site must use HTTPS.</dd></div>
           <div><dt>Instagram</dt><dd>Connect a public Professional account (Business or Creator); personal or private accounts are not supported. The site must use HTTPS, and the post needs an HTTPS image hosted on your own site for Instagram sharing.</dd></div>
           <div><dt>X</dt><dd>Create an app at <a href="https://developer.x.com" target="_blank" rel="noreferrer">X Developer</a>, set Read and write permissions, choose Native App, register the callback URI above, and paste the app’s Client ID into the X panel.</dd></div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="auto-share-eligibility">
@@ -15912,11 +15111,11 @@ function AutoShareSocialGuide() {
           Only published posts with shareable image media.
         </FeatureGuideHeading>
         <p>Automatic checks apply to the standard WordPress <strong>Posts</strong> type in <strong>Published</strong> status. A featured image or an image URL FIFU resolves for the post makes it eligible. Pages, other post types, drafts, autosaves, and revisions are skipped.</p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div><dt>Daily limit</dt><dd>Sharing is limited to 16 posts per day for each connected platform.</dd></div>
           <div><dt>Repeat saves</dt><dd>Once a post is recorded as shared on a network, later saves do not automatically send it to that same network again. Other connected networks are tracked independently.</dd></div>
           <div><dt>Media differences</dt><dd>Facebook and X can share the post link and text. Instagram requires a suitable HTTPS image hosted on your site; an image hosted only on another domain may not work there.</dd></div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section className="activation-feature-section activation-feature-help" aria-labelledby="auto-share-test">
@@ -15932,30 +15131,17 @@ function AutoShareSocialGuide() {
           >
           Send a post manually and read the result.
         </FeatureGuideHeading>
-        <ol className="activation-feature-steps">
+        <FeatureGuideSteps>
           <li><span>1</span><p>Open the <strong>Test</strong> tab, enter the post’s numeric <strong>Post ID</strong>, and choose <strong>Share now</strong>. This action sends to every connected account even when the main <strong>Auto share</strong> switch is off; it does not require automatic sharing to be enabled.</p></li>
           <li><span>2</span><p>Watch the Facebook, Instagram, and X status icons and the result message. A network can succeed while another fails; the result reports each network separately. The test checks connections first and skips networks that are not connected.</p></li>
           <li><span>•</span><p>If no post is queued, confirm it is a published standard post with an image, then check the main switch, that network’s switch, and its connection. For Facebook, verify the public Page and HTTPS site; for Instagram, verify the public Professional account and a same-site HTTPS image; for X, verify the Client ID and app callback and permissions.</p></li>
           <li><span>•</span><p>A post already marked as shared to a network is not sent again by the test. The daily per-network limit is 16 posts. A failed result names the affected network and includes its returned error when available.</p></li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
-      <nav className="feature-related-guides" aria-label="Related guides">
-        <strong>Related guides</strong>
-        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</p>
-      </nav>
+      <FeatureRelatedGuides><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</FeatureRelatedGuides>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
