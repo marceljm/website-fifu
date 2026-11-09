@@ -45,6 +45,15 @@ import {
 import { Link, useParams } from 'react-router';
 import { Page } from '../components/layout/SiteLayout';
 import { FeatureCliSection } from '../components/features/FeatureCliSection';
+import {
+  FeatureGuideCta,
+  FeatureGuideHeading,
+  FeatureGuideHelpList,
+  FeatureGuideHighlight,
+  FeatureGuideOptions,
+  FeatureGuideSteps,
+  FeatureRelatedGuides,
+} from '../components/features/FeatureGuideSections';
 import { featureCards, fifuFeatureSlug } from '../data/fifu-features';
 import SaveInMediaLibraryGuide from './save-in-media-library-guide';
 import { FeaturedImageUrlBlockGuide } from './featured-image-url-block-guide';
@@ -818,15 +827,17 @@ function CustomPopupGuide() {
         className="activation-feature-section"
         aria-labelledby="custom-popup-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="custom-popup-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETUP</span>
-            <h2 id="custom-popup-setup-title">Turn it on and add each embed.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETUP
+          </>}
+          >
+          Turn it on and add each embed.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -873,15 +884,17 @@ function CustomPopupGuide() {
         className="activation-feature-section"
         aria-labelledby="custom-popup-behavior-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="custom-popup-behavior-title"
+          icon={<>
             <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT CHANGES</span>
-            <h2 id="custom-popup-behavior-title">Each post opens its own saved embed.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT CHANGES
+          </>}
+          >
+          Each post opens its own saved embed.
+        </FeatureGuideHeading>
         <p>
           The saved embed belongs to one post or page. When the feature is enabled,
           clicking that item’s FIFU featured image (including a link containing the image)
@@ -898,15 +911,17 @@ function CustomPopupGuide() {
         className="activation-feature-section"
         aria-labelledby="custom-popup-controls-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="custom-popup-controls-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CONTROLS AND AVAILABILITY</span>
-            <h2 id="custom-popup-controls-title">Where the controls apply</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONTROLS AND AVAILABILITY
+          </>}
+          >
+          Where the controls apply
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Custom Popup</dt>
@@ -946,15 +961,18 @@ function CustomPopupGuide() {
         className="activation-feature-section"
         aria-labelledby="custom-popup-check-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="custom-popup-check-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="custom-popup-check-title">If the popup does not open</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If the popup does not open
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Editor field is missing</dt>
@@ -1031,15 +1049,17 @@ function FifuShortcodeGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-shortcode-use"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-shortcode-use"
+          icon={<>
             <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ADD · RENDER</span>
-            <h2 id="fifu-shortcode-use">Insert a shortcode</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ADD · RENDER
+          </>}
+          >
+          Insert a shortcode
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -1070,15 +1090,17 @@ function FifuShortcodeGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-shortcode-outputs"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-shortcode-outputs"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OUTPUTS · PARAMETERS</span>
-            <h2 id="fifu-shortcode-outputs">Choose the output and parameters</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OUTPUTS · PARAMETERS
+          </>}
+          >
+          Choose the output and parameters
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>
@@ -1129,17 +1151,18 @@ function FifuShortcodeGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="fifu-shortcode-limits"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="fifu-shortcode-limits"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              REQUIREMENTS · TROUBLESHOOTING
-            </span>
-            <h2 id="fifu-shortcode-limits">When output is empty</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REQUIREMENTS · TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          When output is empty
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Featured image or slider:</strong> confirm the target post exists and
@@ -1210,17 +1233,17 @@ function WatchLaterGuide() {
         className="activation-feature-section"
         aria-labelledby="watch-later-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="watch-later-purpose-title"
+          icon={<>
             <Play size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE IT</span>
-            <h2 id="watch-later-purpose-title">
-              Give visitors a simple way to collect videos.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE IT
+          </>}
+          >
+          Give visitors a simple way to collect videos.
+        </FeatureGuideHeading>
         <p>
           A video normally appears where your featured media is rendered. Watch Later adds
           a browser-local queue, so visitors can mark several featured videos and return
@@ -1234,15 +1257,17 @@ function WatchLaterGuide() {
         className="activation-feature-section"
         aria-labelledby="watch-later-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="watch-later-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE · POSITION</span>
-            <h2 id="watch-later-setup-title">Choose whether to show the controls.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE · POSITION
+          </>}
+          >
+          Choose whether to show the controls.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -1274,17 +1299,17 @@ function WatchLaterGuide() {
         className="activation-feature-section"
         aria-labelledby="watch-later-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="watch-later-workflow-title"
+          icon={<>
             <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SAVE · PLAY · REMOVE</span>
-            <h2 id="watch-later-workflow-title">
-              Use the queue on a page with featured videos.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SAVE · PLAY · REMOVE
+          </>}
+          >
+          Use the queue on a page with featured videos.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -1313,15 +1338,18 @@ function WatchLaterGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="watch-later-limits-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="watch-later-limits-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">STORAGE · AVAILABILITY</span>
-            <h2 id="watch-later-limits-title">Understand what the queue keeps.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            STORAGE · AVAILABILITY
+          </>}
+          tone="help"
+          >
+          Understand what the queue keeps.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>i</span>
@@ -1408,17 +1436,17 @@ function UnsplashImageSearchGuide() {
         className="activation-feature-section"
         aria-labelledby="unsplash-image-search-editor-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="unsplash-image-search-editor-title"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IN THE CONTENT EDITOR</span>
-            <h2 id="unsplash-image-search-editor-title">
-              Search and save a featured image.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IN THE CONTENT EDITOR
+          </>}
+          >
+          Search and save a featured image.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -1456,15 +1484,17 @@ function UnsplashImageSearchGuide() {
         className="activation-feature-section"
         aria-labelledby="unsplash-image-search-quick-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="unsplash-image-search-quick-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FROM A CONTENT LIST</span>
-            <h2 id="unsplash-image-search-quick-title">Search with Quick Edit.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FROM A CONTENT LIST
+          </>}
+          >
+          Search with Quick Edit.
+        </FeatureGuideHeading>
         <p>
           Open <Link to="/features/quick-editor/">Quick Editor</Link> from a WordPress
           content list, enter keywords in its <strong>Image URL or Keywords</strong>{' '}
@@ -1477,17 +1507,18 @@ function UnsplashImageSearchGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="unsplash-image-search-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="unsplash-image-search-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ACCESS · RESULTS · LIMITS</span>
-            <h2 id="unsplash-image-search-help-title">
-              What to check when search is empty.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ACCESS · RESULTS · LIMITS
+          </>}
+          tone="help"
+          >
+          What to check when search is empty.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>
@@ -1591,15 +1622,17 @@ function DeleteFromCloudGuide() {
         className="activation-feature-section"
         aria-labelledby="delete-cloud-manual-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="delete-cloud-manual-title"
+          icon={<>
             <Search size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">MANUAL CLEANUP</span>
-            <h2 id="delete-cloud-manual-title">Find and remove selected images.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            MANUAL CLEANUP
+          </>}
+          >
+          Find and remove selected images.
+        </FeatureGuideHeading>
         <p>
           Complete FIFU Cloud account setup and connect your site first. Open{' '}
           <strong>FIFU → Cloud → Delete</strong>. The inventory shows a thumbnail, post
@@ -1651,15 +1684,17 @@ function DeleteFromCloudGuide() {
         className="activation-feature-section"
         aria-labelledby="delete-cloud-auto-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="delete-cloud-auto-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL AUTOMATION</span>
-            <h2 id="delete-cloud-auto-title">Automatically clear unused cloud images.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL AUTOMATION
+          </>}
+          >
+          Automatically clear unused cloud images.
+        </FeatureGuideHeading>
         <p>
               In <strong>FIFU → Cloud → Delete</strong>, turn on <strong>Automatic delete</strong> to remove Cloud images that are no longer used. Keep it off if you prefer to review each deletion manually.
             </p>
@@ -1669,17 +1704,18 @@ function DeleteFromCloudGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="delete-cloud-troubleshooting-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="delete-cloud-troubleshooting-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ACCESS AND RESULTS</span>
-            <h2 id="delete-cloud-troubleshooting-title">
-              When the inventory or action is unavailable.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ACCESS AND RESULTS
+          </>}
+          tone="help"
+          >
+          When the inventory or action is unavailable.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Not connected</dt>
@@ -1765,15 +1801,17 @@ function UploadToCloudGuide() {
         className="activation-feature-section"
         aria-labelledby="upload-cloud-connection-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="upload-cloud-connection-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">REQUIRED · ACCOUNT</span>
-            <h2 id="upload-cloud-connection-title">Connect the site before uploading.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REQUIRED · ACCOUNT
+          </>}
+          >
+          Connect the site before uploading.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -1802,15 +1840,17 @@ function UploadToCloudGuide() {
         className="activation-feature-section"
         aria-labelledby="upload-cloud-manual-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="upload-cloud-manual-title"
+          icon={<>
             <CloudUpload size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">MANUAL UPLOAD</span>
-            <h2 id="upload-cloud-manual-title">Find and upload selected images.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            MANUAL UPLOAD
+          </>}
+          >
+          Find and upload selected images.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -1847,17 +1887,17 @@ function UploadToCloudGuide() {
         className="activation-feature-section"
         aria-labelledby="upload-cloud-automatic-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="upload-cloud-automatic-title"
+          icon={<>
             <RefreshCw size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · AUTOMATIC UPLOAD</span>
-            <h2 id="upload-cloud-automatic-title">
-              Let scheduled jobs process remote URLs.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL · AUTOMATIC UPLOAD
+          </>}
+          >
+          Let scheduled jobs process remote URLs.
+        </FeatureGuideHeading>
         <p>
           On <strong>FIFU → Cloud → Upload</strong>, enable{' '}
           <strong>Automatic upload</strong> to let scheduled Cloud jobs upload remote
@@ -1872,17 +1912,17 @@ function UploadToCloudGuide() {
         className="activation-feature-section"
         aria-labelledby="upload-cloud-costs-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="upload-cloud-costs-title"
+          icon={<>
             <CloudUpload size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COST AND COVERAGE</span>
-            <h2 id="upload-cloud-costs-title">
-              Know what changes when an image is stored.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COST AND COVERAGE
+          </>}
+          >
+          Know what changes when an image is stored.
+        </FeatureGuideHeading>
         <p>
           Charges start on the upload date. Pricing is €0.001 per image, based on the
           daily average number of stored images over each 30-day billing period; generated
@@ -1896,17 +1936,18 @@ function UploadToCloudGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="upload-cloud-recovery-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="upload-cloud-recovery-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BEFORE RETRYING</span>
-            <h2 id="upload-cloud-recovery-title">
-              Resolve missing rows and connection errors.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            BEFORE RETRYING
+          </>}
+          tone="help"
+          >
+          Resolve missing rows and connection errors.
+        </FeatureGuideHeading>
         <p>
           <strong>Local Media Library images:</strong> they do not appear in Upload until
           their URL is linked into a FIFU field. Open{' '}
@@ -1989,17 +2030,17 @@ function LinkLocalImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="local-images-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="local-images-workflow-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SELECT AND LINK</span>
-            <h2 id="local-images-workflow-title">
-              Copy selected local image URLs into FIFU.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SELECT AND LINK
+          </>}
+          >
+          Copy selected local image URLs into FIFU.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -2042,17 +2083,17 @@ function LinkLocalImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="local-images-effects-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="local-images-effects-title"
+          icon={<>
             <CloudUpload size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">AFTER LINKING</span>
-            <h2 id="local-images-effects-title">
-              Upload to Cloud only when you need hosted copies.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            AFTER LINKING
+          </>}
+          >
+          Upload to Cloud only when you need hosted copies.
+        </FeatureGuideHeading>
         <p>
           Linking copies the local image URL into FIFU fields; it does not upload the file
           to Cloud. Keep the Media Library file until linking finishes. The linked image
@@ -2122,15 +2163,17 @@ function DbMigrationGuide() {
         className="activation-feature-section"
         aria-labelledby="db-migration-start-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="db-migration-start-title"
+          icon={<>
             <Database size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPEN THE TOOL</span>
-            <h2 id="db-migration-start-title">Start the background migration.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPEN THE TOOL
+          </>}
+          >
+          Start the background migration.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -2165,15 +2208,17 @@ function DbMigrationGuide() {
         className="activation-feature-section"
         aria-labelledby="db-migration-monitor-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="db-migration-monitor-title"
+          icon={<>
             <RefreshCw size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">MONITOR AND CONTROL</span>
-            <h2 id="db-migration-monitor-title">Use the summary and task rows.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            MONITOR AND CONTROL
+          </>}
+          >
+          Use the summary and task rows.
+        </FeatureGuideHeading>
         <dl className="db-migration-options">
           <div>
             <dt>Overall status</dt>
@@ -2241,17 +2286,17 @@ function DbMigrationGuide() {
         className="activation-feature-section"
         aria-labelledby="db-migration-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="db-migration-coverage-title"
+          icon={<>
             <ListFilter size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT IT BACKFILLS</span>
-            <h2 id="db-migration-coverage-title">
-              Coverage depends on registered tasks.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT IT BACKFILLS
+          </>}
+          >
+          Coverage depends on registered tasks.
+        </FeatureGuideHeading>
         <p>
               The tool migrates supported older FIFU images, galleries, sliders, videos, category media, and related information. The migration page shows the tasks available on your site.
             </p>
@@ -2284,15 +2329,18 @@ function DbMigrationGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="db-migration-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="db-migration-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IF A RUN STOPS</span>
-            <h2 id="db-migration-help-title">Check access, runtime, and task errors.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IF A RUN STOPS
+          </>}
+          tone="help"
+          >
+          Check access, runtime, and task errors.
+        </FeatureGuideHeading>
         <dl className="db-migration-options">
           <div>
             <dt>The menu is missing</dt>
@@ -2365,15 +2413,17 @@ function FifuFieldsGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-fields-editor-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-fields-editor-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WORDPRESS EDITOR</span>
-            <h2 id="fifu-fields-editor-title">Save a featured media URL.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WORDPRESS EDITOR
+          </>}
+          >
+          Save a featured media URL.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -2414,15 +2464,17 @@ function FifuFieldsGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-fields-gravity-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-fields-gravity-title"
+          icon={<>
             <ClipboardCopy size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">GRAVITY FORMS</span>
-            <h2 id="fifu-fields-gravity-title">Collect media with a submission.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            GRAVITY FORMS
+          </>}
+          >
+          Collect media with a submission.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -2457,17 +2509,17 @@ function FifuFieldsGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-fields-vendors-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-fields-vendors-title"
+          icon={<>
             <UsersRound size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">VENDOR PRODUCT FORMS</span>
-            <h2 id="fifu-fields-vendors-title">
-              Let marketplace vendors set product images.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            VENDOR PRODUCT FORMS
+          </>}
+          >
+          Let marketplace vendors set product images.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Dokan</dt>
@@ -2496,19 +2548,18 @@ function FifuFieldsGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="fifu-fields-availability-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="fifu-fields-availability-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              AVAILABILITY AND TROUBLESHOOTING
-            </span>
-            <h2 id="fifu-fields-availability-title">
-              Check the integration and media type.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            AVAILABILITY AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Check the integration and media type.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Image</dt>
@@ -2603,17 +2654,17 @@ function FeaturedMediaFilterGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-media-filter-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-media-filter-purpose-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="featured-media-filter-purpose-title">
-              Review media coverage in place.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Review media coverage in place.
+        </FeatureGuideHeading>
         <p>
           Use this when you are auditing content, locating records that still need media,
           or checking how featured media is stored. It narrows the existing admin list, so
@@ -2627,17 +2678,17 @@ function FeaturedMediaFilterGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-media-filter-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-media-filter-workflow-title"
+          icon={<>
             <ListFilter size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FILTER THE LIST</span>
-            <h2 id="featured-media-filter-workflow-title">
-              Choose a status and apply it.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FILTER THE LIST
+          </>}
+          >
+          Choose a status and apply it.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -2669,17 +2720,17 @@ function FeaturedMediaFilterGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-media-filter-options-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-media-filter-options-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">AVAILABLE MATCHES</span>
-            <h2 id="featured-media-filter-options-title">
-              Match the state you want to review.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            AVAILABLE MATCHES
+          </>}
+          >
+          Match the state you want to review.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Status</dt>
@@ -2713,15 +2764,18 @@ function FeaturedMediaFilterGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="featured-media-filter-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="featured-media-filter-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IF THE FILTER IS MISSING</span>
-            <h2 id="featured-media-filter-help-title">Check the list and your access.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IF THE FILTER IS MISSING
+          </>}
+          tone="help"
+          >
+          Check the list and your access.
+        </FeatureGuideHeading>
         <p>
               If you do not see the filter, open a supported WordPress content list and check that your account can edit that content type.
             </p>
@@ -2786,15 +2840,17 @@ function OrderEmailImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="order-email-enable"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="order-email-enable"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE IT</span>
-            <h2 id="order-email-enable">Enable thumbnails in order emails.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE IT
+          </>}
+          >
+          Enable thumbnails in order emails.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -2826,15 +2882,17 @@ function OrderEmailImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="order-email-behavior"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="order-email-behavior"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT CHANGES</span>
-            <h2 id="order-email-behavior">What changes in the email?</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT CHANGES
+          </>}
+          >
+          What changes in the email?
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Where thumbnails appear</dt>
@@ -2881,15 +2939,18 @@ function OrderEmailImagesGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="order-email-troubleshooting"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="order-email-troubleshooting"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="order-email-troubleshooting">If thumbnails do not appear</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If thumbnails do not appear
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Confirm the switch:</strong> Check{' '}
@@ -2973,17 +3034,17 @@ function AutoSetCategoryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="category-images-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="category-images-purpose-title"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="category-images-purpose-title">
-              Fill category imagery from your catalog.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Fill category imagery from your catalog.
+        </FeatureGuideHeading>
         <p>
           FIFU selects an image from a product assigned to the category. The
           product must have a saved FIFU featured-image URL, and products in the
@@ -3002,15 +3063,17 @@ function AutoSetCategoryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="category-images-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="category-images-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE AUTOMATIC ASSIGNMENT</span>
-            <h2 id="category-images-enable-title">Enable automatic category images.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE AUTOMATIC ASSIGNMENT
+          </>}
+          >
+          Enable automatic category images.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -3061,17 +3124,17 @@ function AutoSetCategoryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="category-images-edit-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="category-images-edit-title"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET OR CLEAR AN IMAGE</span>
-            <h2 id="category-images-edit-title">
-              Set a specific image for a category.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET OR CLEAR AN IMAGE
+          </>}
+          >
+          Set a specific image for a category.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -3155,15 +3218,18 @@ function AutoSetCategoryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="category-images-updates-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="category-images-updates-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SELECTION AND UPDATES</span>
-            <h2 id="category-images-updates-title">Understand automatic updates.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SELECTION AND UPDATES
+          </>}
+          tone="help"
+          >
+          Understand automatic updates.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>
@@ -3255,15 +3321,17 @@ function LightboxAndZoomGuide() {
         className="activation-feature-section"
         aria-labelledby="lightbox-zoom-settings-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="lightbox-zoom-settings-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETTINGS · WOOCOMMERCE</span>
-            <h2 id="lightbox-zoom-settings-title">Turn on the behavior you need.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETTINGS · WOOCOMMERCE
+          </>}
+          >
+          Turn on the behavior you need.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -3305,15 +3373,17 @@ function LightboxAndZoomGuide() {
         className="activation-feature-section"
         aria-labelledby="lightbox-zoom-conditions-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="lightbox-zoom-conditions-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE AND CONDITIONS</span>
-            <h2 id="lightbox-zoom-conditions-title">If lightbox or zoom is missing.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE AND CONDITIONS
+          </>}
+          >
+          If lightbox or zoom is missing.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Product page</dt>
@@ -3408,15 +3478,17 @@ function VimeoOptionsGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="vimeo-setup-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="vimeo-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETTINGS LOCATION</span>
-            <h2 id="vimeo-setup-title">Open Vimeo options.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETTINGS LOCATION
+          </>}
+          >
+          Open Vimeo options.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -3442,17 +3514,17 @@ function VimeoOptionsGuide() {
         className="activation-feature-section"
         aria-labelledby="vimeo-background-options-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="vimeo-background-options-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BACKGROUND VIDEO TAB</span>
-            <h2 id="vimeo-background-options-title">
-              Choose where background mode applies.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            BACKGROUND VIDEO TAB
+          </>}
+          >
+          Choose where background mode applies.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Background video</dt>
@@ -3482,15 +3554,17 @@ function VimeoOptionsGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="vimeo-token-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="vimeo-token-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">MP4 TAB · OPTIONAL</span>
-            <h2 id="vimeo-token-title">Add a token and choose a rendition.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            MP4 TAB · OPTIONAL
+          </>}
+          >
+          Add a token and choose a rendition.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -3533,17 +3607,18 @@ function VimeoOptionsGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="vimeo-limits-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="vimeo-limits-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              WHEN MP4 LOOKUP DOES NOT COMPLETE
-            </span>
-            <h2 id="vimeo-limits-title">Check scopes and file availability.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN MP4 LOOKUP DOES NOT COMPLETE
+          </>}
+          tone="help"
+          >
+          Check scopes and file availability.
+        </FeatureGuideHeading>
         <p>
               If the token does not work or an MP4 file is unavailable, the standard Vimeo player is used. Check the token permissions if the MP4 option does not work.
             </p>
@@ -3627,17 +3702,17 @@ function BackgroundVideoGuide() {
         className="activation-feature-section"
         aria-labelledby="background-video-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="background-video-workflow-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP AND APPLY</span>
-            <h2 id="background-video-workflow-title">
-              Enable the Vimeo background option.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP AND APPLY
+          </>}
+          >
+          Enable the Vimeo background option.
+        </FeatureGuideHeading>
         <p>
               Background mode plays supported Vimeo videos silently, without visible controls. Use it for decorative videos rather than content visitors need to operate.
             </p>
@@ -3684,17 +3759,17 @@ function BackgroundVideoGuide() {
         className="activation-feature-section"
         aria-labelledby="background-video-scope-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="background-video-scope-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL SCOPE CONTROL</span>
-            <h2 id="background-video-scope-title">
-              Restrict background mode to the matching content page.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL SCOPE CONTROL
+          </>}
+          >
+          Restrict background mode to the matching content page.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>background video</dt>
@@ -3719,17 +3794,18 @@ function BackgroundVideoGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="background-video-conditions-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="background-video-conditions-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE AND CHECKS</span>
-            <h2 id="background-video-conditions-title">
-              Check the video type and URL match.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE AND CHECKS
+          </>}
+          tone="help"
+          >
+          Check the video type and URL match.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Provider coverage</dt>
@@ -3828,17 +3904,17 @@ function AutoplayOnMouseoverGuide() {
         className="activation-feature-section"
         aria-labelledby="mouseover-when-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="mouseover-when-title"
+          icon={<>
             <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN IT FITS</span>
-            <h2 id="mouseover-when-title">
-              Use hover previews where a pointer is expected.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN IT FITS
+          </>}
+          >
+          Use hover previews where a pointer is expected.
+        </FeatureGuideHeading>
         <p>
           Use this on product or content grids where visitors benefit from quick motion
           previews. Because playback follows the pointer and pauses when it leaves, keep
@@ -3851,15 +3927,17 @@ function AutoplayOnMouseoverGuide() {
         className="activation-feature-section"
         aria-labelledby="mouseover-config-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="mouseover-config-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP PLAYBACK</span>
-            <h2 id="mouseover-config-title">Enable the setting and its prerequisites.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP PLAYBACK
+          </>}
+          >
+          Enable the setting and its prerequisites.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -3905,15 +3983,18 @@ function AutoplayOnMouseoverGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="mouseover-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="mouseover-coverage-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE · TROUBLESHOOTING</span>
-            <h2 id="mouseover-coverage-title">Check the player and required settings.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE · TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Check the player and required settings.
+        </FeatureGuideHeading>
         <p>
           Hover playback is supported for <strong>YouTube</strong>, <strong>Vimeo</strong>
           , <strong>local videos</strong>, and <strong>remote video files</strong>. If it
@@ -3985,15 +4066,17 @@ function AutoplayGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="autoplay-purpose">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="autoplay-purpose"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE AUTOPLAY</span>
-            <h2 id="autoplay-purpose">Make a featured video visible in motion.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE AUTOPLAY
+          </>}
+          >
+          Make a featured video visible in motion.
+        </FeatureGuideHeading>
         <p>
           A visitor otherwise has to start a featured video manually. Autoplay can make a
           video’s content apparent as it comes into view and reduce that extra action. Use
@@ -4010,15 +4093,17 @@ function AutoplayGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="autoplay-setup">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="autoplay-setup"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP · FIFU SETTINGS</span>
-            <h2 id="autoplay-setup">Choose the pages that should start playback.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP · FIFU SETTINGS
+          </>}
+          >
+          Choose the pages that should start playback.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -4108,15 +4193,18 @@ function AutoplayGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="autoplay-check"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="autoplay-check"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK PLAYBACK</span>
-            <h2 id="autoplay-check">Verify the device, page, and video type.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK PLAYBACK
+          </>}
+          tone="help"
+          >
+          Verify the device, page, and video type.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>!</span>
@@ -4196,15 +4284,17 @@ function MinimumWidthGuide() {
         className="activation-feature-section"
         aria-labelledby="minimum-width-config-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="minimum-width-config-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CONFIGURE</span>
-            <h2 id="minimum-width-config-title">Choose a minimum width</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONFIGURE
+          </>}
+          >
+          Choose a minimum width
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -4236,15 +4326,17 @@ function MinimumWidthGuide() {
         className="activation-feature-section"
         aria-labelledby="minimum-width-rules-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="minimum-width-rules-title"
+          icon={<>
             <Settings2 size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FINE-TUNE</span>
-            <h2 id="minimum-width-rules-title">Adjust the width for your layout</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FINE-TUNE
+          </>}
+          >
+          Adjust the width for your layout
+        </FeatureGuideHeading>
         <p>
           If the thumbnail appears instead of a player, try a lower minimum width.
           Increase it to keep thumbnails visible in narrower layouts.
@@ -4306,17 +4398,17 @@ function VideoControlsGuide() {
         className="activation-feature-section"
         aria-labelledby="video-controls-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-controls-purpose-title"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE THIS SETTING</span>
-            <h2 id="video-controls-purpose-title">
-              Match the player to the viewing experience.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE THIS SETTING
+          </>}
+          >
+          Match the player to the viewing experience.
+        </FeatureGuideHeading>
         <p>
           A video without usable controls can leave visitors unable to pause, seek, or
           adjust playback from your page. Turn controls on when the video is content
@@ -4332,15 +4424,17 @@ function VideoControlsGuide() {
         className="activation-feature-section"
         aria-labelledby="video-controls-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-controls-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETUP · WORDPRESS ADMIN</span>
-            <h2 id="video-controls-setup-title">Choose the site-wide behavior.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETUP · WORDPRESS ADMIN
+          </>}
+          >
+          Choose the site-wide behavior.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -4372,15 +4466,17 @@ function VideoControlsGuide() {
         className="activation-feature-section"
         aria-labelledby="video-controls-effects-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-controls-effects-title"
+          icon={<>
             <Play size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">PLAYER BEHAVIOR</span>
-            <h2 id="video-controls-effects-title">What on and off mean</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            PLAYER BEHAVIOR
+          </>}
+          >
+          What on and off mean
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Native video files</dt>
@@ -4416,15 +4512,17 @@ function VideoControlsGuide() {
         className="activation-feature-section"
         aria-labelledby="video-controls-related-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-controls-related-title"
+          icon={<>
             <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">RELATED PLAYBACK BEHAVIOR</span>
-            <h2 id="video-controls-related-title">Use it with hover playback</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            RELATED PLAYBACK BEHAVIOR
+          </>}
+          >
+          Use it with hover playback
+        </FeatureGuideHeading>
         <p>
               Embedded videos using <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link> require <strong>Video Controls</strong> and <strong>Mute</strong> to be enabled. Keep playback controls on when visitors need to pause the video.
             </p>
@@ -4448,15 +4546,18 @@ function VideoControlsGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="video-controls-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="video-controls-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">LIMITS · TROUBLESHOOTING</span>
-            <h2 id="video-controls-help-title">When the player still shows controls</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            LIMITS · TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          When the player still shows controls
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <p>
@@ -4521,17 +4622,17 @@ function PlayButtonGuide() {
         className="activation-feature-section"
         aria-labelledby="play-button-requirements-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="play-button-requirements-title"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BEFORE YOU TURN IT ON</span>
-            <h2 id="play-button-requirements-title">
-              Prepare a supported featured video and thumbnail.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            BEFORE YOU TURN IT ON
+          </>}
+          >
+          Prepare a supported featured video and thumbnail.
+        </FeatureGuideHeading>
         <p>
           Turn on <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>{' '}
           first. The play control is added to a recognized video thumbnail, so configure
@@ -4574,15 +4675,17 @@ function PlayButtonGuide() {
         className="activation-feature-section"
         aria-labelledby="play-button-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="play-button-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP PLAYBACK</span>
-            <h2 id="play-button-setup-title">Choose how the overlay behaves.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP PLAYBACK
+          </>}
+          >
+          Choose how the overlay behaves.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -4633,15 +4736,17 @@ function PlayButtonGuide() {
         className="activation-feature-section"
         aria-labelledby="play-button-grid-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="play-button-grid-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · GRID DISPLAY</span>
-            <h2 id="play-button-grid-title">Choose where the overlay is hidden.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL · GRID DISPLAY
+          </>}
+          >
+          Choose where the overlay is hidden.
+        </FeatureGuideHeading>
         <p>
           Under <strong>Hide from grid</strong>, enable <strong>WordPress</strong> to hide
           the overlay on the blog home, archives, and search results. Enable{' '}
@@ -4654,17 +4759,18 @@ function PlayButtonGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="play-button-availability-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="play-button-availability-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              IF THE BUTTON DOES NOT APPEAR
-            </span>
-            <h2 id="play-button-availability-title">Check these display conditions.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IF THE BUTTON DOES NOT APPEAR
+          </>}
+          tone="help"
+          >
+          Check these display conditions.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Video and thumbnail:</strong> the video setting and Play Button toggle
@@ -4785,15 +4891,17 @@ function VideoThumbnailGuide() {
         className="activation-feature-section"
         aria-labelledby="video-thumbnail-source-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-thumbnail-source-title"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FIRST, SET THE VIDEO</span>
-            <h2 id="video-thumbnail-source-title">Give your video a thumbnail.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FIRST, SET THE VIDEO
+          </>}
+          >
+          Give your video a thumbnail.
+        </FeatureGuideHeading>
         <p>
           Enable <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>{' '}
           and save a supported video URL on a post, page, or product.
@@ -4843,15 +4951,17 @@ function VideoThumbnailGuide() {
         className="activation-feature-section"
         aria-labelledby="video-thumbnail-contexts-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-thumbnail-contexts-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">VIDEO THUMBNAIL SETTINGS</span>
-            <h2 id="video-thumbnail-contexts-title">Choose where to show the image.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            VIDEO THUMBNAIL SETTINGS
+          </>}
+          >
+          Choose where to show the image.
+        </FeatureGuideHeading>
         <p>
           In WordPress, open <strong>FIFU → Settings → Video</strong>
           and find the separate <strong>Video Thumbnail</strong>{' '}
@@ -4900,15 +5010,17 @@ function VideoThumbnailGuide() {
         className="activation-feature-section"
         aria-labelledby="video-thumbnail-play-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-thumbnail-play-title"
+          icon={<>
             <Play size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL PLAY BUTTON</span>
-            <h2 id="video-thumbnail-play-title">Let visitors start the video.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL PLAY BUTTON
+          </>}
+          >
+          Let visitors start the video.
+        </FeatureGuideHeading>
         <p>
           <strong>Video Thumbnail</strong> and{' '}
           <Link to="/features/play-button/">Play Button</Link> are different
@@ -4967,15 +5079,18 @@ function VideoThumbnailGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="video-thumbnail-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="video-thumbnail-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="video-thumbnail-help-title">If the thumbnail or playback is missing.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If the thumbnail or playback is missing.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>No thumbnail:</strong> Verify the video
@@ -5069,15 +5184,17 @@ function TaxonomyImageGuide() {
         className="activation-feature-section"
         aria-labelledby="taxonomy-image-enable"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="taxonomy-image-enable"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE THE TERM FIELDS</span>
-            <h2 id="taxonomy-image-enable">Turn on Taxonomy Image.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE THE TERM FIELDS
+          </>}
+          >
+          Turn on Taxonomy Image.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -5105,15 +5222,17 @@ function TaxonomyImageGuide() {
         className="activation-feature-section"
         aria-labelledby="taxonomy-image-assign"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="taxonomy-image-assign"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ASSIGN AN IMAGE</span>
-            <h2 id="taxonomy-image-assign">Save a URL with each term.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ASSIGN AN IMAGE
+          </>}
+          >
+          Save a URL with each term.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -5144,15 +5263,17 @@ function TaxonomyImageGuide() {
         className="activation-feature-section"
         aria-labelledby="taxonomy-image-display"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="taxonomy-image-display"
+          icon={<>
             <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">DISPLAY THE IMAGE</span>
-            <h2 id="taxonomy-image-display">Choose an archive or shortcode output.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            DISPLAY THE IMAGE
+          </>}
+          >
+          Choose an archive or shortcode output.
+        </FeatureGuideHeading>
         <p>
               FIFU can display term images in taxonomy archive descriptions. WooCommerce product categories use their own image integration.
             </p>
@@ -5200,17 +5321,18 @@ function TaxonomyImageGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="taxonomy-image-coverage"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="taxonomy-image-coverage"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE AND CHECKS</span>
-            <h2 id="taxonomy-image-coverage">
-              Check the taxonomy, saved URL, and output location.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE AND CHECKS
+          </>}
+          tone="help"
+          >
+          Check the taxonomy, saved URL, and output location.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Fields are missing:</strong> enable Taxonomy Image in the Developers
@@ -5278,17 +5400,17 @@ function ImageSeoGuide() {
         className="activation-feature-section"
         aria-labelledby="image-seo-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="image-seo-purpose-title"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE IT</span>
-            <h2 id="image-seo-purpose-title">
-              Describe remote images and make their URLs discoverable.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE IT
+          </>}
+          >
+          Describe remote images and make their URLs discoverable.
+        </FeatureGuideHeading>
         <p>
               Add descriptive alternative text to help visitors using screen readers understand the image. FIFU can also make the featured image available to supported search and social-sharing tools.
             </p>
@@ -5304,15 +5426,17 @@ function ImageSeoGuide() {
         className="activation-feature-section"
         aria-labelledby="image-seo-alt-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="image-seo-alt-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CONTENT EDITOR</span>
-            <h2 id="image-seo-alt-title">Set alternative text for the featured image.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONTENT EDITOR
+          </>}
+          >
+          Set alternative text for the featured image.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -5347,15 +5471,17 @@ function ImageSeoGuide() {
         className="activation-feature-section"
         aria-labelledby="image-seo-output-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="image-seo-output-title"
+          icon={<>
             <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FRONTEND OUTPUT</span>
-            <h2 id="image-seo-output-title">Know which metadata FIFU supplies.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FRONTEND OUTPUT
+          </>}
+          >
+          Know which metadata FIFU supplies.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Image alt text</dt>
@@ -5388,15 +5514,18 @@ function ImageSeoGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="image-seo-check-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="image-seo-check-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK OUTPUT</span>
-            <h2 id="image-seo-check-title">If image data is missing</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK OUTPUT
+          </>}
+          tone="help"
+          >
+          If image data is missing
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>No description:</strong> confirm the content has a FIFU featured
@@ -5469,17 +5598,17 @@ function ScheduleMetadataGenerationGuide() {
         className="activation-feature-section"
         aria-labelledby="schedule-metadata-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="schedule-metadata-purpose-title"
+          icon={<>
             <Database size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="schedule-metadata-purpose-title">
-              Use it when another process saves FIFU URLs.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Use it when another process saves FIFU URLs.
+        </FeatureGuideHeading>
         <p>
           Without the metadata records, a remote image URL added outside FIFU’s normal
           path may not display to visitors or work with WordPress components that expect
@@ -5495,15 +5624,17 @@ function ScheduleMetadataGenerationGuide() {
         className="activation-feature-section"
         aria-labelledby="schedule-metadata-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="schedule-metadata-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TURN ON THE SCHEDULE</span>
-            <h2 id="schedule-metadata-setup-title">Enable the recurring check.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TURN ON THE SCHEDULE
+          </>}
+          >
+          Enable the recurring check.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -5531,17 +5662,17 @@ function ScheduleMetadataGenerationGuide() {
         className="activation-feature-section"
         aria-labelledby="schedule-metadata-controls-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="schedule-metadata-controls-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CONTROL AND SCOPE</span>
-            <h2 id="schedule-metadata-controls-title">
-              One toggle controls the recurring job.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONTROL AND SCOPE
+          </>}
+          >
+          One toggle controls the recurring job.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Schedule Metadata Generation</dt>
@@ -5578,19 +5709,18 @@ function ScheduleMetadataGenerationGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="schedule-metadata-troubleshooting-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="schedule-metadata-troubleshooting-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              IF AN IMAGE STILL DOES NOT DISPLAY
-            </span>
-            <h2 id="schedule-metadata-troubleshooting-title">
-              Check the saved URL and job conditions.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IF AN IMAGE STILL DOES NOT DISPLAY
+          </>}
+          tone="help"
+          >
+          Check the saved URL and job conditions.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>The expected image is not picked up:</strong> confirm the FIFU URL is
@@ -5662,17 +5792,17 @@ function ImageMetadataGuide() {
         className="activation-feature-section"
         aria-labelledby="image-metadata-use-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="image-metadata-use-title"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY RUN A PASS</span>
-            <h2 id="image-metadata-use-title">
-              Use it when remote media lacks WordPress records.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY RUN A PASS
+          </>}
+          >
+          Use it when remote media lacks WordPress records.
+        </FeatureGuideHeading>
         <p>
           Some themes and integrations look for a WordPress attachment even when FIFU
           stores the image URL remotely. Generating the missing records can restore
@@ -5689,15 +5819,17 @@ function ImageMetadataGuide() {
         className="activation-feature-section"
         aria-labelledby="image-metadata-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="image-metadata-workflow-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ONE-TIME GENERATION</span>
-            <h2 id="image-metadata-workflow-title">Start the missing-records queue.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ONE-TIME GENERATION
+          </>}
+          >
+          Start the missing-records queue.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -5737,17 +5869,17 @@ function ImageMetadataGuide() {
         className="activation-feature-section"
         aria-labelledby="image-metadata-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="image-metadata-coverage-title"
+          icon={<>
             <Database size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT IT CHECKS</span>
-            <h2 id="image-metadata-coverage-title">
-              The queue covers FIFU media on posts, products, and terms.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT IT CHECKS
+          </>}
+          >
+          The queue covers FIFU media on posts, products, and terms.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Posts and post types</dt>
@@ -5793,17 +5925,18 @@ function ImageMetadataGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="image-metadata-recovery-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="image-metadata-recovery-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IF THE IMAGE STILL FAILS</span>
-            <h2 id="image-metadata-recovery-title">
-              Check the saved address and queue state.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IF THE IMAGE STILL FAILS
+          </>}
+          tone="help"
+          >
+          Check the saved address and queue state.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>The image remains unavailable:</strong> confirm the post, product, or
@@ -5882,15 +6015,17 @@ function AutoSetFeaturedMediaGuide() {
         className="activation-feature-section"
         aria-labelledby="auto-content-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="auto-content-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE THE AUTOMATION</span>
-            <h2 id="auto-content-enable-title">Turn it on for new or edited posts.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE THE AUTOMATION
+          </>}
+          >
+          Turn it on for new or edited posts.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -5924,15 +6059,17 @@ function AutoSetFeaturedMediaGuide() {
         className="activation-feature-section"
         aria-labelledby="auto-content-filters-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="auto-content-filters-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CONTROL WHAT QUALIFIES</span>
-            <h2 id="auto-content-filters-title">Set filters for the content scan.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONTROL WHAT QUALIFIES
+          </>}
+          >
+          Set filters for the content scan.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Filter by post type</dt>
@@ -5974,15 +6111,18 @@ function AutoSetFeaturedMediaGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="auto-content-limits-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="auto-content-limits-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IF NOTHING CHANGES</span>
-            <h2 id="auto-content-limits-title">Check the candidate and save path.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IF NOTHING CHANGES
+          </>}
+          tone="help"
+          >
+          Check the candidate and save path.
+        </FeatureGuideHeading>
         <p>
               FIFU looks through your saved post content for supported images and videos, then chooses the first eligible item. Use the source filters to skip media you do not want to feature.
             </p>
@@ -6048,15 +6188,17 @@ function AutoSetScreenshotGuide() {
         className="activation-feature-section"
         aria-labelledby="screenshot-feature-setup"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="screenshot-feature-setup"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP</span>
-            <h2 id="screenshot-feature-setup">Connect the page URL field.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP
+          </>}
+          >
+          Connect the page URL field.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -6096,15 +6238,18 @@ function AutoSetScreenshotGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="screenshot-feature-coverage"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="screenshot-feature-coverage"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">RESULTS AND TROUBLESHOOTING</span>
-            <h2 id="screenshot-feature-coverage">Know which posts are eligible.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            RESULTS AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Know which posts are eligible.
+        </FeatureGuideHeading>
         <p>
               FIFU leaves existing featured media alone. Screenshots remain remote unless you choose to save them in the <Link to="/features/save-in-the-media-library/">Media Library</Link>.
             </p>
@@ -6213,15 +6358,17 @@ function PageRedirectionGuide() {
         className="activation-feature-section"
         aria-labelledby="page-redirection-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="page-redirection-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE THE FIELD</span>
-            <h2 id="page-redirection-enable-title">Turn on Page redirection.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE THE FIELD
+          </>}
+          >
+          Turn on Page redirection.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -6244,17 +6391,17 @@ function PageRedirectionGuide() {
         className="activation-feature-section"
         aria-labelledby="page-redirection-destination-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="page-redirection-destination-title"
+          icon={<>
             <ExternalLink size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET AND SAVE</span>
-            <h2 id="page-redirection-destination-title">
-              Add the destination to your content.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET AND SAVE
+          </>}
+          >
+          Add the destination to your content.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -6287,15 +6434,17 @@ function PageRedirectionGuide() {
         className="activation-feature-section"
         aria-labelledby="page-redirection-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="page-redirection-coverage-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE</span>
-            <h2 id="page-redirection-coverage-title">Where the field appears</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE
+          </>}
+          >
+          Where the field appears
+        </FeatureGuideHeading>
         <p>
               This feature is available for supported posts, pages, and bbPress content. It does not apply to WooCommerce products.
             </p>
@@ -6305,17 +6454,18 @@ function PageRedirectionGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="page-redirection-troubleshooting-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="page-redirection-troubleshooting-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK THE RESULT</span>
-            <h2 id="page-redirection-troubleshooting-title">
-              If the image does not open the destination
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK THE RESULT
+          </>}
+          tone="help"
+          >
+          If the image does not open the destination
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>!</span>
@@ -6391,15 +6541,17 @@ function DisableRightClickGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="disable-right-click-setup">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="disable-right-click-setup"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP</span>
-            <h2 id="disable-right-click-setup">Turn on the site-wide setting.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP
+          </>}
+          >
+          Turn on the site-wide setting.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -6431,15 +6583,18 @@ function DisableRightClickGuide() {
       />
 
       <section className="activation-feature-section activation-feature-help" aria-labelledby="disable-right-click-scope">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="disable-right-click-scope"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SCOPE AND TROUBLESHOOTING</span>
-            <h2 id="disable-right-click-scope">Know what the setting affects.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SCOPE AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Know what the setting affects.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li><strong>Only image menus are suppressed.</strong> The handler targets frontend <code>&lt;img&gt;</code> elements; right-clicking page text or a background is outside its scope.</li>
           <li><strong>This is a deterrent, not access control.</strong> Visitors may still obtain an image through other browser or network tools.</li>
@@ -6499,15 +6654,17 @@ function AutoSetFeaturedMediaByPageGuide() {
         className="activation-feature-section"
         aria-labelledby="page-finder-enable"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="page-finder-enable"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE THE SCHEDULED SEARCH</span>
-            <h2 id="page-finder-enable">Turn on page-based media lookup.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE THE SCHEDULED SEARCH
+          </>}
+          >
+          Turn on page-based media lookup.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li><span>1</span><p>In WordPress admin, open <strong>FIFU → Settings → Automatic</strong>, then find <strong>Auto set featured media using web page address</strong>.</p></li>
           <li><span>2</span><p>On <strong>Auto set</strong>, enable <strong>auto set featured media using web page address</strong>. The scheduled finder checks about once a minute for eligible content without FIFU featured media.</p></li>
@@ -6519,15 +6676,17 @@ function AutoSetFeaturedMediaByPageGuide() {
         className="activation-feature-section"
         aria-labelledby="page-finder-source"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="page-finder-source"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ADD A SOURCE PAGE</span>
-            <h2 id="page-finder-source">Save the page address with each item.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ADD A SOURCE PAGE
+          </>}
+          >
+          Save the page address with each item.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -6552,13 +6711,17 @@ function AutoSetFeaturedMediaByPageGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="page-finder-integrations">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon"><Code2 size={19} aria-hidden="true" /></span>
-          <div>
-            <span className="activation-feature-kicker">IMPORTS AND AUTOMATION</span>
-            <h2 id="page-finder-integrations">Set the source during import or through an API.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading
+          id="page-finder-integrations"
+          icon={<>
+            <Code2 size={19} aria-hidden="true" />
+          </>}
+          kicker={<>
+            IMPORTS AND AUTOMATION
+          </>}
+          >
+          Set the source during import or through an API.
+        </FeatureGuideHeading>
         <p>If you create content in bulk, map the source page to <code>Media finder (webpage URL)</code> in the <Link to="/features/wp-all-import-add-on/">WP All Import add-on</Link>. The WordPress REST integration also accepts the post field <code>fifu_finder_url</code>, so your publishing process can set the same source address. See the <Link to="/features/wp-woocommerce-rest-api/">WordPress and WooCommerce REST API guide</Link> for the integration's broader setup.</p>
         <p>You can configure the finder from a WordPress installation with <Link to="/features/wp-cli/">WP-CLI</Link>:</p>
         
@@ -6596,28 +6759,35 @@ function AutoSetFeaturedMediaByPageGuide() {
         className="activation-feature-section"
         aria-labelledby="page-finder-amazon"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="page-finder-amazon"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · AMAZON SOURCES</span>
-            <h2 id="page-finder-amazon">Choose how Amazon pages are handled.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL · AMAZON SOURCES
+          </>}
+          >
+          Choose how Amazon pages are handled.
+        </FeatureGuideHeading>
         <p>Open the <strong>Amazon</strong> tab in the same settings panel and enable <strong>set images and videos to the product gallery</strong> if you want Amazon page results added to a product's gallery. Amazon pages, including <code>amzn.to</code> short links, use this branch only while that option is on. With it off, they use the regular single-media lookup.</p>
         <p>For regular page lookups, FIFU prefers the page's Open Graph image; if that is unavailable, it selects the largest image it can measure. When video search is on, the finder can instead assign the first embedded video it finds. Amazon results may include multiple images and videos for the product gallery.</p>
         <p>For a separate workflow that sets a product gallery from image URLs you already have, read <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.</p>
       </section>
 
       <section className="activation-feature-section activation-feature-help" aria-labelledby="page-finder-results">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help"><CircleAlert size={18} aria-hidden="true" /></span>
-          <div>
-            <span className="activation-feature-kicker">RESULTS AND TROUBLESHOOTING</span>
-            <h2 id="page-finder-results">Know when the finder can act.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading
+          id="page-finder-results"
+          icon={<>
+            <CircleAlert size={18} aria-hidden="true" />
+          </>}
+          kicker={<>
+            RESULTS AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Know when the finder can act.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li><strong>Existing featured media stays in place.</strong> The scheduled scan selects items without FIFU image, video, custom-video, or slider-image values.</li>
           <li><strong>If nothing is assigned,</strong> confirm the page address is saved and the source page returns a usable image or embedded video. Failed, non-success, or empty remote lookup responses do not produce media.</li>
@@ -6680,15 +6850,17 @@ function AutoSetCustomFieldGuide() {
         className="activation-feature-section"
         aria-labelledby="custom-field-setup"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="custom-field-setup"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP THE SOURCE</span>
-            <h2 id="custom-field-setup">Choose the metadata key and enable the check.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP THE SOURCE
+          </>}
+          >
+          Choose the metadata key and enable the check.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -6730,15 +6902,17 @@ function AutoSetCustomFieldGuide() {
         className="activation-feature-section"
         aria-labelledby="custom-field-coverage"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="custom-field-coverage"
+          icon={<>
             <RefreshCw size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT THE CHECK CHANGES</span>
-            <h2 id="custom-field-coverage">It fills empty featured-media slots.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT THE CHECK CHANGES
+          </>}
+          >
+          It fills empty featured-media slots.
+        </FeatureGuideHeading>
         <p>
               FIFU checks for a saved image or video URL and only assigns media to content that does not already have featured media.
             </p>
@@ -6751,15 +6925,17 @@ function AutoSetCustomFieldGuide() {
         className="activation-feature-section"
         aria-labelledby="custom-field-troubleshooting"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="custom-field-troubleshooting"
+          icon={<>
             <CircleAlert size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN NOTHING IS ASSIGNED</span>
-            <h2 id="custom-field-troubleshooting">Check the saved key and URL value.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN NOTHING IS ASSIGNED
+          </>}
+          >
+          Check the saved key and URL value.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>No assignment appears</dt>
@@ -6863,15 +7039,17 @@ function AutoSetProductImagesFromAsinGuide() {
         className="activation-feature-section"
         aria-labelledby="asin-connect-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="asin-connect-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP THE LOOKUP</span>
-            <h2 id="asin-connect-title">Connect Amazon and enable automatic lookup.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP THE LOOKUP
+          </>}
+          >
+          Connect Amazon and enable automatic lookup.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -6904,15 +7082,17 @@ function AutoSetProductImagesFromAsinGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="asin-input-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="asin-input-title"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">PROVIDE AN IDENTIFIER</span>
-            <h2 id="asin-input-title">Provide the ASIN for each item.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            PROVIDE AN IDENTIFIER
+          </>}
+          >
+          Provide the ASIN for each item.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Enter it on the item</dt>
@@ -6938,15 +7118,17 @@ function AutoSetProductImagesFromAsinGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="asin-result-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="asin-result-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT THE CHECK DOES</span>
-            <h2 id="asin-result-title">What happens after a successful lookup?</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT THE CHECK DOES
+          </>}
+          >
+          What happens after a successful lookup?
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list asin-results">
           <li>
             <p>
@@ -6981,15 +7163,18 @@ function AutoSetProductImagesFromAsinGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="asin-eligibility-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="asin-eligibility-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ELIGIBILITY AND CHECKS</span>
-            <h2 id="asin-eligibility-title">Why might an item be skipped?</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ELIGIBILITY AND CHECKS
+          </>}
+          tone="help"
+          >
+          Why might an item be skipped?
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Already has media:</strong> items with a WordPress featured
@@ -7077,15 +7262,17 @@ function AutomaticUpdatesGuide() {
         className="activation-feature-section"
         aria-labelledby="automatic-updates-license-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="automatic-updates-license-title"
+          icon={<>
             <KeyRound size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">REGISTER YOUR SITE</span>
-            <h2 id="automatic-updates-license-title">Submit your license key.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REGISTER YOUR SITE
+          </>}
+          >
+          Submit your license key.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7135,17 +7322,17 @@ function AutomaticUpdatesGuide() {
         className="activation-feature-section"
         aria-labelledby="automatic-updates-install-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="automatic-updates-install-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK AND INSTALL</span>
-            <h2 id="automatic-updates-install-title">
-              Choose how releases are installed.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK AND INSTALL
+          </>}
+          >
+          Choose how releases are installed.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7178,17 +7365,18 @@ function AutomaticUpdatesGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="automatic-updates-troubleshoot-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="automatic-updates-troubleshoot-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN A CHECK DOES NOT WORK</span>
-            <h2 id="automatic-updates-troubleshoot-title">
-              Read the result and correct its cause.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN A CHECK DOES NOT WORK
+          </>}
+          tone="help"
+          >
+          Read the result and correct its cause.
+        </FeatureGuideHeading>
         <dl className="automatic-updates-results">
           <div>
             <dt>Key rejected or expired</dt>
@@ -7267,15 +7455,17 @@ function AutoSetFeaturedImageByTitleGuide() {
         </div>
       </section>
       <section className="activation-feature-section" aria-labelledby="title-search-use">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="title-search-use"
+          icon={<>
             <Search size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE TITLE SEARCH</span>
-            <h2 id="title-search-use">Choose how much review you want.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE TITLE SEARCH
+          </>}
+          >
+          Choose how much review you want.
+        </FeatureGuideHeading>
         <p>
           Without this search, you need to find an image elsewhere and enter its address
           for each post. A title-based search brings candidate images into the FIFU editor
@@ -7294,15 +7484,17 @@ function AutoSetFeaturedImageByTitleGuide() {
         className="activation-feature-section"
         aria-labelledby="title-search-manual"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="title-search-manual"
+          icon={<>
             <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">MANUAL SEARCH</span>
-            <h2 id="title-search-manual">Preview a match before you save.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            MANUAL SEARCH
+          </>}
+          >
+          Preview a match before you save.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7339,15 +7531,17 @@ function AutoSetFeaturedImageByTitleGuide() {
         className="activation-feature-section"
         aria-labelledby="title-search-filters"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="title-search-filters"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SEARCH FILTERS</span>
-            <h2 id="title-search-filters">Narrow or broaden the candidates.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SEARCH FILTERS
+          </>}
+          >
+          Narrow or broaden the candidates.
+        </FeatureGuideHeading>
         <p>
           Open{' '}
           <strong>
@@ -7392,17 +7586,17 @@ function AutoSetFeaturedImageByTitleGuide() {
         </p>
       </section>
       <section className="activation-feature-section" aria-labelledby="title-search-auto">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="title-search-auto"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              OPTIONAL SCHEDULED ASSIGNMENT
-            </span>
-            <h2 id="title-search-auto">Fill missing featured images gradually.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL SCHEDULED ASSIGNMENT
+          </>}
+          >
+          Fill missing featured images gradually.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7441,15 +7635,17 @@ function AutoSetFeaturedImageByTitleGuide() {
         className="activation-feature-section"
         aria-labelledby="title-search-credit"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="title-search-credit"
+          icon={<>
             <ExternalLink size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SOURCE CREDIT</span>
-            <h2 id="title-search-credit">Optionally link visitors to the source page.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SOURCE CREDIT
+          </>}
+          >
+          Optionally link visitors to the source page.
+        </FeatureGuideHeading>
         <p>
           Search results include the address of the remote post that owns the image. To
           make the featured image link to that page on singular content pages, enable{' '}
@@ -7462,15 +7658,18 @@ function AutoSetFeaturedImageByTitleGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="title-search-troubleshoot"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="title-search-troubleshoot"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="title-search-troubleshoot">When results are empty or off-topic.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          When results are empty or off-topic.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>No useful matches:</strong> test the post title with Keywords left
@@ -7545,15 +7744,17 @@ function ReplaceNotFoundImageGuide() {
         className="activation-feature-section"
         aria-labelledby="replace-not-found-why"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="replace-not-found-why"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="replace-not-found-why">Keep your layouts readable when a host fails.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Keep your layouts readable when a host fails.
+        </FeatureGuideHeading>
         <p>
           A broken featured image can leave an empty thumbnail or a browser's
           missing-image icon in blog cards, articles, or product displays.
@@ -7573,15 +7774,17 @@ function ReplaceNotFoundImageGuide() {
         className="activation-feature-section"
         aria-labelledby="replace-not-found-setup"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="replace-not-found-setup"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP YOUR BACKUP</span>
-            <h2 id="replace-not-found-setup">Choose one reliable replacement image.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP YOUR BACKUP
+          </>}
+          >
+          Choose one reliable replacement image.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7626,15 +7829,17 @@ function ReplaceNotFoundImageGuide() {
         className="activation-feature-section"
         aria-labelledby="replace-not-found-how"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="replace-not-found-how"
+          icon={<>
             <RefreshCw size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">HOW IT WORKS</span>
-            <h2 id="replace-not-found-how">The browser swaps the displayed image after an error.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            HOW IT WORKS
+          </>}
+          >
+          The browser swaps the displayed image after an error.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7670,15 +7875,17 @@ function ReplaceNotFoundImageGuide() {
         className="activation-feature-section"
         aria-labelledby="replace-not-found-coverage"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="replace-not-found-coverage"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHERE IT APPLIES</span>
-            <h2 id="replace-not-found-coverage">Know which FIFU displays use the backup.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHERE IT APPLIES
+          </>}
+          >
+          Know which FIFU displays use the backup.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Remote featured images · Free and Premium</dt>
@@ -7719,15 +7926,17 @@ function ReplaceNotFoundImageGuide() {
         className="activation-feature-section"
         aria-labelledby="replace-not-found-related"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="replace-not-found-related"
+          icon={<>
             <ListFilter size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">RELATED FEATURES</span>
-            <h2 id="replace-not-found-related">A fallback is different from an empty-image default.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            RELATED FEATURES
+          </>}
+          >
+          A fallback is different from an empty-image default.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Replace Not Found Image</dt>
@@ -7773,15 +7982,18 @@ function ReplaceNotFoundImageGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="replace-not-found-troubleshooting"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="replace-not-found-troubleshooting"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="replace-not-found-troubleshooting">If the backup does not appear</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If the backup does not appear
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Test the backup itself:</strong> visit the exact URL
@@ -7860,17 +8072,17 @@ function BrokenLinkCheckerGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="blc-enable-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="blc-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">START MONITORING</span>
-            <h2 id="blc-enable-title">
-              Enable the check and let eligible pages enter the queue.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            START MONITORING
+          </>}
+          >
+          Enable the check and let eligible pages enter the queue.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7906,15 +8118,17 @@ function BrokenLinkCheckerGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="blc-results-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="blc-results-title"
+          icon={<>
             <ListFilter size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">UNDERSTAND THE RESULTS</span>
-            <h2 id="blc-results-title">A URL appears after three failed checks.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            UNDERSTAND THE RESULTS
+          </>}
+          >
+          A URL appears after three failed checks.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Checks run in the background</dt>
@@ -7948,15 +8162,17 @@ function BrokenLinkCheckerGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="blc-repair-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="blc-repair-title"
+          icon={<>
             <Wrench size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">REPAIR A LISTED URL</span>
-            <h2 id="blc-repair-title">Update the source on the affected post.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REPAIR A LISTED URL
+          </>}
+          >
+          Update the source on the affected post.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -7991,15 +8207,18 @@ function BrokenLinkCheckerGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="blc-troubleshoot-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="blc-troubleshoot-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IF A URL IS MISSING</span>
-            <h2 id="blc-troubleshoot-title">Check eligibility, timing, and access.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IF A URL IS MISSING
+          </>}
+          tone="help"
+          >
+          Check eligibility, timing, and access.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>No row yet:</strong> confirm Link Checker is enabled and that
@@ -8089,15 +8308,17 @@ function ModifyPostContentGuide() {
         className="activation-feature-section"
         aria-labelledby="modify-content-setup"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="modify-content-setup"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETTINGS WORKFLOW</span>
-            <h2 id="modify-content-setup">Choose one display change.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETTINGS WORKFLOW
+          </>}
+          >
+          Choose one display change.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -8122,15 +8343,17 @@ function ModifyPostContentGuide() {
         className="activation-feature-section"
         aria-labelledby="modify-content-options"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="modify-content-options"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">AVAILABLE CHANGES</span>
-            <h2 id="modify-content-options">What each toggle changes</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            AVAILABLE CHANGES
+          </>}
+          >
+          What each toggle changes
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>add missing media</dt>
@@ -8154,15 +8377,17 @@ function ModifyPostContentGuide() {
         className="activation-feature-section"
         aria-labelledby="modify-content-scope"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="modify-content-scope"
+          icon={<>
             <ListFilter size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL SCOPE</span>
-            <h2 id="modify-content-scope">Apply the changes to selected post types.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL SCOPE
+          </>}
+          >
+          Apply the changes to selected post types.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -8185,17 +8410,18 @@ function ModifyPostContentGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="modify-content-matching"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="modify-content-matching"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              MATCHING AND TROUBLESHOOTING
-            </span>
-            <h2 id="modify-content-matching">If repeated media remains</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            MATCHING AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If repeated media remains
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <p>
@@ -8286,15 +8512,17 @@ function HideFeaturedMediaGuide() {
         className="activation-feature-section"
         aria-labelledby="hide-featured-media-setup"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="hide-featured-media-setup"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET THE DISPLAY RULE</span>
-            <h2 id="hide-featured-media-setup">Choose where the media disappears.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET THE DISPLAY RULE
+          </>}
+          >
+          Choose where the media disappears.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -8333,15 +8561,17 @@ function HideFeaturedMediaGuide() {
         className="activation-feature-section"
         aria-labelledby="hide-featured-media-filters"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="hide-featured-media-filters"
+          icon={<>
             <ListFilter size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL FILTERS</span>
-            <h2 id="hide-featured-media-filters">Limit the rule by content type.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL FILTERS
+          </>}
+          >
+          Limit the rule by content type.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Filter by post type</dt>
@@ -8376,15 +8606,17 @@ function HideFeaturedMediaGuide() {
         className="activation-feature-section"
         aria-labelledby="hide-featured-media-coverage"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="hide-featured-media-coverage"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT TO EXPECT</span>
-            <h2 id="hide-featured-media-coverage">Understand the display boundary.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT TO EXPECT
+          </>}
+          >
+          Understand the display boundary.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Hidden:</strong> FIFU featured media on a matching singular page. The
@@ -8441,17 +8673,18 @@ function HideFeaturedMediaGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="hide-featured-media-troubleshooting"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="hide-featured-media-troubleshooting"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="hide-featured-media-troubleshooting">
-              If the result does not match.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If the result does not match.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             If FIFU media remains on a singular page, confirm the <strong>Hide</strong>{' '}
@@ -8527,15 +8760,17 @@ function ClearMetadataGuide() {
         className="activation-feature-section"
         aria-labelledby="clear-metadata-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="clear-metadata-workflow-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">RUN THE CLEANUP</span>
-            <h2 id="clear-metadata-workflow-title">Start it from Metadata settings.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            RUN THE CLEANUP
+          </>}
+          >
+          Start it from Metadata settings.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -8569,17 +8804,17 @@ function ClearMetadataGuide() {
         className="activation-feature-section"
         aria-labelledby="clear-metadata-effects-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="clear-metadata-effects-title"
+          icon={<>
             <Database size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT CHANGES</span>
-            <h2 id="clear-metadata-effects-title">
-              Metadata is removed; saved image URLs stay.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT CHANGES
+          </>}
+          >
+          Metadata is removed; saved image URLs stay.
+        </FeatureGuideHeading>
         <p>
           The operation removes FIFU-generated Image Metadata records, not the image URLs.
           Turning off <strong>Image Metadata</strong> only stops metadata generation; it
@@ -8599,17 +8834,18 @@ function ClearMetadataGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="clear-metadata-limits-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="clear-metadata-limits-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">LIMITS AND RECOVERY</span>
-            <h2 id="clear-metadata-limits-title">
-              Wait for active metadata work to finish.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            LIMITS AND RECOVERY
+          </>}
+          tone="help"
+          >
+          Wait for active metadata work to finish.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Another metadata task is running:</strong> a cleanup request is
@@ -8688,17 +8924,17 @@ function DeleteAllUrlsGuide() {
         className="activation-feature-section"
         aria-labelledby="delete-all-urls-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="delete-all-urls-purpose-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="delete-all-urls-purpose-title">
-              Use this when you are removing FIFU media.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Use this when you are removing FIFU media.
+        </FeatureGuideHeading>
         <p>
           This cleanup is for a site-wide switch away from remote FIFU images, or another
           deliberate removal of all FIFU media references. It can prevent old remote URLs
@@ -8715,15 +8951,17 @@ function DeleteAllUrlsGuide() {
         className="activation-feature-section"
         aria-labelledby="delete-all-urls-prereq-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="delete-all-urls-prereq-title"
+          icon={<>
             <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">REQUIRED ACCESS</span>
-            <h2 id="delete-all-urls-prereq-title">Enable the deletion safeguard.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REQUIRED ACCESS
+          </>}
+          >
+          Enable the deletion safeguard.
+        </FeatureGuideHeading>
         <p>
           Before the control can delete data, set <code>FIFU_DELETE_ALL_URLS</code> to{' '}
           <code>true</code> in the FIFU plugin file. The constant defaults to{' '}
@@ -8759,15 +8997,17 @@ function DeleteAllUrlsGuide() {
         className="activation-feature-section"
         aria-labelledby="delete-all-urls-use-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="delete-all-urls-use-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">RUN THE CLEANUP</span>
-            <h2 id="delete-all-urls-use-title">Start the site-wide deletion.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            RUN THE CLEANUP
+          </>}
+          >
+          Start the site-wide deletion.
+        </FeatureGuideHeading>
         <p>
           The action is in <strong>FIFU → Settings → Metadata → Delete All URLs</strong>,
           below the metadata and cleanup controls.
@@ -8795,15 +9035,18 @@ function DeleteAllUrlsGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="delete-all-urls-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="delete-all-urls-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">LIMITS AND RECOVERY</span>
-            <h2 id="delete-all-urls-help-title">Understand what can stop the run.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            LIMITS AND RECOVERY
+          </>}
+          tone="help"
+          >
+          Understand what can stop the run.
+        </FeatureGuideHeading>
         <p>
           If metadata cleanup cannot finish, deletion does not proceed. Resolve the
           reported errors, confirm <code>FIFU_DELETE_ALL_URLS</code> is enabled, and
@@ -8865,17 +9108,17 @@ function OptimizedImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="optimized-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="optimized-purpose-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="optimized-purpose-title">
-              Reduce oversized downloads on image-heavy pages.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Reduce oversized downloads on image-heavy pages.
+        </FeatureGuideHeading>
         <p>
               FIFU requests smaller versions of remote images when your pages need them, which can improve loading on cards, archives, and phones. The original image stays on its existing host.
             </p>
@@ -8891,15 +9134,17 @@ function OptimizedImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="optimized-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="optimized-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP · OPTIMIZE</span>
-            <h2 id="optimized-enable-title">Enable the delivery paths you need.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP · OPTIMIZE
+          </>}
+          >
+          Enable the delivery paths you need.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -8931,17 +9176,17 @@ function OptimizedImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="optimized-providers-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="optimized-providers-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">PROVIDER · SIZES</span>
-            <h2 id="optimized-providers-title">
-              Choose a CDN and optional square output.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            PROVIDER · SIZES
+          </>}
+          >
+          Choose a CDN and optional square output.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>
@@ -8997,15 +9242,18 @@ function OptimizedImagesGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="optimized-limits-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="optimized-limits-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE · TROUBLESHOOTING</span>
-            <h2 id="optimized-limits-title">Check what the optimizer can process.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE · TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Check what the optimizer can process.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Featured-image resizing</dt>
@@ -9090,17 +9338,17 @@ function SquareImageOptionsGuide() {
         className="activation-feature-section"
         aria-labelledby="square-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="square-purpose-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE SQUARE OUTPUT</span>
-            <h2 id="square-purpose-title">
-              Match square placements without changing the source image.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE SQUARE OUTPUT
+          </>}
+          >
+          Match square placements without changing the source image.
+        </FeatureGuideHeading>
         <p>
           A theme or layout may request a square image even when your source is landscape
           or portrait. These choices change the delivered image dimensions: cropping fills
@@ -9121,15 +9369,17 @@ function SquareImageOptionsGuide() {
         className="activation-feature-section"
         aria-labelledby="square-settings-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="square-settings-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CONFIGURE · IMAGE SIZES</span>
-            <h2 id="square-settings-title">Set desktop and mobile separately.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONFIGURE · IMAGE SIZES
+          </>}
+          >
+          Set desktop and mobile separately.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9165,15 +9415,17 @@ function SquareImageOptionsGuide() {
         className="activation-feature-section"
         aria-labelledby="square-options-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="square-options-title"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">AVAILABLE CHOICES</span>
-            <h2 id="square-options-title">Choose how each square is made.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            AVAILABLE CHOICES
+          </>}
+          >
+          Choose how each square is made.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Make square by cropping</dt>
@@ -9209,15 +9461,18 @@ function SquareImageOptionsGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="square-scope-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="square-scope-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SCOPE AND TROUBLESHOOTING</span>
-            <h2 id="square-scope-title">Check the delivery path and device selection.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SCOPE AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Check the delivery path and device selection.
+        </FeatureGuideHeading>
         <p>
               These options apply only to images delivered through FIFU CDN or FIFU Cloud. Other images keep their normal appearance.
             </p>
@@ -9284,17 +9539,17 @@ function FeaturedImagesRssGuide() {
         className="activation-feature-section"
         aria-labelledby="rss-feature-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="rss-feature-purpose-title"
+          icon={<>
             <Rss size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY INCLUDE IMAGES</span>
-            <h2 id="rss-feature-purpose-title">
-              Make feed items useful beyond your site.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY INCLUDE IMAGES
+          </>}
+          >
+          Make feed items useful beyond your site.
+        </FeatureGuideHeading>
         <p>
           A feed item may otherwise contain only its text and links. Adding the featured
           image URL lets a compatible reader or email service display the same visual
@@ -9312,15 +9567,17 @@ function FeaturedImagesRssGuide() {
         className="activation-feature-section"
         aria-labelledby="rss-feature-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="rss-feature-workflow-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">AUTOMATIC WORKFLOW</span>
-            <h2 id="rss-feature-workflow-title">Add an image to a feed item.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            AUTOMATIC WORKFLOW
+          </>}
+          >
+          Add an image to a feed item.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9351,15 +9608,18 @@ function FeaturedImagesRssGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="rss-feature-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="rss-feature-coverage-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IMAGE SELECTION AND LIMITS</span>
-            <h2 id="rss-feature-coverage-title">Know which image URL is included.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IMAGE SELECTION AND LIMITS
+          </>}
+          tone="help"
+          >
+          Know which image URL is included.
+        </FeatureGuideHeading>
         <p>
           The resolved FIFU main image is used first; if that does not resolve, the
           WordPress featured attachment URL is used. If neither produces a URL, the item
@@ -9429,17 +9689,17 @@ function BbpressBuddybossGuide() {
         className="activation-feature-section"
         aria-labelledby="community-context-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="community-context-title"
+          icon={<>
             <UsersRound size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="community-context-title">
-              Give forum and activity posts a place for remote images.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Give forum and activity posts a place for remote images.
+        </FeatureGuideHeading>
         <p>
           Community forms do not use the usual FIFU post editor. This integration adds a
           remote image URL field to bbPress topic and reply forms and converts direct
@@ -9458,15 +9718,17 @@ function BbpressBuddybossGuide() {
         className="activation-feature-section"
         aria-labelledby="community-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="community-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE</span>
-            <h2 id="community-setup-title">Turn on the shared community option.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE
+          </>}
+          >
+          Turn on the shared community option.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9492,15 +9754,17 @@ function BbpressBuddybossGuide() {
         className="activation-feature-section"
         aria-labelledby="bbpress-flow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="bbpress-flow-title"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BBPRESS</span>
-            <h2 id="bbpress-flow-title">Add an image URL to a topic or reply.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            BBPRESS
+          </>}
+          >
+          Add an image URL to a topic or reply.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9542,15 +9806,17 @@ function BbpressBuddybossGuide() {
         className="activation-feature-section"
         aria-labelledby="buddyboss-flow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="buddyboss-flow-title"
+          icon={<>
             <MessageSquare size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BUDDYBOSS ACTIVITY</span>
-            <h2 id="buddyboss-flow-title">Paste direct image links into activity.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            BUDDYBOSS ACTIVITY
+          </>}
+          >
+          Paste direct image links into activity.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9592,17 +9858,18 @@ function BbpressBuddybossGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="community-troubleshooting-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="community-troubleshooting-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="community-troubleshooting-title">
-              Check the matching platform and image path.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Check the matching platform and image path.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>bbPress field or image is missing</dt>
@@ -9680,15 +9947,17 @@ function PlaybackLoopGuide() {
         className="activation-feature-section"
         aria-labelledby="playback-loop-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="playback-loop-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WORDPRESS DASHBOARD</span>
-            <h2 id="playback-loop-enable-title">Turn on the site-wide switch.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WORDPRESS DASHBOARD
+          </>}
+          >
+          Turn on the site-wide switch.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9710,15 +9979,17 @@ function PlaybackLoopGuide() {
         className="activation-feature-section"
         aria-labelledby="playback-loop-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="playback-loop-coverage-title"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE</span>
-            <h2 id="playback-loop-coverage-title">Where the switch applies.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE
+          </>}
+          >
+          Where the switch applies.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Supported players</dt>
@@ -9764,15 +10035,18 @@ function PlaybackLoopGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="playback-loop-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="playback-loop-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="playback-loop-help-title">If a video stops at the end.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If a video stops at the end.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9845,30 +10119,34 @@ function MuteGuide() {
         className="activation-feature-section"
         aria-labelledby="mute-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="mute-purpose-title"
+          icon={<>
             <VolumeX size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE MUTE</span>
-            <h2 id="mute-purpose-title">Control unexpected sound.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE MUTE
+          </>}
+          >
+          Control unexpected sound.
+        </FeatureGuideHeading>
         <p>
               Turn on <strong>Mute</strong> when you want featured videos to start silently, especially when using <Link to="/features/autoplay/">Autoplay</Link> or <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link>. Leave it off when videos should start with sound.
             </p>
       </section>
 
       <section className="activation-feature-section" aria-labelledby="mute-setup-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="mute-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETTINGS · VIDEO / AUDIO</span>
-            <h2 id="mute-setup-title">Set each device control.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETTINGS · VIDEO / AUDIO
+          </>}
+          >
+          Set each device control.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -9897,15 +10175,17 @@ function MuteGuide() {
         className="activation-feature-section"
         aria-labelledby="mute-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="mute-coverage-title"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COVERAGE AND LIMITS</span>
-            <h2 id="mute-coverage-title">Where the setting applies.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COVERAGE AND LIMITS
+          </>}
+          >
+          Where the setting applies.
+        </FeatureGuideHeading>
         <p>
           Mute applies to supported featured video players,
           including YouTube, Vimeo, and direct video files.
@@ -9940,15 +10220,18 @@ function MuteGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="mute-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="mute-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="mute-help-title">If playback starts with sound.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If playback starts with sound.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -10027,15 +10310,17 @@ function YoutubeOptionsGuide() {
         className="activation-feature-section"
         aria-labelledby="youtube-options-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="youtube-options-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETTINGS · YOUTUBE ONLY</span>
-            <h2 id="youtube-options-setup-title">Enable the setting.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETTINGS · YOUTUBE ONLY
+          </>}
+          >
+          Enable the setting.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -10064,15 +10349,17 @@ function YoutubeOptionsGuide() {
         className="activation-feature-section"
         aria-labelledby="youtube-options-coverage-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="youtube-options-coverage-title"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">EFFECT AND SCOPE</span>
-            <h2 id="youtube-options-coverage-title">What changes when it is on.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            EFFECT AND SCOPE
+          </>}
+          >
+          What changes when it is on.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>On</dt>
@@ -10115,15 +10402,18 @@ function YoutubeOptionsGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="youtube-options-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="youtube-options-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="youtube-options-help-title">If the embed still uses youtube.com.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If the embed still uses youtube.com.
+        </FeatureGuideHeading>
         <p>
               Make sure the setting is on and test with a YouTube video added through FIFU.
             </p>
@@ -10188,15 +10478,17 @@ function PrivacyEnhancedModeGuide() {
         className="activation-feature-section"
         aria-labelledby="privacy-enhanced-settings-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="privacy-enhanced-settings-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETTINGS · YOUTUBE ONLY</span>
-            <h2 id="privacy-enhanced-settings-title">Enable the setting.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETTINGS · YOUTUBE ONLY
+          </>}
+          >
+          Enable the setting.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -10225,15 +10517,17 @@ function PrivacyEnhancedModeGuide() {
         className="activation-feature-section"
         aria-labelledby="privacy-enhanced-scope-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="privacy-enhanced-scope-title"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SCOPE AND OPTIONS</span>
-            <h2 id="privacy-enhanced-scope-title">What changes</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SCOPE AND OPTIONS
+          </>}
+          >
+          What changes
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Privacy Enhanced Mode</dt>
@@ -10274,15 +10568,18 @@ function PrivacyEnhancedModeGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="privacy-enhanced-check-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="privacy-enhanced-check-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK THE RESULT</span>
-            <h2 id="privacy-enhanced-check-title">If the regular host still appears</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK THE RESULT
+          </>}
+          tone="help"
+          >
+          If the regular host still appears
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>
@@ -10354,15 +10651,17 @@ function WpAllImportAddonGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="wai-setup-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wai-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">START AN IMPORT</span>
-            <h2 id="wai-setup-title">Map fields in the FIFU panel.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            START AN IMPORT
+          </>}
+          >
+          Map fields in the FIFU panel.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -10417,15 +10716,17 @@ function WpAllImportAddonGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="wai-content-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wai-content-title"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">POSTS, PAGES AND TAXONOMIES</span>
-            <h2 id="wai-content-title">Choose featured media for non-product content.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            POSTS, PAGES AND TAXONOMIES
+          </>}
+          >
+          Choose featured media for non-product content.
+        </FeatureGuideHeading>
         <p>
           For posts, pages, and supported custom post types, use the
           featured-image field rather than WooCommerce's product list.
@@ -10476,15 +10777,17 @@ function WpAllImportAddonGuide() {
         className="activation-feature-section"
         aria-labelledby="wai-products-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wai-products-title"
+          icon={<>
             <ShoppingCart size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WOOCOMMERCE PRODUCTS</span>
-            <h2 id="wai-products-title">Import product media as ordered lists.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WOOCOMMERCE PRODUCTS
+          </>}
+          >
+          Import product media as ordered lists.
+        </FeatureGuideHeading>
         <p>
           Map image and gallery URLs in one field. Its first URL becomes the main product
           image and the remaining URLs become gallery images. Product video URLs can also
@@ -10553,17 +10856,17 @@ function WpAllImportAddonGuide() {
         className="activation-feature-section"
         aria-labelledby="wai-variations-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wai-variations-title"
+          icon={<>
             <UsersRound size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">VARIABLE PRODUCTS</span>
-            <h2 id="wai-variations-title">
-              Keep variation media tied to each variation.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            VARIABLE PRODUCTS
+          </>}
+          >
+          Keep variation media tied to each variation.
+        </FeatureGuideHeading>
         <p>
           For variable products imported with nested variation records,
           include each variation's <code>sku</code> and{' '}
@@ -10579,15 +10882,17 @@ function WpAllImportAddonGuide() {
         className="activation-feature-section"
         aria-labelledby="wai-optional-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wai-optional-title"
+          icon={<>
             <Tags size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL FEATURES</span>
-            <h2 id="wai-optional-title">Import values for other FIFU features.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL FEATURES
+          </>}
+          >
+          Import values for other FIFU features.
+        </FeatureGuideHeading>
         <p>
           When their corresponding FIFU features are enabled, the
           mapping panel also offers these fields. The imported value
@@ -10632,15 +10937,17 @@ function WpAllImportAddonGuide() {
         className="activation-feature-section"
         aria-labelledby="wai-faq-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wai-faq-title"
+          icon={<>
             <Puzzle size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FIFU ADD-ON FAQ</span>
-            <h2 id="wai-faq-title">Examples, delimiters, and common mistakes.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FIFU ADD-ON FAQ
+          </>}
+          >
+          Examples, delimiters, and common mistakes.
+        </FeatureGuideHeading>
         <p>
           Find these examples under{' '}
           <strong>FIFU → Settings → WP All Import → FAQ</strong>.
@@ -10742,15 +11049,18 @@ function WpAllImportAddonGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="wai-check-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="wai-check-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK YOUR IMPORT</span>
-            <h2 id="wai-check-title">Resolve common mapping problems.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK YOUR IMPORT
+          </>}
+          tone="help"
+          >
+          Resolve common mapping problems.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>The FIFU panel is missing:</strong> Confirm FIFU Premium and WP All
@@ -10835,15 +11145,17 @@ function WooCommerceImportGuide() {
         </div>
       </section>
       <section className="activation-feature-section" aria-labelledby="wc-import-purpose">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wc-import-purpose"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="wc-import-purpose">Keep media work with your product data.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Keep media work with your product data.
+        </FeatureGuideHeading>
         <p>
           Use this workflow when creating products or updating an existing catalog.
           FIFU reads the custom metadata that WooCommerce imports for each product
@@ -10854,15 +11166,17 @@ function WooCommerceImportGuide() {
         </p>
       </section>
       <section className="activation-feature-section" aria-labelledby="wc-import-steps">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wc-import-steps"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">PREPARE AND IMPORT</span>
-            <h2 id="wc-import-steps">Prepare the CSV and run the importer.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            PREPARE AND IMPORT
+          </>}
+          >
+          Prepare the CSV and run the importer.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -10929,15 +11243,17 @@ function WooCommerceImportGuide() {
         </p>
       </section>
       <section className="activation-feature-section" aria-labelledby="wc-import-fields">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wc-import-fields"
+          icon={<>
             <Tags size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IMAGE, VIDEO AND SLIDER FIELDS</span>
-            <h2 id="wc-import-fields">Choose the media fields you need.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IMAGE, VIDEO AND SLIDER FIELDS
+          </>}
+          >
+          Choose the media fields you need.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>
@@ -11012,15 +11328,17 @@ function WooCommerceImportGuide() {
         className="activation-feature-section"
         aria-labelledby="wc-import-other-fields"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wc-import-other-fields"
+          icon={<>
             <Tags size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL AUTOMATION AND LINKS</span>
-            <h2 id="wc-import-other-fields">Other metadata you can import.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL AUTOMATION AND LINKS
+          </>}
+          >
+          Other metadata you can import.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>
@@ -11066,15 +11384,18 @@ function WooCommerceImportGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="wc-import-notes"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="wc-import-notes"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK THE RESULT</span>
-            <h2 id="wc-import-notes">Avoid common import mistakes.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK THE RESULT
+          </>}
+          tone="help"
+          >
+          Avoid common import mistakes.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>A FIFU column was ignored:</strong> Check that its CSV
@@ -11164,15 +11485,17 @@ function QuickBuyGuide() {
         className="activation-feature-section"
         aria-labelledby="quick-buy-workflow-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="quick-buy-workflow-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SETUP AND SHOPPER WORKFLOW</span>
-            <h2 id="quick-buy-workflow-title">Enable Quick Buy and test it.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SETUP AND SHOPPER WORKFLOW
+          </>}
+          >
+          Enable Quick Buy and test it.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -11216,17 +11539,17 @@ function QuickBuyGuide() {
         className="activation-feature-section"
         aria-labelledby="quick-buy-controls-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="quick-buy-controls-title"
+          icon={<>
             <ShoppingCart size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL SETTINGS</span>
-            <h2 id="quick-buy-controls-title">
-              Customize what shoppers see.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL SETTINGS
+          </>}
+          >
+          Customize what shoppers see.
+        </FeatureGuideHeading>
         <p>
           In <strong>FIFU → Settings → WooCommerce → Quick Buy</strong>, the
           following three fields are optional. They save when their values
@@ -11264,15 +11587,17 @@ function QuickBuyGuide() {
         className="activation-feature-section"
         aria-labelledby="quick-buy-limits-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="quick-buy-limits-title"
+          icon={<>
             <ShoppingCart size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SUPPORTED PRODUCT TYPES</span>
-            <h2 id="quick-buy-limits-title">How Quick Buy handles each product.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SUPPORTED PRODUCT TYPES
+          </>}
+          >
+          How Quick Buy handles each product.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Simple products</dt>
@@ -11312,17 +11637,18 @@ function QuickBuyGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="quick-buy-troubleshooting-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="quick-buy-troubleshooting-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="quick-buy-troubleshooting-title">
-              If the preview or purchase button is missing.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If the preview or purchase button is missing.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>No expand icon:</strong> Confirm WooCommerce is active,
@@ -11407,15 +11733,17 @@ function FifuApiGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-api-use-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-api-use-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="fifu-api-use-title">Connect media to code-created content.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Connect media to code-created content.
+        </FeatureGuideHeading>
         <p>
               Use these functions in custom integrations that assign featured media automatically. You do not need them when using the FIFU editor.
             </p>
@@ -11425,15 +11753,17 @@ function FifuApiGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-api-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-api-setup-title"
+          icon={<>
             <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP YOUR CALL</span>
-            <h2 id="fifu-api-setup-title">Add the helper where your integration runs.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP YOUR CALL
+          </>}
+          >
+          Add the helper where your integration runs.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -11464,17 +11794,17 @@ function FifuApiGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-api-post-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-api-post-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">POST MEDIA</span>
-            <h2 id="fifu-api-post-title">
-              Choose the helper for the media you are saving.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            POST MEDIA
+          </>}
+          >
+          Choose the helper for the media you are saving.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>
@@ -11524,15 +11854,17 @@ function FifuApiGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-api-term-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-api-term-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TERM MEDIA</span>
-            <h2 id="fifu-api-term-title">Set an image or video on a term.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TERM MEDIA
+          </>}
+          >
+          Set an image or video on a term.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>
@@ -11553,15 +11885,18 @@ function FifuApiGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="fifu-api-results-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="fifu-api-results-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK THE RESULT</span>
-            <h2 id="fifu-api-results-title">Handle a failed call before continuing.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK THE RESULT
+          </>}
+          tone="help"
+          >
+          Handle a failed call before continuing.
+        </FeatureGuideHeading>
         <p>
           Each helper returns <code>true</code> when its operation succeeds and{' '}
           <code>false</code> when it fails. Test the return value in your integration
@@ -11632,15 +11967,17 @@ function WpWooCommerceRestApiGuide() {
         className="activation-feature-section"
         aria-labelledby="rest-api-start-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="rest-api-start-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">START WITH YOUR API CLIENT</span>
-            <h2 id="rest-api-start-title">Choose the content endpoint, then add media fields.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            START WITH YOUR API CLIENT
+          </>}
+          >
+          Choose the content endpoint, then add media fields.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -11673,15 +12010,17 @@ function WpWooCommerceRestApiGuide() {
         className="activation-feature-section"
         aria-labelledby="rest-api-fields-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="rest-api-fields-title"
+          icon={<>
             <ShoppingCart size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SUPPORTED WORDPRESS FIELDS</span>
-            <h2 id="rest-api-fields-title">Choose the value for each media type.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SUPPORTED WORDPRESS FIELDS
+          </>}
+          >
+          Choose the value for each media type.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div><dt>Featured image</dt><dd><code>fifu_image_url</code> sets the remote image URL; <code>fifu_image_alt</code> sets its alternative text.</dd></div>
           <div><dt>Featured video</dt><dd><code>fifu_video_url</code> sets the video URL. For slider images, use <code>fifu_slider_list_url</code> and optional parallel <code>fifu_slider_list_alt</code> values, separated by vertical bars.</dd></div>
@@ -11694,15 +12033,18 @@ function WpWooCommerceRestApiGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="rest-api-woocommerce-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="rest-api-woocommerce-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WOOCOMMERCE REST</span>
-            <h2 id="rest-api-woocommerce-title">Use WooCommerce’s metadata format.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WOOCOMMERCE REST
+          </>}
+          tone="help"
+          >
+          Use WooCommerce’s metadata format.
+        </FeatureGuideHeading>
         <p>
           For products and variations, include FIFU entries in WooCommerce’s <code>meta_data</code> array. The REST integration handles the following five fields for both object types.
         </p>
@@ -11720,13 +12062,18 @@ function WpWooCommerceRestApiGuide() {
       </section>
 
       <section className="activation-feature-section activation-feature-help" aria-labelledby="rest-api-troubleshoot-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help"><CircleAlert size={18} aria-hidden="true" /></span>
-          <div>
-            <span className="activation-feature-kicker">CHECK A MISSING VALUE</span>
-            <h2 id="rest-api-troubleshoot-title">Match the request format to its endpoint.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading
+          id="rest-api-troubleshoot-title"
+          icon={<>
+            <CircleAlert size={18} aria-hidden="true" />
+          </>}
+          kicker={<>
+            CHECK A MISSING VALUE
+          </>}
+          tone="help"
+          >
+          Match the request format to its endpoint.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li><strong>WordPress post value is missing:</strong> confirm the content type exposes the REST API and supports featured images; send the field at top level or inside <code>meta</code>.</li>
           <li><strong>WooCommerce gallery or slider did not change:</strong> confirm the key is one of the five supported product/variation fields and is an item in <code>meta_data</code>. Separate list entries with <code>|</code>.</li>
@@ -11782,15 +12129,17 @@ function WpCliGuide() {
         </div>
       </section>
       <section className="activation-feature-section" aria-labelledby="wp-cli-use-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wp-cli-use-title"
+          icon={<>
             <Terminal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">REQUIREMENTS AND FIRST RUN</span>
-            <h2 id="wp-cli-use-title">Run commands from the WordPress installation.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REQUIREMENTS AND FIRST RUN
+          </>}
+          >
+          Run commands from the WordPress installation.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -11822,15 +12171,17 @@ function WpCliGuide() {
         className="activation-feature-section"
         aria-labelledby="wp-cli-commands-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wp-cli-commands-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COMMAND FAMILIES</span>
-            <h2 id="wp-cli-commands-title">Choose the setting or operation you need.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COMMAND FAMILIES
+          </>}
+          >
+          Choose the setting or operation you need.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>
@@ -11933,15 +12284,17 @@ function WpCliGuide() {
         className="activation-feature-section"
         aria-labelledby="wp-cli-create-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="wp-cli-create-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CREATE A POST</span>
-            <h2 id="wp-cli-create-title">Store remote media in post metadata.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CREATE A POST
+          </>}
+          >
+          Store remote media in post metadata.
+        </FeatureGuideHeading>
         <p>
           Use WordPress’s post creation command and pass FIFU fields in{' '}
           <code>--meta_input</code>. Replace the URL and title with your values:
@@ -11959,15 +12312,18 @@ function WpCliGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="wp-cli-limits-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="wp-cli-limits-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">LIMITS AND TROUBLESHOOTING</span>
-            <h2 id="wp-cli-limits-title">Check the runtime and accepted value.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            LIMITS AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Check the runtime and accepted value.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>!</span>
@@ -12050,15 +12406,17 @@ function QuickEditorGuide() {
         className="activation-feature-section"
         aria-labelledby="quick-editor-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="quick-editor-purpose-title"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE QUICK EDITOR</span>
-            <h2 id="quick-editor-purpose-title">Edit the media attached to a row.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE QUICK EDITOR
+          </>}
+          >
+          Edit the media attached to a row.
+        </FeatureGuideHeading>
         <p>
           Without Quick Editor, changing a remote featured image or other FIFU media means
           opening an item’s editor. The list editor brings the media fields and preview to
@@ -12073,15 +12431,17 @@ function QuickEditorGuide() {
         className="activation-feature-section"
         aria-labelledby="quick-editor-open-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="quick-editor-open-title"
+          icon={<>
             <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPEN THE EDITOR</span>
-            <h2 id="quick-editor-open-title">Find a FIFU thumbnail in a content list.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPEN THE EDITOR
+          </>}
+          >
+          Find a FIFU thumbnail in a content list.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -12112,15 +12472,17 @@ function QuickEditorGuide() {
         className="activation-feature-section"
         aria-labelledby="quick-editor-media-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="quick-editor-media-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">EDIT · PREVIEW · SAVE</span>
-            <h2 id="quick-editor-media-title">Choose media and save the change.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            EDIT · PREVIEW · SAVE
+          </>}
+          >
+          Choose media and save the change.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Featured image</dt>
@@ -12198,17 +12560,18 @@ function QuickEditorGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="quick-editor-access-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="quick-editor-access-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              ACCESS · AVAILABILITY · TROUBLESHOOTING
-            </span>
-            <h2 id="quick-editor-access-title">Check access and optional media types.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ACCESS · AVAILABILITY · TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          Check access and optional media types.
+        </FeatureGuideHeading>
         <ul className="activation-feature-steps">
           <li>
             <span>
@@ -12297,17 +12660,17 @@ function WidgetsGuide() {
         className="activation-feature-section"
         aria-labelledby="widgets-wordpress-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="widgets-wordpress-title"
+          icon={<>
             <Puzzle size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              WORDPRESS · APPEARANCE → WIDGETS
-            </span>
-            <h2 id="widgets-wordpress-title">Choose a widget for the current content.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WORDPRESS · APPEARANCE → WIDGETS
+          </>}
+          >
+          Choose a widget for the current content.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -12363,15 +12726,17 @@ function WidgetsGuide() {
         className="activation-feature-section"
         aria-labelledby="widgets-elementor-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="widgets-elementor-title"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ELEMENTOR · BASIC</span>
-            <h2 id="widgets-elementor-title">Set the media in an Elementor section.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ELEMENTOR · BASIC
+          </>}
+          >
+          Set the media in an Elementor section.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -12407,17 +12772,18 @@ function WidgetsGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="widgets-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="widgets-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              REQUIREMENTS AND TROUBLESHOOTING
-            </span>
-            <h2 id="widgets-help-title">If a widget area is empty.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REQUIREMENTS AND TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If a widget area is empty.
+        </FeatureGuideHeading>
         <p>
           WordPress widgets need a theme widget area. If none appears under{' '}
           <strong>Appearance → Widgets</strong>, your theme does not expose a widget area
@@ -12483,15 +12849,17 @@ function HotlinkProtectionGuide() {
         className="activation-feature-section"
         aria-labelledby="hotlink-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="hotlink-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CONFIGURE · FIFU CLOUD</span>
-            <h2 id="hotlink-enable-title">Turn on hotlink protection.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONFIGURE · FIFU CLOUD
+          </>}
+          >
+          Turn on hotlink protection.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -12521,15 +12889,17 @@ function HotlinkProtectionGuide() {
         className="activation-feature-section"
         aria-labelledby="hotlink-scope-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="hotlink-scope-title"
+          icon={<>
             <ShieldCheck size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SCOPE</span>
-            <h2 id="hotlink-scope-title">Know which images are covered.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SCOPE
+          </>}
+          >
+          Know which images are covered.
+        </FeatureGuideHeading>
         <p>
           This setting affects images served from FIFU Cloud only. FIFU Cloud is a
           separate paid hosting service; images whose URLs still point to their original
@@ -12542,17 +12912,18 @@ function HotlinkProtectionGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="hotlink-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="hotlink-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              WHEN THE SWITCH DOES NOT APPLY
-            </span>
-            <h2 id="hotlink-help-title">Check your Cloud connection.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN THE SWITCH DOES NOT APPLY
+          </>}
+          tone="help"
+          >
+          Check your Cloud connection.
+        </FeatureGuideHeading>
         <p>
           If the control is missing, complete FIFU Cloud sign-up and sign in; the setting
           is shown only after sign-in.
@@ -12621,15 +12992,17 @@ function DefaultFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="default-image-purpose"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="default-image-purpose"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE IT</span>
-            <h2 id="default-image-purpose">Give image-less content a consistent look.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE IT
+          </>}
+          >
+          Give image-less content a consistent look.
+        </FeatureGuideHeading>
         <p>
           A post without a featured image can leave an empty space in blog listings,
           related-post cards, or product grids. A default image is useful for
@@ -12649,15 +13022,17 @@ function DefaultFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="default-image-requirement"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="default-image-requirement"
+          icon={<>
             <Database size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BEFORE YOU START</span>
-            <h2 id="default-image-requirement">Keep Image Metadata enabled.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            BEFORE YOU START
+          </>}
+          >
+          Keep Image Metadata enabled.
+        </FeatureGuideHeading>
         <p>
               Check that <strong>Image Metadata</strong> is enabled under <strong>FIFU → Settings → Metadata</strong>. The default image needs this setting, which is on by default.
             </p>
@@ -12672,15 +13047,17 @@ function DefaultFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="default-image-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="default-image-setup-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP THE DEFAULT</span>
-            <h2 id="default-image-setup-title">Choose the image and eligible post types.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP THE DEFAULT
+          </>}
+          >
+          Choose the image and eligible post types.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -12727,15 +13104,17 @@ function DefaultFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="default-image-behavior"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="default-image-behavior"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT HAPPENS NEXT</span>
-            <h2 id="default-image-behavior">The default applies only where it is needed.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT HAPPENS NEXT
+          </>}
+          >
+          The default applies only where it is needed.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Existing content without an image</dt>
@@ -12781,15 +13160,17 @@ function DefaultFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="default-image-sharing"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="default-image-sharing"
+          icon={<>
             <Globe size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">HOMEPAGE SHARING</span>
-            <h2 id="default-image-sharing">A possible image for social previews, too.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            HOMEPAGE SHARING
+          </>}
+          >
+          A possible image for social previews, too.
+        </FeatureGuideHeading>
         <p>
           FIFU can also use the configured default-image URL for the homepage's
           Open Graph image when the page does not already provide one. This helps
@@ -12802,15 +13183,18 @@ function DefaultFeaturedImageGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="default-image-checks"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="default-image-checks"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="default-image-checks">If the default image does not appear</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          If the default image does not appear
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Check both switches:</strong> confirm <strong>Default featured image</strong>{' '}
@@ -12888,15 +13272,17 @@ function ActivationGuide() {
         </div>
       </section>
       <section className="activation-feature-section" aria-labelledby="activation-why">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="activation-why"
+          icon={<>
             <ShieldCheck size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">PURPOSE AND COVERAGE</span>
-            <h2 id="activation-why">Use one key across covered sites.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            PURPOSE AND COVERAGE
+          </>}
+          >
+          Use one key across covered sites.
+        </FeatureGuideHeading>
         <p>
           License checks associate your key with a domain. This lets you use the same key
           on the main domain, its subdomains and paths, plus one additional test,
@@ -12914,15 +13300,17 @@ function ActivationGuide() {
         className="activation-feature-section"
         aria-labelledby="activation-steps-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="activation-steps-title"
+          icon={<>
             <KeyRound size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SUBMIT AND VALIDATE</span>
-            <h2 id="activation-steps-title">Activate the license key.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SUBMIT AND VALIDATE
+          </>}
+          >
+          Activate the license key.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -12954,15 +13342,17 @@ function ActivationGuide() {
         className="activation-feature-section"
         aria-labelledby="activation-options-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="activation-options-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">LICENSE PAGE</span>
-            <h2 id="activation-options-title">Know what each control does.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            LICENSE PAGE
+          </>}
+          >
+          Know what each control does.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Activation tab</dt>
@@ -12991,17 +13381,18 @@ function ActivationGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="activation-troubleshooting-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="activation-troubleshooting-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">STATUS AND RECOVERY</span>
-            <h2 id="activation-troubleshooting-title">
-              Resolve common activation results.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            STATUS AND RECOVERY
+          </>}
+          tone="help"
+          >
+          Resolve common activation results.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Invalid key</dt>
@@ -13091,15 +13482,17 @@ function ResetSettingsGuide() {
         className="activation-feature-section"
         aria-labelledby="reset-settings-effects"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="reset-settings-effects"
+          icon={<>
             <ShieldCheck size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHAT CHANGES</span>
-            <h2 id="reset-settings-effects">Know what stays before you reset.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHAT CHANGES
+          </>}
+          >
+          Know what stays before you reset.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Reset</dt>
@@ -13138,15 +13531,17 @@ function ResetSettingsGuide() {
         className="activation-feature-section"
         aria-labelledby="reset-settings-run"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="reset-settings-run"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WORDPRESS DASHBOARD</span>
-            <h2 id="reset-settings-run">Reset from Settings.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WORDPRESS DASHBOARD
+          </>}
+          >
+          Reset from Settings.
+        </FeatureGuideHeading>
         <p>
           You need permission to manage FIFU settings: <code>manage_options</code> in the
           site dashboard or <code>manage_network_options</code> in network administration.
@@ -13239,15 +13634,17 @@ function DebugModeGuide() {
         className="activation-feature-section"
         aria-labelledby="debug-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="debug-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">START A SESSION</span>
-            <h2 id="debug-enable-title">Enable it while you reproduce the issue.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            START A SESSION
+          </>}
+          >
+          Enable it while you reproduce the issue.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -13292,15 +13689,17 @@ function DebugModeGuide() {
       />
 
       <section className="activation-feature-section" aria-labelledby="debug-tools-title">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="debug-tools-title"
+          icon={<>
             <ClipboardCopy size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">COLLECT DETAILS</span>
-            <h2 id="debug-tools-title">Choose the diagnostic that fits the issue.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            COLLECT DETAILS
+          </>}
+          >
+          Choose the diagnostic that fits the issue.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Copy debug data</dt>
@@ -13339,15 +13738,18 @@ function DebugModeGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="debug-sharing-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="debug-sharing-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">REVIEW BEFORE SHARING</span>
-            <h2 id="debug-sharing-title">Check the copied data and download.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            REVIEW BEFORE SHARING
+          </>}
+          tone="help"
+          >
+          Check the copied data and download.
+        </FeatureGuideHeading>
         <p>
           Item reports can include post or term content, media URLs, and metadata. Some
           credential-like metadata values are redacted or cropped, but this is not a
@@ -13440,15 +13842,17 @@ function RemoteFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-image-purpose"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-image-purpose"
+          icon={<>
             <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHY USE A REMOTE IMAGE</span>
-            <h2 id="remote-image-purpose">Use images already hosted elsewhere.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHY USE A REMOTE IMAGE
+          </>}
+          >
+          Use images already hosted elsewhere.
+        </FeatureGuideHeading>
         <p>
               FIFU lets you set a featured image using an address from another website instead of uploading the file to WordPress. The image stays on its original host and appears wherever your theme displays featured images.
             </p>
@@ -13458,15 +13862,17 @@ function RemoteFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-image-editor"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-image-editor"
+          icon={<>
             <ImagePlus size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET IT IN THE EDITOR</span>
-            <h2 id="remote-image-editor">Save an image address with your content.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET IT IN THE EDITOR
+          </>}
+          >
+          Save an image address with your content.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -13508,15 +13914,17 @@ function RemoteFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-image-native-panel"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-image-native-panel"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WORDPRESS EDITOR COMPATIBILITY</span>
-            <h2 id="remote-image-native-panel">Understand the regular Featured image field.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WORDPRESS EDITOR COMPATIBILITY
+          </>}
+          >
+          Understand the regular Featured image field.
+        </FeatureGuideHeading>
         <p>
           FIFU uses the remote URL for the post's featured image, while maintaining
           compatibility with WordPress featured-image APIs. It may create attachment
@@ -13554,15 +13962,17 @@ function RemoteFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-image-block"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-image-block"
+          icon={<>
             <Puzzle size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BLOCK EDITOR OPTION</span>
-            <h2 id="remote-image-block">Set it with the Featured Image (URL) block.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            BLOCK EDITOR OPTION
+          </>}
+          >
+          Set it with the Featured Image (URL) block.
+        </FeatureGuideHeading>
         <p>
           Add the{' '}
           <Link to="/features/featured-image-url-block/">Featured Image (URL) block</Link>{' '}
@@ -13578,15 +13988,17 @@ function RemoteFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-image-share-links"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-image-share-links"
+          icon={<>
             <Globe size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">HOSTED LINKS</span>
-            <h2 id="remote-image-share-links">Use a public image link that visitors can load.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            HOSTED LINKS
+          </>}
+          >
+          Use a public image link that visitors can load.
+        </FeatureGuideHeading>
         <p>
           A direct image URL is the most predictable option. FIFU also recognizes
           supported Google Drive share URLs and OneDrive <code>1drv.ms</code> links,
@@ -13602,17 +14014,17 @@ function RemoteFeaturedImageGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="remote-image-bulk">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-image-bulk"
+          icon={<>
             <ListFilter size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">
-              CONTENT LISTS AND INTEGRATIONS
-            </span>
-            <h2 id="remote-image-bulk">Update image data outside the editor.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CONTENT LISTS AND INTEGRATIONS
+          </>}
+          >
+          Update image data outside the editor.
+        </FeatureGuideHeading>
         <p>
           For one-off edits, open{' '}
           <Link to="/features/quick-editor/">Quick Editor</Link> from the WordPress
@@ -13629,15 +14041,17 @@ function RemoteFeaturedImageGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-image-fields"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-image-fields"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FIELDS AND ACTIONS</span>
-            <h2 id="remote-image-fields">Know what each control changes.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FIELDS AND ACTIONS
+          </>}
+          >
+          Know what each control changes.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Image URL or Keywords</dt>
@@ -13674,15 +14088,18 @@ function RemoteFeaturedImageGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="remote-image-checks"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="remote-image-checks"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">AVAILABILITY AND CHECKS</span>
-            <h2 id="remote-image-checks">Keep the remote address reachable.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            AVAILABILITY AND CHECKS
+          </>}
+          tone="help"
+          >
+          Keep the remote address reachable.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>Preview shows an image-not-found placeholder:</strong> check the full
@@ -13765,17 +14182,17 @@ function FeaturedVideoAudioGuide() {
         className="activation-feature-section"
         aria-labelledby="video-audio-purpose"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-audio-purpose"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="video-audio-purpose">
-              Use playable media where a static image isn't enough.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Use playable media where a static image isn't enough.
+        </FeatureGuideHeading>
         <p>
           A featured video can display an embed from a recognized
           provider or a playable video file. Featured Audio uses an
@@ -13791,15 +14208,17 @@ function FeaturedVideoAudioGuide() {
         className="activation-feature-section"
         aria-labelledby="video-audio-enable"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-audio-enable"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE THE FEATURE</span>
-            <h2 id="video-audio-enable">Turn on Featured Video / Audio.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE THE FEATURE
+          </>}
+          >
+          Turn on Featured Video / Audio.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -13827,15 +14246,17 @@ function FeaturedVideoAudioGuide() {
         className="activation-feature-section"
         aria-labelledby="video-audio-services"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-audio-services"
+          icon={<>
             <Globe size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SUPPORTED VIDEO AND AUDIO SERVICES</span>
-            <h2 id="video-audio-services">Which services does FIFU support?</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SUPPORTED VIDEO AND AUDIO SERVICES
+          </>}
+          >
+          Which services does FIFU support?
+        </FeatureGuideHeading>
         <p>
           FIFU recognizes the following services for featured
           media. Use a public, playable URL in the{' '}
@@ -13905,15 +14326,17 @@ function FeaturedVideoAudioGuide() {
         className="activation-feature-section"
         aria-labelledby="video-audio-video-workflow"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-audio-video-workflow"
+          icon={<>
             <Video size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FEATURED VIDEO</span>
-            <h2 id="video-audio-video-workflow">Add and preview a video.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FEATURED VIDEO
+          </>}
+          >
+          Add and preview a video.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -13966,15 +14389,17 @@ function FeaturedVideoAudioGuide() {
         className="activation-feature-section"
         aria-labelledby="video-audio-audio-workflow"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-audio-audio-workflow"
+          icon={<>
             <Music2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">FEATURED AUDIO</span>
-            <h2 id="video-audio-audio-workflow">Add an audio track or recording.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            FEATURED AUDIO
+          </>}
+          >
+          Add an audio track or recording.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -14015,15 +14440,17 @@ function FeaturedVideoAudioGuide() {
         className="activation-feature-section"
         aria-labelledby="video-audio-options"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="video-audio-options"
+          icon={<>
             <FileImage size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">THUMBNAILS AND FILE OPTIONS</span>
-            <h2 id="video-audio-options">Choose a thumbnail and playback range.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            THUMBNAILS AND FILE OPTIONS
+          </>}
+          >
+          Choose a thumbnail and playback range.
+        </FeatureGuideHeading>
         <dl className="fifu-fields-options">
           <div>
             <dt>Embedded video providers</dt>
@@ -14087,15 +14514,18 @@ function FeaturedVideoAudioGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="video-audio-checks"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="video-audio-checks"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
-            <h2 id="video-audio-checks">When the player or thumbnail is missing.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            TROUBLESHOOTING
+          </>}
+          tone="help"
+          >
+          When the player or thumbnail is missing.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>No video or audio choice:</strong> Confirm
@@ -14191,17 +14621,17 @@ function FeaturedSliderGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-slider-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-slider-purpose-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="featured-slider-purpose-title">
-              Show several views without replacing featured media.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN TO USE IT
+          </>}
+          >
+          Show several views without replacing featured media.
+        </FeatureGuideHeading>
         <p>
           Use the slider when a listing needs multiple angles, a product needs a visual
           sequence, or a post needs both still images and video in its featured-media
@@ -14216,17 +14646,17 @@ function FeaturedSliderGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-slider-enable-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-slider-enable-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ENABLE AND SET DEFAULTS</span>
-            <h2 id="featured-slider-enable-title">
-              Choose how sliders behave across your site.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ENABLE AND SET DEFAULTS
+          </>}
+          >
+          Choose how sliders behave across your site.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -14264,15 +14694,17 @@ function FeaturedSliderGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-slider-steps-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-slider-steps-title"
+          icon={<>
             <span>1</span>
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ADD YOUR MEDIA</span>
-            <h2 id="featured-slider-steps-title">Build and save the sequence.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ADD YOUR MEDIA
+          </>}
+          >
+          Build and save the sequence.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -14317,17 +14749,17 @@ function FeaturedSliderGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-slider-options-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-slider-options-title"
+          icon={<>
             <Settings2 size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">DISPLAY OPTIONS</span>
-            <h2 id="featured-slider-options-title">
-              Adjust navigation, timing, and layout.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            DISPLAY OPTIONS
+          </>}
+          >
+          Adjust navigation, timing, and layout.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Start autoplay automatically</dt>
@@ -14410,17 +14842,17 @@ function FeaturedSliderGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-slider-shortcode-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="featured-slider-shortcode-title"
+          icon={<>
             <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL · MANUAL PLACEMENT</span>
-            <h2 id="featured-slider-shortcode-title">
-              Place the slider where you need it.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL · MANUAL PLACEMENT
+          </>}
+          >
+          Place the slider where you need it.
+        </FeatureGuideHeading>
         <p>
               You can set optional <code>width</code> and <code>height</code> values to control the displayed size. See <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link> for more examples.
             </p>
@@ -14430,17 +14862,18 @@ function FeaturedSliderGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="featured-slider-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="featured-slider-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">DISPLAY CHECKS</span>
-            <h2 id="featured-slider-help-title">
-              If the slider is missing or looks different.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            DISPLAY CHECKS
+          </>}
+          tone="help"
+          >
+          If the slider is missing or looks different.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>A tile preview is empty:</strong> check that its URL begins with{' '}
@@ -14522,17 +14955,17 @@ function RemoteProductGalleryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-product-gallery-purpose-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-product-gallery-purpose-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN THIS HELPS</span>
-            <h2 id="remote-product-gallery-purpose-title">
-              Use it for externally hosted product photos.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN THIS HELPS
+          </>}
+          >
+          Use it for externally hosted product photos.
+        </FeatureGuideHeading>
         <p>
           Use this for alternate product views you already host elsewhere and want to keep
           out of WordPress uploads. Your product stores the URLs and FIFU uses those links
@@ -14547,17 +14980,17 @@ function RemoteProductGalleryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-product-gallery-steps-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-product-gallery-steps-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ADD AND SAVE</span>
-            <h2 id="remote-product-gallery-steps-title">
-              Build the gallery on a product.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            ADD AND SAVE
+          </>}
+          >
+          Build the gallery on a product.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -14606,17 +15039,17 @@ function RemoteProductGalleryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-product-gallery-controls-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-product-gallery-controls-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">GALLERY FIELDS</span>
-            <h2 id="remote-product-gallery-controls-title">
-              What each image tile controls.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            GALLERY FIELDS
+          </>}
+          >
+          What each image tile controls.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Image/Video URL</dt>
@@ -14672,17 +15105,17 @@ function RemoteProductGalleryImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-product-gallery-display-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-product-gallery-display-title"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">STOREFRONT DISPLAY</span>
-            <h2 id="remote-product-gallery-display-title">
-              Choose the gallery renderer when needed.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            STOREFRONT DISPLAY
+          </>}
+          >
+          Choose the gallery renderer when needed.
+        </FeatureGuideHeading>
         <p>
           Saved remote URLs become gallery media for the product. WooCommerce can use its
           normal product gallery, or you can enable <strong>FIFU product gallery</strong>{' '}
@@ -14698,15 +15131,18 @@ function RemoteProductGalleryImagesGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="remote-product-gallery-help-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="remote-product-gallery-help-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN A PREVIEW FAILS</span>
-            <h2 id="remote-product-gallery-help-title">Check the image URL.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            WHEN A PREVIEW FAILS
+          </>}
+          tone="help"
+          >
+          Check the image URL.
+        </FeatureGuideHeading>
         <p>
           If the preview is blank or shows a not-found image, open the image URL in a
           private browser window. It must point to a publicly accessible image, and its
@@ -14771,15 +15207,17 @@ function RemoteVariationImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-variation-setup-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-variation-setup-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP EACH VARIATION</span>
-            <h2 id="remote-variation-setup-title">Add its main image and gallery.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP EACH VARIATION
+          </>}
+          >
+          Add its main image and gallery.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -14836,17 +15274,17 @@ function RemoteVariationImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-variation-display-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-variation-display-title"
+          icon={<>
             <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">DISPLAY OPTIONS</span>
-            <h2 id="remote-variation-display-title">
-              Choose how variation images appear.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            DISPLAY OPTIONS
+          </>}
+          >
+          Choose how variation images appear.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>Selected variation</dt>
@@ -14885,17 +15323,18 @@ function RemoteVariationImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-variation-check-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="remote-variation-check-title"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">CHECK THE RESULT</span>
-            <h2 id="remote-variation-check-title">
-              If an image is missing, check the URL and saves.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            CHECK THE RESULT
+          </>}
+          tone="help"
+          >
+          If an image is missing, check the URL and saves.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>No preview in the editor</dt>
@@ -14932,17 +15371,17 @@ function RemoteVariationImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-variation-import-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-variation-import-title"
+          icon={<>
             <Code2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IMPORT OR API</span>
-            <h2 id="remote-variation-import-title">
-              Keep the same image order in automated workflows.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            IMPORT OR API
+          </>}
+          >
+          Keep the same image order in automated workflows.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div>
             <dt>WP All Import Add-On</dt>
@@ -14994,17 +15433,17 @@ function RemoteVariationImagesGuide() {
         className="activation-feature-section"
         aria-labelledby="remote-variation-related-title"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="remote-variation-related-title"
+          icon={<>
             <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">RELATED WORKFLOW</span>
-            <h2 id="remote-variation-related-title">
-              Keep parent and variation galleries separate.
-            </h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            RELATED WORKFLOW
+          </>}
+          >
+          Keep parent and variation galleries separate.
+        </FeatureGuideHeading>
         <p>
           Variation images belong to each variation. For images shared by the product
           regardless of selected options, use{' '}
@@ -15062,15 +15501,17 @@ function FifuProductGalleryGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-enable"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-gallery-enable"
+          icon={<>
             <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP</span>
-            <h2 id="fifu-gallery-enable">Enable the gallery and add product media.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SET UP
+          </>}
+          >
+          Enable the gallery and add product media.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
@@ -15121,15 +15562,17 @@ function FifuProductGalleryGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-options"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-gallery-options"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">PRODUCT GALLERY SETTINGS</span>
-            <h2 id="fifu-gallery-options">Configure the product gallery.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            PRODUCT GALLERY SETTINGS
+          </>}
+          >
+          Configure the product gallery.
+        </FeatureGuideHeading>
         <p>
           Find these switches under{' '}
           <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>.
@@ -15167,15 +15610,17 @@ function FifuProductGalleryGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-slider-options"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-gallery-slider-options"
+          icon={<>
             <SlidersHorizontal size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SHARED SLIDER CONTROLS</span>
-            <h2 id="fifu-gallery-slider-options">Set navigation and transitions.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            SHARED SLIDER CONTROLS
+          </>}
+          >
+          Set navigation and transitions.
+        </FeatureGuideHeading>
         <p>
           Find these controls under{' '}
           <strong>
@@ -15236,15 +15681,17 @@ function FifuProductGalleryGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-other-display"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-gallery-other-display"
+          icon={<>
             <ExternalLink size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">MORE DISPLAY OPTIONS</span>
-            <h2 id="fifu-gallery-other-display">Open images or place a gallery elsewhere.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            MORE DISPLAY OPTIONS
+          </>}
+          >
+          Open images or place a gallery elsewhere.
+        </FeatureGuideHeading>
         <p>
           To open images in a lightbox, enable <strong>Lightbox</strong> under{' '}
           <strong>FIFU → Settings → WooCommerce → Lightbox and Zoom</strong>,
@@ -15287,15 +15734,17 @@ function FifuProductGalleryGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-custom"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
+        <FeatureGuideHeading
+          id="fifu-gallery-custom"
+          icon={<>
             <ExternalLink size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">OPTIONAL CONTENT</span>
-            <h2 id="fifu-gallery-custom">Open custom content from a gallery item.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            OPTIONAL CONTENT
+          </>}
+          >
+          Open custom content from a gallery item.
+        </FeatureGuideHeading>
         <p>
               Under <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery → Custom content</strong>, you can show embedded content, such as a 360° product view, PDF, or map, when shoppers select a gallery image. The external page must allow embedding.
             </p>
@@ -15331,15 +15780,18 @@ function FifuProductGalleryGuide() {
         className="activation-feature-section"
         aria-labelledby="fifu-gallery-conditions"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
+        <FeatureGuideHeading
+          id="fifu-gallery-conditions"
+          icon={<>
             <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">DISPLAY CONDITIONS</span>
-            <h2 id="fifu-gallery-conditions">Check these conditions if it is missing.</h2>
-          </div>
-        </div>
+          </>}
+          kicker={<>
+            DISPLAY CONDITIONS
+          </>}
+          tone="help"
+          >
+          Check these conditions if it is missing.
+        </FeatureGuideHeading>
         <ul className="activation-feature-help-list">
           <li>
             <strong>No automatic gallery:</strong> WooCommerce must be active,
@@ -15409,13 +15861,17 @@ function AutoShareSocialGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="auto-share-connect">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon"><Settings2 size={19} aria-hidden="true" /></span>
-          <div>
-            <span className="activation-feature-kicker">CONNECT YOUR ACCOUNTS</span>
-            <h2 id="auto-share-connect">Turn on sharing for the networks you use.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading
+          id="auto-share-connect"
+          icon={<>
+            <Settings2 size={19} aria-hidden="true" />
+          </>}
+          kicker={<>
+            CONNECT YOUR ACCOUNTS
+          </>}
+          >
+          Turn on sharing for the networks you use.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li><span>1</span><p>In WordPress, open <strong>FIFU → Settings</strong> and find <strong>Auto-share on social media</strong>. Turn on the main <strong>Auto share</strong> switch to allow automatic sharing.</p></li>
           <li><span>2</span><p>Open the <strong>Social media</strong> tab, then choose <strong>Facebook</strong>, <strong>Instagram</strong>, or <strong>X</strong>. Turn on a network’s switch to connect its account; turn it off to disconnect that account. Only networks both enabled and connected are used automatically.</p></li>
@@ -15425,13 +15881,17 @@ function AutoShareSocialGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="auto-share-requirements">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon"><Share2 size={19} aria-hidden="true" /></span>
-          <div>
-            <span className="activation-feature-kicker">ACCOUNT REQUIREMENTS</span>
-            <h2 id="auto-share-requirements">Prepare each network before connecting.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading
+          id="auto-share-requirements"
+          icon={<>
+            <Share2 size={19} aria-hidden="true" />
+          </>}
+          kicker={<>
+            ACCOUNT REQUIREMENTS
+          </>}
+          >
+          Prepare each network before connecting.
+        </FeatureGuideHeading>
         <dl className="feature-guide-options">
           <div><dt>Facebook</dt><dd>Connect a Facebook Page, not a personal profile. The Page must be published and visible to everyone. Your site must use HTTPS.</dd></div>
           <div><dt>Instagram</dt><dd>Connect a public Professional account (Business or Creator); personal or private accounts are not supported. The site must use HTTPS, and the post needs an HTTPS image hosted on your own site for Instagram sharing.</dd></div>
@@ -15440,13 +15900,17 @@ function AutoShareSocialGuide() {
       </section>
 
       <section className="activation-feature-section" aria-labelledby="auto-share-eligibility">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon"><Image size={19} aria-hidden="true" /></span>
-          <div>
-            <span className="activation-feature-kicker">WHAT GETS SHARED</span>
-            <h2 id="auto-share-eligibility">Only published posts with shareable image media.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading
+          id="auto-share-eligibility"
+          icon={<>
+            <Image size={19} aria-hidden="true" />
+          </>}
+          kicker={<>
+            WHAT GETS SHARED
+          </>}
+          >
+          Only published posts with shareable image media.
+        </FeatureGuideHeading>
         <p>Automatic checks apply to the standard WordPress <strong>Posts</strong> type in <strong>Published</strong> status. A featured image or an image URL FIFU resolves for the post makes it eligible. Pages, other post types, drafts, autosaves, and revisions are skipped.</p>
         <dl className="feature-guide-options">
           <div><dt>Daily limit</dt><dd>Sharing is limited to 16 posts per day for each connected platform.</dd></div>
@@ -15456,13 +15920,18 @@ function AutoShareSocialGuide() {
       </section>
 
       <section className="activation-feature-section activation-feature-help" aria-labelledby="auto-share-test">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help"><CircleAlert size={18} aria-hidden="true" /></span>
-          <div>
-            <span className="activation-feature-kicker">TEST OR TROUBLESHOOT</span>
-            <h2 id="auto-share-test">Send a post manually and read the result.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading
+          id="auto-share-test"
+          icon={<>
+            <CircleAlert size={18} aria-hidden="true" />
+          </>}
+          kicker={<>
+            TEST OR TROUBLESHOOT
+          </>}
+          tone="help"
+          >
+          Send a post manually and read the result.
+        </FeatureGuideHeading>
         <ol className="activation-feature-steps">
           <li><span>1</span><p>Open the <strong>Test</strong> tab, enter the post’s numeric <strong>Post ID</strong>, and choose <strong>Share now</strong>. This action sends to every connected account even when the main <strong>Auto share</strong> switch is off; it does not require automatic sharing to be enabled.</p></li>
           <li><span>2</span><p>Watch the Facebook, Instagram, and X status icons and the result message. A network can succeed while another fails; the result reports each network separately. The test checks connections first and skips networks that are not connected.</p></li>
