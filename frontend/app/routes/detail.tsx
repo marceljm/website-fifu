@@ -4976,22 +4976,24 @@ function VideoThumbnailGuide() {
       className="feature-guide-page"
     >
       <p className="lead">
-        Keep a still image in place of an embedded video on the page types you choose;
-        visitors can load the video when they select it.
+        Display a video’s thumbnail instead of loading its player
+        immediately, with separate settings for page types, a play button,
+        and minimum video width.
       </p>
 
       <section className="feature-highlight" aria-labelledby="video-thumbnail-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
-            <Video size={15} aria-hidden="true" /> VIDEO PREVIEW
+            <Video size={15} aria-hidden="true" /> VIDEO THUMBNAILS
           </span>
-          <h2 id="video-thumbnail-intro">Show a still before playback.</h2>
+          <h2 id="video-thumbnail-intro">Show an image before the video.</h2>
           <p>
-            Embedded players can add loading work to pages with video media. A thumbnail
-            keeps an image visible until playback is requested, which can reduce initial
-            player loading and gives you consistent previews on listings and content
-            pages. Use it wherever videos appear alongside regular featured images; leave
-            it off where you want players embedded immediately.
+            Video embeds can make a page heavier to load, especially
+            when many posts or products appear together. FIFU can
+            display each video’s preview image first, without
+            replacing it with an embedded player on the page types
+            you select. An optional play button lets visitors
+            start watching when they choose.
           </p>
         </div>
         <div className="feature-highlight-visual">
@@ -5008,40 +5010,61 @@ function VideoThumbnailGuide() {
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
-            <Video size={19} aria-hidden="true" />
+            <FileImage size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">PREPARE YOUR VIDEO</span>
-            <h2 id="video-thumbnail-source-title">Add a video and its still image.</h2>
+            <span className="activation-feature-kicker">FIRST, SET THE VIDEO</span>
+            <h2 id="video-thumbnail-source-title">Give your video a thumbnail.</h2>
           </div>
         </div>
         <p>
-          First enable{' '}
-          <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and add
-          a supported video to the content. FIFU supports local and remote video files
-          plus YouTube, Vimeo, Twitter, 9GAG, Cloudinary, Tumblr, Publitio, JW Player,
-          VideoPress, Sprout, Odysee, Rumble, Dailymotion, Cloudflare Stream, Bunny
-          Stream, Amazon, BitChute, Brighteon, Google Drive, Spotify, and SoundCloud.
+          Enable <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>{' '}
+          and save a supported video URL on a post, page, or product.
+          Video Thumbnail controls how this media is displayed;
+          it does not create a video or enable the Featured Video
+          field by itself.
         </p>
-        <ol className="activation-feature-steps">
-          <li>
-            <span>1</span>
-            <p>
-              For a video in your Media Library, seek to the frame you want in the
-              featured video field and select <strong>Set frame as thumbnail</strong>. The
-              captured still is saved in your Media Library.
-            </p>
-          </li>
-          <li>
-            <span>2</span>
-            <p>
-              For a remote video, provide a remote featured image as its thumbnail. If you
-              import media through an import plugin, its supported format places the
-              thumbnail URL after the video URL, separated by a backslash:{' '}
-              <code>video_url\image_url</code>.
-            </p>
-          </li>
-        </ol>
+        <dl className="fifu-fields-options">
+          <div>
+            <dt>Recognized video services</dt>
+            <dd>
+              FIFU can retrieve a preview image from many supported
+              video services, including YouTube and Vimeo. The
+              source must be accessible, and not every provider
+              or URL guarantees a usable thumbnail. For the
+              complete service list, see{' '}
+              <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
+            </dd>
+          </div>
+          <div>
+            <dt>Videos in your WordPress Media Library</dt>
+            <dd>
+              In the FIFU Featured video panel, preview the file,
+              move to the frame you want, and choose{' '}
+              <strong>Set frame as thumbnail</strong>. Save or update
+              the content to store the captured image in
+              the Media Library.
+            </dd>
+          </div>
+          <div>
+            <dt>Direct remote video files</dt>
+            <dd>
+              When FIFU cannot retrieve a thumbnail automatically,
+              supply a remote image URL in the{' '}
+              <strong>Thumbnail URL</strong> field when it appears
+              for a custom video. Keep the video and image URLs
+              reachable by site visitors.
+            </dd>
+          </div>
+        </dl>
+        <p>
+          If an importer supports FIFU’s combined video-and-thumbnail
+          value, its documented format is{' '}
+          <code>video_url\image_url</code> (a backslash between
+          the URLs). This is an import convention, not something
+          to paste into the editor’s <strong>Video URL</strong> field.
+          Check the import plugin’s mapping instructions.
+        </p>
       </section>
 
       <section
@@ -5053,40 +5076,116 @@ function VideoThumbnailGuide() {
             <Settings2 size={19} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">CHOOSE DISPLAY CONTEXTS</span>
-            <h2 id="video-thumbnail-contexts-title">Keep the still on selected pages.</h2>
+            <span className="activation-feature-kicker">VIDEO THUMBNAIL SETTINGS</span>
+            <h2 id="video-thumbnail-contexts-title">Choose where to show the image.</h2>
           </div>
         </div>
         <p>
-          Open <strong>FIFU → Settings → Video → Featured video / audio</strong>. Under{' '}
-          <strong>Video Thumbnail</strong>, turn on any contexts where the image should
-          remain instead of being replaced by the video player:
+          In WordPress, open <strong>FIFU → Settings → Video</strong>
+          and find the separate <strong>Video Thumbnail</strong>{' '}
+          settings section, below <strong>Featured video / audio</strong>.
+          Enable the switches that match the locations where
+          you want to keep the thumbnail instead of replacing
+          it with the video player:
         </p>
         <dl className="feature-guide-options">
           <div>
             <dt>on homepage</dt>
-            <dd>The front page and, when WooCommerce is active, the shop page.</dd>
+            <dd>
+              The site's front page and, with WooCommerce,
+              the main shop page.
+            </dd>
           </div>
           <div>
             <dt>on other pages</dt>
             <dd>
-              Pages, the posts index, archives, and search results, excluding the front
-              page.
+              Other pages, the posts index, archive listings,
+              and search results, excluding the front page.
             </dd>
           </div>
           <div>
             <dt>on posts</dt>
-            <dd>Individual standard posts.</dd>
+            <dd>Single standard WordPress posts.</dd>
           </div>
           <div>
             <dt>on custom post types</dt>
-            <dd>Singular custom post type content.</dd>
+            <dd>
+              Single pages for custom post types, such as
+              individual WooCommerce products where applicable.
+            </dd>
           </div>
         </dl>
         <p>
-          Save each switch, then check a page in that context. These switches determine
-          where the video remains an image; outside enabled contexts, supported videos can
-          display as players.
+          Each switch is independent. Check the front page,
+          an archive, and a single post or product after
+          changing the settings. Contexts you leave disabled
+          may show the embedded video instead of its image,
+          depending on the video and theme.
+        </p>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="video-thumbnail-play-title"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Play size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">OPTIONAL PLAY BUTTON</span>
+            <h2 id="video-thumbnail-play-title">Let visitors start the video.</h2>
+          </div>
+        </div>
+        <p>
+          <strong>Video Thumbnail</strong> and{' '}
+          <strong>Play Button</strong> are different
+          settings. Showing a thumbnail does not automatically
+          mean an on-image play button will appear. To offer
+          an obvious way to watch, open{' '}
+          <strong>FIFU → Settings → Video → Play Button</strong>{' '}
+          and enable it.
+        </p>
+        <dl className="fifu-fields-options">
+          <div>
+            <dt>Mode: Inline or Lightbox</dt>
+            <dd>
+              <strong>Inline</strong> replaces the preview
+              with playback in the page. <strong>Lightbox</strong>{' '}
+              opens playback in an overlay. Choose the mode
+              that works best with your theme.
+            </dd>
+          </div>
+          <div>
+            <dt>Color and Size</dt>
+            <dd>
+              Adjust the appearance of the play button
+              to make it visible against your thumbnails.
+            </dd>
+          </div>
+          <div>
+            <dt>Z-index</dt>
+            <dd>
+              Adjust the button's stacking order if a theme
+              overlays other elements on the thumbnail.
+            </dd>
+          </div>
+          <div>
+            <dt>Hide from grid: WordPress / WooCommerce</dt>
+            <dd>
+              Use the separate options to suppress the
+              play-button overlay on WordPress content grids
+              or WooCommerce shop/category grids.
+              The underlying thumbnail can still appear.
+            </dd>
+          </div>
+        </dl>
+        <p>
+          On the same Video settings page, <strong>Minimum Width</strong>{' '}
+          can keep a thumbnail in a narrow container instead
+          of displaying a player there. It is a separate
+          sizing rule and does not replace the four
+          page-context switches.
         </p>
       </section>
 
@@ -5099,24 +5198,43 @@ function VideoThumbnailGuide() {
             <CircleAlert size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">WHEN A PREVIEW IS MISSING</span>
-            <h2 id="video-thumbnail-help-title">Check the media and page context.</h2>
+            <span className="activation-feature-kicker">TROUBLESHOOTING</span>
+            <h2 id="video-thumbnail-help-title">If the thumbnail or playback is missing.</h2>
           </div>
         </div>
         <ul className="activation-feature-help-list">
           <li>
-            <strong>No image appears:</strong> confirm the video has a thumbnail image.
-            Remote video thumbnails depend on the provider being recognized and its
-            thumbnail being available; check the video URL if retrieval fails.
+            <strong>No thumbnail:</strong> Verify the video
+            URL and check whether FIFU found a provider image.
+            For a direct remote file, provide a thumbnail
+            URL; for a Media Library video, capture a frame
+            and save the content.
           </li>
           <li>
-            <strong>A player appears instead:</strong> enable the switch matching that
-            page type. The front page is handled by <strong>on homepage</strong>, not{' '}
-            <strong>on other pages</strong>.
+            <strong>A video player appears immediately:</strong>{' '}
+            Check the <strong>Video Thumbnail</strong> switch
+            for that page type. Autoplay or background-video
+            settings may also override the thumbnail-first
+            behavior.
           </li>
           <li>
-            <strong>Local video:</strong> capture a frame and save the post so the still
-            is stored in the Media Library.
+            <strong>No play button:</strong> Enable{' '}
+            <strong>Play Button</strong>, then check its
+            <strong> Hide from grid</strong> options. Some
+            thumbnail types or theme layouts may not use
+            a separate overlay button.
+          </li>
+          <li>
+            <strong>The thumbnail is visible but playback fails:</strong>{' '}
+            Try the original video URL. The source must allow
+            playback or embedding, and the browser must support
+            the file format. Check Inline versus Lightbox mode.
+          </li>
+          <li>
+            <strong>Different results across pages:</strong>{' '}
+            Front page, archives, individual posts, and
+            custom post types have separate rules. Test
+            the published page, not just the editor preview.
           </li>
         </ul>
       </section>
