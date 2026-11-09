@@ -12,6 +12,7 @@ import {
   FeatureGuideHeading,
   FeatureGuideHighlight,
   FeatureGuideOptions,
+  FeatureGuideSection,
   FeatureGuideSteps,
   FeatureRelatedGuides,
 } from '../components/features/FeatureGuideSections';
@@ -50,10 +51,7 @@ export function FeaturedImageUrlBlockGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-image-url-block-purpose"
-      >
+      <FeatureGuideSection id="featured-image-url-block-purpose">
         <FeatureGuideHeading id="featured-image-url-block-purpose" icon={<>
 <Image size={19} aria-hidden="true" />
 </>} kicker={<>
@@ -69,12 +67,9 @@ Keep a remote image with the post you are editing.
           already set the featured image elsewhere, or prefer a local upload, this block
           is optional.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-image-url-block-steps"
-      >
+      <FeatureGuideSection id="featured-image-url-block-steps">
         <FeatureGuideHeading id="featured-image-url-block-steps" icon={<>
 <MousePointerClick size={19} aria-hidden="true" />
 </>} kicker={<>
@@ -113,12 +108,9 @@ Set the image in a post.
             </p>
           </li>
         </FeatureGuideSteps>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="featured-image-url-block-controls"
-      >
+      <FeatureGuideSection id="featured-image-url-block-controls">
         <FeatureGuideHeading id="featured-image-url-block-controls" icon={<>
 <Accessibility size={19} aria-hidden="true" />
 </>} kicker={<>
@@ -148,12 +140,9 @@ What each control changes
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="featured-image-url-block-limits"
-      >
+      <FeatureGuideSection id="featured-image-url-block-limits" help>
         <FeatureGuideHeading id="featured-image-url-block-limits" icon={<>
 <AlertTriangle size={18} aria-hidden="true" />
 </>} kicker={<>
@@ -191,7 +180,7 @@ If the block or preview is missing
             </p>
           </li>
         </FeatureGuideChecklist>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureRelatedGuides>
         <Link to="/features/remote-featured-image/">Remote Featured Image</Link>,{' '}
