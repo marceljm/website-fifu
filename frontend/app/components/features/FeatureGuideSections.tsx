@@ -63,7 +63,7 @@ export function FeatureGuideOptions({
       : variant === 'migration'
         ? 'db-migration-options'
         : 'feature-guide-options';
-  return <dl className={className}>{children}</dl>;
+  return <dl className={`feature-section-options ${className}`}>{children}</dl>;
 }
 
 export function FeatureGuideHelpList({ children }: ChildrenProps) {
