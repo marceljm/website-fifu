@@ -49,6 +49,10 @@ export function FeatureGuideSteps({ children }: ChildrenProps) {
   return <ol className="activation-feature-steps">{children}</ol>;
 }
 
+export function FeatureGuideChecklist({ children }: ChildrenProps) {
+  return <ul className="activation-feature-steps">{children}</ul>;
+}
+
 export function FeatureGuideOptions({
   children,
   variant = 'default',
