@@ -62,11 +62,18 @@
       "locations": [
         {
           "label": "Plugin menu",
-          "path": ["WordPress admin", "FIFU"]
+          "path": [
+            "WordPress admin",
+            "FIFU"
+          ]
         },
         {
           "label": "Built-in help",
-          "path": ["FIFU", "Settings", "Help"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Help"
+          ]
         }
       ],
       "facts": [
@@ -210,12 +217,6 @@
                 "Edit many images quickly from the post list: [Quick Editor and content lists](/docs/quick-editor/).",
                 "Use remote images in your store: [Product and category images](/docs/product-and-category-images/)."
               ]
-            },
-            {
-              "type": "callout",
-              "tone": "note",
-              "title": "Options with a lock icon",
-              "text": "In [[FIFU]] › [[Settings]], options marked with a lock icon belong to the paid version and aren't covered in these guides."
             }
           ]
         },
@@ -230,7 +231,11 @@
           ]
         }
       ],
-      "related": ["featured-image-from-url", "default-featured-image", "quick-editor"]
+      "related": [
+        "featured-image-from-url",
+        "default-featured-image",
+        "quick-editor"
+      ]
     },
     {
       "slug": "featured-image-from-url",
@@ -246,11 +251,18 @@
       "locations": [
         {
           "label": "Post editor",
-          "path": ["Posts", "Edit post", "Sidebar", "FIFU"]
+          "path": [
+            "Posts",
+            "Edit post",
+            "Sidebar",
+            "FIFU"
+          ]
         },
         {
           "label": "Also in",
-          "path": ["Pages, products, and custom post types"]
+          "path": [
+            "Pages, products, and custom post types"
+          ]
         }
       ],
       "facts": [
@@ -402,7 +414,11 @@
           ]
         }
       ],
-      "related": ["unsplash-image-search", "quick-editor", "replace-not-found-image"]
+      "related": [
+        "unsplash-image-search",
+        "quick-editor",
+        "replace-not-found-image"
+      ]
     },
     {
       "slug": "unsplash-image-search",
@@ -418,11 +434,19 @@
       "locations": [
         {
           "label": "Post editor",
-          "path": ["Edit post", "FIFU", "Image URL or Keywords"]
+          "path": [
+            "Edit post",
+            "FIFU",
+            "Image URL or Keywords"
+          ]
         },
         {
           "label": "Content lists",
-          "path": ["All Posts", "FIFU column", "Quick Editor"]
+          "path": [
+            "All Posts",
+            "FIFU column",
+            "Quick Editor"
+          ]
         }
       ],
       "facts": [
@@ -526,7 +550,11 @@
           ]
         }
       ],
-      "related": ["featured-image-from-url", "quick-editor", "getting-started"]
+      "related": [
+        "featured-image-from-url",
+        "quick-editor",
+        "getting-started"
+      ]
     },
     {
       "slug": "quick-editor",
@@ -542,11 +570,19 @@
       "locations": [
         {
           "label": "Image column",
-          "path": ["Posts", "All Posts", "FIFU column"]
+          "path": [
+            "Posts",
+            "All Posts",
+            "FIFU column"
+          ]
         },
         {
           "label": "Status filter",
-          "path": ["Posts", "All Posts", "All featured media statuses"]
+          "path": [
+            "Posts",
+            "All Posts",
+            "All featured media statuses"
+          ]
         }
       ],
       "facts": [
@@ -629,7 +665,10 @@
             },
             {
               "type": "table",
-              "columns": ["Option", "Shows"],
+              "columns": [
+                "Option",
+                "Shows"
+              ],
               "rows": [
                 [
                   "[[Any featured media]]",
@@ -639,7 +678,10 @@
                   "[[No assigned featured media]]",
                   "Items without a featured image. Great for finding what's missing."
                 ],
-                ["[[Featured image]]", "Items with a featured image."],
+                [
+                  "[[Featured image]]",
+                  "Items with a featured image."
+                ],
                 [
                   "[[Remote featured image]]",
                   "Items whose image comes from a URL through FIFU."
@@ -687,11 +729,23 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Image", "Optimized Images", "Optimize"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Image",
+            "Optimized Images",
+            "Optimize"
+          ]
         },
         {
           "label": "Square images and sizes",
-          "path": ["FIFU", "Settings", "Image", "Optimized Images", "Sizes"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Image",
+            "Optimized Images",
+            "Sizes"
+          ]
         }
       ],
       "facts": [
@@ -755,12 +809,6 @@
                   "title": "Visit a post and check that the images look right."
                 }
               ]
-            },
-            {
-              "type": "callout",
-              "tone": "tip",
-              "title": "How to check it works",
-              "text": "Right-click an image and open it in a new tab. An optimized image has an address that starts with `i0.wp.com`, `i1.wp.com`, `i2.wp.com`, or `i3.wp.com`."
             }
           ]
         },
@@ -770,7 +818,7 @@
           "blocks": [
             {
               "type": "paragraph",
-              "text": "Themes and plugins ask for images in predefined sizes, called **registered sizes**. On the [[Sizes]] tab, [[Registered sizes]] lists the sizes FIFU has detected while your pages were visited: [[Name]], [[Width]], [[Height]], [[Crop]], and the [[Pages]] where each one was used. FIFU uses them to request the exact size from the CDN. Most sites never need to change them."
+              "text": "The [[Sizes]] tab lists image sizes used by your theme. You can adjust the width, height, or cropping when an image looks too small or is cut off. Most sites do not need to change these values."
             },
             {
               "type": "list",
@@ -791,9 +839,15 @@
             },
             {
               "type": "table",
-              "columns": ["Option", "What happens"],
+              "columns": [
+                "Option",
+                "What happens"
+              ],
               "rows": [
-                ["(empty)", "Images aren't made square. Registered sizes are used."],
+                [
+                  "(empty)",
+                  "Images aren't made square. Registered sizes are used."
+                ],
                 [
                   "[[Make square by cropping]]",
                   "Cuts off parts of the image to make it square."
@@ -832,17 +886,15 @@
               "tone": "tip",
               "title": "Replacing an image at the same address",
               "text": "The CDN keeps copies of images. If you replace a file but keep its address, visitors may see the old copy for a while. Giving the new file a new address avoids this."
-            },
-            {
-              "type": "callout",
-              "tone": "note",
-              "title": "The FIFU CDN tab",
-              "text": "The [[FIFU CDN]] tab shows a lock icon. It isn't part of the free version, so this guide doesn't cover it."
             }
           ]
         }
       ],
-      "related": ["fifu-cloud", "seo-and-social-sharing", "featured-image-from-url"]
+      "related": [
+        "fifu-cloud",
+        "seo-and-social-sharing",
+        "featured-image-from-url"
+      ]
     },
     {
       "slug": "hide-featured-media",
@@ -858,7 +910,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Image", "Hide Featured Media"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Image",
+            "Hide Featured Media"
+          ]
         }
       ],
       "facts": [
@@ -981,7 +1038,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Image", "Default Featured Image"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Image",
+            "Default Featured Image"
+          ]
         }
       ],
       "facts": [
@@ -1108,7 +1170,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Image", "Modify Post Content"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Image",
+            "Modify Post Content"
+          ]
         }
       ],
       "facts": [
@@ -1221,7 +1288,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Image", "Replace Not Found Image"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Image",
+            "Replace Not Found Image"
+          ]
         }
       ],
       "facts": [
@@ -1265,7 +1337,7 @@
                 },
                 {
                   "title": "Paste the address of your backup image into [[Image URL]].",
-                  "text": "It must be a complete address that starts with `http://` or `https://`. Anything else is ignored."
+                  "text": "Use a public image URL that opens directly in your browser."
                 },
                 {
                   "title": "Open a page with a broken image to see the backup image in its place."
@@ -1299,7 +1371,6 @@
             {
               "type": "list",
               "items": [
-                "The swap happens in the visitor's browser, right after the image fails to load.",
                 "It covers featured images that FIFU displays. Images you placed inside the post content aren't affected.",
                 "To find broken images, open a post: in the FIFU box, a broken address shows an “image not found” picture instead of the preview."
               ]
@@ -1307,7 +1378,11 @@
           ]
         }
       ],
-      "related": ["default-featured-image", "featured-image-from-url", "fifu-cloud"]
+      "related": [
+        "default-featured-image",
+        "featured-image-from-url",
+        "fifu-cloud"
+      ]
     },
     {
       "slug": "disable-right-click",
@@ -1323,7 +1398,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Image", "Disable right-click"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Image",
+            "Disable right-click"
+          ]
         }
       ],
       "facts": [
@@ -1383,7 +1463,7 @@
               "type": "callout",
               "tone": "warning",
               "title": "Not a complete protection",
-              "text": "This setting discourages casual copying, but it can't prevent every way of getting an image. Visitors can still take screenshots, look at the page source, or use browser tools."
+              "text": "This discourages casual copying but cannot prevent people from saving or capturing an image."
             },
             {
               "type": "paragraph",
@@ -1392,7 +1472,11 @@
           ]
         }
       ],
-      "related": ["replace-not-found-image", "fifu-cloud", "optimized-images"]
+      "related": [
+        "replace-not-found-image",
+        "fifu-cloud",
+        "optimized-images"
+      ]
     },
     {
       "slug": "auto-set-featured-media-from-post-content",
@@ -1548,12 +1632,6 @@
               "tone": "tip",
               "title": "Combine it with a default image",
               "text": "When a post has no image at all, FIFU falls back to the [Default Featured Image](/docs/default-featured-image/) if you've set one."
-            },
-            {
-              "type": "callout",
-              "tone": "note",
-              "title": "Options with a lock icon",
-              "text": "Some options in this screen show a lock icon. They aren't part of the free version, so this guide doesn't cover them."
             }
           ]
         }
@@ -1578,11 +1656,20 @@
       "locations": [
         {
           "label": "Product image",
-          "path": ["Products", "Edit product", "Sidebar", "FIFU"]
+          "path": [
+            "Products",
+            "Edit product",
+            "Sidebar",
+            "FIFU"
+          ]
         },
         {
           "label": "Category image",
-          "path": ["Products", "Categories", "FIFU"]
+          "path": [
+            "Products",
+            "Categories",
+            "FIFU"
+          ]
         }
       ],
       "facts": [
@@ -1686,7 +1773,11 @@
           ]
         }
       ],
-      "related": ["lightbox-and-zoom", "add-image-to-order-email", "quick-editor"]
+      "related": [
+        "lightbox-and-zoom",
+        "add-image-to-order-email",
+        "quick-editor"
+      ]
     },
     {
       "slug": "lightbox-and-zoom",
@@ -1702,7 +1793,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "WooCommerce", "Lightbox and Zoom"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "WooCommerce",
+            "Lightbox and Zoom"
+          ]
         }
       ],
       "facts": [
@@ -1810,7 +1906,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "WooCommerce", "Add image to order email"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "WooCommerce",
+            "Add image to order email"
+          ]
         }
       ],
       "facts": [
@@ -1901,7 +2002,11 @@
           ]
         }
       ],
-      "related": ["product-and-category-images", "lightbox-and-zoom", "getting-started"]
+      "related": [
+        "product-and-category-images",
+        "lightbox-and-zoom",
+        "getting-started"
+      ]
     },
     {
       "slug": "image-metadata",
@@ -1917,7 +2022,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Metadata", "Image Metadata"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Metadata",
+            "Image Metadata"
+          ]
         }
       ],
       "facts": [
@@ -1941,11 +2051,7 @@
           "blocks": [
             {
               "type": "paragraph",
-              "text": "WordPress, themes, and plugins expect every featured image to be an item of the Media Library, with details like its address and size. Remote images aren't in your Media Library, so FIFU creates small **records** that point to the remote address. No image file is downloaded."
-            },
-            {
-              "type": "paragraph",
-              "text": "These records are the **Image Metadata**. FIFU keeps them out of your Media Library, so they don't clutter it."
+              "text": "Some WordPress features need image information even when the file is hosted elsewhere. **Image Metadata** lets FIFU provide that information without downloading the image."
             }
           ]
         },
@@ -2005,17 +2111,15 @@
             {
               "type": "paragraph",
               "text": "Switching [[Image Metadata]] off stops the generation. It **doesn't delete** the records that already exist. To remove them, use [Clear Metadata](/docs/clear-metadata/)."
-            },
-            {
-              "type": "callout",
-              "tone": "note",
-              "title": "Options with a lock icon",
-              "text": "Some options in this screen show a lock icon. They aren't part of the free version, so this guide doesn't cover them."
             }
           ]
         }
       ],
-      "related": ["clear-metadata", "default-featured-image", "wp-cli"]
+      "related": [
+        "clear-metadata",
+        "default-featured-image",
+        "wp-cli"
+      ]
     },
     {
       "slug": "clear-metadata",
@@ -2031,11 +2135,20 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Metadata", "Clear Metadata"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Metadata",
+            "Clear Metadata"
+          ]
         },
         {
           "label": "When deactivating",
-          "path": ["Plugins", "Featured Image from URL (FIFU)", "Deactivate"]
+          "path": [
+            "Plugins",
+            "Featured Image from URL (FIFU)",
+            "Deactivate"
+          ]
         }
       ],
       "facts": [
@@ -2128,7 +2241,11 @@
           ]
         }
       ],
-      "related": ["image-metadata", "delete-all-urls", "reset-settings"]
+      "related": [
+        "image-metadata",
+        "delete-all-urls",
+        "reset-settings"
+      ]
     },
     {
       "slug": "reset-settings",
@@ -2144,7 +2261,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Metadata", "Reset Settings"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Metadata",
+            "Reset Settings"
+          ]
         }
       ],
       "facts": [
@@ -2217,7 +2339,11 @@
           ]
         }
       ],
-      "related": ["delete-all-urls", "clear-metadata", "wp-cli"]
+      "related": [
+        "delete-all-urls",
+        "clear-metadata",
+        "wp-cli"
+      ]
     },
     {
       "slug": "delete-all-urls",
@@ -2233,7 +2359,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Metadata", "Delete All URLs"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Metadata",
+            "Delete All URLs"
+          ]
         }
       ],
       "facts": [
@@ -2353,7 +2484,11 @@
           ]
         }
       ],
-      "related": ["clear-metadata", "reset-settings", "image-metadata"]
+      "related": [
+        "clear-metadata",
+        "reset-settings",
+        "image-metadata"
+      ]
     },
     {
       "slug": "fifu-api",
@@ -2369,7 +2504,12 @@
       "locations": [
         {
           "label": "Reference",
-          "path": ["FIFU", "Settings", "Developers", "FIFU API"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Developers",
+            "FIFU API"
+          ]
         }
       ],
       "facts": [
@@ -2393,11 +2533,14 @@
           "blocks": [
             {
               "type": "paragraph",
-              "text": "Are you a WordPress developer? FIFU offers simple PHP functions to set images from your own code. You provide the ID and the image address, and FIFU takes care of the rest: it saves the custom fields and creates the metadata WordPress needs."
+              "text": "Developers can use FIFU's PHP functions to set remote featured images from custom code. Provide the post or category ID and the image URL."
             },
             {
               "type": "table",
-              "columns": ["Function", "What it sets"],
+              "columns": [
+                "Function",
+                "What it sets"
+              ],
               "rows": [
                 [
                   "`fifu_dev_set_image( $post_id, $image_url )`",
@@ -2457,17 +2600,15 @@
                 "Put your code in a child theme's `functions.php` or a small custom plugin, so theme updates don't remove it.",
                 "Prefer the command line? See [WP-CLI](/docs/wp-cli/). It can also create posts with a FIFU image."
               ]
-            },
-            {
-              "type": "callout",
-              "tone": "note",
-              "title": "Options with a lock icon",
-              "text": "Some options in this screen show a lock icon. They aren't part of the free version, so this guide doesn't cover them."
             }
           ]
         }
       ],
-      "related": ["wp-cli", "image-metadata", "product-and-category-images"]
+      "related": [
+        "wp-cli",
+        "image-metadata",
+        "product-and-category-images"
+      ]
     },
     {
       "slug": "wp-cli",
@@ -2483,7 +2624,12 @@
       "locations": [
         {
           "label": "Reference",
-          "path": ["FIFU", "Settings", "Developers", "WP-CLI"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Developers",
+            "WP-CLI"
+          ]
         }
       ],
       "facts": [
@@ -2523,7 +2669,10 @@
           "blocks": [
             {
               "type": "table",
-              "columns": ["Command", "What it does"],
+              "columns": [
+                "Command",
+                "What it does"
+              ],
               "rows": [
                 [
                   "`wp fifu content on`",
@@ -2537,7 +2686,10 @@
                   "`wp fifu content --skip=ads.google.com,emoji`",
                   "Sets the keywords to skip."
                 ],
-                ["`wp fifu content --cpt=post,page`", "Sets the post types."]
+                [
+                  "`wp fifu content --cpt=post,page`",
+                  "Sets the post types."
+                ]
               ]
             }
           ]
@@ -2548,9 +2700,15 @@
           "blocks": [
             {
               "type": "table",
-              "columns": ["Command", "What it does"],
+              "columns": [
+                "Command",
+                "What it does"
+              ],
               "rows": [
-                ["`wp fifu cdn on`", "[[optimize featured images]] on or off."],
+                [
+                  "`wp fifu cdn on`",
+                  "[[optimize featured images]] on or off."
+                ],
                 [
                   "`wp fifu cdn --content=on`",
                   "[[optimize secondary images]] on or off."
@@ -2563,8 +2721,14 @@
                   "`wp fifu sizes --save=medium=400x300x1`",
                   "Saves a registered size as name=width×height×crop (1 = crop, 0 = no crop)."
                 ],
-                ["`wp fifu image --hide=on`", "[[Hide Featured Media]] on or off."],
-                ["`wp fifu image --hide-types=post,page`", "Hide: filter by post type."],
+                [
+                  "`wp fifu image --hide=on`",
+                  "[[Hide Featured Media]] on or off."
+                ],
+                [
+                  "`wp fifu image --hide-types=post,page`",
+                  "Hide: filter by post type."
+                ],
                 [
                   "`wp fifu image --hide-formats=video,audio`",
                   "Hide: filter by post format."
@@ -2573,12 +2737,18 @@
                   "`wp fifu image --default-url=https://…`",
                   "Sets the [[Default Featured Image]] address."
                 ],
-                ["`wp fifu image --default=on`", "Default Featured Image on or off."],
+                [
+                  "`wp fifu image --default=on`",
+                  "Default Featured Image on or off."
+                ],
                 [
                   "`wp fifu image --default-types=post,page`",
                   "Default Featured Image: filter by post type."
                 ],
-                ["`wp fifu image --pcontent-add=on`", "[[add missing media]] on or off."],
+                [
+                  "`wp fifu image --pcontent-add=on`",
+                  "[[add missing media]] on or off."
+                ],
                 [
                   "`wp fifu image --pcontent-remove=on`",
                   "[[remove duplicated media]] on or off."
@@ -2591,7 +2761,10 @@
                   "`wp fifu image --replace=https://…`",
                   "Sets the [[Replace Not Found Image]] address."
                 ],
-                ["`wp fifu image --block=on`", "[[Disable right-click]] on or off."]
+                [
+                  "`wp fifu image --block=on`",
+                  "[[Disable right-click]] on or off."
+                ]
               ]
             },
             {
@@ -2608,10 +2781,19 @@
           "blocks": [
             {
               "type": "table",
-              "columns": ["Command", "What it does"],
+              "columns": [
+                "Command",
+                "What it does"
+              ],
               "rows": [
-                ["`wp fifu woo --lightbox=on`", "[[lightbox]] on or off."],
-                ["`wp fifu woo --zoom=on`", "[[zoom]] on or off."],
+                [
+                  "`wp fifu woo --lightbox=on`",
+                  "[[lightbox]] on or off."
+                ],
+                [
+                  "`wp fifu woo --zoom=on`",
+                  "[[zoom]] on or off."
+                ],
                 [
                   "`wp fifu woo --order-email=on`",
                   "[[Add image to order email]] on or off."
@@ -2626,15 +2808,27 @@
           "blocks": [
             {
               "type": "table",
-              "columns": ["Command", "What it does"],
+              "columns": [
+                "Command",
+                "What it does"
+              ],
               "rows": [
                 [
                   "`wp fifu metadata on`",
                   "Switches [[Image Metadata]] on and generates missing metadata (`off` stops it)."
                 ],
-                ["`wp fifu clean`", "Runs [[Clear Metadata]]."],
-                ["`wp fifu reset`", "Runs [[Reset Settings]]."],
-                ["`wp fifu debug on`", "[[Debug Mode]] on or off."]
+                [
+                  "`wp fifu clean`",
+                  "Runs [[Clear Metadata]]."
+                ],
+                [
+                  "`wp fifu reset`",
+                  "Runs [[Reset Settings]]."
+                ],
+                [
+                  "`wp fifu debug on`",
+                  "[[Debug Mode]] on or off."
+                ]
               ]
             }
           ]
@@ -2665,7 +2859,11 @@
           ]
         }
       ],
-      "related": ["fifu-api", "reset-settings", "image-metadata"]
+      "related": [
+        "fifu-api",
+        "reset-settings",
+        "image-metadata"
+      ]
     },
     {
       "slug": "debug-mode",
@@ -2681,7 +2879,12 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["FIFU", "Settings", "Developers", "Debug Mode"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Developers",
+            "Debug Mode"
+          ]
         }
       ],
       "facts": [
@@ -2705,7 +2908,7 @@
           "blocks": [
             {
               "type": "paragraph",
-              "text": "**Debug Mode** helps you and the FIFU team investigate problems. While it's on, FIFU's own files are never cached, and extra tools appear that collect details about posts, products, categories, and images for support."
+              "text": "**Debug Mode** helps you and FIFU support investigate problems. It provides extra troubleshooting tools and makes sure recent FIFU changes are loaded during testing."
             }
           ]
         },
@@ -2739,7 +2942,7 @@
             {
               "type": "list",
               "items": [
-                "**No cached files.** Your browser always loads FIFU's latest scripts and styles, so an old copy can't hide a fix.",
+                "**Fresh files.** FIFU loads its latest files while you troubleshoot.",
                 "[[Copy debug data]]: a new button in the FIFU box of the editor and in the Quick Editor. It copies details about that item, ready to paste into a support email.",
                 "[[Download debug logs]]: a new button on the [Status page](/docs/status-page/), for administrators. It downloads FIFU's log files as a ZIP file.",
                 "[[DB Migration]]: a new page under the **FIFU** menu, for database maintenance. Only use it if FIFU support asks you to."
@@ -2754,7 +2957,11 @@
           ]
         }
       ],
-      "related": ["status-page", "wp-cli", "image-metadata"]
+      "related": [
+        "status-page",
+        "wp-cli",
+        "image-metadata"
+      ]
     },
     {
       "slug": "status-page",
@@ -2770,11 +2977,19 @@
       "locations": [
         {
           "label": "Admin menu",
-          "path": ["FIFU", "Status"]
+          "path": [
+            "FIFU",
+            "Status"
+          ]
         },
         {
           "label": "Also from",
-          "path": ["FIFU", "Settings", "Help", "Technical support"]
+          "path": [
+            "FIFU",
+            "Settings",
+            "Help",
+            "Technical support"
+          ]
         }
       ],
       "facts": [
@@ -2859,7 +3074,11 @@
           ]
         }
       ],
-      "related": ["debug-mode", "getting-started", "image-metadata"]
+      "related": [
+        "debug-mode",
+        "getting-started",
+        "image-metadata"
+      ]
     },
     {
       "slug": "featured-image-block",
@@ -2875,7 +3094,11 @@
       "locations": [
         {
           "label": "Block editor",
-          "path": ["Edit post", "Add block", "Featured Image (URL)"]
+          "path": [
+            "Edit post",
+            "Add block",
+            "Featured Image (URL)"
+          ]
         }
       ],
       "facts": [
@@ -2966,7 +3189,11 @@
           ]
         }
       ],
-      "related": ["featured-image-from-url", "featured-media-widget", "elementor-widget"]
+      "related": [
+        "featured-image-from-url",
+        "featured-media-widget",
+        "elementor-widget"
+      ]
     },
     {
       "slug": "featured-media-widget",
@@ -2982,7 +3209,11 @@
       "locations": [
         {
           "label": "Widgets",
-          "path": ["Appearance", "Widgets", "(FIFU) Featured media"]
+          "path": [
+            "Appearance",
+            "Widgets",
+            "(FIFU) Featured media"
+          ]
         }
       ],
       "facts": [
@@ -3061,12 +3292,16 @@
               "type": "callout",
               "tone": "tip",
               "title": "Styling",
-              "text": "The widget has no options. It outputs a simple image, so your theme's styles or a little custom CSS control its look."
+              "text": "The widget has no separate appearance settings. Its display follows your theme."
             }
           ]
         }
       ],
-      "related": ["featured-image-block", "elementor-widget", "default-featured-image"]
+      "related": [
+        "featured-image-block",
+        "elementor-widget",
+        "default-featured-image"
+      ]
     },
     {
       "slug": "elementor-widget",
@@ -3082,7 +3317,11 @@
       "locations": [
         {
           "label": "Elementor",
-          "path": ["Edit with Elementor", "Basic", "(FIFU) Featured Image"]
+          "path": [
+            "Edit with Elementor",
+            "Basic",
+            "(FIFU) Featured Image"
+          ]
         }
       ],
       "facts": [
@@ -3183,7 +3422,9 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["None. It works automatically"]
+          "path": [
+            "None. It works automatically"
+          ]
         }
       ],
       "facts": [
@@ -3302,7 +3543,11 @@
           ]
         }
       ],
-      "related": ["default-featured-image", "featured-image-from-url", "optimized-images"]
+      "related": [
+        "default-featured-image",
+        "featured-image-from-url",
+        "optimized-images"
+      ]
     },
     {
       "slug": "forms-and-marketplaces",
@@ -3318,11 +3563,20 @@
       "locations": [
         {
           "label": "Gravity Forms",
-          "path": ["Forms", "Edit form", "Post Fields", "Featured Image (FIFU)"]
+          "path": [
+            "Forms",
+            "Edit form",
+            "Post Fields",
+            "Featured Image (FIFU)"
+          ]
         },
         {
           "label": "Dokan",
-          "path": ["Vendor dashboard", "Products", "Product image"]
+          "path": [
+            "Vendor dashboard",
+            "Products",
+            "Product image"
+          ]
         }
       ],
       "facts": [
@@ -3444,7 +3698,9 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["None. It works automatically"]
+          "path": [
+            "None. It works automatically"
+          ]
         }
       ],
       "facts": [
@@ -3528,11 +3784,18 @@
       "locations": [
         {
           "label": "WP Sheet Editor",
-          "path": ["Your spreadsheet", "fifu_image_url column"]
+          "path": [
+            "Your spreadsheet",
+            "fifu_image_url column"
+          ]
         },
         {
           "label": "WOOBE",
-          "path": ["WOOBE", "Meta Fields", "fifu_image_url"]
+          "path": [
+            "WOOBE",
+            "Meta Fields",
+            "fifu_image_url"
+          ]
         }
       ],
       "facts": [
@@ -3628,7 +3891,11 @@
           ]
         }
       ],
-      "related": ["quick-editor", "image-metadata", "import-and-automation-plugins"]
+      "related": [
+        "quick-editor",
+        "image-metadata",
+        "import-and-automation-plugins"
+      ]
     },
     {
       "slug": "import-and-automation-plugins",
@@ -3644,7 +3911,9 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["None. It works automatically"]
+          "path": [
+            "None. It works automatically"
+          ]
         }
       ],
       "facts": [
@@ -3717,7 +3986,11 @@
           ]
         }
       ],
-      "related": ["image-metadata", "fifu-api", "bulk-editors"]
+      "related": [
+        "image-metadata",
+        "fifu-api",
+        "bulk-editors"
+      ]
     },
     {
       "slug": "theme-and-plugin-compatibility",
@@ -3733,7 +4006,9 @@
       "locations": [
         {
           "label": "Settings",
-          "path": ["None. It works automatically"]
+          "path": [
+            "None. It works automatically"
+          ]
         }
       ],
       "facts": [
@@ -3806,7 +4081,11 @@
           ]
         }
       ],
-      "related": ["seo-and-social-sharing", "image-metadata", "status-page"]
+      "related": [
+        "seo-and-social-sharing",
+        "image-metadata",
+        "status-page"
+      ]
     },
     {
       "slug": "fifu-cloud",
@@ -3822,7 +4101,10 @@
       "locations": [
         {
           "label": "Admin menu",
-          "path": ["FIFU", "Cloud"]
+          "path": [
+            "FIFU",
+            "Cloud"
+          ]
         }
       ],
       "facts": [
@@ -3941,7 +4223,11 @@
           ]
         }
       ],
-      "related": ["optimized-images", "replace-not-found-image", "disable-right-click"]
+      "related": [
+        "optimized-images",
+        "replace-not-found-image",
+        "disable-right-click"
+      ]
     },
     {
       "slug": "save-in-the-media-library",
@@ -3950,118 +4236,114 @@
       "icon": "image-plus",
       "category": "image",
       "illustration": {
-          "key": "save-in-media-library",
-          "caption": "Enable the editor save button, then convert a remote image into a Media Library attachment.",
-          "alt": "Three-step diagram: turn on “show save button on post editor” in FIFU settings, click “Upload to media library” in the editor, and see the image as a local Media Library item."
+        "key": "save-in-media-library",
+        "caption": "Enable the editor save button, then convert a remote image into a Media Library attachment.",
+        "alt": "Three-step diagram: turn on “show save button on post editor” in FIFU settings, click “Upload to media library” in the editor, and see the image as a local Media Library item."
       },
       "locations": [
-          {
-              "label": "Editor button setting",
-              "path": [
-                  "WordPress admin",
-                  "FIFU",
-                  "Settings",
-                  "Image",
-                  "Save in the Media Library",
-                  "Main",
-                  "show save button on post editor"
-              ]
-          }
+        {
+          "label": "Editor button setting",
+          "path": [
+            "WordPress admin",
+            "FIFU",
+            "Settings",
+            "Image",
+            "Save in the Media Library",
+            "Main",
+            "show save button on post editor"
+          ]
+        }
       ],
       "facts": [],
       "sections": [
-          {
-              "id": "what-it-does",
-              "title": "What this feature does",
-              "blocks": [
-                  {
-                      "type": "paragraph",
-                      "text": "FIFU can download a remote image and add it to the WordPress Media Library. For a post, the converted image becomes its featured image. For a product, FIFU can also convert remote gallery images into local gallery attachments."
-                  }
+        {
+          "id": "what-it-does",
+          "title": "What this feature does",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FIFU can download a remote image and add it to the WordPress Media Library. For a post, the converted image becomes its featured image. For a product, FIFU can also convert remote gallery images into local gallery attachments."
+            }
+          ]
+        },
+        {
+          "id": "show-editor-button",
+          "title": "Show the save button in the editor",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "In WordPress, open [[FIFU]] › [[Settings]] and select the [[Image]] tab."
+                },
+                {
+                  "title": "Find [[Save in the Media Library]] and its [[Main]] tab."
+                },
+                {
+                  "title": "Turn on [[show save button on post editor]]."
+                }
               ]
-          },
-          {
-              "id": "show-editor-button",
-              "title": "Show the save button in the editor",
-              "blocks": [
-                  {
-                      "type": "steps",
-                      "items": [
-                          {
-                              "title": "In WordPress, open [[FIFU]] › [[Settings]] and select the [[Image]] tab."
-                          },
-                          {
-                              "title": "Find [[Save in the Media Library]] and its [[Main]] tab."
-                          },
-                          {
-                              "title": "Turn on [[show save button on post editor]]."
-                          }
-                      ]
-                  },
-                  {
-                      "type": "paragraph",
-                      "text": "The setting controls whether the save button is shown in the FIFU editor box."
-                  }
+            },
+            {
+              "type": "paragraph",
+              "text": "The setting controls whether the save button is shown in the FIFU editor box."
+            }
+          ]
+        },
+        {
+          "id": "save-image",
+          "title": "Save a remote image",
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Edit a post and set its remote image in the FIFU editor box."
+                },
+                {
+                  "title": "Click [[Preview]] so the image is loaded in the editor."
+                },
+                {
+                  "title": "Click [[Upload to media library]] in the FIFU box."
+                },
+                {
+                  "title": "Save or update the post if WordPress asks you to."
+                }
               ]
-          },
-          {
-              "id": "save-image",
-              "title": "Save a remote image",
-              "blocks": [
-                  {
-                      "type": "steps",
-                      "items": [
-                          {
-                              "title": "Edit a post and set its remote image in the FIFU editor box."
-                          },
-                          {
-                              "title": "Click [[Preview]] so the image is loaded in the editor."
-                          },
-                          {
-                              "title": "Click [[Upload to media library]] in the FIFU box."
-                          },
-                          {
-                              "title": "Save or update the post if WordPress asks you to."
-                          }
-                      ]
-                  },
-                  {
-                      "type": "paragraph",
-                      "text": "FIFU creates a WordPress attachment from the image URL and uses that attachment as the post featured image. For WooCommerce products, the editor upload flow can also convert gallery images."
-                  }
-              ]
-          },
-          {
-              "id": "scheduled-conversion",
-              "title": "Run the scheduled conversion",
-              "blocks": [
-                  {
-                      "type": "paragraph",
-                      "text": "The same [[Main]] tab has a separate option to periodically search for remote images and save them in the Media Library. Turn on [[run a function that periodically searches for remote images and saves them in the media library.]] to enable that job."
-                  },
-                  {
-                      "type": "callout",
-                      "tone": "warning",
-                      "title": "Back up before enabling the scheduled job",
-                      "text": "FIFU warns that making an image local through the scheduled event cannot be reverted. Make a backup before you enable it."
-                  }
-              ]
-          },
-          {
-              "id": "download-requirement",
-              "title": "If an image does not save",
-              "blocks": [
-                  {
-                      "type": "paragraph",
-                      "text": "FIFU downloads the image from its remote URL to create the attachment. If that download fails, the image is not saved. In [[Save in the Media Library]] › [[Proxy]], FIFU provides proxy options for image downloads."
-                  }
-              ]
-          }
+            }
+          ]
+        },
+        {
+          "id": "scheduled-conversion",
+          "title": "Run the scheduled conversion",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The same [[Main]] tab has a separate option to periodically search for remote images and save them in the Media Library. Turn on [[run a function that periodically searches for remote images and saves them in the media library.]] to enable that job."
+            },
+            {
+              "type": "callout",
+              "tone": "warning",
+              "title": "Back up before enabling the scheduled job",
+              "text": "FIFU warns that making an image local through the scheduled event cannot be reverted. Make a backup before you enable it."
+            }
+          ]
+        },
+        {
+          "id": "download-requirement",
+          "title": "If an image does not save",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "If the image cannot be downloaded, try the options under [[Save in the Media Library]] › [[Proxy]]."
+            }
+          ]
+        }
       ],
       "related": [
-          "featured-image-from-url",
-          "product-and-category-images"
+        "featured-image-from-url",
+        "product-and-category-images"
       ]
-  }
+    }
   ]
 }
