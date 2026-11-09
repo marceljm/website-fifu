@@ -49,14 +49,14 @@ function CliCommandCard({ label, command, description }: FeatureCliCommand) {
 /** Shared WP-CLI presentation for individual feature guides. */
 export function FeatureCliSection({ id, commands, note }: FeatureCliSectionProps) {
   return (
-    <section className="activation-feature-section feature-cli-section" aria-labelledby={`${id}-title`}>
+    <section className="activation-feature-section feature-cli-section" aria-labelledby={id}>
       <div className="activation-feature-section-heading">
         <span className="activation-feature-icon">
           <Terminal size={19} aria-hidden="true" />
         </span>
         <div>
           <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-          <h2 id={`${id}-title`}>WP-CLI commands</h2>
+          <h2 id={id}>WP-CLI commands</h2>
         </div>
       </div>
       <p className="feature-cli-intro">Run each command separately from your WordPress installation.</p>
