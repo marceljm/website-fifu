@@ -1,6 +1,7 @@
 import { ArrowUpRight, CircleAlert, Images, Settings2 } from 'lucide-react';
 import { Link } from 'react-router';
 import { Page } from '../components/layout/SiteLayout';
+import { FeatureCliSection } from '../components/features/FeatureCliSection';
 
 export default function SaveInMediaLibraryGuide() {
   return (
@@ -113,33 +114,25 @@ export default function SaveInMediaLibraryGuide() {
         </dl>
       </section>
 
-      <section className="activation-feature-section" aria-labelledby="media-library-cli">
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ALTERNATIVE SETUP</span>
-            <h2 id="media-library-cli">Set upload options with WP-CLI.</h2>
-          </div>
-        </div>
-        <p>
-          From your WordPress installation, the <code>wp fifu upload</code> command
-          accepts
-          <code>--domain</code>, <code>--show-button=on|off</code>,{' '}
-          <code>--job=on|off</code>,<code>--proxy=on|off</code>, and{' '}
-          <code>--private-proxy</code>. For example, limit uploads to two hosts with:
-        </p>
-        <pre>
-          <code>{'wp fifu upload --domain="images.example.com,photos.example.org"'}</code>
-        </pre>
-        <p>
-          The domain argument replaces the current filter. The toggle arguments change the
-          corresponding setting; enabling <code>--job=on</code> starts the automatic
-          conversion workflow, so back up first. Read the{' '}
-          <Link to="/features/wp-cli/">WP-CLI guide</Link> for how to run FIFU commands.
-        </p>
-      </section>
+      <FeatureCliSection
+        id="media-library-cli"
+        commands={[
+          {
+            label: 'Limit uploads to selected domains',
+            command: 'wp fifu upload --domain="images.example.com,photos.example.org"',
+            description: 'Replace the example domains with your image hosts.',
+          },
+          { label: 'Show the upload button', command: 'wp fifu upload --show-button=on' },
+          { label: 'Enable automatic conversion', command: 'wp fifu upload --job=on' },
+          { label: 'Enable download proxies', command: 'wp fifu upload --proxy=on' },
+          {
+            label: 'Set a private proxy',
+            command: 'wp fifu upload --private-proxy=HOST:PORT',
+            description: 'Replace HOST:PORT with your proxy address.',
+          },
+        ]}
+        note="Replace on with off to disable a switch. Back up your site before enabling automatic conversion."
+      />
 
       <section
         className="activation-feature-section"
