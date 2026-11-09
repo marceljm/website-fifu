@@ -918,31 +918,19 @@ function CustomPopupGuide() {
           <div>
             <dt>Supported editors</dt>
             <dd>
-              The panel is added to supported non-product post types. It is not added to
-              WooCommerce product editors. FIFU also skips its editor panels in Web
-              Stories and Search Filter Pro contexts, and when its editor panels are
-              locked.
+              The panel is available for supported posts and pages,
+              not WooCommerce product editors.
             </dd>
           </div>
           <div>
             <dt>Popup trigger</dt>
             <dd>
-              The visitor must click that item’s FIFU featured-image output, or a link
-              containing it, while saved embed code exists for the item. The click handler
-              also checks a background-image element carrying that item’s{' '}
-              <code>post-id</code>. A regular image without FIFU’s featured-image marker
-              does not trigger this popup.
+              Clicking the content's FIFU featured image opens
+              its saved popup. Other images on the page do
+              not automatically trigger it.
             </dd>
           </div>
-          <div>
-            <dt>Frontend dependency</dt>
-            <dd>
-              When the feature is enabled, the page loads the popup script and styles. If
-              Fancybox is not already enqueued, FIFU loads Fancybox 3.5.7 from cdnjs;
-              allow that CDN if your site’s network or content security policy blocks
-              external scripts.
-            </dd>
-          </div>
+          
         </dl>
       </section>
 
@@ -964,18 +952,15 @@ function CustomPopupGuide() {
             <dt>Editor field is missing</dt>
             <dd>
               Enable <strong>Custom Popup</strong> in{' '}
-              <strong>FIFU → Settings → Image</strong>. Confirm you are editing a
-              supported non-product post type and that FIFU editor panels are not locked
-              or suppressed by the current editor context.
+              <strong>FIFU → Settings → Image</strong> and
+              edit a supported post or page.
             </dd>
           </div>
           <div>
             <dt>Click has no effect</dt>
             <dd>
-              Save non-empty embed code on the same post as the featured image. Then click
-              that post’s FIFU featured image or a link containing it; a different image
-              on the page does not use the post’s saved embed. If the trigger is correct,
-              check whether cdnjs is blocked.
+              Save your embed code on the same post as the
+              featured image and test that image on the published page.
             </dd>
           </div>
         </dl>
@@ -2381,14 +2366,7 @@ wp fifu-migrate run-all --limit=1000 --time=30`}</code>
               rather than Network Admin, and sign in with <code>manage_options</code>.
             </dd>
           </div>
-          <div>
-            <dt>Automatic runtime unavailable</dt>
-            <dd>
-              The page displays this status if the background runner is unavailable. The{' '}
-              <code>FIFU_DISABLE_AUTO_MIGRATION</code> constant disables that runtime;
-              when WP-CLI is available, use the batch commands above.
-            </dd>
-          </div>
+          
           <div>
             <dt>A task needs attention</dt>
             <dd>
@@ -2397,13 +2375,7 @@ wp fifu-migrate run-all --limit=1000 --time=30`}</code>
               <strong>Retry failed items</strong>.
             </dd>
           </div>
-          <div>
-            <dt>WP-CLI reports an unknown task</dt>
-            <dd>
-              Use a registered internal task name exactly. The task row uses a display
-              label, which can differ from that name.
-            </dd>
-          </div>
+          
         </dl>
       </section>
       <p>
@@ -4912,16 +4884,8 @@ function PlayButtonGuide() {
             <strong>Hidden media:</strong> if featured media is hidden for the current
             page, the play overlay is skipped too.
           </li>
-          <li>
-            <strong>Unsupported thumbnail paths:</strong> thumbnail lookup URLs on{' '}
-            <code>cdn.fifu.app</code> that contain <code>video-thumb=</code>, plus
-            on-the-fly video or audio URLs, are skipped.
-          </li>
-          <li>
-            <strong>Lightbox dependencies:</strong> lightbox mode loads Fancybox 3.5.7
-            from <code>cdnjs.cloudflare.com</code>. If your site blocks those assets, use
-            inline mode or allow the required files.
-          </li>
+          
+          
           <li>
             <strong>Grid switches:</strong> confirm that WordPress or WooCommerce hiding
             is not enabled for the page you are checking.
@@ -9448,46 +9412,26 @@ function OptimizedImagesGuide() {
           <div>
             <dt>Featured-image resizing</dt>
             <dd>
-              Requires the featured-image switch, a main domain, a remote FIFU attachment,
-              a usable HTTP(S) source URL, and a requested size with known dimensions.
-              Resizing is skipped for empty or local sources, blocked hosts while the
-              public CDN is selected, SVG files while the public CDN is selected, existing
-              speedup URLs, and requests without dimensions. A full-size request also
-              needs stored dimensions or the FIFU CDN path to resolve dimensions.
+              Enable optimization for featured images and make sure the
+              original image is publicly accessible. FIFU requests
+              an appropriate size when the selected CDN supports it.
             </dd>
           </div>
           <div>
             <dt>Post-content optimization</dt>
             <dd>
-              Works on content when a post context is available. It skips image tags
-              without a <code>src</code>, data images, empty URLs, and hosts blocked by
-              the selected provider rules. Rewriting replaces each eligible source with a
-              transparent placeholder while the lazy loader handles its CDN URL, and the
-              optimizer removes <code>&lt;source&gt;</code> elements from that content.
-              Review responsive or picture-based markup if a content image changes
-              unexpectedly.
+              Enable the separate option for images inside post content.
+              FIFU optimizes eligible images and can load them lazily.
+              Check published pages if your theme uses custom image layouts.
             </dd>
           </div>
           <div>
             <dt>If an image does not change</dt>
             <dd>
-              For a featured image, confirm the toggle, configured main domain, remote
-              FIFU attachment, source-host eligibility, and the requested WordPress size.
-              For a post-body image, confirm the separate secondary-image toggle, a normal
-              image <code>src</code>, and that the page has a post context. With the
-              public CDN selected, FIFU skips blocked hosts: <code>localhost</code>,{' '}
-              <code>amazon-adsystem.com</code>, <code>sapo.io</code>,{' '}
-              <code>image.influenster.com</code>, <code>api.screenshotmachine.com</code>,{' '}
-              <code>img.brownsfashion.com</code>, <code>fbcdn.net</code>,{' '}
-              <code>nitrocdn.com</code>, <code>brightspotcdn.com</code>,{' '}
-              <code>realtysouth.com</code>, <code>tiktokcdn.com</code>,{' '}
-              <code>fdcdn.akamaized.net</code>, <code>blockchainstock.azureedge.net</code>
-              , <code>aa.com.tr</code>, <code>cdn.discordapp.com</code>,{' '}
-              <code>download.schneider-electric.com</code>, <code>cdn.fbsbx.com</code>,{' '}
-              <code>canva.com</code>, <code>cdn.fifu.app</code>,{' '}
-              <code>cloud.fifu.app</code>, and <code>images.placeholders.dev</code>.
-              Existing public-CDN URLs are also skipped. The FIFU CDN does not apply this
-              blocklist.
+              Confirm that the corresponding optimization option is on
+              and the image opens in a browser. Some hosts and file types
+              are not supported by every CDN; check the selected
+              delivery option and test the published page.
             </dd>
           </div>
         </dl>
@@ -9993,9 +9937,9 @@ function BbpressBuddybossGuide() {
           <div>
             <dt>Display size</dt>
             <dd>
-              Images beside titles render at 100 × 100 pixels with cover cropping. Images
-              after content use the available width, preserve their contents, and are
-              limited to <code>90vh</code> high.
+              Images beside titles are shown as compact thumbnails.
+              Images in discussions may appear larger, depending
+              on the theme.
             </dd>
           </div>
         </dl>
@@ -10035,22 +9979,17 @@ function BbpressBuddybossGuide() {
           <div>
             <dt>Paste helper suffixes</dt>
             <dd>
-              The paste helper recognizes URLs ending in <code>.png</code>,{' '}
-              <code>.jpg</code>, <code>.jpeg</code>, <code>.gif</code>, <code>.webp</code>
-              , <code>.bmp</code>, <code>.svg</code>, <code>.avif</code>,{' '}
-              <code>.heic</code>, or <code>.ico</code>. Each paste handles up to 12 image
-              URLs. The helper skips images that fail to load within 7 seconds.
+              Paste a publicly accessible direct image URL in a
+              supported image format. FIFU checks that the image
+              loads before inserting it.
             </dd>
           </div>
           <div>
             <dt>Typed links and saved content</dt>
             <dd>
-              Typed or previously saved links are converted automatically when their path
-              ends in <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>,{' '}
-              <code>.gif</code>, <code>.webp</code>, or <code>.avif</code>. A query string
-              after the image extension is allowed. Converted images load lazily. The
-              paste helper accepts additional suffixes listed above, but automatic
-              conversion does not.
+              Direct image links can also be converted in displayed
+              activity content. If a link stays as text, try
+              pasting it into the activity editor.
             </dd>
           </div>
         </dl>
@@ -10082,20 +10021,12 @@ function BbpressBuddybossGuide() {
           <div>
             <dt>BuddyBoss paste does not insert an image</dt>
             <dd>
-              Confirm BuddyBoss Platform and its Activity component are active. Paste a
-              direct URL with a helper-supported suffix and make sure the image loads
-              within 7 seconds. A page URL or inaccessible image will fail the load check.
+              Confirm BuddyBoss Platform and its Activity component
+              are active. Paste a direct image URL that opens
+              successfully without signing in.
             </dd>
           </div>
-          <div>
-            <dt>A typed image URL stays as text</dt>
-            <dd>
-              Automatic conversion of typed or saved activity links accepts only{' '}
-              <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.gif</code>,{' '}
-              <code>.webp</code>, and <code>.avif</code> paths. For other helper-supported
-              suffixes, paste through the activity editor helper.
-            </dd>
-          </div>
+          
         </dl>
       </section>
 
