@@ -1,12 +1,20 @@
 import {
   Accessibility,
   AlertTriangle,
-  ArrowUpRight,
   Image,
   MousePointerClick,
 } from 'lucide-react';
 import { Link } from 'react-router';
 import { Page } from '../components/layout/SiteLayout';
+import {
+  FeatureGuideChecklist,
+  FeatureGuideCta,
+  FeatureGuideHeading,
+  FeatureGuideHighlight,
+  FeatureGuideOptions,
+  FeatureGuideSteps,
+  FeatureRelatedGuides,
+} from '../components/features/FeatureGuideSections';
 
 export function FeaturedImageUrlBlockGuide() {
   return (
@@ -20,10 +28,7 @@ export function FeaturedImageUrlBlockGuide() {
         featured image without uploading it to your media library.
       </p>
 
-      <section
-        className="feature-highlight"
-        aria-labelledby="featured-image-url-block-intro"
-      >
+      <FeatureGuideHighlight id="featured-image-url-block-intro">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Image size={15} aria-hidden="true" /> EDIT A POST
@@ -43,23 +48,19 @@ export function FeaturedImageUrlBlockGuide() {
             alt="Select the Featured Image (URL) block, enter an image URL and alternative text, then preview the remote image."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
         aria-labelledby="featured-image-url-block-purpose"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Image size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="featured-image-url-block-purpose">
-              Keep a remote image with the post you are editing.
-            </h2>
-          </div>
-        </div>
+        <FeatureGuideHeading id="featured-image-url-block-purpose" icon={<>
+<Image size={19} aria-hidden="true" />
+</>} kicker={<>
+WHEN TO USE IT
+</>}>
+Keep a remote image with the post you are editing.
+</FeatureGuideHeading>
         <p>
           Use this block when an image already has a web address and you want to assign it
           as a post’s featured image without first adding a local media-library copy.
@@ -74,16 +75,14 @@ export function FeaturedImageUrlBlockGuide() {
         className="activation-feature-section"
         aria-labelledby="featured-image-url-block-steps"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <MousePointerClick size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ADD · PREVIEW · SAVE</span>
-            <h2 id="featured-image-url-block-steps">Set the image in a post.</h2>
-          </div>
-        </div>
-        <ol className="activation-feature-steps">
+        <FeatureGuideHeading id="featured-image-url-block-steps" icon={<>
+<MousePointerClick size={19} aria-hidden="true" />
+</>} kicker={<>
+ADD · PREVIEW · SAVE
+</>}>
+Set the image in a post.
+</FeatureGuideHeading>
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -113,23 +112,21 @@ export function FeaturedImageUrlBlockGuide() {
               Save or update the post. FIFU uses this image as the post’s featured image. The block itself does not add an extra image to the published content.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
       </section>
 
       <section
         className="activation-feature-section"
         aria-labelledby="featured-image-url-block-controls"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Accessibility size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">BLOCK SETTINGS</span>
-            <h2 id="featured-image-url-block-controls">What each control changes</h2>
-          </div>
-        </div>
-        <dl className="fifu-fields-options">
+        <FeatureGuideHeading id="featured-image-url-block-controls" icon={<>
+<Accessibility size={19} aria-hidden="true" />
+</>} kicker={<>
+BLOCK SETTINGS
+</>}>
+What each control changes
+</FeatureGuideHeading>
+        <FeatureGuideOptions variant="fields">
           <div>
             <dt>Image URL</dt>
             <dd>
@@ -150,25 +147,21 @@ export function FeaturedImageUrlBlockGuide() {
               apply the cleared image data.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <section
         className="activation-feature-section activation-feature-help"
         aria-labelledby="featured-image-url-block-limits"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
-            <AlertTriangle size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">ACCESS AND TROUBLESHOOTING</span>
-            <h2 id="featured-image-url-block-limits">
-              If the block or preview is missing
-            </h2>
-          </div>
-        </div>
-        <ul className="activation-feature-steps">
+        <FeatureGuideHeading id="featured-image-url-block-limits" icon={<>
+<AlertTriangle size={18} aria-hidden="true" />
+</>} kicker={<>
+ACCESS AND TROUBLESHOOTING
+</>} tone="help">
+If the block or preview is missing
+</FeatureGuideHeading>
+        <FeatureGuideChecklist>
           <li>
             <span>
               <Accessibility size={14} aria-hidden="true" />
@@ -197,27 +190,16 @@ export function FeaturedImageUrlBlockGuide() {
               again.
             </p>
           </li>
-        </ul>
+        </FeatureGuideChecklist>
       </section>
 
-      <p>
-        Related guides:{' '}
+      <FeatureRelatedGuides>
         <Link to="/features/remote-featured-image/">Remote Featured Image</Link>,{' '}
         <Link to="/features/quick-editor/">Quick Editor</Link>, and{' '}
         <Link to="/features/fifu-fields/">FIFU Fields</Link>.
-      </p>
+      </FeatureRelatedGuides>
 
-      <section className="feature-detail-cta activation-feature-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta spaced />
     </Page>
   );
 }
