@@ -966,9 +966,10 @@ function CustomPopupGuide() {
         </dl>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -1341,9 +1342,10 @@ function WatchLaterGuide() {
           </li>
         </ul>
       </section>
-      <p>
-        Related guides: <Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -1525,9 +1527,10 @@ function UnsplashImageSearchGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -1706,9 +1709,10 @@ function DeleteFromCloudGuide() {
         </dl>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/hotlink-protection/">Hotlink protection</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/hotlink-protection/">Hotlink protection</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -1928,9 +1932,10 @@ function UploadToCloudGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/hotlink-protection/">Hotlink protection</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/hotlink-protection/">Hotlink protection</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -2071,9 +2076,10 @@ function LinkLocalImagesGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/save-in-the-media-library/">Save in the Media Library</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -2375,9 +2381,10 @@ wp fifu-migrate run-all --limit=1000 --time=30`}</code>
           
         </dl>
       </section>
-      <p>
-        Related guides: <Link to="/features/image-metadata/">Image Metadata</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/image-metadata/">Image Metadata</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -2792,9 +2799,10 @@ function FeaturedMediaFilterGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -2983,9 +2991,10 @@ function OrderEmailImagesGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -3411,9 +3420,10 @@ function LightboxAndZoomGuide() {
         </dl>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/play-button/">Play Button</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/play-button/">Play Button</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -4349,17 +4359,15 @@ function MinimumWidthGuide() {
             <span>2</span>
             <p>
               Enter a positive whole number of pixels. The default is <strong>100</strong>
-              ; <strong>300</strong> is the example placeholder shown in the field. The
-              value saves when you change it.
+              . The change is saved automatically.
             </p>
           </li>
           <li>
             <span>3</span>
             <p>
               View a page with a featured video at narrow and wide sizes. FIFU checks the
-              rendered thumbnail width; when that is zero, it checks the parent container
-              width. At or above your value, the video can replace the thumbnail; below
-              it, the thumbnail remains.
+              available width. At or above your value, the video can replace the thumbnail;
+              below it, the thumbnail remains.
             </p>
           </li>
         </ol>
@@ -4371,28 +4379,23 @@ function MinimumWidthGuide() {
       >
         <div className="activation-feature-section-heading">
           <span className="activation-feature-icon">
-            <CircleAlert size={18} aria-hidden="true" />
+            <Settings2 size={18} aria-hidden="true" />
           </span>
           <div>
-            <span className="activation-feature-kicker">VALUE RULES AND TUNING</span>
-            <h2 id="minimum-width-rules-title">Use a positive whole number</h2>
+            <span className="activation-feature-kicker">FINE-TUNE</span>
+            <h2 id="minimum-width-rules-title">Adjust the width for your layout</h2>
           </div>
         </div>
         <p>
-          The setting accepts digits from <code>1</code> upward. Blank input, zero,
-          negative values, decimals, or other characters are not saved; the previous value
-          stays active. The width is measured in pixels.
-        </p>
-        <p>
-          If the thumbnail remains where you expect a player, compare its rendered width
-          with your threshold and lower the value if needed. Raise the value when players
-          appear too small in your layout.
+          If the thumbnail appears instead of a player, try a lower minimum width.
+          Increase it to keep thumbnails visible in narrower layouts.
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/video-thumbnail/">Video Thumbnail</Link> and <Link to="/features/play-button/">Play Button</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -5658,9 +5661,10 @@ function ImageSeoGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/image-metadata/">Image Metadata</Link>, <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-images-in-rss-feeds/">Featured Images in RSS Feeds</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/image-metadata/">Image Metadata</Link>, <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-images-in-rss-feeds/">Featured Images in RSS Feeds</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -5851,9 +5855,10 @@ function ScheduleMetadataGenerationGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/clear-metadata/">Clear Metadata</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/clear-metadata/">Clear Metadata</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -6264,9 +6269,10 @@ function AutoSetFeaturedMediaGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/auto-set-featured-media-from-custom-field/">Auto set featured media from custom field</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -6427,9 +6433,10 @@ function AutoSetScreenshotGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -6618,9 +6625,10 @@ function PageRedirectionGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -6734,9 +6742,10 @@ function DisableRightClickGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/hotlink-protection/">Hotlink protection</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/hotlink-protection/">Hotlink protection</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -7084,9 +7093,10 @@ function AutoSetCustomFieldGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/auto-set-featured-media-from-post-content/">Auto set featured media from post content</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/auto-set-featured-media-from-post-content/">Auto set featured media from post content</Link> and <Link to="/features/auto-set-featured-media-using-web-page-address/">Auto set featured media using web page address</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -7301,9 +7311,10 @@ function AutoSetProductImagesFromAsinGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -7497,9 +7508,10 @@ function AutomaticUpdatesGuide() {
           </div>
         </dl>
       </section>
-      <p>
-        Related guides: <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -7768,9 +7780,10 @@ function AutoSetFeaturedImageByTitleGuide() {
           </li>
         </ul>
       </section>
-      <p>
-        Related guides: <Link to="/features/unsplash-image-search/">Unsplash Image Search</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/unsplash-image-search/">Unsplash Image Search</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -8053,10 +8066,6 @@ function ReplaceNotFoundImageGuide() {
         <pre><code>wp fifu image --replace="https://example.com/backup.jpg"</code></pre>
         <p>To clear your custom replacement:</p>
         <pre><code>wp fifu image --replace=""</code></pre>
-        <p>
-          Invalid non-empty URLs are not saved, so the previous value
-          remains in place.
-        </p>
       </section>
 
       <section
@@ -8557,9 +8566,10 @@ function ModifyPostContentGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -8822,9 +8832,10 @@ function HideFeaturedMediaGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/modify-post-content/">Modify Post Content</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/modify-post-content/">Modify Post Content</Link> and <Link to="/features/featured-slider/">Featured Slider</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -9404,9 +9415,10 @@ function OptimizedImagesGuide() {
         </dl>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -9600,9 +9612,10 @@ function SquareImageOptionsGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -9749,9 +9762,10 @@ function FeaturedImagesRssGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/image-seo/">Image SEO</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -9996,9 +10010,10 @@ function BbpressBuddybossGuide() {
         </dl>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/taxonomy-image/">Taxonomy Image</Link> and <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/taxonomy-image/">Taxonomy Image</Link> and <Link to="/features/fifu-shortcode/">FIFU Shortcode</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -10179,9 +10194,10 @@ function PlaybackLoopGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -10363,9 +10379,10 @@ function MuteGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/background-video/">Background Video</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/background-video/">Background Video</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -10538,9 +10555,10 @@ function YoutubeOptionsGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/featured-video-audio/">Featured Video / Audio</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -11760,9 +11778,10 @@ function QuickBuyGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link> and <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link> and <Link to="/features/remote-product-gallery-images/">Remote Product Gallery Images</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -11986,9 +12005,10 @@ function FifuApiGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/wp-woocommerce-rest-api/">WP / WooCommerce REST API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/wp-woocommerce-rest-api/">WP / WooCommerce REST API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -12144,9 +12164,10 @@ function WpWooCommerceRestApiGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/fifu-api/">FIFU API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/fifu-api/">FIFU API</Link>, <Link to="/features/wp-cli/">WP-CLI</Link> and <Link to="/features/woocommerce-import/">WooCommerce Import</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -12407,9 +12428,10 @@ function WpCliGuide() {
           </li>
         </ul>
       </section>
-      <p>
-        Related guides: <Link to="/features/fifu-api/">FIFU API</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/fifu-api/">FIFU API</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -12989,9 +13011,10 @@ function HotlinkProtectionGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/optimized-images/">Optimized Images</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/delete-from-cloud/">Delete from Cloud</Link> and <Link to="/features/optimized-images/">Optimized Images</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -13265,9 +13288,10 @@ function DefaultFeaturedImageGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -13458,9 +13482,10 @@ function ActivationGuide() {
           </div>
         </dl>
       </section>
-      <p>
-        Related guides: <Link to="/features/automatic-updates/">Automatic Updates</Link>, <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/automatic-updates/">Automatic Updates</Link>, <Link to="/features/reset-settings/">Reset Settings</Link> and <Link to="/features/debug-mode/">Debug Mode</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -13631,9 +13656,10 @@ function ResetSettingsGuide() {
         </p>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/activation/">Activation</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/activation/">Activation</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta activation-feature-cta">
         <div>
@@ -14604,9 +14630,10 @@ function FeaturedVideoAudioGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/play-button/">Play Button</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/play-button/">Play Button</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -14938,9 +14965,10 @@ function FeaturedSliderGuide() {
         </ul>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/fifu-product-gallery/">FIFU Product Gallery</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
@@ -16005,9 +16033,10 @@ function AutoShareSocialGuide() {
         </ol>
       </section>
 
-      <p>
-        Related guides: <Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/image-seo/">Image SEO</Link>.
-      </p>
+      <nav className="feature-related-guides" aria-label="Related guides">
+        <strong>Related guides</strong>
+        <p><Link to="/features/remote-featured-image/">Remote Featured Image</Link>, <Link to="/features/featured-video-audio/">Featured Video / Audio</Link> and <Link to="/features/image-seo/">Image SEO</Link>.</p>
+      </nav>
 
       <section className="feature-detail-cta">
         <div>
