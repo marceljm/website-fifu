@@ -209,6 +209,13 @@ export function FeaturedImageUrlBlockGuide() {
         </ul>
       </section>
 
+      <p>
+        Related guides:{' '}
+        <Link to="/features/remote-featured-image/">Remote Featured Image</Link>,{' '}
+        <Link to="/features/quick-editor/">Quick Editor</Link>, and{' '}
+        <Link to="/features/fifu-fields/">FIFU Fields</Link>.
+      </p>
+
       <section className="feature-detail-cta activation-feature-cta">
         <div>
           <h2>Explore more FIFU features.</h2>
