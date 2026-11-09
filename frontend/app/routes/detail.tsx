@@ -5063,7 +5063,8 @@ function VideoThumbnailGuide() {
           <code>video_url\image_url</code> (a backslash between
           the URLs). This is an import convention, not something
           to paste into the editor’s <strong>Video URL</strong> field.
-          Check the import plugin’s mapping instructions.
+          See the <Link to="/features/wp-all-import-add-on/">WP All Import Add-on</Link>{' '}
+          guide for FIFU import mappings.
         </p>
       </section>
 
@@ -5139,12 +5140,13 @@ function VideoThumbnailGuide() {
         </div>
         <p>
           <strong>Video Thumbnail</strong> and{' '}
-          <strong>Play Button</strong> are different
-          settings. Showing a thumbnail does not automatically
+          <Link to="/features/play-button/">Play Button</Link> are different
+          features. Showing a thumbnail does not automatically
           mean an on-image play button will appear. To offer
           an obvious way to watch, open{' '}
           <strong>FIFU → Settings → Video → Play Button</strong>{' '}
-          and enable it.
+          and enable it. See the Play Button guide for
+          its full set of display and playback options.
         </p>
         <dl className="fifu-fields-options">
           <div>
@@ -5181,7 +5183,8 @@ function VideoThumbnailGuide() {
           </div>
         </dl>
         <p>
-          On the same Video settings page, <strong>Minimum Width</strong>{' '}
+          On the same Video settings page,{' '}
+          <Link to="/features/minimum-width/">Minimum Width</Link>{' '}
           can keep a thumbnail in a narrow container instead
           of displaying a player there. It is a separate
           sizing rule and does not replace the four
@@ -5213,16 +5216,17 @@ function VideoThumbnailGuide() {
           <li>
             <strong>A video player appears immediately:</strong>{' '}
             Check the <strong>Video Thumbnail</strong> switch
-            for that page type. Autoplay or background-video
-            settings may also override the thumbnail-first
-            behavior.
+            for that page type.{' '}
+            <Link to="/features/autoplay/">Autoplay</Link> or{' '}
+            <Link to="/features/background-video/">Background Video</Link>{' '}
+            can override the thumbnail-first behavior.
           </li>
           <li>
-            <strong>No play button:</strong> Enable{' '}
-            <strong>Play Button</strong>, then check its
-            <strong> Hide from grid</strong> options. Some
-            thumbnail types or theme layouts may not use
-            a separate overlay button.
+            <strong>No play button:</strong> Enable the{' '}
+            <Link to="/features/play-button/">Play Button</Link> feature,
+            then check its <strong>Hide from grid</strong> options.
+            Some thumbnail types or theme layouts may not
+            use a separate overlay button.
           </li>
           <li>
             <strong>The thumbnail is visible but playback fails:</strong>{' '}
