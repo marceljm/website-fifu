@@ -1490,9 +1490,8 @@ function UnsplashImageSearchGuide() {
               <Check size={15} aria-hidden="true" />
             </span>
             <p>
-              <strong>Access:</strong> your WordPress account needs the{' '}
-              <code>upload_files</code> capability. Search requests also use a WordPress
-              REST nonce.
+              <strong>Access:</strong> use an account with permission
+              to upload images in WordPress.
             </p>
           </li>
           <li>
@@ -1509,9 +1508,8 @@ function UnsplashImageSearchGuide() {
               <CircleAlert size={15} aria-hidden="true" />
             </span>
             <p>
-              <strong>Search service unavailable:</strong> a failed request or
-              unsuccessful response produces an empty results list. Retry later; the
-              search request waits up to 30 seconds for the service.
+              <strong>Search unavailable:</strong> if the image
+              service is not responding, try again later.
             </p>
           </li>
           <li>
@@ -1863,8 +1861,7 @@ function UploadToCloudGuide() {
         <p>
           On <strong>FIFU → Cloud → Upload</strong>, enable{' '}
           <strong>Automatic upload</strong> to let scheduled Cloud jobs upload remote
-          image URLs already used by FIFU. Each job processes up to 100 URLs, and the
-          uploaded URLs are replaced with Cloud URLs. Turn the option off to revoke
+          image URLs already used by FIFU. Successfully uploaded URLs are replaced with Cloud URLs. Turn the option off to revoke
           automatic-upload authorization. Use this when you want ongoing remote images
           handled without selecting each one manually; manual upload remains available
           when you want control over each batch.
@@ -2911,14 +2908,7 @@ function OrderEmailImagesGuide() {
               the subject, header, or unrelated email sections.
             </dd>
           </div>
-          <div>
-            <dt>Thumbnail size</dt>
-            <dd>
-              FIFU asks WooCommerce for thumbnails sized 100 × 100 pixels.
-              The final appearance can vary with the email template and
-              mail client. This switch has no separate size control.
-            </dd>
-          </div>
+          
           <div>
             <dt>When turned off</dt>
             <dd>
@@ -3398,14 +3388,7 @@ function LightboxAndZoomGuide() {
               viewing is a separate interaction and may still be available.
             </dd>
           </div>
-          <div>
-            <dt>Narrow galleries</dt>
-            <dd>
-              When a FIFU slider or its image is narrower than 175 pixels,
-              FIFU may show the first image instead of the slider. In that
-              layout, its slider-based zoom will not initialize.
-            </dd>
-          </div>
+          
           <div>
             <dt>Video and image sources</dt>
             <dd>
@@ -5671,11 +5654,7 @@ function ImageSeoGuide() {
             singular content pages. An active SEO plugin can own the schema graph; verify
             that its integration is active and that the page has an image URL.
           </li>
-          <li>
-            <strong>Unexpected Yoast social image:</strong> a content-specific Yoast Open
-            Graph or Twitter image overrides FIFU’s fallback. Update or remove that custom
-            value if you want FIFU’s main image used.
-          </li>
+          
         </ul>
       </section>
 
@@ -9769,11 +9748,10 @@ function FeaturedImagesRssGuide() {
           has no <code>media:content</code> image entry.
         </p>
         <p>
-          If the selected URL comes from{' '}
-          <Link to="/features/optimized-images/">Optimized Images</Link>, the feed uses a
-          signed 1280 × 853 URL instead. This avoids sending an optimized URL format that
-          some RSS and email consumers reject. The generated dimensions are fixed; there
-          is no RSS width control.
+          When images use{' '}
+          <Link to="/features/optimized-images/">Optimized Images</Link>,
+          FIFU provides a compatible image URL for the feed.
+          The final display depends on the feed reader.
         </p>
         <p>
           If the image is missing in a feed consumer, first confirm the post has a
@@ -10338,13 +10316,10 @@ function MuteGuide() {
           </div>
         </div>
         <p>
-          Mute is a video setting. The player uses the selected device value for supported
-          video players, including YouTube, Vimeo, local videos, and direct video files.
-          The local media-element branch also applies the selected state to recognized
-          audio-file sources. A WordPress.com MP4 player branch is created with sound
-          muted regardless of these switches, so changing Mute does not change that
-          branch’s initial audio state. FIFU’s control determines the starting state; it
-          does not prevent a visitor from changing audio with the player’s controls.
+          Mute applies to supported featured video players,
+          including YouTube, Vimeo, and direct video files.
+          The device setting determines the starting sound
+          state; visitors can still change it with player controls.
         </p>
       </section>
 
@@ -10392,10 +10367,9 @@ function MuteGuide() {
           <li>
             <span>2</span>
             <p>
-              Confirm the player is a supported video. Recognized audio-file sources
-              handled by the local media element also receive the selected mute state;
-              behavior for other audio providers is not established here. WordPress.com
-              MP4 playback starts muted independently of these switches.
+              Confirm the video uses a supported player and check
+              its sound controls. Some external services manage
+              audio independently.
             </p>
           </li>
         </ul>
@@ -14975,16 +14949,8 @@ function FeaturedSliderGuide() {
             <strong>Load slider on singular post types only</strong> if you also need
             slider output in archive contexts.
           </li>
-          <li>
-            <strong>A narrow layout shows one image:</strong> when the slider or its image
-            is under 175 pixels wide, the display falls back to the first image rather
-            than the slider interface.
-          </li>
-          <li>
-            <strong>Only one slide is shown for a video:</strong> a video-containing
-            slider may display the video directly instead of initializing the slider
-            controls.
-          </li>
+          
+          
         </ul>
       </section>
 
