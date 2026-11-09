@@ -589,7 +589,7 @@ export function meta({ params }: { params: Record<string, string | undefined> })
       {
         name: 'description',
         content:
-          'Migrate older FIFU post metadata into current database tables, then monitor background progress, retry errors, and rescan for legacy values.',
+          'Move older FIFU data to its current format, review progress, and retry failed items.',
       },
     ];
   if (params.slug === 'reset-settings')
@@ -2092,8 +2092,7 @@ function DbMigrationGuide() {
       className="db-migration-guide"
     >
       <p className="lead">
-        Backfill older FIFU values into current database tables when your site still has
-        legacy media metadata.
+        Move media data saved by older FIFU versions into the current format.
       </p>
       <section className="feature-highlight" aria-labelledby="db-migration-purpose">
         <div className="feature-highlight-copy">
@@ -2270,8 +2269,7 @@ function DbMigrationGuide() {
         <p>
           From your WordPress installation, run one batch for a task or one batch for
           every registered task. Each command invocation advances a batch; repeat commands
-          to continue processing. Task names are internal identifiers, such as{' '}
-          <code>featured</code>.
+          to continue processing. Use the task name shown in the migration panel, such as <code>featured</code>.
         </p>
         <pre>
           <code>{`wp fifu-migrate run_task featured
