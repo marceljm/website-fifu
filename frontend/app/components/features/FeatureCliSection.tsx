@@ -1,6 +1,7 @@
 import { Check, Copy, Terminal } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { FeatureGuideHeading } from './FeatureGuideSections';
 
 export interface FeatureCliCommand {
   label: string;
@@ -59,15 +60,13 @@ export function FeatureCliSection({ id, commands, note }: FeatureCliSectionProps
       className="activation-feature-section feature-cli-section"
       aria-labelledby={id}
     >
-      <div className="activation-feature-section-heading">
-        <span className="activation-feature-icon">
-          <Terminal size={19} aria-hidden="true" />
-        </span>
-        <div>
-          <span className="activation-feature-kicker">OPTIONAL · WP-CLI</span>
-          <h2 id={id}>WP-CLI commands</h2>
-        </div>
-      </div>
+      <FeatureGuideHeading
+        id={id}
+        icon={<Terminal size={19} aria-hidden="true" />}
+        kicker="OPTIONAL · WP-CLI"
+      >
+        WP-CLI commands
+      </FeatureGuideHeading>
       <p className="feature-cli-intro">
         Run each command separately from your WordPress installation.
       </p>
