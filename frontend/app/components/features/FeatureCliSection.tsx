@@ -1,7 +1,7 @@
 import { Check, Copy, Terminal } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { FeatureGuideHeading } from './FeatureGuideSections';
+import { FeatureGuideHeading, FeatureGuideSection } from './FeatureGuideSections';
 
 export interface FeatureCliCommand {
   label: string;
@@ -56,10 +56,7 @@ function CliCommandCard({ label, command, description }: FeatureCliCommand) {
 /** Shared WP-CLI presentation for individual feature guides. */
 export function FeatureCliSection({ id, commands, note }: FeatureCliSectionProps) {
   return (
-    <section
-      className="activation-feature-section feature-cli-section"
-      aria-labelledby={id}
-    >
+    <FeatureGuideSection id={id} className="feature-cli-section">
       <FeatureGuideHeading
         id={id}
         icon={<Terminal size={19} aria-hidden="true" />}
@@ -79,6 +76,6 @@ export function FeatureCliSection({ id, commands, note }: FeatureCliSectionProps
       <p className="feature-cli-reference">
         Need more options? <Link to="/features/wp-cli/">See the WP-CLI guide</Link>.
       </p>
-    </section>
+    </FeatureGuideSection>
   );
 }
