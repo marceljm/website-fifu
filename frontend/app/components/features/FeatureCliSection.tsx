@@ -36,11 +36,17 @@ function CliCommandCard({ label, command, description }: FeatureCliCommand) {
           onClick={copyCommand}
           aria-label={`Copy command: ${label}`}
         >
-          {copied ? <Check size={15} aria-hidden="true" /> : <Copy size={15} aria-hidden="true" />}
+          {copied ? (
+            <Check size={15} aria-hidden="true" />
+          ) : (
+            <Copy size={15} aria-hidden="true" />
+          )}
           <span aria-live="polite">{copied ? 'Copied' : 'Copy'}</span>
         </button>
       </div>
-      <pre tabIndex={0}><code>{command}</code></pre>
+      <pre tabIndex={0}>
+        <code>{command}</code>
+      </pre>
       {description && <p className="feature-cli-description">{description}</p>}
     </div>
   );
@@ -49,7 +55,10 @@ function CliCommandCard({ label, command, description }: FeatureCliCommand) {
 /** Shared WP-CLI presentation for individual feature guides. */
 export function FeatureCliSection({ id, commands, note }: FeatureCliSectionProps) {
   return (
-    <section className="activation-feature-section feature-cli-section" aria-labelledby={id}>
+    <section
+      className="activation-feature-section feature-cli-section"
+      aria-labelledby={id}
+    >
       <div className="activation-feature-section-heading">
         <span className="activation-feature-icon">
           <Terminal size={19} aria-hidden="true" />
@@ -59,9 +68,13 @@ export function FeatureCliSection({ id, commands, note }: FeatureCliSectionProps
           <h2 id={id}>WP-CLI commands</h2>
         </div>
       </div>
-      <p className="feature-cli-intro">Run each command separately from your WordPress installation.</p>
+      <p className="feature-cli-intro">
+        Run each command separately from your WordPress installation.
+      </p>
       <div className="feature-cli-command-list">
-        {commands.map((item) => <CliCommandCard key={item.command} {...item} />)}
+        {commands.map((item) => (
+          <CliCommandCard key={item.command} {...item} />
+        ))}
       </div>
       {note && <p className="feature-cli-note">{note}</p>}
       <p className="feature-cli-reference">
