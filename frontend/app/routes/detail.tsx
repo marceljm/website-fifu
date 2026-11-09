@@ -1154,9 +1154,9 @@ function FifuShortcodeGuide() {
             an image add no image markup.
           </li>
           <li>
-            <strong>Dimensions:</strong> <code>width</code> and <code>height</code> are
-            optional HTML dimensions. For taxonomy images, CDN resizing by width occurs
-            only when Photon is enabled and a width is supplied.
+            <strong>Dimensions:</strong> <code>width</code> and{' '}
+            <code>height</code> are optional dimensions for
+            the shortcode output.
           </li>
         </ul>
       </section>
@@ -5804,12 +5804,7 @@ function ScheduleMetadataGenerationGuide() {
               records.
             </dd>
           </div>
-          <div>
-            <dt>Import overlap</dt>
-            <dd>
-              The metadata job skips a run while a FIFU import is marked as running.
-            </dd>
-          </div>
+          
         </dl>
         <p>
           You can also manage the same toggle from the command line with the{' '}
@@ -5847,11 +5842,7 @@ function ScheduleMetadataGenerationGuide() {
             saved on the intended post or term. The scan only finds FIFU media records
             with missing metadata.
           </li>
-          <li>
-            <strong>The schedule appears idle during an import:</strong> it intentionally
-            skips metadata processing while an import is running; the recurring schedule
-            can check again later.
-          </li>
+          
           <li>
             <strong>The record exists but the image is still broken:</strong> this job
             creates missing metadata; it does not correct an invalid URL or make an
@@ -8225,10 +8216,8 @@ function BrokenLinkCheckerGuide() {
           <div>
             <dt>Checks run in the background</dt>
             <dd>
-              The worker processes one queued URL at a time. It sends an HTTP HEAD
-              request; if the server does not support HEAD (status 405 or 501), it retries
-              with a one-byte range request. Requests allow up to three redirects and an
-              eight-second timeout.
+              The checker tests one queued featured-image URL at a time
+              in the background, helping avoid large bursts of requests.
             </dd>
           </div>
           <div>
@@ -9328,12 +9317,11 @@ function OptimizedImagesGuide() {
               <strong>FIFU CDN</strong> tab
             </dt>
             <dd>
-              Enable <strong>optimize images with FIFU CDN</strong> to use the FIFU
-              on-the-fly CDN instead of the public CDN. This option is unavailable in the
-              free version and on PRO staging sites. PRO use is initially limited to the
-              production site unless the license key has expired. The provider can serve
-              images through your site domain after you create the <code>img</code> CNAME
-              record pointing to <code>i0.fifu.app</code>.
+              Enable <strong>optimize images with FIFU CDN</strong>{' '}
+              to use FIFU's on-the-fly CDN instead of the public CDN.
+              This is a Premium feature. To serve images through
+              your own domain, configure the <code>img</code> CNAME
+              pointing to <code>i0.fifu.app</code>.
             </dd>
           </div>
           <div>
@@ -10984,16 +10972,12 @@ function WpAllImportAddonGuide() {
           </div>
         </div>
         <p>
-          When a variation is nested within its parent product's XML
-          record, include its <code>sku</code> and <code>fifu_list_url</code>{' '}
-          values together. FIFU can match that SKU to the variation
-          and assign its images. In certain same-record imports, a
-          variation without an image may inherit the parent's featured
-          image. Check the resulting variation images individually;
-          this fallback is not a substitute for mapping distinct
-          images when each variation needs its own. See the
-          downloadable XML and Import template examples in the
-          FAQ below for a complete nested-variation sample.
+          For variable products imported with nested variation records,
+          include each variation's <code>sku</code> and{' '}
+          <code>fifu_list_url</code> together so FIFU can assign
+          its images. Check the variation images after importing.
+          The FAQ below includes downloadable XML and Import
+          template examples for this workflow.
         </p>
       </section>
 
@@ -15895,8 +15879,7 @@ function FifuProductGalleryGuide() {
             <strong>No automatic gallery:</strong> WooCommerce must be active,
             <strong> FIFU product gallery</strong> must be enabled, and the
             page must use WooCommerce’s normal single-product image template.
-            Automatic replacement is skipped inside the Elementor editor.
-          </li>
+            </li>
           <li>
             <strong>Missing images:</strong> confirm the product has saved featured
             media or gallery items and that the remote URLs still load. The
