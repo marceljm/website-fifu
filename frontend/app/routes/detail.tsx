@@ -8962,11 +8962,9 @@ function DeleteAllUrlsGuide() {
           </div>
         </div>
         <p>
-          Deletion also requires the action’s run flag and timestamp. If the preliminary
-          metadata cleanup is already busy, fails, or does not report completion, URL
-          deletion does not proceed. Wait for that operation to finish, confirm{' '}
-          <code>FIFU_DELETE_ALL_URLS</code> is <code>true</code>, and start the action
-          again.
+          If metadata cleanup cannot finish, deletion does not proceed. Resolve the
+          reported errors, confirm <code>FIFU_DELETE_ALL_URLS</code> is enabled, and
+          try again.
         </p>
         <p>
               This action cannot restore removed images or their saved addresses. Make a backup before continuing.
