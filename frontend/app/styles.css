@@ -4651,8 +4651,21 @@ body {
   line-height: 1.75;
 }
 .feature-guide-page .feature-related-guides a {
-  color: var(--guide-accent);
+  color: var(--blue, #2563eb);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  transition: color 150ms ease, text-decoration-thickness 150ms ease;
+}
+.feature-guide-page .feature-related-guides a:hover {
+  color: #1d4ed8;
+  text-decoration-thickness: 2px;
+}
+.feature-guide-page .feature-related-guides a:focus-visible {
+  outline: 2px solid var(--blue, #2563eb);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 @media (max-width: 620px) {
   .feature-guide-page .feature-related-guides {
