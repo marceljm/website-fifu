@@ -858,15 +858,15 @@ function CustomPopupGuide() {
       <FeatureCliSection
         id="custom-popup-cli"
         commands={[
-            {
-              "label": "Enable Custom Popup",
-              "command": "wp fifu image --popup=on"
-            },
-            {
-              "label": "Disable Custom Popup",
-              "command": "wp fifu image --popup=off"
-            }
-          ]}
+          {
+            label: 'Enable Custom Popup',
+            command: 'wp fifu image --popup=on',
+          },
+          {
+            label: 'Disable Custom Popup',
+            command: 'wp fifu image --popup=off',
+          },
+        ]}
       />
 
       <section
@@ -2262,22 +2262,22 @@ function DbMigrationGuide() {
             <FeatureCliSection
         id="db-migration-cli-title"
         commands={[
-            {
-              "label": "Run one migration task",
-              "command": "wp fifu-migrate run_task featured",
-              "description": "Processes a batch for the named task."
-            },
-            {
-              "label": "Run all migration tasks",
-              "command": "wp fifu-migrate run-all --limit=1000 --time=30",
-              "description": "Processes a batch for each task, with optional size and time limits."
-            },
-            {
-              "label": "Restart a migration task",
-              "command": "wp fifu-migrate reset_task featured",
-              "description": "Restarts the named task from the beginning."
-            }
-          ]}
+          {
+            label: 'Run one migration task',
+            command: 'wp fifu-migrate run_task featured',
+            description: 'Processes a batch for the named task.',
+          },
+          {
+            label: 'Run all migration tasks',
+            command: 'wp fifu-migrate run-all --limit=1000 --time=30',
+            description: 'Processes a batch for each task, with optional size and time limits.',
+          },
+          {
+            label: 'Restart a migration task',
+            command: 'wp fifu-migrate reset_task featured',
+            description: 'Restarts the named task from the beginning.',
+          },
+        ]}
         note="Each command processes a batch. Repeat runs as needed; use Reset only when you intend to restart a task."
       />
       <section
@@ -2866,15 +2866,15 @@ function OrderEmailImagesGuide() {
             <FeatureCliSection
         id="order-email-cli"
         commands={[
-            {
-              "label": "Show product images in order emails",
-              "command": "wp fifu woo --order-email=on"
-            },
-            {
-              "label": "Hide product images in order emails",
-              "command": "wp fifu woo --order-email=off"
-            }
-          ]}
+          {
+            label: 'Show product images in order emails',
+            command: 'wp fifu woo --order-email=on',
+          },
+          {
+            label: 'Hide product images in order emails',
+            command: 'wp fifu woo --order-email=off',
+          },
+        ]}
       />
 
       <section
@@ -3046,15 +3046,15 @@ function AutoSetCategoryImagesGuide() {
       <FeatureCliSection
         id="category-images-cli"
         commands={[
-            {
-              "label": "Enable automatic category images",
-              "command": "wp fifu woo --category-auto=on"
-            },
-            {
-              "label": "Disable automatic category images",
-              "command": "wp fifu woo --category-auto=off"
-            }
-          ]}
+          {
+            label: 'Enable automatic category images',
+            command: 'wp fifu woo --category-auto=on',
+          },
+          {
+            label: 'Disable automatic category images',
+            command: 'wp fifu woo --category-auto=off',
+          },
+        ]}
       />
 
       <section
@@ -3555,25 +3555,25 @@ function VimeoOptionsGuide() {
             <FeatureCliSection
         id="vimeo-cli-title"
         commands={[
-            {
-              "label": "Enable Vimeo background playback",
-              "command": "wp fifu video --background=on"
-            },
-            {
-              "label": "Limit background playback to single pages",
-              "command": "wp fifu video --background-single=on"
-            },
-            {
-              "label": "Set your Vimeo access token",
-              "command": "wp fifu video --vimeo-access-token=YOUR_TOKEN",
-              "description": "Replace YOUR_TOKEN with your Vimeo personal access token."
-            },
-            {
-              "label": "Choose a preferred MP4 quality",
-              "command": "wp fifu video --vimeo-mp4-rendition=720p",
-              "description": "Supported values: 1080p, 720p, 540p, 360p, and 240p."
-            }
-          ]}
+          {
+            label: 'Enable Vimeo background playback',
+            command: 'wp fifu video --background=on',
+          },
+          {
+            label: 'Limit background playback to single pages',
+            command: 'wp fifu video --background-single=on',
+          },
+          {
+            label: 'Set your Vimeo access token',
+            command: 'wp fifu video --vimeo-access-token=YOUR_TOKEN',
+            description: 'Replace YOUR_TOKEN with your Vimeo personal access token.',
+          },
+          {
+            label: 'Choose a preferred MP4 quality',
+            command: 'wp fifu video --vimeo-mp4-rendition=720p',
+            description: 'Supported values: 1080p, 720p, 540p, 360p, and 240p.',
+          },
+        ]}
         note="Replace on with off to disable a switch. To verify access-token permissions, save the token on the Vimeo settings page."
       />
 
@@ -3760,23 +3760,23 @@ function BackgroundVideoGuide() {
             <FeatureCliSection
         id="background-video-cli-title"
         commands={[
-            {
-              "label": "Enable background video",
-              "command": "wp fifu video --background=on"
-            },
-            {
-              "label": "Disable background video",
-              "command": "wp fifu video --background=off"
-            },
-            {
-              "label": "Restrict background video to single pages",
-              "command": "wp fifu video --background-single=on"
-            },
-            {
-              "label": "Remove the single-page restriction",
-              "command": "wp fifu video --background-single=off"
-            }
-          ]}
+          {
+            label: 'Enable background video',
+            command: 'wp fifu video --background=on',
+          },
+          {
+            label: 'Disable background video',
+            command: 'wp fifu video --background=off',
+          },
+          {
+            label: 'Restrict background video to single pages',
+            command: 'wp fifu video --background-single=on',
+          },
+          {
+            label: 'Remove the single-page restriction',
+            command: 'wp fifu video --background-single=off',
+          },
+        ]}
       />
       <section className="feature-detail-cta">
         <div>
@@ -3929,15 +3929,15 @@ function AutoplayOnMouseoverGuide() {
             <FeatureCliSection
         id="mouseover-cli-title"
         commands={[
-            {
-              "label": "Enable hover playback",
-              "command": "wp fifu video --mouse=on"
-            },
-            {
-              "label": "Disable hover playback",
-              "command": "wp fifu video --mouse=off"
-            }
-          ]}
+          {
+            label: 'Enable hover playback',
+            command: 'wp fifu video --mouse=on',
+          },
+          {
+            label: 'Disable hover playback',
+            command: 'wp fifu video --mouse=off',
+          },
+        ]}
         note="Hover playback also needs the matching Mute setting, and embedded YouTube or Vimeo players need Video Controls enabled."
       />
 
@@ -4076,31 +4076,31 @@ function AutoplayGuide() {
             <FeatureCliSection
         id="autoplay-controls"
         commands={[
-            {
-              "label": "Autoplay on single post pages",
-              "command": "wp fifu video --autoplay=on"
-            },
-            {
-              "label": "Autoplay on the homepage",
-              "command": "wp fifu video --autoplay-front=on"
-            },
-            {
-              "label": "Play all homepage videos together",
-              "command": "wp fifu video --autoplay-front-all=on"
-            },
-            {
-              "label": "Autoplay in other locations",
-              "command": "wp fifu video --autoplay-else=on"
-            },
-            {
-              "label": "Mute on desktop",
-              "command": "wp fifu video --mute-desktop=on"
-            },
-            {
-              "label": "Mute on mobile",
-              "command": "wp fifu video --mute-mobile=on"
-            }
-          ]}
+          {
+            label: 'Autoplay on single post pages',
+            command: 'wp fifu video --autoplay=on',
+          },
+          {
+            label: 'Autoplay on the homepage',
+            command: 'wp fifu video --autoplay-front=on',
+          },
+          {
+            label: 'Play all homepage videos together',
+            command: 'wp fifu video --autoplay-front-all=on',
+          },
+          {
+            label: 'Autoplay in other locations',
+            command: 'wp fifu video --autoplay-else=on',
+          },
+          {
+            label: 'Mute on desktop',
+            command: 'wp fifu video --mute-desktop=on',
+          },
+          {
+            label: 'Mute on mobile',
+            command: 'wp fifu video --mute-mobile=on',
+          },
+        ]}
         note="Replace on with off to disable any option. Homepage-wide playback requires homepage autoplay to be enabled. Autoplay needs the appropriate Mute setting."
       />
 
@@ -4433,15 +4433,15 @@ function VideoControlsGuide() {
             <FeatureCliSection
         id="video-controls-cli-title"
         commands={[
-            {
-              "label": "Enable player controls",
-              "command": "wp fifu video --controls=on"
-            },
-            {
-              "label": "Disable player controls",
-              "command": "wp fifu video --controls=off"
-            }
-          ]}
+          {
+            label: 'Enable player controls',
+            command: 'wp fifu video --controls=on',
+          },
+          {
+            label: 'Disable player controls',
+            command: 'wp fifu video --controls=off',
+          },
+        ]}
       />
 
       <section
@@ -4694,39 +4694,39 @@ function PlayButtonGuide() {
             <FeatureCliSection
         id="play-button-cli-title"
         commands={[
-            {
-              "label": "Enable the play button",
-              "command": "wp fifu video --play=on"
-            },
-            {
-              "label": "Open videos in a lightbox",
-              "command": "wp fifu video --play-mode=lightbox",
-              "description": "Use inline instead of lightbox to play in place."
-            },
-            {
-              "label": "Change the hover color",
-              "command": "wp fifu video --play-color=blue",
-              "description": "Replace blue with your preferred color."
-            },
-            {
-              "label": "Set play-button size",
-              "command": "wp fifu video --play-size=24",
-              "description": "Adjust the example size in pixels."
-            },
-            {
-              "label": "Adjust stacking order",
-              "command": "wp fifu video --play-zindex=10",
-              "description": "Adjust the stacking order for your theme."
-            },
-            {
-              "label": "Hide the button in WordPress grids",
-              "command": "wp fifu video --play-hide=on"
-            },
-            {
-              "label": "Hide the button in WooCommerce grids",
-              "command": "wp fifu video --play-hide-wc=on"
-            }
-          ]}
+          {
+            label: 'Enable the play button',
+            command: 'wp fifu video --play=on',
+          },
+          {
+            label: 'Open videos in a lightbox',
+            command: 'wp fifu video --play-mode=lightbox',
+            description: 'Use inline instead of lightbox to play in place.',
+          },
+          {
+            label: 'Change the hover color',
+            command: 'wp fifu video --play-color=blue',
+            description: 'Replace blue with your preferred color.',
+          },
+          {
+            label: 'Set play-button size',
+            command: 'wp fifu video --play-size=24',
+            description: 'Adjust the example size in pixels.',
+          },
+          {
+            label: 'Adjust stacking order',
+            command: 'wp fifu video --play-zindex=10',
+            description: 'Adjust the stacking order for your theme.',
+          },
+          {
+            label: 'Hide the button in WordPress grids',
+            command: 'wp fifu video --play-hide=on',
+          },
+          {
+            label: 'Hide the button in WooCommerce grids',
+            command: 'wp fifu video --play-hide-wc=on',
+          },
+        ]}
         note="Use off instead of on to disable a switch. Adjust example colors and numbers to suit your layout."
       />
 
@@ -5563,15 +5563,15 @@ function ScheduleMetadataGenerationGuide() {
       <FeatureCliSection
         id="schedule-metadata-cli"
         commands={[
-            {
-              "label": "Enable scheduled metadata generation",
-              "command": "wp fifu schedule on"
-            },
-            {
-              "label": "Disable scheduled metadata generation",
-              "command": "wp fifu schedule off"
-            }
-          ]}
+          {
+            label: 'Enable scheduled metadata generation',
+            command: 'wp fifu schedule on',
+          },
+          {
+            label: 'Disable scheduled metadata generation',
+            command: 'wp fifu schedule off',
+          },
+        ]}
       />
 
       <section
@@ -5778,15 +5778,15 @@ function ImageMetadataGuide() {
             <FeatureCliSection
         id="image-metadata-controls-title"
         commands={[
-            {
-              "label": "Generate missing metadata",
-              "command": "wp fifu metadata on"
-            },
-            {
-              "label": "Stop metadata generation",
-              "command": "wp fifu metadata off"
-            }
-          ]}
+          {
+            label: 'Generate missing metadata',
+            command: 'wp fifu metadata on',
+          },
+          {
+            label: 'Stop metadata generation',
+            command: 'wp fifu metadata off',
+          },
+        ]}
       />
 
       <section
@@ -6136,24 +6136,24 @@ function AutoSetScreenshotGuide() {
       <FeatureCliSection
         id="screenshot-cli"
         commands={[
-            {
-              "label": "Enable automatic screenshots",
-              "command": "wp fifu screenshot on"
-            },
-            {
-              "label": "Disable automatic screenshots",
-              "command": "wp fifu screenshot off"
-            },
-            {
-              "label": "Choose the source field",
-              "command": "wp fifu screenshot --field=meta_key",
-              "description": "Replace meta_key with your custom field name."
-            },
-            {
-              "label": "Set screenshot dimensions",
-              "command": "wp fifu screenshot --size=1280x960"
-            }
-          ]}
+          {
+            label: 'Enable automatic screenshots',
+            command: 'wp fifu screenshot on',
+          },
+          {
+            label: 'Disable automatic screenshots',
+            command: 'wp fifu screenshot off',
+          },
+          {
+            label: 'Choose the source field',
+            command: 'wp fifu screenshot --field=meta_key',
+            description: 'Replace meta_key with your custom field name.',
+          },
+          {
+            label: 'Set screenshot dimensions',
+            command: 'wp fifu screenshot --size=1280x960',
+          },
+        ]}
       />
 
       <nav className="feature-related-guides" aria-label="Related guides">
@@ -6419,15 +6419,15 @@ function DisableRightClickGuide() {
             <FeatureCliSection
         id="disable-right-click-cli"
         commands={[
-            {
-              "label": "Disable right-click on images",
-              "command": "wp fifu image --block=on"
-            },
-            {
-              "label": "Allow right-click again",
-              "command": "wp fifu image --block=off"
-            }
-          ]}
+          {
+            label: 'Disable right-click on images',
+            command: 'wp fifu image --block=on',
+          },
+          {
+            label: 'Allow right-click again',
+            command: 'wp fifu image --block=off',
+          },
+        ]}
       />
 
       <section className="activation-feature-section activation-feature-help" aria-labelledby="disable-right-click-scope">
@@ -6567,28 +6567,28 @@ function AutoSetFeaturedMediaByPageGuide() {
       <FeatureCliSection
         id="page-finder-cli"
         commands={[
-            {
-              "label": "Enable the page finder",
-              "command": "wp fifu finder on"
-            },
-            {
-              "label": "Choose the page-address field",
-              "command": "wp fifu finder --field=_product_url",
-              "description": "Replace _product_url with your field name."
-            },
-            {
-              "label": "Include videos",
-              "command": "wp fifu finder --video=on"
-            },
-            {
-              "label": "Include Amazon product galleries",
-              "command": "wp fifu finder --amazon=on"
-            },
-            {
-              "label": "Disable the page finder",
-              "command": "wp fifu finder off"
-            }
-          ]}
+          {
+            label: 'Enable the page finder',
+            command: 'wp fifu finder on',
+          },
+          {
+            label: 'Choose the page-address field',
+            command: 'wp fifu finder --field=_product_url',
+            description: 'Replace _product_url with your field name.',
+          },
+          {
+            label: 'Include videos',
+            command: 'wp fifu finder --video=on',
+          },
+          {
+            label: 'Include Amazon product galleries',
+            command: 'wp fifu finder --amazon=on',
+          },
+          {
+            label: 'Disable the page finder',
+            command: 'wp fifu finder off',
+          },
+        ]}
         note="Use off to disable the optional video or Amazon lookup."
       />
 
@@ -6789,20 +6789,20 @@ function AutoSetCustomFieldGuide() {
             <FeatureCliSection
         id="custom-field-cli"
         commands={[
-            {
-              "label": "Choose the custom field",
-              "command": "wp fifu customfield --field=image_url",
-              "description": "Replace image_url with your field key."
-            },
-            {
-              "label": "Enable automatic assignment",
-              "command": "wp fifu customfield on"
-            },
-            {
-              "label": "Disable automatic assignment",
-              "command": "wp fifu customfield off"
-            }
-          ]}
+          {
+            label: 'Choose the custom field',
+            command: 'wp fifu customfield --field=image_url',
+            description: 'Replace image_url with your field key.',
+          },
+          {
+            label: 'Enable automatic assignment',
+            command: 'wp fifu customfield on',
+          },
+          {
+            label: 'Disable automatic assignment',
+            command: 'wp fifu customfield off',
+          },
+        ]}
       />
 
       <nav className="feature-related-guides" aria-label="Related guides">
@@ -7757,16 +7757,16 @@ function ReplaceNotFoundImageGuide() {
             <FeatureCliSection
         id="replace-not-found-cli"
         commands={[
-            {
-              "label": "Set a replacement image",
-              "command": "wp fifu image --replace=\"https://example.com/backup.jpg\"",
-              "description": "Replace the example address with your image URL."
-            },
-            {
-              "label": "Remove the replacement image",
-              "command": "wp fifu image --replace=\"\""
-            }
-          ]}
+          {
+            label: 'Set a replacement image',
+            command: 'wp fifu image --replace="https://example.com/backup.jpg"',
+            description: 'Replace the example address with your image URL.',
+          },
+          {
+            label: 'Remove the replacement image',
+            command: 'wp fifu image --replace=""',
+          },
+        ]}
       />
 
       <section
@@ -8021,15 +8021,15 @@ function BrokenLinkCheckerGuide() {
             <FeatureCliSection
         id="blc-cli-title"
         commands={[
-            {
-              "label": "Enable the checker",
-              "command": "wp fifu image --validate-featured-image-urls=on"
-            },
-            {
-              "label": "Disable the checker",
-              "command": "wp fifu image --validate-featured-image-urls=off"
-            }
-          ]}
+          {
+            label: 'Enable the checker',
+            command: 'wp fifu image --validate-featured-image-urls=on',
+          },
+          {
+            label: 'Disable the checker',
+            command: 'wp fifu image --validate-featured-image-urls=off',
+          },
+        ]}
         note="These commands change the setting; they do not start a bulk scan."
       />
 
@@ -8410,31 +8410,31 @@ function HideFeaturedMediaGuide() {
             <FeatureCliSection
         id="hide-featured-media-cli"
         commands={[
-            {
-              "label": "Hide featured media",
-              "command": "wp fifu image --hide=on"
-            },
-            {
-              "label": "Show featured media again",
-              "command": "wp fifu image --hide=off"
-            },
-            {
-              "label": "Choose post types",
-              "command": "wp fifu image --hide-types=post,page"
-            },
-            {
-              "label": "Clear the post-type filter",
-              "command": "wp fifu image --hide-types="
-            },
-            {
-              "label": "Choose post formats",
-              "command": "wp fifu image --hide-formats=video,audio"
-            },
-            {
-              "label": "Clear the post-format filter",
-              "command": "wp fifu image --hide-formats="
-            }
-          ]}
+          {
+            label: 'Hide featured media',
+            command: 'wp fifu image --hide=on',
+          },
+          {
+            label: 'Show featured media again',
+            command: 'wp fifu image --hide=off',
+          },
+          {
+            label: 'Choose post types',
+            command: 'wp fifu image --hide-types=post,page',
+          },
+          {
+            label: 'Clear the post-type filter',
+            command: 'wp fifu image --hide-types=',
+          },
+          {
+            label: 'Choose post formats',
+            command: 'wp fifu image --hide-formats=video,audio',
+          },
+          {
+            label: 'Clear the post-format filter',
+            command: 'wp fifu image --hide-formats=',
+          },
+        ]}
       />
 
       <section
@@ -8628,11 +8628,11 @@ function ClearMetadataGuide() {
       <FeatureCliSection
         id="clear-metadata-cli"
         commands={[
-            {
-              "label": "Clear generated image metadata",
-              "command": "wp fifu clean"
-            }
-          ]}
+          {
+            label: 'Clear generated image metadata',
+            command: 'wp fifu clean',
+          },
+        ]}
         note="This clears generated metadata but keeps saved remote image addresses."
       />
 
@@ -9749,15 +9749,15 @@ function PlaybackLoopGuide() {
             <FeatureCliSection
         id="playback-loop-cli-title"
         commands={[
-            {
-              "label": "Enable looping",
-              "command": "wp fifu video --loop=on"
-            },
-            {
-              "label": "Disable looping",
-              "command": "wp fifu video --loop=off"
-            }
-          ]}
+          {
+            label: 'Enable looping',
+            command: 'wp fifu video --loop=on',
+          },
+          {
+            label: 'Disable looping',
+            command: 'wp fifu video --loop=off',
+          },
+        ]}
       />
 
       <section
@@ -9917,23 +9917,23 @@ function MuteGuide() {
             <FeatureCliSection
         id="mute-cli-title"
         commands={[
-            {
-              "label": "Mute desktop videos",
-              "command": "wp fifu video --mute-desktop=on"
-            },
-            {
-              "label": "Allow sound on desktop",
-              "command": "wp fifu video --mute-desktop=off"
-            },
-            {
-              "label": "Mute mobile videos",
-              "command": "wp fifu video --mute-mobile=on"
-            },
-            {
-              "label": "Allow sound on mobile",
-              "command": "wp fifu video --mute-mobile=off"
-            }
-          ]}
+          {
+            label: 'Mute desktop videos',
+            command: 'wp fifu video --mute-desktop=on',
+          },
+          {
+            label: 'Allow sound on desktop',
+            command: 'wp fifu video --mute-desktop=off',
+          },
+          {
+            label: 'Mute mobile videos',
+            command: 'wp fifu video --mute-mobile=on',
+          },
+          {
+            label: 'Allow sound on mobile',
+            command: 'wp fifu video --mute-mobile=off',
+          },
+        ]}
       />
 
       <section
@@ -10100,15 +10100,15 @@ function YoutubeOptionsGuide() {
             <FeatureCliSection
         id="youtube-options-cli-title"
         commands={[
-            {
-              "label": "Enable privacy-enhanced YouTube",
-              "command": "wp fifu video --privacy=on"
-            },
-            {
-              "label": "Use regular YouTube embeds",
-              "command": "wp fifu video --privacy=off"
-            }
-          ]}
+          {
+            label: 'Enable privacy-enhanced YouTube',
+            command: 'wp fifu video --privacy=on',
+          },
+          {
+            label: 'Use regular YouTube embeds',
+            command: 'wp fifu video --privacy=off',
+          },
+        ]}
       />
 
       <section
@@ -10259,15 +10259,15 @@ function PrivacyEnhancedModeGuide() {
       <FeatureCliSection
         id="privacy-enhanced-cli"
         commands={[
-            {
-              "label": "Enable privacy-enhanced YouTube playback",
-              "command": "wp fifu video --privacy=on"
-            },
-            {
-              "label": "Disable privacy-enhanced playback",
-              "command": "wp fifu video --privacy=off"
-            }
-          ]}
+          {
+            label: 'Enable privacy-enhanced YouTube playback',
+            command: 'wp fifu video --privacy=on',
+          },
+          {
+            label: 'Disable privacy-enhanced playback',
+            command: 'wp fifu video --privacy=off',
+          },
+        ]}
       />
 
       <section
@@ -13180,11 +13180,11 @@ function ResetSettingsGuide() {
             <FeatureCliSection
         id="reset-settings-cli"
         commands={[
-            {
-              "label": "Reset FIFU settings",
-              "command": "wp fifu reset"
-            }
-          ]}
+          {
+            label: 'Reset FIFU settings',
+            command: 'wp fifu reset',
+          },
+        ]}
         note="This immediately restores FIFU settings to their defaults. Back up your configuration before running it."
       />
 
@@ -13279,15 +13279,15 @@ function DebugModeGuide() {
       <FeatureCliSection
         id="debug-mode-cli"
         commands={[
-            {
-              "label": "Enable Debug Mode",
-              "command": "wp fifu debug on"
-            },
-            {
-              "label": "Disable Debug Mode",
-              "command": "wp fifu debug off"
-            }
-          ]}
+          {
+            label: 'Enable Debug Mode',
+            command: 'wp fifu debug on',
+          },
+          {
+            label: 'Disable Debug Mode',
+            command: 'wp fifu debug off',
+          },
+        ]}
         note="Disable Debug Mode after troubleshooting."
       />
 
@@ -14979,15 +14979,15 @@ function RemoteVariationImagesGuide() {
             <FeatureCliSection
         id="remote-variation-cli-title"
         commands={[
-            {
-              "label": "Include variation images in the main gallery",
-              "command": "wp fifu woo --variations-merge=on"
-            },
-            {
-              "label": "Keep variation images separate",
-              "command": "wp fifu woo --variations-merge=off"
-            }
-          ]}
+          {
+            label: 'Include variation images in the main gallery',
+            command: 'wp fifu woo --variations-merge=on',
+          },
+          {
+            label: 'Keep variation images separate',
+            command: 'wp fifu woo --variations-merge=off',
+          },
+        ]}
       />
 
       <section
@@ -15264,23 +15264,23 @@ function FifuProductGalleryGuide() {
             <FeatureCliSection
         id="fifu-gallery-cli"
         commands={[
-            {
-              "label": "Enable FIFU Product Gallery",
-              "command": "wp fifu woo --gallery=on"
-            },
-            {
-              "label": "Enable adaptive height",
-              "command": "wp fifu woo --adaptive=on"
-            },
-            {
-              "label": "Display videos before images",
-              "command": "wp fifu woo --videos-before=on"
-            },
-            {
-              "label": "Merge variation images",
-              "command": "wp fifu woo --variations-merge=on"
-            }
-          ]}
+          {
+            label: 'Enable FIFU Product Gallery',
+            command: 'wp fifu woo --gallery=on',
+          },
+          {
+            label: 'Enable adaptive height',
+            command: 'wp fifu woo --adaptive=on',
+          },
+          {
+            label: 'Display videos before images',
+            command: 'wp fifu woo --videos-before=on',
+          },
+          {
+            label: 'Merge variation images',
+            command: 'wp fifu woo --variations-merge=on',
+          },
+        ]}
         note="Replace on with off to disable an option."
       />
       <section
