@@ -1653,14 +1653,8 @@ function DeleteFromCloudGuide() {
           </div>
         </div>
         <p>
-          On <strong>FIFU → Cloud → Delete</strong>, switch on{' '}
-          <strong>Automatic delete</strong> to remove cloud images when they are no longer
-          used on the site, such as after a post is deleted. Before removal, FIFU checks
-          candidate image IDs against stored FIFU media references and retains IDs it
-          finds in use. This is useful for ongoing cleanup; keep the toggle off if you
-          want to choose every deletion yourself. The automatic option requires a
-          completed, connected Cloud account.
-        </p>
+              Turn on <strong>Automatic delete</strong> to remove Cloud images that are no longer used. Keep it off if you prefer to review each deletion manually.
+            </p>
       </section>
 
       <section
@@ -2252,12 +2246,8 @@ function DbMigrationGuide() {
           </div>
         </div>
         <p>
-          Registered tasks cover featured, gallery, slider, video, video-gallery, and
-          category media; associated alternative text; custom video and its terms; iframe
-          values; finder and post-list records; and FIFU metadata flags for sent,
-          uploaded, asynchronous, and imported work. The task rows on your site show the
-          tasks registered by your installed version.
-        </p>
+              The tool migrates supported older FIFU images, galleries, sliders, videos, category media, and related information. The migration page shows the tasks available on your site.
+            </p>
         <p>
               The migration moves supported older FIFU data into the newer format without changing unrelated WordPress content.
             </p>
@@ -2772,12 +2762,8 @@ function FeaturedMediaFilterGuide() {
           </div>
         </div>
         <p>
-          The dropdown appears only in the top controls of WordPress admin content lists
-          for post types with featured-image support. You must be signed in with the{' '}
-          <code>publish_posts</code> capability. If it is missing, check that you are on
-          the content list (not an editor screen), your account has that capability, and
-          the post type supports thumbnails. The filter applies to the main list query.
-        </p>
+              If you do not see the filter, open a supported WordPress content list and check that your account can edit that content type.
+            </p>
       </section>
 
       <nav className="feature-related-guides" aria-label="Related guides">
@@ -4525,15 +4511,8 @@ function VideoControlsGuide() {
           </div>
         </div>
         <p>
-          If you enable{' '}
-          <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link>,
-          embedded players require Video Controls and{' '}
-          <Link to="/features/mute/">Mute</Link>. Native video files do not require Video
-          Controls for hover playback. Keep this switch on when viewers need to pause or
-          take over an embedded hover preview. If controls are off and the featured item
-          has a post permalink, selecting the embedded player can send the visitor to that
-          post.
-        </p>
+              For hover playback, follow the <Link to="/features/autoplay-on-mouseover/">Autoplay on Mouseover</Link> settings. Keep controls available when visitors need to pause or interact with the video.
+            </p>
       </section>
 
       <section
@@ -5911,8 +5890,7 @@ function ImageMetadataGuide() {
           <div>
             <dt>Posts and post types</dt>
             <dd>
-              FIFU featured images, video URLs, custom video URLs, and first slider images
-              or lists that still need metadata.
+              Checks remote FIFU images, videos, and sliders when WordPress still needs image information for them.
             </dd>
           </div>
           <div>
@@ -5931,10 +5909,8 @@ function ImageMetadataGuide() {
           </div>
         </dl>
         <p>
-          Empty URLs are skipped. Existing featured thumbnails and completed metadata
-          records are treated as present, so generation fills gaps instead of replacing
-          media already assigned.
-        </p>
+              FIFU only generates missing information. Existing images are left alone.
+            </p>
       </section>
 
       <section
@@ -6167,16 +6143,8 @@ function AutoSetFeaturedMediaGuide() {
           </div>
         </div>
         <p>
-          The scan reads saved post content. It recognizes image tags and video iframes;
-          supported iframe sources include YouTube, Vimeo, Cloudinary, Tumblr, Publitio,
-          9cache, and Odysee. It also detects raw YouTube, Vimeo, and 9cache video URLs.
-          Relative image URLs are resolved against the post, while inline base64 images
-          are skipped. The source filter checks for a case-sensitive substring in the
-          media tag, so a later eligible item may be selected. If no eligible item
-          remains, no content media is assigned. Video candidates are ignored while
-          featured video is off. Posts saved through Elementor are not handled by this
-          workflow.
-        </p>
+              FIFU looks through your saved post content for supported images and videos, then chooses the first eligible item. Use the source filters to skip media you do not want to feature.
+            </p>
       </section>
 
       <nav className="feature-related-guides" aria-label="Related guides">
@@ -6473,15 +6441,8 @@ function PageRedirectionGuide() {
           </div>
         </div>
         <p>
-          The panel is registered for WordPress post types that support featured images,
-          except WooCommerce products. When bbPress is active, it is also registered for
-          forums, topics, and replies; see the{' '}
-          <Link to="/features/bbpress-and-buddyboss-platform/">
-            bbPress and BuddyBoss Platform guide
-          </Link>{' '}
-          for its bbPress media fields. The panel is not registered when FIFU is locked,
-          or in the Web Stories editor and Search &amp; Filter Pro screens.
-        </p>
+              This feature is available for supported posts, pages, and bbPress content. It does not apply to WooCommerce products.
+            </p>
       </section>
 
       <section
@@ -6907,20 +6868,11 @@ function AutoSetCustomFieldGuide() {
           </div>
         </div>
         <p>
-          A scheduled check runs every minute. It looks at posts and terms that do not
-          already have a featured image, video, custom video, or slider image. Blank
-          fields and values that do not resolve to an HTTP or HTTPS URL are skipped.
-          Recognized video URLs are assigned as videos; other accepted URLs are assigned
-          as images. Existing featured media is left in place.
-        </p>
+              FIFU checks for a saved image or video URL and only assigns media to content that does not already have featured media.
+            </p>
         <p>
-          The setting accepts comma-separated keys and URL templates. It does not extract
-          media from a web-page address or construct a URL from unrelated text: the field
-          must contain the media URL, or an identifier used by a template. This can reduce
-          duplicate data entry when an importer, theme, or other workflow already saves
-          the media URL in metadata; if you assign featured media by hand or another
-          method, enabling it is optional.
-        </p>
+              Enter the name of a field that already stores an image or video URL, or use a URL template if the field stores an identifier. You do not need this setting if another workflow already assigns featured media.
+            </p>
       </section>
 
       <section
@@ -8738,14 +8690,8 @@ function ClearMetadataGuide() {
             Clear image records in batches; keep your URLs.
           </h2>
           <p>
-            Use this cleanup when you are switching to local images or need to rebuild
-            FIFU’s generated records. It removes obsolete generated data without
-            discarding the remote addresses you may still need. Batch processing shows
-            progress and avoids holding one long cleanup request open, which can make
-            large libraries easier to process. WordPress components that depend on the
-            removed records may stop displaying remote images until you generate metadata
-            again.
-          </p>
+              You can follow the cleanup progress on the settings page. If remote images stop displaying after cleanup, regenerate their metadata.
+            </p>
         </div>
         <div className="feature-highlight-visual">
           <img
@@ -9105,12 +9051,8 @@ function OptimizedImagesGuide() {
           </div>
         </div>
         <p>
-          Without resizing, a remote featured image may be delivered at a larger size than
-          a card, archive, or phone layout needs. The attachment optimizer intercepts
-          WordPress image-size requests and asks a CDN for the requested dimensions and
-          crop. That can reduce transfer size because visitors receive a copy closer to
-          the displayed dimensions. The original remote URL remains the source.
-        </p>
+              FIFU requests smaller versions of remote images when your pages need them, which can improve loading on cards, archives, and phones. The original image stays on its existing host.
+            </p>
         <p>
           Turn it on when your site uses remote FIFU images and needs smaller displayed
           copies. The separate content option is useful when post bodies contain large
@@ -9607,11 +9549,8 @@ function FeaturedImagesRssGuide() {
           The final display depends on the feed reader.
         </p>
         <p>
-          If the image is missing in a feed consumer, first confirm the post has a
-          featured image URL that resolves, then check the corresponding RSS 2 item for
-          its <code>media:content</code> entry. The entry allows compatible consumers to
-          display the image; it cannot make a consumer that ignores Media RSS show it.
-        </p>
+              Check that the image URL works and that the feed reader supports images. Not every feed reader displays them.
+            </p>
       </section>
 
       <nav className="feature-related-guides" aria-label="Related guides">
@@ -12245,12 +12184,7 @@ function WpCliGuide() {
           <li>
             <span>!</span>
             <p>
-              <strong>No setting change:</strong> toggles recognize literal{' '}
-              <code>on</code> or <code>off</code>. Search layout accepts only{' '}
-              <code>all</code>, <code>square</code>, <code>tall</code>, or{' '}
-              <code>wide</code>; invalid values are ignored. Search dimensions accept
-              non-negative whole numbers. A command with several option arguments applies
-              only the first matching option, so run each option separately.
+              Use the documented option names and values. Run one setting at a time; changing several settings requires separate commands.
             </p>
           </li>
           <li>
@@ -12616,12 +12550,7 @@ function WidgetsGuide() {
           <div>
             <dt>(FIFU) Featured grid</dt>
             <dd>
-              Displays images from the content item’s{' '}
-              <Link to="/features/featured-slider/">Featured Slider</Link>. Set{' '}
-              <strong>Rows</strong> and <strong>Columns</strong> to positive whole
-              numbers. Each defaults to <code>1</code>; blank, invalid, or less than one
-              values are reset to <code>1</code>. The grid shows up to Rows × Columns
-              images and stays empty when no slider images are saved.
+              Set <strong>Rows</strong> and <strong>Columns</strong> to control the image grid. Both start at 1, and the grid stays empty until slider images are saved.
             </dd>
           </div>
           <div>
@@ -12676,13 +12605,8 @@ function WidgetsGuide() {
           enabled. It displays a thumbnail derived from that URL.
         </p>
         <p>
-          If an image URL cannot load, the widget switches to the configured error image
-          URL when it is valid, or to FIFU’s built in fallback image. An invalid URL is
-          not saved as the featured image. Clearing the image URL and saving clears that
-          FIFU featured image. If you place multiple FIFU media widgets in one Elementor
-          design, the last effective media widget in the saved layout determines the
-          content item’s FIFU featured media.
-        </p>
+              If an image fails to load, FIFU shows the fallback image. Remove the image URL and save to clear the featured image.
+            </p>
       </section>
 
       <section
@@ -12941,12 +12865,8 @@ function DefaultFeaturedImageGuide() {
           </div>
         </div>
         <p>
-          Check <strong>FIFU → Settings → Metadata → Image Metadata</strong>.
-          This setting is on by default and allows FIFU to maintain the
-          WordPress-compatible attachment records used by Default Featured Image.
-          The attachment represents the remote image URL; it does not mean FIFU
-          downloads another image file into your Media Library.
-        </p>
+              Check that <strong>Image Metadata</strong> is enabled under <strong>FIFU → Settings → Metadata</strong>. The default image needs this setting, which is on by default.
+            </p>
         <p>
           If you have disabled Image Metadata, turn it back on before configuring
           the default image. See the{' '}
@@ -13527,12 +13447,8 @@ function DebugModeGuide() {
           </span>
           <h2 id="debug-feature-intro">Get a clearer view during troubleshooting.</h2>
           <p>
-            Debug Mode changes the version on FIFU JavaScript and CSS files so your
-            browser is less likely to reuse a stale copy. It also reveals item and site
-            diagnostic tools. That can help you separate a front-end asset issue from a
-            problem in an item’s saved media data. Turn it on for an investigation, then
-            switch it off to restore normal browser caching of FIFU files.
-          </p>
+              Debug Mode helps you test fixes and collect information for support. Enable it while troubleshooting, then turn it off when finished.
+            </p>
         </div>
         <div className="feature-highlight-visual">
           <img
@@ -13603,17 +13519,7 @@ function DebugModeGuide() {
           <div>
             <dt>Copy debug data</dt>
             <dd>
-              <p>
-                In the FIFU box on a post editor, or from a content list’s{' '}
-                <Link to="/features/quick-editor/">Quick Editor</Link>, select this button
-                to copy a JSON report for the current item. It includes the item record,
-                WordPress metadata, FIFU storage mappings, thumbnail reference, and
-                resolved featured media. For a parent product, the report also includes
-                its product variations when present. Category edit and quick-edit screens
-                can copy a term report with its FIFU media details. The report also
-                captures quick-editor runtime state, including the selected media type and
-                slider controls.
-              </p>
+              Use <strong>Copy debug data</strong> in a post, product, or category editor to collect information about that item for FIFU support. Review the copied information before sharing it.
             </dd>
           </div>
           <div>
@@ -13631,15 +13537,7 @@ function DebugModeGuide() {
           <div>
             <dt>Download debug logs</dt>
             <dd>
-              <p>
-                On <strong>Status</strong>, administrators see this action while Debug
-                Mode is enabled and non-empty logs are available. The ZIP can include the
-                last 1 MiB of each <code>fifu-plugin.log</code> and{' '}
-                <code>fifu-cloud.log</code>
-                from the WordPress uploads directory’s <code>fifu/logs/</code> folder. The
-                download redacts common password, token, cookie, license-key, and bearer
-                authorization patterns before packaging the logs.
-              </p>
+              Use <strong>Download debug logs</strong> on the Status page to collect recent FIFU logs for troubleshooting. Review the file before sending it to support.
             </dd>
           </div>
         </dl>
@@ -13766,16 +13664,8 @@ function RemoteFeaturedImageGuide() {
           </div>
         </div>
         <p>
-          WordPress’s standard featured-image picker uses a Media Library attachment. A
-          remote featured image stores an image address with the content instead, so the
-          file stays on its existing host and FIFU supplies it where the featured image is
-          requested. This avoids uploading and maintaining another copy in WordPress and
-          can reduce local media storage; it also suits image libraries or CDNs that
-          already manage your files. Use it when you control a stable, publicly reachable
-          image URL. Choose a local image when WordPress must host the file or you need a
-          local copy. If the remote host removes or blocks the image, your site can no
-          longer load it.
-        </p>
+              FIFU lets you set a featured image using an address from another website instead of uploading the file to WordPress. The image stays on its original host and appears wherever your theme displays featured images.
+            </p>
       </section>
 
       <section
@@ -14221,15 +14111,8 @@ function FeaturedVideoAudioGuide() {
           </div>
         </dl>
         <p>
-          A recognized service does not guarantee that every
-          URL from that service will work. The content must
-          be accessible, permit embedding when necessary,
-          and use a URL pattern FIFU understands. For
-          example, Amazon support includes hosted MP4
-          links from <code>m.media-amazon.com</code>, not
-          arbitrary Amazon product pages. Test the
-          preview before saving.
-        </p>
+              Use a public, supported video or audio address and preview it before saving. A service may block private or restricted videos from appearing on your site.
+            </p>
       </section>
 
       <section
@@ -15207,19 +15090,7 @@ function RemoteVariationImagesGuide() {
           <div>
             <dt>Upload to media library</dt>
             <dd>
-              If the <strong>Upload to media library</strong> checkbox appears below
-              the variation images, it starts a different workflow: when you save,
-              FIFU attempts to download the remote main image and gallery images
-              as local attachments and clears the remote URL state. Back up the
-              product first; this conversion is not a routine requirement for
-              remote images. To display the checkbox, enable{' '}
-              <strong>show save button on post editor</strong> under{' '}
-              <strong>FIFU → Settings → Image → Save in the Media Library → Main</strong>.
-              Leave it unchecked to keep using remote URLs. The{' '}
-              <Link to="/features/save-in-the-media-library/">
-                Save in the Media Library guide
-              </Link>{' '}
-              explains this local-copy workflow.
+              To turn remote variation images into local copies, enable the upload button under <strong>FIFU → Settings → Image → Save in the Media Library → Main</strong>. Use this only if you want WordPress to store the images; leave it off to keep remote URLs. See <Link to="/features/save-in-the-media-library/">Save in the Media Library</Link>.
             </dd>
           </div>
         </dl>
@@ -15681,13 +15552,8 @@ function FifuProductGalleryGuide() {
           </div>
         </div>
         <p>
-          Under <strong>FIFU → Settings → WooCommerce → FIFU Product Gallery</strong>,
-          the <strong>Custom content</strong> tab explains this option. Show
-          a 360-degree product view, PDF, map, or other embeddable web page
-          when a shopper opens an image in the lightbox. The product image
-          remains visible in the gallery; the iframe URL supplies the content
-          displayed after clicking it. The destination must allow iframe embedding.
-        </p>
+              Use <strong>Custom content</strong> to open an embedded view, such as a 360° product view, PDF, or map, when shoppers select a gallery image. The external page must allow embedding.
+            </p>
         <ol className="activation-feature-steps">
           <li>
             <span>1</span>
