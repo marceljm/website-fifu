@@ -853,14 +853,22 @@ function CustomPopupGuide() {
             </p>
           </li>
         </ol>
-        <p>
-          To change the same site-wide switch with WP-CLI, run{' '}
-          <code>wp fifu image --popup=on</code> to enable it or{' '}
-          <code>wp fifu image --popup=off</code> to disable it. Run one command at a time.
-          Read the <Link to="/features/wp-cli/">WP-CLI guide</Link> for how to use FIFU’s
-          command interface.
-        </p>
+        
       </section>
+
+      <FeatureCliSection
+        id="custom-popup-cli"
+        commands={[
+            {
+              "label": "Enable Custom Popup",
+              "command": "wp fifu image --popup=on"
+            },
+            {
+              "label": "Disable Custom Popup",
+              "command": "wp fifu image --popup=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section"
@@ -3033,12 +3041,22 @@ function AutoSetCategoryImagesGuide() {
           automatic assignments and changes, but it does not remove category
           images that FIFU has already saved.
         </p>
-        <p>
-          For WP-CLI, use <code>wp fifu woo --category-auto=on</code> to
-          enable the setting or <code>wp fifu woo --category-auto=off</code>{' '}
-          to disable it. See the <Link to="/features/wp-cli/">WP-CLI guide</Link>.
-        </p>
+        
       </section>
+
+      <FeatureCliSection
+        id="category-images-cli"
+        commands={[
+            {
+              "label": "Enable automatic category images",
+              "command": "wp fifu woo --category-auto=on"
+            },
+            {
+              "label": "Disable automatic category images",
+              "command": "wp fifu woo --category-auto=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section"
@@ -5541,18 +5559,21 @@ function ScheduleMetadataGenerationGuide() {
           </div>
           
         </dl>
-        <p>
-          You can also manage the same toggle from the command line with the{' '}
-          <Link to="/features/wp-cli/">WP-CLI integration</Link>:
-        </p>
-        <pre>
-          <code>{'wp fifu schedule on\nwp fifu schedule off'}</code>
-        </pre>
-        <p>
-          Run one command at a time. Use <code>on</code> to register the schedule and{' '}
-          <code>off</code> to stop it.
-        </p>
       </section>
+
+      <FeatureCliSection
+        id="schedule-metadata-cli"
+        commands={[
+            {
+              "label": "Enable scheduled metadata generation",
+              "command": "wp fifu schedule on"
+            },
+            {
+              "label": "Disable scheduled metadata generation",
+              "command": "wp fifu schedule off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -6110,16 +6131,31 @@ function AutoSetScreenshotGuide() {
             </dd>
           </div>
         </dl>
-        <p>
-          You can also set the automatic options with{' '}
-          <Link to="/features/wp-cli/">WP-CLI</Link>: <code>wp fifu screenshot on</code>{' '}
-          enables it; <code>wp fifu screenshot off</code> disables it; enables the
-          feature, <code>wp fifu screenshot --field=meta_key</code> sets a custom-field
-          key, and <code>wp fifu screenshot --size=1280x960</code> sets the screenshot
-          dimensions. Replace <code>meta_key</code> with your field key; the size option
-          accepts the same format as the setting.
-        </p>
+        
       </section>
+
+      <FeatureCliSection
+        id="screenshot-cli"
+        commands={[
+            {
+              "label": "Enable automatic screenshots",
+              "command": "wp fifu screenshot on"
+            },
+            {
+              "label": "Disable automatic screenshots",
+              "command": "wp fifu screenshot off"
+            },
+            {
+              "label": "Choose the source field",
+              "command": "wp fifu screenshot --field=meta_key",
+              "description": "Replace meta_key with your custom field name."
+            },
+            {
+              "label": "Set screenshot dimensions",
+              "command": "wp fifu screenshot --size=1280x960"
+            }
+          ]}
+      />
 
       <nav className="feature-related-guides" aria-label="Related guides">
         <strong>Related guides</strong>
@@ -6526,9 +6562,36 @@ function AutoSetFeaturedMediaByPageGuide() {
         </div>
         <p>If you create content in bulk, map the source page to <code>Media finder (webpage URL)</code> in the <Link to="/features/wp-all-import-add-on/">WP All Import add-on</Link>. The WordPress REST integration also accepts the post field <code>fifu_finder_url</code>, so your publishing process can set the same source address. See the <Link to="/features/wp-woocommerce-rest-api/">WordPress and WooCommerce REST API guide</Link> for the integration's broader setup.</p>
         <p>You can configure the finder from a WordPress installation with <Link to="/features/wp-cli/">WP-CLI</Link>:</p>
-        <pre><code>{"wp fifu finder on\nwp fifu finder --field=_product_url\nwp fifu finder --video=on\nwp fifu finder --amazon=on"}</code></pre>
-        <p>These commands enable the finder, select a custom field, include embedded-video lookups, and enable Amazon gallery syncing. Use <code>--video=off</code> or <code>--amazon=off</code> to disable those optional behaviors; use <code>wp fifu finder off</code> to stop the scheduled search.</p>
+        
       </section>
+
+      <FeatureCliSection
+        id="page-finder-cli"
+        commands={[
+            {
+              "label": "Enable the page finder",
+              "command": "wp fifu finder on"
+            },
+            {
+              "label": "Choose the page-address field",
+              "command": "wp fifu finder --field=_product_url",
+              "description": "Replace _product_url with your field name."
+            },
+            {
+              "label": "Include videos",
+              "command": "wp fifu finder --video=on"
+            },
+            {
+              "label": "Include Amazon product galleries",
+              "command": "wp fifu finder --amazon=on"
+            },
+            {
+              "label": "Disable the page finder",
+              "command": "wp fifu finder off"
+            }
+          ]}
+        note="Use off to disable the optional video or Amazon lookup."
+      />
 
       <section
         className="activation-feature-section"
@@ -8554,12 +8617,7 @@ function ClearMetadataGuide() {
             reported as busy. Wait until that operation completes, then start cleanup
             again.
           </li>
-          <li>
-            <strong>Use WP-CLI:</strong> run <code>wp fifu clean</code> from your
-            WordPress installation. It starts cleanup without additional arguments. See
-            the <Link to="/features/wp-cli/">WP-CLI guide</Link> for the command
-            interface.
-          </li>
+          
           <li>
             <strong>Remove URLs too:</strong> use{' '}
             <Link to="/features/delete-all-urls/">Delete All URLs</Link> for the broader
@@ -8567,6 +8625,17 @@ function ClearMetadataGuide() {
           </li>
         </ul>
       </section>
+
+      <FeatureCliSection
+        id="clear-metadata-cli"
+        commands={[
+            {
+              "label": "Clear generated image metadata",
+              "command": "wp fifu clean"
+            }
+          ]}
+        note="This clears generated metadata but keeps saved remote image addresses."
+      />
 
       <section className="feature-detail-cta">
         <div>
@@ -10184,17 +10253,23 @@ function PrivacyEnhancedModeGuide() {
               does not change a video file URL.
             </dd>
           </div>
-          <div>
-            <dt>Optional command line</dt>
-            <dd>
-              If you manage WordPress with WP-CLI, set the same toggle with{' '}
-              <code>wp fifu video --privacy=on</code> or{' '}
-              <code>wp fifu video --privacy=off</code>. The only accepted values are{' '}
-              <code>on</code> and <code>off</code>.
-            </dd>
-          </div>
+          
         </dl>
       </section>
+
+      <FeatureCliSection
+        id="privacy-enhanced-cli"
+        commands={[
+            {
+              "label": "Enable privacy-enhanced YouTube playback",
+              "command": "wp fifu video --privacy=on"
+            },
+            {
+              "label": "Disable privacy-enhanced playback",
+              "command": "wp fifu video --privacy=off"
+            }
+          ]}
+      />
 
       <section
         className="activation-feature-section activation-feature-help"
@@ -13199,14 +13274,23 @@ function DebugModeGuide() {
             </p>
           </li>
         </ol>
-        <p>
-          If you manage the site with WP-CLI, use <code>wp fifu debug on</code> to enable
-          the switch and <code>wp fifu debug off</code> to disable it. WP-CLI must be
-          available for your WordPress installation. Read the{' '}
-          <Link to="/features/wp-cli/">WP-CLI guide</Link> for the separate command-line
-          workflow.
-        </p>
+        
       </section>
+
+      <FeatureCliSection
+        id="debug-mode-cli"
+        commands={[
+            {
+              "label": "Enable Debug Mode",
+              "command": "wp fifu debug on"
+            },
+            {
+              "label": "Disable Debug Mode",
+              "command": "wp fifu debug off"
+            }
+          ]}
+        note="Disable Debug Mode after troubleshooting."
+      />
 
       <section className="activation-feature-section" aria-labelledby="debug-tools-title">
         <div className="activation-feature-section-heading">
