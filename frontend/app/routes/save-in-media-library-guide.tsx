@@ -7,6 +7,7 @@ import {
   FeatureGuideHeading,
   FeatureGuideHighlight,
   FeatureGuideOptions,
+  FeatureGuideSection,
   FeatureGuideSteps,
   FeatureRelatedGuides,
 } from '../components/features/FeatureGuideSections';
@@ -44,10 +45,7 @@ export default function SaveInMediaLibraryGuide() {
         </div>
       </FeatureGuideHighlight>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="media-library-purpose"
-      >
+      <FeatureGuideSection id="media-library-purpose">
         <FeatureGuideHeading id="media-library-purpose" icon={<>
 <Images size={19} aria-hidden="true" />
 </>} kicker={<>
@@ -67,12 +65,9 @@ Use a local copy when a URL is not enough.
           </Link>
           . Convert them only when you need local attachments.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="media-library-settings"
-      >
+      <FeatureGuideSection id="media-library-settings">
         <FeatureGuideHeading id="media-library-settings" icon={<>
 <Settings2 size={19} aria-hidden="true" />
 </>} kicker={<>
@@ -117,7 +112,7 @@ Choose the controls you need.
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureCliSection
         id="media-library-cli"
@@ -139,10 +134,7 @@ Choose the controls you need.
         note="Replace on with off to disable a switch. Back up your site before enabling automatic conversion."
       />
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="media-library-editor"
-      >
+      <FeatureGuideSection id="media-library-editor">
         <FeatureGuideHeading id="media-library-editor" icon={<>
 <Images size={19} aria-hidden="true" />
 </>} kicker={<>
@@ -183,12 +175,9 @@ Convert selected media as you edit.
           the post title. Repeated uses of the same remote URL can reuse an existing
           attachment instead of downloading another copy.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section"
-        aria-labelledby="media-library-automatic"
-      >
+      <FeatureGuideSection id="media-library-automatic">
         <FeatureGuideHeading id="media-library-automatic" icon={<>
 <Settings2 size={19} aria-hidden="true" />
 </>} kicker={<>
@@ -205,12 +194,9 @@ Enable it only after checking your scope.
           works through matching items over time; it is separate from the editor button,
           which converts the item you choose.
         </p>
-      </section>
+      </FeatureGuideSection>
 
-      <section
-        className="activation-feature-section activation-feature-help"
-        aria-labelledby="media-library-help"
-      >
+      <FeatureGuideSection id="media-library-help" help>
         <FeatureGuideHeading id="media-library-help" icon={<>
 <CircleAlert size={18} aria-hidden="true" />
 </>} kicker={<>
@@ -240,7 +226,7 @@ Check access to the image URL.
             </dd>
           </div>
         </FeatureGuideOptions>
-      </section>
+      </FeatureGuideSection>
 
       <FeatureGuideCta />
     </Page>
