@@ -3566,8 +3566,8 @@ function VimeoOptionsGuide() {
             },
             {
               "label": "Set your Vimeo access token",
-              "command": "wp fifu video --vimeo-access-token=<token>",
-              "description": "Replace <token> with your Vimeo personal access token."
+              "command": "wp fifu video --vimeo-access-token=YOUR_TOKEN",
+              "description": "Replace YOUR_TOKEN with your Vimeo personal access token."
             },
             {
               "label": "Choose a preferred MP4 quality",
@@ -4706,18 +4706,18 @@ function PlayButtonGuide() {
             },
             {
               "label": "Change the hover color",
-              "command": "wp fifu video --play-color=<color>",
-              "description": "Replace <color> with a supported color value."
+              "command": "wp fifu video --play-color=blue",
+              "description": "Replace blue with your preferred color."
             },
             {
               "label": "Set play-button size",
-              "command": "wp fifu video --play-size=<integer>",
-              "description": "Replace <integer> with a positive size in pixels."
+              "command": "wp fifu video --play-size=24",
+              "description": "Adjust the example size in pixels."
             },
             {
               "label": "Adjust stacking order",
-              "command": "wp fifu video --play-zindex=<integer>",
-              "description": "Replace <integer> with a positive stacking value."
+              "command": "wp fifu video --play-zindex=10",
+              "description": "Adjust the stacking order for your theme."
             },
             {
               "label": "Hide the button in WordPress grids",
@@ -4728,7 +4728,7 @@ function PlayButtonGuide() {
               "command": "wp fifu video --play-hide-wc=on"
             }
           ]}
-        note="Use off instead of on to disable a switch. Replace any value in angle brackets before running its command."
+        note="Use off instead of on to disable a switch. Adjust example colors and numbers to suit your layout."
       />
 
       <section className="feature-detail-cta">
