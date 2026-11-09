@@ -10665,10 +10665,10 @@ function WpAllImportAddonGuide() {
           <li>
             <span>4</span>
             <p>
-              Keep images handled by FIFU out of WP All Import's separate{' '}
-              <strong>Images</strong> section, and do not add duplicate FIFU values under{' '}
-              <strong>Custom Fields</strong>. Review the rest of the import settings and
-              run a small sample first.
+              Configure other post and product fields normally, but map
+              remote media through the <strong>FIFU</strong> panel.
+              Review the import settings and run a small sample first.
+              The FAQ below explains common mapping mistakes.
             </p>
           </li>
           <li>
@@ -10844,7 +10844,9 @@ function WpAllImportAddonGuide() {
           variation without an image may inherit the parent's featured
           image. Check the resulting variation images individually;
           this fallback is not a substitute for mapping distinct
-          images when each variation needs its own.
+          images when each variation needs its own. See the
+          downloadable XML and Import template examples in the
+          FAQ below for a complete nested-variation sample.
         </p>
       </section>
 
@@ -10897,6 +10899,116 @@ function WpAllImportAddonGuide() {
               A destination address for{' '}
               <Link to="/features/page-redirection/">Page redirection</Link>. Configure
               that feature separately to use the imported address.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section
+        className="activation-feature-section"
+        aria-labelledby="wai-faq-title"
+      >
+        <div className="activation-feature-section-heading">
+          <span className="activation-feature-icon">
+            <Puzzle size={19} aria-hidden="true" />
+          </span>
+          <div>
+            <span className="activation-feature-kicker">FIFU ADD-ON FAQ</span>
+            <h2 id="wai-faq-title">Examples, delimiters, and common mistakes.</h2>
+          </div>
+        </div>
+        <p>
+          Find these examples under{' '}
+          <strong>FIFU → Settings → WP All Import → FAQ</strong>.
+          The adjacent <strong>Importing...</strong> tab also has a{' '}
+          <strong>CSV example</strong> you can download.
+        </p>
+        <dl className="fifu-fields-options">
+          <div>
+            <dt>Importing variable products</dt>
+            <dd>
+              For the WooCommerce variation setup, see the{' '}
+              <a
+                href="https://www.wpallimport.com/documentation/import-variable-products-woocommerce/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                official WP All Import guide
+              </a>.
+              It covers parent products, variation attributes,
+              SKUs, and the <strong>Variations as Child XML Element</strong>{' '}
+              option.
+            </dd>
+          </div>
+          <div>
+            <dt>Variations as Child XML Elements: sample files</dt>
+            <dd>
+              FIFU provides downloadable <strong>XML</strong> and{' '}
+              <strong>Import template</strong> files in its FAQ.
+              The XML contains a parent product with nested{' '}
+              <code>variant</code> elements, each carrying a
+              variation <code>sku</code> and <code>fifu_list_url</code>.
+              Use these examples to understand the required
+              relationship between parent and variation media,
+              then adapt the mappings to your own import.
+            </dd>
+          </div>
+          <div>
+            <dt>Keep the standard Images section empty</dt>
+            <dd>
+              Do not add filenames or image URLs to WP All
+              Import's <strong>Images</strong> fields when those
+              images are handled by FIFU. Put their URLs in the
+              FIFU panel instead to avoid competing image imports.
+            </dd>
+          </div>
+          <div>
+            <dt>Do not duplicate FIFU custom fields</dt>
+            <dd>
+              Avoid adding FIFU keys to WP All Import's{' '}
+              <strong>Custom Fields</strong> section. The FIFU
+              add-on supplies its own fields and processes
+              those values during the import.
+            </dd>
+          </div>
+          <div>
+            <dt>Comma-separated image lists</dt>
+            <dd>
+              If a source contains{' '}
+              <code>https://example.com/a.jpg,https://example.com/b.jpg</code>,
+              enter a comma (<code>,</code>) in{' '}
+              <strong>List delimiter</strong>. The add-on
+              interprets that separator and normalizes
+              the list for FIFU.
+            </dd>
+          </div>
+          <div>
+            <dt>Image URLs in different columns</dt>
+            <dd>
+              Combine several source fields in one product image list,
+              for example{' '}
+              <code>{'{columnA[1]}|{columnB[1]}|{columnC[1]}'}</code>.
+              WP All Import inserts each column's value; the
+              vertical bars separate the image URLs. Put the
+              featured image column first, followed by gallery
+              image columns.
+            </dd>
+          </div>
+          <div>
+            <dt>Exporting existing local image URLs</dt>
+            <dd>
+              WP All Export can produce image URLs from local
+              attachment data instead of exporting only media
+              attachment IDs. The{' '}
+              <a
+                href="https://www.wpallimport.com/documentation/custom-wordpress-export-php/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WP All Export PHP-functions guide
+              </a>{' '}
+              explains how to convert attachment IDs into URLs
+              and build gallery URL lists for an import file.
             </dd>
           </div>
         </dl>
