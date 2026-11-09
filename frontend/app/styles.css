@@ -4631,6 +4631,36 @@ body {
   line-height: 1.6;
 }
 
+/* Shared related-guide navigation on feature pages. Keep it separate from
+   preceding sections rather than leaving links in a bare paragraph. */
+.feature-guide-page .feature-related-guides {
+  margin: 36px 0 0;
+  padding: 20px 22px;
+  border-top: 1px solid var(--guide-line);
+  border-bottom: 1px solid var(--guide-line);
+}
+.feature-guide-page .feature-related-guides > strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--guide-ink);
+  font-size: 15px;
+}
+.feature-guide-page .feature-related-guides > p {
+  margin: 0;
+  color: var(--guide-text);
+  line-height: 1.75;
+}
+.feature-guide-page .feature-related-guides a {
+  color: var(--guide-accent);
+  text-underline-offset: 3px;
+}
+@media (max-width: 620px) {
+  .feature-guide-page .feature-related-guides {
+    margin-top: 28px;
+    padding: 16px 0;
+  }
+}
+
 /* Feature guides reuse the help center guide palette and card treatment. */
 .feature-guide {
   max-width: 1160px;
