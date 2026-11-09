@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   Bug,
   Check,
   ClipboardCopy,
