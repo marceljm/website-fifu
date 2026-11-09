@@ -10,7 +10,8 @@
     "format": "prettier --write app/**/*.{ts,tsx,css} *.ts *.json",
     "format:check": "prettier --check app/**/*.{ts,tsx,css} *.ts *.json",
     "test:unit": "node --test tests/reviews.test.mjs tests/docs.test.mjs",
-    "test:e2e": "node --test tests/site.e2e.mjs"
+    "test:e2e": "node --test tests/site.e2e.mjs",
+    "test:feature-layout": "node --test tests/feature-guide-layout.test.mjs"
   },
   "dependencies": {
     "@react-router/dev": "^7.6.2",
