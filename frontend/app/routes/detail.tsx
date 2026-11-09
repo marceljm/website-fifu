@@ -1,6 +1,5 @@
 import {
   ArrowUpRight,
-  Ban,
   Bug,
   Check,
   ClipboardCopy,
