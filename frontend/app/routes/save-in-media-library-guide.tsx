@@ -1,6 +1,15 @@
-import { ArrowUpRight, CircleAlert, Images, Settings2 } from 'lucide-react';
+import { CircleAlert, Images, Settings2 } from 'lucide-react';
 import { Link } from 'react-router';
 import { Page } from '../components/layout/SiteLayout';
+import {
+  FeatureGuideChecklist,
+  FeatureGuideCta,
+  FeatureGuideHeading,
+  FeatureGuideHighlight,
+  FeatureGuideOptions,
+  FeatureGuideSteps,
+  FeatureRelatedGuides,
+} from '../components/features/FeatureGuideSections';
 import { FeatureCliSection } from '../components/features/FeatureCliSection';
 
 export default function SaveInMediaLibraryGuide() {
@@ -15,7 +24,7 @@ export default function SaveInMediaLibraryGuide() {
         editing, product galleries, or workflows that require hosted media.
       </p>
 
-      <section className="feature-highlight" aria-labelledby="media-library-highlight">
+      <FeatureGuideHighlight id="media-library-highlight">
         <div className="feature-highlight-copy">
           <span className="feature-highlight-kicker">
             <Images size={15} aria-hidden="true" /> REMOTE TO LOCAL
@@ -33,21 +42,19 @@ export default function SaveInMediaLibraryGuide() {
             alt="Upload a FIFU remote image from the editor and see it as an attachment in the WordPress Media Library."
           />
         </div>
-      </section>
+      </FeatureGuideHighlight>
 
       <section
         className="activation-feature-section"
         aria-labelledby="media-library-purpose"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">WHEN TO USE IT</span>
-            <h2 id="media-library-purpose">Use a local copy when a URL is not enough.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading id="media-library-purpose" icon={<>
+<Images size={19} aria-hidden="true" />
+</>} kicker={<>
+WHEN TO USE IT
+</>}>
+Use a local copy when a URL is not enough.
+</FeatureGuideHeading>
         <p>
               Saving a remote image places a copy in your WordPress Media Library and uses it for the post or product. This is useful when a theme or plugin needs a locally stored image. If you prefer remote images, you can leave this feature off.
             </p>
@@ -66,22 +73,20 @@ export default function SaveInMediaLibraryGuide() {
         className="activation-feature-section"
         aria-labelledby="media-library-settings"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">SET UP</span>
-            <h2 id="media-library-settings">Choose the controls you need.</h2>
-          </div>
-        </div>
+        <FeatureGuideHeading id="media-library-settings" icon={<>
+<Settings2 size={19} aria-hidden="true" />
+</>} kicker={<>
+SET UP
+</>}>
+Choose the controls you need.
+</FeatureGuideHeading>
         <p>
           In WordPress, open{' '}
           <strong>FIFU → FIFU Settings → Media → Save in the Media Library</strong>. The
           three tabs control the editor button, automatic scan, allowed image domains, and
           download proxy.
         </p>
-        <dl className="feature-guide-options">
+        <FeatureGuideOptions>
           <div>
             <dt>Main</dt>
             <dd>
@@ -111,7 +116,7 @@ export default function SaveInMediaLibraryGuide() {
               Enable <strong>Proxy</strong> if an image host blocks downloads from your server. You can use a public proxy or enter your own proxy address and credentials in the private proxy settings.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
       <FeatureCliSection
@@ -138,16 +143,14 @@ export default function SaveInMediaLibraryGuide() {
         className="activation-feature-section"
         aria-labelledby="media-library-editor"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Images size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">EDITOR UPLOAD</span>
-            <h2 id="media-library-editor">Convert selected media as you edit.</h2>
-          </div>
-        </div>
-        <ol className="activation-feature-steps">
+        <FeatureGuideHeading id="media-library-editor" icon={<>
+<Images size={19} aria-hidden="true" />
+</>} kicker={<>
+EDITOR UPLOAD
+</>}>
+Convert selected media as you edit.
+</FeatureGuideHeading>
+        <FeatureGuideSteps>
           <li>
             <span>1</span>
             <p>
@@ -174,7 +177,7 @@ export default function SaveInMediaLibraryGuide() {
               Once uploaded, the local image replaces the remote featured image. Product gallery uploads likewise replace the remote images with local copies.
             </p>
           </li>
-        </ol>
+        </FeatureGuideSteps>
         <p>
           The upload uses the image’s alternative text when available; otherwise, it uses
           the post title. Repeated uses of the same remote URL can reuse an existing
@@ -186,17 +189,13 @@ export default function SaveInMediaLibraryGuide() {
         className="activation-feature-section"
         aria-labelledby="media-library-automatic"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon">
-            <Settings2 size={19} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">AUTOMATIC SCAN</span>
-            <h2 id="media-library-automatic">
-              Enable it only after checking your scope.
-            </h2>
-          </div>
-        </div>
+        <FeatureGuideHeading id="media-library-automatic" icon={<>
+<Settings2 size={19} aria-hidden="true" />
+</>} kicker={<>
+AUTOMATIC SCAN
+</>}>
+Enable it only after checking your scope.
+</FeatureGuideHeading>
         <p>
               It respects the allowed-domain list. Use a narrower list when you want to convert images from specific hosts only.
             </p>
@@ -212,16 +211,14 @@ export default function SaveInMediaLibraryGuide() {
         className="activation-feature-section activation-feature-help"
         aria-labelledby="media-library-help"
       >
-        <div className="activation-feature-section-heading">
-          <span className="activation-feature-icon help">
-            <CircleAlert size={18} aria-hidden="true" />
-          </span>
-          <div>
-            <span className="activation-feature-kicker">IF AN UPLOAD FAILS</span>
-            <h2 id="media-library-help">Check access to the image URL.</h2>
-          </div>
-        </div>
-        <dl className="feature-guide-options">
+        <FeatureGuideHeading id="media-library-help" icon={<>
+<CircleAlert size={18} aria-hidden="true" />
+</>} kicker={<>
+IF AN UPLOAD FAILS
+</>} tone="help">
+Check access to the image URL.
+</FeatureGuideHeading>
+        <FeatureGuideOptions>
           <div>
             <dt>No upload button</dt>
             <dd>
@@ -242,20 +239,10 @@ export default function SaveInMediaLibraryGuide() {
               If the download still fails, try another image address or a different proxy.
             </dd>
           </div>
-        </dl>
+        </FeatureGuideOptions>
       </section>
 
-      <section className="feature-detail-cta">
-        <div>
-          <h2>Explore more FIFU features.</h2>
-          <p>Return to the feature list to continue exploring.</p>
-        </div>
-        <div className="feature-detail-actions">
-          <Link className="button" to="/features/">
-            Browse features <ArrowUpRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <FeatureGuideCta />
     </Page>
   );
 }
