@@ -95,9 +95,7 @@ export function FeaturedImageUrlBlockGuide() {
           <li>
             <span>2</span>
             <p>
-              Open the block’s <strong>Settings</strong> panel and enter the remote
-              address in <strong>Image URL</strong>. Use an HTTP or HTTPS address with a
-              host; the host must contain a dot, unless it is <code>localhost</code>.
+              Open the block’s <strong>Settings</strong> panel and enter a complete image address in <strong>Image URL</strong>.
             </p>
           </li>
           <li>
@@ -112,9 +110,7 @@ export function FeaturedImageUrlBlockGuide() {
           <li>
             <span>4</span>
             <p>
-              Save or update the post. FIFU synchronizes the block’s URL and alternative
-              text with the post’s featured-image data. The block itself does not render
-              content on the front end.
+              Save or update the post. FIFU uses this image as the post’s featured image. The block itself does not add an extra image to the published content.
             </p>
           </li>
         </ol>
@@ -137,9 +133,7 @@ export function FeaturedImageUrlBlockGuide() {
           <div>
             <dt>Image URL</dt>
             <dd>
-              The remote image address. The block shows its preview when a URL is present.
-              A nonempty URL must use HTTP or HTTPS and have a dotted host or the host{' '}
-              <code>localhost</code>.
+              Enter a complete image URL. The block displays a preview when the address is available.
             </dd>
           </div>
           <div>
@@ -189,10 +183,7 @@ export function FeaturedImageUrlBlockGuide() {
               <AlertTriangle size={14} aria-hidden="true" />
             </span>
             <p>
-              <strong>URL rejected on save:</strong> Use an HTTP or HTTPS URL with a
-              dotted host, such as <code>images.example.com</code>, or use{' '}
-              <code>localhost</code> for a local host. Other schemes and hostless or
-              single-label host names are not accepted.
+              <strong>URL rejected on save:</strong> Check that you entered a complete image address and that it opens directly in your browser.
             </p>
           </li>
           <li>
